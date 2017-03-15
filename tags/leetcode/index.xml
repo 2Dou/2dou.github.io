@@ -6,15 +6,63 @@
     <description>Recent content in Leetcode on 目不斜视</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <managingEditor>h3rvgo@gmail.com (SelFree)</managingEditor>
-    <webMaster>h3rvgo@gmail.com (SelFree)</webMaster>
     <atom:link href="http://wa2333.com/tags/leetcode/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>3. longest substring without repeating characters</title>
+      <link>http://wa2333.com/leetcode/3-longest-substring-without-repeating-characters/</link>
+      <pubDate>Wed, 15 Mar 2017 19:38:58 +0800</pubDate>
+      
+      <guid>http://wa2333.com/leetcode/3-longest-substring-without-repeating-characters/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;Given a string, find the length of the longest substring without repeating characters.&lt;/p&gt;
+
+&lt;p&gt;Examples:&lt;/p&gt;
+
+&lt;p&gt;Given &amp;ldquo;abcabcbb&amp;rdquo;, the answer is &amp;ldquo;abc&amp;rdquo;, which the length is 3.&lt;/p&gt;
+
+&lt;p&gt;Given &amp;ldquo;bbbbb&amp;rdquo;, the answer is &amp;ldquo;b&amp;rdquo;, with the length of 1.&lt;/p&gt;
+
+&lt;p&gt;Given &amp;ldquo;pwwkew&amp;rdquo;, the answer is &amp;ldquo;wke&amp;rdquo;, with the length of 3. Note that the answer must be a substring, &amp;ldquo;pwke&amp;rdquo; is a subsequence and not a substring.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;在给定字符串中找出最长子串的长度，子串中不能包含重复字符。&lt;/em&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-golang&#34;&gt;func lengthOfLongestSubstring(s string) int {
+    l := len(s)
+    maxLen := 0
+
+    for p1 := 0; p1 &amp;lt; l; p1++ {
+        m := map[uint8]bool{}
+
+        for p2 := p1; p2 &amp;lt; l; p2++{
+            c := s[p2]
+
+            _, ok := m[c]
+            if ok {
+                break
+            } else {
+                m[c] = true
+            }
+        }
+
+        if len(m) &amp;gt; maxLen {
+            maxLen = len(m)
+        }
+    }
+
+    return maxLen
+}
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
     
     <item>
       <title>2. add two numbers</title>
       <link>http://wa2333.com/leetcode/2-add-two-numbers/</link>
       <pubDate>Wed, 15 Mar 2017 16:55:54 +0800</pubDate>
-      <author>h3rvgo@gmail.com (SelFree)</author>
+      
       <guid>http://wa2333.com/leetcode/2-add-two-numbers/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.&lt;/p&gt;
@@ -80,7 +128,7 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
       <title>1. two sum</title>
       <link>http://wa2333.com/leetcode/1-two-sum/</link>
       <pubDate>Wed, 15 Mar 2017 16:36:59 +0800</pubDate>
-      <author>h3rvgo@gmail.com (SelFree)</author>
+      
       <guid>http://wa2333.com/leetcode/1-two-sum/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;Given an array of integers, return indices of the two numbers such that they add up to a specific target.&lt;/p&gt;

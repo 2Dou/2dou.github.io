@@ -1,5 +1,9 @@
 
 
+  
+    
+  
+
 
   
 
@@ -18,25 +22,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Hugo 0.20-DEV">
-    <title>算法</title>
+    <title>3. longest substring without repeating characters</title>
     <meta name="author" content="SelFree">
     <meta name="keywords" content="">
 
     <link rel="icon" href="http://wa2333.com/favicon.png">
     
-      <link rel="alternate" type="application/rss+xml" title="RSS" href="http://wa2333.com/tags/%E7%AE%97%E6%B3%95/index.xml">
-    
 
     
-    <meta name="description" content="城市永远年轻，而我们终将老去">
-    <meta property="og:description" content="城市永远年轻，而我们终将老去">
+    <meta name="description" content="LeetCode 练习">
+    <meta property="og:description" content="LeetCode 练习">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="算法">
-    <meta property="og:url" content="/tags/%E7%AE%97%E6%B3%95/">
+    <meta property="og:title" content="3. longest substring without repeating characters">
+    <meta property="og:url" content="/leetcode/3-longest-substring-without-repeating-characters/">
     <meta property="og:site_name" content="目不斜视">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="目不斜视">
-    <meta name="twitter:description" content="城市永远年轻，而我们终将老去">
+    <meta name="twitter:description" content="LeetCode 练习">
     
     
 
@@ -70,7 +72,7 @@
 
   <body>
     <div id="blog">
-      <header id="header" data-behavior="1">
+      <header id="header" data-behavior="4">
   <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
   <div class="header-title">
     <a class="header-title-link" href="http://wa2333.com/">目不斜视</a>
@@ -90,7 +92,7 @@
   
 </header>
 
-      <nav id="sidebar" data-behavior="1">
+      <nav id="sidebar" data-behavior="4">
   <div class="sidebar-container">
     
       <div class="sidebar-profile">
@@ -186,39 +188,21 @@
 </nav>
 
       
-        
 
-      
-      <div id="main" data-behavior="1"
+      <div id="main" data-behavior="4"
         class="
                hasCoverMetaIn
                ">
-        
-          <section class="postShorten-group main-content-wrap">
-            
-            
-              
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-left">
   
-    
-      
-        
-      
-    
+    <h1 class="post-title" itemprop="headline">
+      3. longest substring without repeating characters
+    </h1>
   
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="http://wa2333.com/leetcode/3-longest-substring-without-repeating-characters/">
-          3. longest substring without repeating characters
-        </a>
-      </h1>
-      <div class="postShorten-meta post-meta">
+  <div class="postShorten-meta post-meta">
   
     <time itemprop="datePublished" datetime="2017-03-15T19:38:58&#43;08:00">
       
@@ -243,10 +227,11 @@
 
 </div>
 
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      <p>
-        <blockquote>
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <blockquote>
 <p>Given a string, find the length of the longest substring without repeating characters.</p>
 
 <p>Examples:</p>
@@ -258,163 +243,97 @@
 <p>Given &ldquo;pwwkew&rdquo;, the answer is &ldquo;wke&rdquo;, with the length of 3. Note that the answer must be a substring, &ldquo;pwke&rdquo; is a subsequence and not a substring.</p>
 </blockquote>
 
-<p>
-        <br>
-        <a href="http://wa2333.com/leetcode/3-longest-substring-without-repeating-characters/" class="postShorten-excerpt_link link">阅读全文</a>
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
+<p></p>
+
+<p><em>在给定字符串中找出最长子串的长度，子串中不能包含重复字符。</em></p>
+
+<pre><code class="language-golang">func lengthOfLongestSubstring(s string) int {
+    l := len(s)
+    maxLen := 0
+
+    for p1 := 0; p1 &lt; l; p1++ {
+        m := map[uint8]bool{}
+
+        for p2 := p1; p2 &lt; l; p2++{
+            c := s[p2]
+
+            _, ok := m[c]
+            if ok {
+                break
+            } else {
+                m[c] = true
+            }
+        }
+
+        if len(m) &gt; maxLen {
+            maxLen = len(m)
+        }
+    }
+
+    return maxLen
+}
+</code></pre>
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">标签</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="http://wa2333.com/tags/leetcode/">LeetCode</a>
+
+  <a class="tag tag--primary tag--small" href="http://wa2333.com/tags/%E7%AE%97%E6%B3%95/">算法</a>
+
+                  </div>
+                
+              
+            
+            <div class="post-actions-wrap">
+  <nav>
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--disabled">
+          
+            <i class="fa fa-angle-left"></i>
+            <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
+          </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="http://wa2333.com/leetcode/2-add-two-numbers/" data-tooltip="2. add two numbers">
+          
+            <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
+            <i class="fa fa-angle-right"></i>
+          </a>
+        </li>
+      
+    </ul>
+  </nav>
+  <ul class="post-actions post-action-share">
+    
+    
+    <li class="post-action">
+      
+        <a class="post-action-btn btn btn--default" href="#">
+        <i class="fa fa-chevron-up"></i>
+      
+      </a>
+    </li>
+  </ul>
+</div>
+
 
             
               
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="http://wa2333.com/leetcode/2-add-two-numbers/">
-          2. add two numbers
-        </a>
-      </h1>
-      <div class="postShorten-meta post-meta">
-  
-    <time itemprop="datePublished" datetime="2017-03-15T16:55:54&#43;08:00">
-      
-  
-  
-  
-  
-    2017-03-15
-  
-
-    </time>
-  
-  
-  
-  
-    <span>发布在</span>
-    
-      <a class="category-link" href="http://wa2333.com/categories/leetcode">LeetCode</a>
-    
-  
-
-
-</div>
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      <p>
-        <blockquote>
-<p>You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.</p>
-
-<p>You may assume the two numbers do not contain any leading zero, except the number 0 itself.</p>
-
-<p>Input: (2 -&gt; 4 -&gt; 3) + (5 -&gt; 6 -&gt; 4)</p>
-
-<p>Output: 7 -&gt; 0 -&gt; 8</p>
-</blockquote>
-
-<p>
-        <br>
-        <a href="http://wa2333.com/leetcode/2-add-two-numbers/" class="postShorten-excerpt_link link">阅读全文</a>
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
             
-              
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="http://wa2333.com/leetcode/1-two-sum/">
-          1. two sum
-        </a>
-      </h1>
-      <div class="postShorten-meta post-meta">
-  
-    <time itemprop="datePublished" datetime="2017-03-15T16:36:59&#43;08:00">
-      
-  
-  
-  
-  
-    2017-03-15
-  
-
-    </time>
-  
-  
-  
-  
-    <span>发布在</span>
-    
-      <a class="category-link" href="http://wa2333.com/categories/leetcode">LeetCode</a>
-    
-  
-
-
-</div>
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      <p>
-        <blockquote>
-<p>Given an array of integers, return indices of the two numbers such that they add up to a specific target.</p>
-
-<p>You may assume that each input would have exactly one solution, and you may not use the same element twice.</p>
-
-<p>Example:
-Given nums = [2, 7, 11, 15], target = 9,</p>
-
-<p>Because nums[0] + nums[1] = 2 + 7 = 9,
-return [0, 1].</p>
-</blockquote>
-
-<p>
-        <br>
-        <a href="http://wa2333.com/leetcode/1-two-sum/" class="postShorten-excerpt_link link">阅读全文</a>
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-            
-            
-
-          </section>
-        
+          </div>
+        </article>
         <footer id="footer" class="main-content-wrap">
   <span class="copyrights">
     &copy; 2017 SelFree. All Rights Reserved
@@ -422,6 +341,65 @@ return [0, 1].</p>
 </footer>
 
       </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        <div class="post-actions-wrap">
+  <nav>
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--disabled">
+          
+            <i class="fa fa-angle-left"></i>
+            <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
+          </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="http://wa2333.com/leetcode/2-add-two-numbers/" data-tooltip="2. add two numbers">
+          
+            <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
+            <i class="fa fa-angle-right"></i>
+          </a>
+        </li>
+      
+    </ul>
+  </nav>
+  <ul class="post-actions post-action-share">
+    
+    
+    <li class="post-action">
+      
+        <a class="post-action-btn btn btn--default" href="#">
+        <i class="fa fa-chevron-up"></i>
+      
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <ul class="share-options">
+    <li class="share-option">
+      <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http%3a%2f%2fwa2333.com%2fleetcode%2f3-longest-substring-without-repeating-characters%2f">
+        <i class="fa fa-google-plus"></i><span>分享到 Google&#43;</span>
+      </a>
+    </li>
+    <li class="share-option">
+      <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fwa2333.com%2fleetcode%2f3-longest-substring-without-repeating-characters%2f">
+        <i class="fa fa-facebook-official"></i><span>分享到 Facebook</span>
+      </a>
+    </li>
+    <li class="share-option">
+      <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http%3a%2f%2fwa2333.com%2fleetcode%2f3-longest-substring-without-repeating-characters%2f">
+        <i class="fa fa-twitter"></i><span>分享到 Twitter</span>
+      </a>
+    </li>
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
     </div>
     
     <div id="about">
@@ -552,6 +530,10 @@ $(document).ready(function() {
   });
 });
 </script>
+
+  
+    
+  
 
 
     
