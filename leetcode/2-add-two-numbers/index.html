@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>404 Page not found - 城市永远年轻，而我们终将老去</title>
-  
+  <title>2. add two numbers - 城市永远年轻，而我们终将老去</title>
+  <meta name="description" content="LeetCode 练习">
   <meta name="author" content="SelFree"/>
   <meta name="generator" content="Hugo 0.20-DEV" />
   <link href='http://wa2333.com/img/favicon.ico' rel='icon' type='image/x-icon'/>
@@ -27,18 +27,18 @@
   
 
   
-    <meta property="og:title" content="404 Page not found" />
+    <meta property="og:title" content="2. add two numbers" />
   
 
   
-    <meta property="og:description" content="">
+    <meta property="og:description" content=" You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return …">
   
 
   <meta property="og:type" content="website" />
 
   
-    <meta property="og:url" content="http://wa2333.com/404/" />
-    <link rel="canonical" href="http://wa2333.com/404/" />
+    <meta property="og:url" content="http://wa2333.com/leetcode/2-add-two-numbers/" />
+    <link rel="canonical" href="http://wa2333.com/leetcode/2-add-two-numbers/" />
   
 
   
@@ -51,11 +51,11 @@
   <meta name="twitter:creator" content="@" />
 
   
-    <meta name="twitter:title" content="404 Page not found" />
+    <meta name="twitter:title" content="2. add two numbers" />
   
 
   
-    <meta name="twitter:description" content="">
+    <meta name="twitter:description" content=" You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return …">
   
 
   
@@ -122,14 +122,115 @@
   </div>
 </nav>
 
+    
+  
 
-    <div role="main" class="container main-content">
-      <div class="text-center">
-        <h1>Whoops, this page doesn't exist.</h1>
-        <h1>Move along. (404 error)</h1>
-        <br/>
-        <img src="http://wa2333.com/img/404-southpark.jpg" />
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+        <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-heading">
+          <h1>2. add two numbers</h1>
+            
+
+            
+              <span class="post-meta">Posted on March 15, 2017</span>
+            
+        </div>
       </div>
+    </div>
+  </div>
+    </div>
+  </header>
+
+
+
+    <div class="container" role="main">
+      
+        <div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <blockquote>
+<p>You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.</p>
+
+<p>You may assume the two numbers do not contain any leading zero, except the number 0 itself.</p>
+
+<p>Input: (2 -&gt; 4 -&gt; 3) + (5 -&gt; 6 -&gt; 4)</p>
+
+<p>Output: 7 -&gt; 0 -&gt; 8</p>
+</blockquote>
+
+<p></p>
+
+<p>通过链表计算加法，向后进位</p>
+
+<pre><code class="language-golang">/**
+ * Definition for singly-linked list.
+ * type ListNode struct {
+ *     Val int
+ *     Next *ListNode
+ * }
+ */
+func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
+    head := &amp;ListNode{}
+    cur := head
+    carry := 0
+
+    for {
+        var v1, v2 int
+        if l1 != nil {
+            v1 = l1.Val
+            l1 = l1.Next
+        }
+
+        if l2 != nil {
+            v2 = l2.Val
+            l2 = l2.Next
+        }
+
+        v := v1 + v2 + carry
+
+        carry = int(v / 10)
+        cur.Val = v % 10
+
+        if l1 != nil || l2 != nil {
+            cur.Next = &amp;ListNode{}
+            cur = cur.Next
+        } else {
+            if carry &gt; 0 {
+                cur.Next = &amp;ListNode{Val: carry}
+            }
+
+            break
+        }
+    }
+
+    return head
+}
+</code></pre>
+      </article>
+
+      <ul class="pager blog-pager">
+        
+          <li class="previous">
+            <a href="http://wa2333.com/leetcode/1-two-sum/" data-toggle="tooltip" data-placement="top" title="1. two sum">&larr; Previous Post</a>
+          </li>
+        
+        
+      </ul>
+
+      
+        
+      
+
+    </div>
+  </div>
+</div>
+
+      
     </div>
 
     <footer>

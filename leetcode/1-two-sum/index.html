@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>404 Page not found - 城市永远年轻，而我们终将老去</title>
-  
+  <title>1. two sum - 城市永远年轻，而我们终将老去</title>
+  <meta name="description" content="LeetCode 练习">
   <meta name="author" content="SelFree"/>
   <meta name="generator" content="Hugo 0.20-DEV" />
   <link href='http://wa2333.com/img/favicon.ico' rel='icon' type='image/x-icon'/>
@@ -27,18 +27,19 @@
   
 
   
-    <meta property="og:title" content="404 Page not found" />
+    <meta property="og:title" content="1. two sum" />
   
 
   
-    <meta property="og:description" content="">
+    <meta property="og:description" content=" Given an array of integers, return indices of the two numbers such that they add up to a specific target.
+You may assume that each input would have exactly one solution, and you may not use the same …">
   
 
   <meta property="og:type" content="website" />
 
   
-    <meta property="og:url" content="http://wa2333.com/404/" />
-    <link rel="canonical" href="http://wa2333.com/404/" />
+    <meta property="og:url" content="http://wa2333.com/leetcode/1-two-sum/" />
+    <link rel="canonical" href="http://wa2333.com/leetcode/1-two-sum/" />
   
 
   
@@ -51,11 +52,12 @@
   <meta name="twitter:creator" content="@" />
 
   
-    <meta name="twitter:title" content="404 Page not found" />
+    <meta name="twitter:title" content="1. two sum" />
   
 
   
-    <meta name="twitter:description" content="">
+    <meta name="twitter:description" content=" Given an array of integers, return indices of the two numbers such that they add up to a specific target.
+You may assume that each input would have exactly one solution, and you may not use the same …">
   
 
   
@@ -122,14 +124,100 @@
   </div>
 </nav>
 
+    
+  
 
-    <div role="main" class="container main-content">
-      <div class="text-center">
-        <h1>Whoops, this page doesn't exist.</h1>
-        <h1>Move along. (404 error)</h1>
-        <br/>
-        <img src="http://wa2333.com/img/404-southpark.jpg" />
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+        <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-heading">
+          <h1>1. two sum</h1>
+            
+
+            
+              <span class="post-meta">Posted on March 15, 2017</span>
+            
+        </div>
       </div>
+    </div>
+  </div>
+    </div>
+  </header>
+
+
+
+    <div class="container" role="main">
+      
+        <div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <blockquote>
+<p>Given an array of integers, return indices of the two numbers such that they add up to a specific target.</p>
+
+<p>You may assume that each input would have exactly one solution, and you may not use the same element twice.</p>
+
+<p>Example:
+Given nums = [2, 7, 11, 15], target = 9,</p>
+
+<p>Because nums[0] + nums[1] = 2 + 7 = 9,
+return [0, 1].</p>
+</blockquote>
+
+<p></p>
+
+<ul>
+<li>Solution</li>
+</ul>
+
+<pre><code class="language-golang">func twoSum(nums []int, target int) []int {
+    res := make([]int, 2)
+    m := map[int]int{}
+
+    for i := range nums {
+        m[target - nums[i]] = i
+    }
+
+    for i := range nums {
+        idx, ok := m[nums[i]]
+        if ok {
+            if i == idx {
+                continue
+            }
+            res[0] = idx
+            res[1] = i
+            sort.Ints(res)
+            break
+        }
+        continue
+    }
+
+    return res
+}
+</code></pre>
+      </article>
+
+      <ul class="pager blog-pager">
+        
+        
+          <li class="next">
+            <a href="http://wa2333.com/leetcode/2-add-two-numbers/" data-toggle="tooltip" data-placement="top" title="2. add two numbers">Next Post &rarr;</a>
+          </li>
+        
+      </ul>
+
+      
+        
+      
+
+    </div>
+  </div>
+</div>
+
+      
     </div>
 
     <footer>
