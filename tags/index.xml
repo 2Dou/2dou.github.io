@@ -2,28 +2,28 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on 目不斜视</title>
-    <link>http://wa2333.com/tags/index.xml</link>
+    <link>http://www.wa2333.com/tags/index.xml</link>
     <description>Recent content in Tags on 目不斜视</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Thu, 16 Mar 2017 10:53:58 +0800</lastBuildDate>
-    <atom:link href="http://wa2333.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://www.wa2333.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Leetcode</title>
-      <link>http://wa2333.com/tags/leetcode/</link>
+      <link>http://www.wa2333.com/tags/leetcode/</link>
       <pubDate>Thu, 16 Mar 2017 10:53:58 +0800</pubDate>
       
-      <guid>http://wa2333.com/tags/leetcode/</guid>
+      <guid>http://www.wa2333.com/tags/leetcode/</guid>
       <description></description>
     </item>
     
     <item>
       <title>算法</title>
-      <link>http://wa2333.com/tags/%E7%AE%97%E6%B3%95/</link>
+      <link>http://www.wa2333.com/tags/%E7%AE%97%E6%B3%95/</link>
       <pubDate>Thu, 16 Mar 2017 10:53:58 +0800</pubDate>
       
-      <guid>http://wa2333.com/tags/%E7%AE%97%E6%B3%95/</guid>
+      <guid>http://www.wa2333.com/tags/%E7%AE%97%E6%B3%95/</guid>
       <description></description>
     </item>
     

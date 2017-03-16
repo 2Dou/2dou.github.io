@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on 目不斜视</title>
-    <link>http://wa2333.com/categories/index.xml</link>
+    <link>http://www.wa2333.com/categories/index.xml</link>
     <description>Recent content in Categories on 目不斜视</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <atom:link href="http://wa2333.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://www.wa2333.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Leetcode</title>
-      <link>http://wa2333.com/categories/leetcode/</link>
+      <link>http://www.wa2333.com/categories/leetcode/</link>
       <pubDate>Thu, 16 Mar 2017 10:53:58 +0800</pubDate>
       
-      <guid>http://wa2333.com/categories/leetcode/</guid>
+      <guid>http://www.wa2333.com/categories/leetcode/</guid>
       <description></description>
     </item>
     

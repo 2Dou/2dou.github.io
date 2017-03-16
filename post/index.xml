@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on 目不斜视</title>
-    <link>http://wa2333.com/post/index.xml</link>
+    <link>http://www.wa2333.com/post/index.xml</link>
     <description>Recent content in Posts on 目不斜视</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Tue, 14 Mar 2017 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://wa2333.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://www.wa2333.com/post/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Hello World</title>
-      <link>http://wa2333.com/2017/03/hello-world/</link>
+      <link>http://www.wa2333.com/2017/03/hello-world/</link>
       <pubDate>Tue, 14 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://wa2333.com/2017/03/hello-world/</guid>
+      <guid>http://www.wa2333.com/2017/03/hello-world/</guid>
       <description>&lt;p&gt;国际惯例&lt;/p&gt;
 </description>
     </item>

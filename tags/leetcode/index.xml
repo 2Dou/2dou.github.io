@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Leetcode on 目不斜视</title>
-    <link>http://wa2333.com/tags/leetcode/index.xml</link>
+    <link>http://www.wa2333.com/tags/leetcode/index.xml</link>
     <description>Recent content in Leetcode on 目不斜视</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <atom:link href="http://wa2333.com/tags/leetcode/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://www.wa2333.com/tags/leetcode/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>4. Median of Two Sorted Arrays</title>
-      <link>http://wa2333.com/leetcode/4-Median-of-Two-Sorted-Arrays/</link>
+      <link>http://www.wa2333.com/leetcode/4-Median-of-Two-Sorted-Arrays/</link>
       <pubDate>Thu, 16 Mar 2017 10:53:58 +0800</pubDate>
       
-      <guid>http://wa2333.com/leetcode/4-Median-of-Two-Sorted-Arrays/</guid>
+      <guid>http://www.wa2333.com/leetcode/4-Median-of-Two-Sorted-Arrays/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/median-of-two-sorted-arrays&#34;&gt;Median of Two Sorted Arrays&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
@@ -113,10 +113,10 @@ nums2 = [3, 4]&lt;/p&gt;
     
     <item>
       <title>3. Longest Substring Without Repeating Characters</title>
-      <link>http://wa2333.com/leetcode/3-Longest-Substring-Without-Repeating-Characters/</link>
+      <link>http://www.wa2333.com/leetcode/3-Longest-Substring-Without-Repeating-Characters/</link>
       <pubDate>Wed, 15 Mar 2017 19:38:58 +0800</pubDate>
       
-      <guid>http://wa2333.com/leetcode/3-Longest-Substring-Without-Repeating-Characters/</guid>
+      <guid>http://www.wa2333.com/leetcode/3-Longest-Substring-Without-Repeating-Characters/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/longest-substring-without-repeating-characters&#34;&gt;Longest Substring Without Repeating Characters&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
@@ -197,10 +197,10 @@ nums2 = [3, 4]&lt;/p&gt;
     
     <item>
       <title>2. Add Two Numbers</title>
-      <link>http://wa2333.com/leetcode/2-Add-Two-Numbers/</link>
+      <link>http://www.wa2333.com/leetcode/2-Add-Two-Numbers/</link>
       <pubDate>Wed, 15 Mar 2017 16:55:54 +0800</pubDate>
       
-      <guid>http://wa2333.com/leetcode/2-Add-Two-Numbers/</guid>
+      <guid>http://www.wa2333.com/leetcode/2-Add-Two-Numbers/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/add-two-numbers&#34;&gt;Add Two Numbers&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
@@ -299,10 +299,10 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
     
     <item>
       <title>1. Two Sum</title>
-      <link>http://wa2333.com/leetcode/1-Two-Sum/</link>
+      <link>http://www.wa2333.com/leetcode/1-Two-Sum/</link>
       <pubDate>Wed, 15 Mar 2017 16:36:59 +0800</pubDate>
       
-      <guid>http://wa2333.com/leetcode/1-Two-Sum/</guid>
+      <guid>http://www.wa2333.com/leetcode/1-Two-Sum/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/two-sum&#34;&gt;Two Sum&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
