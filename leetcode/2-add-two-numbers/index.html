@@ -63,7 +63,7 @@
     
     <link rel="stylesheet" href="http://wa2333.com/css/style-gwlo24d2hxipxk8bi1sxik0zhlpn9t7ebcmgp9kubmmcjfzlavuyhvbqumhn.min.css" />
     
-    
+
     
       
     
@@ -85,7 +85,7 @@
     
     
       
-        <img class="header-picture" src="//www.gravatar.com/avatar/f47b51d6d6b82fd9048e3eaf64bf7e69?s=90" alt="作者的图片" />
+        <img class="header-picture" src="//www.gravatar.com/avatar/f47b51d6d6b82fd9048e3eaf64bf7e69?s=90" alt="Author&#39;s picture" />
       
     
     </a>
@@ -97,11 +97,11 @@
     
       <div class="sidebar-profile">
         <a href="http://wa2333.com/#about">
-          <img class="sidebar-profile-picture" src="//www.gravatar.com/avatar/f47b51d6d6b82fd9048e3eaf64bf7e69?s=110" alt="作者的图片" />
+          <img class="sidebar-profile-picture" src="//www.gravatar.com/avatar/f47b51d6d6b82fd9048e3eaf64bf7e69?s=110" alt="Author&#39;s picture" />
         </a>
         <h4 class="sidebar-profile-name">SelFree</h4>
         
-          <h5 class="sidebar-profile-bio">Sorry, I&rsquo;m married.</h5>
+          <h5 class="sidebar-profile-bio">城市永远年轻，而我们终将老去</h5>
         
       </div>
     
@@ -109,11 +109,21 @@
       
   <li class="sidebar-button">
     
+      <a class="sidebar-button-link " href="http://wa2333.com/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
       <a class="sidebar-button-link " href="http://wa2333.com/categories">
     
       <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
       
-      <span class="sidebar-button-desc">分类</span>
+      <span class="sidebar-button-desc">Categories</span>
     </a>
   </li>
 
@@ -123,7 +133,7 @@
     
       <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
       
-      <span class="sidebar-button-desc">标签</span>
+      <span class="sidebar-button-desc">Tags</span>
     </a>
   </li>
 
@@ -133,17 +143,7 @@
     
       <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
       
-      <span class="sidebar-button-desc">归档</span>
-    </a>
-  </li>
-
-  <li class="sidebar-button">
-    
-      <a class="sidebar-button-link " href="http://wa2333.com/">
-    
-      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
-      
-      <span class="sidebar-button-desc">首页</span>
+      <span class="sidebar-button-desc">Archives</span>
     </a>
   </li>
 
@@ -160,6 +160,9 @@
     </a>
   </li>
 
+    </ul>
+    <ul class="sidebar-buttons">
+      
   <li class="sidebar-button">
     
       <a class="sidebar-button-link " href="https://github.com/2Dou" target="_blank">
@@ -170,9 +173,6 @@
     </a>
   </li>
 
-    </ul>
-    <ul class="sidebar-buttons">
-      
   <li class="sidebar-button">
     
       <a class="sidebar-button-link " href="http://wa2333.com/index.xml">
@@ -218,7 +218,7 @@
   
   
   
-    <span>发布在</span>
+    <span>in</span>
     
       <a class="category-link" href="http://wa2333.com/categories/leetcode">LeetCode</a>
     
@@ -231,7 +231,9 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <blockquote>
+              <h1 id="description">Description</h1>
+
+<blockquote>
 <p>You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.</p>
 
 <p>You may assume the two numbers do not contain any leading zero, except the number 0 itself.</p>
@@ -245,7 +247,35 @@
 
 <p>通过链表计算加法，向后进位</p>
 
-<pre><code class="language-golang">/**
+<h1 id="solution">Solution</h1>
+
+<p>用一个int作进位寄存器，在下一位相加时加上进位寄存器</p>
+
+
+  
+    
+  
+  
+    
+  
+  
+  
+
+
+<figure class="highlight go">
+  <figcaption>
+    
+      <span>Solution.go</span>
+    
+  </figcaption>
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+          <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre>
+        </td>
+        <td class="code">
+          <pre class="go code-highlight">/**
  * Definition for singly-linked list.
  * type ListNode struct {
  *     Val int
@@ -269,7 +299,7 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
             l2 = l2.Next
         }
 
-        v := v1 + v2 + carry
+        v := v1 &#43; v2 &#43; carry
 
         carry = int(v / 10)
         cur.Val = v % 10
@@ -287,8 +317,12 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
     }
 
     return head
-}
-</code></pre>
+}</pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
               
             </div>
           </div>
@@ -298,7 +332,7 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
                 
                 
                   <div class="post-footer-tags">
-                    <span class="text-color-light text-small">标签</span><br/>
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
                     
   <a class="tag tag--primary tag--small" href="http://wa2333.com/tags/leetcode/">LeetCode</a>
 
@@ -314,17 +348,17 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
       
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="http://wa2333.com/leetcode/3-longest-substring-without-repeating-characters/" data-tooltip="3. longest substring without repeating characters">
+            <a class="post-action-btn btn btn--default tooltip--top" href="http://wa2333.com/leetcode/1-two-sum/" data-tooltip="1. two sum">
           
             <i class="fa fa-angle-left"></i>
-            <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
+            <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
           </a>
         </li>
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="http://wa2333.com/leetcode/1-two-sum/" data-tooltip="1. two sum">
+            <a class="post-action-btn btn btn--default tooltip--top" href="http://wa2333.com/leetcode/3-longest-substring-without-repeating-characters/" data-tooltip="3. longest substring without repeating characters">
           
-            <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
+            <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
             <i class="fa fa-angle-right"></i>
           </a>
         </li>
@@ -364,17 +398,17 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
       
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="http://wa2333.com/leetcode/3-longest-substring-without-repeating-characters/" data-tooltip="3. longest substring without repeating characters">
+            <a class="post-action-btn btn btn--default tooltip--top" href="http://wa2333.com/leetcode/1-two-sum/" data-tooltip="1. two sum">
           
             <i class="fa fa-angle-left"></i>
-            <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
+            <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
           </a>
         </li>
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="http://wa2333.com/leetcode/1-two-sum/" data-tooltip="1. two sum">
+            <a class="post-action-btn btn btn--default tooltip--top" href="http://wa2333.com/leetcode/3-longest-substring-without-repeating-characters/" data-tooltip="3. longest substring without repeating characters">
           
-            <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
+            <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
             <i class="fa fa-angle-right"></i>
           </a>
         </li>
@@ -400,17 +434,17 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
   <ul class="share-options">
     <li class="share-option">
       <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http%3a%2f%2fwa2333.com%2fleetcode%2f2-add-two-numbers%2f">
-        <i class="fa fa-google-plus"></i><span>分享到 Google&#43;</span>
+        <i class="fa fa-google-plus"></i><span>Share on Google Plus</span>
       </a>
     </li>
     <li class="share-option">
       <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fwa2333.com%2fleetcode%2f2-add-two-numbers%2f">
-        <i class="fa fa-facebook-official"></i><span>分享到 Facebook</span>
+        <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
       </a>
     </li>
     <li class="share-option">
       <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http%3a%2f%2fwa2333.com%2fleetcode%2f2-add-two-numbers%2f">
-        <i class="fa fa-twitter"></i><span>分享到 Twitter</span>
+        <i class="fa fa-twitter"></i><span>Share on Twitter</span>
       </a>
     </li>
   </ul>
@@ -424,11 +458,11 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
       <i class="fa fa-remove"></i>
     </div>
     
-      <img id="about-card-picture" src="//www.gravatar.com/avatar/f47b51d6d6b82fd9048e3eaf64bf7e69?s=110" alt="作者的图片" />
+      <img id="about-card-picture" src="//www.gravatar.com/avatar/f47b51d6d6b82fd9048e3eaf64bf7e69?s=110" alt="Author&#39;s picture" />
     
     <h4 id="about-card-name">SelFree</h4>
     
-      <div id="about-card-bio">Sorry, I&rsquo;m married.</div>
+      <div id="about-card-bio">城市永远年轻，而我们终将老去</div>
     
     
       <div id="about-card-job">
@@ -458,11 +492,11 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
       <i class="search-icon fa fa-search"></i>
       <form id="algolia-search-form">
         <input type="text" id="algolia-search-input" name="search"
-          class="form-control input--large search-input" placeholder="搜索" />
+          class="form-control input--large search-input" placeholder="Search" />
       </form>
     </div>
     <div class="modal-body">
-      <div class="no-result text-color-light text-center"></div>
+      <div class="no-result text-color-light text-center">no post found</div>
       <div class="results">
         
         
@@ -504,9 +538,9 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
     </div>
     <div class="modal-footer">
       <p class="results-count text-medium"
-         data-message-zero=""
-         data-message-one=""
-         data-message-other="">
+         data-message-zero="no post found"
+         data-message-one="1 post found"
+         data-message-other="{n} posts found">
          2 posts found
       </p>
     </div>
@@ -537,7 +571,7 @@ $(document).ready(function() {
       code += "<span class=\"line\">" + line + "</span><br>";
     });
     if (code.length > 0) {
-      block.innerHTML = code;  
+      block.innerHTML = code;
     }
   });
   $('pre > code').each(function(i, block) {
@@ -550,6 +584,7 @@ $(document).ready(function() {
   
     
   
+
 
 
     

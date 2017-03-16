@@ -93,15 +93,15 @@
     
 
     
-    <meta name="description" content="城市永远年轻，而我们终将老去">
-    <meta property="og:description" content="城市永远年轻，而我们终将老去">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
     <meta property="og:type" content="blog">
     <meta property="og:title" content="Categories">
     <meta property="og:url" content="/categories/">
     <meta property="og:site_name" content="目不斜视">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="目不斜视">
-    <meta name="twitter:description" content="城市永远年轻，而我们终将老去">
+    <meta name="twitter:description" content="">
     
     
 
@@ -126,7 +126,7 @@
     
     <link rel="stylesheet" href="http://wa2333.com/css/style-gwlo24d2hxipxk8bi1sxik0zhlpn9t7ebcmgp9kubmmcjfzlavuyhvbqumhn.min.css" />
     
-    
+
     
       
     
@@ -148,7 +148,7 @@
     
     
       
-        <img class="header-picture" src="//www.gravatar.com/avatar/f47b51d6d6b82fd9048e3eaf64bf7e69?s=90" alt="作者的图片" />
+        <img class="header-picture" src="//www.gravatar.com/avatar/f47b51d6d6b82fd9048e3eaf64bf7e69?s=90" alt="Author&#39;s picture" />
       
     
     </a>
@@ -160,11 +160,11 @@
     
       <div class="sidebar-profile">
         <a href="http://wa2333.com/#about">
-          <img class="sidebar-profile-picture" src="//www.gravatar.com/avatar/f47b51d6d6b82fd9048e3eaf64bf7e69?s=110" alt="作者的图片" />
+          <img class="sidebar-profile-picture" src="//www.gravatar.com/avatar/f47b51d6d6b82fd9048e3eaf64bf7e69?s=110" alt="Author&#39;s picture" />
         </a>
         <h4 class="sidebar-profile-name">SelFree</h4>
         
-          <h5 class="sidebar-profile-bio">Sorry, I&rsquo;m married.</h5>
+          <h5 class="sidebar-profile-bio">城市永远年轻，而我们终将老去</h5>
         
       </div>
     
@@ -172,11 +172,21 @@
       
   <li class="sidebar-button">
     
+      <a class="sidebar-button-link " href="http://wa2333.com/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
       <a class="sidebar-button-link " href="http://wa2333.com/categories">
     
       <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
       
-      <span class="sidebar-button-desc">分类</span>
+      <span class="sidebar-button-desc">Categories</span>
     </a>
   </li>
 
@@ -186,7 +196,7 @@
     
       <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
       
-      <span class="sidebar-button-desc">标签</span>
+      <span class="sidebar-button-desc">Tags</span>
     </a>
   </li>
 
@@ -196,17 +206,7 @@
     
       <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
       
-      <span class="sidebar-button-desc">归档</span>
-    </a>
-  </li>
-
-  <li class="sidebar-button">
-    
-      <a class="sidebar-button-link " href="http://wa2333.com/">
-    
-      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
-      
-      <span class="sidebar-button-desc">首页</span>
+      <span class="sidebar-button-desc">Archives</span>
     </a>
   </li>
 
@@ -223,6 +223,9 @@
     </a>
   </li>
 
+    </ul>
+    <ul class="sidebar-buttons">
+      
   <li class="sidebar-button">
     
       <a class="sidebar-button-link " href="https://github.com/2Dou" target="_blank">
@@ -233,9 +236,6 @@
     </a>
   </li>
 
-    </ul>
-    <ul class="sidebar-buttons">
-      
   <li class="sidebar-button">
     
       <a class="sidebar-button-link " href="http://wa2333.com/index.xml">
@@ -260,12 +260,12 @@
         <div id="categories-archives" class="main-content-wrap">
           <form id="filter-form" action="##">
             <input name="category" type="text" class="form-control input--xlarge"
-                   placeholder="搜索分类" autofocus="autofocus">
+                   placeholder="Search category" autofocus="autofocus">
           </form>
           <h5 class="archive-result text-color-base text-xlarge"
-              data-message-zero="没有找到分类"
-              data-message-one="找到 1 个分类"
-              data-message-other="找到 {n} 个分类"></h5>
+              data-message-zero="no category found"
+              data-message-one="1 cartegory found"
+              data-message-other="{n} categories found"></h5>
           <section class="boxes">
             
               
@@ -341,11 +341,11 @@
       <i class="fa fa-remove"></i>
     </div>
     
-      <img id="about-card-picture" src="//www.gravatar.com/avatar/f47b51d6d6b82fd9048e3eaf64bf7e69?s=110" alt="作者的图片" />
+      <img id="about-card-picture" src="//www.gravatar.com/avatar/f47b51d6d6b82fd9048e3eaf64bf7e69?s=110" alt="Author&#39;s picture" />
     
     <h4 id="about-card-name">SelFree</h4>
     
-      <div id="about-card-bio">Sorry, I&rsquo;m married.</div>
+      <div id="about-card-bio">城市永远年轻，而我们终将老去</div>
     
     
       <div id="about-card-job">
@@ -390,7 +390,7 @@ $(document).ready(function() {
       code += "<span class=\"line\">" + line + "</span><br>";
     });
     if (code.length > 0) {
-      block.innerHTML = code;  
+      block.innerHTML = code;
     }
   });
   $('pre > code').each(function(i, block) {
@@ -399,6 +399,7 @@ $(document).ready(function() {
   });
 });
 </script>
+
 
 
 </html>

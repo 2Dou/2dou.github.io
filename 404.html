@@ -28,15 +28,15 @@
     
 
     
-    <meta name="description" content="城市永远年轻，而我们终将老去">
-    <meta property="og:description" content="城市永远年轻，而我们终将老去">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
     <meta property="og:type" content="blog">
     <meta property="og:title" content="404 Page not found">
     <meta property="og:url" content="/404/">
     <meta property="og:site_name" content="目不斜视">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="目不斜视">
-    <meta name="twitter:description" content="城市永远年轻，而我们终将老去">
+    <meta name="twitter:description" content="">
     
     
 
@@ -61,7 +61,7 @@
     
     <link rel="stylesheet" href="http://wa2333.com/css/style-gwlo24d2hxipxk8bi1sxik0zhlpn9t7ebcmgp9kubmmcjfzlavuyhvbqumhn.min.css" />
     
-    
+
     
       
     
@@ -82,11 +82,11 @@
       <i class="fa fa-remove"></i>
     </div>
     
-      <img id="about-card-picture" src="//www.gravatar.com/avatar/f47b51d6d6b82fd9048e3eaf64bf7e69?s=110" alt="作者的图片" />
+      <img id="about-card-picture" src="//www.gravatar.com/avatar/f47b51d6d6b82fd9048e3eaf64bf7e69?s=110" alt="Author&#39;s picture" />
     
     <h4 id="about-card-name">SelFree</h4>
     
-      <div id="about-card-bio">Sorry, I&rsquo;m married.</div>
+      <div id="about-card-bio">城市永远年轻，而我们终将老去</div>
     
     
       <div id="about-card-job">
@@ -116,11 +116,11 @@
       <i class="search-icon fa fa-search"></i>
       <form id="algolia-search-form">
         <input type="text" id="algolia-search-input" name="search"
-          class="form-control input--large search-input" placeholder="搜索" />
+          class="form-control input--large search-input" placeholder="Search" />
       </form>
     </div>
     <div class="modal-body">
-      <div class="no-result text-color-light text-center"></div>
+      <div class="no-result text-color-light text-center">no post found</div>
       <div class="results">
         
         
@@ -162,9 +162,9 @@
     </div>
     <div class="modal-footer">
       <p class="results-count text-medium"
-         data-message-zero=""
-         data-message-one=""
-         data-message-other="">
+         data-message-zero="no post found"
+         data-message-one="1 post found"
+         data-message-other="{n} posts found">
          2 posts found
       </p>
     </div>
@@ -195,7 +195,7 @@ $(document).ready(function() {
       code += "<span class=\"line\">" + line + "</span><br>";
     });
     if (code.length > 0) {
-      block.innerHTML = code;  
+      block.innerHTML = code;
     }
   });
   $('pre > code').each(function(i, block) {
@@ -204,6 +204,7 @@ $(document).ready(function() {
   });
 });
 </script>
+
 
 
     
