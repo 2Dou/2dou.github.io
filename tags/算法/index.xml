@@ -9,6 +9,93 @@
     <atom:link href="http://www.wa2333.com/tags/%E7%AE%97%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>5. Longest Palindromic Substring</title>
+      <link>http://www.wa2333.com/leetcode/5-Longest-Palindromic-Substring/</link>
+      <pubDate>Thu, 16 Mar 2017 14:47:07 +0800</pubDate>
+      
+      <guid>http://www.wa2333.com/leetcode/5-Longest-Palindromic-Substring/</guid>
+      <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000.&lt;/p&gt;
+
+&lt;p&gt;Example:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Input: &amp;quot;babad&amp;quot;
+
+Output: &amp;quot;bab&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Note: &amp;ldquo;aba&amp;rdquo; is also a valid answer.&lt;/p&gt;
+
+&lt;p&gt;Example:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Input: &amp;quot;cbbd&amp;quot;
+
+Output: &amp;quot;bb&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;从给定字符串中找出最长的回文&lt;/p&gt;
+
+&lt;h2 id=&#34;solution&#34;&gt;Solution&lt;/h2&gt;
+
+&lt;p&gt;从最大长度开始判断是否回文，是则返回&lt;/p&gt;
+
+
+  
+    
+  
+  
+    
+  
+  
+  
+
+
+&lt;figure class=&#34;highlight go&#34;&gt;
+  &lt;figcaption&gt;
+    
+      &lt;span&gt;Solution.go&lt;/span&gt;
+    
+  &lt;/figcaption&gt;
+  &lt;table&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td class=&#34;gutter&#34;&gt;
+          &lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;
+        &lt;/td&gt;
+        &lt;td class=&#34;code&#34;&gt;
+          &lt;pre class=&#34;go code-highlight&#34;&gt;func longestPalindrome(s string) string {
+    maxLen := len(s)
+
+    for l := maxLen; l &amp;gt; 0; l-- {
+        for i := 0; i &amp;#43; l &amp;lt;= maxLen; i&amp;#43;&amp;#43; {
+            lp, rp := i, i &amp;#43; l -1
+
+            for lp &amp;lt; rp &amp;amp;&amp;amp; s[lp] == s[rp] {
+                lp&amp;#43;&amp;#43;
+                rp--
+            }
+
+            if lp &amp;gt;= rp {
+                return s[i:i&amp;#43;l]
+            }
+        }
+    }
+
+    return s[0:1]
+}&lt;/pre&gt;
+        &lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/figure&gt;</description>
+    </item>
+    
+    <item>
       <title>4. Median of Two Sorted Arrays</title>
       <link>http://www.wa2333.com/leetcode/4-Median-of-Two-Sorted-Arrays/</link>
       <pubDate>Thu, 16 Mar 2017 10:53:58 +0800</pubDate>
@@ -124,8 +211,6 @@ nums2 = [3, 4]&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Given a string, find the length of the longest substring without repeating characters.&lt;/p&gt;
 
-&lt;p&gt;Examples:&lt;/p&gt;
-
 &lt;p&gt;Given &amp;ldquo;abcabcbb&amp;rdquo;, the answer is &amp;ldquo;abc&amp;rdquo;, which the length is 3.&lt;/p&gt;
 
 &lt;p&gt;Given &amp;ldquo;bbbbb&amp;rdquo;, the answer is &amp;ldquo;b&amp;rdquo;, with the length of 1.&lt;/p&gt;
@@ -210,9 +295,9 @@ nums2 = [3, 4]&lt;/p&gt;
 
 &lt;p&gt;You may assume the two numbers do not contain any leading zero, except the number 0 itself.&lt;/p&gt;
 
-&lt;p&gt;Input: (2 -&amp;gt; 4 -&amp;gt; 3) + (5 -&amp;gt; 6 -&amp;gt; 4)&lt;/p&gt;
-
-&lt;p&gt;Output: 7 -&amp;gt; 0 -&amp;gt; 8&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Input: (2 -&amp;gt; 4 -&amp;gt; 3) + (5 -&amp;gt; 6 -&amp;gt; 4)
+Output: 7 -&amp;gt; 0 -&amp;gt; 8
+&lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;&lt;/p&gt;
@@ -312,8 +397,9 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 
 &lt;p&gt;You may assume that each input would have exactly one solution, and you may not use the same element twice.&lt;/p&gt;
 
-&lt;p&gt;Example:
-Given nums = [2, 7, 11, 15], target = 9,&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Example:
+Given nums = [2, 7, 11, 15], target = 9,
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Because nums[0] + nums[1] = 2 + 7 = 9,
 return [0, 1].&lt;/p&gt;
