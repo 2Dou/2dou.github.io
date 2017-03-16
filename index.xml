@@ -6,16 +6,140 @@
     <description>Recent content on 目不斜视</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 15 Mar 2017 19:38:58 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 16 Mar 2017 14:11:42 +0800</lastBuildDate>
     <atom:link href="http://wa2333.com/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>3. longest substring without repeating characters</title>
-      <link>http://wa2333.com/leetcode/3-longest-substring-without-repeating-characters/</link>
+      <title>About me</title>
+      <link>http://wa2333.com/about/</link>
+      <pubDate>Thu, 16 Mar 2017 14:11:42 +0800</pubDate>
+      
+      <guid>http://wa2333.com/about/</guid>
+      <description>
+
+&lt;h3 id=&#34;城市永远年轻-而我们终将老去&#34;&gt;城市永远年轻，而我们终将老去&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Sorry, I&amp;rsquo;m married.&lt;/li&gt;
+&lt;li&gt;cocos2dx-lua 程序猿&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;mailto:h3rvgo@gmail.com&#34;&gt;h3rvgo@gmail.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/2Dou&#34;&gt;&lt;span&gt;&lt;i class=&#34;sidebar-button-icon fa fa-lg fa-github&#34;&gt;&lt;/i&gt;2Dou&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>4. Median of Two Sorted Arrays</title>
+      <link>http://wa2333.com/leetcode/4-Median-of-Two-Sorted-Arrays/</link>
+      <pubDate>Thu, 16 Mar 2017 10:53:58 +0800</pubDate>
+      
+      <guid>http://wa2333.com/leetcode/4-Median-of-Two-Sorted-Arrays/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/median-of-two-sorted-arrays&#34;&gt;Median of Two Sorted Arrays&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;There are two sorted arrays nums1 and nums2 of size m and n respectively.&lt;/p&gt;
+
+&lt;p&gt;Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).&lt;/p&gt;
+
+&lt;p&gt;Example 1:
+nums1 = [1, 3]
+nums2 = [2]&lt;/p&gt;
+
+&lt;p&gt;The median is 2.0
+Example 2:
+nums1 = [1, 2]
+nums2 = [3, 4]&lt;/p&gt;
+
+&lt;p&gt;The median is (2 + 3)/2 = 2.5&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;solution&#34;&gt;Solution&lt;/h2&gt;
+
+&lt;p&gt;通过数组长度，计算中位数的位置。在两个数组中按大小顺序依次查找，找到中位数所在位置，取出数值计算。&lt;/p&gt;
+
+
+  
+    
+  
+  
+    
+  
+  
+  
+
+
+&lt;figure class=&#34;highlight go&#34;&gt;
+  &lt;figcaption&gt;
+    
+      &lt;span&gt;Solution.go&lt;/span&gt;
+    
+  &lt;/figcaption&gt;
+  &lt;table&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td class=&#34;gutter&#34;&gt;
+          &lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;39&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;
+        &lt;/td&gt;
+        &lt;td class=&#34;code&#34;&gt;
+          &lt;pre class=&#34;go code-highlight&#34;&gt;func findMedianSortedArrays(nums1 []int, nums2 []int) float64 {
+    totalLen := len(nums1) &amp;#43; len(nums2)
+
+    var p1, p2, index1, index2, sum int
+
+    index1 = int((totalLen - 1) / 2)
+    index2 = int(totalLen / 2)
+
+    for i := 0; i &amp;lt; totalLen; i&amp;#43;&amp;#43; {
+        if i &amp;gt; index2 {
+            break
+        }
+        var num int
+        if p1 &amp;lt; len(nums1) &amp;amp;&amp;amp; p2 &amp;lt; len(nums2) {
+            if nums1[p1] &amp;lt; nums2[p2] {
+                num = nums1[p1]
+                p1&amp;#43;&amp;#43;
+            } else {
+                num = nums2[p2]
+                p2&amp;#43;&amp;#43;
+            }
+        } else if p1 &amp;lt; len(nums1) {
+            num = nums1[p1]
+            p1&amp;#43;&amp;#43;
+        } else {
+            num = nums2[p2]
+            p2&amp;#43;&amp;#43;
+        }
+
+        if i == index1 {
+            sum &amp;#43;= num
+        }
+        if i == index2 {
+            sum &amp;#43;= num
+        }
+    }
+
+    return float64(sum) / 2.0
+}&lt;/pre&gt;
+        &lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/figure&gt;</description>
+    </item>
+    
+    <item>
+      <title>3. Longest Substring Without Repeating Characters</title>
+      <link>http://wa2333.com/leetcode/3-Longest-Substring-Without-Repeating-Characters/</link>
       <pubDate>Wed, 15 Mar 2017 19:38:58 +0800</pubDate>
       
-      <guid>http://wa2333.com/leetcode/3-longest-substring-without-repeating-characters/</guid>
-      <description>&lt;h1 id=&#34;description&#34;&gt;Description&lt;/h1&gt;
+      <guid>http://wa2333.com/leetcode/3-Longest-Substring-Without-Repeating-Characters/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/longest-substring-without-repeating-characters&#34;&gt;Longest Substring Without Repeating Characters&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;Given a string, find the length of the longest substring without repeating characters.&lt;/p&gt;
@@ -33,7 +157,7 @@
 
 &lt;p&gt;在给定字符串中找出最长子串的长度，子串中不能包含重复字符。&lt;/p&gt;
 
-&lt;h1 id=&#34;solution&#34;&gt;Solution&lt;/h1&gt;
+&lt;h2 id=&#34;solution&#34;&gt;Solution&lt;/h2&gt;
 
 
   
@@ -92,12 +216,14 @@
     </item>
     
     <item>
-      <title>2. add two numbers</title>
-      <link>http://wa2333.com/leetcode/2-add-two-numbers/</link>
+      <title>2. Add Two Numbers</title>
+      <link>http://wa2333.com/leetcode/2-Add-Two-Numbers/</link>
       <pubDate>Wed, 15 Mar 2017 16:55:54 +0800</pubDate>
       
-      <guid>http://wa2333.com/leetcode/2-add-two-numbers/</guid>
-      <description>&lt;h1 id=&#34;description&#34;&gt;Description&lt;/h1&gt;
+      <guid>http://wa2333.com/leetcode/2-Add-Two-Numbers/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/add-two-numbers&#34;&gt;Add Two Numbers&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.&lt;/p&gt;
@@ -113,7 +239,7 @@
 
 &lt;p&gt;通过链表计算加法，向后进位&lt;/p&gt;
 
-&lt;h1 id=&#34;solution&#34;&gt;Solution&lt;/h1&gt;
+&lt;h2 id=&#34;solution&#34;&gt;Solution&lt;/h2&gt;
 
 &lt;p&gt;用一个int作进位寄存器，在下一位相加时加上进位寄存器&lt;/p&gt;
 
@@ -192,12 +318,14 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
     </item>
     
     <item>
-      <title>1. two sum</title>
-      <link>http://wa2333.com/leetcode/1-two-sum/</link>
+      <title>1. Two Sum</title>
+      <link>http://wa2333.com/leetcode/1-Two-Sum/</link>
       <pubDate>Wed, 15 Mar 2017 16:36:59 +0800</pubDate>
       
-      <guid>http://wa2333.com/leetcode/1-two-sum/</guid>
-      <description>&lt;h1 id=&#34;description&#34;&gt;Description&lt;/h1&gt;
+      <guid>http://wa2333.com/leetcode/1-Two-Sum/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/two-sum&#34;&gt;Two Sum&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;Given an array of integers, return indices of the two numbers such that they add up to a specific target.&lt;/p&gt;
@@ -215,7 +343,7 @@ return [0, 1].&lt;/p&gt;
 
 &lt;p&gt;假定只有&lt;strong&gt;唯一&lt;/strong&gt;解的情况下在数组中找出和为target的两个数&lt;/p&gt;
 
-&lt;h1 id=&#34;solution&#34;&gt;Solution&lt;/h1&gt;
+&lt;h2 id=&#34;solution&#34;&gt;Solution&lt;/h2&gt;
 
 
   

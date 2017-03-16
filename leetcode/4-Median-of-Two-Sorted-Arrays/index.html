@@ -1,5 +1,9 @@
 
 
+  
+    
+  
+
 
   
 
@@ -18,25 +22,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Hugo 0.20-DEV">
-    <title>Archives</title>
+    <title>4. Median of Two Sorted Arrays</title>
     <meta name="author" content="SelFree">
     <meta name="keywords" content="">
 
     <link rel="icon" href="http://wa2333.com/favicon.png">
     
-      <link rel="alternate" type="application/rss+xml" title="RSS" href="http://wa2333.com/archives/index.xml">
-    
 
     
-    <meta name="description" content="">
-    <meta property="og:description" content="">
+    <meta name="description" content="LeetCode 练习">
+    <meta property="og:description" content="LeetCode 练习">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Archives">
-    <meta property="og:url" content="/archives/">
+    <meta property="og:title" content="4. Median of Two Sorted Arrays">
+    <meta property="og:url" content="/leetcode/4-Median-of-Two-Sorted-Arrays/">
     <meta property="og:site_name" content="目不斜视">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="目不斜视">
-    <meta name="twitter:description" content="">
+    <meta name="twitter:description" content="LeetCode 练习">
     
     
 
@@ -70,7 +72,7 @@
 
   <body>
     <div id="blog">
-      <header id="header" data-behavior="1">
+      <header id="header" data-behavior="4">
   <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
   <div class="header-title">
     <a class="header-title-link" href="http://wa2333.com/">目不斜视</a>
@@ -90,7 +92,7 @@
   
 </header>
 
-      <nav id="sidebar" data-behavior="1">
+      <nav id="sidebar" data-behavior="4">
   <div class="sidebar-container">
     
       <div class="sidebar-profile">
@@ -195,55 +197,272 @@
   </div>
 </nav>
 
-      <div id="main" data-behavior="1"
+      
+
+      <div id="main" data-behavior="4"
         class="
                hasCoverMetaIn
                ">
-        <div id="archives" class="main-content-wrap">
-          <form id="filter-form" action="#">
-            <input name="date" type="text" class="form-control input--xlarge" placeholder="Search date (YYYY/MM/DD)" autofocus="autofocus">
-          </form>
-          <h5 class="archive-result text-color-base text-xlarge" data-message-zero="no post found" data-message-one="1 post found" data-message-other="{n} posts found"></h5>
-<section class="boxes">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title" itemprop="headline">
+      4. Median of Two Sorted Arrays
+    </h1>
+  
+  <div class="postShorten-meta post-meta">
+  
+    <time itemprop="datePublished" datetime="2017-03-16T10:53:58&#43;08:00">
+      
+  
+  
+  
+  
+    2017-03-16
+  
+
+    </time>
+  
+  
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="http://wa2333.com/categories/leetcode">LeetCode</a>
+    
+  
+
+
+</div>
+
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <p><a href="https://leetcode.com/problems/median-of-two-sorted-arrays">Median of Two Sorted Arrays</a></p>
+
+<h2 id="description">Description</h2>
+
+<blockquote>
+<p>There are two sorted arrays nums1 and nums2 of size m and n respectively.</p>
+
+<p>Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).</p>
+
+<p>Example 1:
+nums1 = [1, 3]
+nums2 = [2]</p>
+
+<p>The median is 2.0
+Example 2:
+nums1 = [1, 2]
+nums2 = [3, 4]</p>
+
+<p>The median is (2 + 3)/2 = 2.5</p>
+</blockquote>
+
+<p></p>
+
+<h2 id="solution">Solution</h2>
+
+<p>通过数组长度，计算中位数的位置。在两个数组中按大小顺序依次查找，找到中位数所在位置，取出数值计算。</p>
+
+
   
     
-    <div class="archive archive-year box" data-date="2017">
-      <h4 class="archive-title" style="text-decoration: none;">2017</h4>
-      
-        <ul class="archive-posts archive-month" data-date="201703">
-          <h5 class="archive-title" style="text-decoration: none;">March</h5>
-          
-            <li class="archive-post archive-day" data-date="20170316">
-              <a class="archive-post-title" href="http://wa2333.com/leetcode/4-Median-of-Two-Sorted-Arrays/">4. Median of Two Sorted Arrays</a>
-            </li>
-          
-            <li class="archive-post archive-day" data-date="20170315">
-              <a class="archive-post-title" href="http://wa2333.com/leetcode/3-Longest-Substring-Without-Repeating-Characters/">3. Longest Substring Without Repeating Characters</a>
-            </li>
-          
-            <li class="archive-post archive-day" data-date="20170315">
-              <a class="archive-post-title" href="http://wa2333.com/leetcode/2-Add-Two-Numbers/">2. Add Two Numbers</a>
-            </li>
-          
-            <li class="archive-post archive-day" data-date="20170315">
-              <a class="archive-post-title" href="http://wa2333.com/leetcode/1-Two-Sum/">1. Two Sum</a>
-            </li>
-          
-            <li class="archive-post archive-day" data-date="20170314">
-              <a class="archive-post-title" href="http://wa2333.com/2017/03/hello-world/">Hello World</a>
-            </li>
-          
-            <li class="archive-post archive-day" data-date="20170314">
-              <a class="archive-post-title" href="http://wa2333.com/post/">Posts</a>
-            </li>
-          
-        </ul>
-      
-    </div>
   
-</section>
-        </div>
+  
+    
+  
+  
+  
+
+
+<figure class="highlight go">
+  <figcaption>
+    
+      <span>Solution.go</span>
+    
+  </figcaption>
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+          <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre>
+        </td>
+        <td class="code">
+          <pre class="go code-highlight">func findMedianSortedArrays(nums1 []int, nums2 []int) float64 {
+    totalLen := len(nums1) &#43; len(nums2)
+
+    var p1, p2, index1, index2, sum int
+
+    index1 = int((totalLen - 1) / 2)
+    index2 = int(totalLen / 2)
+
+    for i := 0; i &lt; totalLen; i&#43;&#43; {
+        if i &gt; index2 {
+            break
+        }
+        var num int
+        if p1 &lt; len(nums1) &amp;&amp; p2 &lt; len(nums2) {
+            if nums1[p1] &lt; nums2[p2] {
+                num = nums1[p1]
+                p1&#43;&#43;
+            } else {
+                num = nums2[p2]
+                p2&#43;&#43;
+            }
+        } else if p1 &lt; len(nums1) {
+            num = nums1[p1]
+            p1&#43;&#43;
+        } else {
+            num = nums2[p2]
+            p2&#43;&#43;
+        }
+
+        if i == index1 {
+            sum &#43;= num
+        }
+        if i == index2 {
+            sum &#43;= num
+        }
+    }
+
+    return float64(sum) / 2.0
+}</pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="http://wa2333.com/tags/leetcode/">LeetCode</a>
+
+  <a class="tag tag--primary tag--small" href="http://wa2333.com/tags/%E7%AE%97%E6%B3%95/">算法</a>
+
+                  </div>
+                
+              
+            
+            <div class="post-actions-wrap">
+  <nav>
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="http://wa2333.com/leetcode/3-Longest-Substring-Without-Repeating-Characters/" data-tooltip="3. Longest Substring Without Repeating Characters">
+          
+            <i class="fa fa-angle-left"></i>
+            <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
+          </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="http://wa2333.com/about/" data-tooltip="About me">
+          
+            <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
+            <i class="fa fa-angle-right"></i>
+          </a>
+        </li>
+      
+    </ul>
+  </nav>
+  <ul class="post-actions post-action-share">
+    
+    
+    <li class="post-action">
+      
+        <a class="post-action-btn btn btn--default" href="#">
+        <i class="fa fa-chevron-up"></i>
+      
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+            
+              
+            
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2017 SelFree. All Rights Reserved
+  </span>
+</footer>
+
       </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        <div class="post-actions-wrap">
+  <nav>
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="http://wa2333.com/leetcode/3-Longest-Substring-Without-Repeating-Characters/" data-tooltip="3. Longest Substring Without Repeating Characters">
+          
+            <i class="fa fa-angle-left"></i>
+            <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
+          </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="http://wa2333.com/about/" data-tooltip="About me">
+          
+            <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
+            <i class="fa fa-angle-right"></i>
+          </a>
+        </li>
+      
+    </ul>
+  </nav>
+  <ul class="post-actions post-action-share">
+    
+    
+    <li class="post-action">
+      
+        <a class="post-action-btn btn btn--default" href="#">
+        <i class="fa fa-chevron-up"></i>
+      
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <ul class="share-options">
+    <li class="share-option">
+      <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http%3a%2f%2fwa2333.com%2fleetcode%2f4-Median-of-Two-Sorted-Arrays%2f">
+        <i class="fa fa-google-plus"></i><span>Share on Google Plus</span>
+      </a>
+    </li>
+    <li class="share-option">
+      <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fwa2333.com%2fleetcode%2f4-Median-of-Two-Sorted-Arrays%2f">
+        <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
+      </a>
+    </li>
+    <li class="share-option">
+      <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http%3a%2f%2fwa2333.com%2fleetcode%2f4-Median-of-Two-Sorted-Arrays%2f">
+        <i class="fa fa-twitter"></i><span>Share on Twitter</span>
+      </a>
+    </li>
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
     </div>
     
     <div id="about">
@@ -374,6 +593,10 @@ $(document).ready(function() {
   });
 });
 </script>
+
+  
+    
+  
 
 
 
