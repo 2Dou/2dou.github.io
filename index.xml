@@ -34,9 +34,7 @@
       <pubDate>Tue, 21 Mar 2017 16:04:44 +0800</pubDate>
       
       <guid>http://www.wa2333.com/leetcode/7-Reverse-Integer/</guid>
-      <description>
-
-&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/reverse-integer&#34;&gt;Reverse Integer&lt;/a&gt;&lt;/p&gt;
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/reverse-integer&#34;&gt;Reverse Integer&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
 
@@ -52,7 +50,7 @@
 &lt;p&gt;The input is assumed to be a 32-bit signed integer. Your function should &lt;strong&gt;return 0 when the reversed integer overflows&lt;/strong&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;!-- more --&gt;
+&lt;p&gt;&lt;/p&gt;
 
 &lt;p&gt;将输入的十进制数倒序&lt;/p&gt;
 
@@ -101,8 +99,7 @@
       &lt;/tr&gt;
     &lt;/tbody&gt;
   &lt;/table&gt;
-&lt;/figure&gt;
-</description>
+&lt;/figure&gt;</description>
     </item>
     
     <item>
