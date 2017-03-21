@@ -18,7 +18,8 @@
 
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
 
-&lt;p&gt;The string &lt;code&gt;&amp;quot;PAYPALISHIRING&amp;quot;&lt;/code&gt; is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The string &lt;code&gt;&amp;quot;PAYPALISHIRING&amp;quot;&lt;/code&gt; is written in a zigzag pattern on a given number of rows like this: (you may want to display this &amp;gt; pattern in a fixed font for better legibility)&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;P   A   H   N
 A P L S I I G
@@ -33,10 +34,9 @@ Y   I   R
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;&lt;code&gt;convert(&amp;quot;PAYPALISHIRING&amp;quot;, 3)&lt;/code&gt; should return &lt;code&gt;&amp;quot;PAHNAPLSIIGYIR&amp;quot;&lt;/code&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;p&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
 
 &lt;p&gt;输入之字字符串和之字的行数，要求按行输出字符串。&lt;/p&gt;
 

@@ -26,7 +26,6 @@
 &lt;p&gt;Example:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;Input: &amp;quot;babad&amp;quot;
-
 Output: &amp;quot;bab&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;
 
@@ -35,7 +34,6 @@ Output: &amp;quot;bab&amp;quot;
 &lt;p&gt;Example:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;Input: &amp;quot;cbbd&amp;quot;
-
 Output: &amp;quot;bb&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
