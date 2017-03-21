@@ -29,6 +29,134 @@
     </item>
     
     <item>
+      <title>6. ZigZag Conversion</title>
+      <link>http://www.wa2333.com/leetcode/6-ZigZag-Conversion/</link>
+      <pubDate>Fri, 17 Mar 2017 17:52:46 +0800</pubDate>
+      
+      <guid>http://www.wa2333.com/leetcode/6-ZigZag-Conversion/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/zigzag-conversion&#34;&gt;ZigZag Conversion&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
+
+&lt;p&gt;The string &lt;code&gt;&amp;quot;PAYPALISHIRING&amp;quot;&lt;/code&gt; is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;P   A   H   N
+A P L S I I G
+Y   I   R
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And then read line by line: &lt;code&gt;&amp;quot;PAHNAPLSIIGYIR&amp;quot;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Write the code that will take a string and make this conversion given a number of rows:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;string convert(string text, int nRows);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;convert(&amp;quot;PAYPALISHIRING&amp;quot;, 3)&lt;/code&gt; should return &lt;code&gt;&amp;quot;PAHNAPLSIIGYIR&amp;quot;&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;输入之字字符串和之字的行数，要求按行输出字符串。&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;&amp;quot;A-Z&amp;quot;&lt;/code&gt;5行的之字字符:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;   0 1 2 3 4 5 6 7 8 ...
+
+0  A       I       Q       Y
+1  B     H J     P R     X Z
+2  C   G   K   O   S   W
+3  D F     L N     T V
+4  E       M       U
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;可以看出：&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;第0、第4、第8、第12列每行都有字符，其他列只有一个字符 &lt;code&gt;col % (5 - 1) == 0&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;其他列字符所在行: &lt;code&gt;row = (5 - 1) - (col % (5 - 1))&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;字符在输入字符串中的位置(&lt;code&gt;0&lt;/code&gt;起)等于: &lt;code&gt;index = col * 2 + row&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;solution&#34;&gt;Solution&lt;/h2&gt;
+
+
+  
+    
+  
+  
+    
+  
+  
+  
+
+
+&lt;figure class=&#34;highlight go&#34;&gt;
+  &lt;figcaption&gt;
+    
+      &lt;span&gt;Solution.go&lt;/span&gt;
+    
+  &lt;/figcaption&gt;
+  &lt;table&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td class=&#34;gutter&#34;&gt;
+          &lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;42&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;43&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;44&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;
+        &lt;/td&gt;
+        &lt;td class=&#34;code&#34;&gt;
+          &lt;pre class=&#34;go code-highlight&#34;&gt;func convert(s string, numRows int) string {
+    /*       0  1  2  3  4  5  6    col
+     *     &amp;#43;----------------------
+     *  0  | 0  x  x  6  x  x  12
+     *  1  | 1  x  5  7  x 11
+     *  2  | 2  4  x  8 10
+     *  3  | 3  x  x  9
+     * row &amp;#43;----------------------
+     *
+     * col0: each line have a char
+     * col1: the char is at row2
+     * col2: the char is at row1
+     *  .
+     * col4: the char is at row2
+     *
+     * the char is at row( 4 - (col % 3) ) except col0、col0&amp;#43;3、col0&amp;#43;3&amp;#43;3...
+     */
+
+    if numRows == 1 {
+        return s
+    }
+
+    var res string
+
+    for row := 0; row &amp;lt; numRows; row&amp;#43;&amp;#43; {
+        for col := 0; ; col&amp;#43;&amp;#43; {
+            m := col % (numRows - 1)
+
+            // if m == 0 there must be a char
+            // else numRows-m eq the char&amp;#39; row-index
+            if m == 0 || row == (numRows - 1) - m{
+                idx := (col &amp;lt;&amp;lt; 1) &amp;#43; row
+
+                if idx &amp;gt;= len(s) {
+                    break
+                }
+
+                res &amp;#43;= string(s[idx])
+            }
+        }
+    }
+
+    return res
+}&lt;/pre&gt;
+        &lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/figure&gt;</description>
+    </item>
+    
+    <item>
       <title>5. Longest Palindromic Substring</title>
       <link>http://www.wa2333.com/leetcode/5-Longest-Palindromic-Substring/</link>
       <pubDate>Thu, 16 Mar 2017 14:47:07 +0800</pubDate>
