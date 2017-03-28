@@ -6,27 +6,8 @@
     <description>Recent content on 目不斜视</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 24 Mar 2017 15:00:46 +0800</lastBuildDate>
     <atom:link href="http://www.wa2333.com/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>About me</title>
-      <link>http://www.wa2333.com/about/</link>
-      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.wa2333.com/about/</guid>
-      <description>
-
-&lt;h3 id=&#34;城市永远年轻-而我们终将老去&#34;&gt;城市永远年轻，而我们终将老去&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Sorry, I&amp;rsquo;m married.&lt;/li&gt;
-&lt;li&gt;cocos2dx-lua 程序猿&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;mailto:h3rvgo@gmail.com&#34; target=&#34;_blank&#34;&gt;h3rvgo@gmail.com&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/2Dou&#34; target=&#34;_blank&#34;&gt;&lt;span&gt;&lt;i class=&#34;sidebar-button-icon fa fa-lg fa-github&#34;&gt;&lt;/i&gt;2Dou&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
     
     <item>
       <title>10. Regular Expression Matching</title>
@@ -1040,6 +1021,25 @@ return [0, 1].&lt;/p&gt;
       
       <guid>http://www.wa2333.com/2017/03/hello-world/</guid>
       <description>&lt;p&gt;国际惯例&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>About me</title>
+      <link>http://www.wa2333.com/about/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.wa2333.com/about/</guid>
+      <description>
+
+&lt;h3 id=&#34;城市永远年轻-而我们终将老去&#34;&gt;城市永远年轻，而我们终将老去&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Sorry, I&amp;rsquo;m married.&lt;/li&gt;
+&lt;li&gt;cocos2dx-lua 程序猿&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;mailto:h3rvgo@gmail.com&#34; target=&#34;_blank&#34;&gt;h3rvgo@gmail.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/2Dou&#34; target=&#34;_blank&#34;&gt;&lt;span&gt;&lt;i class=&#34;sidebar-button-icon fa fa-lg fa-github&#34;&gt;&lt;/i&gt;2Dou&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
