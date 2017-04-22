@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>算法 on 目不斜视</title>
-    <link>http://www.wa2333.com/tags/%E7%AE%97%E6%B3%95/index.xml</link>
-    <description>Recent content in 算法 on 目不斜视</description>
+    <title>算法 on on the way</title>
+    <link>http://www.orztu.com/tags/%E7%AE%97%E6%B3%95/index.xml</link>
+    <description>Recent content in 算法 on on the way</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <atom:link href="http://www.wa2333.com/tags/%E7%AE%97%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://www.orztu.com/tags/%E7%AE%97%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>10. Regular Expression Matching</title>
-      <link>http://www.wa2333.com/leetcode/10-Regular-Expression-Matching/</link>
+      <link>http://www.orztu.com/leetcode/10-Regular-Expression-Matching/</link>
       <pubDate>Fri, 24 Mar 2017 15:00:46 +0800</pubDate>
       
-      <guid>http://www.wa2333.com/leetcode/10-Regular-Expression-Matching/</guid>
+      <guid>http://www.orztu.com/leetcode/10-Regular-Expression-Matching/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/regular-expression-matching&#34; target=&#34;_blank&#34;&gt;Regular Expression Matching&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
@@ -125,10 +125,10 @@ isMatch(&amp;quot;aab&amp;quot;, &amp;quot;c*a*b&amp;quot;) → true
     
     <item>
       <title>9. Palindrome Number</title>
-      <link>http://www.wa2333.com/leetcode/9-Palindrome-Number/</link>
+      <link>http://www.orztu.com/leetcode/9-Palindrome-Number/</link>
       <pubDate>Fri, 24 Mar 2017 15:00:46 +0800</pubDate>
       
-      <guid>http://www.wa2333.com/leetcode/9-Palindrome-Number/</guid>
+      <guid>http://www.orztu.com/leetcode/9-Palindrome-Number/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/palindrome-number&#34; target=&#34;_blank&#34;&gt;Palindrome Number&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
@@ -260,10 +260,10 @@ isMatch(&amp;quot;aab&amp;quot;, &amp;quot;c*a*b&amp;quot;) → true
     
     <item>
       <title>8. String to Integer (atoi)</title>
-      <link>http://www.wa2333.com/leetcode/8-String-to-Integer-%28atoi%29/</link>
+      <link>http://www.orztu.com/leetcode/8-String-to-Integer-%28atoi%29/</link>
       <pubDate>Wed, 22 Mar 2017 09:05:12 +0800</pubDate>
       
-      <guid>http://www.wa2333.com/leetcode/8-String-to-Integer-%28atoi%29/</guid>
+      <guid>http://www.orztu.com/leetcode/8-String-to-Integer-%28atoi%29/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/string-to-integer-atoi&#34; target=&#34;_blank&#34;&gt;String to Integer (atoi)&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
@@ -349,10 +349,10 @@ isMatch(&amp;quot;aab&amp;quot;, &amp;quot;c*a*b&amp;quot;) → true
     
     <item>
       <title>7. Reverse Integer</title>
-      <link>http://www.wa2333.com/leetcode/7-Reverse-Integer/</link>
+      <link>http://www.orztu.com/leetcode/7-Reverse-Integer/</link>
       <pubDate>Tue, 21 Mar 2017 16:04:44 +0800</pubDate>
       
-      <guid>http://www.wa2333.com/leetcode/7-Reverse-Integer/</guid>
+      <guid>http://www.orztu.com/leetcode/7-Reverse-Integer/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/reverse-integer&#34; target=&#34;_blank&#34;&gt;Reverse Integer&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
@@ -423,10 +423,10 @@ isMatch(&amp;quot;aab&amp;quot;, &amp;quot;c*a*b&amp;quot;) → true
     
     <item>
       <title>6. ZigZag Conversion</title>
-      <link>http://www.wa2333.com/leetcode/6-ZigZag-Conversion/</link>
+      <link>http://www.orztu.com/leetcode/6-ZigZag-Conversion/</link>
       <pubDate>Fri, 17 Mar 2017 17:52:46 +0800</pubDate>
       
-      <guid>http://www.wa2333.com/leetcode/6-ZigZag-Conversion/</guid>
+      <guid>http://www.orztu.com/leetcode/6-ZigZag-Conversion/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/zigzag-conversion&#34; target=&#34;_blank&#34;&gt;ZigZag Conversion&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
@@ -551,13 +551,13 @@ Y   I   R
     
     <item>
       <title>5. Longest Palindromic Substring</title>
-      <link>http://www.wa2333.com/leetcode/5-Longest-Palindromic-Substring/</link>
+      <link>http://www.orztu.com/leetcode/5-Longest-Palindromic-Substring/</link>
       <pubDate>Thu, 16 Mar 2017 14:47:07 +0800</pubDate>
       
-      <guid>http://www.wa2333.com/leetcode/5-Longest-Palindromic-Substring/</guid>
+      <guid>http://www.orztu.com/leetcode/5-Longest-Palindromic-Substring/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/longest-palindromic-substring&#34; target=&#34;_blank&#34;&gt;Longest Palindromic Substring&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://www.wa2333.com/images/leetcode/5-palindromic-1.png&#34; alt=&#34;palindromic&#34; title=&#34;回文&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.orztu.com/images/leetcode/5-palindromic-1.png&#34; alt=&#34;palindromic&#34; title=&#34;回文&#34; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
 
@@ -640,10 +640,10 @@ Output: &amp;quot;bb&amp;quot;
     
     <item>
       <title>4. Median of Two Sorted Arrays</title>
-      <link>http://www.wa2333.com/leetcode/4-Median-of-Two-Sorted-Arrays/</link>
+      <link>http://www.orztu.com/leetcode/4-Median-of-Two-Sorted-Arrays/</link>
       <pubDate>Thu, 16 Mar 2017 10:53:58 +0800</pubDate>
       
-      <guid>http://www.wa2333.com/leetcode/4-Median-of-Two-Sorted-Arrays/</guid>
+      <guid>http://www.orztu.com/leetcode/4-Median-of-Two-Sorted-Arrays/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/median-of-two-sorted-arrays&#34; target=&#34;_blank&#34;&gt;Median of Two Sorted Arrays&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
@@ -747,10 +747,10 @@ nums2 = [3, 4]
     
     <item>
       <title>3. Longest Substring Without Repeating Characters</title>
-      <link>http://www.wa2333.com/leetcode/3-Longest-Substring-Without-Repeating-Characters/</link>
+      <link>http://www.orztu.com/leetcode/3-Longest-Substring-Without-Repeating-Characters/</link>
       <pubDate>Wed, 15 Mar 2017 19:38:58 +0800</pubDate>
       
-      <guid>http://www.wa2333.com/leetcode/3-Longest-Substring-Without-Repeating-Characters/</guid>
+      <guid>http://www.orztu.com/leetcode/3-Longest-Substring-Without-Repeating-Characters/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/longest-substring-without-repeating-characters&#34; target=&#34;_blank&#34;&gt;Longest Substring Without Repeating Characters&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
@@ -829,10 +829,10 @@ nums2 = [3, 4]
     
     <item>
       <title>2. Add Two Numbers</title>
-      <link>http://www.wa2333.com/leetcode/2-Add-Two-Numbers/</link>
+      <link>http://www.orztu.com/leetcode/2-Add-Two-Numbers/</link>
       <pubDate>Wed, 15 Mar 2017 16:55:54 +0800</pubDate>
       
-      <guid>http://www.wa2333.com/leetcode/2-Add-Two-Numbers/</guid>
+      <guid>http://www.orztu.com/leetcode/2-Add-Two-Numbers/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/add-two-numbers&#34; target=&#34;_blank&#34;&gt;Add Two Numbers&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
@@ -931,10 +931,10 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
     
     <item>
       <title>1. Two Sum</title>
-      <link>http://www.wa2333.com/leetcode/1-Two-Sum/</link>
+      <link>http://www.orztu.com/leetcode/1-Two-Sum/</link>
       <pubDate>Wed, 15 Mar 2017 16:36:59 +0800</pubDate>
       
-      <guid>http://www.wa2333.com/leetcode/1-Two-Sum/</guid>
+      <guid>http://www.orztu.com/leetcode/1-Two-Sum/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/two-sum&#34; target=&#34;_blank&#34;&gt;Two Sum&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;

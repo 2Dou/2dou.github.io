@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>之字字符 on 目不斜视</title>
-    <link>http://www.wa2333.com/tags/%E4%B9%8B%E5%AD%97%E5%AD%97%E7%AC%A6/index.xml</link>
-    <description>Recent content in 之字字符 on 目不斜视</description>
+    <title>之字字符 on on the way</title>
+    <link>http://www.orztu.com/tags/%E4%B9%8B%E5%AD%97%E5%AD%97%E7%AC%A6/index.xml</link>
+    <description>Recent content in 之字字符 on on the way</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <atom:link href="http://www.wa2333.com/tags/%E4%B9%8B%E5%AD%97%E5%AD%97%E7%AC%A6/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://www.orztu.com/tags/%E4%B9%8B%E5%AD%97%E5%AD%97%E7%AC%A6/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>6. ZigZag Conversion</title>
-      <link>http://www.wa2333.com/leetcode/6-ZigZag-Conversion/</link>
+      <link>http://www.orztu.com/leetcode/6-ZigZag-Conversion/</link>
       <pubDate>Fri, 17 Mar 2017 17:52:46 +0800</pubDate>
       
-      <guid>http://www.wa2333.com/leetcode/6-ZigZag-Conversion/</guid>
+      <guid>http://www.orztu.com/leetcode/6-ZigZag-Conversion/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/zigzag-conversion&#34; target=&#34;_blank&#34;&gt;ZigZag Conversion&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
