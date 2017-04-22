@@ -22,9 +22,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Hugo 0.20-DEV">
-    <title>8. String to Integer (atoi)</title>
+    <title>Longest Palindromic Substring</title>
     <meta name="author" content="SelFree">
-    <meta name="keywords" content="LeetCode">
+    <meta name="keywords" content="LeetCode, 回文">
 
     <link rel="icon" href="http://www.orztu.com/favicon.png">
     
@@ -33,8 +33,8 @@
     <meta name="description" content="LeetCode 练习">
     <meta property="og:description" content="LeetCode 练习">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="8. String to Integer (atoi)">
-    <meta property="og:url" content="/leetcode/8-String-to-Integer-%28atoi%29/">
+    <meta property="og:title" content="Longest Palindromic Substring">
+    <meta property="og:url" content="/leetcode/Longest-Palindromic-Substring/">
     <meta property="og:site_name" content="on the way">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="on the way">
@@ -227,18 +227,18 @@
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title" itemprop="headline">
-      8. String to Integer (atoi)
+      Longest Palindromic Substring
     </h1>
   
   <div class="postShorten-meta post-meta">
   
-    <time itemprop="datePublished" datetime="2017-03-22T09:05:12&#43;08:00">
+    <time itemprop="datePublished" datetime="2017-03-16T14:47:07&#43;08:00">
       
   
   
   
   
-    2017-03-22
+    2017-03-16
   
 
     </time>
@@ -259,23 +259,37 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <p><a href="https://leetcode.com/problems/string-to-integer-atoi" target="_blank">String to Integer (atoi)</a></p>
+              <p><a href="https://leetcode.com/problems/longest-palindromic-substring" target="_blank">Longest Palindromic Substring</a></p>
+
+<p><img src="http://www.orztu.com/images/leetcode/5-palindromic-1.png" alt="palindromic" title="回文" /></p>
 
 <h2 id="description">Description</h2>
 
 <blockquote>
-<p>Implement atoi to convert a string to an integer.</p>
+<p>Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000.</p>
 
-<p><strong>Hint</strong>: Carefully consider all possible input cases. If you want a challenge, please do not see below and ask yourself what are the &gt; possible input cases.</p>
+<p>Example:</p>
 
-<p><strong>Notes:</strong> It is intended for this problem to be specified vaguely (ie, no given input specs). You are responsible to gather all the &gt; input requirements up front.</p>
+<pre><code>Input: &quot;babad&quot;
+Output: &quot;bab&quot;
+</code></pre>
+
+<p>Note: &ldquo;aba&rdquo; is also a valid answer.</p>
+
+<p>Example:</p>
+
+<pre><code>Input: &quot;cbbd&quot;
+Output: &quot;bb&quot;
+</code></pre>
 </blockquote>
 
 <p></p>
 
-<p>只需要注意边界检查</p>
+<p>从给定字符串中找出最长的回文</p>
 
 <h2 id="solution">Solution</h2>
+
+<p>从最大长度开始判断是否回文，是则返回</p>
 
 
   
@@ -298,42 +312,28 @@
     <tbody>
       <tr>
         <td class="gutter">
-          <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre>
+          <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre>
         </td>
         <td class="code">
-          <pre class="go code-highlight">func myAtoi(str string) int {
-    str = strings.TrimLeft(str, &#34; &#34;)
+          <pre class="go code-highlight">func longestPalindrome(s string) string {
+    maxLen := len(s)
 
-    if len(str) == 0 {
-        return 0
-    }
+    for l := maxLen; l &gt; 0; l-- {
+        for i := 0; i &#43; l &lt;= maxLen; i&#43;&#43; {
+            lp, rp := i, i &#43; l -1
 
-    r := 0
-    sign := 1
-
-    if str[0] == &#39;-&#39; {
-        sign = -1
-        str = str[1:]
-    } else if str[0] == &#39;&#43;&#39; {
-        str = str[1:]
-    }
-
-    for i := 0; i &lt; len(str); i&#43;&#43; {
-        c := str[i]
-        if c &gt;= &#39;0&#39; &amp;&amp; c &lt;= &#39;9&#39; {
-            r = r * 10 &#43; (int(c - &#39;0&#39;) * sign)
-
-            if r &lt;= math.MinInt32 {
-                return math.MinInt32
-            } else if r &gt;= math.MaxInt32 {
-                return math.MaxInt32
+            for lp &lt; rp &amp;&amp; s[lp] == s[rp] {
+                lp&#43;&#43;
+                rp--
             }
-        } else {
-            break
+
+            if lp &gt;= rp {
+                return s[i:i&#43;l]
+            }
         }
     }
 
-    return r
+    return s[0:1]
 }</pre>
         </td>
       </tr>
@@ -355,6 +355,8 @@
 
   <a class="tag tag--primary tag--small" href="http://www.orztu.com/tags/%E7%AE%97%E6%B3%95/">算法</a>
 
+  <a class="tag tag--primary tag--small" href="http://www.orztu.com/tags/%E5%9B%9E%E6%96%87/">回文</a>
+
                   </div>
                 
               
@@ -365,7 +367,7 @@
       
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="http://www.orztu.com/leetcode/7-Reverse-Integer/" data-tooltip="7. Reverse Integer">
+            <a class="post-action-btn btn btn--default tooltip--top" href="http://www.orztu.com/leetcode/Median-of-Two-Sorted-Arrays/" data-tooltip="Median of Two Sorted Arrays">
           
             <i class="fa fa-angle-left"></i>
             <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
@@ -373,7 +375,7 @@
         </li>
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="http://www.orztu.com/leetcode/9-Palindrome-Number/" data-tooltip="9. Palindrome Number">
+            <a class="post-action-btn btn btn--default tooltip--top" href="http://www.orztu.com/leetcode/ZigZag-Conversion/" data-tooltip="ZigZag Conversion">
           
             <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
             <i class="fa fa-angle-right"></i>
@@ -414,9 +416,9 @@
 
 
 var disqus_config = function () {
-  this.page.url = 'http:\/\/www.orztu.com\/leetcode\/8-String-to-Integer-%28atoi%29\/';
+  this.page.url = 'http:\/\/www.orztu.com\/leetcode\/Longest-Palindromic-Substring\/';
   
-    this.page.identifier = '\/leetcode\/8-String-to-Integer-%28atoi%29\/'
+    this.page.identifier = '\/leetcode\/Longest-Palindromic-Substring\/'
   
 };
 (function() { 
@@ -448,7 +450,7 @@ var disqus_config = function () {
       
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="http://www.orztu.com/leetcode/7-Reverse-Integer/" data-tooltip="7. Reverse Integer">
+            <a class="post-action-btn btn btn--default tooltip--top" href="http://www.orztu.com/leetcode/Median-of-Two-Sorted-Arrays/" data-tooltip="Median of Two Sorted Arrays">
           
             <i class="fa fa-angle-left"></i>
             <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
@@ -456,7 +458,7 @@ var disqus_config = function () {
         </li>
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="http://www.orztu.com/leetcode/9-Palindrome-Number/" data-tooltip="9. Palindrome Number">
+            <a class="post-action-btn btn btn--default tooltip--top" href="http://www.orztu.com/leetcode/ZigZag-Conversion/" data-tooltip="ZigZag Conversion">
           
             <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
             <i class="fa fa-angle-right"></i>
@@ -491,17 +493,17 @@ var disqus_config = function () {
       <div id="share-options-bar" class="share-options-bar" data-behavior="4">
   <ul class="share-options">
     <li class="share-option">
-      <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http%3a%2f%2fwww.orztu.com%2fleetcode%2f8-String-to-Integer-%2528atoi%2529%2f">
+      <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http%3a%2f%2fwww.orztu.com%2fleetcode%2fLongest-Palindromic-Substring%2f">
         <i class="fa fa-google-plus"></i><span>Share on Google Plus</span>
       </a>
     </li>
     <li class="share-option">
-      <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fwww.orztu.com%2fleetcode%2f8-String-to-Integer-%2528atoi%2529%2f">
+      <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fwww.orztu.com%2fleetcode%2fLongest-Palindromic-Substring%2f">
         <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
       </a>
     </li>
     <li class="share-option">
-      <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http%3a%2f%2fwww.orztu.com%2fleetcode%2f8-String-to-Integer-%2528atoi%2529%2f">
+      <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http%3a%2f%2fwww.orztu.com%2fleetcode%2fLongest-Palindromic-Substring%2f">
         <i class="fa fa-twitter"></i><span>Share on Twitter</span>
       </a>
     </li>
@@ -648,9 +650,9 @@ $(document).ready(function() {
     
       <script>
         var disqus_config = function () {
-          this.page.url = 'http:\/\/www.orztu.com\/leetcode\/8-String-to-Integer-%28atoi%29\/';
+          this.page.url = 'http:\/\/www.orztu.com\/leetcode\/Longest-Palindromic-Substring\/';
           
-            this.page.identifier = '\/leetcode\/8-String-to-Integer-%28atoi%29\/'
+            this.page.identifier = '\/leetcode\/Longest-Palindromic-Substring\/'
           
         };
         (function() {

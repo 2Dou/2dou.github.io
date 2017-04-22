@@ -10,126 +10,11 @@
     <atom:link href="http://www.orztu.com/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>10. Regular Expression Matching</title>
-      <link>http://www.orztu.com/leetcode/10-Regular-Expression-Matching/</link>
+      <title>Palindrome Number</title>
+      <link>http://www.orztu.com/leetcode/Palindrome-Number/</link>
       <pubDate>Fri, 24 Mar 2017 15:00:46 +0800</pubDate>
       
-      <guid>http://www.orztu.com/leetcode/10-Regular-Expression-Matching/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/regular-expression-matching&#34; target=&#34;_blank&#34;&gt;Regular Expression Matching&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Implement regular expression matching with support for &amp;lsquo;.&amp;rsquo; and &amp;lsquo;*&amp;lsquo;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&#39;.&#39; Matches any single character.
-&#39;*&#39; Matches zero or more of the preceding element.
-
-The matching should cover the entire input string (not partial).
-
-The function prototype should be:
-bool isMatch(const char *s, const char *p)
-
-Some examples:
-isMatch(&amp;quot;aa&amp;quot;,&amp;quot;a&amp;quot;) → false
-isMatch(&amp;quot;aa&amp;quot;,&amp;quot;aa&amp;quot;) → true
-isMatch(&amp;quot;aaa&amp;quot;,&amp;quot;aa&amp;quot;) → false
-isMatch(&amp;quot;aa&amp;quot;, &amp;quot;a*&amp;quot;) → true
-isMatch(&amp;quot;aa&amp;quot;, &amp;quot;.*&amp;quot;) → true
-isMatch(&amp;quot;ab&amp;quot;, &amp;quot;.*&amp;quot;) → true
-isMatch(&amp;quot;aab&amp;quot;, &amp;quot;c*a*b&amp;quot;) → true
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;/p&gt;
-
-&lt;p&gt;简单的字符匹配&lt;/p&gt;
-
-&lt;h2 id=&#34;solution&#34;&gt;Solution&lt;/h2&gt;
-
-
-  
-    
-  
-  
-    
-  
-  
-  
-
-
-&lt;figure class=&#34;highlight go&#34;&gt;
-  &lt;figcaption&gt;
-    
-      &lt;span&gt;My Solution&lt;/span&gt;
-    
-  &lt;/figcaption&gt;
-  &lt;table&gt;
-    &lt;tbody&gt;
-      &lt;tr&gt;
-        &lt;td class=&#34;gutter&#34;&gt;
-          &lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;42&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;43&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;44&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;45&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;46&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;
-        &lt;/td&gt;
-        &lt;td class=&#34;code&#34;&gt;
-          &lt;pre class=&#34;go code-highlight&#34;&gt;func isMatch(s string, p string) bool {
-    if len(s) == 0 &amp;amp;&amp;amp; len(p) == 0 {
-        return true
-    } else if len(p) == 0 {
-        // p is empty but s
-        return false
-    }
-
-    matchChar := p[0]
-
-    if len(p) &amp;gt; 1 &amp;amp;&amp;amp; p[1] == &amp;#39;*&amp;#39; {
-        // match any numbers of char(s)
-
-        // eat two char of p
-        p = p[2:]
-
-        for len(s) &amp;gt; 0{
-            if s[0] == matchChar || matchChar == &amp;#39;.&amp;#39; {
-                // try not to eat char of s
-                if isMatch(s, p) {
-                    return true
-                }
-
-                // let&amp;#39;s eat one char of s and try again
-                s = s[1:]
-            } else {
-                break
-            }
-        }
-    } else {
-        // match one char
-
-        // eat one char of p
-        p = p[1:]
-
-        // does it match?
-        if len(s) == 0 || (s[0] != matchChar &amp;amp;&amp;amp; matchChar != &amp;#39;.&amp;#39;) {
-            return false
-        }
-
-        // eat one char of s
-        s = s[1:]
-    }
-
-    return isMatch(s, p)
-}&lt;/pre&gt;
-        &lt;/td&gt;
-      &lt;/tr&gt;
-    &lt;/tbody&gt;
-  &lt;/table&gt;
-&lt;/figure&gt;</description>
-    </item>
-    
-    <item>
-      <title>9. Palindrome Number</title>
-      <link>http://www.orztu.com/leetcode/9-Palindrome-Number/</link>
-      <pubDate>Fri, 24 Mar 2017 15:00:46 +0800</pubDate>
-      
-      <guid>http://www.orztu.com/leetcode/9-Palindrome-Number/</guid>
+      <guid>http://www.orztu.com/leetcode/Palindrome-Number/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/palindrome-number&#34; target=&#34;_blank&#34;&gt;Palindrome Number&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
@@ -260,11 +145,126 @@ isMatch(&amp;quot;aab&amp;quot;, &amp;quot;c*a*b&amp;quot;) → true
     </item>
     
     <item>
-      <title>8. String to Integer (atoi)</title>
-      <link>http://www.orztu.com/leetcode/8-String-to-Integer-%28atoi%29/</link>
+      <title>Regular Expression Matching</title>
+      <link>http://www.orztu.com/leetcode/Regular-Expression-Matching/</link>
+      <pubDate>Fri, 24 Mar 2017 15:00:46 +0800</pubDate>
+      
+      <guid>http://www.orztu.com/leetcode/Regular-Expression-Matching/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/regular-expression-matching&#34; target=&#34;_blank&#34;&gt;Regular Expression Matching&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Implement regular expression matching with support for &amp;lsquo;.&amp;rsquo; and &amp;lsquo;*&amp;lsquo;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&#39;.&#39; Matches any single character.
+&#39;*&#39; Matches zero or more of the preceding element.
+
+The matching should cover the entire input string (not partial).
+
+The function prototype should be:
+bool isMatch(const char *s, const char *p)
+
+Some examples:
+isMatch(&amp;quot;aa&amp;quot;,&amp;quot;a&amp;quot;) → false
+isMatch(&amp;quot;aa&amp;quot;,&amp;quot;aa&amp;quot;) → true
+isMatch(&amp;quot;aaa&amp;quot;,&amp;quot;aa&amp;quot;) → false
+isMatch(&amp;quot;aa&amp;quot;, &amp;quot;a*&amp;quot;) → true
+isMatch(&amp;quot;aa&amp;quot;, &amp;quot;.*&amp;quot;) → true
+isMatch(&amp;quot;ab&amp;quot;, &amp;quot;.*&amp;quot;) → true
+isMatch(&amp;quot;aab&amp;quot;, &amp;quot;c*a*b&amp;quot;) → true
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;简单的字符匹配&lt;/p&gt;
+
+&lt;h2 id=&#34;solution&#34;&gt;Solution&lt;/h2&gt;
+
+
+  
+    
+  
+  
+    
+  
+  
+  
+
+
+&lt;figure class=&#34;highlight go&#34;&gt;
+  &lt;figcaption&gt;
+    
+      &lt;span&gt;My Solution&lt;/span&gt;
+    
+  &lt;/figcaption&gt;
+  &lt;table&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td class=&#34;gutter&#34;&gt;
+          &lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;42&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;43&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;44&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;45&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;46&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;
+        &lt;/td&gt;
+        &lt;td class=&#34;code&#34;&gt;
+          &lt;pre class=&#34;go code-highlight&#34;&gt;func isMatch(s string, p string) bool {
+    if len(s) == 0 &amp;amp;&amp;amp; len(p) == 0 {
+        return true
+    } else if len(p) == 0 {
+        // p is empty but s
+        return false
+    }
+
+    matchChar := p[0]
+
+    if len(p) &amp;gt; 1 &amp;amp;&amp;amp; p[1] == &amp;#39;*&amp;#39; {
+        // match any numbers of char(s)
+
+        // eat two char of p
+        p = p[2:]
+
+        for len(s) &amp;gt; 0{
+            if s[0] == matchChar || matchChar == &amp;#39;.&amp;#39; {
+                // try not to eat char of s
+                if isMatch(s, p) {
+                    return true
+                }
+
+                // let&amp;#39;s eat one char of s and try again
+                s = s[1:]
+            } else {
+                break
+            }
+        }
+    } else {
+        // match one char
+
+        // eat one char of p
+        p = p[1:]
+
+        // does it match?
+        if len(s) == 0 || (s[0] != matchChar &amp;amp;&amp;amp; matchChar != &amp;#39;.&amp;#39;) {
+            return false
+        }
+
+        // eat one char of s
+        s = s[1:]
+    }
+
+    return isMatch(s, p)
+}&lt;/pre&gt;
+        &lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/figure&gt;</description>
+    </item>
+    
+    <item>
+      <title>String to Integer (atoi)</title>
+      <link>http://www.orztu.com/leetcode/String-to-Integer-%28atoi%29/</link>
       <pubDate>Wed, 22 Mar 2017 09:05:12 +0800</pubDate>
       
-      <guid>http://www.orztu.com/leetcode/8-String-to-Integer-%28atoi%29/</guid>
+      <guid>http://www.orztu.com/leetcode/String-to-Integer-%28atoi%29/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/string-to-integer-atoi&#34; target=&#34;_blank&#34;&gt;String to Integer (atoi)&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
@@ -349,11 +349,11 @@ isMatch(&amp;quot;aab&amp;quot;, &amp;quot;c*a*b&amp;quot;) → true
     </item>
     
     <item>
-      <title>7. Reverse Integer</title>
-      <link>http://www.orztu.com/leetcode/7-Reverse-Integer/</link>
+      <title>Reverse Integer</title>
+      <link>http://www.orztu.com/leetcode/Reverse-Integer/</link>
       <pubDate>Tue, 21 Mar 2017 16:04:44 +0800</pubDate>
       
-      <guid>http://www.orztu.com/leetcode/7-Reverse-Integer/</guid>
+      <guid>http://www.orztu.com/leetcode/Reverse-Integer/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/reverse-integer&#34; target=&#34;_blank&#34;&gt;Reverse Integer&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
@@ -423,11 +423,11 @@ isMatch(&amp;quot;aab&amp;quot;, &amp;quot;c*a*b&amp;quot;) → true
     </item>
     
     <item>
-      <title>6. ZigZag Conversion</title>
-      <link>http://www.orztu.com/leetcode/6-ZigZag-Conversion/</link>
+      <title>ZigZag Conversion</title>
+      <link>http://www.orztu.com/leetcode/ZigZag-Conversion/</link>
       <pubDate>Fri, 17 Mar 2017 17:52:46 +0800</pubDate>
       
-      <guid>http://www.orztu.com/leetcode/6-ZigZag-Conversion/</guid>
+      <guid>http://www.orztu.com/leetcode/ZigZag-Conversion/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/zigzag-conversion&#34; target=&#34;_blank&#34;&gt;ZigZag Conversion&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
@@ -551,11 +551,11 @@ Y   I   R
     </item>
     
     <item>
-      <title>5. Longest Palindromic Substring</title>
-      <link>http://www.orztu.com/leetcode/5-Longest-Palindromic-Substring/</link>
+      <title>Longest Palindromic Substring</title>
+      <link>http://www.orztu.com/leetcode/Longest-Palindromic-Substring/</link>
       <pubDate>Thu, 16 Mar 2017 14:47:07 +0800</pubDate>
       
-      <guid>http://www.orztu.com/leetcode/5-Longest-Palindromic-Substring/</guid>
+      <guid>http://www.orztu.com/leetcode/Longest-Palindromic-Substring/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/longest-palindromic-substring&#34; target=&#34;_blank&#34;&gt;Longest Palindromic Substring&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;http://www.orztu.com/images/leetcode/5-palindromic-1.png&#34; alt=&#34;palindromic&#34; title=&#34;回文&#34; /&gt;&lt;/p&gt;
@@ -640,11 +640,11 @@ Output: &amp;quot;bb&amp;quot;
     </item>
     
     <item>
-      <title>4. Median of Two Sorted Arrays</title>
-      <link>http://www.orztu.com/leetcode/4-Median-of-Two-Sorted-Arrays/</link>
+      <title>Median of Two Sorted Arrays</title>
+      <link>http://www.orztu.com/leetcode/Median-of-Two-Sorted-Arrays/</link>
       <pubDate>Thu, 16 Mar 2017 10:53:58 +0800</pubDate>
       
-      <guid>http://www.orztu.com/leetcode/4-Median-of-Two-Sorted-Arrays/</guid>
+      <guid>http://www.orztu.com/leetcode/Median-of-Two-Sorted-Arrays/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/median-of-two-sorted-arrays&#34; target=&#34;_blank&#34;&gt;Median of Two Sorted Arrays&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
@@ -747,11 +747,11 @@ nums2 = [3, 4]
     </item>
     
     <item>
-      <title>3. Longest Substring Without Repeating Characters</title>
-      <link>http://www.orztu.com/leetcode/3-Longest-Substring-Without-Repeating-Characters/</link>
+      <title>Longest Substring Without Repeating Characters</title>
+      <link>http://www.orztu.com/leetcode/Longest-Substring-Without-Repeating-Characters/</link>
       <pubDate>Wed, 15 Mar 2017 19:38:58 +0800</pubDate>
       
-      <guid>http://www.orztu.com/leetcode/3-Longest-Substring-Without-Repeating-Characters/</guid>
+      <guid>http://www.orztu.com/leetcode/Longest-Substring-Without-Repeating-Characters/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/longest-substring-without-repeating-characters&#34; target=&#34;_blank&#34;&gt;Longest Substring Without Repeating Characters&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
@@ -829,11 +829,11 @@ nums2 = [3, 4]
     </item>
     
     <item>
-      <title>2. Add Two Numbers</title>
-      <link>http://www.orztu.com/leetcode/2-Add-Two-Numbers/</link>
+      <title>Add Two Numbers</title>
+      <link>http://www.orztu.com/leetcode/Add-Two-Numbers/</link>
       <pubDate>Wed, 15 Mar 2017 16:55:54 +0800</pubDate>
       
-      <guid>http://www.orztu.com/leetcode/2-Add-Two-Numbers/</guid>
+      <guid>http://www.orztu.com/leetcode/Add-Two-Numbers/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/add-two-numbers&#34; target=&#34;_blank&#34;&gt;Add Two Numbers&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
@@ -931,11 +931,11 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
     </item>
     
     <item>
-      <title>1. Two Sum</title>
-      <link>http://www.orztu.com/leetcode/1-Two-Sum/</link>
+      <title>Two Sum</title>
+      <link>http://www.orztu.com/leetcode/Two-Sum/</link>
       <pubDate>Wed, 15 Mar 2017 16:36:59 +0800</pubDate>
       
-      <guid>http://www.orztu.com/leetcode/1-Two-Sum/</guid>
+      <guid>http://www.orztu.com/leetcode/Two-Sum/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/two-sum&#34; target=&#34;_blank&#34;&gt;Two Sum&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;

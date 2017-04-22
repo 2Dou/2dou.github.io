@@ -2,52 +2,52 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://www.orztu.com/leetcode/10-Regular-Expression-Matching/</loc>
+    <loc>http://www.orztu.com/leetcode/Palindrome-Number/</loc>
     <lastmod>2017-03-24T15:00:46+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://www.orztu.com/leetcode/9-Palindrome-Number/</loc>
+    <loc>http://www.orztu.com/leetcode/Regular-Expression-Matching/</loc>
     <lastmod>2017-03-24T15:00:46+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://www.orztu.com/leetcode/8-String-to-Integer-%28atoi%29/</loc>
+    <loc>http://www.orztu.com/leetcode/String-to-Integer-%28atoi%29/</loc>
     <lastmod>2017-03-22T09:05:12+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://www.orztu.com/leetcode/7-Reverse-Integer/</loc>
+    <loc>http://www.orztu.com/leetcode/Reverse-Integer/</loc>
     <lastmod>2017-03-21T16:04:44+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://www.orztu.com/leetcode/6-ZigZag-Conversion/</loc>
+    <loc>http://www.orztu.com/leetcode/ZigZag-Conversion/</loc>
     <lastmod>2017-03-17T17:52:46+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://www.orztu.com/leetcode/5-Longest-Palindromic-Substring/</loc>
+    <loc>http://www.orztu.com/leetcode/Longest-Palindromic-Substring/</loc>
     <lastmod>2017-03-16T14:47:07+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://www.orztu.com/leetcode/4-Median-of-Two-Sorted-Arrays/</loc>
+    <loc>http://www.orztu.com/leetcode/Median-of-Two-Sorted-Arrays/</loc>
     <lastmod>2017-03-16T10:53:58+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://www.orztu.com/leetcode/3-Longest-Substring-Without-Repeating-Characters/</loc>
+    <loc>http://www.orztu.com/leetcode/Longest-Substring-Without-Repeating-Characters/</loc>
     <lastmod>2017-03-15T19:38:58+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://www.orztu.com/leetcode/2-Add-Two-Numbers/</loc>
+    <loc>http://www.orztu.com/leetcode/Add-Two-Numbers/</loc>
     <lastmod>2017-03-15T16:55:54+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://www.orztu.com/leetcode/1-Two-Sum/</loc>
+    <loc>http://www.orztu.com/leetcode/Two-Sum/</loc>
     <lastmod>2017-03-15T16:36:59+08:00</lastmod>
   </url>
   

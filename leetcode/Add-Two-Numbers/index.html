@@ -22,7 +22,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Hugo 0.20-DEV">
-    <title>1. Two Sum</title>
+    <title>Add Two Numbers</title>
     <meta name="author" content="SelFree">
     <meta name="keywords" content="">
 
@@ -33,8 +33,8 @@
     <meta name="description" content="LeetCode 练习">
     <meta property="og:description" content="LeetCode 练习">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="1. Two Sum">
-    <meta property="og:url" content="/leetcode/1-Two-Sum/">
+    <meta property="og:title" content="Add Two Numbers">
+    <meta property="og:url" content="/leetcode/Add-Two-Numbers/">
     <meta property="og:site_name" content="on the way">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="on the way">
@@ -227,12 +227,12 @@
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title" itemprop="headline">
-      1. Two Sum
+      Add Two Numbers
     </h1>
   
   <div class="postShorten-meta post-meta">
   
-    <time itemprop="datePublished" datetime="2017-03-15T16:36:59&#43;08:00">
+    <time itemprop="datePublished" datetime="2017-03-15T16:55:54&#43;08:00">
       
   
   
@@ -259,28 +259,27 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <p><a href="https://leetcode.com/problems/two-sum" target="_blank">Two Sum</a></p>
+              <p><a href="https://leetcode.com/problems/add-two-numbers" target="_blank">Add Two Numbers</a></p>
 
 <h2 id="description">Description</h2>
 
 <blockquote>
-<p>Given an array of integers, return indices of the two numbers such that they add up to a specific target.</p>
+<p>You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.</p>
 
-<p>You may assume that each input would have exactly one solution, and you may not use the same element twice.</p>
+<p>You may assume the two numbers do not contain any leading zero, except the number 0 itself.</p>
 
-<pre><code>Example:
-Given nums = [2, 7, 11, 15], target = 9,
+<pre><code>Input: (2 -&gt; 4 -&gt; 3) + (5 -&gt; 6 -&gt; 4)
+Output: 7 -&gt; 0 -&gt; 8
 </code></pre>
-
-<p>Because nums[0] + nums[1] = 2 + 7 = 9,
-return [0, 1].</p>
 </blockquote>
 
 <p></p>
 
-<p>假定只有<strong>唯一</strong>解的情况下在数组中找出和为target的两个数</p>
+<p>通过链表计算加法，向后进位</p>
 
 <h2 id="solution">Solution</h2>
+
+<p>用一个int作进位寄存器，在下一位相加时加上进位寄存器</p>
 
 
   
@@ -303,32 +302,51 @@ return [0, 1].</p>
     <tbody>
       <tr>
         <td class="gutter">
-          <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre>
+          <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre>
         </td>
         <td class="code">
-          <pre class="go code-highlight">func twoSum(nums []int, target int) []int {
-    res := make([]int, 2)
-    m := map[int]int{}
+          <pre class="go code-highlight">/**
+ * Definition for singly-linked list.
+ * type ListNode struct {
+ *     Val int
+ *     Next *ListNode
+ * }
+ */
+func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
+    head := &amp;ListNode{}
+    cur := head
+    carry := 0
 
-    for i := range nums {
-        m[target - nums[i]] = i
-    }
+    for {
+        var v1, v2 int
+        if l1 != nil {
+            v1 = l1.Val
+            l1 = l1.Next
+        }
 
-    for i := range nums {
-        idx, ok := m[nums[i]]
-        if ok {
-            if i == idx {
-                continue
+        if l2 != nil {
+            v2 = l2.Val
+            l2 = l2.Next
+        }
+
+        v := v1 &#43; v2 &#43; carry
+
+        carry = int(v / 10)
+        cur.Val = v % 10
+
+        if l1 != nil || l2 != nil {
+            cur.Next = &amp;ListNode{}
+            cur = cur.Next
+        } else {
+            if carry &gt; 0 {
+                cur.Next = &amp;ListNode{Val: carry}
             }
-            res[0] = idx
-            res[1] = i
-            sort.Ints(res)
+
             break
         }
-        continue
     }
 
-    return res
+    return head
 }</pre>
         </td>
       </tr>
@@ -360,7 +378,7 @@ return [0, 1].</p>
       
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="http://www.orztu.com/2017/03/hello-world/" data-tooltip="Hello World">
+            <a class="post-action-btn btn btn--default tooltip--top" href="http://www.orztu.com/leetcode/Two-Sum/" data-tooltip="Two Sum">
           
             <i class="fa fa-angle-left"></i>
             <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
@@ -368,7 +386,7 @@ return [0, 1].</p>
         </li>
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="http://www.orztu.com/leetcode/2-Add-Two-Numbers/" data-tooltip="2. Add Two Numbers">
+            <a class="post-action-btn btn btn--default tooltip--top" href="http://www.orztu.com/leetcode/Longest-Substring-Without-Repeating-Characters/" data-tooltip="Longest Substring Without Repeating Characters">
           
             <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
             <i class="fa fa-angle-right"></i>
@@ -409,9 +427,9 @@ return [0, 1].</p>
 
 
 var disqus_config = function () {
-  this.page.url = 'http:\/\/www.orztu.com\/leetcode\/1-Two-Sum\/';
+  this.page.url = 'http:\/\/www.orztu.com\/leetcode\/Add-Two-Numbers\/';
   
-    this.page.identifier = '\/leetcode\/1-Two-Sum\/'
+    this.page.identifier = '\/leetcode\/Add-Two-Numbers\/'
   
 };
 (function() { 
@@ -443,7 +461,7 @@ var disqus_config = function () {
       
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="http://www.orztu.com/2017/03/hello-world/" data-tooltip="Hello World">
+            <a class="post-action-btn btn btn--default tooltip--top" href="http://www.orztu.com/leetcode/Two-Sum/" data-tooltip="Two Sum">
           
             <i class="fa fa-angle-left"></i>
             <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
@@ -451,7 +469,7 @@ var disqus_config = function () {
         </li>
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="http://www.orztu.com/leetcode/2-Add-Two-Numbers/" data-tooltip="2. Add Two Numbers">
+            <a class="post-action-btn btn btn--default tooltip--top" href="http://www.orztu.com/leetcode/Longest-Substring-Without-Repeating-Characters/" data-tooltip="Longest Substring Without Repeating Characters">
           
             <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
             <i class="fa fa-angle-right"></i>
@@ -486,17 +504,17 @@ var disqus_config = function () {
       <div id="share-options-bar" class="share-options-bar" data-behavior="4">
   <ul class="share-options">
     <li class="share-option">
-      <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http%3a%2f%2fwww.orztu.com%2fleetcode%2f1-Two-Sum%2f">
+      <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http%3a%2f%2fwww.orztu.com%2fleetcode%2fAdd-Two-Numbers%2f">
         <i class="fa fa-google-plus"></i><span>Share on Google Plus</span>
       </a>
     </li>
     <li class="share-option">
-      <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fwww.orztu.com%2fleetcode%2f1-Two-Sum%2f">
+      <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fwww.orztu.com%2fleetcode%2fAdd-Two-Numbers%2f">
         <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
       </a>
     </li>
     <li class="share-option">
-      <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http%3a%2f%2fwww.orztu.com%2fleetcode%2f1-Two-Sum%2f">
+      <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http%3a%2f%2fwww.orztu.com%2fleetcode%2fAdd-Two-Numbers%2f">
         <i class="fa fa-twitter"></i><span>Share on Twitter</span>
       </a>
     </li>
@@ -643,9 +661,9 @@ $(document).ready(function() {
     
       <script>
         var disqus_config = function () {
-          this.page.url = 'http:\/\/www.orztu.com\/leetcode\/1-Two-Sum\/';
+          this.page.url = 'http:\/\/www.orztu.com\/leetcode\/Add-Two-Numbers\/';
           
-            this.page.identifier = '\/leetcode\/1-Two-Sum\/'
+            this.page.identifier = '\/leetcode\/Add-Two-Numbers\/'
           
         };
         (function() {
