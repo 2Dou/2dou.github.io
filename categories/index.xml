@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on on the way</title>
+    <title>Categories on Orz the way</title>
     <link>http://www.orztu.com/categories/index.xml</link>
-    <description>Recent content in Categories on on the way</description>
+    <description>Recent content in Categories on Orz the way</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <atom:link href="http://www.orztu.com/categories/index.xml" rel="self" type="application/rss+xml" />
@@ -11,7 +11,7 @@
     <item>
       <title>Leetcode</title>
       <link>http://www.orztu.com/categories/leetcode/</link>
-      <pubDate>Fri, 24 Mar 2017 15:00:46 +0800</pubDate>
+      <pubDate>Sat, 22 Apr 2017 11:35:12 +0800</pubDate>
       
       <guid>http://www.orztu.com/categories/leetcode/</guid>
       <description></description>
