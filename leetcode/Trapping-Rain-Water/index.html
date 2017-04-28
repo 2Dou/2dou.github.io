@@ -22,9 +22,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Hugo 0.20-DEV">
-    <title>Sudoku Solver</title>
+    <title>Trapping Rain Water</title>
     <meta name="author" content="SelFree">
-    <meta name="keywords" content="LeetCode, 数独, Sudoku">
+    <meta name="keywords" content="LeetCode">
 
     <link rel="icon" href="http://www.orztu.com/favicon.png">
     
@@ -33,8 +33,8 @@
     <meta name="description" content="LeetCode 练习">
     <meta property="og:description" content="LeetCode 练习">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Sudoku Solver">
-    <meta property="og:url" content="/leetcode/Sudoku-Solver/">
+    <meta property="og:title" content="Trapping Rain Water">
+    <meta property="og:url" content="/leetcode/Trapping-Rain-Water/">
     <meta property="og:site_name" content="Orz the way">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Orz the way">
@@ -227,18 +227,18 @@
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title" itemprop="headline">
-      Sudoku Solver
+      Trapping Rain Water
     </h1>
   
   <div class="postShorten-meta post-meta">
   
-    <time itemprop="datePublished" datetime="2017-04-22T11:35:12&#43;08:00">
+    <time itemprop="datePublished" datetime="2017-04-28T10:01:32&#43;08:00">
       
   
   
   
   
-    2017-04-22
+    2017-04-28
   
 
     </time>
@@ -259,32 +259,28 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <p><a href="https://leetcode.com/problems/sudoku-solver/" target="_blank">Sudoku Solver</a></p>
-
-<p><img src="http://www.orztu.com/images/leetcode/Sudoku-Solver-1.png" alt="palindromic" title="数独" /></p>
+              <p><a href="https://leetcode.com/problems/trapping-rain-water/" target="_blank">Trapping Rain Water</a></p>
 
 <h2 id="description">Description</h2>
 
 <blockquote>
-<p>Write a program to solve a Sudoku puzzle by filling the empty cells.</p>
+<p>Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how &gt;much water it is able to trap after raining.</p>
 
-<p>Empty cells are indicated by the character &lsquo;.&rsquo;.</p>
+<p>For example,
+Given <code>[0,1,0,2,1,0,1,3,2,1,2,1]</code>, return <code>6</code>.</p>
 
-<p>You may assume that there will be only one unique solution.</p>
+<p><img src="http://www.orztu.com/images/leetcode/rainwatertrap-1.png" alt="palindromic" />
+The above elevation map is represented by array [0,1,0,2,1,0,1,3,2,1,2,1]. In this case, 6 units of rain water (blue section) are being trapped. Thanks Marcos for contributing this image!</p>
 </blockquote>
 
 <p></p>
 
 <h2 id="solution">Solution</h2>
 
-<p>还是编程思维不行，在编程时按照解题思路在走。</p>
-
-<p>我的答案：
-查找空格，找出该位置可能的数字组合，填入，递归进入下一个空格。
-这样虽然能解出答案。但是在查找可能的数字上耗费时间较多。</p>
-
-<p>后面的Pretty Solution：
-找到空格后，直接把依次把1-9填入，验证是否重复。反而耗时更少，代码也更简洁。</p>
+<p>每个点容量决定于左右两边高度</br>
+先从左往右，扫描出每个点左边最高的围栏</br>
+再从右往左，扫描出每个点右边最高的围栏</br>
+在围栏比当前点高的情况下， 这个点的容量为围栏高度减底部高度: min(left_height, right_height) - bottom</p>
 
 
   
@@ -307,221 +303,61 @@
     <tbody>
       <tr>
         <td class="gutter">
-          <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br></pre>
+          <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre>
         </td>
         <td class="code">
-          <pre class="go code-highlight">func solveSudoku(board [][]byte)  {
-    setNumber(&amp;board, 0)
-}
+          <pre class="go code-highlight">func trap(height []int) int {
+    var record int
+    var result int
 
-func setNumber(board *[][]byte, index int) bool {
-    row := int(index / 9)
-    col := index % 9
+    length := len(height)
 
-    if index &gt;= 81 {
-        return true
+    if length &lt; 3 {
+        return 0
     }
 
-    canbe := getPossibleNumbers(*board, row, col)
-    if len(canbe) == 0 {
-        return false
-    }
+    leftHeight := make([]int, length)
 
-    reset := (*board)[row][col]
-    ok := true
-    for _, num := range canbe {
-        (*board)[row][col] = num
-        ok = setNumber(board, index &#43; 1)
-        if ok {
-            break
+    record = height[0] // record the max height of left positions
+    // scan left height for each position
+    for i := 0; i &lt; length-1; i&#43;&#43; {
+        leftHeight[i] = record
+
+        n := height[i]
+        if n &gt; record {
+            record = n
         }
     }
 
-    if !ok {
-        (*board)[row][col] = reset
-    }
+    record = height[length-1] // record the max height of right positions
+    for i := length - 2; i &gt;= 0; i-- {
+        h := min(record, leftHeight[i])
+        n := height[i]
 
-    return ok
-}
-
-func getPossibleNumbers(board [][]byte, i, j int) []byte {
-    num := board[i][j]
-    if num != &#39;.&#39; {
-        // skip this position
-        return []byte{num}
-    }
-
-    canbe := map[byte]struct{}{
-        &#39;1&#39;: struct{}{},
-        &#39;2&#39;: struct{}{},
-        &#39;3&#39;: struct{}{},
-        &#39;4&#39;: struct{}{},
-        &#39;5&#39;: struct{}{},
-        &#39;6&#39;: struct{}{},
-        &#39;7&#39;: struct{}{},
-        &#39;8&#39;: struct{}{},
-        &#39;9&#39;: struct{}{},
-    }
-
-    // check row-i, remove number from &#39;canbe&#39; which have been set to other postion
-    for col := 0; col &lt; 9; col&#43;&#43; {
-        if col == j {
-            continue
+        if h &gt; n {
+            // have some water
+            result &#43;= (h - n)
         }
 
-        if removeFromPossibleNumber(&amp;canbe, board[i][col]) == 0 {
-            return []byte{}
-        }
-    }
-
-    // check col-j, remove number from &#39;canbe&#39; which have been set to other postion
-    for row := 0; row &lt; 9; row&#43;&#43; {
-        if row == i {
-            continue
-        }
-        if removeFromPossibleNumber(&amp;canbe, board[row][j]) == 0 {
-            return []byte{}
-        }
-    }
-
-    // check the little sudoku block
-    left := 3 * int(i / 3)
-    top := 3 * int(j / 3)
-    for l := 0; l &lt; 3; l&#43;&#43; {
-        for t := 0; t &lt; 3; t&#43;&#43; {
-            index_i := left &#43; l
-            index_j := top &#43; t
-
-            if index_i == i &amp;&amp; index_j == j {
-                continue
-            }
-
-            if removeFromPossibleNumber(&amp;canbe, board[index_i][index_j]) == 0 {
-                return []byte{}
-            }
-        }
-    }
-
-    var n byte
-    var result []byte
-    for n = &#39;1&#39;; n &lt;= &#39;9&#39;; n&#43;&#43; {
-        if _, ok := canbe[n]; ok {
-            result = append(result, n)
+        if n &gt; record {
+            record = n
         }
     }
 
     return result
 }
 
-func removeFromPossibleNumber(canbe *map[byte]struct{}, key byte) int {
-    if _, ok := (*canbe)[key]; ok {
-        delete(*canbe, key)
+func min(a, b int) int {
+    if a &lt; b {
+        return a
     }
-
-    return len(*canbe)
+    return b
 }</pre>
         </td>
       </tr>
     </tbody>
   </table>
 </figure>
-
-<p>
-  
-    
-  
-  
-    
-  
-  
-  
-
-
-<figure class="highlight go">
-  <figcaption>
-    
-      <span>Pretty Solution</span>
-    
-  </figcaption>
-  <table>
-    <tbody>
-      <tr>
-        <td class="gutter">
-          <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre>
-        </td>
-        <td class="code">
-          <pre class="go code-highlight">func solveSudoku(board [][]byte)  {
-    setNumber(&amp;board, 0)
-}
-
-func setNumber(board *[][]byte, index int) bool {
-    row := int(index / 9)
-    col := index % 9
-
-    if index &gt;= 81 {
-        return true
-    }
-
-    if (*board)[row][col] == &#39;.&#39; {
-        var c byte
-        for c = &#39;1&#39;; c &lt;= &#39;9&#39;; c&#43;&#43; {
-            (*board)[row][col] = c
-            if valid(board, row, col) &amp;&amp; setNumber(board, index &#43; 1) {
-                return true
-            }
-            (*board)[row][col] = &#39;.&#39;
-        }
-        return false
-    } else {
-        return setNumber(board, index &#43; 1)
-    }
-}
-
-func valid(board *[][]byte, row, col int) bool {
-    num := (*board)[row][col]
-
-    // check row
-    for i := 0; i &lt; 9; i&#43;&#43; {
-        if i == row {
-            continue
-        }
-        if (*board)[i][col] == num {
-            return false
-        }
-    }
-
-    // check col
-    for j := 0; j &lt; 9; j&#43;&#43; {
-        if j == col {
-            continue
-        }
-        if (*board)[row][j] == num {
-            return false
-        }
-    }
-
-    // check the little sudoku block
-    left := 3 * int(row / 3)
-    top := 3 * int(col / 3)
-    for i := left; i &lt; left &#43; 3; i&#43;&#43; {
-        for j := top; j &lt; top &#43; 3; j&#43;&#43; {
-            if i == row &amp;&amp; j == col {
-                continue
-            }
-
-            if (*board)[i][j] == num {
-                return false
-            }
-        }
-    }
-
-    return true
-}</pre>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</figure></p>
               
             </div>
           </div>
@@ -547,7 +383,7 @@ func valid(board *[][]byte, row, col int) bool {
       
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="http://www.orztu.com/leetcode/Regular-Expression-Matching/" data-tooltip="Regular Expression Matching">
+            <a class="post-action-btn btn btn--default tooltip--top" href="http://www.orztu.com/leetcode/Sudoku-Solver/" data-tooltip="Sudoku Solver">
           
             <i class="fa fa-angle-left"></i>
             <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
@@ -555,7 +391,7 @@ func valid(board *[][]byte, row, col int) bool {
         </li>
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="http://www.orztu.com/leetcode/Trapping-Rain-Water/" data-tooltip="Trapping Rain Water">
+            <a class="post-action-btn btn btn--disabled">
           
             <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
             <i class="fa fa-angle-right"></i>
@@ -596,9 +432,9 @@ func valid(board *[][]byte, row, col int) bool {
 
 
 var disqus_config = function () {
-  this.page.url = 'http:\/\/www.orztu.com\/leetcode\/Sudoku-Solver\/';
+  this.page.url = 'http:\/\/www.orztu.com\/leetcode\/Trapping-Rain-Water\/';
   
-    this.page.identifier = '\/leetcode\/Sudoku-Solver\/'
+    this.page.identifier = '\/leetcode\/Trapping-Rain-Water\/'
   
 };
 (function() { 
@@ -630,7 +466,7 @@ var disqus_config = function () {
       
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="http://www.orztu.com/leetcode/Regular-Expression-Matching/" data-tooltip="Regular Expression Matching">
+            <a class="post-action-btn btn btn--default tooltip--top" href="http://www.orztu.com/leetcode/Sudoku-Solver/" data-tooltip="Sudoku Solver">
           
             <i class="fa fa-angle-left"></i>
             <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
@@ -638,7 +474,7 @@ var disqus_config = function () {
         </li>
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="http://www.orztu.com/leetcode/Trapping-Rain-Water/" data-tooltip="Trapping Rain Water">
+            <a class="post-action-btn btn btn--disabled">
           
             <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
             <i class="fa fa-angle-right"></i>
@@ -673,17 +509,17 @@ var disqus_config = function () {
       <div id="share-options-bar" class="share-options-bar" data-behavior="4">
   <ul class="share-options">
     <li class="share-option">
-      <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http%3a%2f%2fwww.orztu.com%2fleetcode%2fSudoku-Solver%2f">
+      <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http%3a%2f%2fwww.orztu.com%2fleetcode%2fTrapping-Rain-Water%2f">
         <i class="fa fa-google-plus"></i><span>Share on Google Plus</span>
       </a>
     </li>
     <li class="share-option">
-      <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fwww.orztu.com%2fleetcode%2fSudoku-Solver%2f">
+      <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fwww.orztu.com%2fleetcode%2fTrapping-Rain-Water%2f">
         <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
       </a>
     </li>
     <li class="share-option">
-      <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http%3a%2f%2fwww.orztu.com%2fleetcode%2fSudoku-Solver%2f">
+      <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http%3a%2f%2fwww.orztu.com%2fleetcode%2fTrapping-Rain-Water%2f">
         <i class="fa fa-twitter"></i><span>Share on Twitter</span>
       </a>
     </li>
@@ -830,9 +666,9 @@ $(document).ready(function() {
     
       <script>
         var disqus_config = function () {
-          this.page.url = 'http:\/\/www.orztu.com\/leetcode\/Sudoku-Solver\/';
+          this.page.url = 'http:\/\/www.orztu.com\/leetcode\/Trapping-Rain-Water\/';
           
-            this.page.identifier = '\/leetcode\/Sudoku-Solver\/'
+            this.page.identifier = '\/leetcode\/Trapping-Rain-Water\/'
           
         };
         (function() {

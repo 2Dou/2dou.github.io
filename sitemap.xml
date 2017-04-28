@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.orztu.com/leetcode/Trapping-Rain-Water/</loc>
+    <lastmod>2017-04-28T10:01:32+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://www.orztu.com/leetcode/Sudoku-Solver/</loc>
     <lastmod>2017-04-22T11:35:12+08:00</lastmod>
   </url>
@@ -78,25 +83,25 @@
   
   <url>
     <loc>http://www.orztu.com/tags/leetcode/</loc>
-    <lastmod>2017-04-22T11:35:12+08:00</lastmod>
+    <lastmod>2017-04-28T10:01:32+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://www.orztu.com/categories/leetcode/</loc>
-    <lastmod>2017-04-22T11:35:12+08:00</lastmod>
+    <lastmod>2017-04-28T10:01:32+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://www.orztu.com/leetcode/</loc>
-    <lastmod>2017-04-22T11:35:12+08:00</lastmod>
+    <lastmod>2017-04-28T10:01:32+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://www.orztu.com/</loc>
-    <lastmod>2017-04-22T11:35:12+08:00</lastmod>
+    <lastmod>2017-04-28T10:01:32+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -108,7 +113,7 @@
   
   <url>
     <loc>http://www.orztu.com/tags/</loc>
-    <lastmod>2017-04-22T11:35:12+08:00</lastmod>
+    <lastmod>2017-04-28T10:01:32+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -126,7 +131,7 @@
   
   <url>
     <loc>http://www.orztu.com/tags/%E7%AE%97%E6%B3%95/</loc>
-    <lastmod>2017-04-22T11:35:12+08:00</lastmod>
+    <lastmod>2017-04-28T10:01:32+08:00</lastmod>
     <priority>0</priority>
   </url>
   
