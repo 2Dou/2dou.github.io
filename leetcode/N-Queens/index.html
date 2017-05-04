@@ -22,9 +22,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Hugo 0.20-DEV">
-    <title>10. Regular Expression Matching</title>
+    <title>51. N-Queens</title>
     <meta name="author" content="SelFree">
-    <meta name="keywords" content="LeetCode">
+    <meta name="keywords" content="LeetCode, 8-Queens, N-Queens, 八皇后, 回溯算法">
 
     <link rel="icon" href="http://www.orztu.com/favicon.png">
     
@@ -33,8 +33,8 @@
     <meta name="description" content="LeetCode 练习">
     <meta property="og:description" content="LeetCode 练习">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="10. Regular Expression Matching">
-    <meta property="og:url" content="/leetcode/Regular-Expression-Matching/">
+    <meta property="og:title" content="51. N-Queens">
+    <meta property="og:url" content="/leetcode/N-Queens/">
     <meta property="og:site_name" content="Orz the way">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Orz the way">
@@ -227,18 +227,18 @@
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title" itemprop="headline">
-      10. Regular Expression Matching
+      51. N-Queens
     </h1>
   
   <div class="postShorten-meta post-meta">
   
-    <time itemprop="datePublished" datetime="2017-03-24T15:00:47&#43;08:00">
+    <time itemprop="datePublished" datetime="2017-05-04T16:23:01&#43;08:00">
       
   
   
   
   
-    2017-03-24
+    2017-05-04
   
 
     </time>
@@ -259,35 +259,47 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <p><a href="https://leetcode.com/problems/regular-expression-matching" target="_blank">Regular Expression Matching</a></p>
+              <p><a href="https://leetcode.com/problems/n-queens/" target="_blank">N-Queens</a></p>
 
 <h2 id="description">Description</h2>
 
 <blockquote>
-<p>Implement regular expression matching with support for &lsquo;.&rsquo; and &lsquo;*&lsquo;.</p>
+<p>The <em>n-queens</em> puzzle is the problem of placing n queens on an n×n chessboard such that no two queens attack each other.
+<img src="http://www.orztu.com/images/leetcode/8-queens.png" alt="palindromic" title="数独" /></p>
 
-<pre><code>'.' Matches any single character.
-'*' Matches zero or more of the preceding element.
+<p>Given an integer n, return all distinct solutions to the n-queens puzzle.</p>
 
-The matching should cover the entire input string (not partial).
-
-The function prototype should be:
-bool isMatch(const char *s, const char *p)
-
-Some examples:
-isMatch(&quot;aa&quot;,&quot;a&quot;) → false
-isMatch(&quot;aa&quot;,&quot;aa&quot;) → true
-isMatch(&quot;aaa&quot;,&quot;aa&quot;) → false
-isMatch(&quot;aa&quot;, &quot;a*&quot;) → true
-isMatch(&quot;aa&quot;, &quot;.*&quot;) → true
-isMatch(&quot;ab&quot;, &quot;.*&quot;) → true
-isMatch(&quot;aab&quot;, &quot;c*a*b&quot;) → true
-</code></pre>
+<p>Each solution contains a distinct board configuration of the <em>n-queens</em>&rsquo; placement, where <code>'Q'</code> and <code>'.'</code> both indicate a queen and an empty space respectively.</p>
 </blockquote>
 
 <p></p>
 
-<p>简单的字符匹配</p>
+<blockquote>
+<p>For example,
+There exist two distinct solutions to the 4-queens puzzle:</p>
+
+<pre><code>[
+ [&quot;.Q..&quot;,  // Solution 1
+  &quot;...Q&quot;,
+  &quot;Q...&quot;,
+  &quot;..Q.&quot;],
+
+ [&quot;..Q.&quot;,  // Solution 2
+  &quot;Q...&quot;,
+  &quot;...Q&quot;,
+  &quot;.Q..&quot;]
+]
+</code></pre>
+</blockquote>
+
+<p>这是我第一次做八皇后问题，之前只是听说这么一个名字。</p>
+
+<p>思路与之前<a href="http://www.orztu.com/leetcode/Sudoku-Solver/" target="_blank">Sudoku-Solver</a>相同，
+使用递归遍历每一行所有位置，判断该位置是否合法，不合法返回，合法则进入下一行。</p>
+
+<p>好像大家给这种方法取了一个很洋气的名字叫<em>回溯算法</em></p>
+
+<p><small><em>在国际象棋中，皇后可以攻击直线和斜线上的目标</em></samll></p>
 
 <h2 id="solution">Solution</h2>
 
@@ -312,54 +324,64 @@ isMatch(&quot;aab&quot;, &quot;c*a*b&quot;) → true
     <tbody>
       <tr>
         <td class="gutter">
-          <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre>
+          <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre>
         </td>
         <td class="code">
-          <pre class="go code-highlight">func isMatch(s string, p string) bool {
-    if len(s) == 0 &amp;&amp; len(p) == 0 {
-        return true
-    } else if len(p) == 0 {
-        // p is empty but s
-        return false
+          <pre class="go code-highlight">func solveNQueens(n int) [][]string {
+    answer := make([][]string, 0)
+
+    board := make([]int, n)
+    solve(&amp;answer, board, n, 0)
+
+    return answer
+}
+
+// put a queen on board at line l
+func solve(answer *[][]string, board []int, n, l int) {
+    if n == l {
+        *answer = append(*answer, convertBoard(board, n))
+        return
     }
 
-    matchChar := p[0]
-
-    if len(p) &gt; 1 &amp;&amp; p[1] == &#39;*&#39; {
-        // match any numbers of char(s)
-
-        // eat two char of p
-        p = p[2:]
-
-        for len(s) &gt; 0{
-            if s[0] == matchChar || matchChar == &#39;.&#39; {
-                // try not to eat char of s
-                if isMatch(s, p) {
-                    return true
-                }
-
-                // let&#39;s eat one char of s and try again
-                s = s[1:]
-            } else {
-                break
-            }
+    for i := 0; i &lt; n; i&#43;&#43; {
+        if !canBeAttack(board, n, l, i) {
+            // mark the queen&#39;s postion
+            board[l] = i
+            solve(answer, board, n, l&#43;1)
         }
-    } else {
-        // match one char
+    }
+}
 
-        // eat one char of p
-        p = p[1:]
-
-        // does it match?
-        if len(s) == 0 || (s[0] != matchChar &amp;&amp; matchChar != &#39;.&#39;) {
-            return false
+// 判断会否被其他皇后攻击
+func canBeAttack(board []int, n, x, y int) bool {
+    for row := 0; row &lt; x; row&#43;&#43; {
+        col := board[row]
+        if col == y || abs(row-x) == abs(col-y) {
+            return true
         }
-
-        // eat one char of s
-        s = s[1:]
     }
 
-    return isMatch(s, p)
+    return false
+}
+
+// 转换成返回格式
+func convertBoard(board []int, n int) []string {
+    ans := make([]string, n)
+    for i := 0; i &lt; n; i&#43;&#43; {
+        line := []byte(strings.Repeat(&#34;.&#34;, n))
+        line[board[i]] = &#39;Q&#39;
+        ans[i] = string(line)
+    }
+
+    return ans
+}
+
+func abs(x int) int {
+    if x &lt; 0 {
+        return -x
+    }
+
+    return x
 }</pre>
         </td>
       </tr>
@@ -391,7 +413,7 @@ isMatch(&quot;aab&quot;, &quot;c*a*b&quot;) → true
       
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="http://www.orztu.com/leetcode/Palindrome-Number/" data-tooltip="9. Palindrome Number">
+            <a class="post-action-btn btn btn--default tooltip--top" href="http://www.orztu.com/leetcode/Trapping-Rain-Water/" data-tooltip="42. Trapping Rain Water">
           
             <i class="fa fa-angle-left"></i>
             <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
@@ -399,7 +421,7 @@ isMatch(&quot;aab&quot;, &quot;c*a*b&quot;) → true
         </li>
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="http://www.orztu.com/leetcode/Sudoku-Solver/" data-tooltip="37. Sudoku Solver">
+            <a class="post-action-btn btn btn--disabled">
           
             <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
             <i class="fa fa-angle-right"></i>
@@ -440,9 +462,9 @@ isMatch(&quot;aab&quot;, &quot;c*a*b&quot;) → true
 
 
 var disqus_config = function () {
-  this.page.url = 'http:\/\/www.orztu.com\/leetcode\/Regular-Expression-Matching\/';
+  this.page.url = 'http:\/\/www.orztu.com\/leetcode\/N-Queens\/';
   
-    this.page.identifier = '\/leetcode\/Regular-Expression-Matching\/'
+    this.page.identifier = '\/leetcode\/N-Queens\/'
   
 };
 (function() { 
@@ -474,7 +496,7 @@ var disqus_config = function () {
       
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="http://www.orztu.com/leetcode/Palindrome-Number/" data-tooltip="9. Palindrome Number">
+            <a class="post-action-btn btn btn--default tooltip--top" href="http://www.orztu.com/leetcode/Trapping-Rain-Water/" data-tooltip="42. Trapping Rain Water">
           
             <i class="fa fa-angle-left"></i>
             <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
@@ -482,7 +504,7 @@ var disqus_config = function () {
         </li>
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="http://www.orztu.com/leetcode/Sudoku-Solver/" data-tooltip="37. Sudoku Solver">
+            <a class="post-action-btn btn btn--disabled">
           
             <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
             <i class="fa fa-angle-right"></i>
@@ -517,17 +539,17 @@ var disqus_config = function () {
       <div id="share-options-bar" class="share-options-bar" data-behavior="4">
   <ul class="share-options">
     <li class="share-option">
-      <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http%3a%2f%2fwww.orztu.com%2fleetcode%2fRegular-Expression-Matching%2f">
+      <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http%3a%2f%2fwww.orztu.com%2fleetcode%2fN-Queens%2f">
         <i class="fa fa-google-plus"></i><span>Share on Google Plus</span>
       </a>
     </li>
     <li class="share-option">
-      <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fwww.orztu.com%2fleetcode%2fRegular-Expression-Matching%2f">
+      <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fwww.orztu.com%2fleetcode%2fN-Queens%2f">
         <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
       </a>
     </li>
     <li class="share-option">
-      <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http%3a%2f%2fwww.orztu.com%2fleetcode%2fRegular-Expression-Matching%2f">
+      <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http%3a%2f%2fwww.orztu.com%2fleetcode%2fN-Queens%2f">
         <i class="fa fa-twitter"></i><span>Share on Twitter</span>
       </a>
     </li>
@@ -674,9 +696,9 @@ $(document).ready(function() {
     
       <script>
         var disqus_config = function () {
-          this.page.url = 'http:\/\/www.orztu.com\/leetcode\/Regular-Expression-Matching\/';
+          this.page.url = 'http:\/\/www.orztu.com\/leetcode\/N-Queens\/';
           
-            this.page.identifier = '\/leetcode\/Regular-Expression-Matching\/'
+            this.page.identifier = '\/leetcode\/N-Queens\/'
           
         };
         (function() {

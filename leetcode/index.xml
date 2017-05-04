@@ -6,11 +6,148 @@
     <description>Recent content in Leetcodes on Orz the way</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 28 Apr 2017 10:01:32 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 04 May 2017 16:23:01 +0800</lastBuildDate>
     <atom:link href="http://www.orztu.com/leetcode/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Trapping Rain Water</title>
+      <title>51. N-Queens</title>
+      <link>http://www.orztu.com/leetcode/N-Queens/</link>
+      <pubDate>Thu, 04 May 2017 16:23:01 +0800</pubDate>
+      
+      <guid>http://www.orztu.com/leetcode/N-Queens/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/n-queens/&#34; target=&#34;_blank&#34;&gt;N-Queens&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;The &lt;em&gt;n-queens&lt;/em&gt; puzzle is the problem of placing n queens on an n×n chessboard such that no two queens attack each other.
+&lt;img src=&#34;http://www.orztu.com/images/leetcode/8-queens.png&#34; alt=&#34;palindromic&#34; title=&#34;数独&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Given an integer n, return all distinct solutions to the n-queens puzzle.&lt;/p&gt;
+
+&lt;p&gt;Each solution contains a distinct board configuration of the &lt;em&gt;n-queens&lt;/em&gt;&amp;rsquo; placement, where &lt;code&gt;&#39;Q&#39;&lt;/code&gt; and &lt;code&gt;&#39;.&#39;&lt;/code&gt; both indicate a queen and an empty space respectively.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;For example,
+There exist two distinct solutions to the 4-queens puzzle:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[
+ [&amp;quot;.Q..&amp;quot;,  // Solution 1
+  &amp;quot;...Q&amp;quot;,
+  &amp;quot;Q...&amp;quot;,
+  &amp;quot;..Q.&amp;quot;],
+
+ [&amp;quot;..Q.&amp;quot;,  // Solution 2
+  &amp;quot;Q...&amp;quot;,
+  &amp;quot;...Q&amp;quot;,
+  &amp;quot;.Q..&amp;quot;]
+]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;这是我第一次做八皇后问题，之前只是听说这么一个名字。&lt;/p&gt;
+
+&lt;p&gt;思路与之前&lt;a href=&#34;http://www.orztu.com/leetcode/Sudoku-Solver/&#34; target=&#34;_blank&#34;&gt;Sudoku-Solver&lt;/a&gt;相同，
+使用递归遍历每一行所有位置，判断该位置是否合法，不合法返回，合法则进入下一行。&lt;/p&gt;
+
+&lt;p&gt;好像大家给这种方法取了一个很洋气的名字叫&lt;em&gt;回溯算法&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;small&gt;&lt;em&gt;在国际象棋中，皇后可以攻击直线和斜线上的目标&lt;/em&gt;&lt;/samll&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;solution&#34;&gt;Solution&lt;/h2&gt;
+
+
+  
+    
+  
+  
+    
+  
+  
+  
+
+
+&lt;figure class=&#34;highlight go&#34;&gt;
+  &lt;figcaption&gt;
+    
+      &lt;span&gt;My Solution&lt;/span&gt;
+    
+  &lt;/figcaption&gt;
+  &lt;table&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td class=&#34;gutter&#34;&gt;
+          &lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;42&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;43&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;44&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;45&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;46&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;47&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;48&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;49&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;50&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;51&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;52&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;53&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;54&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;55&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;56&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;
+        &lt;/td&gt;
+        &lt;td class=&#34;code&#34;&gt;
+          &lt;pre class=&#34;go code-highlight&#34;&gt;func solveNQueens(n int) [][]string {
+    answer := make([][]string, 0)
+
+    board := make([]int, n)
+    solve(&amp;amp;answer, board, n, 0)
+
+    return answer
+}
+
+// put a queen on board at line l
+func solve(answer *[][]string, board []int, n, l int) {
+    if n == l {
+        *answer = append(*answer, convertBoard(board, n))
+        return
+    }
+
+    for i := 0; i &amp;lt; n; i&amp;#43;&amp;#43; {
+        if !canBeAttack(board, n, l, i) {
+            // mark the queen&amp;#39;s postion
+            board[l] = i
+            solve(answer, board, n, l&amp;#43;1)
+        }
+    }
+}
+
+// 判断会否被其他皇后攻击
+func canBeAttack(board []int, n, x, y int) bool {
+    for row := 0; row &amp;lt; x; row&amp;#43;&amp;#43; {
+        col := board[row]
+        if col == y || abs(row-x) == abs(col-y) {
+            return true
+        }
+    }
+
+    return false
+}
+
+// 转换成返回格式
+func convertBoard(board []int, n int) []string {
+    ans := make([]string, n)
+    for i := 0; i &amp;lt; n; i&amp;#43;&amp;#43; {
+        line := []byte(strings.Repeat(&amp;#34;.&amp;#34;, n))
+        line[board[i]] = &amp;#39;Q&amp;#39;
+        ans[i] = string(line)
+    }
+
+    return ans
+}
+
+func abs(x int) int {
+    if x &amp;lt; 0 {
+        return -x
+    }
+
+    return x
+}&lt;/pre&gt;
+        &lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/figure&gt;</description>
+    </item>
+    
+    <item>
+      <title>42. Trapping Rain Water</title>
       <link>http://www.orztu.com/leetcode/Trapping-Rain-Water/</link>
       <pubDate>Fri, 28 Apr 2017 10:01:32 +0800</pubDate>
       
@@ -117,7 +254,7 @@ func min(a, b int) int {
     </item>
     
     <item>
-      <title>Sudoku Solver</title>
+      <title>37. Sudoku Solver</title>
       <link>http://www.orztu.com/leetcode/Sudoku-Solver/</link>
       <pubDate>Sat, 22 Apr 2017 11:35:12 +0800</pubDate>
       
@@ -388,7 +525,7 @@ func valid(board *[][]byte, row, col int) bool {
     </item>
     
     <item>
-      <title>Regular Expression Matching</title>
+      <title>10. Regular Expression Matching</title>
       <link>http://www.orztu.com/leetcode/Regular-Expression-Matching/</link>
       <pubDate>Fri, 24 Mar 2017 15:00:47 +0800</pubDate>
       
@@ -503,7 +640,7 @@ isMatch(&amp;quot;aab&amp;quot;, &amp;quot;c*a*b&amp;quot;) → true
     </item>
     
     <item>
-      <title>Palindrome Number</title>
+      <title>9. Palindrome Number</title>
       <link>http://www.orztu.com/leetcode/Palindrome-Number/</link>
       <pubDate>Fri, 24 Mar 2017 15:00:46 +0800</pubDate>
       
@@ -638,7 +775,7 @@ isMatch(&amp;quot;aab&amp;quot;, &amp;quot;c*a*b&amp;quot;) → true
     </item>
     
     <item>
-      <title>String to Integer (atoi)</title>
+      <title>8. String to Integer (atoi)</title>
       <link>http://www.orztu.com/leetcode/String-to-Integer-%28atoi%29/</link>
       <pubDate>Wed, 22 Mar 2017 09:05:12 +0800</pubDate>
       
@@ -727,7 +864,7 @@ isMatch(&amp;quot;aab&amp;quot;, &amp;quot;c*a*b&amp;quot;) → true
     </item>
     
     <item>
-      <title>Reverse Integer</title>
+      <title>7. Reverse Integer</title>
       <link>http://www.orztu.com/leetcode/Reverse-Integer/</link>
       <pubDate>Tue, 21 Mar 2017 16:04:44 +0800</pubDate>
       
@@ -801,7 +938,7 @@ isMatch(&amp;quot;aab&amp;quot;, &amp;quot;c*a*b&amp;quot;) → true
     </item>
     
     <item>
-      <title>ZigZag Conversion</title>
+      <title>6. ZigZag Conversion</title>
       <link>http://www.orztu.com/leetcode/ZigZag-Conversion/</link>
       <pubDate>Fri, 17 Mar 2017 17:52:46 +0800</pubDate>
       
@@ -929,7 +1066,7 @@ Y   I   R
     </item>
     
     <item>
-      <title>Longest Palindromic Substring</title>
+      <title>5. Longest Palindromic Substring</title>
       <link>http://www.orztu.com/leetcode/Longest-Palindromic-Substring/</link>
       <pubDate>Thu, 16 Mar 2017 14:47:07 +0800</pubDate>
       
@@ -1018,7 +1155,7 @@ Output: &amp;quot;bb&amp;quot;
     </item>
     
     <item>
-      <title>Median of Two Sorted Arrays</title>
+      <title>4. Median of Two Sorted Arrays</title>
       <link>http://www.orztu.com/leetcode/Median-of-Two-Sorted-Arrays/</link>
       <pubDate>Thu, 16 Mar 2017 10:53:58 +0800</pubDate>
       
@@ -1125,7 +1262,7 @@ nums2 = [3, 4]
     </item>
     
     <item>
-      <title>Longest Substring Without Repeating Characters</title>
+      <title>3. Longest Substring Without Repeating Characters</title>
       <link>http://www.orztu.com/leetcode/Longest-Substring-Without-Repeating-Characters/</link>
       <pubDate>Wed, 15 Mar 2017 19:38:58 +0800</pubDate>
       
@@ -1207,7 +1344,7 @@ nums2 = [3, 4]
     </item>
     
     <item>
-      <title>Add Two Numbers</title>
+      <title>2. Add Two Numbers</title>
       <link>http://www.orztu.com/leetcode/Add-Two-Numbers/</link>
       <pubDate>Wed, 15 Mar 2017 16:55:54 +0800</pubDate>
       
@@ -1309,7 +1446,7 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
     </item>
     
     <item>
-      <title>Two Sum</title>
+      <title>1. Two Sum</title>
       <link>http://www.orztu.com/leetcode/Two-Sum/</link>
       <pubDate>Wed, 15 Mar 2017 16:36:59 +0800</pubDate>
       
