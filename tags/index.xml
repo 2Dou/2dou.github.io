@@ -19,6 +19,15 @@
     </item>
     
     <item>
+      <title>Regular</title>
+      <link>http://www.orztu.com/tags/regular/</link>
+      <pubDate>Fri, 24 Mar 2017 15:00:47 +0800</pubDate>
+      
+      <guid>http://www.orztu.com/tags/regular/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Zigzag</title>
       <link>http://www.orztu.com/tags/zigzag/</link>
       <pubDate>Fri, 17 Mar 2017 17:52:46 +0800</pubDate>
@@ -28,11 +37,65 @@
     </item>
     
     <item>
-      <title>之字字符</title>
-      <link>http://www.orztu.com/tags/%E4%B9%8B%E5%AD%97%E5%AD%97%E7%AC%A6/</link>
-      <pubDate>Fri, 17 Mar 2017 17:52:46 +0800</pubDate>
+      <title>八皇后</title>
+      <link>http://www.orztu.com/tags/%E5%85%AB%E7%9A%87%E5%90%8E/</link>
+      <pubDate>Thu, 04 May 2017 16:23:01 +0800</pubDate>
       
-      <guid>http://www.orztu.com/tags/%E4%B9%8B%E5%AD%97%E5%AD%97%E7%AC%A6/</guid>
+      <guid>http://www.orztu.com/tags/%E5%85%AB%E7%9A%87%E5%90%8E/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>回文</title>
+      <link>http://www.orztu.com/tags/%E5%9B%9E%E6%96%87/</link>
+      <pubDate>Fri, 24 Mar 2017 15:00:46 +0800</pubDate>
+      
+      <guid>http://www.orztu.com/tags/%E5%9B%9E%E6%96%87/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>回溯</title>
+      <link>http://www.orztu.com/tags/%E5%9B%9E%E6%BA%AF/</link>
+      <pubDate>Thu, 04 May 2017 16:23:01 +0800</pubDate>
+      
+      <guid>http://www.orztu.com/tags/%E5%9B%9E%E6%BA%AF/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>子串</title>
+      <link>http://www.orztu.com/tags/%E5%AD%90%E4%B8%B2/</link>
+      <pubDate>Thu, 16 Mar 2017 14:47:07 +0800</pubDate>
+      
+      <guid>http://www.orztu.com/tags/%E5%AD%90%E4%B8%B2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>容量</title>
+      <link>http://www.orztu.com/tags/%E5%AE%B9%E9%87%8F/</link>
+      <pubDate>Fri, 28 Apr 2017 10:01:32 +0800</pubDate>
+      
+      <guid>http://www.orztu.com/tags/%E5%AE%B9%E9%87%8F/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>数独</title>
+      <link>http://www.orztu.com/tags/%E6%95%B0%E7%8B%AC/</link>
+      <pubDate>Sat, 22 Apr 2017 11:35:12 +0800</pubDate>
+      
+      <guid>http://www.orztu.com/tags/%E6%95%B0%E7%8B%AC/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>数组</title>
+      <link>http://www.orztu.com/tags/%E6%95%B0%E7%BB%84/</link>
+      <pubDate>Thu, 16 Mar 2017 10:53:58 +0800</pubDate>
+      
+      <guid>http://www.orztu.com/tags/%E6%95%B0%E7%BB%84/</guid>
       <description></description>
     </item>
     
@@ -42,6 +105,15 @@
       <pubDate>Thu, 04 May 2017 16:23:01 +0800</pubDate>
       
       <guid>http://www.orztu.com/tags/%E7%AE%97%E6%B3%95/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>链表</title>
+      <link>http://www.orztu.com/tags/%E9%93%BE%E8%A1%A8/</link>
+      <pubDate>Wed, 15 Mar 2017 16:55:54 +0800</pubDate>
+      
+      <guid>http://www.orztu.com/tags/%E9%93%BE%E8%A1%A8/</guid>
       <description></description>
     </item>
     

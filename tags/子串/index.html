@@ -1,9 +1,5 @@
 
 
-  
-    
-  
-
 
   
 
@@ -22,23 +18,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Hugo 0.20-DEV">
-    <title>5. Longest Palindromic Substring</title>
+    <title>子串</title>
     <meta name="author" content="SelFree">
-    <meta name="keywords" content="LeetCode, 字符串, 子串, 回文">
+    <meta name="keywords" content="">
 
     <link rel="icon" href="http://www.orztu.com/favicon.png">
     
+      <link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.orztu.com/tags/%E5%AD%90%E4%B8%B2/index.xml">
+    
 
     
-    <meta name="description" content="LeetCode 练习">
-    <meta property="og:description" content="LeetCode 练习">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="5. Longest Palindromic Substring">
-    <meta property="og:url" content="/leetcode/Longest-Palindromic-Substring/">
+    <meta property="og:title" content="子串">
+    <meta property="og:url" content="/tags/%E5%AD%90%E4%B8%B2/">
     <meta property="og:site_name" content="Orz the way">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Orz the way">
-    <meta name="twitter:description" content="LeetCode 练习">
+    <meta name="twitter:description" content="">
     
     
 
@@ -72,7 +70,7 @@
 
   <body>
     <div id="blog">
-      <header id="header" data-behavior="4">
+      <header id="header" data-behavior="1">
   <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
   <div class="header-title">
     <a class="header-title-link" href="http://www.orztu.com/">Orz the way</a>
@@ -92,7 +90,7 @@
   
 </header>
 
-      <nav id="sidebar" data-behavior="4">
+      <nav id="sidebar" data-behavior="1">
   <div class="sidebar-container">
     
       <div class="sidebar-profile">
@@ -216,21 +214,39 @@
 </nav>
 
       
+        
 
-      <div id="main" data-behavior="4"
+      
+      <div id="main" data-behavior="1"
         class="
                hasCoverMetaIn
                ">
-        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
-          
-          
-            <div class="post-header main-content-wrap text-left">
+        
+          <section class="postShorten-group main-content-wrap">
+            
+            
+              
   
-    <h1 class="post-title" itemprop="headline">
-      5. Longest Palindromic Substring
-    </h1>
+    
+      
+        
+      
+    
   
-  <div class="postShorten-meta post-meta">
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title" itemprop="headline">
+        <a class="link-unstyled" href="http://www.orztu.com/leetcode/Longest-Palindromic-Substring/">
+          5. Longest Palindromic Substring
+        </a>
+      </h1>
+      <div class="postShorten-meta post-meta">
   
     <time itemprop="datePublished" datetime="2017-03-16T14:47:07&#43;08:00">
       
@@ -255,11 +271,10 @@
 
 </div>
 
-</div>
-          
-          <div class="post-content markdown" itemprop="articleBody">
-            <div class="main-content-wrap">
-              <p><a href="https://leetcode.com/problems/longest-palindromic-substring" target="_blank">Longest Palindromic Substring</a></p>
+    </div>
+    <div class="postShorten-excerpt" itemprop="articleBody">
+      <p>
+        <a href="https://leetcode.com/problems/longest-palindromic-substring" target="_blank">Longest Palindromic Substring</a></p>
 
 <p><img src="http://www.orztu.com/images/leetcode/Longest-Palindromic-Substring-1.png" alt="palindromic" title="回文" /></p>
 
@@ -283,161 +298,109 @@ Output: &quot;bb&quot;
 </code></pre>
 </blockquote>
 
-<p></p>
+<p>
+        <br>
+        <a href="http://www.orztu.com/leetcode/Longest-Palindromic-Substring/" class="postShorten-excerpt_link link">Continue reading</a>
+        
 
-<p>从给定字符串中找出最长的回文</p>
-
-<h2 id="solution">Solution</h2>
-
-<p>从最大长度开始判断是否回文，是则返回</p>
-
-
+        
+          
+            
+            <span class="disqus-comment-count" data-disqus-url="http://www.orztu.com/leetcode/Longest-Palindromic-Substring/"></span>
+          
+        
+      </p>
+    </div>
+  </div>
   
-    
-  
-  
-    
-  
-  
-  
+</article>
 
-
-<figure class="highlight go">
-  <figcaption>
-    
-      <span>Solution.go</span>
-    
-  </figcaption>
-  <table>
-    <tbody>
-      <tr>
-        <td class="gutter">
-          <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre>
-        </td>
-        <td class="code">
-          <pre class="go code-highlight">func longestPalindrome(s string) string {
-    maxLen := len(s)
-
-    for l := maxLen; l &gt; 0; l-- {
-        for i := 0; i &#43; l &lt;= maxLen; i&#43;&#43; {
-            lp, rp := i, i &#43; l -1
-
-            for lp &lt; rp &amp;&amp; s[lp] == s[rp] {
-                lp&#43;&#43;
-                rp--
-            }
-
-            if lp &gt;= rp {
-                return s[i:i&#43;l]
-            }
-        }
-    }
-
-    return s[0:1]
-}</pre>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</figure>
-              
-            </div>
-          </div>
-          <div id="post-footer" class="post-footer main-content-wrap">
             
               
-                
-                
-                  <div class="post-footer-tags">
-                    <span class="text-color-light text-small">TAGGED IN</span><br/>
-                    
-  <a class="tag tag--primary tag--small" href="http://www.orztu.com/tags/leetcode/">LeetCode</a>
-
-  <a class="tag tag--primary tag--small" href="http://www.orztu.com/tags/%E7%AE%97%E6%B3%95/">算法</a>
-
-  <a class="tag tag--primary tag--small" href="http://www.orztu.com/tags/%E5%AD%90%E4%B8%B2/">子串</a>
-
-  <a class="tag tag--primary tag--small" href="http://www.orztu.com/tags/%E5%9B%9E%E6%96%87/">回文</a>
-
-                  </div>
-                
-              
-            
-            <div class="post-actions-wrap">
-  <nav>
-    <ul class="post-actions post-action-nav">
-      
-        <li class="post-action">
-          
-            <a class="post-action-btn btn btn--default tooltip--top" href="http://www.orztu.com/leetcode/Median-of-Two-Sorted-Arrays/" data-tooltip="4. Median of Two Sorted Arrays">
-          
-            <i class="fa fa-angle-left"></i>
-            <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
-          </a>
-        </li>
-        <li class="post-action">
-          
-            <a class="post-action-btn btn btn--default tooltip--top" href="http://www.orztu.com/leetcode/ZigZag-Conversion/" data-tooltip="6. ZigZag Conversion">
-          
-            <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
-            <i class="fa fa-angle-right"></i>
-          </a>
-        </li>
-      
-    </ul>
-  </nav>
-  <ul class="post-actions post-action-share">
-    
+  
     
       
-        <li class="post-action">
-          <a class="post-action-btn btn btn--default" href="#disqus_thread">
-            <i class="fa fa-comment-o"></i>
-          </a>
-        </li>
+        
       
     
-    <li class="post-action">
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title" itemprop="headline">
+        <a class="link-unstyled" href="http://www.orztu.com/leetcode/Longest-Substring-Without-Repeating-Characters/">
+          3. Longest Substring Without Repeating Characters
+        </a>
+      </h1>
+      <div class="postShorten-meta post-meta">
+  
+    <time itemprop="datePublished" datetime="2017-03-15T19:38:58&#43;08:00">
       
-        <a class="post-action-btn btn btn--default" href="#">
-        <i class="fa fa-chevron-up"></i>
-      
-      </a>
-    </li>
-  </ul>
+  
+  
+  
+  
+    2017-03-15
+  
+
+    </time>
+  
+  
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="http://www.orztu.com/categories/leetcode">LeetCode</a>
+    
+  
+
+
 </div>
 
+    </div>
+    <div class="postShorten-excerpt" itemprop="articleBody">
+      <p>
+        <a href="https://leetcode.com/problems/longest-substring-without-repeating-characters" target="_blank">Longest Substring Without Repeating Characters</a></p>
+
+<h2 id="description">Description</h2>
+
+<blockquote>
+<p>Given a string, find the length of the longest substring without repeating characters.</p>
+
+<p>Given &ldquo;abcabcbb&rdquo;, the answer is &ldquo;abc&rdquo;, which the length is 3.</p>
+
+<p>Given &ldquo;bbbbb&rdquo;, the answer is &ldquo;b&rdquo;, with the length of 1.</p>
+
+<p>Given &ldquo;pwwkew&rdquo;, the answer is &ldquo;wke&rdquo;, with the length of 3. Note that the answer must be a substring, &ldquo;pwke&rdquo; is a subsequence and not a substring.</p>
+</blockquote>
+
+<p>
+        <br>
+        <a href="http://www.orztu.com/leetcode/Longest-Substring-Without-Repeating-Characters/" class="postShorten-excerpt_link link">Continue reading</a>
+        
+
+        
+          
+            
+            <span class="disqus-comment-count" data-disqus-url="http://www.orztu.com/leetcode/Longest-Substring-Without-Repeating-Characters/"></span>
+          
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
 
             
-              
-                <div id="disqus_thread"></div>
-<script>
-
-
-
-
-
-var disqus_config = function () {
-  this.page.url = 'http:\/\/www.orztu.com\/leetcode\/Longest-Palindromic-Substring\/';
-  
-    this.page.identifier = '\/leetcode\/Longest-Palindromic-Substring\/'
-  
-};
-(function() { 
-    var d = document, s = d.createElement('script');
-    var disqus_shortname = 'orztu';
-    s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
-
-              
             
-          </div>
-        </article>
+
+          </section>
+        
         <footer id="footer" class="main-content-wrap">
   <span class="copyrights">
     &copy; 2017 SelFree. All Rights Reserved
@@ -445,73 +408,6 @@ var disqus_config = function () {
 </footer>
 
       </div>
-      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
-        <div class="post-actions-wrap">
-  <nav>
-    <ul class="post-actions post-action-nav">
-      
-        <li class="post-action">
-          
-            <a class="post-action-btn btn btn--default tooltip--top" href="http://www.orztu.com/leetcode/Median-of-Two-Sorted-Arrays/" data-tooltip="4. Median of Two Sorted Arrays">
-          
-            <i class="fa fa-angle-left"></i>
-            <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
-          </a>
-        </li>
-        <li class="post-action">
-          
-            <a class="post-action-btn btn btn--default tooltip--top" href="http://www.orztu.com/leetcode/ZigZag-Conversion/" data-tooltip="6. ZigZag Conversion">
-          
-            <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
-            <i class="fa fa-angle-right"></i>
-          </a>
-        </li>
-      
-    </ul>
-  </nav>
-  <ul class="post-actions post-action-share">
-    
-    
-      
-        <li class="post-action">
-          <a class="post-action-btn btn btn--default" href="#disqus_thread">
-            <i class="fa fa-comment-o"></i>
-          </a>
-        </li>
-      
-    
-    <li class="post-action">
-      
-        <a class="post-action-btn btn btn--default" href="#">
-        <i class="fa fa-chevron-up"></i>
-      
-      </a>
-    </li>
-  </ul>
-</div>
-
-
-      </div>
-      <div id="share-options-bar" class="share-options-bar" data-behavior="4">
-  <ul class="share-options">
-    <li class="share-option">
-      <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http%3a%2f%2fwww.orztu.com%2fleetcode%2fLongest-Palindromic-Substring%2f">
-        <i class="fa fa-google-plus"></i><span>Share on Google Plus</span>
-      </a>
-    </li>
-    <li class="share-option">
-      <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fwww.orztu.com%2fleetcode%2fLongest-Palindromic-Substring%2f">
-        <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
-      </a>
-    </li>
-    <li class="share-option">
-      <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http%3a%2f%2fwww.orztu.com%2fleetcode%2fLongest-Palindromic-Substring%2f">
-        <i class="fa fa-twitter"></i><span>Share on Twitter</span>
-      </a>
-    </li>
-  </ul>
-</div>
-<div id="share-options-mask" class="share-options-mask"></div>
     </div>
     
     <div id="about">
@@ -647,32 +543,6 @@ $(document).ready(function() {
   });
 });
 </script>
-
-  
-    
-      <script>
-        var disqus_config = function () {
-          this.page.url = 'http:\/\/www.orztu.com\/leetcode\/Longest-Palindromic-Substring\/';
-          
-            this.page.identifier = '\/leetcode\/Longest-Palindromic-Substring\/'
-          
-        };
-        (function() {
-          
-          
-          if (window.location.hostname == "localhost") {
-            return;
-          }
-          var d = document, s = d.createElement('script');
-          var disqus_shortname = 'orztu';
-          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-
-          s.setAttribute('data-timestamp', +new Date());
-          (d.head || d.body).appendChild(s);
-        })();
-      </script>
-    
-  
 
 
 

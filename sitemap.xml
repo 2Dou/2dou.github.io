@@ -87,13 +87,13 @@
   </url>
   
   <url>
-    <loc>http://www.orztu.com/tags/leetcode/</loc>
+    <loc>http://www.orztu.com/categories/leetcode/</loc>
     <lastmod>2017-05-04T16:23:01+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.orztu.com/categories/leetcode/</loc>
+    <loc>http://www.orztu.com/tags/leetcode/</loc>
     <lastmod>2017-05-04T16:23:01+08:00</lastmod>
     <priority>0</priority>
   </url>
@@ -117,6 +117,12 @@
   </url>
   
   <url>
+    <loc>http://www.orztu.com/tags/regular/</loc>
+    <lastmod>2017-03-24T15:00:47+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://www.orztu.com/tags/</loc>
     <lastmod>2017-05-04T16:23:01+08:00</lastmod>
     <priority>0</priority>
@@ -129,14 +135,56 @@
   </url>
   
   <url>
-    <loc>http://www.orztu.com/tags/%E4%B9%8B%E5%AD%97%E5%AD%97%E7%AC%A6/</loc>
-    <lastmod>2017-03-17T17:52:46+08:00</lastmod>
+    <loc>http://www.orztu.com/tags/%E5%85%AB%E7%9A%87%E5%90%8E/</loc>
+    <lastmod>2017-05-04T16:23:01+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.orztu.com/tags/%E5%9B%9E%E6%96%87/</loc>
+    <lastmod>2017-03-24T15:00:46+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.orztu.com/tags/%E5%9B%9E%E6%BA%AF/</loc>
+    <lastmod>2017-05-04T16:23:01+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.orztu.com/tags/%E5%AD%90%E4%B8%B2/</loc>
+    <lastmod>2017-03-16T14:47:07+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.orztu.com/tags/%E5%AE%B9%E9%87%8F/</loc>
+    <lastmod>2017-04-28T10:01:32+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.orztu.com/tags/%E6%95%B0%E7%8B%AC/</loc>
+    <lastmod>2017-04-22T11:35:12+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.orztu.com/tags/%E6%95%B0%E7%BB%84/</loc>
+    <lastmod>2017-03-16T10:53:58+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://www.orztu.com/tags/%E7%AE%97%E6%B3%95/</loc>
     <lastmod>2017-05-04T16:23:01+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.orztu.com/tags/%E9%93%BE%E8%A1%A8/</loc>
+    <lastmod>2017-03-15T16:55:54+08:00</lastmod>
     <priority>0</priority>
   </url>
   

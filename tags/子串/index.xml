@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>子串 on Orz the way</title>
+    <link>http://www.orztu.com/tags/%E5%AD%90%E4%B8%B2/index.xml</link>
+    <description>Recent content in 子串 on Orz the way</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <atom:link href="http://www.orztu.com/tags/%E5%AD%90%E4%B8%B2/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>5. Longest Palindromic Substring</title>
+      <link>http://www.orztu.com/leetcode/Longest-Palindromic-Substring/</link>
+      <pubDate>Thu, 16 Mar 2017 14:47:07 +0800</pubDate>
+      
+      <guid>http://www.orztu.com/leetcode/Longest-Palindromic-Substring/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/longest-palindromic-substring&#34; target=&#34;_blank&#34;&gt;Longest Palindromic Substring&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.orztu.com/images/leetcode/Longest-Palindromic-Substring-1.png&#34; alt=&#34;palindromic&#34; title=&#34;回文&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000.&lt;/p&gt;
+
+&lt;p&gt;Example:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Input: &amp;quot;babad&amp;quot;
+Output: &amp;quot;bab&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Note: &amp;ldquo;aba&amp;rdquo; is also a valid answer.&lt;/p&gt;
+
+&lt;p&gt;Example:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Input: &amp;quot;cbbd&amp;quot;
+Output: &amp;quot;bb&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;从给定字符串中找出最长的回文&lt;/p&gt;
+
+&lt;h2 id=&#34;solution&#34;&gt;Solution&lt;/h2&gt;
+
+&lt;p&gt;从最大长度开始判断是否回文，是则返回&lt;/p&gt;
+
+
+  
+    
+  
+  
+    
+  
+  
+  
+
+
+&lt;figure class=&#34;highlight go&#34;&gt;
+  &lt;figcaption&gt;
+    
+      &lt;span&gt;Solution.go&lt;/span&gt;
+    
+  &lt;/figcaption&gt;
+  &lt;table&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td class=&#34;gutter&#34;&gt;
+          &lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;
+        &lt;/td&gt;
+        &lt;td class=&#34;code&#34;&gt;
+          &lt;pre class=&#34;go code-highlight&#34;&gt;func longestPalindrome(s string) string {
+    maxLen := len(s)
+
+    for l := maxLen; l &amp;gt; 0; l-- {
+        for i := 0; i &amp;#43; l &amp;lt;= maxLen; i&amp;#43;&amp;#43; {
+            lp, rp := i, i &amp;#43; l -1
+
+            for lp &amp;lt; rp &amp;amp;&amp;amp; s[lp] == s[rp] {
+                lp&amp;#43;&amp;#43;
+                rp--
+            }
+
+            if lp &amp;gt;= rp {
+                return s[i:i&amp;#43;l]
+            }
+        }
+    }
+
+    return s[0:1]
+}&lt;/pre&gt;
+        &lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/figure&gt;</description>
+    </item>
+    
+    <item>
+      <title>3. Longest Substring Without Repeating Characters</title>
+      <link>http://www.orztu.com/leetcode/Longest-Substring-Without-Repeating-Characters/</link>
+      <pubDate>Wed, 15 Mar 2017 19:38:58 +0800</pubDate>
+      
+      <guid>http://www.orztu.com/leetcode/Longest-Substring-Without-Repeating-Characters/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/longest-substring-without-repeating-characters&#34; target=&#34;_blank&#34;&gt;Longest Substring Without Repeating Characters&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Given a string, find the length of the longest substring without repeating characters.&lt;/p&gt;
+
+&lt;p&gt;Given &amp;ldquo;abcabcbb&amp;rdquo;, the answer is &amp;ldquo;abc&amp;rdquo;, which the length is 3.&lt;/p&gt;
+
+&lt;p&gt;Given &amp;ldquo;bbbbb&amp;rdquo;, the answer is &amp;ldquo;b&amp;rdquo;, with the length of 1.&lt;/p&gt;
+
+&lt;p&gt;Given &amp;ldquo;pwwkew&amp;rdquo;, the answer is &amp;ldquo;wke&amp;rdquo;, with the length of 3. Note that the answer must be a substring, &amp;ldquo;pwke&amp;rdquo; is a subsequence and not a substring.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;在给定字符串中找出最长子串的长度，子串中不能包含重复字符。&lt;/p&gt;
+
+&lt;h2 id=&#34;solution&#34;&gt;Solution&lt;/h2&gt;
+
+
+  
+    
+  
+  
+    
+  
+  
+  
+
+
+&lt;figure class=&#34;highlight go&#34;&gt;
+  &lt;figcaption&gt;
+    
+      &lt;span&gt;Solution.go&lt;/span&gt;
+    
+  &lt;/figcaption&gt;
+  &lt;table&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td class=&#34;gutter&#34;&gt;
+          &lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;25&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;
+        &lt;/td&gt;
+        &lt;td class=&#34;code&#34;&gt;
+          &lt;pre class=&#34;go code-highlight&#34;&gt;func lengthOfLongestSubstring(s string) int {
+    l := len(s)
+    maxLen := 0
+
+    for p1 := 0; p1 &amp;lt; l; p1&amp;#43;&amp;#43; {
+        m := map[uint8]bool{}
+
+        for p2 := p1; p2 &amp;lt; l; p2&amp;#43;&amp;#43;{
+            c := s[p2]
+
+            _, ok := m[c]
+            if ok {
+                break
+            } else {
+                m[c] = true
+            }
+        }
+
+        if len(m) &amp;gt; maxLen {
+            maxLen = len(m)
+        }
+    }
+
+    return maxLen
+}&lt;/pre&gt;
+        &lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/figure&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

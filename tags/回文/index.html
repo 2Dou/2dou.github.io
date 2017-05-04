@@ -18,21 +18,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Hugo 0.20-DEV">
-    <title>之字字符</title>
+    <title>回文</title>
     <meta name="author" content="SelFree">
     <meta name="keywords" content="">
 
     <link rel="icon" href="http://www.orztu.com/favicon.png">
     
-      <link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.orztu.com/tags/%E4%B9%8B%E5%AD%97%E5%AD%97%E7%AC%A6/index.xml">
+      <link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.orztu.com/tags/%E5%9B%9E%E6%96%87/index.xml">
     
 
     
     <meta name="description" content="">
     <meta property="og:description" content="">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="之字字符">
-    <meta property="og:url" content="/tags/%E4%B9%8B%E5%AD%97%E5%AD%97%E7%AC%A6/">
+    <meta property="og:title" content="回文">
+    <meta property="og:url" content="/tags/%E5%9B%9E%E6%96%87/">
     <meta property="og:site_name" content="Orz the way">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Orz the way">
@@ -242,19 +242,19 @@
     
     <div class="postShorten-header">
       <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="http://www.orztu.com/leetcode/ZigZag-Conversion/">
-          6. ZigZag Conversion
+        <a class="link-unstyled" href="http://www.orztu.com/leetcode/Palindrome-Number/">
+          9. Palindrome Number
         </a>
       </h1>
       <div class="postShorten-meta post-meta">
   
-    <time itemprop="datePublished" datetime="2017-03-17T17:52:46&#43;08:00">
+    <time itemprop="datePublished" datetime="2017-03-24T15:00:46&#43;08:00">
       
   
   
   
   
-    2017-03-17
+    2017-03-24
   
 
     </time>
@@ -274,37 +274,118 @@
     </div>
     <div class="postShorten-excerpt" itemprop="articleBody">
       <p>
-        <a href="https://leetcode.com/problems/zigzag-conversion" target="_blank">ZigZag Conversion</a></p>
+        <a href="https://leetcode.com/problems/palindrome-number" target="_blank">Palindrome Number</a></p>
 
 <h2 id="description">Description</h2>
 
 <blockquote>
-<p>The string <code>&quot;PAYPALISHIRING&quot;</code> is written in a zigzag pattern on a given number of rows like this: (you may want to display this &gt; pattern in a fixed font for better legibility)</p>
-
-<pre><code>P   A   H   N
-A P L S I I G
-Y   I   R
-</code></pre>
-
-<p>And then read line by line: <code>&quot;PAHNAPLSIIGYIR&quot;</code></p>
-
-<p>Write the code that will take a string and make this conversion given a number of rows:</p>
-
-<pre><code>string convert(string text, int nRows);
-</code></pre>
-
-<p><code>convert(&quot;PAYPALISHIRING&quot;, 3)</code> should return <code>&quot;PAHNAPLSIIGYIR&quot;</code>.</p>
+<p>Determine whether an integer is a palindrome. Do this without extra space.</p>
 </blockquote>
+
+<p>在不使用额外空间的条件下判断一个整型是否为回文</p>
+
+<p>我认为这是一个伪命题(wtf? without extra space?)</p>
 
 <p>
         <br>
-        <a href="http://www.orztu.com/leetcode/ZigZag-Conversion/" class="postShorten-excerpt_link link">Continue reading</a>
+        <a href="http://www.orztu.com/leetcode/Palindrome-Number/" class="postShorten-excerpt_link link">Continue reading</a>
         
 
         
           
             
-            <span class="disqus-comment-count" data-disqus-url="http://www.orztu.com/leetcode/ZigZag-Conversion/"></span>
+            <span class="disqus-comment-count" data-disqus-url="http://www.orztu.com/leetcode/Palindrome-Number/"></span>
+          
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+            
+              
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title" itemprop="headline">
+        <a class="link-unstyled" href="http://www.orztu.com/leetcode/Longest-Palindromic-Substring/">
+          5. Longest Palindromic Substring
+        </a>
+      </h1>
+      <div class="postShorten-meta post-meta">
+  
+    <time itemprop="datePublished" datetime="2017-03-16T14:47:07&#43;08:00">
+      
+  
+  
+  
+  
+    2017-03-16
+  
+
+    </time>
+  
+  
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="http://www.orztu.com/categories/leetcode">LeetCode</a>
+    
+  
+
+
+</div>
+
+    </div>
+    <div class="postShorten-excerpt" itemprop="articleBody">
+      <p>
+        <a href="https://leetcode.com/problems/longest-palindromic-substring" target="_blank">Longest Palindromic Substring</a></p>
+
+<p><img src="http://www.orztu.com/images/leetcode/Longest-Palindromic-Substring-1.png" alt="palindromic" title="回文" /></p>
+
+<h2 id="description">Description</h2>
+
+<blockquote>
+<p>Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000.</p>
+
+<p>Example:</p>
+
+<pre><code>Input: &quot;babad&quot;
+Output: &quot;bab&quot;
+</code></pre>
+
+<p>Note: &ldquo;aba&rdquo; is also a valid answer.</p>
+
+<p>Example:</p>
+
+<pre><code>Input: &quot;cbbd&quot;
+Output: &quot;bb&quot;
+</code></pre>
+</blockquote>
+
+<p>
+        <br>
+        <a href="http://www.orztu.com/leetcode/Longest-Palindromic-Substring/" class="postShorten-excerpt_link link">Continue reading</a>
+        
+
+        
+          
+            
+            <span class="disqus-comment-count" data-disqus-url="http://www.orztu.com/leetcode/Longest-Palindromic-Substring/"></span>
           
         
       </p>
