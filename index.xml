@@ -6,8 +6,19 @@
     <description>Recent content on Orz the way</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 04 May 2017 16:23:01 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 31 May 2017 17:54:35 +0800</lastBuildDate>
     <atom:link href="http://www.orztu.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>天龙八部</title>
+      <link>http://www.orztu.com/2017/05/%E5%A4%A9%E9%BE%99%E5%85%AB%E9%83%A8/</link>
+      <pubDate>Wed, 31 May 2017 17:54:35 +0800</pubDate>
+      
+      <guid>http://www.orztu.com/2017/05/%E5%A4%A9%E9%BE%99%E5%85%AB%E9%83%A8/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.orztu.com/images/post/tianlongbabu.jpg&#34; alt=&#34;palindromic&#34; /&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>51. N-Queens</title>
@@ -1552,8 +1563,10 @@ return [0, 1].&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Sorry, I&amp;rsquo;m married.&lt;/li&gt;
 &lt;li&gt;cocos2dx-lua 程序猿&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;mailto:h3rvgo@gmail.com&#34; target=&#34;_blank&#34;&gt;h3rvgo@gmail.com&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/2Dou&#34; target=&#34;_blank&#34;&gt;&lt;span&gt;&lt;i class=&#34;sidebar-button-icon fa fa-lg fa-github&#34;&gt;&lt;/i&gt;2Dou&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/2Dou&#34; target=&#34;_blank&#34;&gt;&lt;span&gt;&lt;i class=&#34;sidebar-button-icon fa fa-lg fa-github&#34;&gt;&lt;/i&gt;2Dou&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;mailto:h3rvgo@gmail.com&#34; target=&#34;_blank&#34;&gt;h3rvgo@gmail.com&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
