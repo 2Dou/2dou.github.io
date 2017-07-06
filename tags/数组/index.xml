@@ -10,10 +10,10 @@
     
     <item>
       <title>4. Median of Two Sorted Arrays</title>
-      <link>http://www.orztu.com/leetcode/Median-of-Two-Sorted-Arrays/</link>
+      <link>http://www.orztu.com/leetcode/004-Median-of-Two-Sorted-Arrays/</link>
       <pubDate>Thu, 16 Mar 2017 10:53:58 +0800</pubDate>
       
-      <guid>http://www.orztu.com/leetcode/Median-of-Two-Sorted-Arrays/</guid>
+      <guid>http://www.orztu.com/leetcode/004-Median-of-Two-Sorted-Arrays/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/median-of-two-sorted-arrays&#34; target=&#34;_blank&#34;&gt;Median of Two Sorted Arrays&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
@@ -117,10 +117,10 @@ nums2 = [3, 4]
     
     <item>
       <title>1. Two Sum</title>
-      <link>http://www.orztu.com/leetcode/Two-Sum/</link>
+      <link>http://www.orztu.com/leetcode/001-Two-Sum/</link>
       <pubDate>Wed, 15 Mar 2017 16:36:59 +0800</pubDate>
       
-      <guid>http://www.orztu.com/leetcode/Two-Sum/</guid>
+      <guid>http://www.orztu.com/leetcode/001-Two-Sum/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/two-sum&#34; target=&#34;_blank&#34;&gt;Two Sum&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;

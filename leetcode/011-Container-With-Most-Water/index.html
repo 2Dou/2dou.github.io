@@ -22,9 +22,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Hugo 0.20-DEV">
-    <title>2. Add Two Numbers</title>
+    <title>11. Container With Most Water</title>
     <meta name="author" content="SelFree">
-    <meta name="keywords" content="">
+    <meta name="keywords" content="LeetCode, 算法, 容量, trap water">
 
     <link rel="icon" href="http://www.orztu.com/favicon.png">
     
@@ -33,8 +33,8 @@
     <meta name="description" content="LeetCode 练习">
     <meta property="og:description" content="LeetCode 练习">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="2. Add Two Numbers">
-    <meta property="og:url" content="/leetcode/Add-Two-Numbers/">
+    <meta property="og:title" content="11. Container With Most Water">
+    <meta property="og:url" content="/leetcode/011-Container-With-Most-Water/">
     <meta property="og:site_name" content="Orz the way">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Orz the way">
@@ -227,18 +227,18 @@
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title" itemprop="headline">
-      2. Add Two Numbers
+      11. Container With Most Water
     </h1>
   
   <div class="postShorten-meta post-meta">
   
-    <time itemprop="datePublished" datetime="2017-03-15T16:55:54&#43;08:00">
+    <time itemprop="datePublished" datetime="2017-07-06T14:09:43&#43;08:00">
       
   
   
   
   
-    2017-03-15
+    2017-07-06
   
 
     </time>
@@ -259,27 +259,23 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <p><a href="https://leetcode.com/problems/add-two-numbers" target="_blank">Add Two Numbers</a></p>
+              <p><a href="https://leetcode.com/problems/container-with-most-water/" target="_blank">Container With Most Water</a></p>
 
 <h2 id="description">Description</h2>
 
 <blockquote>
-<p>You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.</p>
-
-<p>You may assume the two numbers do not contain any leading zero, except the number 0 itself.</p>
-
-<pre><code>Input: (2 -&gt; 4 -&gt; 3) + (5 -&gt; 6 -&gt; 4)
-Output: 7 -&gt; 0 -&gt; 8
-</code></pre>
+<p>Given n non-negative integers a1, a2, &hellip;, an, where each represents a point at coordinate (i, ai). n vertical lines are drawn such that the two endpoints of line i is at (i, ai) and (i, 0). Find two lines, which together with x-axis forms a container, such that the container contains the most water.<br>
+<br>
+Note: You may not slant the container and n is at least 2.</p>
 </blockquote>
 
 <p></p>
 
-<p>通过链表计算加法，向后进位</p>
+<p>给出n个点，它们与X轴有n条垂线，每两条垂线与X轴形成的U型容器，找出最大“容积”(面积）</p>
 
 <h2 id="solution">Solution</h2>
 
-<p>用一个int作进位寄存器，在下一位相加时加上进位寄存器</p>
+<p>从两边往中间逼近。每次循环收紧矮的一边。</p>
 
 
   
@@ -295,58 +291,47 @@ Output: 7 -&gt; 0 -&gt; 8
 <figure class="highlight go">
   <figcaption>
     
-      <span>Solution.go</span>
+      <span>My Solution</span>
     
   </figcaption>
   <table>
     <tbody>
       <tr>
         <td class="gutter">
-          <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre>
+          <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre>
         </td>
         <td class="code">
-          <pre class="go code-highlight">/**
- * Definition for singly-linked list.
- * type ListNode struct {
- *     Val int
- *     Next *ListNode
- * }
- */
-func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
-    head := &amp;ListNode{}
-    cur := head
-    carry := 0
+          <pre class="go code-highlight">func maxArea(height []int) int {
+    area := 0
+    left, right := 0, len(height)-1
 
-    for {
-        var v1, v2 int
-        if l1 != nil {
-            v1 = l1.Val
-            l1 = l1.Next
-        }
+    for left &lt; right {
+        width := right - left
+        h := 0
 
-        if l2 != nil {
-            v2 = l2.Val
-            l2 = l2.Next
-        }
-
-        v := v1 &#43; v2 &#43; carry
-
-        carry = int(v / 10)
-        cur.Val = v % 10
-
-        if l1 != nil || l2 != nil {
-            cur.Next = &amp;ListNode{}
-            cur = cur.Next
+        if height[right] &gt; height[left] {
+            h = height[left]
+            left&#43;&#43;
         } else {
-            if carry &gt; 0 {
-                cur.Next = &amp;ListNode{Val: carry}
-            }
+            h = height[right]
+            right--
+        }
 
-            break
+        a := width * h
+        if a &gt; area {
+            area = a
         }
     }
 
-    return head
+    return area
+}
+
+func min(a, b int) int {
+    if a &gt; b {
+        return b
+    }
+
+    return a
 }</pre>
         </td>
       </tr>
@@ -368,7 +353,7 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 
   <a class="tag tag--primary tag--small" href="http://www.orztu.com/tags/%E7%AE%97%E6%B3%95/">算法</a>
 
-  <a class="tag tag--primary tag--small" href="http://www.orztu.com/tags/%E9%93%BE%E8%A1%A8/">链表</a>
+  <a class="tag tag--primary tag--small" href="http://www.orztu.com/tags/%E5%AE%B9%E9%87%8F/">容量</a>
 
                   </div>
                 
@@ -380,7 +365,7 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
       
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="http://www.orztu.com/leetcode/Two-Sum/" data-tooltip="1. Two Sum">
+            <a class="post-action-btn btn btn--disabled">
           
             <i class="fa fa-angle-left"></i>
             <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
@@ -388,7 +373,7 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
         </li>
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="http://www.orztu.com/leetcode/Longest-Substring-Without-Repeating-Characters/" data-tooltip="3. Longest Substring Without Repeating Characters">
+            <a class="post-action-btn btn btn--default tooltip--top" href="http://www.orztu.com/2017/05/%E5%A4%A9%E9%BE%99%E5%85%AB%E9%83%A8/" data-tooltip="天龙八部">
           
             <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
             <i class="fa fa-angle-right"></i>
@@ -429,9 +414,9 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 
 
 var disqus_config = function () {
-  this.page.url = 'http:\/\/www.orztu.com\/leetcode\/Add-Two-Numbers\/';
+  this.page.url = 'http:\/\/www.orztu.com\/leetcode\/011-Container-With-Most-Water\/';
   
-    this.page.identifier = '\/leetcode\/Add-Two-Numbers\/'
+    this.page.identifier = '\/leetcode\/011-Container-With-Most-Water\/'
   
 };
 (function() { 
@@ -463,7 +448,7 @@ var disqus_config = function () {
       
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="http://www.orztu.com/leetcode/Two-Sum/" data-tooltip="1. Two Sum">
+            <a class="post-action-btn btn btn--disabled">
           
             <i class="fa fa-angle-left"></i>
             <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
@@ -471,7 +456,7 @@ var disqus_config = function () {
         </li>
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="http://www.orztu.com/leetcode/Longest-Substring-Without-Repeating-Characters/" data-tooltip="3. Longest Substring Without Repeating Characters">
+            <a class="post-action-btn btn btn--default tooltip--top" href="http://www.orztu.com/2017/05/%E5%A4%A9%E9%BE%99%E5%85%AB%E9%83%A8/" data-tooltip="天龙八部">
           
             <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
             <i class="fa fa-angle-right"></i>
@@ -506,17 +491,17 @@ var disqus_config = function () {
       <div id="share-options-bar" class="share-options-bar" data-behavior="4">
   <ul class="share-options">
     <li class="share-option">
-      <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http%3a%2f%2fwww.orztu.com%2fleetcode%2fAdd-Two-Numbers%2f">
+      <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http%3a%2f%2fwww.orztu.com%2fleetcode%2f011-Container-With-Most-Water%2f">
         <i class="fa fa-google-plus"></i><span>Share on Google Plus</span>
       </a>
     </li>
     <li class="share-option">
-      <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fwww.orztu.com%2fleetcode%2fAdd-Two-Numbers%2f">
+      <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fwww.orztu.com%2fleetcode%2f011-Container-With-Most-Water%2f">
         <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
       </a>
     </li>
     <li class="share-option">
-      <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http%3a%2f%2fwww.orztu.com%2fleetcode%2fAdd-Two-Numbers%2f">
+      <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http%3a%2f%2fwww.orztu.com%2fleetcode%2f011-Container-With-Most-Water%2f">
         <i class="fa fa-twitter"></i><span>Share on Twitter</span>
       </a>
     </li>
@@ -680,9 +665,9 @@ $(document).ready(function() {
     
       <script>
         var disqus_config = function () {
-          this.page.url = 'http:\/\/www.orztu.com\/leetcode\/Add-Two-Numbers\/';
+          this.page.url = 'http:\/\/www.orztu.com\/leetcode\/011-Container-With-Most-Water\/';
           
-            this.page.identifier = '\/leetcode\/Add-Two-Numbers\/'
+            this.page.identifier = '\/leetcode\/011-Container-With-Most-Water\/'
           
         };
         (function() {

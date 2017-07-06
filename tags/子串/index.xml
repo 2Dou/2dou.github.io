@@ -10,10 +10,10 @@
     
     <item>
       <title>5. Longest Palindromic Substring</title>
-      <link>http://www.orztu.com/leetcode/Longest-Palindromic-Substring/</link>
+      <link>http://www.orztu.com/leetcode/005-Longest-Palindromic-Substring/</link>
       <pubDate>Thu, 16 Mar 2017 14:47:07 +0800</pubDate>
       
-      <guid>http://www.orztu.com/leetcode/Longest-Palindromic-Substring/</guid>
+      <guid>http://www.orztu.com/leetcode/005-Longest-Palindromic-Substring/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/longest-palindromic-substring&#34; target=&#34;_blank&#34;&gt;Longest Palindromic Substring&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;http://www.orztu.com/images/leetcode/Longest-Palindromic-Substring-1.png&#34; alt=&#34;palindromic&#34; title=&#34;回文&#34; /&gt;&lt;/p&gt;
@@ -99,10 +99,10 @@ Output: &amp;quot;bb&amp;quot;
     
     <item>
       <title>3. Longest Substring Without Repeating Characters</title>
-      <link>http://www.orztu.com/leetcode/Longest-Substring-Without-Repeating-Characters/</link>
+      <link>http://www.orztu.com/leetcode/003-Longest-Substring-Without-Repeating-Characters/</link>
       <pubDate>Wed, 15 Mar 2017 19:38:58 +0800</pubDate>
       
-      <guid>http://www.orztu.com/leetcode/Longest-Substring-Without-Repeating-Characters/</guid>
+      <guid>http://www.orztu.com/leetcode/003-Longest-Substring-Without-Repeating-Characters/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/longest-substring-without-repeating-characters&#34; target=&#34;_blank&#34;&gt;Longest Substring Without Repeating Characters&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;

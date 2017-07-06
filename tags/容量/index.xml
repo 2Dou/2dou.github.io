@@ -9,11 +9,98 @@
     <atom:link href="http://www.orztu.com/tags/%E5%AE%B9%E9%87%8F/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>11. Container With Most Water</title>
+      <link>http://www.orztu.com/leetcode/011-Container-With-Most-Water/</link>
+      <pubDate>Thu, 06 Jul 2017 14:09:43 +0800</pubDate>
+      
+      <guid>http://www.orztu.com/leetcode/011-Container-With-Most-Water/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/container-with-most-water/&#34; target=&#34;_blank&#34;&gt;Container With Most Water&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Given n non-negative integers a1, a2, &amp;hellip;, an, where each represents a point at coordinate (i, ai). n vertical lines are drawn such that the two endpoints of line i is at (i, ai) and (i, 0). Find two lines, which together with x-axis forms a container, such that the container contains the most water.&lt;br&gt;
+&lt;br&gt;
+Note: You may not slant the container and n is at least 2.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;给出n个点，它们与X轴有n条垂线，每两条垂线与X轴形成的U型容器，找出最大“容积”(面积）&lt;/p&gt;
+
+&lt;h2 id=&#34;solution&#34;&gt;Solution&lt;/h2&gt;
+
+&lt;p&gt;从两边往中间逼近。每次循环收紧矮的一边。&lt;/p&gt;
+
+
+  
+    
+  
+  
+    
+  
+  
+  
+
+
+&lt;figure class=&#34;highlight go&#34;&gt;
+  &lt;figcaption&gt;
+    
+      &lt;span&gt;My Solution&lt;/span&gt;
+    
+  &lt;/figcaption&gt;
+  &lt;table&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td class=&#34;gutter&#34;&gt;
+          &lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;32&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;
+        &lt;/td&gt;
+        &lt;td class=&#34;code&#34;&gt;
+          &lt;pre class=&#34;go code-highlight&#34;&gt;func maxArea(height []int) int {
+    area := 0
+    left, right := 0, len(height)-1
+
+    for left &amp;lt; right {
+        width := right - left
+        h := 0
+
+        if height[right] &amp;gt; height[left] {
+            h = height[left]
+            left&amp;#43;&amp;#43;
+        } else {
+            h = height[right]
+            right--
+        }
+
+        a := width * h
+        if a &amp;gt; area {
+            area = a
+        }
+    }
+
+    return area
+}
+
+func min(a, b int) int {
+    if a &amp;gt; b {
+        return b
+    }
+
+    return a
+}&lt;/pre&gt;
+        &lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/figure&gt;</description>
+    </item>
+    
+    <item>
       <title>42. Trapping Rain Water</title>
-      <link>http://www.orztu.com/leetcode/Trapping-Rain-Water/</link>
+      <link>http://www.orztu.com/leetcode/042-Trapping-Rain-Water/</link>
       <pubDate>Fri, 28 Apr 2017 10:01:32 +0800</pubDate>
       
-      <guid>http://www.orztu.com/leetcode/Trapping-Rain-Water/</guid>
+      <guid>http://www.orztu.com/leetcode/042-Trapping-Rain-Water/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/trapping-rain-water/&#34; target=&#34;_blank&#34;&gt;Trapping Rain Water&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;

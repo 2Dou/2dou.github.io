@@ -22,9 +22,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Hugo 0.20-DEV">
-    <title>8. String to Integer (atoi)</title>
+    <title>42. Trapping Rain Water</title>
     <meta name="author" content="SelFree">
-    <meta name="keywords" content="LeetCode, atoi">
+    <meta name="keywords" content="LeetCode, 算法, 雨量, trap water">
 
     <link rel="icon" href="http://www.orztu.com/favicon.png">
     
@@ -33,8 +33,8 @@
     <meta name="description" content="LeetCode 练习">
     <meta property="og:description" content="LeetCode 练习">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="8. String to Integer (atoi)">
-    <meta property="og:url" content="/leetcode/String-to-Integer-%28atoi%29/">
+    <meta property="og:title" content="42. Trapping Rain Water">
+    <meta property="og:url" content="/leetcode/042-Trapping-Rain-Water/">
     <meta property="og:site_name" content="Orz the way">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Orz the way">
@@ -227,18 +227,18 @@
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title" itemprop="headline">
-      8. String to Integer (atoi)
+      42. Trapping Rain Water
     </h1>
   
   <div class="postShorten-meta post-meta">
   
-    <time itemprop="datePublished" datetime="2017-03-22T09:05:12&#43;08:00">
+    <time itemprop="datePublished" datetime="2017-04-28T10:01:32&#43;08:00">
       
   
   
   
   
-    2017-03-22
+    2017-04-28
   
 
     </time>
@@ -259,23 +259,28 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <p><a href="https://leetcode.com/problems/string-to-integer-atoi" target="_blank">String to Integer (atoi)</a></p>
+              <p><a href="https://leetcode.com/problems/trapping-rain-water/" target="_blank">Trapping Rain Water</a></p>
 
 <h2 id="description">Description</h2>
 
 <blockquote>
-<p>Implement atoi to convert a string to an integer.</p>
+<p>Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how &gt;much water it is able to trap after raining.</p>
 
-<p><strong>Hint</strong>: Carefully consider all possible input cases. If you want a challenge, please do not see below and ask yourself what are the &gt; possible input cases.</p>
+<p>For example,
+Given <code>[0,1,0,2,1,0,1,3,2,1,2,1]</code>, return <code>6</code>.</p>
 
-<p><strong>Notes:</strong> It is intended for this problem to be specified vaguely (ie, no given input specs). You are responsible to gather all the &gt; input requirements up front.</p>
+<p><img src="http://www.orztu.com/images/leetcode/rainwatertrap-1.png" alt="palindromic" />
+The above elevation map is represented by array [0,1,0,2,1,0,1,3,2,1,2,1]. In this case, 6 units of rain water (blue section) are being trapped. Thanks Marcos for contributing this image!</p>
 </blockquote>
 
 <p></p>
 
-<p>只需要注意边界检查</p>
-
 <h2 id="solution">Solution</h2>
+
+<p>每个点容量决定于左右两边高度</br>
+先从左往右，扫描出每个点左边最高的围栏</br>
+再从右往左，扫描出每个点右边最高的围栏</br>
+在围栏比当前点高的情况下， 这个点的容量为围栏高度减底部高度: min(left_height, right_height) - bottom</p>
 
 
   
@@ -291,49 +296,62 @@
 <figure class="highlight go">
   <figcaption>
     
-      <span>Solution.go</span>
+      <span>My Solution</span>
     
   </figcaption>
   <table>
     <tbody>
       <tr>
         <td class="gutter">
-          <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre>
+          <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre>
         </td>
         <td class="code">
-          <pre class="go code-highlight">func myAtoi(str string) int {
-    str = strings.TrimLeft(str, &#34; &#34;)
+          <pre class="go code-highlight">func trap(height []int) int {
+    var record int
+    var result int
 
-    if len(str) == 0 {
+    length := len(height)
+
+    if length &lt; 3 {
         return 0
     }
 
-    r := 0
-    sign := 1
+    leftHeight := make([]int, length)
 
-    if str[0] == &#39;-&#39; {
-        sign = -1
-        str = str[1:]
-    } else if str[0] == &#39;&#43;&#39; {
-        str = str[1:]
-    }
+    record = height[0] // record the max height of left positions
+    // scan left height for each position
+    for i := 0; i &lt; length-1; i&#43;&#43; {
+        leftHeight[i] = record
 
-    for i := 0; i &lt; len(str); i&#43;&#43; {
-        c := str[i]
-        if c &gt;= &#39;0&#39; &amp;&amp; c &lt;= &#39;9&#39; {
-            r = r * 10 &#43; (int(c - &#39;0&#39;) * sign)
-
-            if r &lt;= math.MinInt32 {
-                return math.MinInt32
-            } else if r &gt;= math.MaxInt32 {
-                return math.MaxInt32
-            }
-        } else {
-            break
+        n := height[i]
+        if n &gt; record {
+            record = n
         }
     }
 
-    return r
+    record = height[length-1] // record the max height of right positions
+    for i := length - 2; i &gt;= 0; i-- {
+        h := min(record, leftHeight[i])
+        n := height[i]
+
+        if h &gt; n {
+            // have some water
+            result &#43;= (h - n)
+        }
+
+        if n &gt; record {
+            record = n
+        }
+    }
+
+    return result
+}
+
+func min(a, b int) int {
+    if a &lt; b {
+        return a
+    }
+    return b
 }</pre>
         </td>
       </tr>
@@ -355,6 +373,8 @@
 
   <a class="tag tag--primary tag--small" href="http://www.orztu.com/tags/%E7%AE%97%E6%B3%95/">算法</a>
 
+  <a class="tag tag--primary tag--small" href="http://www.orztu.com/tags/%E5%AE%B9%E9%87%8F/">容量</a>
+
                   </div>
                 
               
@@ -365,7 +385,7 @@
       
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="http://www.orztu.com/leetcode/Reverse-Integer/" data-tooltip="7. Reverse Integer">
+            <a class="post-action-btn btn btn--default tooltip--top" href="http://www.orztu.com/leetcode/051-N-Queens/" data-tooltip="51. N-Queens">
           
             <i class="fa fa-angle-left"></i>
             <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
@@ -373,7 +393,7 @@
         </li>
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="http://www.orztu.com/leetcode/Palindrome-Number/" data-tooltip="9. Palindrome Number">
+            <a class="post-action-btn btn btn--default tooltip--top" href="http://www.orztu.com/leetcode/037-Sudoku-Solver/" data-tooltip="37. Sudoku Solver">
           
             <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
             <i class="fa fa-angle-right"></i>
@@ -414,9 +434,9 @@
 
 
 var disqus_config = function () {
-  this.page.url = 'http:\/\/www.orztu.com\/leetcode\/String-to-Integer-%28atoi%29\/';
+  this.page.url = 'http:\/\/www.orztu.com\/leetcode\/042-Trapping-Rain-Water\/';
   
-    this.page.identifier = '\/leetcode\/String-to-Integer-%28atoi%29\/'
+    this.page.identifier = '\/leetcode\/042-Trapping-Rain-Water\/'
   
 };
 (function() { 
@@ -448,7 +468,7 @@ var disqus_config = function () {
       
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="http://www.orztu.com/leetcode/Reverse-Integer/" data-tooltip="7. Reverse Integer">
+            <a class="post-action-btn btn btn--default tooltip--top" href="http://www.orztu.com/leetcode/051-N-Queens/" data-tooltip="51. N-Queens">
           
             <i class="fa fa-angle-left"></i>
             <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
@@ -456,7 +476,7 @@ var disqus_config = function () {
         </li>
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="http://www.orztu.com/leetcode/Palindrome-Number/" data-tooltip="9. Palindrome Number">
+            <a class="post-action-btn btn btn--default tooltip--top" href="http://www.orztu.com/leetcode/037-Sudoku-Solver/" data-tooltip="37. Sudoku Solver">
           
             <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
             <i class="fa fa-angle-right"></i>
@@ -491,17 +511,17 @@ var disqus_config = function () {
       <div id="share-options-bar" class="share-options-bar" data-behavior="4">
   <ul class="share-options">
     <li class="share-option">
-      <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http%3a%2f%2fwww.orztu.com%2fleetcode%2fString-to-Integer-%2528atoi%2529%2f">
+      <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http%3a%2f%2fwww.orztu.com%2fleetcode%2f042-Trapping-Rain-Water%2f">
         <i class="fa fa-google-plus"></i><span>Share on Google Plus</span>
       </a>
     </li>
     <li class="share-option">
-      <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fwww.orztu.com%2fleetcode%2fString-to-Integer-%2528atoi%2529%2f">
+      <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fwww.orztu.com%2fleetcode%2f042-Trapping-Rain-Water%2f">
         <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
       </a>
     </li>
     <li class="share-option">
-      <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http%3a%2f%2fwww.orztu.com%2fleetcode%2fString-to-Integer-%2528atoi%2529%2f">
+      <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http%3a%2f%2fwww.orztu.com%2fleetcode%2f042-Trapping-Rain-Water%2f">
         <i class="fa fa-twitter"></i><span>Share on Twitter</span>
       </a>
     </li>
@@ -665,9 +685,9 @@ $(document).ready(function() {
     
       <script>
         var disqus_config = function () {
-          this.page.url = 'http:\/\/www.orztu.com\/leetcode\/String-to-Integer-%28atoi%29\/';
+          this.page.url = 'http:\/\/www.orztu.com\/leetcode\/042-Trapping-Rain-Water\/';
           
-            this.page.identifier = '\/leetcode\/String-to-Integer-%28atoi%29\/'
+            this.page.identifier = '\/leetcode\/042-Trapping-Rain-Water\/'
           
         };
         (function() {
