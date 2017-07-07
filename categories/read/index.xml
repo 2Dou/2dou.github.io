@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Orz the way</title>
-    <link>http://www.orztu.com/post/index.xml</link>
-    <description>Recent content in Posts on Orz the way</description>
+    <title>Read on Orz the way</title>
+    <link>http://www.orztu.com/categories/read/index.xml</link>
+    <description>Recent content in Read on Orz the way</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 07 Jul 2017 10:37:12 +0800</lastBuildDate>
-    <atom:link href="http://www.orztu.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://www.orztu.com/categories/read/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>东野圭吾作品</title>
@@ -35,16 +34,6 @@
       <description>&lt;p&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;http://www.orztu.com/images/post/tianlongbabu.jpg&#34; alt=&#34;palindromic&#34; /&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Hello World</title>
-      <link>http://www.orztu.com/2017/03/hello-world/</link>
-      <pubDate>Tue, 14 Mar 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.orztu.com/2017/03/hello-world/</guid>
-      <description>&lt;p&gt;国际惯例&lt;/p&gt;
-</description>
     </item>
     
   </channel>
