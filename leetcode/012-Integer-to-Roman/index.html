@@ -22,23 +22,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Hugo 0.20-DEV">
-    <title>天龙八部</title>
+    <title>12. Integer to Roman</title>
     <meta name="author" content="SelFree">
-    <meta name="keywords" content="">
+    <meta name="keywords" content="LeetCode, 算法">
 
     <link rel="icon" href="http://www.orztu.com/favicon.png">
     
 
     
-    <meta name="description" content="">
-    <meta property="og:description" content="">
+    <meta name="description" content="LeetCode 练习">
+    <meta property="og:description" content="LeetCode 练习">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="天龙八部">
-    <meta property="og:url" content="/2017/05/%E5%A4%A9%E9%BE%99%E5%85%AB%E9%83%A8/">
+    <meta property="og:title" content="12. Integer to Roman">
+    <meta property="og:url" content="/leetcode/012-Integer-to-Roman/">
     <meta property="og:site_name" content="Orz the way">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Orz the way">
-    <meta name="twitter:description" content="">
+    <meta name="twitter:description" content="LeetCode 练习">
     
     
 
@@ -50,7 +50,7 @@
     
 
     
-      <meta property="og:image" content="http://www.orztu.com/images/post/tian-long-ba-bu.jpg">
+      <meta property="og:image" content="http://www.orztu.com/images/leetcode/roman-numerals.jpg">
     
     
     
@@ -229,23 +229,31 @@
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title" itemprop="headline">
-      天龙八部
+      12. Integer to Roman
     </h1>
   
   <div class="postShorten-meta post-meta">
   
-    <time itemprop="datePublished" datetime="2017-05-31T17:54:35&#43;08:00">
+    <time itemprop="datePublished" datetime="2017-07-07T09:18:49&#43;08:00">
       
   
   
   
   
-    2017-05-31
+    2017-07-07
   
 
     </time>
   
   
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="http://www.orztu.com/categories/leetcode">LeetCode</a>
+    
+  
+
 
 </div>
 
@@ -253,14 +261,124 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <p></p>
+              <p><a href="https://leetcode.com/problems/integer-to-roman/" target="_blank">Integer to Roman</a></p>
 
-<p><img src="http://www.orztu.com/images/post/tianlongbabu.jpg" alt="palindromic" /></p>
+<h2 id="description">Description</h2>
+
+<blockquote>
+<p>Given an integer, convert it to a roman numeral. <br>
+<br>
+Input is guaranteed to be within the range from 1 to 3999.</p>
+</blockquote>
+
+<p></p>
+
+<p>将整型转换成罗马数字形式:</p>
+
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Value</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>I</td>
+<td>1</td>
+</tr>
+
+<tr>
+<td>V</td>
+<td>5</td>
+</tr>
+
+<tr>
+<td>X</td>
+<td>10</td>
+</tr>
+
+<tr>
+<td>L</td>
+<td>50</td>
+</tr>
+
+<tr>
+<td>C</td>
+<td>100</td>
+</tr>
+
+<tr>
+<td>D</td>
+<td>500</td>
+</tr>
+
+<tr>
+<td>M</td>
+<td>1000</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="solution">Solution</h2>
+
+<p>因为限定了范围，所以千位数也用了Slice</p>
+
+
+  
+    
+  
+  
+    
+  
+  
+  
+
+
+<figure class="highlight go">
+  <figcaption>
+    
+      <span>Solution</span>
+    
+  </figcaption>
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+          <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre>
+        </td>
+        <td class="code">
+          <pre class="go code-highlight">func intToRoman(num int) string {
+    M := []string{&#34;&#34;, &#34;M&#34;, &#34;MM&#34;, &#34;MMM&#34;}
+    C := []string{&#34;&#34;, &#34;C&#34;, &#34;CC&#34;, &#34;CCC&#34;, &#34;CD&#34;, &#34;D&#34;, &#34;DC&#34;, &#34;DCC&#34;, &#34;DCCC&#34;, &#34;CM&#34;}
+    X := []string{&#34;&#34;, &#34;X&#34;, &#34;XX&#34;, &#34;XXX&#34;, &#34;XL&#34;, &#34;L&#34;, &#34;LX&#34;, &#34;LXX&#34;, &#34;LXXX&#34;, &#34;XC&#34;}
+    I := []string{&#34;&#34;, &#34;I&#34;, &#34;II&#34;, &#34;III&#34;, &#34;IV&#34;, &#34;V&#34;, &#34;VI&#34;, &#34;VII&#34;, &#34;VIII&#34;, &#34;IX&#34;}
+
+    return M[num/1000] &#43; C[(num%1000)/100] &#43; X[(num%100)/10] &#43; I[num%10]
+}</pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
               
             </div>
           </div>
           <div id="post-footer" class="post-footer main-content-wrap">
             
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="http://www.orztu.com/tags/leetcode/">LeetCode</a>
+
+  <a class="tag tag--primary tag--small" href="http://www.orztu.com/tags/%E7%AE%97%E6%B3%95/">算法</a>
+
+                  </div>
+                
               
             
             <div class="post-actions-wrap">
@@ -269,7 +387,7 @@
       
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="http://www.orztu.com/leetcode/011-Container-With-Most-Water/" data-tooltip="11. Container With Most Water">
+            <a class="post-action-btn btn btn--disabled">
           
             <i class="fa fa-angle-left"></i>
             <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
@@ -277,7 +395,7 @@
         </li>
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="http://www.orztu.com/leetcode/051-N-Queens/" data-tooltip="51. N-Queens">
+            <a class="post-action-btn btn btn--default tooltip--top" href="http://www.orztu.com/leetcode/011-Container-With-Most-Water/" data-tooltip="11. Container With Most Water">
           
             <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
             <i class="fa fa-angle-right"></i>
@@ -318,9 +436,9 @@
 
 
 var disqus_config = function () {
-  this.page.url = 'http:\/\/www.orztu.com\/2017\/05\/%E5%A4%A9%E9%BE%99%E5%85%AB%E9%83%A8\/';
+  this.page.url = 'http:\/\/www.orztu.com\/leetcode\/012-Integer-to-Roman\/';
   
-    this.page.identifier = '\/2017\/05\/%E5%A4%A9%E9%BE%99%E5%85%AB%E9%83%A8\/'
+    this.page.identifier = '\/leetcode\/012-Integer-to-Roman\/'
   
 };
 (function() { 
@@ -352,7 +470,7 @@ var disqus_config = function () {
       
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="http://www.orztu.com/leetcode/011-Container-With-Most-Water/" data-tooltip="11. Container With Most Water">
+            <a class="post-action-btn btn btn--disabled">
           
             <i class="fa fa-angle-left"></i>
             <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
@@ -360,7 +478,7 @@ var disqus_config = function () {
         </li>
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="http://www.orztu.com/leetcode/051-N-Queens/" data-tooltip="51. N-Queens">
+            <a class="post-action-btn btn btn--default tooltip--top" href="http://www.orztu.com/leetcode/011-Container-With-Most-Water/" data-tooltip="11. Container With Most Water">
           
             <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
             <i class="fa fa-angle-right"></i>
@@ -395,17 +513,17 @@ var disqus_config = function () {
       <div id="share-options-bar" class="share-options-bar" data-behavior="4">
   <ul class="share-options">
     <li class="share-option">
-      <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http%3a%2f%2fwww.orztu.com%2f2017%2f05%2f%25E5%25A4%25A9%25E9%25BE%2599%25E5%2585%25AB%25E9%2583%25A8%2f">
+      <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http%3a%2f%2fwww.orztu.com%2fleetcode%2f012-Integer-to-Roman%2f">
         <i class="fa fa-google-plus"></i><span>Share on Google Plus</span>
       </a>
     </li>
     <li class="share-option">
-      <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fwww.orztu.com%2f2017%2f05%2f%25E5%25A4%25A9%25E9%25BE%2599%25E5%2585%25AB%25E9%2583%25A8%2f">
+      <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fwww.orztu.com%2fleetcode%2f012-Integer-to-Roman%2f">
         <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
       </a>
     </li>
     <li class="share-option">
-      <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http%3a%2f%2fwww.orztu.com%2f2017%2f05%2f%25E5%25A4%25A9%25E9%25BE%2599%25E5%2585%25AB%25E9%2583%25A8%2f">
+      <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http%3a%2f%2fwww.orztu.com%2fleetcode%2f012-Integer-to-Roman%2f">
         <i class="fa fa-twitter"></i><span>Share on Twitter</span>
       </a>
     </li>
@@ -569,9 +687,9 @@ $(document).ready(function() {
     
       <script>
         var disqus_config = function () {
-          this.page.url = 'http:\/\/www.orztu.com\/2017\/05\/%E5%A4%A9%E9%BE%99%E5%85%AB%E9%83%A8\/';
+          this.page.url = 'http:\/\/www.orztu.com\/leetcode\/012-Integer-to-Roman\/';
           
-            this.page.identifier = '\/2017\/05\/%E5%A4%A9%E9%BE%99%E5%85%AB%E9%83%A8\/'
+            this.page.identifier = '\/leetcode\/012-Integer-to-Roman\/'
           
         };
         (function() {

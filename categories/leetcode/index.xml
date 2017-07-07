@@ -9,6 +9,115 @@
     <atom:link href="http://www.orztu.com/categories/leetcode/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>12. Integer to Roman</title>
+      <link>http://www.orztu.com/leetcode/012-Integer-to-Roman/</link>
+      <pubDate>Fri, 07 Jul 2017 09:18:49 +0800</pubDate>
+      
+      <guid>http://www.orztu.com/leetcode/012-Integer-to-Roman/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/integer-to-roman/&#34; target=&#34;_blank&#34;&gt;Integer to Roman&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Given an integer, convert it to a roman numeral. &lt;br&gt;
+&lt;br&gt;
+Input is guaranteed to be within the range from 1 to 3999.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;将整型转换成罗马数字形式:&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Symbol&lt;/th&gt;
+&lt;th&gt;Value&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;I&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;V&lt;/td&gt;
+&lt;td&gt;5&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;X&lt;/td&gt;
+&lt;td&gt;10&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;L&lt;/td&gt;
+&lt;td&gt;50&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;C&lt;/td&gt;
+&lt;td&gt;100&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;D&lt;/td&gt;
+&lt;td&gt;500&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;M&lt;/td&gt;
+&lt;td&gt;1000&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;solution&#34;&gt;Solution&lt;/h2&gt;
+
+&lt;p&gt;因为限定了范围，所以千位数也用了Slice&lt;/p&gt;
+
+
+  
+    
+  
+  
+    
+  
+  
+  
+
+
+&lt;figure class=&#34;highlight go&#34;&gt;
+  &lt;figcaption&gt;
+    
+      &lt;span&gt;Solution&lt;/span&gt;
+    
+  &lt;/figcaption&gt;
+  &lt;table&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td class=&#34;gutter&#34;&gt;
+          &lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;
+        &lt;/td&gt;
+        &lt;td class=&#34;code&#34;&gt;
+          &lt;pre class=&#34;go code-highlight&#34;&gt;func intToRoman(num int) string {
+    M := []string{&amp;#34;&amp;#34;, &amp;#34;M&amp;#34;, &amp;#34;MM&amp;#34;, &amp;#34;MMM&amp;#34;}
+    C := []string{&amp;#34;&amp;#34;, &amp;#34;C&amp;#34;, &amp;#34;CC&amp;#34;, &amp;#34;CCC&amp;#34;, &amp;#34;CD&amp;#34;, &amp;#34;D&amp;#34;, &amp;#34;DC&amp;#34;, &amp;#34;DCC&amp;#34;, &amp;#34;DCCC&amp;#34;, &amp;#34;CM&amp;#34;}
+    X := []string{&amp;#34;&amp;#34;, &amp;#34;X&amp;#34;, &amp;#34;XX&amp;#34;, &amp;#34;XXX&amp;#34;, &amp;#34;XL&amp;#34;, &amp;#34;L&amp;#34;, &amp;#34;LX&amp;#34;, &amp;#34;LXX&amp;#34;, &amp;#34;LXXX&amp;#34;, &amp;#34;XC&amp;#34;}
+    I := []string{&amp;#34;&amp;#34;, &amp;#34;I&amp;#34;, &amp;#34;II&amp;#34;, &amp;#34;III&amp;#34;, &amp;#34;IV&amp;#34;, &amp;#34;V&amp;#34;, &amp;#34;VI&amp;#34;, &amp;#34;VII&amp;#34;, &amp;#34;VIII&amp;#34;, &amp;#34;IX&amp;#34;}
+
+    return M[num/1000] &amp;#43; C[(num%1000)/100] &amp;#43; X[(num%100)/10] &amp;#43; I[num%10]
+}&lt;/pre&gt;
+        &lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/figure&gt;</description>
+    </item>
+    
+    <item>
       <title>11. Container With Most Water</title>
       <link>http://www.orztu.com/leetcode/011-Container-With-Most-Water/</link>
       <pubDate>Thu, 06 Jul 2017 14:09:43 +0800</pubDate>
@@ -344,7 +453,7 @@ func min(a, b int) int {
       <guid>http://www.orztu.com/leetcode/037-Sudoku-Solver/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/sudoku-solver/&#34; target=&#34;_blank&#34;&gt;Sudoku Solver&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://www.orztu.com/images/leetcode/Sudoku-Solver-1.png&#34; alt=&#34;palindromic&#34; title=&#34;数独&#34; /&gt;&lt;/p&gt;
+&lt;!-- ![palindromic](/images/leetcode/Sudoku-Solver-1.png &#34;数独&#34;) --&gt;
 
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
 
@@ -1159,7 +1268,7 @@ Y   I   R
       <guid>http://www.orztu.com/leetcode/005-Longest-Palindromic-Substring/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/longest-palindromic-substring&#34; target=&#34;_blank&#34;&gt;Longest Palindromic Substring&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://www.orztu.com/images/leetcode/Longest-Palindromic-Substring-1.png&#34; alt=&#34;palindromic&#34; title=&#34;回文&#34; /&gt;&lt;/p&gt;
+&lt;!-- ![palindromic](/images/leetcode/Longest-Palindromic-Substring-1.png &#34;回文&#34;) --&gt;
 
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
 
