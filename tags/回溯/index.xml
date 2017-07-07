@@ -9,7 +9,7 @@
     <atom:link href="http://www.orztu.com/tags/%E5%9B%9E%E6%BA%AF/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>51. N-Queens</title>
+      <title>LeetCode 51. N-Queens</title>
       <link>http://www.orztu.com/leetcode/051-N-Queens/</link>
       <pubDate>Thu, 04 May 2017 16:23:01 +0800</pubDate>
       
@@ -143,7 +143,7 @@ func abs(x int) int {
     </item>
     
     <item>
-      <title>37. Sudoku Solver</title>
+      <title>LeetCode 37. Sudoku Solver</title>
       <link>http://www.orztu.com/leetcode/037-Sudoku-Solver/</link>
       <pubDate>Sat, 22 Apr 2017 11:35:12 +0800</pubDate>
       

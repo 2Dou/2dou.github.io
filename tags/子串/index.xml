@@ -9,7 +9,7 @@
     <atom:link href="http://www.orztu.com/tags/%E5%AD%90%E4%B8%B2/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>5. Longest Palindromic Substring</title>
+      <title>LeetCode 5. Longest Palindromic Substring</title>
       <link>http://www.orztu.com/leetcode/005-Longest-Palindromic-Substring/</link>
       <pubDate>Thu, 16 Mar 2017 14:47:07 +0800</pubDate>
       
@@ -98,7 +98,7 @@ Output: &amp;quot;bb&amp;quot;
     </item>
     
     <item>
-      <title>3. Longest Substring Without Repeating Characters</title>
+      <title>LeetCode 3. Longest Substring Without Repeating Characters</title>
       <link>http://www.orztu.com/leetcode/003-Longest-Substring-Without-Repeating-Characters/</link>
       <pubDate>Wed, 15 Mar 2017 19:38:58 +0800</pubDate>
       

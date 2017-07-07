@@ -9,7 +9,7 @@
     <atom:link href="http://www.orztu.com/tags/%E5%9B%9E%E6%96%87/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>9. Palindrome Number</title>
+      <title>LeetCode 9. Palindrome Number</title>
       <link>http://www.orztu.com/leetcode/009-Palindrome-Number/</link>
       <pubDate>Fri, 24 Mar 2017 15:00:46 +0800</pubDate>
       
@@ -144,7 +144,7 @@
     </item>
     
     <item>
-      <title>5. Longest Palindromic Substring</title>
+      <title>LeetCode 5. Longest Palindromic Substring</title>
       <link>http://www.orztu.com/leetcode/005-Longest-Palindromic-Substring/</link>
       <pubDate>Thu, 16 Mar 2017 14:47:07 +0800</pubDate>
       

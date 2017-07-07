@@ -9,7 +9,7 @@
     <atom:link href="http://www.orztu.com/tags/%E5%AE%B9%E9%87%8F/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>11. Container With Most Water</title>
+      <title>LeetCode 11. Container With Most Water</title>
       <link>http://www.orztu.com/leetcode/011-Container-With-Most-Water/</link>
       <pubDate>Thu, 06 Jul 2017 14:09:43 +0800</pubDate>
       
@@ -96,7 +96,7 @@ func min(a, b int) int {
     </item>
     
     <item>
-      <title>42. Trapping Rain Water</title>
+      <title>LeetCode 42. Trapping Rain Water</title>
       <link>http://www.orztu.com/leetcode/042-Trapping-Rain-Water/</link>
       <pubDate>Fri, 28 Apr 2017 10:01:32 +0800</pubDate>
       

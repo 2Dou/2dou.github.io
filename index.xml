@@ -6,8 +6,89 @@
     <description>Recent content on Orz the way</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 07 Jul 2017 10:37:12 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 07 Jul 2017 14:43:41 +0800</lastBuildDate>
     <atom:link href="http://www.orztu.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>LeetCode 13. Roman to Integer</title>
+      <link>http://www.orztu.com/leetcode/013-Roman-to-Integer/</link>
+      <pubDate>Fri, 07 Jul 2017 14:43:41 +0800</pubDate>
+      
+      <guid>http://www.orztu.com/leetcode/013-Roman-to-Integer/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/roman-to-integer/&#34; target=&#34;_blank&#34;&gt;Roman to Integer&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Given a roman numeral, convert it to an integer.&lt;br&gt;
+&lt;br&gt;
+Input is guaranteed to be within the range from 1 to 3999.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;solution&#34;&gt;Solution&lt;/h2&gt;
+
+
+  
+    
+  
+  
+    
+  
+  
+  
+
+
+&lt;figure class=&#34;highlight go&#34;&gt;
+  &lt;figcaption&gt;
+    
+      &lt;span&gt;Solution&lt;/span&gt;
+    
+  &lt;/figcaption&gt;
+  &lt;table&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td class=&#34;gutter&#34;&gt;
+          &lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;30&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;
+        &lt;/td&gt;
+        &lt;td class=&#34;code&#34;&gt;
+          &lt;pre class=&#34;go code-highlight&#34;&gt;func romanToInt(s string) int {
+    num := map[uint8]int{
+        &amp;#39;M&amp;#39;: 1000,
+        &amp;#39;D&amp;#39;: 500,
+        &amp;#39;C&amp;#39;: 100,
+        &amp;#39;L&amp;#39;: 50,
+        &amp;#39;X&amp;#39;: 10,
+        &amp;#39;V&amp;#39;: 5,
+        &amp;#39;I&amp;#39;: 1,
+    }
+
+    length := len(s)
+
+    if length == 0 {
+        return 0
+    }
+
+    res := num[s[length-1]]
+    for i := length - 2; i &amp;gt;= 0; i-- {
+        n := num[s[i]]
+
+        if n &amp;lt; num[s[i&amp;#43;1]] {
+            res -= n
+        } else {
+            res &amp;#43;= n
+        }
+    }
+
+    return res
+}&lt;/pre&gt;
+        &lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/figure&gt;</description>
+    </item>
     
     <item>
       <title>东野圭吾作品</title>
@@ -27,7 +108,7 @@
     </item>
     
     <item>
-      <title>12. Integer to Roman</title>
+      <title>LeetCode 12. Integer to Roman</title>
       <link>http://www.orztu.com/leetcode/012-Integer-to-Roman/</link>
       <pubDate>Fri, 07 Jul 2017 09:18:49 +0800</pubDate>
       
@@ -136,7 +217,7 @@ Input is guaranteed to be within the range from 1 to 3999.&lt;/p&gt;
     </item>
     
     <item>
-      <title>11. Container With Most Water</title>
+      <title>LeetCode 11. Container With Most Water</title>
       <link>http://www.orztu.com/leetcode/011-Container-With-Most-Water/</link>
       <pubDate>Thu, 06 Jul 2017 14:09:43 +0800</pubDate>
       
@@ -234,7 +315,7 @@ func min(a, b int) int {
     </item>
     
     <item>
-      <title>51. N-Queens</title>
+      <title>LeetCode 51. N-Queens</title>
       <link>http://www.orztu.com/leetcode/051-N-Queens/</link>
       <pubDate>Thu, 04 May 2017 16:23:01 +0800</pubDate>
       
@@ -368,7 +449,7 @@ func abs(x int) int {
     </item>
     
     <item>
-      <title>42. Trapping Rain Water</title>
+      <title>LeetCode 42. Trapping Rain Water</title>
       <link>http://www.orztu.com/leetcode/042-Trapping-Rain-Water/</link>
       <pubDate>Fri, 28 Apr 2017 10:01:32 +0800</pubDate>
       
@@ -475,7 +556,7 @@ func min(a, b int) int {
     </item>
     
     <item>
-      <title>37. Sudoku Solver</title>
+      <title>LeetCode 37. Sudoku Solver</title>
       <link>http://www.orztu.com/leetcode/037-Sudoku-Solver/</link>
       <pubDate>Sat, 22 Apr 2017 11:35:12 +0800</pubDate>
       
@@ -748,7 +829,7 @@ func valid(board *[][]byte, row, col int) bool {
     </item>
     
     <item>
-      <title>10. Regular Expression Matching</title>
+      <title>LeetCode 10. Regular Expression Matching</title>
       <link>http://www.orztu.com/leetcode/010-Regular-Expression-Matching/</link>
       <pubDate>Fri, 24 Mar 2017 15:00:47 +0800</pubDate>
       
@@ -863,7 +944,7 @@ isMatch(&amp;quot;aab&amp;quot;, &amp;quot;c*a*b&amp;quot;) → true
     </item>
     
     <item>
-      <title>9. Palindrome Number</title>
+      <title>LeetCode 9. Palindrome Number</title>
       <link>http://www.orztu.com/leetcode/009-Palindrome-Number/</link>
       <pubDate>Fri, 24 Mar 2017 15:00:46 +0800</pubDate>
       
@@ -998,7 +1079,7 @@ isMatch(&amp;quot;aab&amp;quot;, &amp;quot;c*a*b&amp;quot;) → true
     </item>
     
     <item>
-      <title>8. String to Integer (atoi)</title>
+      <title>LeetCode 8. String to Integer (atoi)</title>
       <link>http://www.orztu.com/leetcode/008-String-to-Integer-%28atoi%29/</link>
       <pubDate>Wed, 22 Mar 2017 09:05:12 +0800</pubDate>
       
@@ -1089,7 +1170,7 @@ isMatch(&amp;quot;aab&amp;quot;, &amp;quot;c*a*b&amp;quot;) → true
     </item>
     
     <item>
-      <title>7. Reverse Integer</title>
+      <title>LeetCode 7. Reverse Integer</title>
       <link>http://www.orztu.com/leetcode/007-Reverse-Integer/</link>
       <pubDate>Tue, 21 Mar 2017 16:04:44 +0800</pubDate>
       
@@ -1162,7 +1243,7 @@ The input is assumed to be a 32-bit signed integer. Your function should &lt;str
     </item>
     
     <item>
-      <title>6. ZigZag Conversion</title>
+      <title>LeetCode 6. ZigZag Conversion</title>
       <link>http://www.orztu.com/leetcode/006-ZigZag-Conversion/</link>
       <pubDate>Fri, 17 Mar 2017 17:52:46 +0800</pubDate>
       
@@ -1290,7 +1371,7 @@ Y   I   R
     </item>
     
     <item>
-      <title>5. Longest Palindromic Substring</title>
+      <title>LeetCode 5. Longest Palindromic Substring</title>
       <link>http://www.orztu.com/leetcode/005-Longest-Palindromic-Substring/</link>
       <pubDate>Thu, 16 Mar 2017 14:47:07 +0800</pubDate>
       
@@ -1379,7 +1460,7 @@ Output: &amp;quot;bb&amp;quot;
     </item>
     
     <item>
-      <title>4. Median of Two Sorted Arrays</title>
+      <title>LeetCode 4. Median of Two Sorted Arrays</title>
       <link>http://www.orztu.com/leetcode/004-Median-of-Two-Sorted-Arrays/</link>
       <pubDate>Thu, 16 Mar 2017 10:53:58 +0800</pubDate>
       
@@ -1486,7 +1567,7 @@ nums2 = [3, 4]
     </item>
     
     <item>
-      <title>3. Longest Substring Without Repeating Characters</title>
+      <title>LeetCode 3. Longest Substring Without Repeating Characters</title>
       <link>http://www.orztu.com/leetcode/003-Longest-Substring-Without-Repeating-Characters/</link>
       <pubDate>Wed, 15 Mar 2017 19:38:58 +0800</pubDate>
       
@@ -1568,7 +1649,7 @@ nums2 = [3, 4]
     </item>
     
     <item>
-      <title>2. Add Two Numbers</title>
+      <title>LeetCode 2. Add Two Numbers</title>
       <link>http://www.orztu.com/leetcode/002-Add-Two-Numbers/</link>
       <pubDate>Wed, 15 Mar 2017 16:55:54 +0800</pubDate>
       
@@ -1670,7 +1751,7 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
     </item>
     
     <item>
-      <title>1. Two Sum</title>
+      <title>LeetCode 1. Two Sum</title>
       <link>http://www.orztu.com/leetcode/001-Two-Sum/</link>
       <pubDate>Wed, 15 Mar 2017 16:36:59 +0800</pubDate>
       
