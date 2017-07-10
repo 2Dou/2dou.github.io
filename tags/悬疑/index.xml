@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Read on Orz the way</title>
-    <link>http://www.orztu.com/categories/read/index.xml</link>
-    <description>Recent content in Read on Orz the way</description>
+    <title>悬疑 on Orz the way</title>
+    <link>http://www.orztu.com/tags/%E6%82%AC%E7%96%91/index.xml</link>
+    <description>Recent content in 悬疑 on Orz the way</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <atom:link href="http://www.orztu.com/categories/read/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://www.orztu.com/tags/%E6%82%AC%E7%96%91/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>东野圭吾作品</title>
@@ -20,20 +20,10 @@
 
 &lt;li&gt;&lt;p&gt;&lt;del&gt;《毕业前的杀人游戏》&lt;/del&gt;&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;《变身》&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;del&gt;《变身》&lt;/del&gt; &lt;br&gt;
+“人的死亡是什么？”&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
-    </item>
-    
-    <item>
-      <title>天龙八部</title>
-      <link>http://www.orztu.com/2017/05/%E5%A4%A9%E9%BE%99%E5%85%AB%E9%83%A8/</link>
-      <pubDate>Wed, 31 May 2017 17:54:35 +0800</pubDate>
-      
-      <guid>http://www.orztu.com/2017/05/%E5%A4%A9%E9%BE%99%E5%85%AB%E9%83%A8/</guid>
-      <description>&lt;p&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://www.orztu.com/images/post/tianlongbabu.jpg&#34; alt=&#34;palindromic&#34; /&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

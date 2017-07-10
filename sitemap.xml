@@ -8,7 +8,7 @@
   
   <url>
     <loc>http://www.orztu.com/2017/07/%E4%B8%9C%E9%87%8E%E5%9C%AD%E5%90%BE%E4%BD%9C%E5%93%81/</loc>
-    <lastmod>2017-07-07T10:37:12+08:00</lastmod>
+    <lastmod>2017-07-10T14:10:55+08:00</lastmod>
   </url>
   
   <url>
@@ -112,13 +112,13 @@
   </url>
   
   <url>
-    <loc>http://www.orztu.com/categories/leetcode/</loc>
+    <loc>http://www.orztu.com/tags/leetcode/</loc>
     <lastmod>2017-07-07T14:43:41+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.orztu.com/tags/leetcode/</loc>
+    <loc>http://www.orztu.com/categories/leetcode/</loc>
     <lastmod>2017-07-07T14:43:41+08:00</lastmod>
     <priority>0</priority>
   </url>
@@ -137,13 +137,13 @@
   
   <url>
     <loc>http://www.orztu.com/post/</loc>
-    <lastmod>2017-07-07T10:37:12+08:00</lastmod>
+    <lastmod>2017-07-10T14:10:55+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.orztu.com/categories/read/</loc>
-    <lastmod>2017-07-07T10:37:12+08:00</lastmod>
+    <loc>http://www.orztu.com/categories/reading/</loc>
+    <lastmod>2017-07-10T14:10:55+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -162,6 +162,12 @@
   <url>
     <loc>http://www.orztu.com/tags/zigzag/</loc>
     <lastmod>2017-03-17T17:52:46+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.orztu.com/tags/%E4%B8%9C%E9%87%8E%E5%9C%AD%E5%90%BE/</loc>
+    <lastmod>2017-07-10T14:10:55+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -196,6 +202,18 @@
   </url>
   
   <url>
+    <loc>http://www.orztu.com/tags/%E5%B0%8F%E8%AF%B4/</loc>
+    <lastmod>2017-07-10T14:10:55+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.orztu.com/tags/%E6%82%AC%E7%96%91/</loc>
+    <lastmod>2017-07-10T14:10:55+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://www.orztu.com/tags/%E6%95%B0%E7%8B%AC/</loc>
     <lastmod>2017-04-22T11:35:12+08:00</lastmod>
     <priority>0</priority>
@@ -208,8 +226,26 @@
   </url>
   
   <url>
+    <loc>http://www.orztu.com/tags/%E6%AD%A6%E4%BE%A0/</loc>
+    <lastmod>2017-05-31T17:54:35+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://www.orztu.com/tags/%E7%AE%97%E6%B3%95/</loc>
     <lastmod>2017-07-07T14:43:41+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.orztu.com/tags/%E8%AF%BB%E4%B9%A6/</loc>
+    <lastmod>2017-07-10T14:10:55+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.orztu.com/tags/%E9%87%91%E5%BA%B8/</loc>
+    <lastmod>2017-05-31T17:54:35+08:00</lastmod>
     <priority>0</priority>
   </url>
   
