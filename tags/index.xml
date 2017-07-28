@@ -6,13 +6,13 @@
     <description>Recent content in Tags on Orz the way</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 07 Jul 2017 14:43:41 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 28 Jul 2017 08:54:12 +0800</lastBuildDate>
     <atom:link href="http://www.orztu.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Leetcode</title>
       <link>http://www.orztu.com/tags/leetcode/</link>
-      <pubDate>Fri, 07 Jul 2017 14:43:41 +0800</pubDate>
+      <pubDate>Fri, 28 Jul 2017 08:54:12 +0800</pubDate>
       
       <guid>http://www.orztu.com/tags/leetcode/</guid>
       <description></description>
@@ -24,6 +24,15 @@
       <pubDate>Fri, 24 Mar 2017 15:00:47 +0800</pubDate>
       
       <guid>http://www.orztu.com/tags/regular/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sum</title>
+      <link>http://www.orztu.com/tags/sum/</link>
+      <pubDate>Fri, 28 Jul 2017 08:54:12 +0800</pubDate>
+      
+      <guid>http://www.orztu.com/tags/sum/</guid>
       <description></description>
     </item>
     
@@ -120,7 +129,7 @@
     <item>
       <title>数组</title>
       <link>http://www.orztu.com/tags/%E6%95%B0%E7%BB%84/</link>
-      <pubDate>Thu, 16 Mar 2017 10:53:58 +0800</pubDate>
+      <pubDate>Fri, 28 Jul 2017 08:54:12 +0800</pubDate>
       
       <guid>http://www.orztu.com/tags/%E6%95%B0%E7%BB%84/</guid>
       <description></description>
@@ -138,7 +147,7 @@
     <item>
       <title>算法</title>
       <link>http://www.orztu.com/tags/%E7%AE%97%E6%B3%95/</link>
-      <pubDate>Fri, 07 Jul 2017 14:43:41 +0800</pubDate>
+      <pubDate>Fri, 28 Jul 2017 08:54:12 +0800</pubDate>
       
       <guid>http://www.orztu.com/tags/%E7%AE%97%E6%B3%95/</guid>
       <description></description>

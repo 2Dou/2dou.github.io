@@ -22,32 +22,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Hugo 0.20-DEV">
-    <title>2017已读</title>
+    <title>Three Sum</title>
     <meta name="author" content="SelFree">
-    <meta name="keywords" content="读书, 书单">
+    <meta name="keywords" content="LeetCode, 算法, Sum">
 
     <link rel="icon" href="http://www.orztu.com/favicon.png">
     
 
     
-    <meta name="description" content=" 金庸
- 《天龙八部》  东野圭吾
- 《白夜行》 《毕业前的杀人游戏》 《变身》 《解忧杂货铺》  余华
- 《活着》   ">
-    <meta property="og:description" content=" 金庸
- 《天龙八部》  东野圭吾
- 《白夜行》 《毕业前的杀人游戏》 《变身》 《解忧杂货铺》  余华
- 《活着》   ">
+    <meta name="description" content="LeetCode 练习">
+    <meta property="og:description" content="LeetCode 练习">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="2017已读">
-    <meta property="og:url" content="/2017/07/2017%E5%B7%B2%E8%AF%BB/">
+    <meta property="og:title" content="Three Sum">
+    <meta property="og:url" content="/leetcode/15-Three-Sum/">
     <meta property="og:site_name" content="Orz the way">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Orz the way">
-    <meta name="twitter:description" content=" 金庸
- 《天龙八部》  东野圭吾
- 《白夜行》 《毕业前的杀人游戏》 《变身》 《解忧杂货铺》  余华
- 《活着》   ">
+    <meta name="twitter:description" content="LeetCode 练习">
     
     
 
@@ -236,18 +227,18 @@
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title" itemprop="headline">
-      2017已读
+      Three Sum
     </h1>
   
   <div class="postShorten-meta post-meta">
   
-    <time itemprop="datePublished" datetime="2017-07-24T16:14:32&#43;08:00">
+    <time itemprop="datePublished" datetime="2017-07-28T08:54:12&#43;08:00">
       
   
   
   
   
-    2017-07-24
+    2017-07-28
   
 
     </time>
@@ -257,7 +248,7 @@
   
     <span>in</span>
     
-      <a class="category-link" href="http://www.orztu.com/categories/reading">reading</a>
+      <a class="category-link" href="http://www.orztu.com/categories/leetcode">LeetCode</a>
     
   
 
@@ -271,29 +262,111 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <ul>
-<li><p>金庸</p>
+              <blockquote>
+<p>Given an array S of n integers, are there elements a, b, c in S such that a + b + c = 0? Find all unique triplets in the array which gives the sum of zero. <br>
+<br>
+Note: The solution set must not contain duplicate triplets.</p>
 
-<ul>
-<li><a href="https://book.douban.com/subject/1255625/" target="_blank">《天龙八部》</a></li>
-</ul></li>
+<pre><code>For example, given array S = [-1, 0, 1, 2, -1, -4],
 
-<li><p>东野圭吾</p>
+A solution set is:
+[
+  [-1, 0, 1],
+  [-1, -1, 2]
+]
+</code></pre>
 
-<ul>
-<li><a href="https://book.douban.com/subject/3259440/" target="_blank">《白夜行》</a></li>
-<li><a href="https://book.douban.com/subject/1927377/" target="_blank">《毕业前的杀人游戏》</a></li>
-<li><a href="https://book.douban.com/subject/3865832/" target="_blank">《变身》</a></li>
-<li><a href="https://book.douban.com/subject/25862578/" target="_blank">《解忧杂货铺》</a></li>
-</ul></li>
+<p></p>
+</blockquote>
 
-<li><p>余华</p>
+<p>在给定数组中找出“和为0的三个数”的所有解。
+需要避免重复的解。</p>
 
-<ul>
-<li><a href="https://book.douban.com/subject/1082154/" target="_blank">《活着》</a></li>
-</ul></li>
-</ul>
 
+  
+    
+  
+  
+    
+  
+  
+  
+
+
+<figure class="highlight go">
+  <figcaption>
+    
+      <span>Solution</span>
+    
+  </figcaption>
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+          <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre>
+        </td>
+        <td class="code">
+          <pre class="go code-highlight">func threeSum(nums []int) (res [][]int) {
+    if len(nums) &lt; 3 {
+        return
+    }
+
+    // 从小到大排序
+    sort.Ints(nums)
+
+    for i := 0; i &lt; len(nums)-2; i&#43;&#43; {
+        left, right := i&#43;1, len(nums)-1
+        num0 := nums[i]
+        num1 := nums[left]
+        num2 := nums[right]
+
+        // 所有数同符号则不需要继续
+        if (num0 &gt; 0 &amp;&amp; num1 &gt; 0) ||
+            (num0 &lt; 0 &amp;&amp; num2 &lt; 0) {
+            break
+        }
+
+        for left &lt; right {
+            // 求和
+            sum := num0 &#43; num1 &#43; num2
+
+            if sum == 0 {
+                // 记录满足条件的解
+                res = append(res, []int{num0, num1, num2})
+
+                // 跳过相同的数字避免重复解
+                for left &lt; right &amp;&amp; num1 == nums[left] {
+                    left&#43;&#43;
+                }
+
+                for right &lt; left &amp;&amp; num2 == nums[right] {
+                    right--
+                }
+            } else if sum &lt; 0 {
+                // 和为负数则增加num1
+                left&#43;&#43;
+            } else {
+                // 和为正数则减小num2
+                right--
+            }
+
+            num1 = nums[left]
+            num2 = nums[right]
+        }
+
+        // 跳过相同的num0避免重复解
+        for i &lt; len(nums)-2 &amp;&amp; num0 == nums[i&#43;1] {
+            i&#43;&#43;
+        }
+    }
+
+    return res
+}</pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
               
             </div>
           </div>
@@ -305,7 +378,13 @@
                   <div class="post-footer-tags">
                     <span class="text-color-light text-small">TAGGED IN</span><br/>
                     
-  <a class="tag tag--primary tag--small" href="http://www.orztu.com/tags/%E8%AF%BB%E4%B9%A6/">读书</a>
+  <a class="tag tag--primary tag--small" href="http://www.orztu.com/tags/leetcode/">LeetCode</a>
+
+  <a class="tag tag--primary tag--small" href="http://www.orztu.com/tags/%E7%AE%97%E6%B3%95/">算法</a>
+
+  <a class="tag tag--primary tag--small" href="http://www.orztu.com/tags/sum/">Sum</a>
+
+  <a class="tag tag--primary tag--small" href="http://www.orztu.com/tags/%E6%95%B0%E7%BB%84/">数组</a>
 
                   </div>
                 
@@ -317,7 +396,7 @@
       
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="http://www.orztu.com/leetcode/15-Three-Sum/" data-tooltip="Three Sum">
+            <a class="post-action-btn btn btn--disabled">
           
             <i class="fa fa-angle-left"></i>
             <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
@@ -325,7 +404,7 @@
         </li>
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="http://www.orztu.com/leetcode/013-Roman-to-Integer/" data-tooltip="LeetCode 13. Roman to Integer">
+            <a class="post-action-btn btn btn--default tooltip--top" href="http://www.orztu.com/2017/07/2017%E5%B7%B2%E8%AF%BB/" data-tooltip="2017已读">
           
             <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
             <i class="fa fa-angle-right"></i>
@@ -366,9 +445,9 @@
 
 
 var disqus_config = function () {
-  this.page.url = 'http:\/\/www.orztu.com\/2017\/07\/2017%E5%B7%B2%E8%AF%BB\/';
+  this.page.url = 'http:\/\/www.orztu.com\/leetcode\/15-Three-Sum\/';
   
-    this.page.identifier = '\/2017\/07\/2017%E5%B7%B2%E8%AF%BB\/'
+    this.page.identifier = '\/leetcode\/15-Three-Sum\/'
   
 };
 (function() { 
@@ -400,7 +479,7 @@ var disqus_config = function () {
       
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="http://www.orztu.com/leetcode/15-Three-Sum/" data-tooltip="Three Sum">
+            <a class="post-action-btn btn btn--disabled">
           
             <i class="fa fa-angle-left"></i>
             <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
@@ -408,7 +487,7 @@ var disqus_config = function () {
         </li>
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="http://www.orztu.com/leetcode/013-Roman-to-Integer/" data-tooltip="LeetCode 13. Roman to Integer">
+            <a class="post-action-btn btn btn--default tooltip--top" href="http://www.orztu.com/2017/07/2017%E5%B7%B2%E8%AF%BB/" data-tooltip="2017已读">
           
             <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
             <i class="fa fa-angle-right"></i>
@@ -443,17 +522,17 @@ var disqus_config = function () {
       <div id="share-options-bar" class="share-options-bar" data-behavior="4">
   <ul class="share-options">
     <li class="share-option">
-      <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http%3a%2f%2fwww.orztu.com%2f2017%2f07%2f2017%25E5%25B7%25B2%25E8%25AF%25BB%2f">
+      <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http%3a%2f%2fwww.orztu.com%2fleetcode%2f15-Three-Sum%2f">
         <i class="fa fa-google-plus"></i><span>Share on Google Plus</span>
       </a>
     </li>
     <li class="share-option">
-      <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fwww.orztu.com%2f2017%2f07%2f2017%25E5%25B7%25B2%25E8%25AF%25BB%2f">
+      <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fwww.orztu.com%2fleetcode%2f15-Three-Sum%2f">
         <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
       </a>
     </li>
     <li class="share-option">
-      <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http%3a%2f%2fwww.orztu.com%2f2017%2f07%2f2017%25E5%25B7%25B2%25E8%25AF%25BB%2f">
+      <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http%3a%2f%2fwww.orztu.com%2fleetcode%2f15-Three-Sum%2f">
         <i class="fa fa-twitter"></i><span>Share on Twitter</span>
       </a>
     </li>
@@ -657,9 +736,9 @@ $(document).ready(function() {
     
       <script>
         var disqus_config = function () {
-          this.page.url = 'http:\/\/www.orztu.com\/2017\/07\/2017%E5%B7%B2%E8%AF%BB\/';
+          this.page.url = 'http:\/\/www.orztu.com\/leetcode\/15-Three-Sum\/';
           
-            this.page.identifier = '\/2017\/07\/2017%E5%B7%B2%E8%AF%BB\/'
+            this.page.identifier = '\/leetcode\/15-Three-Sum\/'
           
         };
         (function() {
