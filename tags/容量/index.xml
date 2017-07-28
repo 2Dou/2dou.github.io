@@ -92,7 +92,11 @@ func min(a, b int) int {
       &lt;/tr&gt;
     &lt;/tbody&gt;
   &lt;/table&gt;
-&lt;/figure&gt;</description>
+&lt;/figure&gt;
+
+&lt;h2 id=&#34;同类&#34;&gt;同类&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.orztu.com/leetcode/042-Trapping-Rain-Water/&#34; target=&#34;_blank&#34;&gt;Trapping Rain Water&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -199,7 +203,11 @@ func min(a, b int) int {
       &lt;/tr&gt;
     &lt;/tbody&gt;
   &lt;/table&gt;
-&lt;/figure&gt;</description>
+&lt;/figure&gt;
+
+&lt;h2 id=&#34;同类&#34;&gt;同类&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.orztu.com/leetcode/011-Container-With-Most-Water/&#34; target=&#34;_blank&#34;&gt;Container With Most Water&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

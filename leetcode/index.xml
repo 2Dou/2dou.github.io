@@ -10,12 +10,16 @@
     <atom:link href="http://www.orztu.com/leetcode/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Three Sum</title>
-      <link>http://www.orztu.com/leetcode/15-Three-Sum/</link>
+      <title>LeetCode 14. Three Sum</title>
+      <link>http://www.orztu.com/leetcode/015-Three-Sum/</link>
       <pubDate>Fri, 28 Jul 2017 08:54:12 +0800</pubDate>
       
-      <guid>http://www.orztu.com/leetcode/15-Three-Sum/</guid>
-      <description>&lt;blockquote&gt;
+      <guid>http://www.orztu.com/leetcode/015-Three-Sum/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/3sum/&#34; target=&#34;_blank&#34;&gt;Three Sum&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
+
+&lt;blockquote&gt;
 &lt;p&gt;Given an array S of n integers, are there elements a, b, c in S such that a + b + c = 0? Find all unique triplets in the array which gives the sum of zero. &lt;br&gt;
 &lt;br&gt;
 Note: The solution set must not contain duplicate triplets.&lt;/p&gt;
@@ -34,6 +38,8 @@ A solution set is:
 
 &lt;p&gt;在给定数组中找出“和为0的三个数”的所有解。
 需要避免重复的解。&lt;/p&gt;
+
+&lt;h2 id=&#34;solution&#34;&gt;Solution&lt;/h2&gt;
 
 
   
@@ -119,7 +125,11 @@ A solution set is:
       &lt;/tr&gt;
     &lt;/tbody&gt;
   &lt;/table&gt;
-&lt;/figure&gt;</description>
+&lt;/figure&gt;
+
+&lt;h2 id=&#34;同类&#34;&gt;同类&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.orztu.com/leetcode/001-Two-Sum/&#34; target=&#34;_blank&#34;&gt;Two Sum&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -200,7 +210,11 @@ Input is guaranteed to be within the range from 1 to 3999.&lt;/p&gt;
       &lt;/tr&gt;
     &lt;/tbody&gt;
   &lt;/table&gt;
-&lt;/figure&gt;</description>
+&lt;/figure&gt;
+
+&lt;h2 id=&#34;同类&#34;&gt;同类&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.orztu.com/leetcode/012-Integer-to-Roman/&#34; target=&#34;_blank&#34;&gt;Integer to Roman&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -309,7 +323,11 @@ Input is guaranteed to be within the range from 1 to 3999.&lt;/p&gt;
       &lt;/tr&gt;
     &lt;/tbody&gt;
   &lt;/table&gt;
-&lt;/figure&gt;</description>
+&lt;/figure&gt;
+
+&lt;h2 id=&#34;同类&#34;&gt;同类&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.orztu.com/leetcode/013-Roman-to-Integer/&#34; target=&#34;_blank&#34;&gt;Integer to Roman&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -396,7 +414,11 @@ func min(a, b int) int {
       &lt;/tr&gt;
     &lt;/tbody&gt;
   &lt;/table&gt;
-&lt;/figure&gt;</description>
+&lt;/figure&gt;
+
+&lt;h2 id=&#34;同类&#34;&gt;同类&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.orztu.com/leetcode/042-Trapping-Rain-Water/&#34; target=&#34;_blank&#34;&gt;Trapping Rain Water&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -637,7 +659,11 @@ func min(a, b int) int {
       &lt;/tr&gt;
     &lt;/tbody&gt;
   &lt;/table&gt;
-&lt;/figure&gt;</description>
+&lt;/figure&gt;
+
+&lt;h2 id=&#34;同类&#34;&gt;同类&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.orztu.com/leetcode/011-Container-With-Most-Water/&#34; target=&#34;_blank&#34;&gt;Container With Most Water&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -1541,7 +1567,11 @@ Output: &amp;quot;bb&amp;quot;
       &lt;/tr&gt;
     &lt;/tbody&gt;
   &lt;/table&gt;
-&lt;/figure&gt;</description>
+&lt;/figure&gt;
+
+&lt;h2 id=&#34;同类&#34;&gt;同类&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.orztu.com/leetcode/003-Longest-Substring-Without-Repeating-Characters/&#34; target=&#34;_blank&#34;&gt;Longest Substring Without Repeating Characters&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -1730,7 +1760,11 @@ nums2 = [3, 4]
       &lt;/tr&gt;
     &lt;/tbody&gt;
   &lt;/table&gt;
-&lt;/figure&gt;</description>
+&lt;/figure&gt;
+
+&lt;h2 id=&#34;同类&#34;&gt;同类&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.orztu.com/leetcode/005-Longest-Palindromic-Substring/&#34; target=&#34;_blank&#34;&gt;Longest Palindromic Substring&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -1916,7 +1950,11 @@ return [0, 1].&lt;/p&gt;
       &lt;/tr&gt;
     &lt;/tbody&gt;
   &lt;/table&gt;
-&lt;/figure&gt;</description>
+&lt;/figure&gt;
+
+&lt;h2 id=&#34;同类&#34;&gt;同类&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.orztu.com/leetcode/015-Three-Sum/&#34; target=&#34;_blank&#34;&gt;Three Sum&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>
