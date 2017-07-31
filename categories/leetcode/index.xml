@@ -9,12 +9,12 @@
     <atom:link href="http://www.orztu.com/categories/leetcode/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>LeetCode 14. Three Sum</title>
-      <link>http://www.orztu.com/leetcode/015-Three-Sum/</link>
+      <title>LeetCode 14. 3Sum</title>
+      <link>http://www.orztu.com/leetcode/015-3Sum/</link>
       <pubDate>Fri, 28 Jul 2017 08:54:12 +0800</pubDate>
       
-      <guid>http://www.orztu.com/leetcode/015-Three-Sum/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/3sum/&#34; target=&#34;_blank&#34;&gt;Three Sum&lt;/a&gt;&lt;/p&gt;
+      <guid>http://www.orztu.com/leetcode/015-3Sum/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/3sum/&#34; target=&#34;_blank&#34;&gt;3Sum&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
 
@@ -31,9 +31,9 @@ A solution set is:
   [-1, -1, 2]
 ]
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
 
 &lt;p&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
 
 &lt;p&gt;在给定数组中找出“和为0的三个数”的所有解。
 需要避免重复的解。&lt;/p&gt;
@@ -1953,7 +1953,7 @@ return [0, 1].&lt;/p&gt;
 
 &lt;h2 id=&#34;同类&#34;&gt;同类&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://www.orztu.com/leetcode/015-Three-Sum/&#34; target=&#34;_blank&#34;&gt;Three Sum&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;a href=&#34;http://www.orztu.com/leetcode/015-3Sum/&#34; target=&#34;_blank&#34;&gt;3Sum&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>
