@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>数独 on Orz the way</title>
-    <link>http://www.orztu.com/tags/%E6%95%B0%E7%8B%AC/index.xml</link>
+    <link>https://www.orztu.com/tags/%E6%95%B0%E7%8B%AC/index.xml</link>
     <description>Recent content in 数独 on Orz the way</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <atom:link href="http://www.orztu.com/tags/%E6%95%B0%E7%8B%AC/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.orztu.com/tags/%E6%95%B0%E7%8B%AC/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>LeetCode 37. Sudoku Solver</title>
-      <link>http://www.orztu.com/leetcode/037-Sudoku-Solver/</link>
+      <link>https://www.orztu.com/leetcode/037-Sudoku-Solver/</link>
       <pubDate>Sat, 22 Apr 2017 11:35:12 +0800</pubDate>
       
-      <guid>http://www.orztu.com/leetcode/037-Sudoku-Solver/</guid>
+      <guid>https://www.orztu.com/leetcode/037-Sudoku-Solver/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/sudoku-solver/&#34; target=&#34;_blank&#34;&gt;Sudoku Solver&lt;/a&gt;&lt;/p&gt;
 
 &lt;!-- ![palindromic](/images/leetcode/Sudoku-Solver-1.png &#34;数独&#34;) --&gt;

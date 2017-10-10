@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Orz the way</title>
-    <link>http://www.orztu.com/index.xml</link>
+    <link>https://www.orztu.com/index.xml</link>
     <description>Recent content on Orz the way</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Wed, 09 Aug 2017 08:44:10 +0800</lastBuildDate>
-    <atom:link href="http://www.orztu.com/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.orztu.com/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>自动点击 - 申请Google Voice号码</title>
-      <link>http://www.orztu.com/2017/08/%E8%87%AA%E5%8A%A8%E7%82%B9%E5%87%BB---%E7%94%B3%E8%AF%B7google-voice%E5%8F%B7%E7%A0%81/</link>
+      <link>https://www.orztu.com/2017/08/%E8%87%AA%E5%8A%A8%E7%82%B9%E5%87%BB---%E7%94%B3%E8%AF%B7google-voice%E5%8F%B7%E7%A0%81/</link>
       <pubDate>Wed, 09 Aug 2017 08:44:10 +0800</pubDate>
       
-      <guid>http://www.orztu.com/2017/08/%E8%87%AA%E5%8A%A8%E7%82%B9%E5%87%BB---%E7%94%B3%E8%AF%B7google-voice%E5%8F%B7%E7%A0%81/</guid>
+      <guid>https://www.orztu.com/2017/08/%E8%87%AA%E5%8A%A8%E7%82%B9%E5%87%BB---%E7%94%B3%E8%AF%B7google-voice%E5%8F%B7%E7%A0%81/</guid>
       <description>&lt;p&gt;最近V2上很多卖GV号码的，心想这玩意也能值钱。所以想着自己试试动手申请一个。&lt;/p&gt;
 
 &lt;p&gt;首先参照这篇“&lt;a href=&#34;https://kn007.net/topics/free-application-for-google-voice-phone-number/&#34; target=&#34;_blank&#34;&gt;免费申请Google Voice美国电话号码&lt;/a&gt;”申请号码。&lt;/p&gt;
 
 &lt;p&gt;到了这一步：提示“There was an error with your request. Please try again.”
-&lt;img src=&#34;http://www.orztu.com/images/post/gv-0.jpg&#34; alt=&#34;palindromic&#34; title=&#34;错误&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;https://www.orztu.com/images/post/gv-0.jpg&#34; alt=&#34;palindromic&#34; title=&#34;错误&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;听说在这里反复提交直到申请成功即可。找了网上的自动提交方法（复制出来CURL提交），发现不好使，curl一直没响应。
 但是网页上确实可以反复点击提交的。于是改用自动点击的方式，一夜醒来发现已经申请成功。&lt;/p&gt;
@@ -29,10 +29,10 @@
 
 &lt;p&gt;使用Chrome浏览器，在&lt;code&gt;Continue&lt;/code&gt;按钮上&lt;code&gt;右键-&amp;gt;审查元素&lt;/code&gt;，向上找到&lt;code&gt;continueButton&lt;/code&gt;。
 在结点上&lt;code&gt;右键-&amp;gt;添加属性&lt;/code&gt;：
-&lt;img src=&#34;http://www.orztu.com/images/post/gv-2.jpg&#34; alt=&#34;palindromic&#34; title=&#34;添加属性&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;https://www.orztu.com/images/post/gv-2.jpg&#34; alt=&#34;palindromic&#34; title=&#34;添加属性&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;给结点添加一个ID（我这里使用&amp;rdquo;ss1&amp;rdquo;）：
-&lt;img src=&#34;http://www.orztu.com/images/post/gv-3.jpg&#34; alt=&#34;palindromic&#34; title=&#34;ID&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;https://www.orztu.com/images/post/gv-3.jpg&#34; alt=&#34;palindromic&#34; title=&#34;ID&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;然后切换到&lt;code&gt;Console&lt;/code&gt;中粘贴以下代码，回车，实现自动点击。&lt;/p&gt;
 
@@ -86,10 +86,10 @@ setInterval(clickTheBtn, 2500);&lt;/pre&gt;
     
     <item>
       <title>LeetCode 14. 3Sum</title>
-      <link>http://www.orztu.com/leetcode/015-3Sum/</link>
+      <link>https://www.orztu.com/leetcode/015-3Sum/</link>
       <pubDate>Fri, 28 Jul 2017 08:54:12 +0800</pubDate>
       
-      <guid>http://www.orztu.com/leetcode/015-3Sum/</guid>
+      <guid>https://www.orztu.com/leetcode/015-3Sum/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/3sum/&#34; target=&#34;_blank&#34;&gt;3Sum&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
@@ -204,15 +204,15 @@ A solution set is:
 
 &lt;h2 id=&#34;同类&#34;&gt;同类&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://www.orztu.com/leetcode/001-Two-Sum/&#34; target=&#34;_blank&#34;&gt;Two Sum&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;a href=&#34;https://www.orztu.com/leetcode/001-Two-Sum/&#34; target=&#34;_blank&#34;&gt;Two Sum&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>2017已读列表</title>
-      <link>http://www.orztu.com/2017/07/2017%E5%B7%B2%E8%AF%BB%E5%88%97%E8%A1%A8/</link>
+      <link>https://www.orztu.com/2017/07/2017%E5%B7%B2%E8%AF%BB%E5%88%97%E8%A1%A8/</link>
       <pubDate>Mon, 24 Jul 2017 16:14:32 +0800</pubDate>
       
-      <guid>http://www.orztu.com/2017/07/2017%E5%B7%B2%E8%AF%BB%E5%88%97%E8%A1%A8/</guid>
+      <guid>https://www.orztu.com/2017/07/2017%E5%B7%B2%E8%AF%BB%E5%88%97%E8%A1%A8/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;&lt;p&gt;金庸&lt;/p&gt;
 
@@ -248,10 +248,10 @@ A solution set is:
     
     <item>
       <title>LeetCode 13. Roman to Integer</title>
-      <link>http://www.orztu.com/leetcode/013-Roman-to-Integer/</link>
+      <link>https://www.orztu.com/leetcode/013-Roman-to-Integer/</link>
       <pubDate>Fri, 07 Jul 2017 14:43:41 +0800</pubDate>
       
-      <guid>http://www.orztu.com/leetcode/013-Roman-to-Integer/</guid>
+      <guid>https://www.orztu.com/leetcode/013-Roman-to-Integer/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/roman-to-integer/&#34; target=&#34;_blank&#34;&gt;Roman to Integer&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
@@ -328,15 +328,15 @@ Input is guaranteed to be within the range from 1 to 3999.&lt;/p&gt;
 
 &lt;h2 id=&#34;同类&#34;&gt;同类&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://www.orztu.com/leetcode/012-Integer-to-Roman/&#34; target=&#34;_blank&#34;&gt;Integer to Roman&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;a href=&#34;https://www.orztu.com/leetcode/012-Integer-to-Roman/&#34; target=&#34;_blank&#34;&gt;Integer to Roman&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>东野圭吾作品</title>
-      <link>http://www.orztu.com/2017/07/%E4%B8%9C%E9%87%8E%E5%9C%AD%E5%90%BE%E4%BD%9C%E5%93%81/</link>
+      <link>https://www.orztu.com/2017/07/%E4%B8%9C%E9%87%8E%E5%9C%AD%E5%90%BE%E4%BD%9C%E5%93%81/</link>
       <pubDate>Fri, 07 Jul 2017 10:37:12 +0800</pubDate>
       
-      <guid>http://www.orztu.com/2017/07/%E4%B8%9C%E9%87%8E%E5%9C%AD%E5%90%BE%E4%BD%9C%E5%93%81/</guid>
+      <guid>https://www.orztu.com/2017/07/%E4%B8%9C%E9%87%8E%E5%9C%AD%E5%90%BE%E4%BD%9C%E5%93%81/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;&lt;p&gt;&lt;del&gt;&lt;a href=&#34;https://book.douban.com/subject/3259440/&#34; target=&#34;_blank&#34;&gt;《白夜行》&lt;/a&gt;&lt;/del&gt; &lt;br&gt;
 “我的天空里没有太阳，总是黑夜，但并不暗，因为有东西代替了太阳。虽然没有太阳那么明亮，但对我来说已经足够。凭借着这份光，我便能把黑夜当成白天。我从来就没有太阳，所以不怕失去。”&lt;/p&gt;&lt;/li&gt;
@@ -353,10 +353,10 @@ Input is guaranteed to be within the range from 1 to 3999.&lt;/p&gt;
     
     <item>
       <title>LeetCode 12. Integer to Roman</title>
-      <link>http://www.orztu.com/leetcode/012-Integer-to-Roman/</link>
+      <link>https://www.orztu.com/leetcode/012-Integer-to-Roman/</link>
       <pubDate>Fri, 07 Jul 2017 09:18:49 +0800</pubDate>
       
-      <guid>http://www.orztu.com/leetcode/012-Integer-to-Roman/</guid>
+      <guid>https://www.orztu.com/leetcode/012-Integer-to-Roman/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/integer-to-roman/&#34; target=&#34;_blank&#34;&gt;Integer to Roman&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
@@ -461,15 +461,15 @@ Input is guaranteed to be within the range from 1 to 3999.&lt;/p&gt;
 
 &lt;h2 id=&#34;同类&#34;&gt;同类&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://www.orztu.com/leetcode/013-Roman-to-Integer/&#34; target=&#34;_blank&#34;&gt;Integer to Roman&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;a href=&#34;https://www.orztu.com/leetcode/013-Roman-to-Integer/&#34; target=&#34;_blank&#34;&gt;Integer to Roman&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>LeetCode 11. Container With Most Water</title>
-      <link>http://www.orztu.com/leetcode/011-Container-With-Most-Water/</link>
+      <link>https://www.orztu.com/leetcode/011-Container-With-Most-Water/</link>
       <pubDate>Thu, 06 Jul 2017 14:09:43 +0800</pubDate>
       
-      <guid>http://www.orztu.com/leetcode/011-Container-With-Most-Water/</guid>
+      <guid>https://www.orztu.com/leetcode/011-Container-With-Most-Water/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/container-with-most-water/&#34; target=&#34;_blank&#34;&gt;Container With Most Water&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
@@ -552,33 +552,33 @@ func min(a, b int) int {
 
 &lt;h2 id=&#34;同类&#34;&gt;同类&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://www.orztu.com/leetcode/042-Trapping-Rain-Water/&#34; target=&#34;_blank&#34;&gt;Trapping Rain Water&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;a href=&#34;https://www.orztu.com/leetcode/042-Trapping-Rain-Water/&#34; target=&#34;_blank&#34;&gt;Trapping Rain Water&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>天龙八部</title>
-      <link>http://www.orztu.com/2017/05/%E5%A4%A9%E9%BE%99%E5%85%AB%E9%83%A8/</link>
+      <link>https://www.orztu.com/2017/05/%E5%A4%A9%E9%BE%99%E5%85%AB%E9%83%A8/</link>
       <pubDate>Wed, 31 May 2017 17:54:35 +0800</pubDate>
       
-      <guid>http://www.orztu.com/2017/05/%E5%A4%A9%E9%BE%99%E5%85%AB%E9%83%A8/</guid>
+      <guid>https://www.orztu.com/2017/05/%E5%A4%A9%E9%BE%99%E5%85%AB%E9%83%A8/</guid>
       <description>&lt;p&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://www.orztu.com/images/post/tianlongbabu.jpg&#34; alt=&#34;palindromic&#34; title=&#34;我爱你，你爱他，他却只爱江山&#34; /&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;img src=&#34;https://www.orztu.com/images/post/tianlongbabu.jpg&#34; alt=&#34;palindromic&#34; title=&#34;我爱你，你爱他，他却只爱江山&#34; /&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>LeetCode 51. N-Queens</title>
-      <link>http://www.orztu.com/leetcode/051-N-Queens/</link>
+      <link>https://www.orztu.com/leetcode/051-N-Queens/</link>
       <pubDate>Thu, 04 May 2017 16:23:01 +0800</pubDate>
       
-      <guid>http://www.orztu.com/leetcode/051-N-Queens/</guid>
+      <guid>https://www.orztu.com/leetcode/051-N-Queens/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/n-queens/&#34; target=&#34;_blank&#34;&gt;N-Queens&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;The &lt;em&gt;n-queens&lt;/em&gt; puzzle is the problem of placing n queens on an n×n chessboard such that no two queens attack each other.
-&lt;img src=&#34;http://www.orztu.com/images/leetcode/8-queens.png&#34; alt=&#34;palindromic&#34; title=&#34;数独&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;https://www.orztu.com/images/leetcode/8-queens.png&#34; alt=&#34;palindromic&#34; title=&#34;数独&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Given an integer n, return all distinct solutions to the n-queens puzzle.&lt;/p&gt;
 
@@ -702,10 +702,10 @@ func abs(x int) int {
     
     <item>
       <title>LeetCode 42. Trapping Rain Water</title>
-      <link>http://www.orztu.com/leetcode/042-Trapping-Rain-Water/</link>
+      <link>https://www.orztu.com/leetcode/042-Trapping-Rain-Water/</link>
       <pubDate>Fri, 28 Apr 2017 10:01:32 +0800</pubDate>
       
-      <guid>http://www.orztu.com/leetcode/042-Trapping-Rain-Water/</guid>
+      <guid>https://www.orztu.com/leetcode/042-Trapping-Rain-Water/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/trapping-rain-water/&#34; target=&#34;_blank&#34;&gt;Trapping Rain Water&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
@@ -716,7 +716,7 @@ func abs(x int) int {
 &lt;p&gt;For example,
 Given &lt;code&gt;[0,1,0,2,1,0,1,3,2,1,2,1]&lt;/code&gt;, return &lt;code&gt;6&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://www.orztu.com/images/leetcode/rainwatertrap-1.png&#34; alt=&#34;palindromic&#34; /&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.orztu.com/images/leetcode/rainwatertrap-1.png&#34; alt=&#34;palindromic&#34; /&gt;
 The above elevation map is represented by array [0,1,0,2,1,0,1,3,2,1,2,1]. In this case, 6 units of rain water (blue section) are being trapped. Thanks Marcos for contributing this image!&lt;/p&gt;
 &lt;/blockquote&gt;
 
@@ -808,15 +808,15 @@ func min(a, b int) int {
 
 &lt;h2 id=&#34;同类&#34;&gt;同类&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://www.orztu.com/leetcode/011-Container-With-Most-Water/&#34; target=&#34;_blank&#34;&gt;Container With Most Water&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;a href=&#34;https://www.orztu.com/leetcode/011-Container-With-Most-Water/&#34; target=&#34;_blank&#34;&gt;Container With Most Water&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>LeetCode 37. Sudoku Solver</title>
-      <link>http://www.orztu.com/leetcode/037-Sudoku-Solver/</link>
+      <link>https://www.orztu.com/leetcode/037-Sudoku-Solver/</link>
       <pubDate>Sat, 22 Apr 2017 11:35:12 +0800</pubDate>
       
-      <guid>http://www.orztu.com/leetcode/037-Sudoku-Solver/</guid>
+      <guid>https://www.orztu.com/leetcode/037-Sudoku-Solver/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/sudoku-solver/&#34; target=&#34;_blank&#34;&gt;Sudoku Solver&lt;/a&gt;&lt;/p&gt;
 
 &lt;!-- ![palindromic](/images/leetcode/Sudoku-Solver-1.png &#34;数独&#34;) --&gt;
@@ -1086,10 +1086,10 @@ func valid(board *[][]byte, row, col int) bool {
     
     <item>
       <title>LeetCode 10. Regular Expression Matching</title>
-      <link>http://www.orztu.com/leetcode/010-Regular-Expression-Matching/</link>
+      <link>https://www.orztu.com/leetcode/010-Regular-Expression-Matching/</link>
       <pubDate>Fri, 24 Mar 2017 15:00:47 +0800</pubDate>
       
-      <guid>http://www.orztu.com/leetcode/010-Regular-Expression-Matching/</guid>
+      <guid>https://www.orztu.com/leetcode/010-Regular-Expression-Matching/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/regular-expression-matching&#34; target=&#34;_blank&#34;&gt;Regular Expression Matching&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
@@ -1201,10 +1201,10 @@ isMatch(&amp;quot;aab&amp;quot;, &amp;quot;c*a*b&amp;quot;) → true
     
     <item>
       <title>LeetCode 9. Palindrome Number</title>
-      <link>http://www.orztu.com/leetcode/009-Palindrome-Number/</link>
+      <link>https://www.orztu.com/leetcode/009-Palindrome-Number/</link>
       <pubDate>Fri, 24 Mar 2017 15:00:46 +0800</pubDate>
       
-      <guid>http://www.orztu.com/leetcode/009-Palindrome-Number/</guid>
+      <guid>https://www.orztu.com/leetcode/009-Palindrome-Number/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/palindrome-number&#34; target=&#34;_blank&#34;&gt;Palindrome Number&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
@@ -1336,10 +1336,10 @@ isMatch(&amp;quot;aab&amp;quot;, &amp;quot;c*a*b&amp;quot;) → true
     
     <item>
       <title>LeetCode 8. String to Integer (atoi)</title>
-      <link>http://www.orztu.com/leetcode/008-String-to-Integer-%28atoi%29/</link>
+      <link>https://www.orztu.com/leetcode/008-String-to-Integer-%28atoi%29/</link>
       <pubDate>Wed, 22 Mar 2017 09:05:12 +0800</pubDate>
       
-      <guid>http://www.orztu.com/leetcode/008-String-to-Integer-%28atoi%29/</guid>
+      <guid>https://www.orztu.com/leetcode/008-String-to-Integer-%28atoi%29/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/string-to-integer-atoi&#34; target=&#34;_blank&#34;&gt;String to Integer (atoi)&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
@@ -1427,10 +1427,10 @@ isMatch(&amp;quot;aab&amp;quot;, &amp;quot;c*a*b&amp;quot;) → true
     
     <item>
       <title>LeetCode 7. Reverse Integer</title>
-      <link>http://www.orztu.com/leetcode/007-Reverse-Integer/</link>
+      <link>https://www.orztu.com/leetcode/007-Reverse-Integer/</link>
       <pubDate>Tue, 21 Mar 2017 16:04:44 +0800</pubDate>
       
-      <guid>http://www.orztu.com/leetcode/007-Reverse-Integer/</guid>
+      <guid>https://www.orztu.com/leetcode/007-Reverse-Integer/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/reverse-integer&#34; target=&#34;_blank&#34;&gt;Reverse Integer&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
@@ -1500,10 +1500,10 @@ The input is assumed to be a 32-bit signed integer. Your function should &lt;str
     
     <item>
       <title>LeetCode 6. ZigZag Conversion</title>
-      <link>http://www.orztu.com/leetcode/006-ZigZag-Conversion/</link>
+      <link>https://www.orztu.com/leetcode/006-ZigZag-Conversion/</link>
       <pubDate>Fri, 17 Mar 2017 17:52:46 +0800</pubDate>
       
-      <guid>http://www.orztu.com/leetcode/006-ZigZag-Conversion/</guid>
+      <guid>https://www.orztu.com/leetcode/006-ZigZag-Conversion/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/zigzag-conversion&#34; target=&#34;_blank&#34;&gt;ZigZag Conversion&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
@@ -1628,10 +1628,10 @@ Y   I   R
     
     <item>
       <title>LeetCode 5. Longest Palindromic Substring</title>
-      <link>http://www.orztu.com/leetcode/005-Longest-Palindromic-Substring/</link>
+      <link>https://www.orztu.com/leetcode/005-Longest-Palindromic-Substring/</link>
       <pubDate>Thu, 16 Mar 2017 14:47:07 +0800</pubDate>
       
-      <guid>http://www.orztu.com/leetcode/005-Longest-Palindromic-Substring/</guid>
+      <guid>https://www.orztu.com/leetcode/005-Longest-Palindromic-Substring/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/longest-palindromic-substring&#34; target=&#34;_blank&#34;&gt;Longest Palindromic Substring&lt;/a&gt;&lt;/p&gt;
 
 &lt;!-- ![palindromic](/images/leetcode/Longest-Palindromic-Substring-1.png &#34;回文&#34;) --&gt;
@@ -1716,15 +1716,15 @@ Output: &amp;quot;bb&amp;quot;
 
 &lt;h2 id=&#34;同类&#34;&gt;同类&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://www.orztu.com/leetcode/003-Longest-Substring-Without-Repeating-Characters/&#34; target=&#34;_blank&#34;&gt;Longest Substring Without Repeating Characters&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;a href=&#34;https://www.orztu.com/leetcode/003-Longest-Substring-Without-Repeating-Characters/&#34; target=&#34;_blank&#34;&gt;Longest Substring Without Repeating Characters&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>LeetCode 4. Median of Two Sorted Arrays</title>
-      <link>http://www.orztu.com/leetcode/004-Median-of-Two-Sorted-Arrays/</link>
+      <link>https://www.orztu.com/leetcode/004-Median-of-Two-Sorted-Arrays/</link>
       <pubDate>Thu, 16 Mar 2017 10:53:58 +0800</pubDate>
       
-      <guid>http://www.orztu.com/leetcode/004-Median-of-Two-Sorted-Arrays/</guid>
+      <guid>https://www.orztu.com/leetcode/004-Median-of-Two-Sorted-Arrays/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/median-of-two-sorted-arrays&#34; target=&#34;_blank&#34;&gt;Median of Two Sorted Arrays&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
@@ -1828,10 +1828,10 @@ nums2 = [3, 4]
     
     <item>
       <title>LeetCode 3. Longest Substring Without Repeating Characters</title>
-      <link>http://www.orztu.com/leetcode/003-Longest-Substring-Without-Repeating-Characters/</link>
+      <link>https://www.orztu.com/leetcode/003-Longest-Substring-Without-Repeating-Characters/</link>
       <pubDate>Wed, 15 Mar 2017 19:38:58 +0800</pubDate>
       
-      <guid>http://www.orztu.com/leetcode/003-Longest-Substring-Without-Repeating-Characters/</guid>
+      <guid>https://www.orztu.com/leetcode/003-Longest-Substring-Without-Repeating-Characters/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/longest-substring-without-repeating-characters&#34; target=&#34;_blank&#34;&gt;Longest Substring Without Repeating Characters&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
@@ -1909,15 +1909,15 @@ nums2 = [3, 4]
 
 &lt;h2 id=&#34;同类&#34;&gt;同类&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://www.orztu.com/leetcode/005-Longest-Palindromic-Substring/&#34; target=&#34;_blank&#34;&gt;Longest Palindromic Substring&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;a href=&#34;https://www.orztu.com/leetcode/005-Longest-Palindromic-Substring/&#34; target=&#34;_blank&#34;&gt;Longest Palindromic Substring&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>LeetCode 2. Add Two Numbers</title>
-      <link>http://www.orztu.com/leetcode/002-Add-Two-Numbers/</link>
+      <link>https://www.orztu.com/leetcode/002-Add-Two-Numbers/</link>
       <pubDate>Wed, 15 Mar 2017 16:55:54 +0800</pubDate>
       
-      <guid>http://www.orztu.com/leetcode/002-Add-Two-Numbers/</guid>
+      <guid>https://www.orztu.com/leetcode/002-Add-Two-Numbers/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/add-two-numbers&#34; target=&#34;_blank&#34;&gt;Add Two Numbers&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
@@ -2016,10 +2016,10 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
     
     <item>
       <title>LeetCode 1. Two Sum</title>
-      <link>http://www.orztu.com/leetcode/001-Two-Sum/</link>
+      <link>https://www.orztu.com/leetcode/001-Two-Sum/</link>
       <pubDate>Wed, 15 Mar 2017 16:36:59 +0800</pubDate>
       
-      <guid>http://www.orztu.com/leetcode/001-Two-Sum/</guid>
+      <guid>https://www.orztu.com/leetcode/001-Two-Sum/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/two-sum&#34; target=&#34;_blank&#34;&gt;Two Sum&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
@@ -2099,25 +2099,25 @@ return [0, 1].&lt;/p&gt;
 
 &lt;h2 id=&#34;同类&#34;&gt;同类&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://www.orztu.com/leetcode/015-3Sum/&#34; target=&#34;_blank&#34;&gt;3Sum&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;a href=&#34;https://www.orztu.com/leetcode/015-3Sum/&#34; target=&#34;_blank&#34;&gt;3Sum&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Hello World</title>
-      <link>http://www.orztu.com/2017/03/hello-world/</link>
+      <link>https://www.orztu.com/2017/03/hello-world/</link>
       <pubDate>Tue, 14 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://www.orztu.com/2017/03/hello-world/</guid>
+      <guid>https://www.orztu.com/2017/03/hello-world/</guid>
       <description>&lt;p&gt;国际惯例&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>About me</title>
-      <link>http://www.orztu.com/about/</link>
+      <link>https://www.orztu.com/about/</link>
       <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://www.orztu.com/about/</guid>
+      <guid>https://www.orztu.com/about/</guid>
       <description>
 
 &lt;h3 id=&#34;城市永远年轻-而我们终将老去&#34;&gt;城市永远年轻，而我们终将老去&lt;/h3&gt;

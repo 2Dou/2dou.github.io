@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Zigzag on Orz the way</title>
-    <link>http://www.orztu.com/tags/zigzag/index.xml</link>
+    <link>https://www.orztu.com/tags/zigzag/index.xml</link>
     <description>Recent content in Zigzag on Orz the way</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <atom:link href="http://www.orztu.com/tags/zigzag/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.orztu.com/tags/zigzag/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>LeetCode 6. ZigZag Conversion</title>
-      <link>http://www.orztu.com/leetcode/006-ZigZag-Conversion/</link>
+      <link>https://www.orztu.com/leetcode/006-ZigZag-Conversion/</link>
       <pubDate>Fri, 17 Mar 2017 17:52:46 +0800</pubDate>
       
-      <guid>http://www.orztu.com/leetcode/006-ZigZag-Conversion/</guid>
+      <guid>https://www.orztu.com/leetcode/006-ZigZag-Conversion/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/zigzag-conversion&#34; target=&#34;_blank&#34;&gt;ZigZag Conversion&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;

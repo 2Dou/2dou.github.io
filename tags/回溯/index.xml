@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>回溯 on Orz the way</title>
-    <link>http://www.orztu.com/tags/%E5%9B%9E%E6%BA%AF/index.xml</link>
+    <link>https://www.orztu.com/tags/%E5%9B%9E%E6%BA%AF/index.xml</link>
     <description>Recent content in 回溯 on Orz the way</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <atom:link href="http://www.orztu.com/tags/%E5%9B%9E%E6%BA%AF/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.orztu.com/tags/%E5%9B%9E%E6%BA%AF/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>LeetCode 51. N-Queens</title>
-      <link>http://www.orztu.com/leetcode/051-N-Queens/</link>
+      <link>https://www.orztu.com/leetcode/051-N-Queens/</link>
       <pubDate>Thu, 04 May 2017 16:23:01 +0800</pubDate>
       
-      <guid>http://www.orztu.com/leetcode/051-N-Queens/</guid>
+      <guid>https://www.orztu.com/leetcode/051-N-Queens/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/n-queens/&#34; target=&#34;_blank&#34;&gt;N-Queens&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;The &lt;em&gt;n-queens&lt;/em&gt; puzzle is the problem of placing n queens on an n×n chessboard such that no two queens attack each other.
-&lt;img src=&#34;http://www.orztu.com/images/leetcode/8-queens.png&#34; alt=&#34;palindromic&#34; title=&#34;数独&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;https://www.orztu.com/images/leetcode/8-queens.png&#34; alt=&#34;palindromic&#34; title=&#34;数独&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Given an integer n, return all distinct solutions to the n-queens puzzle.&lt;/p&gt;
 
@@ -144,10 +144,10 @@ func abs(x int) int {
     
     <item>
       <title>LeetCode 37. Sudoku Solver</title>
-      <link>http://www.orztu.com/leetcode/037-Sudoku-Solver/</link>
+      <link>https://www.orztu.com/leetcode/037-Sudoku-Solver/</link>
       <pubDate>Sat, 22 Apr 2017 11:35:12 +0800</pubDate>
       
-      <guid>http://www.orztu.com/leetcode/037-Sudoku-Solver/</guid>
+      <guid>https://www.orztu.com/leetcode/037-Sudoku-Solver/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/sudoku-solver/&#34; target=&#34;_blank&#34;&gt;Sudoku Solver&lt;/a&gt;&lt;/p&gt;
 
 &lt;!-- ![palindromic](/images/leetcode/Sudoku-Solver-1.png &#34;数独&#34;) --&gt;

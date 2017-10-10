@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Orz the way</title>
-    <link>http://www.orztu.com/post/index.xml</link>
+    <link>https://www.orztu.com/post/index.xml</link>
     <description>Recent content in Posts on Orz the way</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Wed, 09 Aug 2017 08:44:10 +0800</lastBuildDate>
-    <atom:link href="http://www.orztu.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.orztu.com/post/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>自动点击 - 申请Google Voice号码</title>
-      <link>http://www.orztu.com/2017/08/%E8%87%AA%E5%8A%A8%E7%82%B9%E5%87%BB---%E7%94%B3%E8%AF%B7google-voice%E5%8F%B7%E7%A0%81/</link>
+      <link>https://www.orztu.com/2017/08/%E8%87%AA%E5%8A%A8%E7%82%B9%E5%87%BB---%E7%94%B3%E8%AF%B7google-voice%E5%8F%B7%E7%A0%81/</link>
       <pubDate>Wed, 09 Aug 2017 08:44:10 +0800</pubDate>
       
-      <guid>http://www.orztu.com/2017/08/%E8%87%AA%E5%8A%A8%E7%82%B9%E5%87%BB---%E7%94%B3%E8%AF%B7google-voice%E5%8F%B7%E7%A0%81/</guid>
+      <guid>https://www.orztu.com/2017/08/%E8%87%AA%E5%8A%A8%E7%82%B9%E5%87%BB---%E7%94%B3%E8%AF%B7google-voice%E5%8F%B7%E7%A0%81/</guid>
       <description>&lt;p&gt;最近V2上很多卖GV号码的，心想这玩意也能值钱。所以想着自己试试动手申请一个。&lt;/p&gt;
 
 &lt;p&gt;首先参照这篇“&lt;a href=&#34;https://kn007.net/topics/free-application-for-google-voice-phone-number/&#34; target=&#34;_blank&#34;&gt;免费申请Google Voice美国电话号码&lt;/a&gt;”申请号码。&lt;/p&gt;
 
 &lt;p&gt;到了这一步：提示“There was an error with your request. Please try again.”
-&lt;img src=&#34;http://www.orztu.com/images/post/gv-0.jpg&#34; alt=&#34;palindromic&#34; title=&#34;错误&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;https://www.orztu.com/images/post/gv-0.jpg&#34; alt=&#34;palindromic&#34; title=&#34;错误&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;听说在这里反复提交直到申请成功即可。找了网上的自动提交方法（复制出来CURL提交），发现不好使，curl一直没响应。
 但是网页上确实可以反复点击提交的。于是改用自动点击的方式，一夜醒来发现已经申请成功。&lt;/p&gt;
@@ -29,10 +29,10 @@
 
 &lt;p&gt;使用Chrome浏览器，在&lt;code&gt;Continue&lt;/code&gt;按钮上&lt;code&gt;右键-&amp;gt;审查元素&lt;/code&gt;，向上找到&lt;code&gt;continueButton&lt;/code&gt;。
 在结点上&lt;code&gt;右键-&amp;gt;添加属性&lt;/code&gt;：
-&lt;img src=&#34;http://www.orztu.com/images/post/gv-2.jpg&#34; alt=&#34;palindromic&#34; title=&#34;添加属性&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;https://www.orztu.com/images/post/gv-2.jpg&#34; alt=&#34;palindromic&#34; title=&#34;添加属性&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;给结点添加一个ID（我这里使用&amp;rdquo;ss1&amp;rdquo;）：
-&lt;img src=&#34;http://www.orztu.com/images/post/gv-3.jpg&#34; alt=&#34;palindromic&#34; title=&#34;ID&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;https://www.orztu.com/images/post/gv-3.jpg&#34; alt=&#34;palindromic&#34; title=&#34;ID&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;然后切换到&lt;code&gt;Console&lt;/code&gt;中粘贴以下代码，回车，实现自动点击。&lt;/p&gt;
 
@@ -86,10 +86,10 @@ setInterval(clickTheBtn, 2500);&lt;/pre&gt;
     
     <item>
       <title>2017已读列表</title>
-      <link>http://www.orztu.com/2017/07/2017%E5%B7%B2%E8%AF%BB%E5%88%97%E8%A1%A8/</link>
+      <link>https://www.orztu.com/2017/07/2017%E5%B7%B2%E8%AF%BB%E5%88%97%E8%A1%A8/</link>
       <pubDate>Mon, 24 Jul 2017 16:14:32 +0800</pubDate>
       
-      <guid>http://www.orztu.com/2017/07/2017%E5%B7%B2%E8%AF%BB%E5%88%97%E8%A1%A8/</guid>
+      <guid>https://www.orztu.com/2017/07/2017%E5%B7%B2%E8%AF%BB%E5%88%97%E8%A1%A8/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;&lt;p&gt;金庸&lt;/p&gt;
 
@@ -125,10 +125,10 @@ setInterval(clickTheBtn, 2500);&lt;/pre&gt;
     
     <item>
       <title>东野圭吾作品</title>
-      <link>http://www.orztu.com/2017/07/%E4%B8%9C%E9%87%8E%E5%9C%AD%E5%90%BE%E4%BD%9C%E5%93%81/</link>
+      <link>https://www.orztu.com/2017/07/%E4%B8%9C%E9%87%8E%E5%9C%AD%E5%90%BE%E4%BD%9C%E5%93%81/</link>
       <pubDate>Fri, 07 Jul 2017 10:37:12 +0800</pubDate>
       
-      <guid>http://www.orztu.com/2017/07/%E4%B8%9C%E9%87%8E%E5%9C%AD%E5%90%BE%E4%BD%9C%E5%93%81/</guid>
+      <guid>https://www.orztu.com/2017/07/%E4%B8%9C%E9%87%8E%E5%9C%AD%E5%90%BE%E4%BD%9C%E5%93%81/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;&lt;p&gt;&lt;del&gt;&lt;a href=&#34;https://book.douban.com/subject/3259440/&#34; target=&#34;_blank&#34;&gt;《白夜行》&lt;/a&gt;&lt;/del&gt; &lt;br&gt;
 “我的天空里没有太阳，总是黑夜，但并不暗，因为有东西代替了太阳。虽然没有太阳那么明亮，但对我来说已经足够。凭借着这份光，我便能把黑夜当成白天。我从来就没有太阳，所以不怕失去。”&lt;/p&gt;&lt;/li&gt;
@@ -145,21 +145,21 @@ setInterval(clickTheBtn, 2500);&lt;/pre&gt;
     
     <item>
       <title>天龙八部</title>
-      <link>http://www.orztu.com/2017/05/%E5%A4%A9%E9%BE%99%E5%85%AB%E9%83%A8/</link>
+      <link>https://www.orztu.com/2017/05/%E5%A4%A9%E9%BE%99%E5%85%AB%E9%83%A8/</link>
       <pubDate>Wed, 31 May 2017 17:54:35 +0800</pubDate>
       
-      <guid>http://www.orztu.com/2017/05/%E5%A4%A9%E9%BE%99%E5%85%AB%E9%83%A8/</guid>
+      <guid>https://www.orztu.com/2017/05/%E5%A4%A9%E9%BE%99%E5%85%AB%E9%83%A8/</guid>
       <description>&lt;p&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://www.orztu.com/images/post/tianlongbabu.jpg&#34; alt=&#34;palindromic&#34; title=&#34;我爱你，你爱他，他却只爱江山&#34; /&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;img src=&#34;https://www.orztu.com/images/post/tianlongbabu.jpg&#34; alt=&#34;palindromic&#34; title=&#34;我爱你，你爱他，他却只爱江山&#34; /&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Hello World</title>
-      <link>http://www.orztu.com/2017/03/hello-world/</link>
+      <link>https://www.orztu.com/2017/03/hello-world/</link>
       <pubDate>Tue, 14 Mar 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://www.orztu.com/2017/03/hello-world/</guid>
+      <guid>https://www.orztu.com/2017/03/hello-world/</guid>
       <description>&lt;p&gt;国际惯例&lt;/p&gt;
 </description>
     </item>

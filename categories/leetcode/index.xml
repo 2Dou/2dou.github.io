@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Leetcode on Orz the way</title>
-    <link>http://www.orztu.com/categories/leetcode/index.xml</link>
+    <link>https://www.orztu.com/categories/leetcode/index.xml</link>
     <description>Recent content in Leetcode on Orz the way</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <atom:link href="http://www.orztu.com/categories/leetcode/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.orztu.com/categories/leetcode/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>LeetCode 14. 3Sum</title>
-      <link>http://www.orztu.com/leetcode/015-3Sum/</link>
+      <link>https://www.orztu.com/leetcode/015-3Sum/</link>
       <pubDate>Fri, 28 Jul 2017 08:54:12 +0800</pubDate>
       
-      <guid>http://www.orztu.com/leetcode/015-3Sum/</guid>
+      <guid>https://www.orztu.com/leetcode/015-3Sum/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/3sum/&#34; target=&#34;_blank&#34;&gt;3Sum&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
@@ -128,15 +128,15 @@ A solution set is:
 
 &lt;h2 id=&#34;同类&#34;&gt;同类&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://www.orztu.com/leetcode/001-Two-Sum/&#34; target=&#34;_blank&#34;&gt;Two Sum&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;a href=&#34;https://www.orztu.com/leetcode/001-Two-Sum/&#34; target=&#34;_blank&#34;&gt;Two Sum&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>LeetCode 13. Roman to Integer</title>
-      <link>http://www.orztu.com/leetcode/013-Roman-to-Integer/</link>
+      <link>https://www.orztu.com/leetcode/013-Roman-to-Integer/</link>
       <pubDate>Fri, 07 Jul 2017 14:43:41 +0800</pubDate>
       
-      <guid>http://www.orztu.com/leetcode/013-Roman-to-Integer/</guid>
+      <guid>https://www.orztu.com/leetcode/013-Roman-to-Integer/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/roman-to-integer/&#34; target=&#34;_blank&#34;&gt;Roman to Integer&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
@@ -213,15 +213,15 @@ Input is guaranteed to be within the range from 1 to 3999.&lt;/p&gt;
 
 &lt;h2 id=&#34;同类&#34;&gt;同类&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://www.orztu.com/leetcode/012-Integer-to-Roman/&#34; target=&#34;_blank&#34;&gt;Integer to Roman&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;a href=&#34;https://www.orztu.com/leetcode/012-Integer-to-Roman/&#34; target=&#34;_blank&#34;&gt;Integer to Roman&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>LeetCode 12. Integer to Roman</title>
-      <link>http://www.orztu.com/leetcode/012-Integer-to-Roman/</link>
+      <link>https://www.orztu.com/leetcode/012-Integer-to-Roman/</link>
       <pubDate>Fri, 07 Jul 2017 09:18:49 +0800</pubDate>
       
-      <guid>http://www.orztu.com/leetcode/012-Integer-to-Roman/</guid>
+      <guid>https://www.orztu.com/leetcode/012-Integer-to-Roman/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/integer-to-roman/&#34; target=&#34;_blank&#34;&gt;Integer to Roman&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
@@ -326,15 +326,15 @@ Input is guaranteed to be within the range from 1 to 3999.&lt;/p&gt;
 
 &lt;h2 id=&#34;同类&#34;&gt;同类&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://www.orztu.com/leetcode/013-Roman-to-Integer/&#34; target=&#34;_blank&#34;&gt;Integer to Roman&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;a href=&#34;https://www.orztu.com/leetcode/013-Roman-to-Integer/&#34; target=&#34;_blank&#34;&gt;Integer to Roman&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>LeetCode 11. Container With Most Water</title>
-      <link>http://www.orztu.com/leetcode/011-Container-With-Most-Water/</link>
+      <link>https://www.orztu.com/leetcode/011-Container-With-Most-Water/</link>
       <pubDate>Thu, 06 Jul 2017 14:09:43 +0800</pubDate>
       
-      <guid>http://www.orztu.com/leetcode/011-Container-With-Most-Water/</guid>
+      <guid>https://www.orztu.com/leetcode/011-Container-With-Most-Water/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/container-with-most-water/&#34; target=&#34;_blank&#34;&gt;Container With Most Water&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
@@ -417,22 +417,22 @@ func min(a, b int) int {
 
 &lt;h2 id=&#34;同类&#34;&gt;同类&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://www.orztu.com/leetcode/042-Trapping-Rain-Water/&#34; target=&#34;_blank&#34;&gt;Trapping Rain Water&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;a href=&#34;https://www.orztu.com/leetcode/042-Trapping-Rain-Water/&#34; target=&#34;_blank&#34;&gt;Trapping Rain Water&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>LeetCode 51. N-Queens</title>
-      <link>http://www.orztu.com/leetcode/051-N-Queens/</link>
+      <link>https://www.orztu.com/leetcode/051-N-Queens/</link>
       <pubDate>Thu, 04 May 2017 16:23:01 +0800</pubDate>
       
-      <guid>http://www.orztu.com/leetcode/051-N-Queens/</guid>
+      <guid>https://www.orztu.com/leetcode/051-N-Queens/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/n-queens/&#34; target=&#34;_blank&#34;&gt;N-Queens&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;The &lt;em&gt;n-queens&lt;/em&gt; puzzle is the problem of placing n queens on an n×n chessboard such that no two queens attack each other.
-&lt;img src=&#34;http://www.orztu.com/images/leetcode/8-queens.png&#34; alt=&#34;palindromic&#34; title=&#34;数独&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;https://www.orztu.com/images/leetcode/8-queens.png&#34; alt=&#34;palindromic&#34; title=&#34;数独&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Given an integer n, return all distinct solutions to the n-queens puzzle.&lt;/p&gt;
 
@@ -556,10 +556,10 @@ func abs(x int) int {
     
     <item>
       <title>LeetCode 42. Trapping Rain Water</title>
-      <link>http://www.orztu.com/leetcode/042-Trapping-Rain-Water/</link>
+      <link>https://www.orztu.com/leetcode/042-Trapping-Rain-Water/</link>
       <pubDate>Fri, 28 Apr 2017 10:01:32 +0800</pubDate>
       
-      <guid>http://www.orztu.com/leetcode/042-Trapping-Rain-Water/</guid>
+      <guid>https://www.orztu.com/leetcode/042-Trapping-Rain-Water/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/trapping-rain-water/&#34; target=&#34;_blank&#34;&gt;Trapping Rain Water&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
@@ -570,7 +570,7 @@ func abs(x int) int {
 &lt;p&gt;For example,
 Given &lt;code&gt;[0,1,0,2,1,0,1,3,2,1,2,1]&lt;/code&gt;, return &lt;code&gt;6&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://www.orztu.com/images/leetcode/rainwatertrap-1.png&#34; alt=&#34;palindromic&#34; /&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.orztu.com/images/leetcode/rainwatertrap-1.png&#34; alt=&#34;palindromic&#34; /&gt;
 The above elevation map is represented by array [0,1,0,2,1,0,1,3,2,1,2,1]. In this case, 6 units of rain water (blue section) are being trapped. Thanks Marcos for contributing this image!&lt;/p&gt;
 &lt;/blockquote&gt;
 
@@ -662,15 +662,15 @@ func min(a, b int) int {
 
 &lt;h2 id=&#34;同类&#34;&gt;同类&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://www.orztu.com/leetcode/011-Container-With-Most-Water/&#34; target=&#34;_blank&#34;&gt;Container With Most Water&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;a href=&#34;https://www.orztu.com/leetcode/011-Container-With-Most-Water/&#34; target=&#34;_blank&#34;&gt;Container With Most Water&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>LeetCode 37. Sudoku Solver</title>
-      <link>http://www.orztu.com/leetcode/037-Sudoku-Solver/</link>
+      <link>https://www.orztu.com/leetcode/037-Sudoku-Solver/</link>
       <pubDate>Sat, 22 Apr 2017 11:35:12 +0800</pubDate>
       
-      <guid>http://www.orztu.com/leetcode/037-Sudoku-Solver/</guid>
+      <guid>https://www.orztu.com/leetcode/037-Sudoku-Solver/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/sudoku-solver/&#34; target=&#34;_blank&#34;&gt;Sudoku Solver&lt;/a&gt;&lt;/p&gt;
 
 &lt;!-- ![palindromic](/images/leetcode/Sudoku-Solver-1.png &#34;数独&#34;) --&gt;
@@ -940,10 +940,10 @@ func valid(board *[][]byte, row, col int) bool {
     
     <item>
       <title>LeetCode 10. Regular Expression Matching</title>
-      <link>http://www.orztu.com/leetcode/010-Regular-Expression-Matching/</link>
+      <link>https://www.orztu.com/leetcode/010-Regular-Expression-Matching/</link>
       <pubDate>Fri, 24 Mar 2017 15:00:47 +0800</pubDate>
       
-      <guid>http://www.orztu.com/leetcode/010-Regular-Expression-Matching/</guid>
+      <guid>https://www.orztu.com/leetcode/010-Regular-Expression-Matching/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/regular-expression-matching&#34; target=&#34;_blank&#34;&gt;Regular Expression Matching&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
@@ -1055,10 +1055,10 @@ isMatch(&amp;quot;aab&amp;quot;, &amp;quot;c*a*b&amp;quot;) → true
     
     <item>
       <title>LeetCode 9. Palindrome Number</title>
-      <link>http://www.orztu.com/leetcode/009-Palindrome-Number/</link>
+      <link>https://www.orztu.com/leetcode/009-Palindrome-Number/</link>
       <pubDate>Fri, 24 Mar 2017 15:00:46 +0800</pubDate>
       
-      <guid>http://www.orztu.com/leetcode/009-Palindrome-Number/</guid>
+      <guid>https://www.orztu.com/leetcode/009-Palindrome-Number/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/palindrome-number&#34; target=&#34;_blank&#34;&gt;Palindrome Number&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
@@ -1190,10 +1190,10 @@ isMatch(&amp;quot;aab&amp;quot;, &amp;quot;c*a*b&amp;quot;) → true
     
     <item>
       <title>LeetCode 8. String to Integer (atoi)</title>
-      <link>http://www.orztu.com/leetcode/008-String-to-Integer-%28atoi%29/</link>
+      <link>https://www.orztu.com/leetcode/008-String-to-Integer-%28atoi%29/</link>
       <pubDate>Wed, 22 Mar 2017 09:05:12 +0800</pubDate>
       
-      <guid>http://www.orztu.com/leetcode/008-String-to-Integer-%28atoi%29/</guid>
+      <guid>https://www.orztu.com/leetcode/008-String-to-Integer-%28atoi%29/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/string-to-integer-atoi&#34; target=&#34;_blank&#34;&gt;String to Integer (atoi)&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
@@ -1281,10 +1281,10 @@ isMatch(&amp;quot;aab&amp;quot;, &amp;quot;c*a*b&amp;quot;) → true
     
     <item>
       <title>LeetCode 7. Reverse Integer</title>
-      <link>http://www.orztu.com/leetcode/007-Reverse-Integer/</link>
+      <link>https://www.orztu.com/leetcode/007-Reverse-Integer/</link>
       <pubDate>Tue, 21 Mar 2017 16:04:44 +0800</pubDate>
       
-      <guid>http://www.orztu.com/leetcode/007-Reverse-Integer/</guid>
+      <guid>https://www.orztu.com/leetcode/007-Reverse-Integer/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/reverse-integer&#34; target=&#34;_blank&#34;&gt;Reverse Integer&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
@@ -1354,10 +1354,10 @@ The input is assumed to be a 32-bit signed integer. Your function should &lt;str
     
     <item>
       <title>LeetCode 6. ZigZag Conversion</title>
-      <link>http://www.orztu.com/leetcode/006-ZigZag-Conversion/</link>
+      <link>https://www.orztu.com/leetcode/006-ZigZag-Conversion/</link>
       <pubDate>Fri, 17 Mar 2017 17:52:46 +0800</pubDate>
       
-      <guid>http://www.orztu.com/leetcode/006-ZigZag-Conversion/</guid>
+      <guid>https://www.orztu.com/leetcode/006-ZigZag-Conversion/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/zigzag-conversion&#34; target=&#34;_blank&#34;&gt;ZigZag Conversion&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
@@ -1482,10 +1482,10 @@ Y   I   R
     
     <item>
       <title>LeetCode 5. Longest Palindromic Substring</title>
-      <link>http://www.orztu.com/leetcode/005-Longest-Palindromic-Substring/</link>
+      <link>https://www.orztu.com/leetcode/005-Longest-Palindromic-Substring/</link>
       <pubDate>Thu, 16 Mar 2017 14:47:07 +0800</pubDate>
       
-      <guid>http://www.orztu.com/leetcode/005-Longest-Palindromic-Substring/</guid>
+      <guid>https://www.orztu.com/leetcode/005-Longest-Palindromic-Substring/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/longest-palindromic-substring&#34; target=&#34;_blank&#34;&gt;Longest Palindromic Substring&lt;/a&gt;&lt;/p&gt;
 
 &lt;!-- ![palindromic](/images/leetcode/Longest-Palindromic-Substring-1.png &#34;回文&#34;) --&gt;
@@ -1570,15 +1570,15 @@ Output: &amp;quot;bb&amp;quot;
 
 &lt;h2 id=&#34;同类&#34;&gt;同类&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://www.orztu.com/leetcode/003-Longest-Substring-Without-Repeating-Characters/&#34; target=&#34;_blank&#34;&gt;Longest Substring Without Repeating Characters&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;a href=&#34;https://www.orztu.com/leetcode/003-Longest-Substring-Without-Repeating-Characters/&#34; target=&#34;_blank&#34;&gt;Longest Substring Without Repeating Characters&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>LeetCode 4. Median of Two Sorted Arrays</title>
-      <link>http://www.orztu.com/leetcode/004-Median-of-Two-Sorted-Arrays/</link>
+      <link>https://www.orztu.com/leetcode/004-Median-of-Two-Sorted-Arrays/</link>
       <pubDate>Thu, 16 Mar 2017 10:53:58 +0800</pubDate>
       
-      <guid>http://www.orztu.com/leetcode/004-Median-of-Two-Sorted-Arrays/</guid>
+      <guid>https://www.orztu.com/leetcode/004-Median-of-Two-Sorted-Arrays/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/median-of-two-sorted-arrays&#34; target=&#34;_blank&#34;&gt;Median of Two Sorted Arrays&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
@@ -1682,10 +1682,10 @@ nums2 = [3, 4]
     
     <item>
       <title>LeetCode 3. Longest Substring Without Repeating Characters</title>
-      <link>http://www.orztu.com/leetcode/003-Longest-Substring-Without-Repeating-Characters/</link>
+      <link>https://www.orztu.com/leetcode/003-Longest-Substring-Without-Repeating-Characters/</link>
       <pubDate>Wed, 15 Mar 2017 19:38:58 +0800</pubDate>
       
-      <guid>http://www.orztu.com/leetcode/003-Longest-Substring-Without-Repeating-Characters/</guid>
+      <guid>https://www.orztu.com/leetcode/003-Longest-Substring-Without-Repeating-Characters/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/longest-substring-without-repeating-characters&#34; target=&#34;_blank&#34;&gt;Longest Substring Without Repeating Characters&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
@@ -1763,15 +1763,15 @@ nums2 = [3, 4]
 
 &lt;h2 id=&#34;同类&#34;&gt;同类&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://www.orztu.com/leetcode/005-Longest-Palindromic-Substring/&#34; target=&#34;_blank&#34;&gt;Longest Palindromic Substring&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;a href=&#34;https://www.orztu.com/leetcode/005-Longest-Palindromic-Substring/&#34; target=&#34;_blank&#34;&gt;Longest Palindromic Substring&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>LeetCode 2. Add Two Numbers</title>
-      <link>http://www.orztu.com/leetcode/002-Add-Two-Numbers/</link>
+      <link>https://www.orztu.com/leetcode/002-Add-Two-Numbers/</link>
       <pubDate>Wed, 15 Mar 2017 16:55:54 +0800</pubDate>
       
-      <guid>http://www.orztu.com/leetcode/002-Add-Two-Numbers/</guid>
+      <guid>https://www.orztu.com/leetcode/002-Add-Two-Numbers/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/add-two-numbers&#34; target=&#34;_blank&#34;&gt;Add Two Numbers&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
@@ -1870,10 +1870,10 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
     
     <item>
       <title>LeetCode 1. Two Sum</title>
-      <link>http://www.orztu.com/leetcode/001-Two-Sum/</link>
+      <link>https://www.orztu.com/leetcode/001-Two-Sum/</link>
       <pubDate>Wed, 15 Mar 2017 16:36:59 +0800</pubDate>
       
-      <guid>http://www.orztu.com/leetcode/001-Two-Sum/</guid>
+      <guid>https://www.orztu.com/leetcode/001-Two-Sum/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/two-sum&#34; target=&#34;_blank&#34;&gt;Two Sum&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
@@ -1953,7 +1953,7 @@ return [0, 1].&lt;/p&gt;
 
 &lt;h2 id=&#34;同类&#34;&gt;同类&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://www.orztu.com/leetcode/015-3Sum/&#34; target=&#34;_blank&#34;&gt;3Sum&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;a href=&#34;https://www.orztu.com/leetcode/015-3Sum/&#34; target=&#34;_blank&#34;&gt;3Sum&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>
