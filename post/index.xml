@@ -27,12 +27,8 @@
 
 &lt;p&gt;&lt;/p&gt;
 
-&lt;p&gt;使用Chrome浏览器，在&lt;code&gt;Continue&lt;/code&gt;按钮上&lt;code&gt;右键-&amp;gt;审查元素&lt;/code&gt;，向上找到&lt;code&gt;continueButton&lt;/code&gt;。
-在结点上&lt;code&gt;右键-&amp;gt;添加属性&lt;/code&gt;：
-&lt;img src=&#34;https://www.orztu.com/images/post/gv-2.jpg&#34; alt=&#34;palindromic&#34; title=&#34;添加属性&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;给结点添加一个ID（我这里使用&amp;rdquo;ss1&amp;rdquo;）：
-&lt;img src=&#34;https://www.orztu.com/images/post/gv-3.jpg&#34; alt=&#34;palindromic&#34; title=&#34;ID&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;使用Chrome浏览器，&lt;code&gt;右键-&amp;gt;审查元素&lt;/code&gt;。
+&lt;img src=&#34;https://www.orztu.com/images/post/gv-1.png&#34; alt=&#34;palindromic&#34; title=&#34;console&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;然后切换到&lt;code&gt;Console&lt;/code&gt;中粘贴以下代码，回车，实现自动点击。&lt;/p&gt;
 
@@ -65,8 +61,8 @@
 }
 
 function clickTheBtn(){
-    // 查找ss1结点
-    var btn = document.querySelector (&amp;#34;#ss1&amp;#34;);
+    // 查找按钮
+    var btn = document.getElementsByClassName(&amp;#34;continueButton&amp;#34;)[0];
 
     // 模拟点击
     triggerMouseEvent(btn, &amp;#34;mouseover&amp;#34;);
@@ -97,6 +93,7 @@ setInterval(clickTheBtn, 2500);&lt;/pre&gt;
 &lt;li&gt;&lt;a href=&#34;https://book.douban.com/subject/1255625/&#34; target=&#34;_blank&#34;&gt;《天龙八部》&lt;/a&gt;
 贪嗔痴，我只看到了痴。&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://book.douban.com/subject/1789837/&#34; target=&#34;_blank&#34;&gt;《射雕英雄传》&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://book.douban.com/subject/4832584/&#34; target=&#34;_blank&#34;&gt;《笑傲江湖》&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;东野圭吾
 

@@ -238,6 +238,21 @@
 </div>
 
 
+    
+    <div class="postShorten-meta post-meta">
+        <time itemprop="datePublished" datetime="2017-10-12T15:48:25&#43;08:00">
+          
+  
+  
+  
+  
+    2017-10-12
+  
+
+        </time> Modified
+    </div>
+    
+
 
 </div>
 
@@ -256,12 +271,8 @@
 
 <p></p>
 
-<p>使用Chrome浏览器，在<code>Continue</code>按钮上<code>右键-&gt;审查元素</code>，向上找到<code>continueButton</code>。
-在结点上<code>右键-&gt;添加属性</code>：
-<img src="https://www.orztu.com/images/post/gv-2.jpg" alt="palindromic" title="添加属性" /></p>
-
-<p>给结点添加一个ID（我这里使用&rdquo;ss1&rdquo;）：
-<img src="https://www.orztu.com/images/post/gv-3.jpg" alt="palindromic" title="ID" /></p>
+<p>使用Chrome浏览器，<code>右键-&gt;审查元素</code>。
+<img src="https://www.orztu.com/images/post/gv-1.png" alt="palindromic" title="console" /></p>
 
 <p>然后切换到<code>Console</code>中粘贴以下代码，回车，实现自动点击。</p>
 
@@ -294,8 +305,8 @@
 }
 
 function clickTheBtn(){
-    // 查找ss1结点
-    var btn = document.querySelector (&#34;#ss1&#34;);
+    // 查找按钮
+    var btn = document.getElementsByClassName(&#34;continueButton&#34;)[0];
 
     // 模拟点击
     triggerMouseEvent(btn, &#34;mouseover&#34;);
@@ -555,7 +566,7 @@ var disqus_config = function () {
                   Jul 7, 2017
                 </span>
               </span>
-              <div class="media-content hide-xs font-merryweather"> 金庸  《天龙八部》 贪嗔痴，我只看到了痴。 《射雕英雄传》  东野圭吾  《白夜行》 《毕业前的杀人游戏》 《变身》 我是谁？ 我们谈一个人的时候到底是谈他的身体还是控制身体的思想。 《解忧杂货铺》  余华  《活着》 生命如此脆弱。  刘慈欣  《三体》 我&hellip;应该等不到重新洗牌的那一天了。   </div>
+              <div class="media-content hide-xs font-merryweather"> 金庸  《天龙八部》 贪嗔痴，我只看到了痴。 《射雕英雄传》 《笑傲江湖》  东野圭吾  《白夜行》 《毕业前的杀人游戏》 《变身》 我是谁？ 我们谈一个人的时候到底是谈他的身体还是控制身体的思想。 《解忧杂货铺》  余华  《活着》 生命如此脆弱。  刘慈欣  《三体》 我&hellip;应该等不到重新洗牌的那一天了。   </div>
             </div>
             <div style="clear:both;"></div>
             <hr>
