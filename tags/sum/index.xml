@@ -9,6 +9,123 @@
     <atom:link href="https://www.orztu.com/tags/sum/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>LeetCode 18. 4Sum</title>
+      <link>https://www.orztu.com/leetcode/018-4Sum/</link>
+      <pubDate>Tue, 17 Oct 2017 16:27:33 +0800</pubDate>
+      
+      <guid>https://www.orztu.com/leetcode/018-4Sum/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/4sum/&#34; target=&#34;_blank&#34;&gt;4Sum&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Given an array S of n integers, are there elements a, b, c, and d in S such that a + b + c + d = target? Find all unique quadruplets in the array which gives the sum of target.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: The solution set must not contain duplicate quadruplets.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;For example, given array S = [1, 0, -1, 0, -2, 2], and target = 0.
+
+A solution set is:
+[
+  [-1,  0, 0, 1],
+  [-2, -1, 1, 2],
+  [-2,  0, 0, 2]
+]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;在给定数组中找出“和为0的四个数”的所有解。
+需要避免重复的解。&lt;/p&gt;
+
+&lt;p&gt;这次的答案适用N个数的和；好理解；效率也还行（26 ms）。&lt;/p&gt;
+
+&lt;h2 id=&#34;solution&#34;&gt;Solution&lt;/h2&gt;
+
+
+  
+    
+  
+  
+    
+  
+  
+  
+
+
+&lt;figure class=&#34;highlight go&#34;&gt;
+  &lt;figcaption&gt;
+    
+      &lt;span&gt;Solution&lt;/span&gt;
+    
+  &lt;/figcaption&gt;
+  &lt;table&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td class=&#34;gutter&#34;&gt;
+          &lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;42&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;43&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;44&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;
+        &lt;/td&gt;
+        &lt;td class=&#34;code&#34;&gt;
+          &lt;pre class=&#34;go code-highlight&#34;&gt;func fourSum(nums []int, target int) [][]int {
+    sort.Ints(nums)
+    return sum(nums, target, 4)
+}
+
+func sum(nums []int, target int, n int) [][]int {
+    if len(nums) &amp;lt; n ||     // not enough numbers
+        sumOfSlice(nums[len(nums)-n:]) &amp;lt; target || // max-sum still smaller than target
+        sumOfSlice(nums[:n]) &amp;gt; target {            // min-sum still bigger than target
+
+        // no answer
+        return [][]int{}
+    }
+
+    res := make([][]int, 0)
+    for i := 0; i &amp;lt; len(nums); i&amp;#43;&amp;#43;{
+        num := nums[i]
+        if n == 1 &amp;amp;&amp;amp; num == target {
+            return [][]int{
+                []int{num},
+            }
+        } else if n &amp;gt; 1 {
+            for _, r := range sum(nums[i&amp;#43;1:], target-num, n-1) {
+                res = append(res, append(r, num))
+            }
+
+            // skip the same numbers
+            for j := i &amp;#43; 1; j &amp;lt; len(nums) &amp;amp;&amp;amp; nums[j] == num; j&amp;#43;&amp;#43; {
+                i&amp;#43;&amp;#43;
+            }
+        }
+    }
+
+    return res
+}
+
+// get sum of slice
+func sumOfSlice(nums []int) int {
+    if len(nums) == 1 {
+        return nums[0]
+    }
+
+    return nums[0] &amp;#43; sumOfSlice(nums[1:])
+}&lt;/pre&gt;
+        &lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/figure&gt;
+
+&lt;h2 id=&#34;similar-problem&#34;&gt;Similar Problem&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.orztu.com/leetcode/001-Two-Sum/&#34; target=&#34;_blank&#34;&gt;Two Sum&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.orztu.com/leetcode/015-3Sum/&#34; target=&#34;_blank&#34;&gt;3Sum&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
       <title>LeetCode 14. 3Sum</title>
       <link>https://www.orztu.com/leetcode/015-3Sum/</link>
       <pubDate>Fri, 28 Jul 2017 08:54:12 +0800</pubDate>
@@ -126,9 +243,12 @@ A solution set is:
   &lt;/table&gt;
 &lt;/figure&gt;
 
-&lt;h2 id=&#34;同类&#34;&gt;同类&lt;/h2&gt;
+&lt;h2 id=&#34;similar-problem&#34;&gt;Similar Problem&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://www.orztu.com/leetcode/001-Two-Sum/&#34; target=&#34;_blank&#34;&gt;Two Sum&lt;/a&gt;&lt;/p&gt;</description>
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.orztu.com/leetcode/001-Two-Sum/&#34; target=&#34;_blank&#34;&gt;Two Sum&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.orztu.com/leetcode/018-4Sum/&#34; target=&#34;_blank&#34;&gt;4Sum&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     
     <item>
@@ -214,9 +334,12 @@ return [0, 1].&lt;/p&gt;
   &lt;/table&gt;
 &lt;/figure&gt;
 
-&lt;h2 id=&#34;同类&#34;&gt;同类&lt;/h2&gt;
+&lt;h2 id=&#34;similar-problem&#34;&gt;Similar Problem&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://www.orztu.com/leetcode/015-3Sum/&#34; target=&#34;_blank&#34;&gt;3Sum&lt;/a&gt;&lt;/p&gt;</description>
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.orztu.com/leetcode/015-3Sum/&#34; target=&#34;_blank&#34;&gt;3Sum&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.orztu.com/leetcode/018-4Sum/&#34; target=&#34;_blank&#34;&gt;4Sum&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     
   </channel>
