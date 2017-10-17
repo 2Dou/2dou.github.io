@@ -6,8 +6,107 @@
     <description>Recent content on Orz the way</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 09 Aug 2017 08:44:10 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 17 Oct 2017 14:39:40 +0800</lastBuildDate>
     <atom:link href="https://www.orztu.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>LeetCode 14. 3Sum</title>
+      <link>https://www.orztu.com/leetcode/017-Letter-Combinations-of-a-Phone-Number/</link>
+      <pubDate>Tue, 17 Oct 2017 14:39:40 +0800</pubDate>
+      
+      <guid>https://www.orztu.com/leetcode/017-Letter-Combinations-of-a-Phone-Number/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/letter-combinations-of-a-phone-number/&#34; target=&#34;_blank&#34;&gt;Letter Combinations of a Phone Number&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Given a digit string, return all possible letter combinations that the number could represent.&lt;/p&gt;
+
+&lt;p&gt;A mapping of digit to letters (just like on the telephone buttons) is given below.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Telephone-keypad2.svg/200px-Telephone-keypad2.svg.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Input: Digit string &amp;quot;23&amp;quot;
+Output: [&amp;quot;ad&amp;quot;, &amp;quot;ae&amp;quot;, &amp;quot;af&amp;quot;, &amp;quot;bd&amp;quot;, &amp;quot;be&amp;quot;, &amp;quot;bf&amp;quot;, &amp;quot;cd&amp;quot;, &amp;quot;ce&amp;quot;, &amp;quot;cf&amp;quot;].
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;输入九宫格输入法数字，输出对应的所有字母组合&lt;/p&gt;
+
+&lt;h2 id=&#34;solution&#34;&gt;Solution&lt;/h2&gt;
+
+
+  
+    
+  
+  
+    
+  
+  
+  
+
+
+&lt;figure class=&#34;highlight go&#34;&gt;
+  &lt;figcaption&gt;
+    
+      &lt;span&gt;Solution&lt;/span&gt;
+    
+  &lt;/figcaption&gt;
+  &lt;table&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td class=&#34;gutter&#34;&gt;
+          &lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;40&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;
+        &lt;/td&gt;
+        &lt;td class=&#34;code&#34;&gt;
+          &lt;pre class=&#34;go code-highlight&#34;&gt;func letterCombinations(digits string) []string {
+    if len(digits) &amp;lt; 1 {
+        return []string{}
+    }
+
+    if len(digits) == 1 {
+        switch digits {
+        case &amp;#34;2&amp;#34;:
+            return []string{&amp;#34;a&amp;#34;, &amp;#34;b&amp;#34;, &amp;#34;c&amp;#34;}
+        case &amp;#34;3&amp;#34;:
+            return []string{&amp;#34;d&amp;#34;, &amp;#34;e&amp;#34;, &amp;#34;f&amp;#34;}
+        case &amp;#34;4&amp;#34;:
+            return []string{&amp;#34;g&amp;#34;, &amp;#34;h&amp;#34;, &amp;#34;i&amp;#34;}
+        case &amp;#34;5&amp;#34;:
+            return []string{&amp;#34;j&amp;#34;, &amp;#34;k&amp;#34;, &amp;#34;l&amp;#34;}
+        case &amp;#34;6&amp;#34;:
+            return []string{&amp;#34;m&amp;#34;, &amp;#34;n&amp;#34;, &amp;#34;o&amp;#34;}
+        case &amp;#34;7&amp;#34;:
+            return []string{&amp;#34;q&amp;#34;, &amp;#34;p&amp;#34;, &amp;#34;r&amp;#34;, &amp;#34;s&amp;#34;}
+        case &amp;#34;8&amp;#34;:
+            return []string{&amp;#34;t&amp;#34;, &amp;#34;u&amp;#34;, &amp;#34;v&amp;#34;}
+        case &amp;#34;9&amp;#34;:
+            return []string{&amp;#34;w&amp;#34;, &amp;#34;x&amp;#34;, &amp;#34;y&amp;#34;, &amp;#34;z&amp;#34;}
+        case &amp;#34;0&amp;#34;:
+            return []string{&amp;#34; &amp;#34;}
+        default:
+            return []string{&amp;#34;&amp;#34;}
+        }
+    }
+
+    r := make([]string, 0)
+
+    for _, front := range letterCombinations(digits[:1]) {
+        for _, back := range letterCombinations(digits[1:]) {
+            r = append(r, front&amp;#43;back)
+        }
+    }
+
+    return r
+}&lt;/pre&gt;
+        &lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/figure&gt;</description>
+    </item>
     
     <item>
       <title>自动点击 - 申请Google Voice号码</title>

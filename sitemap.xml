@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.orztu.com/leetcode/017-Letter-Combinations-of-a-Phone-Number/</loc>
+    <lastmod>2017-10-17T14:39:40+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.orztu.com/2017/08/%E8%87%AA%E5%8A%A8%E7%82%B9%E5%87%BB---%E7%94%B3%E8%AF%B7google-voice%E5%8F%B7%E7%A0%81/</loc>
     <lastmod>2017-10-12T15:48:25+08:00</lastmod>
   </url>
@@ -127,26 +132,26 @@
   </url>
   
   <url>
-    <loc>https://www.orztu.com/tags/leetcode/</loc>
-    <lastmod>2017-07-28T08:54:12+08:00</lastmod>
+    <loc>https://www.orztu.com/categories/leetcode/</loc>
+    <lastmod>2017-10-17T14:39:40+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.orztu.com/categories/leetcode/</loc>
-    <lastmod>2017-07-28T08:54:12+08:00</lastmod>
+    <loc>https://www.orztu.com/tags/leetcode/</loc>
+    <lastmod>2017-10-17T14:39:40+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.orztu.com/leetcode/</loc>
-    <lastmod>2017-07-28T08:54:12+08:00</lastmod>
+    <lastmod>2017-10-17T14:39:40+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.orztu.com/</loc>
-    <lastmod>2017-10-12T15:48:25+08:00</lastmod>
+    <lastmod>2017-10-17T14:39:40+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -176,7 +181,7 @@
   
   <url>
     <loc>https://www.orztu.com/tags/</loc>
-    <lastmod>2017-07-28T08:54:12+08:00</lastmod>
+    <lastmod>2017-10-17T14:39:40+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -254,7 +259,7 @@
   
   <url>
     <loc>https://www.orztu.com/tags/%E7%AE%97%E6%B3%95/</loc>
-    <lastmod>2017-07-28T08:54:12+08:00</lastmod>
+    <lastmod>2017-10-17T14:39:40+08:00</lastmod>
     <priority>0</priority>
   </url>
   
