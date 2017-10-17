@@ -145,9 +145,9 @@ func sumOfSlice(nums []int) int {
 &lt;pre&gt;&lt;code&gt;Input: Digit string &amp;quot;23&amp;quot;
 Output: [&amp;quot;ad&amp;quot;, &amp;quot;ae&amp;quot;, &amp;quot;af&amp;quot;, &amp;quot;bd&amp;quot;, &amp;quot;be&amp;quot;, &amp;quot;bf&amp;quot;, &amp;quot;cd&amp;quot;, &amp;quot;ce&amp;quot;, &amp;quot;cf&amp;quot;].
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
 
 &lt;p&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
 
 &lt;p&gt;输入九宫格输入法数字，输出对应的所有字母组合&lt;/p&gt;
 
