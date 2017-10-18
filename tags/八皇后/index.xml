@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>八皇后 on Orz the way</title>
+    <link>https://www.orztu.com/tags/%E5%85%AB%E7%9A%87%E5%90%8E/</link>
+    <description>Recent content in 八皇后 on Orz the way</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 04 May 2017 16:23:01 +0800</lastBuildDate>
+    
+	<atom:link href="https://www.orztu.com/tags/%E5%85%AB%E7%9A%87%E5%90%8E/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>LeetCode 51. N-Queens</title>
+      <link>https://www.orztu.com/leetcode/051-n-queens/</link>
+      <pubDate>Thu, 04 May 2017 16:23:01 +0800</pubDate>
+      
+      <guid>https://www.orztu.com/leetcode/051-n-queens/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/n-queens/&#34; target=&#34;_blank&#34;&gt;N-Queens&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;The &lt;em&gt;n-queens&lt;/em&gt; puzzle is the problem of placing n queens on an n×n chessboard such that no two queens attack each other.
+&lt;img src=&#34;https://www.orztu.com/images/leetcode/8-queens.png&#34; alt=&#34;palindromic&#34; title=&#34;数独&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Given an integer n, return all distinct solutions to the n-queens puzzle.&lt;/p&gt;
+
+&lt;p&gt;Each solution contains a distinct board configuration of the &lt;em&gt;n-queens&lt;/em&gt;&amp;rsquo; placement, where &lt;code&gt;&#39;Q&#39;&lt;/code&gt; and &lt;code&gt;&#39;.&#39;&lt;/code&gt; both indicate a queen and an empty space respectively.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

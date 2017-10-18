@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Regular on Orz the way</title>
+    <link>https://www.orztu.com/tags/regular/</link>
+    <description>Recent content in Regular on Orz the way</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 24 Mar 2017 15:00:47 +0800</lastBuildDate>
+    
+	<atom:link href="https://www.orztu.com/tags/regular/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>LeetCode 10. Regular Expression Matching</title>
+      <link>https://www.orztu.com/leetcode/010-regular-expression-matching/</link>
+      <pubDate>Fri, 24 Mar 2017 15:00:47 +0800</pubDate>
+      
+      <guid>https://www.orztu.com/leetcode/010-regular-expression-matching/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/regular-expression-matching&#34; target=&#34;_blank&#34;&gt;Regular Expression Matching&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Implement regular expression matching with support for &amp;lsquo;.&amp;rsquo; and &amp;lsquo;*&amp;lsquo;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&#39;.&#39; Matches any single character.
+&#39;*&#39; Matches zero or more of the preceding element.
+
+The matching should cover the entire input string (not partial).
+
+The function prototype should be:
+bool isMatch(const char *s, const char *p)
+
+Some examples:
+isMatch(&amp;quot;aa&amp;quot;,&amp;quot;a&amp;quot;) → false
+isMatch(&amp;quot;aa&amp;quot;,&amp;quot;aa&amp;quot;) → true
+isMatch(&amp;quot;aaa&amp;quot;,&amp;quot;aa&amp;quot;) → false
+isMatch(&amp;quot;aa&amp;quot;, &amp;quot;a*&amp;quot;) → true
+isMatch(&amp;quot;aa&amp;quot;, &amp;quot;.*&amp;quot;) → true
+isMatch(&amp;quot;ab&amp;quot;, &amp;quot;.*&amp;quot;) → true
+isMatch(&amp;quot;aab&amp;quot;, &amp;quot;c*a*b&amp;quot;) → true
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
