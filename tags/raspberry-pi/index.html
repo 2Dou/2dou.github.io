@@ -17,21 +17,21 @@
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>读书</title>
+    <title>Raspberry Pi</title>
     <meta name="author" content="SelFree">
     <meta name="keywords" content=", program develop, leetcode, golang, leetcode解答, 程序">
 
     <link rel="icon" href="https://www.orztu.com/images/favicon.ico">
     
-      <link rel="alternate" type="application/rss+xml" title="RSS" href="https://www.orztu.com/tags/%E8%AF%BB%E4%B9%A6/index.xml">
+      <link rel="alternate" type="application/rss+xml" title="RSS" href="https://www.orztu.com/tags/raspberry-pi/index.xml">
     
 
     
     <meta name="description" content="城市永远年轻，而我们终将老去">
     <meta property="og:description" content="城市永远年轻，而我们终将老去">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="读书">
-    <meta property="og:url" content="/tags/%E8%AF%BB%E4%B9%A6/">
+    <meta property="og:title" content="Raspberry Pi">
+    <meta property="og:url" content="/tags/raspberry-pi/">
     <meta property="og:site_name" content="Orz the way">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Orz the way">
@@ -231,170 +231,58 @@
     
     <div class="postShorten-header">
       <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.orztu.com/2017/07/2017%E5%B7%B2%E8%AF%BB%E5%88%97%E8%A1%A8/">
-          2017已读列表
+        <a class="link-unstyled" href="https://www.orztu.com/2017/10/%E6%A0%91%E8%8E%93%E6%B4%BE-raspbian%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/">
+          树莓派 Raspbian系统安装与基本配置
         </a>
       </h1>
       
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2017-07-24T16:14:32&#43;08:00">
+      <time itemprop="datePublished" datetime="2017-10-18T16:44:36&#43;08:00">
         
   
   
   
   
-    2017-07-24
+    2017-10-18
   
 
       </time>
     
     
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://www.orztu.com/categories/reading">reading</a>
-    
-  
-
 
   </div>
 
     </div>
     <div class="postShorten-excerpt" itemprop="articleBody">
-       金庸  《天龙八部》 贪嗔痴，我只看到了痴。 《射雕英雄传》 《笑傲江湖》  东野圭吾  《白夜行》 《毕业前的杀人游戏》 《变身》 我是谁？ 我们谈一个人的时候到底是谈他的身体还是控制身体的思想。 《解忧杂货铺》  余华  《活着》 生命如此脆弱。  刘慈欣  《三体》 我&hellip;应该等不到重新洗牌的那一天了。   
+      <h2 id="系统安装-https-www-raspberrypi-org-documentation-installation-installing-images-readme-md"><a href="https://www.raspberrypi.org/documentation/installation/installing-images/README.md" target="_blank">系统安装</a></h2>
+
+<p>系统: <a href="https://www.raspberrypi.org/downloads/raspbian/" target="_blank">raspbian</a> <br/>
+工具（二选一）：</p>
+
+<ul>
+<li><a href="https://etcher.io/" target="_blank">Etcher</a></li>
+<li><a href="http://sourceforge.net/projects/win32diskimager/" target="_blank">Win32DiskImager</a></li>
+</ul>
+
+<ol>
+<li>将SD卡格式化成exFat格式</li>
+<li>使用Etcher或者Win32DiskImager将下载的raspbian系统镜像(img文件)写入SD卡</li>
+</ol>
+
+<p>写入完成之后就相当于系统安装完成了。这时候SD卡被分成两个区，有一个区是在windows下无法识别，不用理会。</p>
+
+<p>这时候如果直接将SD卡插入树莓派，会发现“无法启动”。显示屏没信号，在路由器里找到树莓派的IP也无法用ssh登录。</p>
+
+<p>我安装的时候就是踩到这个坑。以为安装失败，反复装了好几次，就差把SD卡写穿了。</p>
+
+<p></p>
       <p>
-        <a href="https://www.orztu.com/2017/07/2017%E5%B7%B2%E8%AF%BB%E5%88%97%E8%A1%A8/" class="postShorten-excerpt_link link">Continue reading</a>
+        <a href="https://www.orztu.com/2017/10/%E6%A0%91%E8%8E%93%E6%B4%BE-raspbian%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/" class="postShorten-excerpt_link link">Continue reading</a>
         
       </p>
     </div>
   </div>
-  
-</article>
-
-            
-              
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.orztu.com/2017/07/%E4%B8%9C%E9%87%8E%E5%9C%AD%E5%90%BE%E4%BD%9C%E5%93%81/">
-          东野圭吾作品
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2017-07-07T10:37:12&#43;08:00">
-        
-  
-  
-  
-  
-    2017-07-07
-  
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://www.orztu.com/categories/reading">reading</a>
-    
-  
-
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-       《白夜行》 “我的天空里没有太阳，总是黑夜，但并不暗，因为有东西代替了太阳。虽然没有太阳那么明亮，但对我来说已经足够。凭借着这份光，我便能把黑夜当成白天。我从来就没有太阳，所以不怕失去。”
- 《毕业前的杀人游戏》
- 《变身》 “人的死亡是什么？”
- 《解忧杂货铺》   
-      <p>
-        <a href="https://www.orztu.com/2017/07/%E4%B8%9C%E9%87%8E%E5%9C%AD%E5%90%BE%E4%BD%9C%E5%93%81/" class="postShorten-excerpt_link link">Continue reading</a>
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-            
-              
-  
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-right" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.orztu.com/2017/05/%E5%A4%A9%E9%BE%99%E5%85%AB%E9%83%A8/">
-          天龙八部
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2017-05-31T17:54:35&#43;08:00">
-        
-  
-  
-  
-  
-    2017-05-31
-  
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://www.orztu.com/categories/reading">reading</a>
-    
-  
-
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      <p></p>
-      <p>
-        <a href="https://www.orztu.com/2017/05/%E5%A4%A9%E9%BE%99%E5%85%AB%E9%83%A8/" class="postShorten-excerpt_link link">Continue reading</a>
-        
-      </p>
-    </div>
-  </div>
-  
-    <a href="https://www.orztu.com/2017/05/%E5%A4%A9%E9%BE%99%E5%85%AB%E9%83%A8/">
-      <div class="postShorten-thumbnailimg">
-        <img alt="" itemprop="image" src="https://www.orztu.com/images/post/tian-long-ba-bu.jpg"/>
-      </div>
-    </a>
   
 </article>
 

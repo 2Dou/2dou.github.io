@@ -1,5 +1,9 @@
 
 
+  
+    
+  
+
 
   
 
@@ -17,25 +21,23 @@
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>读书</title>
+    <title>树莓派 Raspbian系统安装与基本配置</title>
     <meta name="author" content="SelFree">
-    <meta name="keywords" content=", program develop, leetcode, golang, leetcode解答, 程序">
+    <meta name="keywords" content="Raspberry Pi, raspbian, configure, 树莓派, 系统, 配置, program develop, leetcode, golang, leetcode解答, 程序">
 
     <link rel="icon" href="https://www.orztu.com/images/favicon.ico">
     
-      <link rel="alternate" type="application/rss+xml" title="RSS" href="https://www.orztu.com/tags/%E8%AF%BB%E4%B9%A6/index.xml">
-    
 
     
-    <meta name="description" content="城市永远年轻，而我们终将老去">
-    <meta property="og:description" content="城市永远年轻，而我们终将老去">
+    <meta name="description" content="Raspberry Pi 树莓派 Raspbian系统安装与基本配置">
+    <meta property="og:description" content="Raspberry Pi 树莓派 Raspbian系统安装与基本配置">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="读书">
-    <meta property="og:url" content="/tags/%E8%AF%BB%E4%B9%A6/">
+    <meta property="og:title" content="树莓派 Raspbian系统安装与基本配置">
+    <meta property="og:url" content="/2017/10/%E6%A0%91%E8%8E%93%E6%B4%BE-raspbian%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/">
     <meta property="og:site_name" content="Orz the way">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Orz the way">
-    <meta name="twitter:description" content="城市永远年轻，而我们终将老去">
+    <meta name="twitter:description" content="Raspberry Pi 树莓派 Raspbian系统安装与基本配置">
     
     
 
@@ -70,7 +72,7 @@
 
   <body>
     <div id="blog">
-      <header id="header" data-behavior="1">
+      <header id="header" data-behavior="4">
   <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
   <div class="header-title">
     <a class="header-title-link" href="https://www.orztu.com/">Orz the way</a>
@@ -90,7 +92,7 @@
   
 </header>
 
-      <nav id="sidebar" data-behavior="1">
+      <nav id="sidebar" data-behavior="4">
   <div class="sidebar-container">
     
       <div class="sidebar-profile">
@@ -203,206 +205,211 @@
 </nav>
 
       
-        
 
-      
-      <div id="main" data-behavior="1"
+      <div id="main" data-behavior="4"
         class="
                hasCoverMetaIn
                ">
-        
-          <section class="postShorten-group main-content-wrap">
-            
-            
-              
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-left">
   
-    
-      
-        
-      
-    
+    <h1 class="post-title" itemprop="headline">
+      树莓派 Raspbian系统安装与基本配置
+    </h1>
   
-
-
   
-
-<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.orztu.com/2017/07/2017%E5%B7%B2%E8%AF%BB%E5%88%97%E8%A1%A8/">
-          2017已读列表
-        </a>
-      </h1>
-      
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2017-07-24T16:14:32&#43;08:00">
+      <time itemprop="datePublished" datetime="2017-10-18T16:44:36&#43;08:00">
         
   
   
   
   
-    2017-07-24
+    2017-10-18
   
 
       </time>
     
     
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://www.orztu.com/categories/reading">reading</a>
-    
-  
-
 
   </div>
 
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-       金庸  《天龙八部》 贪嗔痴，我只看到了痴。 《射雕英雄传》 《笑傲江湖》  东野圭吾  《白夜行》 《毕业前的杀人游戏》 《变身》 我是谁？ 我们谈一个人的时候到底是谈他的身体还是控制身体的思想。 《解忧杂货铺》  余华  《活着》 生命如此脆弱。  刘慈欣  《三体》 我&hellip;应该等不到重新洗牌的那一天了。   
-      <p>
-        <a href="https://www.orztu.com/2017/07/2017%E5%B7%B2%E8%AF%BB%E5%88%97%E8%A1%A8/" class="postShorten-excerpt_link link">Continue reading</a>
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <h2 id="系统安装-https-www-raspberrypi-org-documentation-installation-installing-images-readme-md"><a href="https://www.raspberrypi.org/documentation/installation/installing-images/README.md" target="_blank">系统安装</a></h2>
+
+<p>系统: <a href="https://www.raspberrypi.org/downloads/raspbian/" target="_blank">raspbian</a> <br/>
+工具（二选一）：</p>
+
+<ul>
+<li><a href="https://etcher.io/" target="_blank">Etcher</a></li>
+<li><a href="http://sourceforge.net/projects/win32diskimager/" target="_blank">Win32DiskImager</a></li>
+</ul>
+
+<ol>
+<li>将SD卡格式化成exFat格式</li>
+<li>使用Etcher或者Win32DiskImager将下载的raspbian系统镜像(img文件)写入SD卡</li>
+</ol>
+
+<p>写入完成之后就相当于系统安装完成了。这时候SD卡被分成两个区，有一个区是在windows下无法识别，不用理会。</p>
+
+<p>这时候如果直接将SD卡插入树莓派，会发现“无法启动”。显示屏没信号，在路由器里找到树莓派的IP也无法用ssh登录。</p>
+
+<p>我安装的时候就是踩到这个坑。以为安装失败，反复装了好几次，就差把SD卡写穿了。</p>
+
+<p></p>
+
+<p>实际系统安装已经成功了。只需要在电脑上打开SD卡，找到<code>config.txt</code>文件里<code>#hdmi_safe=1</code>这一行，将前面的<code>#</code>号去掉；
+再新建一个文件命名为<code>ssh</code>（不能有扩展名）。</p>
+
+<p>再次把SD卡装进树莓派启动，显示屏就可以正常显示了，ssh也能登录了。</p>
+
+<h2 id="基本配置">基本配置</h2>
+
+<h3 id="1-iptables">1. iptables</h3>
+
+<p>刚开始配置<code>iptables</code>的时候，以为创建好规则后，使用<code>iptables-save</code>就可以保存了，结果重启后又失效。</p>
+
+<p>为了持久化规则，可以使用<code>iptables-persistent</code>。</p>
+
+<p>运行<code>apt-get</code>安装：<code>sudo apt-get install iptables-persistent</code>安装。</p>
+
+<p>然后在<code>/etc/iptables/rules.v4</code>里面编辑规则，或者使用<code>service iptables-persistent save</code>保存当前规则。</p>
+
+<h3 id="2-修改主机名">2. 修改主机名</h3>
+
+<p>需要修改两个文件：</p>
+
+<ul>
+<li>替换<code>/etc/hostname</code>里的主机名</li>
+<li>替换<code>/etc/hosts</code>里的主机名</li>
+</ul>
+
+<h3 id="3-修改用户名">3. 修改用户名</h3>
+
+<p>为了修改默认用户名pi，需要临时使用root帐号登录。</p>
+
+<ol>
+<li><p>启用root帐号</p>
+
+<pre><code># 为root帐号设置密码
+sudo passwd root
+# 启用root帐号
+sudo passwd --unlock root
+</code></pre>
+
+<p>ssh默认是禁止root登录的，所以还需要修改ssh配置：编辑文件<code>/etc/ssh/sshd_config</code>，添加一行<code>PermitRootLogin yes</code>即可。</p>
+
+<pre><code># 重启
+sudo reboot
+</code></pre></li>
+
+<li><p>重启系统并登录root后修改pi账户</p>
+
+<pre><code># 修改用户名为NEWNAME
+usermod -l NEWNAME pi
+# 修改用户group
+groupmod -n NEWNAME pi
+# 修改账户主目录
+mv /home/pi /home/NEWNAME
+# 设置主目录
+usermod -d /home/NEWNAME NEWNAME
+</code></pre></li>
+
+<li><p>重启登录NEWNAME</p>
+
+<p>登录后检查新用户是否能正常使用sudo，如果不能则再次使用root登录，往<code>/etc/sudoers</code>中添加一行：<code>NEWNAME ALL=(ALL) ALL</code>。</p></li>
+
+<li><p>新账户正常后禁用root</p>
+
+<pre><code># 禁用root
+sudo passwd -l root
+</code></pre>
+
+<p>别忘了还有ssh配置文件也要修改。</p></li>
+</ol>
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://www.orztu.com/tags/raspberry-pi/">Raspberry Pi</a>
+
+  <a class="tag tag--primary tag--small" href="https://www.orztu.com/tags/%E9%85%8D%E7%BD%AE/">配置</a>
+
+                  </div>
+                
+              
+            
+            
+  <div class="post-actions-wrap">
+      <nav >
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                <i class="fa fa-angle-left"></i>
+                <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+              </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/2017/08/%E8%87%AA%E5%8A%A8%E7%82%B9%E5%87%BB---%E7%94%B3%E8%AF%B7google-voice%E5%8F%B7%E7%A0%81/" data-tooltip="自动点击 - 申请Google Voice号码">
+              
+                <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                <i class="fa fa-angle-right"></i>
+              </a>
+            </li>
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
         
-      </p>
-    </div>
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
   </div>
-  
-</article>
+
 
             
               
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.orztu.com/2017/07/%E4%B8%9C%E9%87%8E%E5%9C%AD%E5%90%BE%E4%BD%9C%E5%93%81/">
-          东野圭吾作品
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2017-07-07T10:37:12&#43;08:00">
-        
-  
-  
-  
-  
-    2017-07-07
-  
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://www.orztu.com/categories/reading">reading</a>
-    
-  
-
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-       《白夜行》 “我的天空里没有太阳，总是黑夜，但并不暗，因为有东西代替了太阳。虽然没有太阳那么明亮，但对我来说已经足够。凭借着这份光，我便能把黑夜当成白天。我从来就没有太阳，所以不怕失去。”
- 《毕业前的杀人游戏》
- 《变身》 “人的死亡是什么？”
- 《解忧杂货铺》   
-      <p>
-        <a href="https://www.orztu.com/2017/07/%E4%B8%9C%E9%87%8E%E5%9C%AD%E5%90%BE%E4%BD%9C%E5%93%81/" class="postShorten-excerpt_link link">Continue reading</a>
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-            
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
               
-  
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-right" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.orztu.com/2017/05/%E5%A4%A9%E9%BE%99%E5%85%AB%E9%83%A8/">
-          天龙八部
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2017-05-31T17:54:35&#43;08:00">
-        
-  
-  
-  
-  
-    2017-05-31
-  
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://www.orztu.com/categories/reading">reading</a>
-    
-  
-
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      <p></p>
-      <p>
-        <a href="https://www.orztu.com/2017/05/%E5%A4%A9%E9%BE%99%E5%85%AB%E9%83%A8/" class="postShorten-excerpt_link link">Continue reading</a>
-        
-      </p>
-    </div>
-  </div>
-  
-    <a href="https://www.orztu.com/2017/05/%E5%A4%A9%E9%BE%99%E5%85%AB%E9%83%A8/">
-      <div class="postShorten-thumbnailimg">
-        <img alt="" itemprop="image" src="https://www.orztu.com/images/post/tian-long-ba-bu.jpg"/>
-      </div>
-    </a>
-  
-</article>
-
             
-            
-
-          </section>
-        
+          </div>
+        </article>
         <footer id="footer" class="main-content-wrap">
   <span class="copyrights">
     &copy; 2017 SelFree. All Rights Reserved
@@ -410,6 +417,64 @@
 </footer>
 
       </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        
+  <div class="post-actions-wrap">
+      <nav >
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                <i class="fa fa-angle-left"></i>
+                <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+              </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/2017/08/%E8%87%AA%E5%8A%A8%E7%82%B9%E5%87%BB---%E7%94%B3%E8%AF%B7google-voice%E5%8F%B7%E7%A0%81/" data-tooltip="自动点击 - 申请Google Voice号码">
+              
+                <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                <i class="fa fa-angle-right"></i>
+              </a>
+            </li>
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
     </div>
     
     <div id="about">
@@ -653,6 +718,32 @@ $(document).ready(function() {
   });
 });
 </script>
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'https:\/\/www.orztu.com\/2017\/10\/%E6%A0%91%E8%8E%93%E6%B4%BE-raspbian%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE\/';
+          
+            this.page.identifier = '\/2017\/10\/%E6%A0%91%E8%8E%93%E6%B4%BE-raspbian%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'orztu';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
 
 
 
