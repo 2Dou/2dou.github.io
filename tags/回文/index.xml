@@ -24,9 +24,9 @@
 
 &lt;p&gt;在不使用额外空间的条件下判断一个整型是否为回文&lt;/p&gt;
 
-&lt;p&gt;我认为这是一个伪命题(wtf? without extra space?)&lt;/p&gt;
-
 &lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;我认为这是一个伪命题(wtf? without extra space?)&lt;/p&gt;
 
 &lt;h2 id=&#34;solution&#34;&gt;Solution&lt;/h2&gt;
 
@@ -173,9 +173,9 @@ Output: &amp;quot;bb&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;从给定字符串中找出最长的回文子串&lt;/p&gt;
 
-&lt;p&gt;从给定字符串中找出最长的回文&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;solution&#34;&gt;Solution&lt;/h2&gt;
 

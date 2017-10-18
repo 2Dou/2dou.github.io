@@ -28,9 +28,9 @@ Output: 7 -&amp;gt; 0 -&amp;gt; 8
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;给定两个非空链表表示的非负整数。实现加法，向后进位。&lt;/p&gt;
 
-&lt;p&gt;通过链表计算加法，向后进位&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;solution&#34;&gt;Solution&lt;/h2&gt;
 
