@@ -23,7 +23,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>树莓派 Raspbian系统安装与基本配置</title>
     <meta name="author" content="SelFree">
-    <meta name="keywords" content="Raspberry Pi, raspbian, configure, 树莓派, 系统, 配置, program develop, leetcode, golang, leetcode解答, 程序">
+    <meta name="keywords" content="Raspberry Pi, raspbian, configure, 树莓派, 系统, 配置, iptables, 静态IP, program develop, leetcode, golang, leetcode解答, 程序">
 
     <link rel="icon" href="https://www.orztu.com/images/favicon.ico">
     
@@ -273,7 +273,18 @@
 
 <h2 id="基本配置">基本配置</h2>
 
-<h3 id="1-iptables">1. iptables</h3>
+<h3 id="1-静态ip-固定ip">1. 静态IP/固定IP</h3>
+
+<p>打开<code>/etc/dhcpcd.conf</code>文件，找到网口（一般为<code>eth0</code>）</p>
+
+<p>指定IP:</p>
+
+<pre><code>interface eth0
+static ip_address=192.168.1.20/24
+static routers=192.168.1.1
+</code></pre>
+
+<h3 id="2-iptables">2. iptables</h3>
 
 <p>刚开始配置<code>iptables</code>的时候，以为创建好规则后，使用<code>iptables-save</code>就可以保存了，结果重启后又失效。</p>
 
@@ -283,7 +294,7 @@
 
 <p>然后在<code>/etc/iptables/rules.v4</code>里面编辑规则，或者使用<code>service iptables-persistent save</code>保存当前规则。</p>
 
-<h3 id="2-修改主机名">2. 修改主机名</h3>
+<h3 id="3-修改主机名">3. 修改主机名</h3>
 
 <p>需要修改两个文件：</p>
 
@@ -292,7 +303,7 @@
 <li>替换<code>/etc/hosts</code>里的主机名</li>
 </ul>
 
-<h3 id="3-修改用户名">3. 修改用户名</h3>
+<h3 id="4-修改用户名">4. 修改用户名</h3>
 
 <p>为了修改默认用户名pi，需要临时使用root帐号登录。</p>
 
