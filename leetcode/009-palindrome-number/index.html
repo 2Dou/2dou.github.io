@@ -266,30 +266,50 @@
 <h2 id="solution">Solution</h2>
 
 
+
   
-    
   
   
-    
+  
+  
+
+  
+  
   
   
   
 
 
-<figure class="highlight go">
+  
+    
+  
+  
+
+<figure class="codeblock codeblock--tabbed">
   <figcaption>
     
-      <span>Pretty Solution</span>
+      <span>Solution</span>
     
-  </figcaption>
-  <table>
-    <tbody>
-      <tr>
-        <td class="gutter">
-          <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre>
-        </td>
-        <td class="code">
-          <pre class="go code-highlight">func isPalindrome(x int) bool {
+    <ul class="tabs">
+      
+        <li class="tab active">pretty_solution</li>
+      
+        <li class="tab ">my_solution</li>
+      
+    </ul>
+  </figcaption> 
+  <div class="tabs-content">
+    
+      
+      <figure class="highlight pretty_solution" style="display: block;">   
+        <table>
+          <tbody>
+            <tr>
+              <td class="gutter">
+                <pre><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br></pre>
+              </td>
+              <td class="code">
+                <pre class="pretty_solution code-highlight">func isPalindrome(x int) bool {
     if x &lt; 0 || (x != 0 &amp;&amp; x%10 == 0) {
         return false
     }
@@ -301,37 +321,22 @@
     }
     return (x == sum) || (x == sum / 10)
 }</pre>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</figure>
-
-<p>
-  
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </figure>
     
-  
-  
-    
-  
-  
-  
-
-
-<figure class="highlight go">
-  <figcaption>
-    
-      <span>My Solution</span>
-    
-  </figcaption>
-  <table>
-    <tbody>
-      <tr>
-        <td class="gutter">
-          <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre>
-        </td>
-        <td class="code">
-          <pre class="go code-highlight">func isPalindrome(x int) bool {
+      
+      <figure class="highlight my_solution" style="display: none;">   
+        <table>
+          <tbody>
+            <tr>
+              <td class="gutter">
+                <pre><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br><span>35</span><br><span>36</span><br><span>37</span><br><span>38</span><br><span>39</span><br><span>40</span><br></pre>
+              </td>
+              <td class="code">
+                <pre class="my_solution code-highlight">func isPalindrome(x int) bool {
     if x &lt; 0 {
         return false
     }
@@ -371,11 +376,14 @@
 
     return true
 }</pre>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</figure></p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </figure>
+    
+  </div>
+</figure>
               
             </div>
           </div>

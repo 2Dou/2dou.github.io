@@ -284,31 +284,61 @@ Try to do this in one pass.</p>
 <li><p>删除<code>p2.Next</code>(即倒数第n个结点)</p></li>
 </ol>
 
+<h3 id="2-使用递归">2. 使用递归</h3>
+
+<ol>
+<li><p>使用递归一直向后查找，直到最后一个结点(<code>head.Next == nil</code>)。此时递归结束，开始返回：当前结点指针和0。相当于将最后一个结点标记为0</p></li>
+
+<li><p>判断递归返回的标记是否等于n，是则表示p为倒是第(n+1)个结点（因为标记从0开始），也是我们需要查找的结点。否则将标记加1，返回head（即p的父节点）。</p></li>
+
+<li><p>递归完全返回后，函数<code>removeNthFromEnd</code>里的 index 如果为0，则表示parent指向第倒数n+1；不为0则没找到，原因是要删除结点的是正向第一个。</p></li>
+</ol>
+
+
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
 
   
     
   
   
-    
-  
-  
-  
 
-
-<figure class="highlight go">
+<figure class="codeblock codeblock--tabbed">
   <figcaption>
     
-      <span>Loop Solution</span>
+      <span>Solution</span>
     
-  </figcaption>
-  <table>
-    <tbody>
-      <tr>
-        <td class="gutter">
-          <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre>
-        </td>
-        <td class="code">
-          <pre class="go code-highlight">/**
+    <ul class="tabs">
+      
+        <li class="tab active">loop</li>
+      
+        <li class="tab ">recursively</li>
+      
+    </ul>
+  </figcaption> 
+  <div class="tabs-content">
+    
+      
+      <figure class="highlight loop" style="display: block;">   
+        <table>
+          <tbody>
+            <tr>
+              <td class="gutter">
+                <pre><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br></pre>
+              </td>
+              <td class="code">
+                <pre class="loop code-highlight">/**
  * Definition for singly-linked list.
  * type ListNode struct {
  *     Val int
@@ -342,47 +372,29 @@ func removeNthFromEnd(head *ListNode, n int) *ListNode {
 
     return head
 }</pre>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</figure>
-
-<h3 id="2-使用递归">2. 使用递归</h3>
-
-<ol>
-<li><p>使用递归一直向后查找，直到最后一个结点(<code>head.Next == nil</code>)。此时递归结束，开始返回：当前结点指针和0。相当于将最后一个结点标记为0</p></li>
-
-<li><p>判断递归返回的标记是否等于n，是则表示p为倒是第(n+1)个结点（因为标记从0开始），也是我们需要查找的结点。否则将标记加1，返回head（即p的父节点）。</p></li>
-
-<li><p>递归完全返回后，函数<code>removeNthFromEnd</code>里的 index 如果为0，则表示parent指向第倒数n+1；不为0则没找到，原因是要删除结点的是正向第一个。</p></li>
-</ol>
-
-<p>
-  
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </figure>
     
-  
-  
-    
-  
-  
-  
-
-
-<figure class="highlight go">
-  <figcaption>
-    
-      <span>Recursively Solution</span>
-    
-  </figcaption>
-  <table>
-    <tbody>
-      <tr>
-        <td class="gutter">
-          <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre>
-        </td>
-        <td class="code">
-          <pre class="go code-highlight">func removeNthFromEnd(head *ListNode, n int) *ListNode {
+      
+      <figure class="highlight recursively" style="display: none;">   
+        <table>
+          <tbody>
+            <tr>
+              <td class="gutter">
+                <pre><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br><span>35</span><br></pre>
+              </td>
+              <td class="code">
+                <pre class="recursively code-highlight">/**
+ * Definition for singly-linked list.
+ * type ListNode struct {
+ *     Val int
+ *     Next *ListNode
+ * }
+ */
+func removeNthFromEnd(head *ListNode, n int) *ListNode {
     parent, index := search(head, n)
     if index != n {
         // It must be removing the first node from begin
@@ -410,11 +422,14 @@ func search(head *ListNode, n int) (*ListNode, int) {
 
     return head, index &#43; 1
 }</pre>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</figure></p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </figure>
+    
+  </div>
+</figure>
               
             </div>
           </div>
