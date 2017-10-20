@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.orztu.com/leetcode/019-remove-nth-node-from-end-of-list/</loc>
+    <lastmod>2017-10-19T21:03:59+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.orztu.com/2017/10/%E6%A0%91%E8%8E%93%E6%B4%BE-raspbian%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/</loc>
     <lastmod>2017-10-18T16:44:36+08:00</lastmod>
   </url>
@@ -142,26 +147,26 @@
   </url>
   
   <url>
-    <loc>https://www.orztu.com/tags/leetcode/</loc>
-    <lastmod>2017-10-17T16:27:33+08:00</lastmod>
+    <loc>https://www.orztu.com/categories/leetcode/</loc>
+    <lastmod>2017-10-19T21:03:59+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.orztu.com/categories/leetcode/</loc>
-    <lastmod>2017-10-17T16:27:33+08:00</lastmod>
+    <loc>https://www.orztu.com/tags/leetcode/</loc>
+    <lastmod>2017-10-19T21:03:59+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.orztu.com/leetcode/</loc>
-    <lastmod>2017-10-17T16:27:33+08:00</lastmod>
+    <lastmod>2017-10-19T21:03:59+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.orztu.com/</loc>
-    <lastmod>2017-10-18T16:44:36+08:00</lastmod>
+    <lastmod>2017-10-19T21:03:59+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -197,7 +202,7 @@
   
   <url>
     <loc>https://www.orztu.com/tags/</loc>
-    <lastmod>2017-10-17T16:27:33+08:00</lastmod>
+    <lastmod>2017-10-19T21:03:59+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -257,7 +262,7 @@
   
   <url>
     <loc>https://www.orztu.com/tags/%E7%AE%97%E6%B3%95/</loc>
-    <lastmod>2017-10-17T16:27:33+08:00</lastmod>
+    <lastmod>2017-10-19T21:03:59+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -281,7 +286,7 @@
   
   <url>
     <loc>https://www.orztu.com/tags/%E9%93%BE%E8%A1%A8/</loc>
-    <lastmod>2017-03-15T16:55:54+08:00</lastmod>
+    <lastmod>2017-10-19T21:03:59+08:00</lastmod>
     <priority>0</priority>
   </url>
   

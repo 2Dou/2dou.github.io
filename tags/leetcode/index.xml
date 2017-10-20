@@ -6,10 +6,40 @@
     <description>Recent content in Leetcode on Orz the way</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 17 Oct 2017 16:27:33 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 19 Oct 2017 21:03:59 +0800</lastBuildDate>
     
 	<atom:link href="https://www.orztu.com/tags/leetcode/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>LeetCode 19. Remove Nth Node From End of List</title>
+      <link>https://www.orztu.com/leetcode/019-remove-nth-node-from-end-of-list/</link>
+      <pubDate>Thu, 19 Oct 2017 21:03:59 +0800</pubDate>
+      
+      <guid>https://www.orztu.com/leetcode/019-remove-nth-node-from-end-of-list/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/remove-nth-node-from-end-of-list/&#34; target=&#34;_blank&#34;&gt;Remove Nth Node From End of List&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Given a linked list, remove the nth node from the end of list and return its head.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;For example,
+
+   Given linked list: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5, and n = 2.
+
+   After removing the second node from the end, the linked list becomes 1-&amp;gt;2-&amp;gt;3-&amp;gt;5.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;:
+Given n will always be valid.
+Try to do this in one pass.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;从链表中删除倒数第n个结点（n必定有效）&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>LeetCode 18. 4Sum</title>
