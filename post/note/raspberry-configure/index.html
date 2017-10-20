@@ -21,23 +21,23 @@
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>自动点击 - 申请Google Voice号码</title>
+    <title>树莓派 Raspbian系统安装与基本配置</title>
     <meta name="author" content="SelFree">
-    <meta name="keywords" content="Google Voice, 网页自动点击, AutoClick, 申请, There was an error with your request. Please try again., program develop, leetcode, golang, leetcode解答, 程序">
+    <meta name="keywords" content="Raspberry Pi, raspbian, configure, 树莓派, 系统, 配置, iptables, 静态IP, program develop, leetcode, golang, leetcode解答, 程序">
 
     <link rel="icon" href="https://www.orztu.com/images/favicon.ico">
     
 
     
-    <meta name="description" content="通过自动点击网页申请Google Voice号码">
-    <meta property="og:description" content="通过自动点击网页申请Google Voice号码">
+    <meta name="description" content="Raspberry Pi 树莓派 Raspbian系统安装与基本配置">
+    <meta property="og:description" content="Raspberry Pi 树莓派 Raspbian系统安装与基本配置">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="自动点击 - 申请Google Voice号码">
-    <meta property="og:url" content="/2017/08/%E8%87%AA%E5%8A%A8%E7%82%B9%E5%87%BB---%E7%94%B3%E8%AF%B7google-voice%E5%8F%B7%E7%A0%81/">
+    <meta property="og:title" content="树莓派 Raspbian系统安装与基本配置">
+    <meta property="og:url" content="/post/note/raspberry-configure/">
     <meta property="og:site_name" content="Orz the way">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Orz the way">
-    <meta name="twitter:description" content="通过自动点击网页申请Google Voice号码">
+    <meta name="twitter:description" content="Raspberry Pi 树莓派 Raspbian系统安装与基本配置">
     
     
 
@@ -48,6 +48,8 @@
       <meta property="og:image" content="//www.gravatar.com/avatar/f47b51d6d6b82fd9048e3eaf64bf7e69?s=640">
     
 
+    
+      <meta property="og:image" content="https://www.adafruit.com/includes/templates/adafruit2013/images/little_pi.png">
     
     
     
@@ -216,19 +218,19 @@
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title" itemprop="headline">
-      自动点击 - 申请Google Voice号码
+      树莓派 Raspbian系统安装与基本配置
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2017-08-09T08:44:10&#43;08:00">
+      <time itemprop="datePublished" datetime="2017-10-18T16:44:36&#43;08:00">
         
   
   
   
   
-    2017-08-09
+    2017-10-18
   
 
       </time>
@@ -241,69 +243,109 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <p>最近V2上很多卖GV号码的，心想这玩意也能值钱。所以想着自己试试动手申请一个。</p>
+              <h2 id="系统安装-https-www-raspberrypi-org-documentation-installation-installing-images-readme-md"><a href="https://www.raspberrypi.org/documentation/installation/installing-images/README.md" target="_blank">系统安装</a></h2>
 
-<p>首先参照这篇“<a href="https://kn007.net/topics/free-application-for-google-voice-phone-number/" target="_blank">免费申请Google Voice美国电话号码</a>”申请号码。</p>
+<p>系统: <a href="https://www.raspberrypi.org/downloads/raspbian/" target="_blank">raspbian</a> <br/>
+工具（二选一）：</p>
 
-<p>到了这一步：提示“There was an error with your request. Please try again.”
-<img src="https://www.orztu.com/images/post/gv-0.jpg" alt="palindromic" title="错误" /></p>
+<ul>
+<li><a href="https://etcher.io/" target="_blank">Etcher</a></li>
+<li><a href="http://sourceforge.net/projects/win32diskimager/" target="_blank">Win32DiskImager</a>（windows only）</li>
+</ul>
 
-<p>听说在这里反复提交直到申请成功即可。找了网上的自动提交方法（复制出来CURL提交），发现不好使，curl一直没响应。
-但是网页上确实可以反复点击提交的。于是改用自动点击的方式，一夜醒来发现已经申请成功。</p>
+<ol>
+<li>将SD卡格式化成exFat格式</li>
+<li>使用Etcher或者Win32DiskImager将下载的raspbian系统镜像(img文件)写入SD卡</li>
+</ol>
+
+<p>写入完成之后就相当于系统安装完成了。这时候SD卡被分成两个区，有一个区是在windows下无法识别，不用理会。</p>
+
+<p>这时候如果直接将SD卡插入树莓派，会发现“无法启动”。显示屏没信号，在路由器里找到树莓派的IP也无法用ssh登录。</p>
+
+<p>我安装的时候就是踩到这个坑。以为安装失败，反复装了好几次，就差把SD卡写穿了。</p>
 
 <p></p>
 
-<p>使用Chrome浏览器，<code>右键-&gt;审查元素</code>。
-<img src="https://www.orztu.com/images/post/gv-1.png" alt="palindromic" title="console" /></p>
+<p>实际系统安装已经成功了。只需要在电脑上打开SD卡，找到<code>config.txt</code>文件里<code>#hdmi_safe=1</code>这一行，将前面的<code>#</code>号去掉；
+再新建一个文件命名为<code>ssh</code>（不能有扩展名）。</p>
 
-<p>然后切换到<code>Console</code>中粘贴以下代码，回车，实现自动点击。</p>
+<p>再次把SD卡装进树莓派启动，显示屏就可以正常显示了，ssh也能登录了。</p>
 
+<h2 id="基本配置">基本配置</h2>
 
-  
-    
-  
-  
-    
-  
-  
-  
+<h3 id="1-静态ip-固定ip">1. 静态IP/固定IP</h3>
 
+<p>打开<code>/etc/dhcpcd.conf</code>文件，找到网口（一般为<code>eth0</code>）</p>
 
-<figure class="highlight javascript">
-  <figcaption>
-    
-  </figcaption>
-  <table>
-    <tbody>
-      <tr>
-        <td class="gutter">
-          <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre>
-        </td>
-        <td class="code">
-          <pre class="javascript code-highlight">function triggerMouseEvent (node, eventType) {
-    var clickEvent = document.createEvent (&#39;MouseEvents&#39;);
-    clickEvent.initEvent (eventType, true, true);
-    node.dispatchEvent (clickEvent);
-}
+<p>指定IP:</p>
 
-function clickTheBtn(){
-    // 查找按钮
-    var btn = document.getElementsByClassName(&#34;continueButton&#34;)[0];
+<pre><code>interface eth0
+static ip_address=192.168.1.20/24
+static routers=192.168.1.1
+</code></pre>
 
-    // 模拟点击
-    triggerMouseEvent(btn, &#34;mouseover&#34;);
-    triggerMouseEvent(btn, &#34;mousedown&#34;);
-    triggerMouseEvent(btn, &#34;mouseup&#34;);
-    triggerMouseEvent(btn, &#34;click&#34;);
-}
+<h3 id="2-iptables">2. iptables</h3>
 
-// 每2.5秒调用一次clickTheBtn
-setInterval(clickTheBtn, 2500);</pre>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</figure>
+<p>刚开始配置<code>iptables</code>的时候，以为创建好规则后，使用<code>iptables-save</code>就可以保存了，结果重启后又失效。</p>
+
+<p>为了持久化规则，可以使用<code>iptables-persistent</code>。</p>
+
+<p>运行<code>apt-get</code>安装：<code>sudo apt-get install iptables-persistent</code>安装。</p>
+
+<p>然后在<code>/etc/iptables/rules.v4</code>里面编辑规则，或者使用<code>service iptables-persistent save</code>保存当前规则。</p>
+
+<h3 id="3-修改主机名">3. 修改主机名</h3>
+
+<p>需要修改两个文件：</p>
+
+<ul>
+<li>替换<code>/etc/hostname</code>里的主机名</li>
+<li>替换<code>/etc/hosts</code>里的主机名</li>
+</ul>
+
+<h3 id="4-修改用户名">4. 修改用户名</h3>
+
+<p>为了修改默认用户名pi，需要临时使用root帐号登录。</p>
+
+<ol>
+<li><p>启用root帐号</p>
+
+<pre><code class="language-bash"># 为root帐号设置密码
+sudo passwd root
+# 启用root帐号
+sudo passwd --unlock root
+</code></pre>
+
+<p>ssh默认是禁止root登录的，所以还需要修改ssh配置：编辑文件<code>/etc/ssh/sshd_config</code>，添加一行<code>PermitRootLogin yes</code>即可。</p>
+
+<pre><code># 重启
+sudo reboot
+</code></pre></li>
+
+<li><p>重启系统并登录root后修改pi账户</p>
+
+<pre><code class="language-bash"># 修改用户名为NEWNAME
+usermod -l NEWNAME pi
+# 修改用户group
+groupmod -n NEWNAME pi
+# 修改账户主目录
+mv /home/pi /home/NEWNAME
+# 设置主目录
+usermod -d /home/NEWNAME NEWNAME
+</code></pre></li>
+
+<li><p>重启登录NEWNAME</p>
+
+<p>登录后检查新用户是否能正常使用sudo，如果不能则再次使用root登录，往<code>/etc/sudoers</code>中添加一行：<code>NEWNAME ALL=(ALL) ALL</code>。</p></li>
+
+<li><p>新账户正常后禁用root</p>
+
+<pre><code class="language-bash"># 禁用root
+sudo passwd -l root
+</code></pre>
+
+<p>别忘了还有ssh配置文件也要修改。</p></li>
+</ol>
               
             </div>
           </div>
@@ -315,7 +357,9 @@ setInterval(clickTheBtn, 2500);</pre>
                   <div class="post-footer-tags">
                     <span class="text-color-light text-small">TAGGED IN</span><br/>
                     
-  <a class="tag tag--primary tag--small" href="https://www.orztu.com/tags/web/">Web</a>
+  <a class="tag tag--primary tag--small" href="https://www.orztu.com/tags/raspberry-pi/">Raspberry Pi</a>
+
+  <a class="tag tag--primary tag--small" href="https://www.orztu.com/tags/%E9%85%8D%E7%BD%AE/">配置</a>
 
                   </div>
                 
@@ -327,7 +371,7 @@ setInterval(clickTheBtn, 2500);</pre>
         <ul class="post-actions post-action-nav">
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/2017/10/%E6%A0%91%E8%8E%93%E6%B4%BE-raspbian%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/" data-tooltip="树莓派 Raspbian系统安装与基本配置">
+                <a class="post-action-btn btn btn--disabled">
               
                 <i class="fa fa-angle-left"></i>
                 <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -335,7 +379,7 @@ setInterval(clickTheBtn, 2500);</pre>
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/2017/07/2017%E5%B7%B2%E8%AF%BB%E5%88%97%E8%A1%A8/" data-tooltip="2017已读列表">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/post/gvoice-number/" data-tooltip="自动点击 - 申请Google Voice号码">
               
                 <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                 <i class="fa fa-angle-right"></i>
@@ -393,7 +437,7 @@ setInterval(clickTheBtn, 2500);</pre>
         <ul class="post-actions post-action-nav">
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/2017/10/%E6%A0%91%E8%8E%93%E6%B4%BE-raspbian%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/" data-tooltip="树莓派 Raspbian系统安装与基本配置">
+                <a class="post-action-btn btn btn--disabled">
               
                 <i class="fa fa-angle-left"></i>
                 <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -401,7 +445,7 @@ setInterval(clickTheBtn, 2500);</pre>
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/2017/07/2017%E5%B7%B2%E8%AF%BB%E5%88%97%E8%A1%A8/" data-tooltip="2017已读列表">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/post/gvoice-number/" data-tooltip="自动点击 - 申请Google Voice号码">
               
                 <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                 <i class="fa fa-angle-right"></i>
@@ -497,7 +541,7 @@ setInterval(clickTheBtn, 2500);</pre>
           <div class="media">
             
             <div class="media-body">
-              <a class="link-unstyled" href="https://www.orztu.com/2017/10/%E6%A0%91%E8%8E%93%E6%B4%BE-raspbian%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/">
+              <a class="link-unstyled" href="https://www.orztu.com/post/note/raspberry-configure/">
                 <h3 class="media-heading">树莓派 Raspbian系统安装与基本配置</h3>
               </a>
               <span class="media-meta">
@@ -535,7 +579,7 @@ setInterval(clickTheBtn, 2500);</pre>
           <div class="media">
             
             <div class="media-body">
-              <a class="link-unstyled" href="https://www.orztu.com/2017/08/%E8%87%AA%E5%8A%A8%E7%82%B9%E5%87%BB---%E7%94%B3%E8%AF%B7google-voice%E5%8F%B7%E7%A0%81/">
+              <a class="link-unstyled" href="https://www.orztu.com/post/gvoice-number/">
                 <h3 class="media-heading">自动点击 - 申请Google Voice号码</h3>
               </a>
               <span class="media-meta">
@@ -562,7 +606,7 @@ setInterval(clickTheBtn, 2500);</pre>
           <div class="media">
             
             <div class="media-body">
-              <a class="link-unstyled" href="https://www.orztu.com/2017/07/2017%E5%B7%B2%E8%AF%BB%E5%88%97%E8%A1%A8/">
+              <a class="link-unstyled" href="https://www.orztu.com/post/read/2017-list/">
                 <h3 class="media-heading">2017已读列表</h3>
               </a>
               <span class="media-meta">
@@ -579,7 +623,7 @@ setInterval(clickTheBtn, 2500);</pre>
           <div class="media">
             
             <div class="media-body">
-              <a class="link-unstyled" href="https://www.orztu.com/2017/07/%E4%B8%9C%E9%87%8E%E5%9C%AD%E5%90%BE%E4%BD%9C%E5%93%81/">
+              <a class="link-unstyled" href="https://www.orztu.com/post/read/higashino-keigos-books/">
                 <h3 class="media-heading">东野圭吾作品</h3>
               </a>
               <span class="media-meta">
@@ -599,7 +643,7 @@ setInterval(clickTheBtn, 2500);</pre>
           <div class="media">
             
             <div class="media-body">
-              <a class="link-unstyled" href="https://www.orztu.com/2017/05/%E5%A4%A9%E9%BE%99%E5%85%AB%E9%83%A8/">
+              <a class="link-unstyled" href="https://www.orztu.com/post/read/tianlongbabu/">
                 <h3 class="media-heading">天龙八部</h3>
               </a>
               <span class="media-meta">
@@ -616,7 +660,7 @@ setInterval(clickTheBtn, 2500);</pre>
           <div class="media">
             
             <div class="media-body">
-              <a class="link-unstyled" href="https://www.orztu.com/2017/03/hello-world/">
+              <a class="link-unstyled" href="https://www.orztu.com/post/hello-world/">
                 <h3 class="media-heading">Hello World</h3>
               </a>
               <span class="media-meta">
@@ -692,9 +736,9 @@ $(document).ready(function() {
     
       <script>
         var disqus_config = function () {
-          this.page.url = 'https:\/\/www.orztu.com\/2017\/08\/%E8%87%AA%E5%8A%A8%E7%82%B9%E5%87%BB---%E7%94%B3%E8%AF%B7google-voice%E5%8F%B7%E7%A0%81\/';
+          this.page.url = 'https:\/\/www.orztu.com\/post\/note\/raspberry-configure\/';
           
-            this.page.identifier = '\/2017\/08\/%E8%87%AA%E5%8A%A8%E7%82%B9%E5%87%BB---%E7%94%B3%E8%AF%B7google-voice%E5%8F%B7%E7%A0%81\/'
+            this.page.identifier = '\/post\/note\/raspberry-configure\/'
           
         };
         (function() {

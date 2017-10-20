@@ -21,23 +21,23 @@
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hello World</title>
+    <title>自动点击 - 申请Google Voice号码</title>
     <meta name="author" content="SelFree">
-    <meta name="keywords" content=", program develop, leetcode, golang, leetcode解答, 程序">
+    <meta name="keywords" content="Google Voice, 网页自动点击, AutoClick, 申请, There was an error with your request. Please try again., program develop, leetcode, golang, leetcode解答, 程序">
 
     <link rel="icon" href="https://www.orztu.com/images/favicon.ico">
     
 
     
-    <meta name="description" content="Hello World!">
-    <meta property="og:description" content="Hello World!">
+    <meta name="description" content="通过自动点击网页申请Google Voice号码">
+    <meta property="og:description" content="通过自动点击网页申请Google Voice号码">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Hello World">
-    <meta property="og:url" content="/2017/03/hello-world/">
+    <meta property="og:title" content="自动点击 - 申请Google Voice号码">
+    <meta property="og:url" content="/post/gvoice-number/">
     <meta property="og:site_name" content="Orz the way">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Orz the way">
-    <meta name="twitter:description" content="Hello World!">
+    <meta name="twitter:description" content="通过自动点击网页申请Google Voice号码">
     
     
 
@@ -216,19 +216,19 @@
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title" itemprop="headline">
-      Hello World
+      自动点击 - 申请Google Voice号码
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2017-03-14T00:00:00Z">
+      <time itemprop="datePublished" datetime="2017-08-09T08:44:10&#43;08:00">
         
   
   
   
   
-    2017-03-14
+    2017-08-09
   
 
       </time>
@@ -241,13 +241,84 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <p>国际惯例</p>
+              <p>最近V2上很多卖GV号码的，心想这玩意也能值钱。所以想着自己试试动手申请一个。</p>
 
+<p>首先参照这篇“<a href="https://kn007.net/topics/free-application-for-google-voice-phone-number/" target="_blank">免费申请Google Voice美国电话号码</a>”申请号码。</p>
+
+<p>到了这一步：提示“There was an error with your request. Please try again.”
+<img src="https://www.orztu.com/images/post/gv-0.jpg" alt="palindromic" title="错误" /></p>
+
+<p>听说在这里反复提交直到申请成功即可。找了网上的自动提交方法（复制出来CURL提交），发现不好使，curl一直没响应。
+但是网页上确实可以反复点击提交的。于是改用自动点击的方式，一夜醒来发现已经申请成功。</p>
+
+<p></p>
+
+<p>使用Chrome浏览器，<code>右键-&gt;审查元素</code>。
+<img src="https://www.orztu.com/images/post/gv-1.png" alt="palindromic" title="console" /></p>
+
+<p>然后切换到<code>Console</code>中粘贴以下代码，回车，实现自动点击。</p>
+
+
+  
+    
+  
+  
+    
+  
+  
+  
+
+
+<figure class="highlight javascript">
+  <figcaption>
+    
+  </figcaption>
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+          <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre>
+        </td>
+        <td class="code">
+          <pre class="javascript code-highlight">function triggerMouseEvent (node, eventType) {
+    var clickEvent = document.createEvent (&#39;MouseEvents&#39;);
+    clickEvent.initEvent (eventType, true, true);
+    node.dispatchEvent (clickEvent);
+}
+
+function clickTheBtn(){
+    // 查找按钮
+    var btn = document.getElementsByClassName(&#34;continueButton&#34;)[0];
+
+    // 模拟点击
+    triggerMouseEvent(btn, &#34;mouseover&#34;);
+    triggerMouseEvent(btn, &#34;mousedown&#34;);
+    triggerMouseEvent(btn, &#34;mouseup&#34;);
+    triggerMouseEvent(btn, &#34;click&#34;);
+}
+
+// 每2.5秒调用一次clickTheBtn
+setInterval(clickTheBtn, 2500);</pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
               
             </div>
           </div>
           <div id="post-footer" class="post-footer main-content-wrap">
             
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://www.orztu.com/tags/web/">Web</a>
+
+                  </div>
+                
               
             
             
@@ -256,7 +327,7 @@
         <ul class="post-actions post-action-nav">
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/2017/05/%E5%A4%A9%E9%BE%99%E5%85%AB%E9%83%A8/" data-tooltip="天龙八部">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/post/note/raspberry-configure/" data-tooltip="树莓派 Raspbian系统安装与基本配置">
               
                 <i class="fa fa-angle-left"></i>
                 <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -264,7 +335,7 @@
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--disabled">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/post/read/2017-list/" data-tooltip="2017已读列表">
               
                 <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                 <i class="fa fa-angle-right"></i>
@@ -282,6 +353,12 @@
         
       
       
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
       <li class="post-action">
         
           <a class="post-action-btn btn btn--default" href="#">
@@ -293,6 +370,12 @@
   </div>
 
 
+            
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+              
             
           </div>
         </article>
@@ -310,7 +393,7 @@
         <ul class="post-actions post-action-nav">
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/2017/05/%E5%A4%A9%E9%BE%99%E5%85%AB%E9%83%A8/" data-tooltip="天龙八部">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/post/note/raspberry-configure/" data-tooltip="树莓派 Raspbian系统安装与基本配置">
               
                 <i class="fa fa-angle-left"></i>
                 <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -318,7 +401,7 @@
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--disabled">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/post/read/2017-list/" data-tooltip="2017已读列表">
               
                 <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                 <i class="fa fa-angle-right"></i>
@@ -335,6 +418,12 @@
         </li>
         
       
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
       
       <li class="post-action">
         
@@ -408,7 +497,7 @@
           <div class="media">
             
             <div class="media-body">
-              <a class="link-unstyled" href="https://www.orztu.com/2017/10/%E6%A0%91%E8%8E%93%E6%B4%BE-raspbian%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E4%B8%8E%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/">
+              <a class="link-unstyled" href="https://www.orztu.com/post/note/raspberry-configure/">
                 <h3 class="media-heading">树莓派 Raspbian系统安装与基本配置</h3>
               </a>
               <span class="media-meta">
@@ -446,7 +535,7 @@
           <div class="media">
             
             <div class="media-body">
-              <a class="link-unstyled" href="https://www.orztu.com/2017/08/%E8%87%AA%E5%8A%A8%E7%82%B9%E5%87%BB---%E7%94%B3%E8%AF%B7google-voice%E5%8F%B7%E7%A0%81/">
+              <a class="link-unstyled" href="https://www.orztu.com/post/gvoice-number/">
                 <h3 class="media-heading">自动点击 - 申请Google Voice号码</h3>
               </a>
               <span class="media-meta">
@@ -473,7 +562,7 @@
           <div class="media">
             
             <div class="media-body">
-              <a class="link-unstyled" href="https://www.orztu.com/2017/07/2017%E5%B7%B2%E8%AF%BB%E5%88%97%E8%A1%A8/">
+              <a class="link-unstyled" href="https://www.orztu.com/post/read/2017-list/">
                 <h3 class="media-heading">2017已读列表</h3>
               </a>
               <span class="media-meta">
@@ -490,7 +579,7 @@
           <div class="media">
             
             <div class="media-body">
-              <a class="link-unstyled" href="https://www.orztu.com/2017/07/%E4%B8%9C%E9%87%8E%E5%9C%AD%E5%90%BE%E4%BD%9C%E5%93%81/">
+              <a class="link-unstyled" href="https://www.orztu.com/post/read/higashino-keigos-books/">
                 <h3 class="media-heading">东野圭吾作品</h3>
               </a>
               <span class="media-meta">
@@ -510,7 +599,7 @@
           <div class="media">
             
             <div class="media-body">
-              <a class="link-unstyled" href="https://www.orztu.com/2017/05/%E5%A4%A9%E9%BE%99%E5%85%AB%E9%83%A8/">
+              <a class="link-unstyled" href="https://www.orztu.com/post/read/tianlongbabu/">
                 <h3 class="media-heading">天龙八部</h3>
               </a>
               <span class="media-meta">
@@ -527,7 +616,7 @@
           <div class="media">
             
             <div class="media-body">
-              <a class="link-unstyled" href="https://www.orztu.com/2017/03/hello-world/">
+              <a class="link-unstyled" href="https://www.orztu.com/post/hello-world/">
                 <h3 class="media-heading">Hello World</h3>
               </a>
               <span class="media-meta">
@@ -599,6 +688,30 @@ $(document).ready(function() {
 });
 </script>
 
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'https:\/\/www.orztu.com\/post\/gvoice-number\/';
+          
+            this.page.identifier = '\/post\/gvoice-number\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'orztu';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
   
 
 
