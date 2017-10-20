@@ -257,9 +257,7 @@
 <p>Given a linked list, remove the nth node from the end of list and return its head.</p>
 
 <pre><code>For example,
-
    Given linked list: 1-&gt;2-&gt;3-&gt;4-&gt;5, and n = 2.
-
    After removing the second node from the end, the linked list becomes 1-&gt;2-&gt;3-&gt;5.
 </code></pre>
 
@@ -277,10 +275,13 @@ Try to do this in one pass.</p>
 <h3 id="1-使用循环">1. 使用循环</h3>
 
 <ol>
-<li>定义 <code>p1 = p2 = head</code></li>
-<li>先让p1前进n个结点。如果此时n为空，说明要删除的是head结点，直接返回head.Next，否则进行后面步骤</li>
-<li>此时p1与p2相差n个结点。让p1、p2同时前进，知道p1指向尾结点，此时p2指向倒数第n+1个结点</li>
-<li>删除<code>p2.Next</code>(即倒数第n个结点)</li>
+<li><p>定义 <code>p1 = p2 = head</code></p></li>
+
+<li><p>先让p1前进n个结点。如果此时n为空，说明要删除的是head结点，直接返回head.Next，否则进行后面步骤</p></li>
+
+<li><p>此时p1与p2相差n个结点。让p1、p2同时前进，知道p1指向尾结点，此时p2指向倒数第n+1个结点</p></li>
+
+<li><p>删除<code>p2.Next</code>(即倒数第n个结点)</p></li>
 </ol>
 
 
@@ -350,9 +351,11 @@ func removeNthFromEnd(head *ListNode, n int) *ListNode {
 <h3 id="2-使用递归">2. 使用递归</h3>
 
 <ol>
-<li>使用递归一直向后查找，直到最后一个结点(<code>head.Next == nil</code>)。此时递归结束，开始返回：当前结点指针和0。相当于将最后一个结点标记为0</li>
-<li>判断递归返回的标记是否等于n，是则表示p为倒是第(n+1)个结点（因为标记从0开始），也是我们需要查找的结点。否则将标记加1，返回head（即p的父节点）。</li>
-<li>递归完全返回后，函数<code>removeNthFromEnd</code>里的 index 如果为0，则表示parent指向第倒数n+1；不为0则没找到，原因是要删除结点的是正向第一个。</li>
+<li><p>使用递归一直向后查找，直到最后一个结点(<code>head.Next == nil</code>)。此时递归结束，开始返回：当前结点指针和0。相当于将最后一个结点标记为0</p></li>
+
+<li><p>判断递归返回的标记是否等于n，是则表示p为倒是第(n+1)个结点（因为标记从0开始），也是我们需要查找的结点。否则将标记加1，返回head（即p的父节点）。</p></li>
+
+<li><p>递归完全返回后，函数<code>removeNthFromEnd</code>里的 index 如果为0，则表示parent指向第倒数n+1；不为0则没找到，原因是要删除结点的是正向第一个。</p></li>
 </ol>
 
 <p>

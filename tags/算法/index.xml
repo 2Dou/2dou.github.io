@@ -25,9 +25,7 @@
 &lt;p&gt;Given a linked list, remove the nth node from the end of list and return its head.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;For example,
-
    Given linked list: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5, and n = 2.
-
    After removing the second node from the end, the linked list becomes 1-&amp;gt;2-&amp;gt;3-&amp;gt;5.
 &lt;/code&gt;&lt;/pre&gt;
 

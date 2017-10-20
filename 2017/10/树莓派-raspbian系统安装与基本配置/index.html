@@ -310,7 +310,7 @@ static routers=192.168.1.1
 <ol>
 <li><p>启用root帐号</p>
 
-<pre><code># 为root帐号设置密码
+<pre><code class="language-bash"># 为root帐号设置密码
 sudo passwd root
 # 启用root帐号
 sudo passwd --unlock root
@@ -324,7 +324,7 @@ sudo reboot
 
 <li><p>重启系统并登录root后修改pi账户</p>
 
-<pre><code># 修改用户名为NEWNAME
+<pre><code class="language-bash"># 修改用户名为NEWNAME
 usermod -l NEWNAME pi
 # 修改用户group
 groupmod -n NEWNAME pi
@@ -340,7 +340,7 @@ usermod -d /home/NEWNAME NEWNAME
 
 <li><p>新账户正常后禁用root</p>
 
-<pre><code># 禁用root
+<pre><code class="language-bash"># 禁用root
 sudo passwd -l root
 </code></pre>
 
