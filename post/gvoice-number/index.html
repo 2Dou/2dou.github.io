@@ -29,15 +29,15 @@
     
 
     
-    <meta name="description" content="通过自动点击网页申请Google Voice号码">
-    <meta property="og:description" content="通过自动点击网页申请Google Voice号码">
+    <meta name="description" content="通过自动点击网页按钮申请Google Voice号码">
+    <meta property="og:description" content="通过自动点击网页按钮申请Google Voice号码">
     <meta property="og:type" content="blog">
     <meta property="og:title" content="自动点击 - 申请Google Voice号码">
     <meta property="og:url" content="/post/gvoice-number/">
     <meta property="og:site_name" content="Orz the way">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Orz the way">
-    <meta name="twitter:description" content="通过自动点击网页申请Google Voice号码">
+    <meta name="twitter:description" content="通过自动点击网页按钮申请Google Voice号码">
     
     
 
@@ -258,52 +258,26 @@
 
 <p>然后切换到<code>Console</code>中粘贴以下代码，回车，实现自动点击。</p>
 
-
-  
-    
-  
-  
-    
-  
-  
-  
-
-
-<figure class="highlight javascript">
-  <figcaption>
-    
-  </figcaption>
-  <table>
-    <tbody>
-      <tr>
-        <td class="gutter">
-          <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre>
-        </td>
-        <td class="code">
-          <pre class="javascript code-highlight">function triggerMouseEvent (node, eventType) {
-    var clickEvent = document.createEvent (&#39;MouseEvents&#39;);
+<pre><code>function triggerMouseEvent (node, eventType) {
+    var clickEvent = document.createEvent ('MouseEvents');
     clickEvent.initEvent (eventType, true, true);
     node.dispatchEvent (clickEvent);
 }
 
 function clickTheBtn(){
     // 查找按钮
-    var btn = document.getElementsByClassName(&#34;continueButton&#34;)[0];
+    var btn = document.getElementsByClassName(&quot;continueButton&quot;)[0];
 
     // 模拟点击
-    triggerMouseEvent(btn, &#34;mouseover&#34;);
-    triggerMouseEvent(btn, &#34;mousedown&#34;);
-    triggerMouseEvent(btn, &#34;mouseup&#34;);
-    triggerMouseEvent(btn, &#34;click&#34;);
+    triggerMouseEvent(btn, &quot;mouseover&quot;);
+    triggerMouseEvent(btn, &quot;mousedown&quot;);
+    triggerMouseEvent(btn, &quot;mouseup&quot;);
+    triggerMouseEvent(btn, &quot;click&quot;);
 }
 
 // 每2.5秒调用一次clickTheBtn
-setInterval(clickTheBtn, 2500);</pre>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</figure>
+setInterval(clickTheBtn, 2500);
+</code></pre>
               
             </div>
           </div>
