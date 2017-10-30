@@ -6,10 +6,34 @@
     <description>Recent content on Orz the way</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 19 Oct 2017 21:03:59 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 30 Oct 2017 19:25:35 +0800</lastBuildDate>
     
 	<atom:link href="https://www.orztu.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>020 Valid Parentheses</title>
+      <link>https://www.orztu.com/leetcode/020-valid-parentheses/</link>
+      <pubDate>Mon, 30 Oct 2017 19:25:35 +0800</pubDate>
+      
+      <guid>https://www.orztu.com/leetcode/020-valid-parentheses/</guid>
+      <description>Valid Parentheses
+Description  Given a string containing just the characters &#39;(&#39;, &#39;)&#39;, &#39;{&#39;, &#39;}&#39;, &#39;[&#39; and &#39;]&#39;, determine if the input string is valid.   The brackets must close in the correct order, &amp;quot;()&amp;quot; and &amp;quot;()[]{}&amp;quot; are all valid but &amp;quot;(]&amp;quot; and &amp;quot;([)]&amp;quot; are not.
+ 给出包含三种括号的字符串，验证括号是否左右匹配
+Solution  Solution     1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13</description>
+    </item>
     
     <item>
       <title>LeetCode 19. Remove Nth Node From End of List</title>

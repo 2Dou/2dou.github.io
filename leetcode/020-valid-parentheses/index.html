@@ -21,23 +21,23 @@
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>LeetCode 19. Remove Nth Node From End of List</title>
+    <title>020 Valid Parentheses</title>
     <meta name="author" content="SelFree">
-    <meta name="keywords" content="LeetCode, 算法, LeetCode解答, 链表, program develop, leetcode, golang, leetcode解答, 程序">
+    <meta name="keywords" content="LeetCode, 算法, LeetCode解答, 括号匹配, program develop, leetcode, golang, leetcode解答, 程序">
 
     <link rel="icon" href="https://www.orztu.com/images/favicon.ico">
     
 
     
-    <meta name="description" content="LeetCode 19.Remove Nth Node From End of List - Answer LeetCode编程练习解答">
-    <meta property="og:description" content="LeetCode 19.Remove Nth Node From End of List - Answer LeetCode编程练习解答">
+    <meta name="description" content="LeetCode 练习 20.Valid Parentheses - Answer LeetCode编程练习解答">
+    <meta property="og:description" content="LeetCode 练习 20.Valid Parentheses - Answer LeetCode编程练习解答">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="LeetCode 19. Remove Nth Node From End of List">
-    <meta property="og:url" content="/leetcode/019-remove-nth-node-from-end-of-list/">
+    <meta property="og:title" content="020 Valid Parentheses">
+    <meta property="og:url" content="/leetcode/020-valid-parentheses/">
     <meta property="og:site_name" content="Orz the way">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Orz the way">
-    <meta name="twitter:description" content="LeetCode 19.Remove Nth Node From End of List - Answer LeetCode编程练习解答">
+    <meta name="twitter:description" content="LeetCode 练习 20.Valid Parentheses - Answer LeetCode编程练习解答">
     
     
 
@@ -216,19 +216,19 @@
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title" itemprop="headline">
-      LeetCode 19. Remove Nth Node From End of List
+      020 Valid Parentheses
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2017-10-19T21:03:59&#43;08:00">
+      <time itemprop="datePublished" datetime="2017-10-30T19:25:35&#43;08:00">
         
   
   
   
   
-    2017-10-19
+    2017-10-30
   
 
       </time>
@@ -249,187 +249,93 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <p><a href="https://leetcode.com/problems/remove-nth-node-from-end-of-list/" target="_blank">Remove Nth Node From End of List</a></p>
+              
+
+<p><a href="https://leetcode.com/problems/valid-parentheses/" target="_blank">Valid Parentheses</a></p>
 
 <h2 id="description">Description</h2>
 
 <blockquote>
-<p>Given a linked list, remove the nth node from the end of list and return its head.</p>
-
-<pre><code>For example,
-   Given linked list: 1-&gt;2-&gt;3-&gt;4-&gt;5, and n = 2.
-   After removing the second node from the end, the linked list becomes 1-&gt;2-&gt;3-&gt;5.
-</code></pre>
-
-<p><strong>Note</strong>:
-Given n will always be valid.
-Try to do this in one pass.</p>
+<p>Given a string containing just the characters <code>'('</code>, <code>')'</code>, <code>'{'</code>, <code>'}'</code>, <code>'['</code> and <code>']'</code>, determine if the input string is valid.
+</br> </br>
+The brackets must close in the correct order, <code>&quot;()&quot;</code> and <code>&quot;()[]{}&quot;</code> are all valid but <code>&quot;(]&quot;</code> and <code>&quot;([)]&quot;</code> are not.</p>
 </blockquote>
 
-<p>从链表中删除倒数第n个结点（n必定有效）</p>
-
-<p></p>
+<p>给出包含三种括号的字符串，验证括号是否左右匹配</p>
 
 <h2 id="solution">Solution</h2>
-
-<h3 id="1-使用循环">1. 使用循环</h3>
-
-<ol>
-<li><p>定义 <code>p1 = p2 = head</code></p></li>
-
-<li><p>先让p1前进n个结点。如果此时n为空，说明要删除的是head结点，直接返回head.Next，否则进行后面步骤</p></li>
-
-<li><p>此时p1与p2相差n个结点。让p1、p2同时前进，知道p1指向尾结点，此时p2指向倒数第n+1个结点</p></li>
-
-<li><p>删除<code>p2.Next</code>(即倒数第n个结点)</p></li>
-</ol>
-
-<h3 id="2-使用递归">2. 使用递归</h3>
-
-<ol>
-<li><p>使用递归一直向后查找，直到最后一个结点(<code>head.Next == nil</code>)。此时递归结束，开始返回：当前结点指针和0。相当于将最后一个结点标记为0</p></li>
-
-<li><p>判断递归返回的标记是否等于n，是则表示p为倒是第(n+1)个结点（因为标记从0开始），也是我们需要查找的结点。否则将标记加1，返回head（即p的父节点）。</p></li>
-
-<li><p>递归完全返回后，函数<code>removeNthFromEnd</code>里的 index 如果为0，则表示parent指向第倒数n+1；不为0则没找到，原因是要删除结点的是正向第一个。</p></li>
-</ol>
-
-
-
-  
-  
-  
-  
-  
-
-  
-  
-  
-  
-  
 
 
   
     
   
   
+    
+  
+  
+  
 
-<figure class="codeblock codeblock--tabbed">
+
+<figure class="highlight go">
   <figcaption>
     
       <span>Solution</span>
     
-    <ul class="tabs">
-      
-        <li class="tab active">loop</li>
-      
-        <li class="tab ">recursively</li>
-      
-    </ul>
-  </figcaption> 
-  <div class="tabs-content">
-    
-      
-      <figure class="highlight loop" style="display: block;">   
-        <table>
-          <tbody>
-            <tr>
-              <td class="gutter">
-                <pre><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br></pre>
-              </td>
-              <td class="code">
-                <pre class="loop code-highlight">/**
- * Definition for singly-linked list.
- * type ListNode struct {
- *     Val int
- *     Next *ListNode
- * }
- */
-func removeNthFromEnd(head *ListNode, n int) *ListNode {
-    p1 := head
-
-    // point the next Nth node
-    for i := 0; i &lt; n; i&#43;&#43; {
-        p1 = p1.Next
+  </figcaption>
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+          <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre>
+        </td>
+        <td class="code">
+          <pre class="go code-highlight">func isValid(s string) bool {
+    var c byte
+    stack := make([]byte, 0)
+    m := map[byte]byte{
+        &#39;)&#39;: &#39;(&#39;,
+        &#39;]&#39;: &#39;[&#39;,
+        &#39;}&#39;: &#39;{&#39;,
+    }
+    for i := 0; i &lt; len(s); i&#43;&#43; {
+        c = s[i]
+        if c == &#39;(&#39; || c == &#39;[&#39; || c == &#39;{&#39; {
+            stack = append(stack, c)
+        } else {
+            if v, ok := m[c]; ok {
+                if !pop(v, &amp;stack) {
+                    return false
+                }
+            } else {
+                return false
+            }
+        }
     }
 
-    if p1 == nil {
-        // It&#39;s removing the first node from begin
-        return head.Next
-    }
-
-    p2 := head // p2 is now n step behind p1
-
-    // let p1 point to the 1st node from end
-    // so p2 is pointing to the (n&#43;1)th node from end
-    for p1.Next != nil {
-        p1 = p1.Next
-        p2 = p2.Next
-    }
-
-    // now remove the Nth node from begin
-    p2.Next = p2.Next.Next
-
-    return head
-}</pre>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </figure>
-    
-      
-      <figure class="highlight recursively" style="display: none;">   
-        <table>
-          <tbody>
-            <tr>
-              <td class="gutter">
-                <pre><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br><span>35</span><br></pre>
-              </td>
-              <td class="code">
-                <pre class="recursively code-highlight">/**
- * Definition for singly-linked list.
- * type ListNode struct {
- *     Val int
- *     Next *ListNode
- * }
- */
-func removeNthFromEnd(head *ListNode, n int) *ListNode {
-    parent, index := search(head, n)
-    if index != n {
-        // It must be removing the first node from begin
-        return head.Next
-    }
-
-    // remove the child node
-    parent.Next = parent.Next.Next
-
-    return head
+    return len(stack) == 0
 }
 
-func search(head *ListNode, n int) (*ListNode, int) {
-    if head.Next == nil {
-        // mark last node&#39;s index as 0
-        return head, 0
+func pop(c byte, stack *[]byte) bool {
+    l := len(*stack)
+    if l &lt; 1 {
+        return false
     }
 
-    p, index := search(head.Next, n)
-    if index == n {
-        // so index n is the (n&#43;1)th node from the end
-        // it&#39;s the parent of the node which we want to remove
-        return p, index
-    }
+    var poped byte
+    *stack, poped = (*stack)[:l-1], (*stack)[l-1]
 
-    return head, index &#43; 1
+    return poped == c
 }</pre>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </figure>
-    
-  </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </figure>
+
+<h2 id="similar-problem">Similar Problem</h2>
+
+<p><a href="https://www.orztu.com/leetcode/010-regular-expression-matching/" target="_blank">10.Regular Expression Matching</a></p>
+
               
             </div>
           </div>
@@ -445,8 +351,6 @@ func search(head *ListNode, n int) (*ListNode, int) {
 
   <a class="tag tag--primary tag--small" href="https://www.orztu.com/tags/%E7%AE%97%E6%B3%95/">算法</a>
 
-  <a class="tag tag--primary tag--small" href="https://www.orztu.com/tags/%E9%93%BE%E8%A1%A8/">链表</a>
-
                   </div>
                 
               
@@ -457,7 +361,7 @@ func search(head *ListNode, n int) (*ListNode, int) {
         <ul class="post-actions post-action-nav">
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/020-valid-parentheses/" data-tooltip="020 Valid Parentheses">
+                <a class="post-action-btn btn btn--disabled">
               
                 <i class="fa fa-angle-left"></i>
                 <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -465,7 +369,7 @@ func search(head *ListNode, n int) (*ListNode, int) {
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/post/raspbian-install-and-configure/" data-tooltip="树莓派 Raspbian系统安装与基本配置">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/019-remove-nth-node-from-end-of-list/" data-tooltip="LeetCode 19. Remove Nth Node From End of List">
               
                 <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                 <i class="fa fa-angle-right"></i>
@@ -523,7 +427,7 @@ func search(head *ListNode, n int) (*ListNode, int) {
         <ul class="post-actions post-action-nav">
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/020-valid-parentheses/" data-tooltip="020 Valid Parentheses">
+                <a class="post-action-btn btn btn--disabled">
               
                 <i class="fa fa-angle-left"></i>
                 <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -531,7 +435,7 @@ func search(head *ListNode, n int) (*ListNode, int) {
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/post/raspbian-install-and-configure/" data-tooltip="树莓派 Raspbian系统安装与基本配置">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/019-remove-nth-node-from-end-of-list/" data-tooltip="LeetCode 19. Remove Nth Node From End of List">
               
                 <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                 <i class="fa fa-angle-right"></i>
@@ -639,9 +543,9 @@ $(document).ready(function() {
     
       <script>
         var disqus_config = function () {
-          this.page.url = 'https:\/\/www.orztu.com\/leetcode\/019-remove-nth-node-from-end-of-list\/';
+          this.page.url = 'https:\/\/www.orztu.com\/leetcode\/020-valid-parentheses\/';
           
-            this.page.identifier = '\/leetcode\/019-remove-nth-node-from-end-of-list\/'
+            this.page.identifier = '\/leetcode\/020-valid-parentheses\/'
           
         };
         (function() {
