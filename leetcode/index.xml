@@ -6,10 +6,40 @@
     <description>Recent content in Leetcodes on Orz the way</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 22 Nov 2017 09:15:44 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 22 Nov 2017 11:32:00 +0800</lastBuildDate>
     
 	<atom:link href="https://www.orztu.com/leetcode/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>LeetCode 22. Generate Parentheses</title>
+      <link>https://www.orztu.com/leetcode/022-generate-parentheses/</link>
+      <pubDate>Wed, 22 Nov 2017 11:32:00 +0800</pubDate>
+      
+      <guid>https://www.orztu.com/leetcode/022-generate-parentheses/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/generate-parentheses/&#34; target=&#34;_blank&#34;&gt;Generate Parentheses&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.&lt;/p&gt;
+
+&lt;p&gt;For example, given n = 3, a solution set is:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[
+  &amp;quot;((()))&amp;quot;,
+  &amp;quot;(()())&amp;quot;,
+  &amp;quot;(())()&amp;quot;,
+  &amp;quot;()(())&amp;quot;,
+  &amp;quot;()()()&amp;quot;
+]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;给出n组括号，生成所有正确的匹配组合&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>LeetCode 21. Merge Two Sorted Lists</title>
