@@ -21,23 +21,23 @@
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>LeetCode 20. Valid Parentheses</title>
+    <title>LeetCode 21. Merge Two Sorted Lists</title>
     <meta name="author" content="SelFree">
-    <meta name="keywords" content="LeetCode, 算法, LeetCode解答, 括号匹配, program develop, leetcode, golang, leetcode解答, 程序">
+    <meta name="keywords" content="LeetCode, 算法, LeetCode解答, 链表合并, program develop, leetcode, golang, leetcode解答, 程序">
 
     <link rel="icon" href="https://www.orztu.com/images/favicon.ico">
     
 
     
-    <meta name="description" content="LeetCode 练习 20.Valid Parentheses - Answer LeetCode编程练习解答">
-    <meta property="og:description" content="LeetCode 练习 20.Valid Parentheses - Answer LeetCode编程练习解答">
+    <meta name="description" content="LeetCode 练习 21. Merge Two Sorted Lists - Answer LeetCode编程练习解答">
+    <meta property="og:description" content="LeetCode 练习 21. Merge Two Sorted Lists - Answer LeetCode编程练习解答">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="LeetCode 20. Valid Parentheses">
-    <meta property="og:url" content="/leetcode/020-valid-parentheses/">
+    <meta property="og:title" content="LeetCode 21. Merge Two Sorted Lists">
+    <meta property="og:url" content="/leetcode/021-merge-two-sorted-lists/">
     <meta property="og:site_name" content="Orz the way">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Orz the way">
-    <meta name="twitter:description" content="LeetCode 练习 20.Valid Parentheses - Answer LeetCode编程练习解答">
+    <meta name="twitter:description" content="LeetCode 练习 21. Merge Two Sorted Lists - Answer LeetCode编程练习解答">
     
     
 
@@ -216,19 +216,19 @@
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title" itemprop="headline">
-      LeetCode 20. Valid Parentheses
+      LeetCode 21. Merge Two Sorted Lists
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2017-10-30T19:25:35&#43;08:00">
+      <time itemprop="datePublished" datetime="2017-11-22T09:15:44&#43;08:00">
         
   
   
   
   
-    2017-10-30
+    2017-11-22
   
 
       </time>
@@ -249,21 +249,21 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <p><a href="https://leetcode.com/problems/valid-parentheses/" target="_blank">Valid Parentheses</a></p>
+              <p><a href="https://leetcode.com/problems/merge-two-sorted-lists/" target="_blank">Merge Two Sorted Lists</a></p>
 
 <h2 id="description">Description</h2>
 
 <blockquote>
-<p>Given a string containing just the characters <code>'('</code>, <code>')'</code>, <code>'{'</code>, <code>'}'</code>, <code>'['</code> and <code>']'</code>, determine if the input string is valid.
-</br> </br>
-The brackets must close in the correct order, <code>&quot;()&quot;</code> and <code>&quot;()[]{}&quot;</code> are all valid but <code>&quot;(]&quot;</code> and <code>&quot;([)]&quot;</code> are not.</p>
+<p>Merge two sorted linked lists and return it as a new list. The new list should be made by splicing together the nodes of the first two lists.</p>
 </blockquote>
 
-<p>给出包含三种括号的字符串，验证括号是否左右匹配</p>
+<p>将两个有序链表合二为一</p>
 
 <p></p>
 
 <h2 id="solution">Solution</h2>
+
+<p>逐次比较l1、l2，将较小的那个结点添加到新链表尾部，并指向下一个结点</p>
 
 
   
@@ -286,55 +286,61 @@ The brackets must close in the correct order, <code>&quot;()&quot;</code> and <c
     <tbody>
       <tr>
         <td class="gutter">
-          <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre>
+          <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre>
         </td>
         <td class="code">
-          <pre class="go code-highlight">func isValid(s string) bool {
-    var c byte
-    stack := make([]byte, 0)
-    m := map[byte]byte{
-        &#39;)&#39;: &#39;(&#39;,
-        &#39;]&#39;: &#39;[&#39;,
-        &#39;}&#39;: &#39;{&#39;,
+          <pre class="go code-highlight">/**
+ * Definition for singly-linked list.
+ * type ListNode struct {
+ *     Val int
+ *     Next *ListNode
+ * }
+ */
+func mergeTwoLists(l1 *ListNode, l2 *ListNode) *ListNode {
+    if l1 == nil {
+        return l2
+    } else if l2 == nil {
+        return l1
     }
-    for i := 0; i &lt; len(s); i&#43;&#43; {
-        c = s[i]
-        if c == &#39;(&#39; || c == &#39;[&#39; || c == &#39;{&#39; {
-            stack = append(stack, c)
+
+    var head, tail *ListNode
+
+    // 将首次判断放在循环外，可以减少判断次数，提高效率
+    if l1.Val &lt; l2.Val {
+        head = l1
+        l1 = l1.Next
+    } else {
+        head = l2
+        l2 = l2.Next
+    }
+
+    tail = head
+
+    for {
+        if l1 == nil {
+            tail.Next = l2
+            break
+        } else if l2 == nil {
+            tail.Next = l1
+            break
+        } else if l1.Val &lt; l2.Val {
+            tail.Next = l1
+            tail = l1
+            l1 = l1.Next
         } else {
-            if v, ok := m[c]; ok {
-                if !pop(v, &amp;stack) {
-                    return false
-                }
-            } else {
-                return false
-            }
+            tail.Next = l2
+            tail = l2
+            l2 = l2.Next
         }
     }
 
-    return len(stack) == 0
-}
-
-func pop(c byte, stack *[]byte) bool {
-    l := len(*stack)
-    if l &lt; 1 {
-        return false
-    }
-
-    var poped byte
-    *stack, poped = (*stack)[:l-1], (*stack)[l-1]
-
-    return poped == c
+    return head
 }</pre>
         </td>
       </tr>
     </tbody>
   </table>
 </figure>
-
-<h2 id="similar-problem">Similar Problem</h2>
-
-<p><a href="https://www.orztu.com/leetcode/010-regular-expression-matching/" target="_blank">10.Regular Expression Matching</a></p>
               
             </div>
           </div>
@@ -350,7 +356,7 @@ func pop(c byte, stack *[]byte) bool {
 
   <a class="tag tag--primary tag--small" href="https://www.orztu.com/tags/%E7%AE%97%E6%B3%95/">算法</a>
 
-  <a class="tag tag--primary tag--small" href="https://www.orztu.com/tags/regular/">Regular</a>
+  <a class="tag tag--primary tag--small" href="https://www.orztu.com/tags/list/">List</a>
 
                   </div>
                 
@@ -362,7 +368,7 @@ func pop(c byte, stack *[]byte) bool {
         <ul class="post-actions post-action-nav">
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/021-merge-two-sorted-lists/" data-tooltip="LeetCode 21. Merge Two Sorted Lists">
+                <a class="post-action-btn btn btn--disabled">
               
                 <i class="fa fa-angle-left"></i>
                 <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -370,7 +376,7 @@ func pop(c byte, stack *[]byte) bool {
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/019-remove-nth-node-from-end-of-list/" data-tooltip="LeetCode 19. Remove Nth Node From End of List">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/020-valid-parentheses/" data-tooltip="LeetCode 20. Valid Parentheses">
               
                 <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                 <i class="fa fa-angle-right"></i>
@@ -428,7 +434,7 @@ func pop(c byte, stack *[]byte) bool {
         <ul class="post-actions post-action-nav">
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/021-merge-two-sorted-lists/" data-tooltip="LeetCode 21. Merge Two Sorted Lists">
+                <a class="post-action-btn btn btn--disabled">
               
                 <i class="fa fa-angle-left"></i>
                 <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -436,7 +442,7 @@ func pop(c byte, stack *[]byte) bool {
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/019-remove-nth-node-from-end-of-list/" data-tooltip="LeetCode 19. Remove Nth Node From End of List">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/020-valid-parentheses/" data-tooltip="LeetCode 20. Valid Parentheses">
               
                 <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                 <i class="fa fa-angle-right"></i>
@@ -544,9 +550,9 @@ $(document).ready(function() {
     
       <script>
         var disqus_config = function () {
-          this.page.url = 'https:\/\/www.orztu.com\/leetcode\/020-valid-parentheses\/';
+          this.page.url = 'https:\/\/www.orztu.com\/leetcode\/021-merge-two-sorted-lists\/';
           
-            this.page.identifier = '\/leetcode\/020-valid-parentheses\/'
+            this.page.identifier = '\/leetcode\/021-merge-two-sorted-lists\/'
           
         };
         (function() {
