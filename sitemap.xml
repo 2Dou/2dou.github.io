@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.orztu.com/leetcode/023-merge-k-sorted-lists/</loc>
+    <lastmod>2017-11-24T14:55:46+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.orztu.com/leetcode/022-generate-parentheses/</loc>
     <lastmod>2017-11-22T11:32:00+08:00</lastmod>
   </url>
@@ -168,20 +173,20 @@
   </url>
   
   <url>
-    <loc>https://www.orztu.com/tags/leetcode/</loc>
-    <lastmod>2017-11-22T11:32:00+08:00</lastmod>
+    <loc>https://www.orztu.com/categories/leetcode/</loc>
+    <lastmod>2017-11-24T14:55:46+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.orztu.com/categories/leetcode/</loc>
-    <lastmod>2017-11-22T11:32:00+08:00</lastmod>
+    <loc>https://www.orztu.com/tags/leetcode/</loc>
+    <lastmod>2017-11-24T14:55:46+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.orztu.com/leetcode/</loc>
-    <lastmod>2017-11-22T11:32:00+08:00</lastmod>
+    <lastmod>2017-11-24T14:55:46+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -193,7 +198,7 @@
   
   <url>
     <loc>https://www.orztu.com/</loc>
-    <lastmod>2017-11-22T11:32:00+08:00</lastmod>
+    <lastmod>2017-11-24T14:55:46+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -229,7 +234,7 @@
   
   <url>
     <loc>https://www.orztu.com/tags/</loc>
-    <lastmod>2017-11-22T11:32:00+08:00</lastmod>
+    <lastmod>2017-11-24T14:55:46+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -289,7 +294,7 @@
   
   <url>
     <loc>https://www.orztu.com/tags/%E7%AE%97%E6%B3%95/</loc>
-    <lastmod>2017-11-22T11:32:00+08:00</lastmod>
+    <lastmod>2017-11-24T14:55:46+08:00</lastmod>
     <priority>0</priority>
   </url>
   

@@ -21,23 +21,23 @@
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>LeetCode 22. Generate Parentheses</title>
+    <title>LeetCode 23. Merge K Sorted Lists</title>
     <meta name="author" content="SelFree">
-    <meta name="keywords" content="LeetCode, 算法, LeetCode解答, 括号匹配, program develop, leetcode, golang, leetcode解答, 程序">
+    <meta name="keywords" content="LeetCode, 算法, LeetCode解答, 链表合并, program develop, leetcode, golang, leetcode解答, 程序">
 
     <link rel="icon" href="https://www.orztu.com/images/favicon.ico">
     
 
     
-    <meta name="description" content="LeetCode 练习 22.Generate Parentheses - Answer LeetCode编程练习解答">
-    <meta property="og:description" content="LeetCode 练习 22.Generate Parentheses - Answer LeetCode编程练习解答">
+    <meta name="description" content="LeetCode 练习 23. Merge K Sorted Lists - Answer LeetCode编程练习解答">
+    <meta property="og:description" content="LeetCode 练习 23. Merge K Sorted Lists - Answer LeetCode编程练习解答">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="LeetCode 22. Generate Parentheses">
-    <meta property="og:url" content="/leetcode/022-generate-parentheses/">
+    <meta property="og:title" content="LeetCode 23. Merge K Sorted Lists">
+    <meta property="og:url" content="/leetcode/023-merge-k-sorted-lists/">
     <meta property="og:site_name" content="Orz the way">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Orz the way">
-    <meta name="twitter:description" content="LeetCode 练习 22.Generate Parentheses - Answer LeetCode编程练习解答">
+    <meta name="twitter:description" content="LeetCode 练习 23. Merge K Sorted Lists - Answer LeetCode编程练习解答">
     
     
 
@@ -236,19 +236,19 @@
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title" itemprop="headline">
-      LeetCode 22. Generate Parentheses
+      LeetCode 23. Merge K Sorted Lists
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2017-11-22T11:32:00&#43;08:00">
+      <time itemprop="datePublished" datetime="2017-11-24T14:55:46&#43;08:00">
         
   
   
   
   
-    2017-11-22
+    2017-11-24
   
 
       </time>
@@ -269,34 +269,74 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <p><a href="https://leetcode.com/problems/generate-parentheses/" target="_blank">Generate Parentheses</a></p>
+              <p><a href="https://leetcode.com/problems/merge-k-sorted-lists/description/" target="_blank">Merge k Sorted Lists</a></p>
 
 <h2 id="description">Description</h2>
 
 <blockquote>
-<p>Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.</p>
-
-<p>For example, given n = 3, a solution set is:</p>
-
-<pre><code>[
-  &quot;((()))&quot;,
-  &quot;(()())&quot;,
-  &quot;(())()&quot;,
-  &quot;()(())&quot;,
-  &quot;()()()&quot;
-]
-</code></pre>
-
-<p>给出n组括号，生成所有正确的匹配组合</p>
+<p>Merge k sorted linked lists and return it as one sorted list. Analyze and describe its complexity.</p>
 </blockquote>
+
+<p>将k个有序链表合并为一个链表</p>
 
 <p></p>
 
 <h2 id="solution">Solution</h2>
 
-<p>本题不贴代码。</p>
+<p>前面刚做了两条链表的合并<a href="https://www.orztu.com/leetcode/021-merge-two-sorted-lists/" target="_blank">Merge Two Sorted Lists</a>。</p>
 
-<p>思路是生成过程中，保持右括号数量不超过左括号数量即可。</p>
+<p>既然两个的合并都做了，k个还会难吗？</p>
+
+<p>显然，将k个链表两两合一即可。</p>
+
+
+  
+    
+  
+  
+    
+  
+  
+  
+
+
+<figure class="highlight go">
+  <figcaption>
+    
+      <span>Solution</span>
+    
+  </figcaption>
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+          <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre>
+        </td>
+        <td class="code">
+          <pre class="go code-highlight">func mergeKLists(lists []*ListNode) *ListNode {
+    if len(lists) == 0 {
+        return nil
+    }
+
+    res := lists[0]
+
+    for i := 1; i &lt; len(lists); i&#43;&#43; {
+        res = mergeTwoLists(res, lists[i])
+    }
+
+    return res
+}</pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+
+<h2 id="similar-problem">Similar Problem</h2>
+
+<ul>
+<li><a href="https://www.orztu.com/leetcode/021-merge-two-sorted-lists/" target="_blank">Merge Two Sorted Lists</a></li>
+</ul>
               
             </div>
           </div>
@@ -322,7 +362,7 @@
         <ul class="post-actions post-action-nav">
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/023-merge-k-sorted-lists/" data-tooltip="LeetCode 23. Merge K Sorted Lists">
+                <a class="post-action-btn btn btn--disabled">
               
                 <i class="fa fa-angle-left"></i>
                 <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -330,7 +370,7 @@
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/021-merge-two-sorted-lists/" data-tooltip="LeetCode 21. Merge Two Sorted Lists">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/022-generate-parentheses/" data-tooltip="LeetCode 22. Generate Parentheses">
               
                 <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                 <i class="fa fa-angle-right"></i>
@@ -388,7 +428,7 @@
         <ul class="post-actions post-action-nav">
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/023-merge-k-sorted-lists/" data-tooltip="LeetCode 23. Merge K Sorted Lists">
+                <a class="post-action-btn btn btn--disabled">
               
                 <i class="fa fa-angle-left"></i>
                 <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -396,7 +436,7 @@
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/021-merge-two-sorted-lists/" data-tooltip="LeetCode 21. Merge Two Sorted Lists">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/022-generate-parentheses/" data-tooltip="LeetCode 22. Generate Parentheses">
               
                 <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                 <i class="fa fa-angle-right"></i>
@@ -504,9 +544,9 @@ $(document).ready(function() {
     
       <script>
         var disqus_config = function () {
-          this.page.url = 'https:\/\/www.orztu.com\/leetcode\/022-generate-parentheses\/';
+          this.page.url = 'https:\/\/www.orztu.com\/leetcode\/023-merge-k-sorted-lists\/';
           
-            this.page.identifier = '\/leetcode\/022-generate-parentheses\/'
+            this.page.identifier = '\/leetcode\/023-merge-k-sorted-lists\/'
           
         };
         (function() {
