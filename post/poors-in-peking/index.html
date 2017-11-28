@@ -1,0 +1,584 @@
+
+
+  
+    
+  
+
+
+  
+
+
+
+
+  
+
+
+  
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>迎春纳福享盛世，吉祥如意贺太平</title>
+    <meta name="author" content="SelFree">
+    <meta name="keywords" content="北京扫地, 清退, 低端外来人口, program develop, leetcode, golang, leetcode解答, 程序">
+
+    <link rel="icon" href="https://www.orztu.com/images/favicon.ico">
+    
+
+    
+    <meta name="description" content="2017-11-24日，在无任何安置、善后方案的情况下，以断水、断电、打砸方式，强令各处合租公寓住户搬离">
+    <meta property="og:description" content="2017-11-24日，在无任何安置、善后方案的情况下，以断水、断电、打砸方式，强令各处合租公寓住户搬离">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="迎春纳福享盛世，吉祥如意贺太平">
+    <meta property="og:url" content="/post/poors-in-peking/">
+    <meta property="og:site_name" content="Orz the way">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Orz the way">
+    <meta name="twitter:description" content="2017-11-24日，在无任何安置、善后方案的情况下，以断水、断电、打砸方式，强令各处合租公寓住户搬离">
+    
+    
+
+    
+    
+
+    
+      <meta property="og:image" content="//www.gravatar.com/avatar/f47b51d6d6b82fd9048e3eaf64bf7e69?s=640">
+    
+
+    
+    
+    
+      
+        <meta property="og:image" content="https://www.orztu.com/images/post/gfw/poors-in-peking-1.jpg">
+      
+        <meta property="og:image" content="https://www.orztu.com/images/post/gfw/poors-in-peking-4.jpg">
+      
+        <meta property="og:image" content="https://www.orztu.com/images/post/gfw/poors-in-peking-5.jpg">
+      
+        <meta property="og:image" content="https://www.orztu.com/images/post/gfw/poors-in-peking-2.jpg">
+      
+        <meta property="og:image" content="https://www.orztu.com/images/post/gfw/poors-in-peking-3.jpg">
+      
+        <meta property="og:image" content="https://www.orztu.com/images/post/gfw/poors-in-peking-6.jpg">
+      
+    
+
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cat.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cat.net/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cat.net/ajax/libs/fancybox/2.1.5/helpers/jquery.fancybox-thumbs.css" />
+    
+    
+    <link rel="stylesheet" href="https://www.orztu.com/css/style.min.css" />
+    
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="4">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://www.orztu.com/">Orz the way</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://www.orztu.com/#about">
+    
+    
+    
+      
+        <img class="header-picture" src="//www.gravatar.com/avatar/f47b51d6d6b82fd9048e3eaf64bf7e69?s=90" alt="Author&#39;s picture" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="4">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://www.orztu.com/#about">
+          <img class="sidebar-profile-picture" src="//www.gravatar.com/avatar/f47b51d6d6b82fd9048e3eaf64bf7e69?s=110" alt="Author&#39;s picture" />
+        </a>
+        <h4 class="sidebar-profile-name">SelFree</h4>
+        
+          <h5 class="sidebar-profile-bio"><strong>城市永远年轻，而我们终将老去</strong></h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.orztu.com/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.orztu.com/categories/#posts-list-leetcode">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-file-code-o"></i>
+      
+      <span class="sidebar-button-desc">LeetCode</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.orztu.com/categories/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">Categories</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.orztu.com/tags/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.orztu.com/archives/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      
+      <span class="sidebar-button-desc">Archives</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.orztu.com/about/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.orztu.com/index.xml">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+      
+      <span class="sidebar-button-desc">RSS</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="http://www.5inb4d.com" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-link"></i>
+      
+      <span class="sidebar-button-desc">无名小小站</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="http://32.5inb4d.com" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-link"></i>
+      
+      <span class="sidebar-button-desc">32无名小小站</span>
+    </a>
+  </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="4"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-center">
+  
+    <h1 class="post-title" itemprop="headline">
+      迎春纳福享盛世，吉祥如意贺太平
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2017-11-28T09:14:03&#43;08:00">
+        
+  
+  
+  
+  
+    2017-11-28
+  
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://www.orztu.com/categories/default">default</a>
+    
+  
+
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <p></p>
+
+<h2 id="横批">横批</h2>
+
+<p>横批——“呵呵”</p>
+
+<h2 id="庆贺">庆贺</h2>
+
+<p>热烈庆贺首都提前两年全面建成小康社会！为全国人民树立表率！</p>
+              
+  
+  
+  
+    <div class="image-gallery">
+      <div class="image-gallery-metabar">
+        <span>Gallery 6 images</span>
+      </div>
+      <div class="image-gallery-photos image-gallery-photos--thumbnail">
+        
+          
+          
+          <div class="photo-box">
+            <a class="photo-box-inner fancybox" data-fancybox-group="gallery-7f80a4a541d8fd73a73392f7afecdbda"
+               title="" href="https://www.orztu.com/images/post/gfw/poors-in-peking-1.jpg">
+              <img class="photo" src="https://www.orztu.com/images/post/gfw/poors-in-peking-1.jpg" itemprop="image">
+            </a>
+          </div>
+        
+          
+          
+          <div class="photo-box">
+            <a class="photo-box-inner fancybox" data-fancybox-group="gallery-7f80a4a541d8fd73a73392f7afecdbda"
+               title="" href="https://www.orztu.com/images/post/gfw/poors-in-peking-4.jpg">
+              <img class="photo" src="https://www.orztu.com/images/post/gfw/poors-in-peking-4.jpg" itemprop="image">
+            </a>
+          </div>
+        
+          
+          
+          <div class="photo-box">
+            <a class="photo-box-inner fancybox" data-fancybox-group="gallery-7f80a4a541d8fd73a73392f7afecdbda"
+               title="一间早已没人的房间，整面墙壁贴满了对联：“迎春纳福享盛世，吉祥如意贺太平”" href="https://www.orztu.com/images/post/gfw/poors-in-peking-5.jpg">
+              <img class="photo" src="https://www.orztu.com/images/post/gfw/poors-in-peking-5.jpg" itemprop="image">
+            </a>
+          </div>
+        
+          
+          
+          <div class="photo-box">
+            <a class="photo-box-inner fancybox" data-fancybox-group="gallery-7f80a4a541d8fd73a73392f7afecdbda"
+               title="因为丈夫要去送快递，２６岁的年轻母亲小鲁独自收拾着当晚不可能收拾完的行李。看见婴儿在床上哭闹，她抱起了孩子。孩子不哭了，她自己却哭了起来" href="https://www.orztu.com/images/post/gfw/poors-in-peking-2.jpg">
+              <img class="photo" src="https://www.orztu.com/images/post/gfw/poors-in-peking-2.jpg" itemprop="image">
+            </a>
+          </div>
+        
+          
+          
+          <div class="photo-box">
+            <a class="photo-box-inner fancybox" data-fancybox-group="gallery-7f80a4a541d8fd73a73392f7afecdbda"
+               title="窗户被砸时小林（右）正在写作业，玻璃碎片直接溅到了他身上，幸好没有受伤。" href="https://www.orztu.com/images/post/gfw/poors-in-peking-3.jpg">
+              <img class="photo" src="https://www.orztu.com/images/post/gfw/poors-in-peking-3.jpg" itemprop="image">
+            </a>
+          </div>
+        
+          
+          
+          <div class="photo-box">
+            <a class="photo-box-inner fancybox" data-fancybox-group="gallery-7f80a4a541d8fd73a73392f7afecdbda"
+               title="" href="https://www.orztu.com/images/post/gfw/poors-in-peking-6.jpg">
+              <img class="photo" src="https://www.orztu.com/images/post/gfw/poors-in-peking-6.jpg" itemprop="image">
+            </a>
+          </div>
+        
+      </div>
+    </div>
+    
+
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://www.orztu.com/tags/%E6%89%AB%E5%9C%B0/">扫地</a>
+
+                  </div>
+                
+              
+            
+            
+  <div class="post-actions-wrap">
+      <nav >
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                <i class="fa fa-angle-left"></i>
+                <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+              </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/023-merge-k-sorted-lists/" data-tooltip="LeetCode 23. Merge K Sorted Lists">
+              
+                <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                <i class="fa fa-angle-right"></i>
+              </a>
+            </li>
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+
+            
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+              
+            
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2017 SelFree. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        
+  <div class="post-actions-wrap">
+      <nav >
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                <i class="fa fa-angle-left"></i>
+                <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+              </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/023-merge-k-sorted-lists/" data-tooltip="LeetCode 23. Merge K Sorted Lists">
+              
+                <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                <i class="fa fa-angle-right"></i>
+              </a>
+            </li>
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="//www.gravatar.com/avatar/f47b51d6d6b82fd9048e3eaf64bf7e69?s=110" alt="Author&#39;s picture" />
+    
+    <h4 id="about-card-name">SelFree</h4>
+    
+      <div id="about-card-bio"><strong>城市永远年轻，而我们终将老去</strong></div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        Programer
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        ChengDu
+      </div>
+    
+  </div>
+</div>
+
+    
+    
+  
+    
+    <div id="cover" style="background-image:url('https://www.orztu.com/images/cover/city.jpg');"></div>
+  
+
+
+    
+<script src="https://cdnjs.cat.net/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdnjs.cat.net/ajax/libs/highlight.js/9.10.0/highlight.min.js"></script>
+<script src="https://cdnjs.cat.net/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+<script src="https://cdnjs.cat.net/ajax/libs/fancybox/2.1.5/helpers/jquery.fancybox-thumbs.js"></script>
+
+
+<script src="https://www.orztu.com/js/script.min.js"></script>
+
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'https:\/\/www.orztu.com\/post\/poors-in-peking\/';
+          
+            this.page.identifier = '\/post\/poors-in-peking\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'orztu';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
+
+
+
+    
+  </body>
+</html>
+

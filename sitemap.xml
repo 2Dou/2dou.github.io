@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.orztu.com/post/poors-in-peking/</loc>
+    <lastmod>2017-11-28T09:14:03+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.orztu.com/leetcode/023-merge-k-sorted-lists/</loc>
     <lastmod>2017-11-24T14:55:46+08:00</lastmod>
   </url>
@@ -168,18 +173,18 @@
   
   <url>
     <loc>https://www.orztu.com/categories/default/</loc>
-    <lastmod>2017-10-18T16:44:36+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.orztu.com/categories/leetcode/</loc>
-    <lastmod>2017-11-24T14:55:46+08:00</lastmod>
+    <lastmod>2017-11-28T09:14:03+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.orztu.com/tags/leetcode/</loc>
+    <lastmod>2017-11-24T14:55:46+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.orztu.com/categories/leetcode/</loc>
     <lastmod>2017-11-24T14:55:46+08:00</lastmod>
     <priority>0</priority>
   </url>
@@ -198,13 +203,13 @@
   
   <url>
     <loc>https://www.orztu.com/</loc>
-    <lastmod>2017-11-24T14:55:46+08:00</lastmod>
+    <lastmod>2017-11-28T09:14:03+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.orztu.com/post/</loc>
-    <lastmod>2017-10-18T16:44:36+08:00</lastmod>
+    <lastmod>2017-11-28T09:14:03+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -277,6 +282,12 @@
   <url>
     <loc>https://www.orztu.com/tags/%E5%AE%B9%E9%87%8F/</loc>
     <lastmod>2017-07-06T14:09:43+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.orztu.com/tags/%E6%89%AB%E5%9C%B0/</loc>
+    <lastmod>2017-11-28T09:14:03+08:00</lastmod>
     <priority>0</priority>
   </url>
   
