@@ -351,8 +351,10 @@
     
 
               
-<audio src="https://www.orztu.com/sources/WelcomeToBeijing.mp3" preload="auto" autoplay/>
-
+<audio controls autoplay style="width: 100%;">
+  <source src="https://www.orztu.com/sources/WelcomeToBeijing.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
 
 
             </div>
@@ -537,14 +539,6 @@ $(document).ready(function() {
 });
 </script>
 
-  
-    <script src="https://www.orztu.com/js/audiojs/audio.min.js"></script>
-    <script>
-      audiojs.events.ready(function() {
-        var as = audiojs.createAll();
-      });
-    </script>
-  
   
 
 
