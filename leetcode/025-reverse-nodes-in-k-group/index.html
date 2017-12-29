@@ -21,26 +21,26 @@
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>迎春纳福享盛世，吉祥如意贺太平 | 
+    <title>LeetCode 25. Reverse Nodes in k-Group | 
         Orz the way
       
     </title>
     <meta name="author" content="SelFree">
-    <meta name="keywords" content="北京扫地, 清退, 低端外来人口, program develop, leetcode, golang, leetcode解答, 程序">
+    <meta name="keywords" content="LeetCode, 算法, LeetCode解答, 链表, 反转链表, program develop, leetcode, golang, leetcode解答, 程序">
 
     <link rel="icon" href="https://www.orztu.com/images/favicon.ico">
     
 
     
-    <meta name="description" content="2017-11-24日，在无任何安置、善后方案的情况下，以断水、断电、打砸方式，强令各处合租公寓住户搬离">
-    <meta property="og:description" content="2017-11-24日，在无任何安置、善后方案的情况下，以断水、断电、打砸方式，强令各处合租公寓住户搬离">
+    <meta name="description" content="LeetCode 练习 25. Reverse Nodes in k-Group - Answer LeetCode编程练习解答">
+    <meta property="og:description" content="LeetCode 练习 25. Reverse Nodes in k-Group - Answer LeetCode编程练习解答">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="迎春纳福享盛世，吉祥如意贺太平">
-    <meta property="og:url" content="/post/poors-in-peking/">
+    <meta property="og:title" content="LeetCode 25. Reverse Nodes in k-Group">
+    <meta property="og:url" content="/leetcode/025-reverse-nodes-in-k-group/">
     <meta property="og:site_name" content="Orz the way">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Orz the way">
-    <meta name="twitter:description" content="2017-11-24日，在无任何安置、善后方案的情况下，以断水、断电、打砸方式，强令各处合租公寓住户搬离">
+    <meta name="twitter:description" content="LeetCode 练习 25. Reverse Nodes in k-Group - Answer LeetCode编程练习解答">
     
     
 
@@ -53,20 +53,6 @@
 
     
     
-    
-      
-        <meta property="og:image" content="https://www.orztu.com/images/post/gfw/poors-in-peking-1.jpg">
-      
-        <meta property="og:image" content="https://www.orztu.com/images/post/gfw/poors-in-peking-4.jpg">
-      
-        <meta property="og:image" content="https://www.orztu.com/images/post/gfw/poors-in-peking-5.jpg">
-      
-        <meta property="og:image" content="https://www.orztu.com/images/post/gfw/poors-in-peking-2.jpg">
-      
-        <meta property="og:image" content="https://www.orztu.com/images/post/gfw/poors-in-peking-3.jpg">
-      
-        <meta property="og:image" content="https://www.orztu.com/images/post/gfw/poors-in-peking-6.jpg">
-      
     
 
     
@@ -240,22 +226,22 @@
         <article class="post" itemscope itemType="http://schema.org/BlogPosting">
           
           
-            <div class="post-header main-content-wrap text-center">
+            <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title" itemprop="headline">
-      迎春纳福享盛世，吉祥如意贺太平
+      LeetCode 25. Reverse Nodes in k-Group
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2017-11-28T09:14:03&#43;08:00">
+      <time itemprop="datePublished" datetime="2017-12-29T14:23:13&#43;08:00">
         
   
   
   
   
-    2017-11-28
+    2017-12-29
   
 
       </time>
@@ -265,7 +251,7 @@
   
     <span>in</span>
     
-      <a class="category-link" href="https://www.orztu.com/categories/default">default</a>
+      <a class="category-link" href="https://www.orztu.com/categories/leetcode">LeetCode</a>
     
   
 
@@ -276,89 +262,109 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <p></p>
+              <h2 id="description">Description</h2>
 
-<h2 id="横批">横批</h2>
+<blockquote>
+<p>Given a linked list, reverse the nodes of a linked list k at a time and return its modified list.<br>
+<br>
+k is a positive integer and is less than or equal to the length of the linked list. If the number of nodes is not a multiple of k then left-out nodes in the end should remain as it is.<br>
+<br>
+You may not alter the values in the nodes, only nodes itself may be changed.</p>
 
-<p>横批——“北京折叠”</p>
+<p>Only constant memory is allowed.<br>
+<br>
+For example,</p>
 
-<h2 id="庆贺">庆贺</h2>
+<p>Given this linked list: <code>1-&gt;2-&gt;3-&gt;4-&gt;5</code></p>
 
-<p>热烈庆贺首都提前两年全面建成小康社会！为全国人民树立表率！</p>
-              
+<p>For k = 2, you should return: <code>2-&gt;1-&gt;4-&gt;3-&gt;5</code></p>
+
+<p>For k = 3, you should return: <code>3-&gt;2-&gt;1-&gt;4-&gt;5</code></p>
+</blockquote>
+
+<p></p>
+
+<p>将链表按长度k分组并反转</p>
+
+<h2 id="solution">Solution</h2>
+
+
   
-  
-  
-    <div class="image-gallery">
-      <div class="image-gallery-metabar">
-        <span>Gallery 6 images</span>
-      </div>
-      <div class="image-gallery-photos image-gallery-photos--thumbnail">
-        
-          
-          
-          <div class="photo-box">
-            <a class="photo-box-inner fancybox" data-fancybox-group="gallery-7f80a4a541d8fd73a73392f7afecdbda"
-               title="" href="https://www.orztu.com/images/post/gfw/poors-in-peking-1.jpg">
-              <img class="photo" src="https://www.orztu.com/images/post/gfw/poors-in-peking-1.jpg" itemprop="image">
-            </a>
-          </div>
-        
-          
-          
-          <div class="photo-box">
-            <a class="photo-box-inner fancybox" data-fancybox-group="gallery-7f80a4a541d8fd73a73392f7afecdbda"
-               title="" href="https://www.orztu.com/images/post/gfw/poors-in-peking-4.jpg">
-              <img class="photo" src="https://www.orztu.com/images/post/gfw/poors-in-peking-4.jpg" itemprop="image">
-            </a>
-          </div>
-        
-          
-          
-          <div class="photo-box">
-            <a class="photo-box-inner fancybox" data-fancybox-group="gallery-7f80a4a541d8fd73a73392f7afecdbda"
-               title="一间早已没人的房间，整面墙壁贴满了对联：“迎春纳福享盛世，吉祥如意贺太平”" href="https://www.orztu.com/images/post/gfw/poors-in-peking-5.jpg">
-              <img class="photo" src="https://www.orztu.com/images/post/gfw/poors-in-peking-5.jpg" itemprop="image">
-            </a>
-          </div>
-        
-          
-          
-          <div class="photo-box">
-            <a class="photo-box-inner fancybox" data-fancybox-group="gallery-7f80a4a541d8fd73a73392f7afecdbda"
-               title="因为丈夫要去送快递，２６岁的年轻母亲小鲁独自收拾着当晚不可能收拾完的行李。看见婴儿在床上哭闹，她抱起了孩子。孩子不哭了，她自己却哭了起来" href="https://www.orztu.com/images/post/gfw/poors-in-peking-2.jpg">
-              <img class="photo" src="https://www.orztu.com/images/post/gfw/poors-in-peking-2.jpg" itemprop="image">
-            </a>
-          </div>
-        
-          
-          
-          <div class="photo-box">
-            <a class="photo-box-inner fancybox" data-fancybox-group="gallery-7f80a4a541d8fd73a73392f7afecdbda"
-               title="窗户被砸时小林（右）正在写作业，玻璃碎片直接溅到了他身上，幸好没有受伤。" href="https://www.orztu.com/images/post/gfw/poors-in-peking-3.jpg">
-              <img class="photo" src="https://www.orztu.com/images/post/gfw/poors-in-peking-3.jpg" itemprop="image">
-            </a>
-          </div>
-        
-          
-          
-          <div class="photo-box">
-            <a class="photo-box-inner fancybox" data-fancybox-group="gallery-7f80a4a541d8fd73a73392f7afecdbda"
-               title="" href="https://www.orztu.com/images/post/gfw/poors-in-peking-6.jpg">
-              <img class="photo" src="https://www.orztu.com/images/post/gfw/poors-in-peking-6.jpg" itemprop="image">
-            </a>
-          </div>
-        
-      </div>
-    </div>
     
+  
+  
+    
+  
+  
+  
 
+
+<figure class="highlight go">
+  <figcaption>
+    
+      <span>Solution</span>
+    
+  </figcaption>
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+          <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre>
+        </td>
+        <td class="code">
+          <pre class="go code-highlight">func reverseKGroup(head *ListNode, k int) *ListNode {
+    if head == nil || k &lt;= 1 {
+        return head
+    }
+
+    var newHead, lastGroupTail *ListNode
+
+    nextGroupHead := head
+
+    for nextGroupHead != nil {
+        right := nextGroupHead
+
+        // search the first node of reversed-group
+        for n := 0; n &lt; k-1 &amp;&amp; right != nil; n&#43;&#43; {
+            right = right.Next
+        }
+
+        if right == nil {
+            // no more group, so break
+            break
+        }
+
+        if newHead == nil {
+            // first group, set newHead
+            newHead = right
+        } else {
+            // else, link last group and this group
+            lastGroupTail.Next = right
+        }
+
+        // saving infomation to search next group
+        lastGroupTail, nextGroupHead = nextGroupHead, right.Next
+
+        // reversing this group
+        left, right := lastGroupTail, nextGroupHead
+        for left != nextGroupHead {
+            left, left.Next, right = left.Next, right, left
+        }
+    }
+
+    if newHead == nil {
+        return head
+    }
+
+    return newHead
+}</pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
               
-<audio controls autoplay style="width: 100%;">
-  <source src="https://www.orztu.com/sources/WelcomeToBeijing.mp3" type="audio/mpeg">
-Your browser does not support the audio element.
-</audio>
-
+              
 
             </div>
           </div>
@@ -370,7 +376,9 @@ Your browser does not support the audio element.
                   <div class="post-footer-tags">
                     <span class="text-color-light text-small">TAGGED IN</span><br/>
                     
-  <a class="tag tag--primary tag--small" href="https://www.orztu.com/tags/%E6%89%AB%E5%9C%B0/">扫地</a>
+  <a class="tag tag--primary tag--small" href="https://www.orztu.com/tags/leetcode/">LeetCode</a>
+
+  <a class="tag tag--primary tag--small" href="https://www.orztu.com/tags/%E7%AE%97%E6%B3%95/">算法</a>
 
                   </div>
                 
@@ -382,7 +390,7 @@ Your browser does not support the audio element.
         <ul class="post-actions post-action-nav">
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/025-reverse-nodes-in-k-group/" data-tooltip="LeetCode 25. Reverse Nodes in k-Group">
+                <a class="post-action-btn btn btn--disabled">
               
                 <i class="fa fa-angle-left"></i>
                 <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -390,7 +398,7 @@ Your browser does not support the audio element.
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/023-merge-k-sorted-lists/" data-tooltip="LeetCode 23. Merge K Sorted Lists">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/post/poors-in-peking/" data-tooltip="迎春纳福享盛世，吉祥如意贺太平">
               
                 <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                 <i class="fa fa-angle-right"></i>
@@ -408,6 +416,12 @@ Your browser does not support the audio element.
         
       
       
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#comments_place">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
       <li class="post-action">
         
           <a class="post-action-btn btn btn--default" href="#">
@@ -419,6 +433,13 @@ Your browser does not support the audio element.
   </div>
 
 
+            
+              
+                <div id="comments_place">
+  <noscript>Please enable JavaScript to view the comments</noscript>
+</div>
+
+              
             
           </div>
         </article>
@@ -436,7 +457,7 @@ Your browser does not support the audio element.
         <ul class="post-actions post-action-nav">
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/025-reverse-nodes-in-k-group/" data-tooltip="LeetCode 25. Reverse Nodes in k-Group">
+                <a class="post-action-btn btn btn--disabled">
               
                 <i class="fa fa-angle-left"></i>
                 <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -444,7 +465,7 @@ Your browser does not support the audio element.
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/023-merge-k-sorted-lists/" data-tooltip="LeetCode 23. Merge K Sorted Lists">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/post/poors-in-peking/" data-tooltip="迎春纳福享盛世，吉祥如意贺太平">
               
                 <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                 <i class="fa fa-angle-right"></i>
@@ -461,6 +482,12 @@ Your browser does not support the audio element.
         </li>
         
       
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#comments_place">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
       
       <li class="post-action">
         
@@ -542,6 +569,30 @@ $(document).ready(function() {
 });
 </script>
 
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'https:\/\/www.orztu.com\/leetcode\/025-reverse-nodes-in-k-group\/';
+          
+            this.page.identifier = '\/leetcode\/025-reverse-nodes-in-k-group\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'orztu';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
   
 
 
