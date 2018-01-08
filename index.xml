@@ -6,10 +6,21 @@
     <description>Recent content on Orz the way</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 04 Jan 2018 14:22:15 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 08 Jan 2018 10:00:41 +0800</lastBuildDate>
     
 	<atom:link href="https://www.orztu.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>python实现微信跳一跳外挂</title>
+      <link>https://www.orztu.com/post/wechatjump/</link>
+      <pubDate>Mon, 08 Jan 2018 10:00:41 +0800</pubDate>
+      
+      <guid>https://www.orztu.com/post/wechatjump/</guid>
+      <description>&lt;p&gt;使用python+adb实现微信跳一跳外挂&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>读书</title>

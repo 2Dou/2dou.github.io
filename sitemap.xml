@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.orztu.com/post/wechatjump/</loc>
+    <lastmod>2018-01-08T10:00:41+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.orztu.com/books/</loc>
     <lastmod>2018-01-04T14:22:15+08:00</lastmod>
   </url>
@@ -178,18 +183,18 @@
   
   <url>
     <loc>https://www.orztu.com/categories/default/</loc>
-    <lastmod>2017-11-28T09:14:03+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.orztu.com/tags/leetcode/</loc>
-    <lastmod>2017-12-29T14:23:13+08:00</lastmod>
+    <lastmod>2018-01-08T10:00:41+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.orztu.com/categories/leetcode/</loc>
+    <lastmod>2017-12-29T14:23:13+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.orztu.com/tags/leetcode/</loc>
     <lastmod>2017-12-29T14:23:13+08:00</lastmod>
     <priority>0</priority>
   </url>
@@ -208,13 +213,19 @@
   
   <url>
     <loc>https://www.orztu.com/</loc>
-    <lastmod>2018-01-04T14:22:15+08:00</lastmod>
+    <lastmod>2018-01-08T10:00:41+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.orztu.com/post/</loc>
-    <lastmod>2017-11-28T09:14:03+08:00</lastmod>
+    <lastmod>2018-01-08T10:00:41+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.orztu.com/tags/python/</loc>
+    <lastmod>2018-01-08T10:00:41+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -275,6 +286,12 @@
   <url>
     <loc>https://www.orztu.com/tags/%E5%9B%9E%E6%BA%AF/</loc>
     <lastmod>2017-05-04T16:23:01+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.orztu.com/tags/%E5%A4%96%E6%8C%82/</loc>
+    <lastmod>2018-01-08T10:00:41+08:00</lastmod>
     <priority>0</priority>
   </url>
   
