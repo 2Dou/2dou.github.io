@@ -425,7 +425,7 @@ for x in ite:
 <pre><code class="language-python">next_top, top_pixel = None, None # 顶点坐标和颜色
 
 # 从上往下查找第一个与背景色不同的点，作为平台顶点
-for y in range(int(height * 0.38), int(height * 0.52)):
+for y in range(int(height * 0.3), int(height * 0.52)):
     # 背景色，因为有渐变，所以每行重新获取背景色
     bg_pixel = img.getpixel((width - 1, y))
 
