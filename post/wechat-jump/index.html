@@ -419,8 +419,7 @@ for x in ite:
 <p>首先寻找平台顶点，然后寻找左右顶点，计算平台中心点</p>
 
 <ol>
-<li>寻找平台顶点</li>
-</ol>
+<li><p>寻找平台顶点</p>
 
 <pre><code class="language-python">next_top, top_pixel = None, None # 顶点坐标和颜色
 
@@ -441,11 +440,9 @@ for y in range(int(height * 0.3), int(height * 0.52)):
             break
     if next_top != None:
         break
-</code></pre>
+</code></pre></li>
 
-<ol>
-<li>搜索左右顶点</li>
-</ol>
+<li><p>搜索左右顶点</p>
 
 <p>这种方法在某些情形会出现错误，暂未处理。可以通过设定点与点之间的规则排除这些平台（距离、y差值范围等规则）
 <img src="https://www.orztu.com/images/post/coding-life/jumpjump-6.png" alt="错误" title="错误" /></p>
@@ -491,23 +488,24 @@ for y in range(int(height * 0.3), int(height * 0.52)):
           <tbody>
             <tr>
               <td class="gutter">
-                <pre><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br></pre>
+                <pre><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br></pre>
               </td>
               <td class="code">
-                <pre class="left code-highlight">x, y = next_top
-while True:
+                <pre class="left code-highlight">    x, y = next_top
     while True:
-        # 向左查找相同颜色点
-        if not same_color(img.getpixel((x - 1, y)), top_pixel):
-            break
-        x -= 1
+        while True:
+            # 向左查找相同颜色点
+            if not same_color(img.getpixel((x - 1, y)), top_pixel):
+                break
+            x -= 1
 
-    # 向下一个像素
-    if not same_color(img.getpixel((x, y &#43; 1)), top_pixel):
-        break
-    y &#43;= 1
-if x != next_top[0] and y != next_top[1]:
-    left = (x, y)</pre>
+        # 向下一个像素
+        if not same_color(img.getpixel((x, y &#43; 1)), top_pixel):
+            break
+        y &#43;= 1
+    if x != next_top[0] and y != next_top[1]:
+        left = (x, y)
+    </pre>
               </td>
             </tr>
           </tbody>
@@ -520,23 +518,24 @@ if x != next_top[0] and y != next_top[1]:
           <tbody>
             <tr>
               <td class="gutter">
-                <pre><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br></pre>
+                <pre><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br></pre>
               </td>
               <td class="code">
-                <pre class="right code-highlight">x, y = next_top
-while True:
+                <pre class="right code-highlight">    x, y = next_top
     while True:
-        # 向右查找相同颜色点
-        if not same_color(img.getpixel((x &#43; 1, y)), top_pixel):
-            break
-        x &#43;= 1
+        while True:
+            # 向右查找相同颜色点
+            if not same_color(img.getpixel((x &#43; 1, y)), top_pixel):
+                break
+            x &#43;= 1
 
-    # 向下查找相同颜色点
-    if not same_color(img.getpixel((x, y &#43; 1)), top_pixel):
-        break
-    y &#43;= 1
-if x != next_top[0] and y != next_top[1]:
-    right = (x, y)</pre>
+        # 向下查找相同颜色点
+        if not same_color(img.getpixel((x, y &#43; 1)), top_pixel):
+            break
+        y &#43;= 1
+    if x != next_top[0] and y != next_top[1]:
+        right = (x, y)
+    </pre>
               </td>
             </tr>
           </tbody>
@@ -544,7 +543,8 @@ if x != next_top[0] and y != next_top[1]:
       </figure>
     
   </div>
-</figure>
+</figure></li>
+</ol>
 
 <h3 id="其他情况计算落点">其他情况计算落点</h3>
 
