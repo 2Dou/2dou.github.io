@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Python on Orz the way</title>
-    <link>https://www.orztu.com/tags/python/</link>
-    <description>Recent content in Python on Orz the way</description>
+    <title>Coding Life on Orz the way</title>
+    <link>https://www.orztu.com/categories/coding-life/</link>
+    <description>Recent content in Coding Life on Orz the way</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Mon, 08 Jan 2018 10:00:41 +0800</lastBuildDate>
     
-	<atom:link href="https://www.orztu.com/tags/python/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.orztu.com/categories/coding-life/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
