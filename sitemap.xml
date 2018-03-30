@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.orztu.com/leetcode/029-divide-two-integers/</loc>
+    <lastmod>2018-03-30T16:59:00+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.orztu.com/post/wechat-jump/</loc>
     <lastmod>2018-01-08T10:00:41+08:00</lastmod>
   </url>
@@ -189,20 +194,20 @@
   </url>
   
   <url>
-    <loc>https://www.orztu.com/tags/leetcode/</loc>
-    <lastmod>2017-12-29T14:23:13+08:00</lastmod>
+    <loc>https://www.orztu.com/categories/leetcode/</loc>
+    <lastmod>2018-03-30T16:59:00+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.orztu.com/categories/leetcode/</loc>
-    <lastmod>2017-12-29T14:23:13+08:00</lastmod>
+    <loc>https://www.orztu.com/tags/leetcode/</loc>
+    <lastmod>2018-03-30T16:59:00+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.orztu.com/leetcode/</loc>
-    <lastmod>2017-12-29T14:23:13+08:00</lastmod>
+    <lastmod>2018-03-30T16:59:00+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -214,7 +219,7 @@
   
   <url>
     <loc>https://www.orztu.com/</loc>
-    <lastmod>2018-01-08T10:00:41+08:00</lastmod>
+    <lastmod>2018-03-30T16:59:00+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -262,7 +267,7 @@
   
   <url>
     <loc>https://www.orztu.com/tags/</loc>
-    <lastmod>2017-12-29T14:23:13+08:00</lastmod>
+    <lastmod>2018-03-30T16:59:00+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -334,7 +339,7 @@
   
   <url>
     <loc>https://www.orztu.com/tags/%E7%AE%97%E6%B3%95/</loc>
-    <lastmod>2017-12-29T14:23:13+08:00</lastmod>
+    <lastmod>2018-03-30T16:59:00+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -359,6 +364,12 @@
   <url>
     <loc>https://www.orztu.com/tags/%E9%93%BE%E8%A1%A8/</loc>
     <lastmod>2017-10-19T21:03:59+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.orztu.com/tags/%E9%99%A4%E6%B3%95/</loc>
+    <lastmod>2018-03-30T16:59:00+08:00</lastmod>
     <priority>0</priority>
   </url>
   

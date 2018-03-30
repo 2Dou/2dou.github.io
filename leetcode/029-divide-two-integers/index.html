@@ -21,26 +21,26 @@
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>python实现微信跳一跳外挂 | 
+    <title>LeetCode 29. Divide Two Integers | 
         Orz the way
       
     </title>
     <meta name="author" content="SelFree">
-    <meta name="keywords" content="跳一跳外挂, 微信跳一跳, python, program develop, leetcode, golang, leetcode解答, 程序">
+    <meta name="keywords" content="LeetCode, 算法, LeetCode解答, 除法, program develop, leetcode, golang, leetcode解答, 程序">
 
     <link rel="icon" href="https://www.orztu.com/images/favicon.ico">
     
 
     
-    <meta name="description" content="python实现adb截图模拟点击方式的微信跳一跳外挂">
-    <meta property="og:description" content="python实现adb截图模拟点击方式的微信跳一跳外挂">
+    <meta name="description" content="LeetCode 练习 29. Divide Two Integers - Answer LeetCode编程练习解答">
+    <meta property="og:description" content="LeetCode 练习 29. Divide Two Integers - Answer LeetCode编程练习解答">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="python实现微信跳一跳外挂">
-    <meta property="og:url" content="/post/wechat-jump/">
+    <meta property="og:title" content="LeetCode 29. Divide Two Integers">
+    <meta property="og:url" content="/leetcode/029-divide-two-integers/">
     <meta property="og:site_name" content="Orz the way">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Orz the way">
-    <meta name="twitter:description" content="python实现adb截图模拟点击方式的微信跳一跳外挂">
+    <meta name="twitter:description" content="LeetCode 练习 29. Divide Two Integers - Answer LeetCode编程练习解答">
     
     
 
@@ -239,19 +239,19 @@
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title" itemprop="headline">
-      python实现微信跳一跳外挂
+      LeetCode 29. Divide Two Integers
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2018-01-08T10:00:41&#43;08:00">
+      <time itemprop="datePublished" datetime="2018-03-30T16:59:00&#43;08:00">
         
   
   
   
   
-    2018-01-08
+    2018-03-30
   
 
       </time>
@@ -261,7 +261,7 @@
   
     <span>in</span>
     
-      <a class="category-link" href="https://www.orztu.com/categories/coding-life">coding life</a>
+      <a class="category-link" href="https://www.orztu.com/categories/leetcode">LeetCode</a>
     
   
 
@@ -272,310 +272,109 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <p>使用python+adb实现微信跳一跳外挂</p>
+              <p><a href="https://leetcode.com/problems/divide-two-integers/" target="_blank">Divide Two Integers</a></p>
+
+<h2 id="description">Description</h2>
+
+<blockquote>
+<p>Divide two integers without using multiplication, division and mod operator.</p>
+
+<p>If it is overflow, return MAX_INT.</p>
+</blockquote>
 
 <p></p>
 
-<p><a href="https://github.com/2Dou/JumpJump" target="_blank">源码地址</a></p>
+<p>不使用乘法、除法、取余实现两个整数相除</p>
 
-<h2 id="使用方法">使用方法</h2>
+<p>根据除法的原理，基本思路是使用减法获得结果。将被除数变为被减数，除数变为减数。被减数循环减去减数直到被减数比减数小，中间减去的个数即为除法结果。</p>
 
-<ol>
-<li><p>安卓手机打开USB调试
-打开USB调试方法，进入<code>设置</code>，找到<code>开发者选项</code>，打开并勾选<code>USB调试</code>；
-如果没有<code>开发者选项</code>，进入<code>关于手机</code>，连续点击<code>版本号</code>7次，即可开启<code>开发者选项</code></p></li>
+<p>考虑被除数比除数大很多的情况，为了提升效率，被减数需要指数增加。</p>
 
-<li><p>进入微信跳一跳并点<code>开始游戏</code>，运行<code>python helper.py</code></p></li>
-</ol>
-
-<h2 id="实现原理">实现原理</h2>
-
-<ol>
-<li><p>使用adb命令截图保存到本地</p>
-
-<pre><code class="language-bash">adb shell screencap -p | perl -pe 's/\\x0D\\x0A/\\x0A/g' &gt; screen.png
-
-# 如果没有perl可以先保存再pull
-adb shell screencap -p /sdcard/screen.png
-adb pull /sdcard/screen.png .
-</code></pre></li>
-
-<li><p>使用python解析图片并查找棋子和落点</p>
-
-<ul>
-<li>根据棋子颜色，取底部左右两边特征点，以中点为棋子位置</li>
-
-<li><p>寻找落点</p>
-
-<ul>
-<li><p>有小圆点，直接通过圆点颜色RGB(245, 245, 245)找出圆点位置作为落点</p></li>
-
-<li><p>纯色平台</p>
-
-<ol>
-<li>从上往下查找第一个与背景色不同的点，作为平台顶点</li>
-<li>从顶点开始向左下搜索与顶点相同颜色的点，找到平台左顶点</li>
-<li>从顶点开始向右下搜索与顶点相同颜色的点，找到平台右顶点</li>
-<li>以左右点中点为落点
-<img src="https://www.orztu.com/images/post/coding-life/jumpjump-0.png" alt="搜索平台中心" title="搜索平台中心" /></li>
-</ol></li>
-
-<li><p>其他情况</p>
-
-<ol>
-<li>同样从上往下查找第一个与背景色不同的点，作为平台顶点</li>
-<li>通过固定斜率0.58、棋子当前位置，计算落点（图中红线交点）
-<img src="https://www.orztu.com/images/post/coding-life/jumpjump-1.png" alt="计算落点" title="计算落点" /></li>
-</ol></li>
-</ul></li>
-</ul></li>
-
-<li><p>使用adb命令模拟触摸</p></li>
-</ol>
-
-<pre><code class="language-bash">adb shell input swipe x y x y time #其中x和y是屏幕坐标，time是触摸时间，单位ms
-</code></pre>
-
-<h2 id="详解">详解</h2>
-
-<h3 id="寻找棋子">寻找棋子</h3>
-
-<p><img src="https://www.orztu.com/images/post/coding-life/jumpjump-2.png" alt="寻找棋子" title="寻找棋子" /></p>
-
-<p>直接通过棋子特征颜色查找其“最左点”和“最右点”，计算中点</p>
-
-<pre><code class="language-python">def find_cur_pos(img):
-    '''
-    查找棋子当前位置
-    通过棋子底部颜色范围，搜索棋子左右点，以中点作为棋子当前位置
-    '''
-    width, height = img.width, img.height
-
-    local = [(width, 0), (0, 0)]
-    def put_in(x, y):
-        left, right = local[0], local[1]
-        if x &lt; left[0]:
-            left = (x, y)
-            local[0] = left
-        if x &gt;= right[0]:
-            right = (x, y)
-            local[1] = right
-
-    for x in range(int(width * 0.1), int(width * 0.9)):
-        for y in range(int(height * 0.52), int(height * 0.62)):
-            pixel = img.getpixel((x, y))
-            r, g, b = pixel[0], pixel[1], pixel[2]
-            if r &lt; 45 and r &gt; 40 and \
-                g &lt; 45 and g &gt; 40 and \
-                b &lt; 75 and b &gt; 70:
-                put_in(x, y)
-
-            if r &lt; 60 and r &gt; 50 and \
-                g &lt; 60 and g &gt; 50 and \
-                b &lt; 90 and b &gt; 80:
-                put_in(x, y)
-
-    left, right = local[0], local[1]
-    if left[0] == width:
-        return None
-
-    x = int((left[0] + right[0]) / 2)
-    y = int((left[1] + right[1]) / 2)
-    return (x, y)
-</code></pre>
-
-<h3 id="寻找小圆点">寻找小圆点</h3>
-
-<p>通过圆点颜色RGB(245, 245, 245)寻找落点</p>
-
-<p>以落点在左边为例：
-<img src="https://www.orztu.com/images/post/coding-life/jumpjump-3.png" alt="寻找小圆点" title="寻找小圆点" /></p>
-
-<p>通过圆点颜色RGB(245, 245, 245)、斜率K、坐标x，计算斜线上的点并判断颜色</p>
-
-<p>通常先查找到A点，然后分别向右和向下查找B和C点，以BC线段中点作为落点。</p>
-
-<p>落点在右边时先搜索到的点A位置稍有不同，但算法相同</p>
-
-<p>查找点A的代码：</p>
-
-<pre><code class="language-python"># 查找点A
-for x in ite:
-    '''
-    通过斜率计算斜线上的位置，并判断是否和圆点颜色一样
-    '''
-    y = int(cur[1] - 0.58 * abs(cur[0] - x))
-    pixel = img.getpixel((x, y))
-    r, g, b = pixel[0], pixel[1], pixel[2]
-    if r == 245 and g == 245 and b == 245:
-        one_of_circle = (x, y)
-        break
-</code></pre>
-
-<h3 id="寻找平台中心点">寻找平台中心点</h3>
-
-<p><img src="https://www.orztu.com/images/post/coding-life/jumpjump-4.png" alt="寻找平台中心点" title="寻找平台中心点" /></p>
-
-<p>首先寻找平台顶点，然后寻找左右顶点，计算平台中心点</p>
-
-<ol>
-<li><p>寻找平台顶点</p>
-
-<pre><code class="language-python">next_top, top_pixel = None, None # 顶点坐标和颜色
-
-# 从上往下查找第一个与背景色不同的点，作为平台顶点
-for y in range(int(height * 0.3), int(height * 0.52)):
-    # 背景色，因为有渐变，所以每行重新获取背景色
-    bg_pixel = img.getpixel((width - 1, y))
-
-    for x in ite:
-        pixel = img.getpixel((x, y))
-
-        # 渐变问题，允许差值
-        if abs(pixel[0] - bg_pixel[0]) &gt; 8 \
-            or abs(pixel[1] - bg_pixel[1]) &gt; 8 \
-            or abs(pixel[2] - bg_pixel[2]) &gt; 8:
-            next_top = (x, y)
-            top_pixel = pixel
-            break
-    if next_top != None:
-        break
-</code></pre></li>
-
-<li><p>搜索左右顶点</p>
-
-<p>这种方法在某些情形会出现错误，暂未处理。可以通过设定点与点之间的规则排除这些平台（距离、y差值范围等规则）
-<img src="https://www.orztu.com/images/post/coding-life/jumpjump-6.png" alt="错误" title="错误" /></p>
-
-
-
-  
-  
-  
-  
-  
-
-  
-  
-  
-  
-  
+<h2 id="solution">Solution</h2>
 
 
   
     
   
   
+    
+  
+  
+  
 
-<figure class="codeblock codeblock--tabbed">
+
+<figure class="highlight go">
   <figcaption>
     
-      <span>搜索左右顶点</span>
+      <span>Solution</span>
     
-    <ul class="tabs">
-      
-        <li class="tab active">left</li>
-      
-        <li class="tab ">right</li>
-      
-    </ul>
-  </figcaption> 
-  <div class="tabs-content">
-    
-      
-      <figure class="highlight left" style="display: block;">   
-        <table>
-          <tbody>
-            <tr>
-              <td class="gutter">
-                <pre><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br></pre>
-              </td>
-              <td class="code">
-                <pre class="left code-highlight">    x, y = next_top
-    while True:
-        while True:
-            # 向左查找相同颜色点
-            if not same_color(img.getpixel((x - 1, y)), top_pixel):
-                break
-            x -= 1
+  </figcaption>
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+          <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre>
+        </td>
+        <td class="code">
+          <pre class="go code-highlight">func abs(n int) int {
+    if n &lt; 0 {
+        return -n
+    }
+    return n
+}
 
-        # 向下一个像素
-        if not same_color(img.getpixel((x, y &#43; 1)), top_pixel):
-            break
-        y &#43;= 1
-    if x != next_top[0] and y != next_top[1]:
-        left = (x, y)
-    </pre>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </figure>
-    
-      
-      <figure class="highlight right" style="display: none;">   
-        <table>
-          <tbody>
-            <tr>
-              <td class="gutter">
-                <pre><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br></pre>
-              </td>
-              <td class="code">
-                <pre class="right code-highlight">    x, y = next_top
-    while True:
-        while True:
-            # 向右查找相同颜色点
-            if not same_color(img.getpixel((x &#43; 1, y)), top_pixel):
-                break
-            x &#43;= 1
+func divide(dividend int, divisor int) int {
+    if divisor == 0 {
+        // 被除数为0!?
+        return 0
+    } else if divisor == 1 {
+        return dividend
+    } else if divisor == -1 {
+        // 边界检查
+        if dividend == math.MinInt32 {
+            return math.MaxInt32
+        }
 
-        # 向下查找相同颜色点
-        if not same_color(img.getpixel((x, y &#43; 1)), top_pixel):
-            break
-        y &#43;= 1
-    if x != next_top[0] and y != next_top[1]:
-        right = (x, y)
-    </pre>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </figure>
-    
-  </div>
-</figure></li>
-</ol>
+        return -dividend
+    }
 
-<h3 id="其他情况计算落点">其他情况计算落点</h3>
+    r, n := 0, 1
+    a, b := abs(dividend), abs(divisor)
 
-<p><img src="https://www.orztu.com/images/post/coding-life/jumpjump-5.png" alt="其他情况计算落点" title="其他情况计算落点" /></p>
+    if a &lt; b {
+        return 0
+    }
 
-<p>如果当前棋子位置有偏差，这种方式结果会出现偏差</p>
+    // 指数逼近
+    for a &gt;= b {
+        a = a - b // 减去n个b
+        r &#43;= n    // 结果加上n
 
-<pre><code class="language-python"># x, y 为平台顶点坐标
-k = 0.58 # 斜率
-y = cur[1] - k * float(x - cur[0])
-</code></pre>
+        b = b &lt;&lt; 1 // 移位替代乘法
+        n = n &lt;&lt; 1
+    }
 
-<h2 id="模拟触摸">模拟触摸</h2>
+    // 判断结果是否为负数
+    if (dividend &gt; 0 &amp;&amp; divisor &lt; 0) || (dividend &lt; 0 &amp;&amp; divisor &gt; 0) {
+        r = -r
+    }
 
-<p>通过当前位置和落点位置计算出距离<code>distance</code>，然后触摸时长<code>T = distance * P</code></p>
+    // 余数大于被除数，继续相除
+    if a &gt;= abs(divisor) {
+        if r &lt; 0 {
+            return r &#43; divide(a, -abs(divisor))
+        } else {
+            return r &#43; divide(a, abs(divisor))
+        }
+    }
 
-<blockquote>
-<p>不同分辨率下，系数P不同，需要查找</p>
-
-<p><code>1600x2560</code>机型推荐<code>0.92</code></p>
-
-<p><code>1440x2560</code>机型推荐<code>1.039</code></p>
-
-<p><code>1080x1920</code>机型推荐<code>1.392</code></p>
-
-<p><code>720x1280</code>机型推荐<code>2.078</code></p>
-</blockquote>
-
-<h2 id="参考">参考</h2>
-
-<p>思路来自<a href="https://github.com/xushanmeng/WechatJumpHelper" target="_blank">WechatJumpHelper</a></p>
+    return r
+}</pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
               
               
 
@@ -589,9 +388,11 @@ y = cur[1] - k * float(x - cur[0])
                   <div class="post-footer-tags">
                     <span class="text-color-light text-small">TAGGED IN</span><br/>
                     
-  <a class="tag tag--primary tag--small" href="https://www.orztu.com/tags/python/">python</a>
+  <a class="tag tag--primary tag--small" href="https://www.orztu.com/tags/leetcode/">LeetCode</a>
 
-  <a class="tag tag--primary tag--small" href="https://www.orztu.com/tags/%E5%A4%96%E6%8C%82/">外挂</a>
+  <a class="tag tag--primary tag--small" href="https://www.orztu.com/tags/%E7%AE%97%E6%B3%95/">算法</a>
+
+  <a class="tag tag--primary tag--small" href="https://www.orztu.com/tags/%E9%99%A4%E6%B3%95/">除法</a>
 
                   </div>
                 
@@ -603,7 +404,7 @@ y = cur[1] - k * float(x - cur[0])
         <ul class="post-actions post-action-nav">
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/029-divide-two-integers/" data-tooltip="LeetCode 29. Divide Two Integers">
+                <a class="post-action-btn btn btn--disabled">
               
                 <i class="fa fa-angle-left"></i>
                 <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -611,7 +412,7 @@ y = cur[1] - k * float(x - cur[0])
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/books/" data-tooltip="读书">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/post/wechat-jump/" data-tooltip="python实现微信跳一跳外挂">
               
                 <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                 <i class="fa fa-angle-right"></i>
@@ -670,7 +471,7 @@ y = cur[1] - k * float(x - cur[0])
         <ul class="post-actions post-action-nav">
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/029-divide-two-integers/" data-tooltip="LeetCode 29. Divide Two Integers">
+                <a class="post-action-btn btn btn--disabled">
               
                 <i class="fa fa-angle-left"></i>
                 <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -678,7 +479,7 @@ y = cur[1] - k * float(x - cur[0])
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/books/" data-tooltip="读书">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/post/wechat-jump/" data-tooltip="python实现微信跳一跳外挂">
               
                 <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                 <i class="fa fa-angle-right"></i>
@@ -786,9 +587,9 @@ $(document).ready(function() {
     
       <script>
         var disqus_config = function () {
-          this.page.url = 'https:\/\/www.orztu.com\/post\/wechat-jump\/';
+          this.page.url = 'https:\/\/www.orztu.com\/leetcode\/029-divide-two-integers\/';
           
-            this.page.identifier = '\/post\/wechat-jump\/'
+            this.page.identifier = '\/leetcode\/029-divide-two-integers\/'
           
         };
         (function() {

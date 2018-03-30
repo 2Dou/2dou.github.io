@@ -6,10 +6,29 @@
     <description>Recent content in Leetcodes on Orz the way</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 29 Dec 2017 14:23:13 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 30 Mar 2018 16:59:00 +0800</lastBuildDate>
     
 	<atom:link href="https://www.orztu.com/leetcode/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>LeetCode 29. Divide Two Integers</title>
+      <link>https://www.orztu.com/leetcode/029-divide-two-integers/</link>
+      <pubDate>Fri, 30 Mar 2018 16:59:00 +0800</pubDate>
+      
+      <guid>https://www.orztu.com/leetcode/029-divide-two-integers/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/divide-two-integers/&#34; target=&#34;_blank&#34;&gt;Divide Two Integers&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Divide two integers without using multiplication, division and mod operator.&lt;/p&gt;
+
+&lt;p&gt;If it is overflow, return MAX_INT.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>LeetCode 25. Reverse Nodes in k-Group</title>
