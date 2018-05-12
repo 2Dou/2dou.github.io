@@ -1,9 +1,5 @@
 
 
-  
-    
-  
-
 
   
 
@@ -21,26 +17,28 @@
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>python为图片添加文字水印 | 
+    <title>水印 | 
         Orz the way
       
     </title>
     <meta name="author" content="SelFree">
-    <meta name="keywords" content="python, 图片水印, 文字水印, watermark, program develop, leetcode, golang, leetcode解答, 程序">
+    <meta name="keywords" content=", program develop, leetcode, golang, leetcode解答, 程序">
 
     <link rel="icon" href="https://www.orztu.com/images/favicon.ico">
     
+      <link rel="alternate" type="application/rss+xml" title="RSS" href="https://www.orztu.com/tags/%E6%B0%B4%E5%8D%B0/index.xml">
+    
 
     
-    <meta name="description" content="使用python PIL库为图片添加文字水印，可设置文字大小、颜色、旋转、间隔、透明度">
-    <meta property="og:description" content="使用python PIL库为图片添加文字水印，可设置文字大小、颜色、旋转、间隔、透明度">
+    <meta name="description" content="城市永远年轻，而我们终将老去">
+    <meta property="og:description" content="城市永远年轻，而我们终将老去">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="python为图片添加文字水印">
-    <meta property="og:url" content="/post/text-watermark/">
+    <meta property="og:title" content="水印">
+    <meta property="og:url" content="/tags/%E6%B0%B4%E5%8D%B0/">
     <meta property="og:site_name" content="Orz the way">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Orz the way">
-    <meta name="twitter:description" content="使用python PIL库为图片添加文字水印，可设置文字大小、颜色、旋转、间隔、透明度">
+    <meta name="twitter:description" content="城市永远年轻，而我们终将老去">
     
     
 
@@ -53,10 +51,6 @@
 
     
     
-    
-      
-        <meta property="og:image" content="https://www.orztu.com/images/post/coding-life/text-watermark-test.png">
-      
     
 
     
@@ -79,7 +73,7 @@
 
   <body>
     <div id="blog">
-      <header id="header" data-behavior="4">
+      <header id="header" data-behavior="1">
   <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
   <div class="header-title">
     <a class="header-title-link" href="https://www.orztu.com/">Orz the way</a>
@@ -99,7 +93,7 @@
   
 </header>
 
-      <nav id="sidebar" data-behavior="4">
+      <nav id="sidebar" data-behavior="1">
   <div class="sidebar-container">
     
       <div class="sidebar-profile">
@@ -232,21 +226,35 @@
 </nav>
 
       
+        
 
-      <div id="main" data-behavior="4"
+      
+      <div id="main" data-behavior="1"
         class="
                hasCoverMetaIn
                ">
-        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
-          
-          
-            <div class="post-header main-content-wrap text-center">
+        
+          <section class="postShorten-group main-content-wrap">
+            
+            
+              
   
-    <h1 class="post-title" itemprop="headline">
-      python为图片添加文字水印
-    </h1>
+    
   
+
+
   
+
+<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title" itemprop="headline">
+        <a class="link-unstyled" href="https://www.orztu.com/post/text-watermark/">
+          python为图片添加文字水印
+        </a>
+      </h1>
+      
   <div class="postShorten-meta post-meta">
     
       <time itemprop="datePublished" datetime="2018-05-10T10:54:06&#43;08:00">
@@ -272,195 +280,26 @@
 
   </div>
 
-</div>
-          
-          <div class="post-content markdown" itemprop="articleBody">
-            <div class="main-content-wrap">
-              <h2 id="功能">功能</h2>
+    </div>
+    <div class="postShorten-excerpt" itemprop="articleBody">
+      <h2 id="功能">功能</h2>
 
 <p>使用知名python图片处理库PIL，为图片添加文字水印
 </p>
-
-<p>步骤：根据文字生成水印图片；将水印图半透明并覆盖在原图上</p>
-
-<h2 id="实现">实现</h2>
-
-<h3 id="1-将文字转换成水印图片">1. 将文字转换成水印图片</h3>
-
-<pre><code class="language-python">def gen_mark(args):
-    # 字体宽度
-    length = len(args.mark) * args.size
-
-    # 创建水印图片(宽度、高度)
-    mark = Image.new(mode='RGBA', size=(length, args.size))
-
-    # 生成文字
-    draw = ImageDraw.Draw(im=mark)
-    draw.text(xy=(0, 0),
-        text=args.mark, # 水印文字
-        fill=args.color, # 文字颜色 '#008B8B'
-        font=ImageFont.truetype(TTF_FONT, # 文字字体
-        size=args.size)) # font_size 文字大小
-    del draw
-
-    # 裁剪图片边缘空白区域
-    bg = Image.new(mode='RGBA', size=mark.size)
-    diff = ImageChops.difference(mark, bg)
-    del bg
-    bbox = diff.getbbox()
-    if bbox:
-        mark = mark.crop(bbox)
-
-    # 设置水印透明度
-    set_opacity(mark, args.opacity)
-
-    # 得到水印文字大小
-    print(mark.size)
-    此处省略...
-</code></pre>
-
-<h3 id="2-将水印图片覆盖在原图上">2. 将水印图片覆盖在原图上</h3>
-
-<pre><code class="language-python">def mark_im(im):
-    ''' 在im图片上添加水印 im为打开的原图'''
-
-    # 计算斜边长度
-    c = int(math.sqrt(im.size[0]*im.size[0] + im.size[1]*im.size[1]))
-
-    # 以斜边长度为宽高创建大图（旋转后大图才足以覆盖原图）
-    mark2 = Image.new(mode='RGBA', size=(c, c))
-
-    # 在大图上生成水印文字，此处mark为上面生成的水印图片
-    y, idx = 0, 0
-    while y &lt; c:
-        # 制造x坐标错位
-        x = -int((mark.size[0] + args.space)*0.5*idx)
-        idx = (idx + 1) % 2
-
-        while x &lt; c:
-            # 在该位置粘贴mark水印图片
-            mark2.paste(mark, (x, y))
-            x = x + mark.size[0] + args.space
-        y = y + mark.size[1] + args.space
-
-    # 将大图旋转一定角度
-    mark2 = mark2.rotate(args.angle)
-
-    # 在原图上添加大图水印
-    if im.mode != 'RGBA':
-        im = im.convert('RGBA')
-    im.paste(mark2, # 大图
-        (int((im.size[0]-c)/2), int((im.size[1]-c)/2)), # 坐标
-        mask=mark2.split()[3])
-    del mark2
-    return im
-</code></pre>
-
-<h2 id="代码">代码</h2>
-
-<p>github: <a href="https://github.com/2Dou/watermarker" target="_blank">2Dou/watermarker</a></p>
-              
-  
-  
-  
-    <div class="image-gallery">
-      <div class="image-gallery-metabar">
-        <span>Gallery 1 images</span>
-      </div>
-      <div class="image-gallery-photos ">
+      <p>
+        <a href="https://www.orztu.com/post/text-watermark/" class="postShorten-excerpt_link link">Continue reading</a>
         
-          
-          
-          <div class="photo-box">
-            <a class="photo-box-inner fancybox" data-fancybox-group="gallery-43527b41b8eab646e00641bfe7c1320c"
-               title="" href="https://www.orztu.com/images/post/coding-life/text-watermark-test.png">
-              <img class="photo" src="https://www.orztu.com/images/post/coding-life/text-watermark-test.png" itemprop="image">
-            </a>
-          </div>
-        
-      </div>
+      </p>
     </div>
-    
-
-              
-
-            </div>
-          </div>
-          <div id="post-footer" class="post-footer main-content-wrap">
-            
-              
-                
-                
-                  <div class="post-footer-tags">
-                    <span class="text-color-light text-small">TAGGED IN</span><br/>
-                    
-  <a class="tag tag--primary tag--small" href="https://www.orztu.com/tags/python/">python</a>
-
-  <a class="tag tag--primary tag--small" href="https://www.orztu.com/tags/%E6%B0%B4%E5%8D%B0/">水印</a>
-
-                  </div>
-                
-              
-            
-            
-  <div class="post-actions-wrap">
-      <nav >
-        <ul class="post-actions post-action-nav">
-            <li class="post-action">
-              
-                <a class="post-action-btn btn btn--disabled">
-              
-                <i class="fa fa-angle-left"></i>
-                <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
-              </a>
-            </li>
-            <li class="post-action">
-              
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/029-divide-two-integers/" data-tooltip="LeetCode 29. Divide Two Integers">
-              
-                <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
-                <i class="fa fa-angle-right"></i>
-              </a>
-            </li>
-        </ul>
-      </nav>
-    <ul class="post-actions post-action-share" >
-      
-        <li class="post-action hide-lg hide-md hide-sm">
-          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
-            <i class="fa fa-share-alt"></i>
-          </a>
-        </li>
-        
-      
-      
-        <li class="post-action">
-          <a class="post-action-btn btn btn--default" href="#disqus_thread">
-            <i class="fa fa-comment-o"></i>
-          </a>
-        </li>
-      
-      <li class="post-action">
-        
-          <a class="post-action-btn btn btn--default" href="#">
-        
-          <i class="fa fa-list"></i>
-        </a>
-      </li>
-    </ul>
   </div>
-
+  
+</article>
 
             
-              
-                <div id="disqus_thread">
-  <noscript>Please enable JavaScript to view the comments</noscript>
-</div>
-
-              
             
-          </div>
-        </article>
+
+          </section>
+        
         <footer id="footer" class="main-content-wrap">
   <span class="copyrights">
     &copy; 2018 SelFree. All Rights Reserved
@@ -468,64 +307,6 @@
 </footer>
 
       </div>
-      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
-        
-  <div class="post-actions-wrap">
-      <nav >
-        <ul class="post-actions post-action-nav">
-            <li class="post-action">
-              
-                <a class="post-action-btn btn btn--disabled">
-              
-                <i class="fa fa-angle-left"></i>
-                <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
-              </a>
-            </li>
-            <li class="post-action">
-              
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/029-divide-two-integers/" data-tooltip="LeetCode 29. Divide Two Integers">
-              
-                <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
-                <i class="fa fa-angle-right"></i>
-              </a>
-            </li>
-        </ul>
-      </nav>
-    <ul class="post-actions post-action-share" >
-      
-        <li class="post-action hide-lg hide-md hide-sm">
-          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
-            <i class="fa fa-share-alt"></i>
-          </a>
-        </li>
-        
-      
-      
-        <li class="post-action">
-          <a class="post-action-btn btn btn--default" href="#disqus_thread">
-            <i class="fa fa-comment-o"></i>
-          </a>
-        </li>
-      
-      <li class="post-action">
-        
-          <a class="post-action-btn btn btn--default" href="#">
-        
-          <i class="fa fa-list"></i>
-        </a>
-      </li>
-    </ul>
-  </div>
-
-
-      </div>
-      <div id="share-options-bar" class="share-options-bar" data-behavior="4">
-  <i id="btn-close-shareoptions" class="fa fa-close"></i>
-  <ul class="share-options">
-    
-  </ul>
-</div>
-<div id="share-options-mask" class="share-options-mask"></div>
     </div>
     
     <div id="about">
@@ -788,32 +569,6 @@ $(document).ready(function() {
   });
 });
 </script>
-
-  
-    
-      <script>
-        var disqus_config = function () {
-          this.page.url = 'https:\/\/www.orztu.com\/post\/text-watermark\/';
-          
-            this.page.identifier = '\/post\/text-watermark\/'
-          
-        };
-        (function() {
-          
-          
-          if (window.location.hostname == "localhost") {
-            return;
-          }
-          var d = document, s = d.createElement('script');
-          var disqus_shortname = 'orztu';
-          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-
-          s.setAttribute('data-timestamp', +new Date());
-          (d.head || d.body).appendChild(s);
-        })();
-      </script>
-    
-  
 
 
 
