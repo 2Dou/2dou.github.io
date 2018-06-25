@@ -1,5 +1,9 @@
 
 
+  
+    
+  
+
 
   
 
@@ -17,28 +21,26 @@
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Archives | 
+    <title>Golang Slice and Array | 
         Orz the way
       
     </title>
     <meta name="author" content="SelFree">
-    <meta name="keywords" content=", program develop, leetcode, golang, leetcode解答, 程序">
+    <meta name="keywords" content="golang, 切片, 数组, program develop, leetcode, golang, leetcode解答, 程序">
 
     <link rel="icon" href="https://www.orztu.com/images/favicon.ico">
     
-      <link rel="alternate" type="application/rss+xml" title="RSS" href="https://www.orztu.com/archives/index.xml">
-    
 
     
-    <meta name="description" content="城市永远年轻，而我们终将老去">
-    <meta property="og:description" content="城市永远年轻，而我们终将老去">
+    <meta name="description" content="Golang切片与数组">
+    <meta property="og:description" content="Golang切片与数组">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Archives">
-    <meta property="og:url" content="/archives/">
+    <meta property="og:title" content="Golang Slice and Array">
+    <meta property="og:url" content="/post/golang-slice-and-array/">
     <meta property="og:site_name" content="Orz the way">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Orz the way">
-    <meta name="twitter:description" content="城市永远年轻，而我们终将老去">
+    <meta name="twitter:description" content="Golang切片与数组">
     
     
 
@@ -73,7 +75,7 @@
 
   <body>
     <div id="blog">
-      <header id="header" data-behavior="1">
+      <header id="header" data-behavior="4">
   <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
   <div class="header-title">
     <a class="header-title-link" href="https://www.orztu.com/">Orz the way</a>
@@ -93,7 +95,7 @@
   
 </header>
 
-      <nav id="sidebar" data-behavior="1">
+      <nav id="sidebar" data-behavior="4">
   <div class="sidebar-container">
     
       <div class="sidebar-profile">
@@ -225,232 +227,271 @@
   </div>
 </nav>
 
-      <div id="main" data-behavior="1"
+      
+
+      <div id="main" data-behavior="4"
         class="
                hasCoverMetaIn
                ">
-        <div id="archives" class="main-content-wrap">
-          <form id="filter-form" action="#">
-            <input name="date" type="text" class="form-control input--xlarge" placeholder="Search date (YYYY/MM/DD)" autofocus="autofocus">
-          </form>
-          <h5 class="archive-result text-color-base text-xlarge" data-message-zero="no post found" data-message-one="1 post found" data-message-other="{n} posts found"></h5>
-<section class="boxes">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title" itemprop="headline">
+      Golang Slice and Array
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2018-06-25T15:22:42&#43;08:00">
+        
+  
+  
+  
+  
+    2018-06-25
+  
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://www.orztu.com/categories/coding-life">coding life</a>
+    
+  
+
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <p>以前粗学时并没有留意Golang的数组，一直以为只有切片。</p>
+
+<p>今天看《Go语言实战》时才发现Golang也有数组。</p>
+
+<p>数组赋值时会拷贝整个数组，所以作为参数传递时也会完整拷贝，要考虑性能合理使用，必要时可以使用指针。</p>
+
+<p>以下代码便于理解数组和切片：</p>
+
+<p></p>
+
+
   
     
-    <div class="archive archive-year box" data-date="2018">
-      <h4 class="archive-title" style="text-decoration: none;">2018</h4>
-      
-        <ul class="archive-posts archive-month" data-date="201806">
-          <h5 class="archive-title" style="text-decoration: none;">June</h5>
-          
-            <li class="archive-post archive-day" data-date="20180625">
-              <a class="archive-post-title" href="https://www.orztu.com/post/golang-slice-and-array/">Golang Slice and Array</a>
-            </li>
-          
-            <li class="archive-post archive-day" data-date="20180625">
-              <a class="archive-post-title" href="https://www.orztu.com/post/">Posts</a>
-            </li>
-          
-        </ul>
-      
-        <ul class="archive-posts archive-month" data-date="201805">
-          <h5 class="archive-title" style="text-decoration: none;">May</h5>
-          
-            <li class="archive-post archive-day" data-date="20180510">
-              <a class="archive-post-title" href="https://www.orztu.com/post/text-watermark/">python为图片添加文字水印</a>
-            </li>
-          
-        </ul>
-      
-        <ul class="archive-posts archive-month" data-date="201803">
-          <h5 class="archive-title" style="text-decoration: none;">March</h5>
-          
-            <li class="archive-post archive-day" data-date="20180330">
-              <a class="archive-post-title" href="https://www.orztu.com/leetcode/029-divide-two-integers/">LeetCode 29. Divide Two Integers</a>
-            </li>
-          
-        </ul>
-      
-        <ul class="archive-posts archive-month" data-date="201801">
-          <h5 class="archive-title" style="text-decoration: none;">January</h5>
-          
-            <li class="archive-post archive-day" data-date="20180108">
-              <a class="archive-post-title" href="https://www.orztu.com/post/wechat-jump/">python实现微信跳一跳外挂</a>
-            </li>
-          
-        </ul>
-      
-    </div>
   
+  
+  
+  
+
+
+<figure class="highlight ">
+  <figcaption>
     
-    <div class="archive archive-year box" data-date="2017">
-      <h4 class="archive-title" style="text-decoration: none;">2017</h4>
-      
-        <ul class="archive-posts archive-month" data-date="201712">
-          <h5 class="archive-title" style="text-decoration: none;">December</h5>
-          
-            <li class="archive-post archive-day" data-date="20171229">
-              <a class="archive-post-title" href="https://www.orztu.com/leetcode/025-reverse-nodes-in-k-group/">LeetCode 25. Reverse Nodes in k-Group</a>
+      <span>golang</span>
+    
+  </figcaption>
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+          <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre>
+        </td>
+        <td class="code">
+          <pre class=" code-highlight">package main
+
+import (
+    &#34;fmt&#34;
+)
+
+func main() {
+    // 定义数组a1
+    a1 := [4]int{1, 2, 3, 4}
+
+    // 数组a2来自a1的拷贝
+    a2 := a1
+
+    var a3 [4]int
+    a3 = a1 // 同样会完整拷贝
+
+    // 切片s1来自a1，其空间仍由a1实现
+    s1 := a1[1:2]
+    // 修改切片s1会影响数组a1
+    s1 = append(s1, -1, -2)
+
+    fmt.Println(&#34;a1:&#34;, a1)
+    fmt.Println(&#34;a2:&#34;, a2)
+    fmt.Println(&#34;a3:&#34;, a3)
+    fmt.Println(&#34;s1:&#34;, s1)
+}</pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+
+<p>输出：</p>
+
+<pre><code>a1: [1 2 -1 -2]
+a2: [1 2 3 4]
+a3: [1 2 3 4]
+s1: [2 -1 -2]
+</code></pre>
+
+<p>Slice保存的是长度、容量以及其底层数组的地址。</p>
+
+<p>这里s1来自a1的切片，底层数组与a1同内存区域，所以对s1的append导致a1的数值被修改。</p>
+
+<p>在使用中也要注意这种情况，合理使用。</p>
+              
+              
+
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://www.orztu.com/tags/golang/">golang</a>
+
+                  </div>
+                
+              
+            
+            
+  <div class="post-actions-wrap">
+      <nav >
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                <i class="fa fa-angle-left"></i>
+                <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+              </a>
             </li>
-          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/post/text-watermark/" data-tooltip="python为图片添加文字水印">
+              
+                <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                <i class="fa fa-angle-right"></i>
+              </a>
+            </li>
         </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
       
-        <ul class="archive-posts archive-month" data-date="201711">
-          <h5 class="archive-title" style="text-decoration: none;">November</h5>
-          
-            <li class="archive-post archive-day" data-date="20171128">
-              <a class="archive-post-title" href="https://www.orztu.com/post/poors-in-peking/">迎春纳福享盛世，吉祥如意贺太平</a>
-            </li>
-          
-            <li class="archive-post archive-day" data-date="20171124">
-              <a class="archive-post-title" href="https://www.orztu.com/leetcode/023-merge-k-sorted-lists/">LeetCode 23. Merge K Sorted Lists</a>
-            </li>
-          
-            <li class="archive-post archive-day" data-date="20171122">
-              <a class="archive-post-title" href="https://www.orztu.com/leetcode/022-generate-parentheses/">LeetCode 22. Generate Parentheses</a>
-            </li>
-          
-            <li class="archive-post archive-day" data-date="20171122">
-              <a class="archive-post-title" href="https://www.orztu.com/leetcode/021-merge-two-sorted-lists/">LeetCode 21. Merge Two Sorted Lists</a>
-            </li>
-          
-        </ul>
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
       
-        <ul class="archive-posts archive-month" data-date="201710">
-          <h5 class="archive-title" style="text-decoration: none;">October</h5>
-          
-            <li class="archive-post archive-day" data-date="20171030">
-              <a class="archive-post-title" href="https://www.orztu.com/leetcode/020-valid-parentheses/">LeetCode 20. Valid Parentheses</a>
-            </li>
-          
-            <li class="archive-post archive-day" data-date="20171019">
-              <a class="archive-post-title" href="https://www.orztu.com/leetcode/019-remove-nth-node-from-end-of-list/">LeetCode 19. Remove Nth Node From End of List</a>
-            </li>
-          
-            <li class="archive-post archive-day" data-date="20171018">
-              <a class="archive-post-title" href="https://www.orztu.com/post/raspbian-install-and-configure/">树莓派 Raspbian系统安装与基本配置</a>
-            </li>
-          
-            <li class="archive-post archive-day" data-date="20171017">
-              <a class="archive-post-title" href="https://www.orztu.com/leetcode/018-4sum/">LeetCode 18. 4Sum</a>
-            </li>
-          
-            <li class="archive-post archive-day" data-date="20171017">
-              <a class="archive-post-title" href="https://www.orztu.com/leetcode/017-letter-combinations-of-a-phone-number/">LeetCode 17. Letter Combinations of a Phone Number</a>
-            </li>
-          
-        </ul>
       
-        <ul class="archive-posts archive-month" data-date="201708">
-          <h5 class="archive-title" style="text-decoration: none;">August</h5>
-          
-            <li class="archive-post archive-day" data-date="20170809">
-              <a class="archive-post-title" href="https://www.orztu.com/post/gvoice-number/">自动点击 - 申请Google Voice号码</a>
-            </li>
-          
-        </ul>
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
       
-        <ul class="archive-posts archive-month" data-date="201707">
-          <h5 class="archive-title" style="text-decoration: none;">July</h5>
-          
-            <li class="archive-post archive-day" data-date="20170728">
-              <a class="archive-post-title" href="https://www.orztu.com/leetcode/015-3sum/">LeetCode 15. 3Sum</a>
-            </li>
-          
-            <li class="archive-post archive-day" data-date="20170707">
-              <a class="archive-post-title" href="https://www.orztu.com/leetcode/013-roman-to-integer/">LeetCode 13. Roman to Integer</a>
-            </li>
-          
-            <li class="archive-post archive-day" data-date="20170707">
-              <a class="archive-post-title" href="https://www.orztu.com/leetcode/012-integer-to-roman/">LeetCode 12. Integer to Roman</a>
-            </li>
-          
-            <li class="archive-post archive-day" data-date="20170706">
-              <a class="archive-post-title" href="https://www.orztu.com/leetcode/011-container-with-most-water/">LeetCode 11. Container With Most Water</a>
-            </li>
-          
-        </ul>
-      
-        <ul class="archive-posts archive-month" data-date="201705">
-          <h5 class="archive-title" style="text-decoration: none;">May</h5>
-          
-            <li class="archive-post archive-day" data-date="20170531">
-              <a class="archive-post-title" href="https://www.orztu.com/post/tianlongbabu/">天龙八部</a>
-            </li>
-          
-            <li class="archive-post archive-day" data-date="20170504">
-              <a class="archive-post-title" href="https://www.orztu.com/leetcode/051-n-queens/">LeetCode 51. N-Queens</a>
-            </li>
-          
-        </ul>
-      
-        <ul class="archive-posts archive-month" data-date="201704">
-          <h5 class="archive-title" style="text-decoration: none;">April</h5>
-          
-            <li class="archive-post archive-day" data-date="20170428">
-              <a class="archive-post-title" href="https://www.orztu.com/leetcode/042-trapping-rain-water/">LeetCode 42. Trapping Rain Water</a>
-            </li>
-          
-            <li class="archive-post archive-day" data-date="20170422">
-              <a class="archive-post-title" href="https://www.orztu.com/leetcode/037-sudoku-solver/">LeetCode 37. Sudoku Solver</a>
-            </li>
-          
-        </ul>
-      
-        <ul class="archive-posts archive-month" data-date="201703">
-          <h5 class="archive-title" style="text-decoration: none;">March</h5>
-          
-            <li class="archive-post archive-day" data-date="20170324">
-              <a class="archive-post-title" href="https://www.orztu.com/leetcode/010-regular-expression-matching/">LeetCode 10. Regular Expression Matching</a>
-            </li>
-          
-            <li class="archive-post archive-day" data-date="20170324">
-              <a class="archive-post-title" href="https://www.orztu.com/leetcode/009-palindrome-number/">LeetCode 9. Palindrome Number</a>
-            </li>
-          
-            <li class="archive-post archive-day" data-date="20170322">
-              <a class="archive-post-title" href="https://www.orztu.com/leetcode/008-string-to-integer-atoi/">LeetCode 8. String to Integer (atoi)</a>
-            </li>
-          
-            <li class="archive-post archive-day" data-date="20170321">
-              <a class="archive-post-title" href="https://www.orztu.com/leetcode/007-reverse-integer/">LeetCode 7. Reverse Integer</a>
-            </li>
-          
-            <li class="archive-post archive-day" data-date="20170317">
-              <a class="archive-post-title" href="https://www.orztu.com/leetcode/006-zigzag-conversion/">LeetCode 6. ZigZag Conversion</a>
-            </li>
-          
-            <li class="archive-post archive-day" data-date="20170316">
-              <a class="archive-post-title" href="https://www.orztu.com/leetcode/005-longest-palindromic-substring/">LeetCode 5. Longest Palindromic Substring</a>
-            </li>
-          
-            <li class="archive-post archive-day" data-date="20170316">
-              <a class="archive-post-title" href="https://www.orztu.com/leetcode/004-median-of-two-sorted-arrays/">LeetCode 4. Median of Two Sorted Arrays</a>
-            </li>
-          
-            <li class="archive-post archive-day" data-date="20170315">
-              <a class="archive-post-title" href="https://www.orztu.com/leetcode/003-longest-substring-without-repeating-characters/">LeetCode 3. Longest Substring Without Repeating Characters</a>
-            </li>
-          
-            <li class="archive-post archive-day" data-date="20170315">
-              <a class="archive-post-title" href="https://www.orztu.com/leetcode/002-add-two-numbers/">LeetCode 2. Add Two Numbers</a>
-            </li>
-          
-            <li class="archive-post archive-day" data-date="20170315">
-              <a class="archive-post-title" href="https://www.orztu.com/leetcode/001-two-sum/">LeetCode 1. Two Sum</a>
-            </li>
-          
-            <li class="archive-post archive-day" data-date="20170314">
-              <a class="archive-post-title" href="https://www.orztu.com/post/hello-world/">Hello World</a>
-            </li>
-          
-        </ul>
-      
-    </div>
-  
-</section>
-        </div>
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+
+            
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the comments</noscript>
+</div>
+
+              
+            
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2018 SelFree. All Rights Reserved
+  </span>
+</footer>
+
       </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        
+  <div class="post-actions-wrap">
+      <nav >
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                <i class="fa fa-angle-left"></i>
+                <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+              </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/post/text-watermark/" data-tooltip="python为图片添加文字水印">
+              
+                <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                <i class="fa fa-angle-right"></i>
+              </a>
+            </li>
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
     </div>
     
     <div id="about">
@@ -738,6 +779,32 @@ $(document).ready(function() {
   });
 });
 </script>
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'https:\/\/www.orztu.com\/post\/golang-slice-and-array\/';
+          
+            this.page.identifier = '\/post\/golang-slice-and-array\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'orztu';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
 
 
 

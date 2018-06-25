@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://www.orztu.com/post/golang-slice-and-array/</loc>
+    <lastmod>2018-06-25T15:22:42+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.orztu.com/post/text-watermark/</loc>
     <lastmod>2018-05-10T10:54:06+08:00</lastmod>
   </url>
@@ -189,7 +194,13 @@
   
   <url>
     <loc>https://www.orztu.com/categories/coding-life/</loc>
-    <lastmod>2018-05-10T10:54:06+08:00</lastmod>
+    <lastmod>2018-06-25T15:22:42+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.orztu.com/tags/golang/</loc>
+    <lastmod>2018-06-25T15:22:42+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -225,7 +236,7 @@
   
   <url>
     <loc>https://www.orztu.com/</loc>
-    <lastmod>2018-05-10T10:54:06+08:00</lastmod>
+    <lastmod>2018-06-25T15:22:42+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -237,7 +248,7 @@
   
   <url>
     <loc>https://www.orztu.com/post/</loc>
-    <lastmod>2018-05-10T10:54:06+08:00</lastmod>
+    <lastmod>2018-06-25T15:22:42+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -273,7 +284,7 @@
   
   <url>
     <loc>https://www.orztu.com/tags/</loc>
-    <lastmod>2018-03-30T16:59:00+08:00</lastmod>
+    <lastmod>2018-06-25T15:22:42+08:00</lastmod>
     <priority>0</priority>
   </url>
   

@@ -6,10 +6,27 @@
     <description>Recent content in Coding Life on Orz the way</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 10 May 2018 10:54:06 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 25 Jun 2018 15:22:42 +0800</lastBuildDate>
     
 	<atom:link href="https://www.orztu.com/categories/coding-life/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Golang Slice and Array</title>
+      <link>https://www.orztu.com/post/golang-slice-and-array/</link>
+      <pubDate>Mon, 25 Jun 2018 15:22:42 +0800</pubDate>
+      
+      <guid>https://www.orztu.com/post/golang-slice-and-array/</guid>
+      <description>&lt;p&gt;以前粗学时并没有留意Golang的数组，一直以为只有切片。&lt;/p&gt;
+
+&lt;p&gt;今天看《Go语言实战》时才发现Golang也有数组。&lt;/p&gt;
+
+&lt;p&gt;数组赋值时会拷贝整个数组，所以作为参数传递时也会完整拷贝，要考虑性能合理使用，必要时可以使用指针。&lt;/p&gt;
+
+&lt;p&gt;以下代码便于理解数组和切片：&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>python为图片添加文字水印</title>
