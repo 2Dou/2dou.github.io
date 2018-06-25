@@ -17,7 +17,9 @@
       <pubDate>Mon, 25 Jun 2018 15:22:42 +0800</pubDate>
       
       <guid>https://www.orztu.com/post/golang-slice-and-array/</guid>
-      <description>&lt;p&gt;以前粗学时并没有留意Golang的数组，一直以为只有切片。&lt;/p&gt;
+      <description>&lt;h2 id=&#34;数组与切片&#34;&gt;数组与切片&lt;/h2&gt;
+
+&lt;p&gt;以前粗学时并没有留意Golang的数组，一直以为只有切片。&lt;/p&gt;
 
 &lt;p&gt;今天看《Go语言实战》时才发现Golang也有数组。&lt;/p&gt;
 

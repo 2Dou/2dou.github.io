@@ -272,7 +272,9 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <p>以前粗学时并没有留意Golang的数组，一直以为只有切片。</p>
+              <h2 id="数组与切片">数组与切片</h2>
+
+<p>以前粗学时并没有留意Golang的数组，一直以为只有切片。</p>
 
 <p>今天看《Go语言实战》时才发现Golang也有数组。</p>
 
@@ -301,14 +303,12 @@
     <tbody>
       <tr>
         <td class="gutter">
-          <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre>
+          <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre>
         </td>
         <td class="code">
           <pre class=" code-highlight">package main
 
-import (
-    &#34;fmt&#34;
-)
+import &#34;fmt&#34;
 
 func main() {
     // 定义数组a1
@@ -352,6 +352,135 @@ s1: [2 -1 -2]
 <p>这里s1来自a1的切片，底层数组与a1同内存区域，所以对s1的append导致a1的数值被修改。</p>
 
 <p>在使用中也要注意这种情况，合理使用。</p>
+
+<h2 id="使用三个索引创建切片">使用三个索引创建切片</h2>
+
+<p>如果希望append时不影响原有底层数组，可以使用三个索引创建切片：</p>
+
+<p>
+  
+    
+  
+  
+  
+  
+
+
+<figure class="highlight ">
+  <figcaption>
+    
+      <span>golang</span>
+    
+  </figcaption>
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+          <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre>
+        </td>
+        <td class="code">
+          <pre class=" code-highlight">package main
+
+import &#34;fmt&#34;
+
+func main() {
+    a1 := [4]int{1, 2, 3, 4}
+    a2 := [4]int{1, 2, 3, 4}
+
+    s1 := a1[1:2]
+    s2 := a2[1:2:2]
+
+    s1 = append(s1, -1)
+    s2 = append(s2, -1)
+
+    fmt.Println(&#34;a1:&#34;, a1)
+    fmt.Println(&#34;a2:&#34;, a2)
+    fmt.Println(&#34;s1:&#34;, s1)
+    fmt.Println(&#34;s2:&#34;, s2)
+}</pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</figure></p>
+
+<p>输出：</p>
+
+<pre><code>a1: [1 2 -1 4]
+a2: [1 2 3 4]
+s1: [2 -1]
+s2: [2 -1]
+</code></pre>
+
+<p>可以看到此时对s2的append并没有影响a2数组。</p>
+
+<p>这种格式为：<code>slice[i:j:k]</code>的切片方式，前两个索引与原来相同，第三索引用于表示新切片的容量。但它不是直接表示容量大小，而是表示原切片或者数组的索引位置。当它越界时会出现运行时错误。</p>
+
+<p>所以新切片的长度和容量应该这样计算：</p>
+
+<pre><code>长度：j - i
+容量：k - i
+</code></pre>
+
+<h2 id="else">else</h2>
+
+<p>使用<code>slice[i:j:k]</code>创建切片的时候，并没有立即创建新的底层数组，而是在append时才创建新数组的：</p>
+
+<p>
+  
+    
+  
+  
+  
+  
+
+
+<figure class="highlight ">
+  <figcaption>
+    
+      <span>golang</span>
+    
+  </figcaption>
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+          <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre>
+        </td>
+        <td class="code">
+          <pre class=" code-highlight">func main() {
+    a1 := [4]int{1, 2, 3, 4}
+    // s1来自a1
+    s1 := a1[1:2:2]
+
+    // 修改a[1]
+    a1[1] = 0
+
+    fmt.Println(&#34;a1:&#34;, a1)
+    fmt.Println(&#34;s1:&#34;, s1)
+
+    fmt.Println(&#34;-------------&#34;)
+
+    // append s1
+    s1 = append(s1, -1)
+
+    fmt.Println(&#34;a1:&#34;, a1)
+    fmt.Println(&#34;s1:&#34;, s1)
+}</pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</figure></p>
+
+<p>输出：</p>
+
+<pre><code>a1: [1 0 3 4]
+s1: [0] // &lt;-对a[1]的修改也影响了s1
+-------------
+a1: [1 0 3 4]
+s1: [0 -1]
+</code></pre>
               
               
 
@@ -556,7 +685,9 @@ s1: [2 -1 -2]
                   Jun 6, 2018
                 </span>
               </span>
-              <div class="media-content hide-xs font-merryweather"><p>以前粗学时并没有留意Golang的数组，一直以为只有切片。</p>
+              <div class="media-content hide-xs font-merryweather"><h2 id="数组与切片">数组与切片</h2>
+
+<p>以前粗学时并没有留意Golang的数组，一直以为只有切片。</p>
 
 <p>今天看《Go语言实战》时才发现Golang也有数组。</p>
 
