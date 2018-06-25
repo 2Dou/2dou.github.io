@@ -301,7 +301,7 @@
     <tbody>
       <tr>
         <td class="gutter">
-          <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre>
+          <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre>
         </td>
         <td class="code">
           <pre class=" code-highlight">package main
@@ -319,6 +319,9 @@ func main() {
 
     var a3 [4]int
     a3 = a1 // 同样会完整拷贝
+
+    // a2修改自己的内存区域
+    a2[0] = 0
 
     // 切片s1来自a1，其空间仍由a1实现
     s1 := a1[1:2]
@@ -339,7 +342,7 @@ func main() {
 <p>输出：</p>
 
 <pre><code>a1: [1 2 -1 -2]
-a2: [1 2 3 4]
+a2: [0 2 3 4]
 a3: [1 2 3 4]
 s1: [2 -1 -2]
 </code></pre>
