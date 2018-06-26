@@ -66,6 +66,7 @@
     
     
     <link rel="stylesheet" href="https://www.orztu.com/css/style.min.css" />
+    <link rel="stylesheet" href="https://www.orztu.com/css/syntax.css" />
     
     
 
@@ -267,7 +268,6 @@
     
   
 
-
   </div>
 
 </div>
@@ -303,250 +303,188 @@ You may assume that there will be only one unique solution.</p>
 <p>后面的Pretty Solution：
 找到空格后，直接把依次把1-9填入，验证是否重复。反而耗时更少，代码也更简洁。</p>
 
+<h3 id="my-solution">My solution</h3>
 
+<div class="highlight"><pre class="chroma"><code class="language-golang" data-lang="golang"><span class="ln">  1</span><span class="kd">func</span> <span class="nx">solveSudoku</span><span class="p">(</span><span class="nx">board</span> <span class="p">[][]</span><span class="kt">byte</span><span class="p">)</span>  <span class="p">{</span>
+<span class="ln">  2</span>    <span class="nx">setNumber</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">board</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="ln">  3</span><span class="p">}</span>
+<span class="ln">  4</span>
+<span class="ln">  5</span><span class="kd">func</span> <span class="nx">setNumber</span><span class="p">(</span><span class="nx">board</span> <span class="o">*</span><span class="p">[][]</span><span class="kt">byte</span><span class="p">,</span> <span class="nx">index</span> <span class="kt">int</span><span class="p">)</span> <span class="kt">bool</span> <span class="p">{</span>
+<span class="ln">  6</span>    <span class="nx">row</span> <span class="o">:=</span> <span class="nb">int</span><span class="p">(</span><span class="nx">index</span> <span class="o">/</span> <span class="mi">9</span><span class="p">)</span>
+<span class="ln">  7</span>    <span class="nx">col</span> <span class="o">:=</span> <span class="nx">index</span> <span class="o">%</span> <span class="mi">9</span>
+<span class="ln">  8</span>
+<span class="ln">  9</span>    <span class="k">if</span> <span class="nx">index</span> <span class="o">&gt;=</span> <span class="mi">81</span> <span class="p">{</span>
+<span class="ln"> 10</span>        <span class="k">return</span> <span class="kc">true</span>
+<span class="ln"> 11</span>    <span class="p">}</span>
+<span class="ln"> 12</span>
+<span class="ln"> 13</span>    <span class="nx">canbe</span> <span class="o">:=</span> <span class="nx">getPossibleNumbers</span><span class="p">(</span><span class="o">*</span><span class="nx">board</span><span class="p">,</span> <span class="nx">row</span><span class="p">,</span> <span class="nx">col</span><span class="p">)</span>
+<span class="ln"> 14</span>    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="nx">canbe</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">{</span>
+<span class="ln"> 15</span>        <span class="k">return</span> <span class="kc">false</span>
+<span class="ln"> 16</span>    <span class="p">}</span>
+<span class="ln"> 17</span>
+<span class="ln"> 18</span>    <span class="nx">reset</span> <span class="o">:=</span> <span class="p">(</span><span class="o">*</span><span class="nx">board</span><span class="p">)[</span><span class="nx">row</span><span class="p">][</span><span class="nx">col</span><span class="p">]</span>
+<span class="ln"> 19</span>    <span class="nx">ok</span> <span class="o">:=</span> <span class="kc">true</span>
+<span class="ln"> 20</span>    <span class="k">for</span> <span class="nx">_</span><span class="p">,</span> <span class="nx">num</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">canbe</span> <span class="p">{</span>
+<span class="ln"> 21</span>        <span class="p">(</span><span class="o">*</span><span class="nx">board</span><span class="p">)[</span><span class="nx">row</span><span class="p">][</span><span class="nx">col</span><span class="p">]</span> <span class="p">=</span> <span class="nx">num</span>
+<span class="ln"> 22</span>        <span class="nx">ok</span> <span class="p">=</span> <span class="nx">setNumber</span><span class="p">(</span><span class="nx">board</span><span class="p">,</span> <span class="nx">index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+<span class="ln"> 23</span>        <span class="k">if</span> <span class="nx">ok</span> <span class="p">{</span>
+<span class="ln"> 24</span>            <span class="k">break</span>
+<span class="ln"> 25</span>        <span class="p">}</span>
+<span class="ln"> 26</span>    <span class="p">}</span>
+<span class="ln"> 27</span>
+<span class="ln"> 28</span>    <span class="k">if</span> <span class="p">!</span><span class="nx">ok</span> <span class="p">{</span>
+<span class="ln"> 29</span>        <span class="p">(</span><span class="o">*</span><span class="nx">board</span><span class="p">)[</span><span class="nx">row</span><span class="p">][</span><span class="nx">col</span><span class="p">]</span> <span class="p">=</span> <span class="nx">reset</span>
+<span class="ln"> 30</span>    <span class="p">}</span>
+<span class="ln"> 31</span>
+<span class="ln"> 32</span>    <span class="k">return</span> <span class="nx">ok</span>
+<span class="ln"> 33</span><span class="p">}</span>
+<span class="ln"> 34</span>
+<span class="ln"> 35</span><span class="kd">func</span> <span class="nx">getPossibleNumbers</span><span class="p">(</span><span class="nx">board</span> <span class="p">[][]</span><span class="kt">byte</span><span class="p">,</span> <span class="nx">i</span><span class="p">,</span> <span class="nx">j</span> <span class="kt">int</span><span class="p">)</span> <span class="p">[]</span><span class="kt">byte</span> <span class="p">{</span>
+<span class="ln"> 36</span>    <span class="nx">num</span> <span class="o">:=</span> <span class="nx">board</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="nx">j</span><span class="p">]</span>
+<span class="ln"> 37</span>    <span class="k">if</span> <span class="nx">num</span> <span class="o">!=</span> <span class="sc">&#39;.&#39;</span> <span class="p">{</span>
+<span class="ln"> 38</span>        <span class="c1">// skip this position
+</span><span class="ln"> 39</span><span class="c1"></span>        <span class="k">return</span> <span class="p">[]</span><span class="kt">byte</span><span class="p">{</span><span class="nx">num</span><span class="p">}</span>
+<span class="ln"> 40</span>    <span class="p">}</span>
+<span class="ln"> 41</span>
+<span class="ln"> 42</span>    <span class="nx">canbe</span> <span class="o">:=</span> <span class="kd">map</span><span class="p">[</span><span class="kt">byte</span><span class="p">]</span><span class="kd">struct</span><span class="p">{}{</span>
+<span class="ln"> 43</span>        <span class="sc">&#39;1&#39;</span><span class="p">:</span> <span class="kd">struct</span><span class="p">{}{},</span>
+<span class="ln"> 44</span>        <span class="sc">&#39;2&#39;</span><span class="p">:</span> <span class="kd">struct</span><span class="p">{}{},</span>
+<span class="ln"> 45</span>        <span class="sc">&#39;3&#39;</span><span class="p">:</span> <span class="kd">struct</span><span class="p">{}{},</span>
+<span class="ln"> 46</span>        <span class="sc">&#39;4&#39;</span><span class="p">:</span> <span class="kd">struct</span><span class="p">{}{},</span>
+<span class="ln"> 47</span>        <span class="sc">&#39;5&#39;</span><span class="p">:</span> <span class="kd">struct</span><span class="p">{}{},</span>
+<span class="ln"> 48</span>        <span class="sc">&#39;6&#39;</span><span class="p">:</span> <span class="kd">struct</span><span class="p">{}{},</span>
+<span class="ln"> 49</span>        <span class="sc">&#39;7&#39;</span><span class="p">:</span> <span class="kd">struct</span><span class="p">{}{},</span>
+<span class="ln"> 50</span>        <span class="sc">&#39;8&#39;</span><span class="p">:</span> <span class="kd">struct</span><span class="p">{}{},</span>
+<span class="ln"> 51</span>        <span class="sc">&#39;9&#39;</span><span class="p">:</span> <span class="kd">struct</span><span class="p">{}{},</span>
+<span class="ln"> 52</span>    <span class="p">}</span>
+<span class="ln"> 53</span>
+<span class="ln"> 54</span>    <span class="c1">// check row-i, remove number from &#39;canbe&#39; which have been set to other postion
+</span><span class="ln"> 55</span><span class="c1"></span>    <span class="k">for</span> <span class="nx">col</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">col</span> <span class="p">&lt;</span> <span class="mi">9</span><span class="p">;</span> <span class="nx">col</span><span class="o">++</span> <span class="p">{</span>
+<span class="ln"> 56</span>        <span class="k">if</span> <span class="nx">col</span> <span class="o">==</span> <span class="nx">j</span> <span class="p">{</span>
+<span class="ln"> 57</span>            <span class="k">continue</span>
+<span class="ln"> 58</span>        <span class="p">}</span>
+<span class="ln"> 59</span>
+<span class="ln"> 60</span>        <span class="k">if</span> <span class="nx">removeFromPossibleNumber</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">canbe</span><span class="p">,</span> <span class="nx">board</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="nx">col</span><span class="p">])</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">{</span>
+<span class="ln"> 61</span>            <span class="k">return</span> <span class="p">[]</span><span class="kt">byte</span><span class="p">{}</span>
+<span class="ln"> 62</span>        <span class="p">}</span>
+<span class="ln"> 63</span>    <span class="p">}</span>
+<span class="ln"> 64</span>
+<span class="ln"> 65</span>    <span class="c1">// check col-j, remove number from &#39;canbe&#39; which have been set to other postion
+</span><span class="ln"> 66</span><span class="c1"></span>    <span class="k">for</span> <span class="nx">row</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">row</span> <span class="p">&lt;</span> <span class="mi">9</span><span class="p">;</span> <span class="nx">row</span><span class="o">++</span> <span class="p">{</span>
+<span class="ln"> 67</span>        <span class="k">if</span> <span class="nx">row</span> <span class="o">==</span> <span class="nx">i</span> <span class="p">{</span>
+<span class="ln"> 68</span>            <span class="k">continue</span>
+<span class="ln"> 69</span>        <span class="p">}</span>
+<span class="ln"> 70</span>        <span class="k">if</span> <span class="nx">removeFromPossibleNumber</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">canbe</span><span class="p">,</span> <span class="nx">board</span><span class="p">[</span><span class="nx">row</span><span class="p">][</span><span class="nx">j</span><span class="p">])</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">{</span>
+<span class="ln"> 71</span>            <span class="k">return</span> <span class="p">[]</span><span class="kt">byte</span><span class="p">{}</span>
+<span class="ln"> 72</span>        <span class="p">}</span>
+<span class="ln"> 73</span>    <span class="p">}</span>
+<span class="ln"> 74</span>
+<span class="ln"> 75</span>    <span class="c1">// check the little sudoku block
+</span><span class="ln"> 76</span><span class="c1"></span>    <span class="nx">left</span> <span class="o">:=</span> <span class="mi">3</span> <span class="o">*</span> <span class="nb">int</span><span class="p">(</span><span class="nx">i</span> <span class="o">/</span> <span class="mi">3</span><span class="p">)</span>
+<span class="ln"> 77</span>    <span class="nx">top</span> <span class="o">:=</span> <span class="mi">3</span> <span class="o">*</span> <span class="nb">int</span><span class="p">(</span><span class="nx">j</span> <span class="o">/</span> <span class="mi">3</span><span class="p">)</span>
+<span class="ln"> 78</span>    <span class="k">for</span> <span class="nx">l</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">l</span> <span class="p">&lt;</span> <span class="mi">3</span><span class="p">;</span> <span class="nx">l</span><span class="o">++</span> <span class="p">{</span>
+<span class="ln"> 79</span>        <span class="k">for</span> <span class="nx">t</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">t</span> <span class="p">&lt;</span> <span class="mi">3</span><span class="p">;</span> <span class="nx">t</span><span class="o">++</span> <span class="p">{</span>
+<span class="ln"> 80</span>            <span class="nx">index_i</span> <span class="o">:=</span> <span class="nx">left</span> <span class="o">+</span> <span class="nx">l</span>
+<span class="ln"> 81</span>            <span class="nx">index_j</span> <span class="o">:=</span> <span class="nx">top</span> <span class="o">+</span> <span class="nx">t</span>
+<span class="ln"> 82</span>
+<span class="ln"> 83</span>            <span class="k">if</span> <span class="nx">index_i</span> <span class="o">==</span> <span class="nx">i</span> <span class="o">&amp;&amp;</span> <span class="nx">index_j</span> <span class="o">==</span> <span class="nx">j</span> <span class="p">{</span>
+<span class="ln"> 84</span>                <span class="k">continue</span>
+<span class="ln"> 85</span>            <span class="p">}</span>
+<span class="ln"> 86</span>
+<span class="ln"> 87</span>            <span class="k">if</span> <span class="nx">removeFromPossibleNumber</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">canbe</span><span class="p">,</span> <span class="nx">board</span><span class="p">[</span><span class="nx">index_i</span><span class="p">][</span><span class="nx">index_j</span><span class="p">])</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">{</span>
+<span class="ln"> 88</span>                <span class="k">return</span> <span class="p">[]</span><span class="kt">byte</span><span class="p">{}</span>
+<span class="ln"> 89</span>            <span class="p">}</span>
+<span class="ln"> 90</span>        <span class="p">}</span>
+<span class="ln"> 91</span>    <span class="p">}</span>
+<span class="ln"> 92</span>
+<span class="ln"> 93</span>    <span class="kd">var</span> <span class="nx">n</span> <span class="kt">byte</span>
+<span class="ln"> 94</span>    <span class="kd">var</span> <span class="nx">result</span> <span class="p">[]</span><span class="kt">byte</span>
+<span class="ln"> 95</span>    <span class="k">for</span> <span class="nx">n</span> <span class="p">=</span> <span class="sc">&#39;1&#39;</span><span class="p">;</span> <span class="nx">n</span> <span class="o">&lt;=</span> <span class="sc">&#39;9&#39;</span><span class="p">;</span> <span class="nx">n</span><span class="o">++</span> <span class="p">{</span>
+<span class="ln"> 96</span>        <span class="k">if</span> <span class="nx">_</span><span class="p">,</span> <span class="nx">ok</span> <span class="o">:=</span> <span class="nx">canbe</span><span class="p">[</span><span class="nx">n</span><span class="p">];</span> <span class="nx">ok</span> <span class="p">{</span>
+<span class="ln"> 97</span>            <span class="nx">result</span> <span class="p">=</span> <span class="nb">append</span><span class="p">(</span><span class="nx">result</span><span class="p">,</span> <span class="nx">n</span><span class="p">)</span>
+<span class="ln"> 98</span>        <span class="p">}</span>
+<span class="ln"> 99</span>    <span class="p">}</span>
+<span class="ln">100</span>
+<span class="ln">101</span>    <span class="k">return</span> <span class="nx">result</span>
+<span class="ln">102</span><span class="p">}</span>
+<span class="ln">103</span>
+<span class="ln">104</span><span class="kd">func</span> <span class="nx">removeFromPossibleNumber</span><span class="p">(</span><span class="nx">canbe</span> <span class="o">*</span><span class="kd">map</span><span class="p">[</span><span class="kt">byte</span><span class="p">]</span><span class="kd">struct</span><span class="p">{},</span> <span class="nx">key</span> <span class="kt">byte</span><span class="p">)</span> <span class="kt">int</span> <span class="p">{</span>
+<span class="ln">105</span>    <span class="k">if</span> <span class="nx">_</span><span class="p">,</span> <span class="nx">ok</span> <span class="o">:=</span> <span class="p">(</span><span class="o">*</span><span class="nx">canbe</span><span class="p">)[</span><span class="nx">key</span><span class="p">];</span> <span class="nx">ok</span> <span class="p">{</span>
+<span class="ln">106</span>        <span class="nb">delete</span><span class="p">(</span><span class="o">*</span><span class="nx">canbe</span><span class="p">,</span> <span class="nx">key</span><span class="p">)</span>
+<span class="ln">107</span>    <span class="p">}</span>
+<span class="ln">108</span>
+<span class="ln">109</span>    <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="o">*</span><span class="nx">canbe</span><span class="p">)</span>
+<span class="ln">110</span><span class="p">}</span></code></pre></div>
 
-  
-  
-  
-  
-  
+<h3 id="pretty-solution">Pretty solution</h3>
 
-  
-  
-  
-  
-  
-
-
-  
-    
-  
-  
-
-<figure class="codeblock codeblock--tabbed">
-  <figcaption>
-    
-      <span>Solution</span>
-    
-    <ul class="tabs">
-      
-        <li class="tab active">my_solution</li>
-      
-        <li class="tab ">pretty_solution</li>
-      
-    </ul>
-  </figcaption> 
-  <div class="tabs-content">
-    
-      
-      <figure class="highlight my_solution" style="display: block;">   
-        <table>
-          <tbody>
-            <tr>
-              <td class="gutter">
-                <pre><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br><span>35</span><br><span>36</span><br><span>37</span><br><span>38</span><br><span>39</span><br><span>40</span><br><span>41</span><br><span>42</span><br><span>43</span><br><span>44</span><br><span>45</span><br><span>46</span><br><span>47</span><br><span>48</span><br><span>49</span><br><span>50</span><br><span>51</span><br><span>52</span><br><span>53</span><br><span>54</span><br><span>55</span><br><span>56</span><br><span>57</span><br><span>58</span><br><span>59</span><br><span>60</span><br><span>61</span><br><span>62</span><br><span>63</span><br><span>64</span><br><span>65</span><br><span>66</span><br><span>67</span><br><span>68</span><br><span>69</span><br><span>70</span><br><span>71</span><br><span>72</span><br><span>73</span><br><span>74</span><br><span>75</span><br><span>76</span><br><span>77</span><br><span>78</span><br><span>79</span><br><span>80</span><br><span>81</span><br><span>82</span><br><span>83</span><br><span>84</span><br><span>85</span><br><span>86</span><br><span>87</span><br><span>88</span><br><span>89</span><br><span>90</span><br><span>91</span><br><span>92</span><br><span>93</span><br><span>94</span><br><span>95</span><br><span>96</span><br><span>97</span><br><span>98</span><br><span>99</span><br><span>100</span><br><span>101</span><br><span>102</span><br><span>103</span><br><span>104</span><br><span>105</span><br><span>106</span><br><span>107</span><br><span>108</span><br><span>109</span><br><span>110</span><br></pre>
-              </td>
-              <td class="code">
-                <pre class="my_solution code-highlight">func solveSudoku(board [][]byte)  {
-    setNumber(&amp;board, 0)
-}
-
-func setNumber(board *[][]byte, index int) bool {
-    row := int(index / 9)
-    col := index % 9
-
-    if index &gt;= 81 {
-        return true
-    }
-
-    canbe := getPossibleNumbers(*board, row, col)
-    if len(canbe) == 0 {
-        return false
-    }
-
-    reset := (*board)[row][col]
-    ok := true
-    for _, num := range canbe {
-        (*board)[row][col] = num
-        ok = setNumber(board, index &#43; 1)
-        if ok {
-            break
-        }
-    }
-
-    if !ok {
-        (*board)[row][col] = reset
-    }
-
-    return ok
-}
-
-func getPossibleNumbers(board [][]byte, i, j int) []byte {
-    num := board[i][j]
-    if num != &#39;.&#39; {
-        // skip this position
-        return []byte{num}
-    }
-
-    canbe := map[byte]struct{}{
-        &#39;1&#39;: struct{}{},
-        &#39;2&#39;: struct{}{},
-        &#39;3&#39;: struct{}{},
-        &#39;4&#39;: struct{}{},
-        &#39;5&#39;: struct{}{},
-        &#39;6&#39;: struct{}{},
-        &#39;7&#39;: struct{}{},
-        &#39;8&#39;: struct{}{},
-        &#39;9&#39;: struct{}{},
-    }
-
-    // check row-i, remove number from &#39;canbe&#39; which have been set to other postion
-    for col := 0; col &lt; 9; col&#43;&#43; {
-        if col == j {
-            continue
-        }
-
-        if removeFromPossibleNumber(&amp;canbe, board[i][col]) == 0 {
-            return []byte{}
-        }
-    }
-
-    // check col-j, remove number from &#39;canbe&#39; which have been set to other postion
-    for row := 0; row &lt; 9; row&#43;&#43; {
-        if row == i {
-            continue
-        }
-        if removeFromPossibleNumber(&amp;canbe, board[row][j]) == 0 {
-            return []byte{}
-        }
-    }
-
-    // check the little sudoku block
-    left := 3 * int(i / 3)
-    top := 3 * int(j / 3)
-    for l := 0; l &lt; 3; l&#43;&#43; {
-        for t := 0; t &lt; 3; t&#43;&#43; {
-            index_i := left &#43; l
-            index_j := top &#43; t
-
-            if index_i == i &amp;&amp; index_j == j {
-                continue
-            }
-
-            if removeFromPossibleNumber(&amp;canbe, board[index_i][index_j]) == 0 {
-                return []byte{}
-            }
-        }
-    }
-
-    var n byte
-    var result []byte
-    for n = &#39;1&#39;; n &lt;= &#39;9&#39;; n&#43;&#43; {
-        if _, ok := canbe[n]; ok {
-            result = append(result, n)
-        }
-    }
-
-    return result
-}
-
-func removeFromPossibleNumber(canbe *map[byte]struct{}, key byte) int {
-    if _, ok := (*canbe)[key]; ok {
-        delete(*canbe, key)
-    }
-
-    return len(*canbe)
-}</pre>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </figure>
-    
-      
-      <figure class="highlight pretty_solution" style="display: none;">   
-        <table>
-          <tbody>
-            <tr>
-              <td class="gutter">
-                <pre><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br><span>35</span><br><span>36</span><br><span>37</span><br><span>38</span><br><span>39</span><br><span>40</span><br><span>41</span><br><span>42</span><br><span>43</span><br><span>44</span><br><span>45</span><br><span>46</span><br><span>47</span><br><span>48</span><br><span>49</span><br><span>50</span><br><span>51</span><br><span>52</span><br><span>53</span><br><span>54</span><br><span>55</span><br><span>56</span><br><span>57</span><br><span>58</span><br><span>59</span><br><span>60</span><br><span>61</span><br><span>62</span><br><span>63</span><br><span>64</span><br><span>65</span><br><span>66</span><br><span>67</span><br></pre>
-              </td>
-              <td class="code">
-                <pre class="pretty_solution code-highlight">func solveSudoku(board [][]byte)  {
-    setNumber(&amp;board, 0)
-}
-
-func setNumber(board *[][]byte, index int) bool {
-    row := int(index / 9)
-    col := index % 9
-
-    if index &gt;= 81 {
-        return true
-    }
-
-    if (*board)[row][col] == &#39;.&#39; {
-        var c byte
-        for c = &#39;1&#39;; c &lt;= &#39;9&#39;; c&#43;&#43; {
-            (*board)[row][col] = c
-            if valid(board, row, col) &amp;&amp; setNumber(board, index &#43; 1) {
-                return true
-            }
-            (*board)[row][col] = &#39;.&#39;
-        }
-        return false
-    } else {
-        return setNumber(board, index &#43; 1)
-    }
-}
-
-func valid(board *[][]byte, row, col int) bool {
-    num := (*board)[row][col]
-
-    // check row
-    for i := 0; i &lt; 9; i&#43;&#43; {
-        if i == row {
-            continue
-        }
-        if (*board)[i][col] == num {
-            return false
-        }
-    }
-
-    // check col
-    for j := 0; j &lt; 9; j&#43;&#43; {
-        if j == col {
-            continue
-        }
-        if (*board)[row][j] == num {
-            return false
-        }
-    }
-
-    // check the little sudoku block
-    left := 3 * int(row / 3)
-    top := 3 * int(col / 3)
-    for i := left; i &lt; left &#43; 3; i&#43;&#43; {
-        for j := top; j &lt; top &#43; 3; j&#43;&#43; {
-            if i == row &amp;&amp; j == col {
-                continue
-            }
-
-            if (*board)[i][j] == num {
-                return false
-            }
-        }
-    }
-
-    return true
-}</pre>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </figure>
-    
-  </div>
-</figure>
+<p><div class="highlight"><pre class="chroma"><code class="language-golang" data-lang="golang"><span class="ln"> 1</span><span class="kd">func</span> <span class="nx">solveSudoku</span><span class="p">(</span><span class="nx">board</span> <span class="p">[][]</span><span class="kt">byte</span><span class="p">)</span>  <span class="p">{</span>
+<span class="ln"> 2</span>    <span class="nx">setNumber</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">board</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="ln"> 3</span><span class="p">}</span>
+<span class="ln"> 4</span>
+<span class="ln"> 5</span><span class="kd">func</span> <span class="nx">setNumber</span><span class="p">(</span><span class="nx">board</span> <span class="o">*</span><span class="p">[][]</span><span class="kt">byte</span><span class="p">,</span> <span class="nx">index</span> <span class="kt">int</span><span class="p">)</span> <span class="kt">bool</span> <span class="p">{</span>
+<span class="ln"> 6</span>    <span class="nx">row</span> <span class="o">:=</span> <span class="nb">int</span><span class="p">(</span><span class="nx">index</span> <span class="o">/</span> <span class="mi">9</span><span class="p">)</span>
+<span class="ln"> 7</span>    <span class="nx">col</span> <span class="o">:=</span> <span class="nx">index</span> <span class="o">%</span> <span class="mi">9</span>
+<span class="ln"> 8</span>
+<span class="ln"> 9</span>    <span class="k">if</span> <span class="nx">index</span> <span class="o">&gt;=</span> <span class="mi">81</span> <span class="p">{</span>
+<span class="ln">10</span>        <span class="k">return</span> <span class="kc">true</span>
+<span class="ln">11</span>    <span class="p">}</span>
+<span class="ln">12</span>
+<span class="ln">13</span>    <span class="k">if</span> <span class="p">(</span><span class="o">*</span><span class="nx">board</span><span class="p">)[</span><span class="nx">row</span><span class="p">][</span><span class="nx">col</span><span class="p">]</span> <span class="o">==</span> <span class="sc">&#39;.&#39;</span> <span class="p">{</span>
+<span class="ln">14</span>        <span class="kd">var</span> <span class="nx">c</span> <span class="kt">byte</span>
+<span class="ln">15</span>        <span class="k">for</span> <span class="nx">c</span> <span class="p">=</span> <span class="sc">&#39;1&#39;</span><span class="p">;</span> <span class="nx">c</span> <span class="o">&lt;=</span> <span class="sc">&#39;9&#39;</span><span class="p">;</span> <span class="nx">c</span><span class="o">++</span> <span class="p">{</span>
+<span class="ln">16</span>            <span class="p">(</span><span class="o">*</span><span class="nx">board</span><span class="p">)[</span><span class="nx">row</span><span class="p">][</span><span class="nx">col</span><span class="p">]</span> <span class="p">=</span> <span class="nx">c</span>
+<span class="ln">17</span>            <span class="k">if</span> <span class="nx">valid</span><span class="p">(</span><span class="nx">board</span><span class="p">,</span> <span class="nx">row</span><span class="p">,</span> <span class="nx">col</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="nx">setNumber</span><span class="p">(</span><span class="nx">board</span><span class="p">,</span> <span class="nx">index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln">18</span>                <span class="k">return</span> <span class="kc">true</span>
+<span class="ln">19</span>            <span class="p">}</span>
+<span class="ln">20</span>            <span class="p">(</span><span class="o">*</span><span class="nx">board</span><span class="p">)[</span><span class="nx">row</span><span class="p">][</span><span class="nx">col</span><span class="p">]</span> <span class="p">=</span> <span class="sc">&#39;.&#39;</span>
+<span class="ln">21</span>        <span class="p">}</span>
+<span class="ln">22</span>        <span class="k">return</span> <span class="kc">false</span>
+<span class="ln">23</span>    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+<span class="ln">24</span>        <span class="k">return</span> <span class="nx">setNumber</span><span class="p">(</span><span class="nx">board</span><span class="p">,</span> <span class="nx">index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+<span class="ln">25</span>    <span class="p">}</span>
+<span class="ln">26</span><span class="p">}</span>
+<span class="ln">27</span>
+<span class="ln">28</span><span class="kd">func</span> <span class="nx">valid</span><span class="p">(</span><span class="nx">board</span> <span class="o">*</span><span class="p">[][]</span><span class="kt">byte</span><span class="p">,</span> <span class="nx">row</span><span class="p">,</span> <span class="nx">col</span> <span class="kt">int</span><span class="p">)</span> <span class="kt">bool</span> <span class="p">{</span>
+<span class="ln">29</span>    <span class="nx">num</span> <span class="o">:=</span> <span class="p">(</span><span class="o">*</span><span class="nx">board</span><span class="p">)[</span><span class="nx">row</span><span class="p">][</span><span class="nx">col</span><span class="p">]</span>
+<span class="ln">30</span>
+<span class="ln">31</span>    <span class="c1">// check row
+</span><span class="ln">32</span><span class="c1"></span>    <span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="mi">9</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
+<span class="ln">33</span>        <span class="k">if</span> <span class="nx">i</span> <span class="o">==</span> <span class="nx">row</span> <span class="p">{</span>
+<span class="ln">34</span>            <span class="k">continue</span>
+<span class="ln">35</span>        <span class="p">}</span>
+<span class="ln">36</span>        <span class="k">if</span> <span class="p">(</span><span class="o">*</span><span class="nx">board</span><span class="p">)[</span><span class="nx">i</span><span class="p">][</span><span class="nx">col</span><span class="p">]</span> <span class="o">==</span> <span class="nx">num</span> <span class="p">{</span>
+<span class="ln">37</span>            <span class="k">return</span> <span class="kc">false</span>
+<span class="ln">38</span>        <span class="p">}</span>
+<span class="ln">39</span>    <span class="p">}</span>
+<span class="ln">40</span>
+<span class="ln">41</span>    <span class="c1">// check col
+</span><span class="ln">42</span><span class="c1"></span>    <span class="k">for</span> <span class="nx">j</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">j</span> <span class="p">&lt;</span> <span class="mi">9</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span> <span class="p">{</span>
+<span class="ln">43</span>        <span class="k">if</span> <span class="nx">j</span> <span class="o">==</span> <span class="nx">col</span> <span class="p">{</span>
+<span class="ln">44</span>            <span class="k">continue</span>
+<span class="ln">45</span>        <span class="p">}</span>
+<span class="ln">46</span>        <span class="k">if</span> <span class="p">(</span><span class="o">*</span><span class="nx">board</span><span class="p">)[</span><span class="nx">row</span><span class="p">][</span><span class="nx">j</span><span class="p">]</span> <span class="o">==</span> <span class="nx">num</span> <span class="p">{</span>
+<span class="ln">47</span>            <span class="k">return</span> <span class="kc">false</span>
+<span class="ln">48</span>        <span class="p">}</span>
+<span class="ln">49</span>    <span class="p">}</span>
+<span class="ln">50</span>
+<span class="ln">51</span>    <span class="c1">// check the little sudoku block
+</span><span class="ln">52</span><span class="c1"></span>    <span class="nx">left</span> <span class="o">:=</span> <span class="mi">3</span> <span class="o">*</span> <span class="nb">int</span><span class="p">(</span><span class="nx">row</span> <span class="o">/</span> <span class="mi">3</span><span class="p">)</span>
+<span class="ln">53</span>    <span class="nx">top</span> <span class="o">:=</span> <span class="mi">3</span> <span class="o">*</span> <span class="nb">int</span><span class="p">(</span><span class="nx">col</span> <span class="o">/</span> <span class="mi">3</span><span class="p">)</span>
+<span class="ln">54</span>    <span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="nx">left</span><span class="p">;</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="nx">left</span> <span class="o">+</span> <span class="mi">3</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
+<span class="ln">55</span>        <span class="k">for</span> <span class="nx">j</span> <span class="o">:=</span> <span class="nx">top</span><span class="p">;</span> <span class="nx">j</span> <span class="p">&lt;</span> <span class="nx">top</span> <span class="o">+</span> <span class="mi">3</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span> <span class="p">{</span>
+<span class="ln">56</span>            <span class="k">if</span> <span class="nx">i</span> <span class="o">==</span> <span class="nx">row</span> <span class="o">&amp;&amp;</span> <span class="nx">j</span> <span class="o">==</span> <span class="nx">col</span> <span class="p">{</span>
+<span class="ln">57</span>                <span class="k">continue</span>
+<span class="ln">58</span>            <span class="p">}</span>
+<span class="ln">59</span>
+<span class="ln">60</span>            <span class="k">if</span> <span class="p">(</span><span class="o">*</span><span class="nx">board</span><span class="p">)[</span><span class="nx">i</span><span class="p">][</span><span class="nx">j</span><span class="p">]</span> <span class="o">==</span> <span class="nx">num</span> <span class="p">{</span>
+<span class="ln">61</span>                <span class="k">return</span> <span class="kc">false</span>
+<span class="ln">62</span>            <span class="p">}</span>
+<span class="ln">63</span>        <span class="p">}</span>
+<span class="ln">64</span>    <span class="p">}</span>
+<span class="ln">65</span>
+<span class="ln">66</span>    <span class="k">return</span> <span class="kc">true</span>
+<span class="ln">67</span><span class="p">}</span></code></pre></div></p>
               
               
 
@@ -576,22 +514,24 @@ func valid(board *[][]byte, row, col int) bool {
   <div class="post-actions-wrap">
       <nav >
         <ul class="post-actions post-action-nav">
+          
             <li class="post-action">
               
                 <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/042-trapping-rain-water/" data-tooltip="LeetCode 42. Trapping Rain Water">
               
-                <i class="fa fa-angle-left"></i>
-                <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
-              </a>
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
             </li>
             <li class="post-action">
               
                 <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/010-regular-expression-matching/" data-tooltip="LeetCode 10. Regular Expression Matching">
               
-                <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
-                <i class="fa fa-angle-right"></i>
-              </a>
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
             </li>
+          
         </ul>
       </nav>
     <ul class="post-actions post-action-share" >
@@ -643,22 +583,24 @@ func valid(board *[][]byte, row, col int) bool {
   <div class="post-actions-wrap">
       <nav >
         <ul class="post-actions post-action-nav">
+          
             <li class="post-action">
               
                 <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/042-trapping-rain-water/" data-tooltip="LeetCode 42. Trapping Rain Water">
               
-                <i class="fa fa-angle-left"></i>
-                <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
-              </a>
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
             </li>
             <li class="post-action">
               
                 <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/010-regular-expression-matching/" data-tooltip="LeetCode 10. Regular Expression Matching">
               
-                <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
-                <i class="fa fa-angle-right"></i>
-              </a>
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
             </li>
+          
         </ul>
       </nav>
     <ul class="post-actions post-action-share" >
@@ -759,15 +701,13 @@ func valid(board *[][]byte, row, col int) bool {
               </span>
               <div class="media-content hide-xs font-merryweather"><h2 id="数组与切片">数组与切片</h2>
 
-<p>以前粗学时并没有留意Golang的数组，一直以为只有切片。</p>
+<p>以前粗学时并没有留意 Golang 的数组，一直以为只有切片。</p>
 
-<p>今天看《Go语言实战》时才发现Golang也有数组。</p>
+<p>今天看《Go语言实战》时才发现 Golang 也有数组。与切片的区别是定义时指定长度（例如长度为4的 int 型数组<code>var array [4]int</code>）。</p>
 
 <p>数组赋值时会拷贝整个数组，所以作为参数传递时也会完整拷贝，要考虑性能合理使用，必要时可以使用指针。</p>
 
-<p>以下代码便于理解数组和切片：</p>
-
-<p></p></div>
+<p>以下代码便于理解数组和切片：</p></div>
             </div>
             <div style="clear:both;"></div>
             <hr>
@@ -928,23 +868,6 @@ func valid(board *[][]byte, row, col int) bool {
             <hr>
           </div>
         
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://www.orztu.com/post/">
-                <h3 class="media-heading">Posts</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Jun 6, 2018
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather"></div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
       </div>
     </div>
     <div class="modal-footer">
@@ -952,7 +875,7 @@ func valid(board *[][]byte, row, col int) bool {
          data-message-zero="no post found"
          data-message-one="1 post found"
          data-message-other="{n} posts found">
-         9 posts found
+         8 posts found
       </p>
     </div>
   </div>
@@ -966,7 +889,9 @@ func valid(board *[][]byte, row, col int) bool {
 
     
 <script src="https://cdnjs.cat.net/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<script src="https://cdnjs.cat.net/ajax/libs/highlight.js/9.10.0/highlight.min.js"></script>
+
+
+
 <script src="https://cdnjs.cat.net/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
 <script src="https://cdnjs.cat.net/ajax/libs/fancybox/2.1.5/helpers/jquery.fancybox-thumbs.js"></script>
 
@@ -974,17 +899,7 @@ func valid(board *[][]byte, row, col int) bool {
 <script src="https://www.orztu.com/js/script.min.js"></script>
 
 
-<script>
-$(document).ready(function() {
-  hljs.configure({ classPrefix: '', useBR: false });
-  $('pre.code-highlight, pre > code').each(function(i, block) {
-    if (!$(this).hasClass('codeblock')) {
-      $(this).addClass('codeblock');
-    }
-    hljs.highlightBlock(block);
-  });
-});
-</script>
+
 
   
     

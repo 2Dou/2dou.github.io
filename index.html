@@ -63,6 +63,7 @@
     
     
     <link rel="stylesheet" href="https://www.orztu.com/css/style.min.css" />
+    <link rel="stylesheet" href="https://www.orztu.com/css/syntax.css" />
     
     
 
@@ -301,22 +302,19 @@
     
   
 
-
   </div>
 
     </div>
     <div class="postShorten-excerpt" itemprop="articleBody">
       <h2 id="数组与切片">数组与切片</h2>
 
-<p>以前粗学时并没有留意Golang的数组，一直以为只有切片。</p>
+<p>以前粗学时并没有留意 Golang 的数组，一直以为只有切片。</p>
 
-<p>今天看《Go语言实战》时才发现Golang也有数组。</p>
+<p>今天看《Go语言实战》时才发现 Golang 也有数组。与切片的区别是定义时指定长度（例如长度为4的 int 型数组<code>var array [4]int</code>）。</p>
 
 <p>数组赋值时会拷贝整个数组，所以作为参数传递时也会完整拷贝，要考虑性能合理使用，必要时可以使用指针。</p>
 
 <p>以下代码便于理解数组和切片：</p>
-
-<p></p>
       <p>
         <a href="https://www.orztu.com/post/golang-slice-and-array/" class="postShorten-excerpt_link link">Continue reading</a>
         
@@ -374,7 +372,6 @@
       <a class="category-link" href="https://www.orztu.com/categories/coding-life">coding life</a>
     
   
-
 
   </div>
 
@@ -443,7 +440,6 @@
       <a class="category-link" href="https://www.orztu.com/categories/leetcode">LeetCode</a>
     
   
-
 
   </div>
 
@@ -514,7 +510,6 @@
     
   
 
-
   </div>
 
     </div>
@@ -575,7 +570,6 @@
       <a class="category-link" href="https://www.orztu.com/categories/leetcode">LeetCode</a>
     
   
-
 
   </div>
 
@@ -654,7 +648,6 @@ For example,</p>
     
   
 
-
   </div>
 
     </div>
@@ -714,7 +707,6 @@ For example,</p>
     
   
 
-
   </div>
 
     </div>
@@ -744,13 +736,15 @@ For example,</p>
   <div class="pagination-bar">
     <ul class="pagination">
       
-      
-        <li class="pagination-next">
-          <a class="btn btn--default btn--small" href="https://www.orztu.com/page/2/">
-            <span class="hide-xs hide-sm text-small icon-ml">OLDER POSTS</span>
-            <i class="fa fa-angle-right text-base icon-ml"></i>
-          </a>
-        </li>
+        
+        
+          <li class="pagination-next">
+            <a class="btn btn--default btn--small" href="https://www.orztu.com/page/2/">
+              <span>OLDER POSTS</span>
+              <i class="fa fa-angle-right text-base icon-ml"></i>
+            </a>
+          </li>
+        
       
       <li class="pagination-number">page 1 of 5</li>
     </ul>
@@ -828,15 +822,13 @@ For example,</p>
               </span>
               <div class="media-content hide-xs font-merryweather"><h2 id="数组与切片">数组与切片</h2>
 
-<p>以前粗学时并没有留意Golang的数组，一直以为只有切片。</p>
+<p>以前粗学时并没有留意 Golang 的数组，一直以为只有切片。</p>
 
-<p>今天看《Go语言实战》时才发现Golang也有数组。</p>
+<p>今天看《Go语言实战》时才发现 Golang 也有数组。与切片的区别是定义时指定长度（例如长度为4的 int 型数组<code>var array [4]int</code>）。</p>
 
 <p>数组赋值时会拷贝整个数组，所以作为参数传递时也会完整拷贝，要考虑性能合理使用，必要时可以使用指针。</p>
 
-<p>以下代码便于理解数组和切片：</p>
-
-<p></p></div>
+<p>以下代码便于理解数组和切片：</p></div>
             </div>
             <div style="clear:both;"></div>
             <hr>
@@ -997,23 +989,6 @@ For example,</p>
             <hr>
           </div>
         
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://www.orztu.com/post/">
-                <h3 class="media-heading">Posts</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Jun 6, 2018
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather"></div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
       </div>
     </div>
     <div class="modal-footer">
@@ -1021,7 +996,7 @@ For example,</p>
          data-message-zero="no post found"
          data-message-one="1 post found"
          data-message-other="{n} posts found">
-         9 posts found
+         8 posts found
       </p>
     </div>
   </div>
@@ -1035,7 +1010,9 @@ For example,</p>
 
     
 <script src="https://cdnjs.cat.net/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<script src="https://cdnjs.cat.net/ajax/libs/highlight.js/9.10.0/highlight.min.js"></script>
+
+
+
 <script src="https://cdnjs.cat.net/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
 <script src="https://cdnjs.cat.net/ajax/libs/fancybox/2.1.5/helpers/jquery.fancybox-thumbs.js"></script>
 
@@ -1043,17 +1020,7 @@ For example,</p>
 <script src="https://www.orztu.com/js/script.min.js"></script>
 
 
-<script>
-$(document).ready(function() {
-  hljs.configure({ classPrefix: '', useBR: false });
-  $('pre.code-highlight, pre > code').each(function(i, block) {
-    if (!$(this).hasClass('codeblock')) {
-      $(this).addClass('codeblock');
-    }
-    hljs.highlightBlock(block);
-  });
-});
-</script>
+
 
 
 

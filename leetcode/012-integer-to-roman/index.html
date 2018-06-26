@@ -66,6 +66,7 @@
     
     
     <link rel="stylesheet" href="https://www.orztu.com/css/style.min.css" />
+    <link rel="stylesheet" href="https://www.orztu.com/css/syntax.css" />
     
     
 
@@ -267,7 +268,6 @@
     
   
 
-
   </div>
 
 </div>
@@ -338,43 +338,14 @@ Input is guaranteed to be within the range from 1 to 3999.</p>
 
 <p>因为限定了范围，所以千位数也用了Slice</p>
 
-
-  
-    
-  
-  
-    
-  
-  
-  
-
-
-<figure class="highlight go">
-  <figcaption>
-    
-      <span>Solution</span>
-    
-  </figcaption>
-  <table>
-    <tbody>
-      <tr>
-        <td class="gutter">
-          <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre>
-        </td>
-        <td class="code">
-          <pre class="go code-highlight">func intToRoman(num int) string {
-    M := []string{&#34;&#34;, &#34;M&#34;, &#34;MM&#34;, &#34;MMM&#34;}
-    C := []string{&#34;&#34;, &#34;C&#34;, &#34;CC&#34;, &#34;CCC&#34;, &#34;CD&#34;, &#34;D&#34;, &#34;DC&#34;, &#34;DCC&#34;, &#34;DCCC&#34;, &#34;CM&#34;}
-    X := []string{&#34;&#34;, &#34;X&#34;, &#34;XX&#34;, &#34;XXX&#34;, &#34;XL&#34;, &#34;L&#34;, &#34;LX&#34;, &#34;LXX&#34;, &#34;LXXX&#34;, &#34;XC&#34;}
-    I := []string{&#34;&#34;, &#34;I&#34;, &#34;II&#34;, &#34;III&#34;, &#34;IV&#34;, &#34;V&#34;, &#34;VI&#34;, &#34;VII&#34;, &#34;VIII&#34;, &#34;IX&#34;}
-
-    return M[num/1000] &#43; C[(num%1000)/100] &#43; X[(num%100)/10] &#43; I[num%10]
-}</pre>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</figure>
+<div class="highlight"><pre class="chroma"><code class="language-golang" data-lang="golang"><span class="ln">1</span><span class="kd">func</span> <span class="nx">intToRoman</span><span class="p">(</span><span class="nx">num</span> <span class="kt">int</span><span class="p">)</span> <span class="kt">string</span> <span class="p">{</span>
+<span class="ln">2</span>    <span class="nx">M</span> <span class="o">:=</span> <span class="p">[]</span><span class="kt">string</span><span class="p">{</span><span class="s">&#34;&#34;</span><span class="p">,</span> <span class="s">&#34;M&#34;</span><span class="p">,</span> <span class="s">&#34;MM&#34;</span><span class="p">,</span> <span class="s">&#34;MMM&#34;</span><span class="p">}</span>
+<span class="ln">3</span>    <span class="nx">C</span> <span class="o">:=</span> <span class="p">[]</span><span class="kt">string</span><span class="p">{</span><span class="s">&#34;&#34;</span><span class="p">,</span> <span class="s">&#34;C&#34;</span><span class="p">,</span> <span class="s">&#34;CC&#34;</span><span class="p">,</span> <span class="s">&#34;CCC&#34;</span><span class="p">,</span> <span class="s">&#34;CD&#34;</span><span class="p">,</span> <span class="s">&#34;D&#34;</span><span class="p">,</span> <span class="s">&#34;DC&#34;</span><span class="p">,</span> <span class="s">&#34;DCC&#34;</span><span class="p">,</span> <span class="s">&#34;DCCC&#34;</span><span class="p">,</span> <span class="s">&#34;CM&#34;</span><span class="p">}</span>
+<span class="ln">4</span>    <span class="nx">X</span> <span class="o">:=</span> <span class="p">[]</span><span class="kt">string</span><span class="p">{</span><span class="s">&#34;&#34;</span><span class="p">,</span> <span class="s">&#34;X&#34;</span><span class="p">,</span> <span class="s">&#34;XX&#34;</span><span class="p">,</span> <span class="s">&#34;XXX&#34;</span><span class="p">,</span> <span class="s">&#34;XL&#34;</span><span class="p">,</span> <span class="s">&#34;L&#34;</span><span class="p">,</span> <span class="s">&#34;LX&#34;</span><span class="p">,</span> <span class="s">&#34;LXX&#34;</span><span class="p">,</span> <span class="s">&#34;LXXX&#34;</span><span class="p">,</span> <span class="s">&#34;XC&#34;</span><span class="p">}</span>
+<span class="ln">5</span>    <span class="nx">I</span> <span class="o">:=</span> <span class="p">[]</span><span class="kt">string</span><span class="p">{</span><span class="s">&#34;&#34;</span><span class="p">,</span> <span class="s">&#34;I&#34;</span><span class="p">,</span> <span class="s">&#34;II&#34;</span><span class="p">,</span> <span class="s">&#34;III&#34;</span><span class="p">,</span> <span class="s">&#34;IV&#34;</span><span class="p">,</span> <span class="s">&#34;V&#34;</span><span class="p">,</span> <span class="s">&#34;VI&#34;</span><span class="p">,</span> <span class="s">&#34;VII&#34;</span><span class="p">,</span> <span class="s">&#34;VIII&#34;</span><span class="p">,</span> <span class="s">&#34;IX&#34;</span><span class="p">}</span>
+<span class="ln">6</span>
+<span class="ln">7</span>    <span class="k">return</span> <span class="nx">M</span><span class="p">[</span><span class="nx">num</span><span class="o">/</span><span class="mi">1000</span><span class="p">]</span> <span class="o">+</span> <span class="nx">C</span><span class="p">[(</span><span class="nx">num</span><span class="o">%</span><span class="mi">1000</span><span class="p">)</span><span class="o">/</span><span class="mi">100</span><span class="p">]</span> <span class="o">+</span> <span class="nx">X</span><span class="p">[(</span><span class="nx">num</span><span class="o">%</span><span class="mi">100</span><span class="p">)</span><span class="o">/</span><span class="mi">10</span><span class="p">]</span> <span class="o">+</span> <span class="nx">I</span><span class="p">[</span><span class="nx">num</span><span class="o">%</span><span class="mi">10</span><span class="p">]</span>
+<span class="ln">8</span><span class="p">}</span></code></pre></div>
 
 <h2 id="similar-problem">Similar Problem</h2>
 
@@ -404,22 +375,24 @@ Input is guaranteed to be within the range from 1 to 3999.</p>
   <div class="post-actions-wrap">
       <nav >
         <ul class="post-actions post-action-nav">
+          
             <li class="post-action">
               
                 <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/013-roman-to-integer/" data-tooltip="LeetCode 13. Roman to Integer">
               
-                <i class="fa fa-angle-left"></i>
-                <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
-              </a>
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
             </li>
             <li class="post-action">
               
                 <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/011-container-with-most-water/" data-tooltip="LeetCode 11. Container With Most Water">
               
-                <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
-                <i class="fa fa-angle-right"></i>
-              </a>
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
             </li>
+          
         </ul>
       </nav>
     <ul class="post-actions post-action-share" >
@@ -471,22 +444,24 @@ Input is guaranteed to be within the range from 1 to 3999.</p>
   <div class="post-actions-wrap">
       <nav >
         <ul class="post-actions post-action-nav">
+          
             <li class="post-action">
               
                 <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/013-roman-to-integer/" data-tooltip="LeetCode 13. Roman to Integer">
               
-                <i class="fa fa-angle-left"></i>
-                <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
-              </a>
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
             </li>
             <li class="post-action">
               
                 <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/011-container-with-most-water/" data-tooltip="LeetCode 11. Container With Most Water">
               
-                <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
-                <i class="fa fa-angle-right"></i>
-              </a>
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
             </li>
+          
         </ul>
       </nav>
     <ul class="post-actions post-action-share" >
@@ -587,15 +562,13 @@ Input is guaranteed to be within the range from 1 to 3999.</p>
               </span>
               <div class="media-content hide-xs font-merryweather"><h2 id="数组与切片">数组与切片</h2>
 
-<p>以前粗学时并没有留意Golang的数组，一直以为只有切片。</p>
+<p>以前粗学时并没有留意 Golang 的数组，一直以为只有切片。</p>
 
-<p>今天看《Go语言实战》时才发现Golang也有数组。</p>
+<p>今天看《Go语言实战》时才发现 Golang 也有数组。与切片的区别是定义时指定长度（例如长度为4的 int 型数组<code>var array [4]int</code>）。</p>
 
 <p>数组赋值时会拷贝整个数组，所以作为参数传递时也会完整拷贝，要考虑性能合理使用，必要时可以使用指针。</p>
 
-<p>以下代码便于理解数组和切片：</p>
-
-<p></p></div>
+<p>以下代码便于理解数组和切片：</p></div>
             </div>
             <div style="clear:both;"></div>
             <hr>
@@ -756,23 +729,6 @@ Input is guaranteed to be within the range from 1 to 3999.</p>
             <hr>
           </div>
         
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://www.orztu.com/post/">
-                <h3 class="media-heading">Posts</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Jun 6, 2018
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather"></div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
       </div>
     </div>
     <div class="modal-footer">
@@ -780,7 +736,7 @@ Input is guaranteed to be within the range from 1 to 3999.</p>
          data-message-zero="no post found"
          data-message-one="1 post found"
          data-message-other="{n} posts found">
-         9 posts found
+         8 posts found
       </p>
     </div>
   </div>
@@ -794,7 +750,9 @@ Input is guaranteed to be within the range from 1 to 3999.</p>
 
     
 <script src="https://cdnjs.cat.net/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<script src="https://cdnjs.cat.net/ajax/libs/highlight.js/9.10.0/highlight.min.js"></script>
+
+
+
 <script src="https://cdnjs.cat.net/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
 <script src="https://cdnjs.cat.net/ajax/libs/fancybox/2.1.5/helpers/jquery.fancybox-thumbs.js"></script>
 
@@ -802,17 +760,7 @@ Input is guaranteed to be within the range from 1 to 3999.</p>
 <script src="https://www.orztu.com/js/script.min.js"></script>
 
 
-<script>
-$(document).ready(function() {
-  hljs.configure({ classPrefix: '', useBR: false });
-  $('pre.code-highlight, pre > code').each(function(i, block) {
-    if (!$(this).hasClass('codeblock')) {
-      $(this).addClass('codeblock');
-    }
-    hljs.highlightBlock(block);
-  });
-});
-</script>
+
 
   
     

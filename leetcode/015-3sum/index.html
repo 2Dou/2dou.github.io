@@ -64,6 +64,7 @@
     
     
     <link rel="stylesheet" href="https://www.orztu.com/css/style.min.css" />
+    <link rel="stylesheet" href="https://www.orztu.com/css/syntax.css" />
     
     
 
@@ -265,7 +266,6 @@
     
   
 
-
   </div>
 
 </div>
@@ -299,91 +299,62 @@ A solution set is:
 
 <h2 id="solution">Solution</h2>
 
-
-  
-    
-  
-  
-    
-  
-  
-  
-
-
-<figure class="highlight go">
-  <figcaption>
-    
-      <span>Solution</span>
-    
-  </figcaption>
-  <table>
-    <tbody>
-      <tr>
-        <td class="gutter">
-          <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre>
-        </td>
-        <td class="code">
-          <pre class="go code-highlight">func threeSum(nums []int) (res [][]int) {
-    if len(nums) &lt; 3 {
-        return
-    }
-
-    // 从小到大排序
-    sort.Ints(nums)
-
-    for i := 0; i &lt; len(nums)-2; i&#43;&#43; {
-        left, right := i&#43;1, len(nums)-1
-        num0 := nums[i]
-        num1 := nums[left]
-        num2 := nums[right]
-
-        // 所有数同符号则不需要继续
-        if (num0 &gt; 0 &amp;&amp; num1 &gt; 0) ||
-            (num0 &lt; 0 &amp;&amp; num2 &lt; 0) {
-            break
-        }
-
-        for left &lt; right {
-            // 求和
-            sum := num0 &#43; num1 &#43; num2
-
-            if sum == 0 {
-                // 记录满足条件的解
-                res = append(res, []int{num0, num1, num2})
-
-                // 跳过相同的数字避免重复解
-                for left &lt; right &amp;&amp; num1 == nums[left] {
-                    left&#43;&#43;
-                }
-
-                for right &lt; left &amp;&amp; num2 == nums[right] {
-                    right--
-                }
-            } else if sum &lt; 0 {
-                // 和为负数则增加num1
-                left&#43;&#43;
-            } else {
-                // 和为正数则减小num2
-                right--
-            }
-
-            num1 = nums[left]
-            num2 = nums[right]
-        }
-
-        // 跳过相同的num0避免重复解
-        for i &lt; len(nums)-2 &amp;&amp; num0 == nums[i&#43;1] {
-            i&#43;&#43;
-        }
-    }
-
-    return res
-}</pre>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</figure>
+<div class="highlight"><pre class="chroma"><code class="language-golang" data-lang="golang"><span class="ln"> 1</span><span class="kd">func</span> <span class="nx">threeSum</span><span class="p">(</span><span class="nx">nums</span> <span class="p">[]</span><span class="kt">int</span><span class="p">)</span> <span class="p">(</span><span class="nx">res</span> <span class="p">[][]</span><span class="kt">int</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln"> 2</span>    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="nx">nums</span><span class="p">)</span> <span class="p">&lt;</span> <span class="mi">3</span> <span class="p">{</span>
+<span class="ln"> 3</span>        <span class="k">return</span>
+<span class="ln"> 4</span>    <span class="p">}</span>
+<span class="ln"> 5</span>
+<span class="ln"> 6</span>    <span class="c1">// 从小到大排序
+</span><span class="ln"> 7</span><span class="c1"></span>    <span class="nx">sort</span><span class="p">.</span><span class="nx">Ints</span><span class="p">(</span><span class="nx">nums</span><span class="p">)</span>
+<span class="ln"> 8</span>
+<span class="ln"> 9</span>    <span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="nx">nums</span><span class="p">)</span><span class="o">-</span><span class="mi">2</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
+<span class="ln">10</span>        <span class="nx">left</span><span class="p">,</span> <span class="nx">right</span> <span class="o">:=</span> <span class="nx">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="nx">nums</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span>
+<span class="ln">11</span>        <span class="nx">num0</span> <span class="o">:=</span> <span class="nx">nums</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span>
+<span class="ln">12</span>        <span class="nx">num1</span> <span class="o">:=</span> <span class="nx">nums</span><span class="p">[</span><span class="nx">left</span><span class="p">]</span>
+<span class="ln">13</span>        <span class="nx">num2</span> <span class="o">:=</span> <span class="nx">nums</span><span class="p">[</span><span class="nx">right</span><span class="p">]</span>
+<span class="ln">14</span>
+<span class="ln">15</span>        <span class="c1">// 所有数同符号则不需要继续
+</span><span class="ln">16</span><span class="c1"></span>        <span class="k">if</span> <span class="p">(</span><span class="nx">num0</span> <span class="p">&gt;</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="nx">num1</span> <span class="p">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="o">||</span>
+<span class="ln">17</span>            <span class="p">(</span><span class="nx">num0</span> <span class="p">&lt;</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="nx">num2</span> <span class="p">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln">18</span>            <span class="k">break</span>
+<span class="ln">19</span>        <span class="p">}</span>
+<span class="ln">20</span>
+<span class="ln">21</span>        <span class="k">for</span> <span class="nx">left</span> <span class="p">&lt;</span> <span class="nx">right</span> <span class="p">{</span>
+<span class="ln">22</span>            <span class="c1">// 求和
+</span><span class="ln">23</span><span class="c1"></span>            <span class="nx">sum</span> <span class="o">:=</span> <span class="nx">num0</span> <span class="o">+</span> <span class="nx">num1</span> <span class="o">+</span> <span class="nx">num2</span>
+<span class="ln">24</span>
+<span class="ln">25</span>            <span class="k">if</span> <span class="nx">sum</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">{</span>
+<span class="ln">26</span>                <span class="c1">// 记录满足条件的解
+</span><span class="ln">27</span><span class="c1"></span>                <span class="nx">res</span> <span class="p">=</span> <span class="nb">append</span><span class="p">(</span><span class="nx">res</span><span class="p">,</span> <span class="p">[]</span><span class="kt">int</span><span class="p">{</span><span class="nx">num0</span><span class="p">,</span> <span class="nx">num1</span><span class="p">,</span> <span class="nx">num2</span><span class="p">})</span>
+<span class="ln">28</span>
+<span class="ln">29</span>                <span class="c1">// 跳过相同的数字避免重复解
+</span><span class="ln">30</span><span class="c1"></span>                <span class="k">for</span> <span class="nx">left</span> <span class="p">&lt;</span> <span class="nx">right</span> <span class="o">&amp;&amp;</span> <span class="nx">num1</span> <span class="o">==</span> <span class="nx">nums</span><span class="p">[</span><span class="nx">left</span><span class="p">]</span> <span class="p">{</span>
+<span class="ln">31</span>                    <span class="nx">left</span><span class="o">++</span>
+<span class="ln">32</span>                <span class="p">}</span>
+<span class="ln">33</span>
+<span class="ln">34</span>                <span class="k">for</span> <span class="nx">right</span> <span class="p">&lt;</span> <span class="nx">left</span> <span class="o">&amp;&amp;</span> <span class="nx">num2</span> <span class="o">==</span> <span class="nx">nums</span><span class="p">[</span><span class="nx">right</span><span class="p">]</span> <span class="p">{</span>
+<span class="ln">35</span>                    <span class="nx">right</span><span class="o">--</span>
+<span class="ln">36</span>                <span class="p">}</span>
+<span class="ln">37</span>            <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="nx">sum</span> <span class="p">&lt;</span> <span class="mi">0</span> <span class="p">{</span>
+<span class="ln">38</span>                <span class="c1">// 和为负数则增加num1
+</span><span class="ln">39</span><span class="c1"></span>                <span class="nx">left</span><span class="o">++</span>
+<span class="ln">40</span>            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+<span class="ln">41</span>                <span class="c1">// 和为正数则减小num2
+</span><span class="ln">42</span><span class="c1"></span>                <span class="nx">right</span><span class="o">--</span>
+<span class="ln">43</span>            <span class="p">}</span>
+<span class="ln">44</span>
+<span class="ln">45</span>            <span class="nx">num1</span> <span class="p">=</span> <span class="nx">nums</span><span class="p">[</span><span class="nx">left</span><span class="p">]</span>
+<span class="ln">46</span>            <span class="nx">num2</span> <span class="p">=</span> <span class="nx">nums</span><span class="p">[</span><span class="nx">right</span><span class="p">]</span>
+<span class="ln">47</span>        <span class="p">}</span>
+<span class="ln">48</span>
+<span class="ln">49</span>        <span class="c1">// 跳过相同的num0避免重复解
+</span><span class="ln">50</span><span class="c1"></span>        <span class="k">for</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="nx">nums</span><span class="p">)</span><span class="o">-</span><span class="mi">2</span> <span class="o">&amp;&amp;</span> <span class="nx">num0</span> <span class="o">==</span> <span class="nx">nums</span><span class="p">[</span><span class="nx">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="p">{</span>
+<span class="ln">51</span>            <span class="nx">i</span><span class="o">++</span>
+<span class="ln">52</span>        <span class="p">}</span>
+<span class="ln">53</span>    <span class="p">}</span>
+<span class="ln">54</span>
+<span class="ln">55</span>    <span class="k">return</span> <span class="nx">res</span>
+<span class="ln">56</span><span class="p">}</span></code></pre></div>
 
 <h2 id="similar-problem">Similar Problem</h2>
 
@@ -420,22 +391,24 @@ A solution set is:
   <div class="post-actions-wrap">
       <nav >
         <ul class="post-actions post-action-nav">
+          
             <li class="post-action">
               
                 <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/post/gvoice-number/" data-tooltip="自动点击 - 申请Google Voice号码">
               
-                <i class="fa fa-angle-left"></i>
-                <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
-              </a>
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
             </li>
             <li class="post-action">
               
                 <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/013-roman-to-integer/" data-tooltip="LeetCode 13. Roman to Integer">
               
-                <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
-                <i class="fa fa-angle-right"></i>
-              </a>
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
             </li>
+          
         </ul>
       </nav>
     <ul class="post-actions post-action-share" >
@@ -487,22 +460,24 @@ A solution set is:
   <div class="post-actions-wrap">
       <nav >
         <ul class="post-actions post-action-nav">
+          
             <li class="post-action">
               
                 <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/post/gvoice-number/" data-tooltip="自动点击 - 申请Google Voice号码">
               
-                <i class="fa fa-angle-left"></i>
-                <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
-              </a>
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
             </li>
             <li class="post-action">
               
                 <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/013-roman-to-integer/" data-tooltip="LeetCode 13. Roman to Integer">
               
-                <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
-                <i class="fa fa-angle-right"></i>
-              </a>
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
             </li>
+          
         </ul>
       </nav>
     <ul class="post-actions post-action-share" >
@@ -603,15 +578,13 @@ A solution set is:
               </span>
               <div class="media-content hide-xs font-merryweather"><h2 id="数组与切片">数组与切片</h2>
 
-<p>以前粗学时并没有留意Golang的数组，一直以为只有切片。</p>
+<p>以前粗学时并没有留意 Golang 的数组，一直以为只有切片。</p>
 
-<p>今天看《Go语言实战》时才发现Golang也有数组。</p>
+<p>今天看《Go语言实战》时才发现 Golang 也有数组。与切片的区别是定义时指定长度（例如长度为4的 int 型数组<code>var array [4]int</code>）。</p>
 
 <p>数组赋值时会拷贝整个数组，所以作为参数传递时也会完整拷贝，要考虑性能合理使用，必要时可以使用指针。</p>
 
-<p>以下代码便于理解数组和切片：</p>
-
-<p></p></div>
+<p>以下代码便于理解数组和切片：</p></div>
             </div>
             <div style="clear:both;"></div>
             <hr>
@@ -772,23 +745,6 @@ A solution set is:
             <hr>
           </div>
         
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://www.orztu.com/post/">
-                <h3 class="media-heading">Posts</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Jun 6, 2018
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather"></div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
       </div>
     </div>
     <div class="modal-footer">
@@ -796,7 +752,7 @@ A solution set is:
          data-message-zero="no post found"
          data-message-one="1 post found"
          data-message-other="{n} posts found">
-         9 posts found
+         8 posts found
       </p>
     </div>
   </div>
@@ -810,7 +766,9 @@ A solution set is:
 
     
 <script src="https://cdnjs.cat.net/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<script src="https://cdnjs.cat.net/ajax/libs/highlight.js/9.10.0/highlight.min.js"></script>
+
+
+
 <script src="https://cdnjs.cat.net/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
 <script src="https://cdnjs.cat.net/ajax/libs/fancybox/2.1.5/helpers/jquery.fancybox-thumbs.js"></script>
 
@@ -818,17 +776,7 @@ A solution set is:
 <script src="https://www.orztu.com/js/script.min.js"></script>
 
 
-<script>
-$(document).ready(function() {
-  hljs.configure({ classPrefix: '', useBR: false });
-  $('pre.code-highlight, pre > code').each(function(i, block) {
-    if (!$(this).hasClass('codeblock')) {
-      $(this).addClass('codeblock');
-    }
-    hljs.highlightBlock(block);
-  });
-});
-</script>
+
 
   
     

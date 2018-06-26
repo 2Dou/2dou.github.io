@@ -66,6 +66,7 @@
     
     
     <link rel="stylesheet" href="https://www.orztu.com/css/style.min.css" />
+    <link rel="stylesheet" href="https://www.orztu.com/css/syntax.css" />
     
     
 
@@ -267,7 +268,6 @@
     
   
 
-
   </div>
 
 </div>
@@ -290,65 +290,36 @@ Input is guaranteed to be within the range from 1 to 3999.</p>
 
 <h2 id="solution">Solution</h2>
 
-
-  
-    
-  
-  
-    
-  
-  
-  
-
-
-<figure class="highlight go">
-  <figcaption>
-    
-      <span>Solution</span>
-    
-  </figcaption>
-  <table>
-    <tbody>
-      <tr>
-        <td class="gutter">
-          <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre>
-        </td>
-        <td class="code">
-          <pre class="go code-highlight">func romanToInt(s string) int {
-    num := map[uint8]int{
-        &#39;M&#39;: 1000,
-        &#39;D&#39;: 500,
-        &#39;C&#39;: 100,
-        &#39;L&#39;: 50,
-        &#39;X&#39;: 10,
-        &#39;V&#39;: 5,
-        &#39;I&#39;: 1,
-    }
-
-    length := len(s)
-
-    if length == 0 {
-        return 0
-    }
-
-    res := num[s[length-1]]
-    for i := length - 2; i &gt;= 0; i-- {
-        n := num[s[i]]
-
-        if n &lt; num[s[i&#43;1]] {
-            res -= n
-        } else {
-            res &#43;= n
-        }
-    }
-
-    return res
-}</pre>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</figure>
+<div class="highlight"><pre class="chroma"><code class="language-golang" data-lang="golang"><span class="ln"> 1</span><span class="kd">func</span> <span class="nx">romanToInt</span><span class="p">(</span><span class="nx">s</span> <span class="kt">string</span><span class="p">)</span> <span class="kt">int</span> <span class="p">{</span>
+<span class="ln"> 2</span>    <span class="nx">num</span> <span class="o">:=</span> <span class="kd">map</span><span class="p">[</span><span class="kt">uint8</span><span class="p">]</span><span class="kt">int</span><span class="p">{</span>
+<span class="ln"> 3</span>        <span class="sc">&#39;M&#39;</span><span class="p">:</span> <span class="mi">1000</span><span class="p">,</span>
+<span class="ln"> 4</span>        <span class="sc">&#39;D&#39;</span><span class="p">:</span> <span class="mi">500</span><span class="p">,</span>
+<span class="ln"> 5</span>        <span class="sc">&#39;C&#39;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+<span class="ln"> 6</span>        <span class="sc">&#39;L&#39;</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span>
+<span class="ln"> 7</span>        <span class="sc">&#39;X&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+<span class="ln"> 8</span>        <span class="sc">&#39;V&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+<span class="ln"> 9</span>        <span class="sc">&#39;I&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+<span class="ln">10</span>    <span class="p">}</span>
+<span class="ln">11</span>
+<span class="ln">12</span>    <span class="nx">length</span> <span class="o">:=</span> <span class="nb">len</span><span class="p">(</span><span class="nx">s</span><span class="p">)</span>
+<span class="ln">13</span>
+<span class="ln">14</span>    <span class="k">if</span> <span class="nx">length</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">{</span>
+<span class="ln">15</span>        <span class="k">return</span> <span class="mi">0</span>
+<span class="ln">16</span>    <span class="p">}</span>
+<span class="ln">17</span>
+<span class="ln">18</span>    <span class="nx">res</span> <span class="o">:=</span> <span class="nx">num</span><span class="p">[</span><span class="nx">s</span><span class="p">[</span><span class="nx">length</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span>
+<span class="ln">19</span>    <span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="nx">length</span> <span class="o">-</span> <span class="mi">2</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">--</span> <span class="p">{</span>
+<span class="ln">20</span>        <span class="nx">n</span> <span class="o">:=</span> <span class="nx">num</span><span class="p">[</span><span class="nx">s</span><span class="p">[</span><span class="nx">i</span><span class="p">]]</span>
+<span class="ln">21</span>
+<span class="ln">22</span>        <span class="k">if</span> <span class="nx">n</span> <span class="p">&lt;</span> <span class="nx">num</span><span class="p">[</span><span class="nx">s</span><span class="p">[</span><span class="nx">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]]</span> <span class="p">{</span>
+<span class="ln">23</span>            <span class="nx">res</span> <span class="o">-=</span> <span class="nx">n</span>
+<span class="ln">24</span>        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+<span class="ln">25</span>            <span class="nx">res</span> <span class="o">+=</span> <span class="nx">n</span>
+<span class="ln">26</span>        <span class="p">}</span>
+<span class="ln">27</span>    <span class="p">}</span>
+<span class="ln">28</span>
+<span class="ln">29</span>    <span class="k">return</span> <span class="nx">res</span>
+<span class="ln">30</span><span class="p">}</span></code></pre></div>
 
 <h2 id="similar-problem">Similar Problem</h2>
 
@@ -378,22 +349,24 @@ Input is guaranteed to be within the range from 1 to 3999.</p>
   <div class="post-actions-wrap">
       <nav >
         <ul class="post-actions post-action-nav">
+          
             <li class="post-action">
               
                 <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/015-3sum/" data-tooltip="LeetCode 15. 3Sum">
               
-                <i class="fa fa-angle-left"></i>
-                <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
-              </a>
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
             </li>
             <li class="post-action">
               
                 <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/012-integer-to-roman/" data-tooltip="LeetCode 12. Integer to Roman">
               
-                <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
-                <i class="fa fa-angle-right"></i>
-              </a>
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
             </li>
+          
         </ul>
       </nav>
     <ul class="post-actions post-action-share" >
@@ -445,22 +418,24 @@ Input is guaranteed to be within the range from 1 to 3999.</p>
   <div class="post-actions-wrap">
       <nav >
         <ul class="post-actions post-action-nav">
+          
             <li class="post-action">
               
                 <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/015-3sum/" data-tooltip="LeetCode 15. 3Sum">
               
-                <i class="fa fa-angle-left"></i>
-                <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
-              </a>
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
             </li>
             <li class="post-action">
               
                 <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/012-integer-to-roman/" data-tooltip="LeetCode 12. Integer to Roman">
               
-                <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
-                <i class="fa fa-angle-right"></i>
-              </a>
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
             </li>
+          
         </ul>
       </nav>
     <ul class="post-actions post-action-share" >
@@ -561,15 +536,13 @@ Input is guaranteed to be within the range from 1 to 3999.</p>
               </span>
               <div class="media-content hide-xs font-merryweather"><h2 id="数组与切片">数组与切片</h2>
 
-<p>以前粗学时并没有留意Golang的数组，一直以为只有切片。</p>
+<p>以前粗学时并没有留意 Golang 的数组，一直以为只有切片。</p>
 
-<p>今天看《Go语言实战》时才发现Golang也有数组。</p>
+<p>今天看《Go语言实战》时才发现 Golang 也有数组。与切片的区别是定义时指定长度（例如长度为4的 int 型数组<code>var array [4]int</code>）。</p>
 
 <p>数组赋值时会拷贝整个数组，所以作为参数传递时也会完整拷贝，要考虑性能合理使用，必要时可以使用指针。</p>
 
-<p>以下代码便于理解数组和切片：</p>
-
-<p></p></div>
+<p>以下代码便于理解数组和切片：</p></div>
             </div>
             <div style="clear:both;"></div>
             <hr>
@@ -730,23 +703,6 @@ Input is guaranteed to be within the range from 1 to 3999.</p>
             <hr>
           </div>
         
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://www.orztu.com/post/">
-                <h3 class="media-heading">Posts</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Jun 6, 2018
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather"></div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
       </div>
     </div>
     <div class="modal-footer">
@@ -754,7 +710,7 @@ Input is guaranteed to be within the range from 1 to 3999.</p>
          data-message-zero="no post found"
          data-message-one="1 post found"
          data-message-other="{n} posts found">
-         9 posts found
+         8 posts found
       </p>
     </div>
   </div>
@@ -768,7 +724,9 @@ Input is guaranteed to be within the range from 1 to 3999.</p>
 
     
 <script src="https://cdnjs.cat.net/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<script src="https://cdnjs.cat.net/ajax/libs/highlight.js/9.10.0/highlight.min.js"></script>
+
+
+
 <script src="https://cdnjs.cat.net/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
 <script src="https://cdnjs.cat.net/ajax/libs/fancybox/2.1.5/helpers/jquery.fancybox-thumbs.js"></script>
 
@@ -776,17 +734,7 @@ Input is guaranteed to be within the range from 1 to 3999.</p>
 <script src="https://www.orztu.com/js/script.min.js"></script>
 
 
-<script>
-$(document).ready(function() {
-  hljs.configure({ classPrefix: '', useBR: false });
-  $('pre.code-highlight, pre > code').each(function(i, block) {
-    if (!$(this).hasClass('codeblock')) {
-      $(this).addClass('codeblock');
-    }
-    hljs.highlightBlock(block);
-  });
-});
-</script>
+
 
   
     

@@ -68,6 +68,7 @@
     
     
     <link rel="stylesheet" href="https://www.orztu.com/css/style.min.css" />
+    <link rel="stylesheet" href="https://www.orztu.com/css/syntax.css" />
     
     
 
@@ -269,7 +270,6 @@
     
   
 
-
   </div>
 
 </div>
@@ -287,74 +287,72 @@
 
 <h3 id="1-将文字转换成水印图片">1. 将文字转换成水印图片</h3>
 
-<pre><code class="language-python">def gen_mark(args):
-    # 字体宽度
-    length = len(args.mark) * args.size
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">gen_mark</span><span class="p">(</span><span class="n">args</span><span class="p">):</span>
+    <span class="c1"># 字体宽度</span>
+    <span class="n">length</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">mark</span><span class="p">)</span> <span class="o">*</span> <span class="n">args</span><span class="o">.</span><span class="n">size</span>
 
-    # 创建水印图片(宽度、高度)
-    mark = Image.new(mode='RGBA', size=(length, args.size))
+    <span class="c1"># 创建水印图片(宽度、高度)</span>
+    <span class="n">mark</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s1">&#39;RGBA&#39;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="n">length</span><span class="p">,</span> <span class="n">args</span><span class="o">.</span><span class="n">size</span><span class="p">))</span>
 
-    # 生成文字
-    draw = ImageDraw.Draw(im=mark)
-    draw.text(xy=(0, 0),
-        text=args.mark, # 水印文字
-        fill=args.color, # 文字颜色 '#008B8B'
-        font=ImageFont.truetype(TTF_FONT, # 文字字体
-        size=args.size)) # font_size 文字大小
-    del draw
+    <span class="c1"># 生成文字</span>
+    <span class="n">draw</span> <span class="o">=</span> <span class="n">ImageDraw</span><span class="o">.</span><span class="n">Draw</span><span class="p">(</span><span class="n">im</span><span class="o">=</span><span class="n">mark</span><span class="p">)</span>
+    <span class="n">draw</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+        <span class="n">text</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">mark</span><span class="p">,</span> <span class="c1"># 水印文字</span>
+        <span class="n">fill</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">color</span><span class="p">,</span> <span class="c1"># 文字颜色 &#39;#008B8B&#39;</span>
+        <span class="n">font</span><span class="o">=</span><span class="n">ImageFont</span><span class="o">.</span><span class="n">truetype</span><span class="p">(</span><span class="n">TTF_FONT</span><span class="p">,</span> <span class="c1"># 文字字体</span>
+        <span class="n">size</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">size</span><span class="p">))</span> <span class="c1"># font_size 文字大小</span>
+    <span class="k">del</span> <span class="n">draw</span>
 
-    # 裁剪图片边缘空白区域
-    bg = Image.new(mode='RGBA', size=mark.size)
-    diff = ImageChops.difference(mark, bg)
-    del bg
-    bbox = diff.getbbox()
-    if bbox:
-        mark = mark.crop(bbox)
+    <span class="c1"># 裁剪图片边缘空白区域</span>
+    <span class="n">bg</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s1">&#39;RGBA&#39;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">mark</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
+    <span class="n">diff</span> <span class="o">=</span> <span class="n">ImageChops</span><span class="o">.</span><span class="n">difference</span><span class="p">(</span><span class="n">mark</span><span class="p">,</span> <span class="n">bg</span><span class="p">)</span>
+    <span class="k">del</span> <span class="n">bg</span>
+    <span class="n">bbox</span> <span class="o">=</span> <span class="n">diff</span><span class="o">.</span><span class="n">getbbox</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">bbox</span><span class="p">:</span>
+        <span class="n">mark</span> <span class="o">=</span> <span class="n">mark</span><span class="o">.</span><span class="n">crop</span><span class="p">(</span><span class="n">bbox</span><span class="p">)</span>
 
-    # 设置水印透明度
-    set_opacity(mark, args.opacity)
+    <span class="c1"># 设置水印透明度</span>
+    <span class="n">set_opacity</span><span class="p">(</span><span class="n">mark</span><span class="p">,</span> <span class="n">args</span><span class="o">.</span><span class="n">opacity</span><span class="p">)</span>
 
-    # 得到水印文字大小
-    print(mark.size)
-    此处省略...
-</code></pre>
+    <span class="c1"># 得到水印文字大小</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">mark</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
+    <span class="err">此处省略</span><span class="o">...</span></code></pre></div>
 
 <h3 id="2-将水印图片覆盖在原图上">2. 将水印图片覆盖在原图上</h3>
 
-<pre><code class="language-python">def mark_im(im):
-    ''' 在im图片上添加水印 im为打开的原图'''
+<p><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">mark_im</span><span class="p">(</span><span class="n">im</span><span class="p">):</span>
+    <span class="s1">&#39;&#39;&#39; 在im图片上添加水印 im为打开的原图&#39;&#39;&#39;</span>
 
-    # 计算斜边长度
-    c = int(math.sqrt(im.size[0]*im.size[0] + im.size[1]*im.size[1]))
+    <span class="c1"># 计算斜边长度</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">im</span><span class="o">.</span><span class="n">size</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">im</span><span class="o">.</span><span class="n">size</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">im</span><span class="o">.</span><span class="n">size</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">im</span><span class="o">.</span><span class="n">size</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
 
-    # 以斜边长度为宽高创建大图（旋转后大图才足以覆盖原图）
-    mark2 = Image.new(mode='RGBA', size=(c, c))
+    <span class="c1"># 以斜边长度为宽高创建大图（旋转后大图才足以覆盖原图）</span>
+    <span class="n">mark2</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s1">&#39;RGBA&#39;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">c</span><span class="p">))</span>
 
-    # 在大图上生成水印文字，此处mark为上面生成的水印图片
-    y, idx = 0, 0
-    while y &lt; c:
-        # 制造x坐标错位
-        x = -int((mark.size[0] + args.space)*0.5*idx)
-        idx = (idx + 1) % 2
+    <span class="c1"># 在大图上生成水印文字，此处mark为上面生成的水印图片</span>
+    <span class="n">y</span><span class="p">,</span> <span class="n">idx</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="n">y</span> <span class="o">&lt;</span> <span class="n">c</span><span class="p">:</span>
+        <span class="c1"># 制造x坐标错位</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="nb">int</span><span class="p">((</span><span class="n">mark</span><span class="o">.</span><span class="n">size</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">args</span><span class="o">.</span><span class="n">space</span><span class="p">)</span><span class="o">*</span><span class="mf">0.5</span><span class="o">*</span><span class="n">idx</span><span class="p">)</span>
+        <span class="n">idx</span> <span class="o">=</span> <span class="p">(</span><span class="n">idx</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="mi">2</span>
 
-        while x &lt; c:
-            # 在该位置粘贴mark水印图片
-            mark2.paste(mark, (x, y))
-            x = x + mark.size[0] + args.space
-        y = y + mark.size[1] + args.space
+        <span class="k">while</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">c</span><span class="p">:</span>
+            <span class="c1"># 在该位置粘贴mark水印图片</span>
+            <span class="n">mark2</span><span class="o">.</span><span class="n">paste</span><span class="p">(</span><span class="n">mark</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">mark</span><span class="o">.</span><span class="n">size</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">args</span><span class="o">.</span><span class="n">space</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">y</span> <span class="o">+</span> <span class="n">mark</span><span class="o">.</span><span class="n">size</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">args</span><span class="o">.</span><span class="n">space</span>
 
-    # 将大图旋转一定角度
-    mark2 = mark2.rotate(args.angle)
+    <span class="c1"># 将大图旋转一定角度</span>
+    <span class="n">mark2</span> <span class="o">=</span> <span class="n">mark2</span><span class="o">.</span><span class="n">rotate</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">angle</span><span class="p">)</span>
 
-    # 在原图上添加大图水印
-    if im.mode != 'RGBA':
-        im = im.convert('RGBA')
-    im.paste(mark2, # 大图
-        (int((im.size[0]-c)/2), int((im.size[1]-c)/2)), # 坐标
-        mask=mark2.split()[3])
-    del mark2
-    return im
-</code></pre>
+    <span class="c1"># 在原图上添加大图水印</span>
+    <span class="k">if</span> <span class="n">im</span><span class="o">.</span><span class="n">mode</span> <span class="o">!=</span> <span class="s1">&#39;RGBA&#39;</span><span class="p">:</span>
+        <span class="n">im</span> <span class="o">=</span> <span class="n">im</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="s1">&#39;RGBA&#39;</span><span class="p">)</span>
+    <span class="n">im</span><span class="o">.</span><span class="n">paste</span><span class="p">(</span><span class="n">mark2</span><span class="p">,</span> <span class="c1"># 大图</span>
+        <span class="p">(</span><span class="nb">int</span><span class="p">((</span><span class="n">im</span><span class="o">.</span><span class="n">size</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">-</span><span class="n">c</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">),</span> <span class="nb">int</span><span class="p">((</span><span class="n">im</span><span class="o">.</span><span class="n">size</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">c</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)),</span> <span class="c1"># 坐标</span>
+        <span class="n">mask</span><span class="o">=</span><span class="n">mark2</span><span class="o">.</span><span class="n">split</span><span class="p">()[</span><span class="mi">3</span><span class="p">])</span>
+    <span class="k">del</span> <span class="n">mark2</span>
+    <span class="k">return</span> <span class="n">im</span></code></pre></div></p>
 
 <h2 id="代码">代码</h2>
 
@@ -406,22 +404,24 @@
   <div class="post-actions-wrap">
       <nav >
         <ul class="post-actions post-action-nav">
+          
             <li class="post-action">
               
                 <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/post/golang-slice-and-array/" data-tooltip="Golang Slice and Array">
               
-                <i class="fa fa-angle-left"></i>
-                <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
-              </a>
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
             </li>
             <li class="post-action">
               
                 <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/029-divide-two-integers/" data-tooltip="LeetCode 29. Divide Two Integers">
               
-                <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
-                <i class="fa fa-angle-right"></i>
-              </a>
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
             </li>
+          
         </ul>
       </nav>
     <ul class="post-actions post-action-share" >
@@ -473,22 +473,24 @@
   <div class="post-actions-wrap">
       <nav >
         <ul class="post-actions post-action-nav">
+          
             <li class="post-action">
               
                 <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/post/golang-slice-and-array/" data-tooltip="Golang Slice and Array">
               
-                <i class="fa fa-angle-left"></i>
-                <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
-              </a>
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
             </li>
             <li class="post-action">
               
                 <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/029-divide-two-integers/" data-tooltip="LeetCode 29. Divide Two Integers">
               
-                <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
-                <i class="fa fa-angle-right"></i>
-              </a>
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
             </li>
+          
         </ul>
       </nav>
     <ul class="post-actions post-action-share" >
@@ -589,15 +591,13 @@
               </span>
               <div class="media-content hide-xs font-merryweather"><h2 id="数组与切片">数组与切片</h2>
 
-<p>以前粗学时并没有留意Golang的数组，一直以为只有切片。</p>
+<p>以前粗学时并没有留意 Golang 的数组，一直以为只有切片。</p>
 
-<p>今天看《Go语言实战》时才发现Golang也有数组。</p>
+<p>今天看《Go语言实战》时才发现 Golang 也有数组。与切片的区别是定义时指定长度（例如长度为4的 int 型数组<code>var array [4]int</code>）。</p>
 
 <p>数组赋值时会拷贝整个数组，所以作为参数传递时也会完整拷贝，要考虑性能合理使用，必要时可以使用指针。</p>
 
-<p>以下代码便于理解数组和切片：</p>
-
-<p></p></div>
+<p>以下代码便于理解数组和切片：</p></div>
             </div>
             <div style="clear:both;"></div>
             <hr>
@@ -758,23 +758,6 @@
             <hr>
           </div>
         
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://www.orztu.com/post/">
-                <h3 class="media-heading">Posts</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Jun 6, 2018
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather"></div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
       </div>
     </div>
     <div class="modal-footer">
@@ -782,7 +765,7 @@
          data-message-zero="no post found"
          data-message-one="1 post found"
          data-message-other="{n} posts found">
-         9 posts found
+         8 posts found
       </p>
     </div>
   </div>
@@ -796,7 +779,9 @@
 
     
 <script src="https://cdnjs.cat.net/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<script src="https://cdnjs.cat.net/ajax/libs/highlight.js/9.10.0/highlight.min.js"></script>
+
+
+
 <script src="https://cdnjs.cat.net/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
 <script src="https://cdnjs.cat.net/ajax/libs/fancybox/2.1.5/helpers/jquery.fancybox-thumbs.js"></script>
 
@@ -804,17 +789,7 @@
 <script src="https://www.orztu.com/js/script.min.js"></script>
 
 
-<script>
-$(document).ready(function() {
-  hljs.configure({ classPrefix: '', useBR: false });
-  $('pre.code-highlight, pre > code').each(function(i, block) {
-    if (!$(this).hasClass('codeblock')) {
-      $(this).addClass('codeblock');
-    }
-    hljs.highlightBlock(block);
-  });
-});
-</script>
+
 
   
     

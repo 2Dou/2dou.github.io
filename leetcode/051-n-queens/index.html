@@ -64,6 +64,7 @@
     
     
     <link rel="stylesheet" href="https://www.orztu.com/css/style.min.css" />
+    <link rel="stylesheet" href="https://www.orztu.com/css/syntax.css" />
     
     
 
@@ -265,7 +266,6 @@
     
   
 
-
   </div>
 
 </div>
@@ -316,91 +316,62 @@ There exist two distinct solutions to the 4-queens puzzle:</p>
 
 <h2 id="solution">Solution</h2>
 
-
-  
-    
-  
-  
-    
-  
-  
-  
-
-
-<figure class="highlight go">
-  <figcaption>
-    
-      <span>Solution</span>
-    
-  </figcaption>
-  <table>
-    <tbody>
-      <tr>
-        <td class="gutter">
-          <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre>
-        </td>
-        <td class="code">
-          <pre class="go code-highlight">func solveNQueens(n int) [][]string {
-    answer := make([][]string, 0)
-
-    board := make([]int, n)
-    solve(&amp;answer, board, n, 0)
-
-    return answer
-}
-
-// put a queen on board at line l
-func solve(answer *[][]string, board []int, n, l int) {
-    if n == l {
-        *answer = append(*answer, convertBoard(board, n))
-        return
-    }
-
-    for i := 0; i &lt; n; i&#43;&#43; {
-        if !canBeAttack(board, n, l, i) {
-            // mark the queen&#39;s postion
-            board[l] = i
-            solve(answer, board, n, l&#43;1)
-        }
-    }
-}
-
-// 判断会否被其他皇后攻击
-func canBeAttack(board []int, n, x, y int) bool {
-    for row := 0; row &lt; x; row&#43;&#43; {
-        col := board[row]
-        if col == y || abs(row-x) == abs(col-y) {
-            return true
-        }
-    }
-
-    return false
-}
-
-// 转换成返回格式
-func convertBoard(board []int, n int) []string {
-    ans := make([]string, n)
-    for i := 0; i &lt; n; i&#43;&#43; {
-        line := []byte(strings.Repeat(&#34;.&#34;, n))
-        line[board[i]] = &#39;Q&#39;
-        ans[i] = string(line)
-    }
-
-    return ans
-}
-
-func abs(x int) int {
-    if x &lt; 0 {
-        return -x
-    }
-
-    return x
-}</pre>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</figure>
+<div class="highlight"><pre class="chroma"><code class="language-golang" data-lang="golang"><span class="ln"> 1</span><span class="kd">func</span> <span class="nx">solveNQueens</span><span class="p">(</span><span class="nx">n</span> <span class="kt">int</span><span class="p">)</span> <span class="p">[][]</span><span class="kt">string</span> <span class="p">{</span>
+<span class="ln"> 2</span>    <span class="nx">answer</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">([][]</span><span class="kt">string</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="ln"> 3</span>
+<span class="ln"> 4</span>    <span class="nx">board</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">([]</span><span class="kt">int</span><span class="p">,</span> <span class="nx">n</span><span class="p">)</span>
+<span class="ln"> 5</span>    <span class="nx">solve</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">answer</span><span class="p">,</span> <span class="nx">board</span><span class="p">,</span> <span class="nx">n</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="ln"> 6</span>
+<span class="ln"> 7</span>    <span class="k">return</span> <span class="nx">answer</span>
+<span class="ln"> 8</span><span class="p">}</span>
+<span class="ln"> 9</span>
+<span class="ln">10</span><span class="c1">// put a queen on board at line l
+</span><span class="ln">11</span><span class="c1"></span><span class="kd">func</span> <span class="nx">solve</span><span class="p">(</span><span class="nx">answer</span> <span class="o">*</span><span class="p">[][]</span><span class="kt">string</span><span class="p">,</span> <span class="nx">board</span> <span class="p">[]</span><span class="kt">int</span><span class="p">,</span> <span class="nx">n</span><span class="p">,</span> <span class="nx">l</span> <span class="kt">int</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln">12</span>    <span class="k">if</span> <span class="nx">n</span> <span class="o">==</span> <span class="nx">l</span> <span class="p">{</span>
+<span class="ln">13</span>        <span class="o">*</span><span class="nx">answer</span> <span class="p">=</span> <span class="nb">append</span><span class="p">(</span><span class="o">*</span><span class="nx">answer</span><span class="p">,</span> <span class="nx">convertBoard</span><span class="p">(</span><span class="nx">board</span><span class="p">,</span> <span class="nx">n</span><span class="p">))</span>
+<span class="ln">14</span>        <span class="k">return</span>
+<span class="ln">15</span>    <span class="p">}</span>
+<span class="ln">16</span>
+<span class="ln">17</span>    <span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="nx">n</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
+<span class="ln">18</span>        <span class="k">if</span> <span class="p">!</span><span class="nx">canBeAttack</span><span class="p">(</span><span class="nx">board</span><span class="p">,</span> <span class="nx">n</span><span class="p">,</span> <span class="nx">l</span><span class="p">,</span> <span class="nx">i</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln">19</span>            <span class="c1">// mark the queen&#39;s postion
+</span><span class="ln">20</span><span class="c1"></span>            <span class="nx">board</span><span class="p">[</span><span class="nx">l</span><span class="p">]</span> <span class="p">=</span> <span class="nx">i</span>
+<span class="ln">21</span>            <span class="nx">solve</span><span class="p">(</span><span class="nx">answer</span><span class="p">,</span> <span class="nx">board</span><span class="p">,</span> <span class="nx">n</span><span class="p">,</span> <span class="nx">l</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+<span class="ln">22</span>        <span class="p">}</span>
+<span class="ln">23</span>    <span class="p">}</span>
+<span class="ln">24</span><span class="p">}</span>
+<span class="ln">25</span>
+<span class="ln">26</span><span class="c1">// 判断会否被其他皇后攻击
+</span><span class="ln">27</span><span class="c1"></span><span class="kd">func</span> <span class="nx">canBeAttack</span><span class="p">(</span><span class="nx">board</span> <span class="p">[]</span><span class="kt">int</span><span class="p">,</span> <span class="nx">n</span><span class="p">,</span> <span class="nx">x</span><span class="p">,</span> <span class="nx">y</span> <span class="kt">int</span><span class="p">)</span> <span class="kt">bool</span> <span class="p">{</span>
+<span class="ln">28</span>    <span class="k">for</span> <span class="nx">row</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">row</span> <span class="p">&lt;</span> <span class="nx">x</span><span class="p">;</span> <span class="nx">row</span><span class="o">++</span> <span class="p">{</span>
+<span class="ln">29</span>        <span class="nx">col</span> <span class="o">:=</span> <span class="nx">board</span><span class="p">[</span><span class="nx">row</span><span class="p">]</span>
+<span class="ln">30</span>        <span class="k">if</span> <span class="nx">col</span> <span class="o">==</span> <span class="nx">y</span> <span class="o">||</span> <span class="nx">abs</span><span class="p">(</span><span class="nx">row</span><span class="o">-</span><span class="nx">x</span><span class="p">)</span> <span class="o">==</span> <span class="nx">abs</span><span class="p">(</span><span class="nx">col</span><span class="o">-</span><span class="nx">y</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln">31</span>            <span class="k">return</span> <span class="kc">true</span>
+<span class="ln">32</span>        <span class="p">}</span>
+<span class="ln">33</span>    <span class="p">}</span>
+<span class="ln">34</span>
+<span class="ln">35</span>    <span class="k">return</span> <span class="kc">false</span>
+<span class="ln">36</span><span class="p">}</span>
+<span class="ln">37</span>
+<span class="ln">38</span><span class="c1">// 转换成返回格式
+</span><span class="ln">39</span><span class="c1"></span><span class="kd">func</span> <span class="nx">convertBoard</span><span class="p">(</span><span class="nx">board</span> <span class="p">[]</span><span class="kt">int</span><span class="p">,</span> <span class="nx">n</span> <span class="kt">int</span><span class="p">)</span> <span class="p">[]</span><span class="kt">string</span> <span class="p">{</span>
+<span class="ln">40</span>    <span class="nx">ans</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">([]</span><span class="kt">string</span><span class="p">,</span> <span class="nx">n</span><span class="p">)</span>
+<span class="ln">41</span>    <span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="nx">n</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
+<span class="ln">42</span>        <span class="nx">line</span> <span class="o">:=</span> <span class="p">[]</span><span class="nb">byte</span><span class="p">(</span><span class="nx">strings</span><span class="p">.</span><span class="nx">Repeat</span><span class="p">(</span><span class="s">&#34;.&#34;</span><span class="p">,</span> <span class="nx">n</span><span class="p">))</span>
+<span class="ln">43</span>        <span class="nx">line</span><span class="p">[</span><span class="nx">board</span><span class="p">[</span><span class="nx">i</span><span class="p">]]</span> <span class="p">=</span> <span class="sc">&#39;Q&#39;</span>
+<span class="ln">44</span>        <span class="nx">ans</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="p">=</span> <span class="nb">string</span><span class="p">(</span><span class="nx">line</span><span class="p">)</span>
+<span class="ln">45</span>    <span class="p">}</span>
+<span class="ln">46</span>
+<span class="ln">47</span>    <span class="k">return</span> <span class="nx">ans</span>
+<span class="ln">48</span><span class="p">}</span>
+<span class="ln">49</span>
+<span class="ln">50</span><span class="kd">func</span> <span class="nx">abs</span><span class="p">(</span><span class="nx">x</span> <span class="kt">int</span><span class="p">)</span> <span class="kt">int</span> <span class="p">{</span>
+<span class="ln">51</span>    <span class="k">if</span> <span class="nx">x</span> <span class="p">&lt;</span> <span class="mi">0</span> <span class="p">{</span>
+<span class="ln">52</span>        <span class="k">return</span> <span class="o">-</span><span class="nx">x</span>
+<span class="ln">53</span>    <span class="p">}</span>
+<span class="ln">54</span>
+<span class="ln">55</span>    <span class="k">return</span> <span class="nx">x</span>
+<span class="ln">56</span><span class="p">}</span></code></pre></div>
               
               
 
@@ -430,22 +401,24 @@ func abs(x int) int {
   <div class="post-actions-wrap">
       <nav >
         <ul class="post-actions post-action-nav">
+          
             <li class="post-action">
               
                 <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/post/tianlongbabu/" data-tooltip="天龙八部">
               
-                <i class="fa fa-angle-left"></i>
-                <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
-              </a>
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
             </li>
             <li class="post-action">
               
                 <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/042-trapping-rain-water/" data-tooltip="LeetCode 42. Trapping Rain Water">
               
-                <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
-                <i class="fa fa-angle-right"></i>
-              </a>
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
             </li>
+          
         </ul>
       </nav>
     <ul class="post-actions post-action-share" >
@@ -497,22 +470,24 @@ func abs(x int) int {
   <div class="post-actions-wrap">
       <nav >
         <ul class="post-actions post-action-nav">
+          
             <li class="post-action">
               
                 <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/post/tianlongbabu/" data-tooltip="天龙八部">
               
-                <i class="fa fa-angle-left"></i>
-                <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
-              </a>
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
             </li>
             <li class="post-action">
               
                 <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/042-trapping-rain-water/" data-tooltip="LeetCode 42. Trapping Rain Water">
               
-                <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
-                <i class="fa fa-angle-right"></i>
-              </a>
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
             </li>
+          
         </ul>
       </nav>
     <ul class="post-actions post-action-share" >
@@ -613,15 +588,13 @@ func abs(x int) int {
               </span>
               <div class="media-content hide-xs font-merryweather"><h2 id="数组与切片">数组与切片</h2>
 
-<p>以前粗学时并没有留意Golang的数组，一直以为只有切片。</p>
+<p>以前粗学时并没有留意 Golang 的数组，一直以为只有切片。</p>
 
-<p>今天看《Go语言实战》时才发现Golang也有数组。</p>
+<p>今天看《Go语言实战》时才发现 Golang 也有数组。与切片的区别是定义时指定长度（例如长度为4的 int 型数组<code>var array [4]int</code>）。</p>
 
 <p>数组赋值时会拷贝整个数组，所以作为参数传递时也会完整拷贝，要考虑性能合理使用，必要时可以使用指针。</p>
 
-<p>以下代码便于理解数组和切片：</p>
-
-<p></p></div>
+<p>以下代码便于理解数组和切片：</p></div>
             </div>
             <div style="clear:both;"></div>
             <hr>
@@ -782,23 +755,6 @@ func abs(x int) int {
             <hr>
           </div>
         
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://www.orztu.com/post/">
-                <h3 class="media-heading">Posts</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Jun 6, 2018
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather"></div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
       </div>
     </div>
     <div class="modal-footer">
@@ -806,7 +762,7 @@ func abs(x int) int {
          data-message-zero="no post found"
          data-message-one="1 post found"
          data-message-other="{n} posts found">
-         9 posts found
+         8 posts found
       </p>
     </div>
   </div>
@@ -820,7 +776,9 @@ func abs(x int) int {
 
     
 <script src="https://cdnjs.cat.net/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<script src="https://cdnjs.cat.net/ajax/libs/highlight.js/9.10.0/highlight.min.js"></script>
+
+
+
 <script src="https://cdnjs.cat.net/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
 <script src="https://cdnjs.cat.net/ajax/libs/fancybox/2.1.5/helpers/jquery.fancybox-thumbs.js"></script>
 
@@ -828,17 +786,7 @@ func abs(x int) int {
 <script src="https://www.orztu.com/js/script.min.js"></script>
 
 
-<script>
-$(document).ready(function() {
-  hljs.configure({ classPrefix: '', useBR: false });
-  $('pre.code-highlight, pre > code').each(function(i, block) {
-    if (!$(this).hasClass('codeblock')) {
-      $(this).addClass('codeblock');
-    }
-    hljs.highlightBlock(block);
-  });
-});
-</script>
+
 
   
     

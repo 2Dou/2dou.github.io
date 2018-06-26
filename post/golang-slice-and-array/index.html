@@ -64,6 +64,7 @@
     
     
     <link rel="stylesheet" href="https://www.orztu.com/css/style.min.css" />
+    <link rel="stylesheet" href="https://www.orztu.com/css/syntax.css" />
     
     
 
@@ -265,7 +266,6 @@
     
   
 
-
   </div>
 
 </div>
@@ -274,145 +274,82 @@
             <div class="main-content-wrap">
               <h2 id="数组与切片">数组与切片</h2>
 
-<p>以前粗学时并没有留意Golang的数组，一直以为只有切片。</p>
+<p>以前粗学时并没有留意 Golang 的数组，一直以为只有切片。</p>
 
-<p>今天看《Go语言实战》时才发现Golang也有数组。</p>
+<p>今天看《Go语言实战》时才发现 Golang 也有数组。与切片的区别是定义时指定长度（例如长度为4的 int 型数组<code>var array [4]int</code>）。</p>
 
 <p>数组赋值时会拷贝整个数组，所以作为参数传递时也会完整拷贝，要考虑性能合理使用，必要时可以使用指针。</p>
 
 <p>以下代码便于理解数组和切片：</p>
 
-<p></p>
+<p>
+<div class="highlight"><pre class="chroma"><code class="language-golang" data-lang="golang"><span class="kn">package</span> <span class="nx">main</span>
 
+<span class="kn">import</span> <span class="s">&#34;fmt&#34;</span>
 
-  
-    
-  
-  
-  
-  
+<span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// 定义数组 a1
+</span><span class="c1"></span>    <span class="nx">a1</span> <span class="o">:=</span> <span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="kt">int</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">}</span>
 
+    <span class="c1">// 数组 a2 来自 a1 的拷贝
+</span><span class="c1"></span>    <span class="nx">a2</span> <span class="o">:=</span> <span class="nx">a1</span>
 
-<figure class="highlight ">
-  <figcaption>
-    
-      <span>golang</span>
-    
-  </figcaption>
-  <table>
-    <tbody>
-      <tr>
-        <td class="gutter">
-          <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre>
-        </td>
-        <td class="code">
-          <pre class=" code-highlight">package main
+    <span class="kd">var</span> <span class="nx">a3</span> <span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="kt">int</span>
+    <span class="nx">a3</span> <span class="p">=</span> <span class="nx">a1</span> <span class="c1">// 同样会完整拷贝
+</span><span class="c1"></span>
+    <span class="c1">// a2 修改自己的内存区域
+</span><span class="c1"></span>    <span class="nx">a2</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="p">=</span> <span class="mi">0</span>
 
-import &#34;fmt&#34;
+    <span class="c1">// 切片 s1 来自 a1，其空间仍由 a1 实现
+</span><span class="c1"></span>    <span class="nx">s1</span> <span class="o">:=</span> <span class="nx">a1</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
+    <span class="c1">// 修改切片 s1 会影响数组 a1
+</span><span class="c1"></span>    <span class="nx">s1</span> <span class="p">=</span> <span class="nb">append</span><span class="p">(</span><span class="nx">s1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">)</span>
 
-func main() {
-    // 定义数组a1
-    a1 := [4]int{1, 2, 3, 4}
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&#34;a1:&#34;</span><span class="p">,</span> <span class="nx">a1</span><span class="p">)</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&#34;a2:&#34;</span><span class="p">,</span> <span class="nx">a2</span><span class="p">)</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&#34;a3:&#34;</span><span class="p">,</span> <span class="nx">a3</span><span class="p">)</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&#34;s1:&#34;</span><span class="p">,</span> <span class="nx">s1</span><span class="p">)</span>
+<span class="p">}</span></code></pre></div></p>
 
-    // 数组a2来自a1的拷贝
-    a2 := a1
+<p>输出：
+<div class="highlight"><pre class="chroma"><code class="language-c" data-lang="c"><span class="nl">a1</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span> <span class="mi">2</span> <span class="o">-</span><span class="mi">1</span> <span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+<span class="nl">a2</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span><span class="p">]</span>
+<span class="nl">a3</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span><span class="p">]</span>
+<span class="nl">s1</span><span class="p">:</span> <span class="p">[</span><span class="mi">2</span> <span class="o">-</span><span class="mi">1</span> <span class="o">-</span><span class="mi">2</span><span class="p">]</span></code></pre></div></p>
 
-    var a3 [4]int
-    a3 = a1 // 同样会完整拷贝
+<p>Slice 保存的是长度、容量以及其底层数组的地址。</p>
 
-    // a2修改自己的内存区域
-    a2[0] = 0
-
-    // 切片s1来自a1，其空间仍由a1实现
-    s1 := a1[1:2]
-    // 修改切片s1会影响数组a1
-    s1 = append(s1, -1, -2)
-
-    fmt.Println(&#34;a1:&#34;, a1)
-    fmt.Println(&#34;a2:&#34;, a2)
-    fmt.Println(&#34;a3:&#34;, a3)
-    fmt.Println(&#34;s1:&#34;, s1)
-}</pre>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</figure>
-
-<p>输出：</p>
-
-<pre><code>a1: [1 2 -1 -2]
-a2: [0 2 3 4]
-a3: [1 2 3 4]
-s1: [2 -1 -2]
-</code></pre>
-
-<p>Slice保存的是长度、容量以及其底层数组的地址。</p>
-
-<p>这里s1来自a1的切片，底层数组与a1同内存区域，所以对s1的append导致a1的数值被修改。</p>
+<p>这里 s1 来自 a1 的切片，底层数组与 a1 同内存区域，所以对 s1 的 append 导致 a1 的数值被修改。</p>
 
 <p>在使用中也要注意这种情况，合理使用。</p>
 
 <h2 id="使用三个索引创建切片">使用三个索引创建切片</h2>
 
-<p>如果希望append时不影响原有底层数组，可以使用三个索引创建切片：</p>
+<p>如果希望 append 时不影响原有底层数组，可以使用三个索引创建切片：</p>
 
-<p>
-  
-    
-  
-  
-  
-  
+<div class="highlight"><pre class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">a1</span> <span class="o">:=</span> <span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="kt">int</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">}</span>
+    <span class="nx">a2</span> <span class="o">:=</span> <span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="kt">int</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">}</span>
 
+    <span class="nx">s1</span> <span class="o">:=</span> <span class="nx">a1</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
+    <span class="nx">s2</span> <span class="o">:=</span> <span class="nx">a2</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
 
-<figure class="highlight ">
-  <figcaption>
-    
-      <span>golang</span>
-    
-  </figcaption>
-  <table>
-    <tbody>
-      <tr>
-        <td class="gutter">
-          <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre>
-        </td>
-        <td class="code">
-          <pre class=" code-highlight">package main
+    <span class="nx">s1</span> <span class="p">=</span> <span class="nb">append</span><span class="p">(</span><span class="nx">s1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="nx">s2</span> <span class="p">=</span> <span class="nb">append</span><span class="p">(</span><span class="nx">s2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
 
-import &#34;fmt&#34;
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&#34;a1:&#34;</span><span class="p">,</span> <span class="nx">a1</span><span class="p">)</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&#34;a2:&#34;</span><span class="p">,</span> <span class="nx">a2</span><span class="p">)</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&#34;s1:&#34;</span><span class="p">,</span> <span class="nx">s1</span><span class="p">)</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&#34;s2:&#34;</span><span class="p">,</span> <span class="nx">s2</span><span class="p">)</span>
+<span class="p">}</span></code></pre></div>
 
-func main() {
-    a1 := [4]int{1, 2, 3, 4}
-    a2 := [4]int{1, 2, 3, 4}
+<p>输出：
+<div class="highlight"><pre class="chroma"><code class="language-c" data-lang="c"><span class="nl">a1</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span> <span class="mi">2</span> <span class="o">-</span><span class="mi">1</span> <span class="mi">4</span><span class="p">]</span>
+<span class="nl">a2</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span><span class="p">]</span>
+<span class="nl">s1</span><span class="p">:</span> <span class="p">[</span><span class="mi">2</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="nl">s2</span><span class="p">:</span> <span class="p">[</span><span class="mi">2</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span></code></pre></div></p>
 
-    s1 := a1[1:2]
-    s2 := a2[1:2:2]
-
-    s1 = append(s1, -1)
-    s2 = append(s2, -1)
-
-    fmt.Println(&#34;a1:&#34;, a1)
-    fmt.Println(&#34;a2:&#34;, a2)
-    fmt.Println(&#34;s1:&#34;, s1)
-    fmt.Println(&#34;s2:&#34;, s2)
-}</pre>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</figure></p>
-
-<p>输出：</p>
-
-<pre><code>a1: [1 2 -1 4]
-a2: [1 2 3 4]
-s1: [2 -1]
-s2: [2 -1]
-</code></pre>
-
-<p>可以看到此时对s2的append并没有影响a2数组。</p>
+<p>可以看到此时对 s2 的 append 并没有影响 a2 数组。</p>
 
 <p>这种格式为：<code>slice[i:j:k]</code>的切片方式，前两个索引与原来相同，第三索引用于表示新切片的容量。但它不是直接表示容量大小，而是表示原切片或者数组的索引位置。当它越界时会出现运行时错误。</p>
 
@@ -424,63 +361,34 @@ s2: [2 -1]
 
 <h2 id="else">else</h2>
 
-<p>使用<code>slice[i:j:k]</code>创建切片的时候，并没有立即创建新的底层数组，而是在append时才创建新数组的：</p>
+<p>使用<code>slice[i:j:k]</code>创建切片的时候，并没有立即创建新的底层数组，而是在 append 时才创建新数组的：</p>
 
-<p>
-  
-    
-  
-  
-  
-  
+<div class="highlight"><pre class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">a1</span> <span class="o">:=</span> <span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="kt">int</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">}</span>
+    <span class="c1">// s1来自a1
+</span><span class="c1"></span>    <span class="nx">s1</span> <span class="o">:=</span> <span class="nx">a1</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
 
+    <span class="c1">// 修改a[1]
+</span><span class="c1"></span>    <span class="nx">a1</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="p">=</span> <span class="mi">0</span>
 
-<figure class="highlight ">
-  <figcaption>
-    
-      <span>golang</span>
-    
-  </figcaption>
-  <table>
-    <tbody>
-      <tr>
-        <td class="gutter">
-          <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre>
-        </td>
-        <td class="code">
-          <pre class=" code-highlight">func main() {
-    a1 := [4]int{1, 2, 3, 4}
-    // s1来自a1
-    s1 := a1[1:2:2]
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&#34;a1:&#34;</span><span class="p">,</span> <span class="nx">a1</span><span class="p">)</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&#34;s1:&#34;</span><span class="p">,</span> <span class="nx">s1</span><span class="p">)</span>
 
-    // 修改a[1]
-    a1[1] = 0
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&#34;-------------&#34;</span><span class="p">)</span>
 
-    fmt.Println(&#34;a1:&#34;, a1)
-    fmt.Println(&#34;s1:&#34;, s1)
+    <span class="c1">// append s1
+</span><span class="c1"></span>    <span class="nx">s1</span> <span class="p">=</span> <span class="nb">append</span><span class="p">(</span><span class="nx">s1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
 
-    fmt.Println(&#34;-------------&#34;)
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&#34;a1:&#34;</span><span class="p">,</span> <span class="nx">a1</span><span class="p">)</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&#34;s1:&#34;</span><span class="p">,</span> <span class="nx">s1</span><span class="p">)</span>
+<span class="p">}</span></code></pre></div>
 
-    // append s1
-    s1 = append(s1, -1)
-
-    fmt.Println(&#34;a1:&#34;, a1)
-    fmt.Println(&#34;s1:&#34;, s1)
-}</pre>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</figure></p>
-
-<p>输出：</p>
-
-<pre><code>a1: [1 0 3 4]
-s1: [0] // &lt;-对a[1]的修改也影响了s1
--------------
-a1: [1 0 3 4]
-s1: [0 -1]
-</code></pre>
+<p>输出：
+<div class="highlight"><pre class="chroma"><code class="language-c" data-lang="c"><span class="nl">a1</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span> <span class="mi">0</span> <span class="mi">3</span> <span class="mi">4</span><span class="p">]</span>
+<span class="nl">s1</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1">// &lt;-对`a[1]`的修改也影响了 s1
+</span><span class="c1"></span><span class="o">-------------</span>
+<span class="nl">a1</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span> <span class="mi">0</span> <span class="mi">3</span> <span class="mi">4</span><span class="p">]</span>
+<span class="nl">s1</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span></code></pre></div></p>
               
               
 
@@ -504,22 +412,24 @@ s1: [0 -1]
   <div class="post-actions-wrap">
       <nav >
         <ul class="post-actions post-action-nav">
+          
             <li class="post-action">
               
                 <a class="post-action-btn btn btn--disabled">
               
-                <i class="fa fa-angle-left"></i>
-                <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
-              </a>
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
             </li>
             <li class="post-action">
               
                 <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/post/text-watermark/" data-tooltip="python为图片添加文字水印">
               
-                <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
-                <i class="fa fa-angle-right"></i>
-              </a>
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
             </li>
+          
         </ul>
       </nav>
     <ul class="post-actions post-action-share" >
@@ -571,22 +481,24 @@ s1: [0 -1]
   <div class="post-actions-wrap">
       <nav >
         <ul class="post-actions post-action-nav">
+          
             <li class="post-action">
               
                 <a class="post-action-btn btn btn--disabled">
               
-                <i class="fa fa-angle-left"></i>
-                <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
-              </a>
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
             </li>
             <li class="post-action">
               
                 <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/post/text-watermark/" data-tooltip="python为图片添加文字水印">
               
-                <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
-                <i class="fa fa-angle-right"></i>
-              </a>
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
             </li>
+          
         </ul>
       </nav>
     <ul class="post-actions post-action-share" >
@@ -687,15 +599,13 @@ s1: [0 -1]
               </span>
               <div class="media-content hide-xs font-merryweather"><h2 id="数组与切片">数组与切片</h2>
 
-<p>以前粗学时并没有留意Golang的数组，一直以为只有切片。</p>
+<p>以前粗学时并没有留意 Golang 的数组，一直以为只有切片。</p>
 
-<p>今天看《Go语言实战》时才发现Golang也有数组。</p>
+<p>今天看《Go语言实战》时才发现 Golang 也有数组。与切片的区别是定义时指定长度（例如长度为4的 int 型数组<code>var array [4]int</code>）。</p>
 
 <p>数组赋值时会拷贝整个数组，所以作为参数传递时也会完整拷贝，要考虑性能合理使用，必要时可以使用指针。</p>
 
-<p>以下代码便于理解数组和切片：</p>
-
-<p></p></div>
+<p>以下代码便于理解数组和切片：</p></div>
             </div>
             <div style="clear:both;"></div>
             <hr>
@@ -856,23 +766,6 @@ s1: [0 -1]
             <hr>
           </div>
         
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://www.orztu.com/post/">
-                <h3 class="media-heading">Posts</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Jun 6, 2018
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather"></div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
       </div>
     </div>
     <div class="modal-footer">
@@ -880,7 +773,7 @@ s1: [0 -1]
          data-message-zero="no post found"
          data-message-one="1 post found"
          data-message-other="{n} posts found">
-         9 posts found
+         8 posts found
       </p>
     </div>
   </div>
@@ -894,7 +787,9 @@ s1: [0 -1]
 
     
 <script src="https://cdnjs.cat.net/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<script src="https://cdnjs.cat.net/ajax/libs/highlight.js/9.10.0/highlight.min.js"></script>
+
+
+
 <script src="https://cdnjs.cat.net/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
 <script src="https://cdnjs.cat.net/ajax/libs/fancybox/2.1.5/helpers/jquery.fancybox-thumbs.js"></script>
 
@@ -902,17 +797,7 @@ s1: [0 -1]
 <script src="https://www.orztu.com/js/script.min.js"></script>
 
 
-<script>
-$(document).ready(function() {
-  hljs.configure({ classPrefix: '', useBR: false });
-  $('pre.code-highlight, pre > code').each(function(i, block) {
-    if (!$(this).hasClass('codeblock')) {
-      $(this).addClass('codeblock');
-    }
-    hljs.highlightBlock(block);
-  });
-});
-</script>
+
 
   
     

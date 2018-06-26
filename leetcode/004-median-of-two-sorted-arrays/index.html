@@ -64,6 +64,7 @@
     
     
     <link rel="stylesheet" href="https://www.orztu.com/css/style.min.css" />
+    <link rel="stylesheet" href="https://www.orztu.com/css/syntax.css" />
     
     
 
@@ -265,7 +266,6 @@
     
   
 
-
   </div>
 
 </div>
@@ -305,74 +305,45 @@ nums2 = [3, 4]
 
 <p>通过数组长度，计算中位数的位置。在两个数组中按大小顺序依次查找，找到中位数所在位置，取出数值计算。</p>
 
-
-  
-    
-  
-  
-    
-  
-  
-  
-
-
-<figure class="highlight go">
-  <figcaption>
-    
-      <span>Solution</span>
-    
-  </figcaption>
-  <table>
-    <tbody>
-      <tr>
-        <td class="gutter">
-          <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre>
-        </td>
-        <td class="code">
-          <pre class="go code-highlight">func findMedianSortedArrays(nums1 []int, nums2 []int) float64 {
-    totalLen := len(nums1) &#43; len(nums2)
-
-    var p1, p2, index1, index2, sum int
-
-    index1 = int((totalLen - 1) / 2)
-    index2 = int(totalLen / 2)
-
-    for i := 0; i &lt; totalLen; i&#43;&#43; {
-        if i &gt; index2 {
-            break
-        }
-        var num int
-        if p1 &lt; len(nums1) &amp;&amp; p2 &lt; len(nums2) {
-            if nums1[p1] &lt; nums2[p2] {
-                num = nums1[p1]
-                p1&#43;&#43;
-            } else {
-                num = nums2[p2]
-                p2&#43;&#43;
-            }
-        } else if p1 &lt; len(nums1) {
-            num = nums1[p1]
-            p1&#43;&#43;
-        } else {
-            num = nums2[p2]
-            p2&#43;&#43;
-        }
-
-        if i == index1 {
-            sum &#43;= num
-        }
-        if i == index2 {
-            sum &#43;= num
-        }
-    }
-
-    return float64(sum) / 2.0
-}</pre>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</figure>
+<div class="highlight"><pre class="chroma"><code class="language-golang" data-lang="golang"><span class="ln"> 1</span><span class="kd">func</span> <span class="nx">findMedianSortedArrays</span><span class="p">(</span><span class="nx">nums1</span> <span class="p">[]</span><span class="kt">int</span><span class="p">,</span> <span class="nx">nums2</span> <span class="p">[]</span><span class="kt">int</span><span class="p">)</span> <span class="kt">float64</span> <span class="p">{</span>
+<span class="ln"> 2</span>    <span class="nx">totalLen</span> <span class="o">:=</span> <span class="nb">len</span><span class="p">(</span><span class="nx">nums1</span><span class="p">)</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="nx">nums2</span><span class="p">)</span>
+<span class="ln"> 3</span>
+<span class="ln"> 4</span>    <span class="kd">var</span> <span class="nx">p1</span><span class="p">,</span> <span class="nx">p2</span><span class="p">,</span> <span class="nx">index1</span><span class="p">,</span> <span class="nx">index2</span><span class="p">,</span> <span class="nx">sum</span> <span class="kt">int</span>
+<span class="ln"> 5</span>
+<span class="ln"> 6</span>    <span class="nx">index1</span> <span class="p">=</span> <span class="nb">int</span><span class="p">((</span><span class="nx">totalLen</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+<span class="ln"> 7</span>    <span class="nx">index2</span> <span class="p">=</span> <span class="nb">int</span><span class="p">(</span><span class="nx">totalLen</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+<span class="ln"> 8</span>
+<span class="ln"> 9</span>    <span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="nx">totalLen</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
+<span class="ln">10</span>        <span class="k">if</span> <span class="nx">i</span> <span class="p">&gt;</span> <span class="nx">index2</span> <span class="p">{</span>
+<span class="ln">11</span>            <span class="k">break</span>
+<span class="ln">12</span>        <span class="p">}</span>
+<span class="ln">13</span>        <span class="kd">var</span> <span class="nx">num</span> <span class="kt">int</span>
+<span class="ln">14</span>        <span class="k">if</span> <span class="nx">p1</span> <span class="p">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="nx">nums1</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="nx">p2</span> <span class="p">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="nx">nums2</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln">15</span>            <span class="k">if</span> <span class="nx">nums1</span><span class="p">[</span><span class="nx">p1</span><span class="p">]</span> <span class="p">&lt;</span> <span class="nx">nums2</span><span class="p">[</span><span class="nx">p2</span><span class="p">]</span> <span class="p">{</span>
+<span class="ln">16</span>                <span class="nx">num</span> <span class="p">=</span> <span class="nx">nums1</span><span class="p">[</span><span class="nx">p1</span><span class="p">]</span>
+<span class="ln">17</span>                <span class="nx">p1</span><span class="o">++</span>
+<span class="ln">18</span>            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+<span class="ln">19</span>                <span class="nx">num</span> <span class="p">=</span> <span class="nx">nums2</span><span class="p">[</span><span class="nx">p2</span><span class="p">]</span>
+<span class="ln">20</span>                <span class="nx">p2</span><span class="o">++</span>
+<span class="ln">21</span>            <span class="p">}</span>
+<span class="ln">22</span>        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="nx">p1</span> <span class="p">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="nx">nums1</span><span class="p">)</span> <span class="p">{</span>
+<span class="ln">23</span>            <span class="nx">num</span> <span class="p">=</span> <span class="nx">nums1</span><span class="p">[</span><span class="nx">p1</span><span class="p">]</span>
+<span class="ln">24</span>            <span class="nx">p1</span><span class="o">++</span>
+<span class="ln">25</span>        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+<span class="ln">26</span>            <span class="nx">num</span> <span class="p">=</span> <span class="nx">nums2</span><span class="p">[</span><span class="nx">p2</span><span class="p">]</span>
+<span class="ln">27</span>            <span class="nx">p2</span><span class="o">++</span>
+<span class="ln">28</span>        <span class="p">}</span>
+<span class="ln">29</span>
+<span class="ln">30</span>        <span class="k">if</span> <span class="nx">i</span> <span class="o">==</span> <span class="nx">index1</span> <span class="p">{</span>
+<span class="ln">31</span>            <span class="nx">sum</span> <span class="o">+=</span> <span class="nx">num</span>
+<span class="ln">32</span>        <span class="p">}</span>
+<span class="ln">33</span>        <span class="k">if</span> <span class="nx">i</span> <span class="o">==</span> <span class="nx">index2</span> <span class="p">{</span>
+<span class="ln">34</span>            <span class="nx">sum</span> <span class="o">+=</span> <span class="nx">num</span>
+<span class="ln">35</span>        <span class="p">}</span>
+<span class="ln">36</span>    <span class="p">}</span>
+<span class="ln">37</span>
+<span class="ln">38</span>    <span class="k">return</span> <span class="nb">float64</span><span class="p">(</span><span class="nx">sum</span><span class="p">)</span> <span class="o">/</span> <span class="mf">2.0</span>
+<span class="ln">39</span><span class="p">}</span></code></pre></div>
               
               
 
@@ -400,22 +371,24 @@ nums2 = [3, 4]
   <div class="post-actions-wrap">
       <nav >
         <ul class="post-actions post-action-nav">
+          
             <li class="post-action">
               
                 <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/005-longest-palindromic-substring/" data-tooltip="LeetCode 5. Longest Palindromic Substring">
               
-                <i class="fa fa-angle-left"></i>
-                <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
-              </a>
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
             </li>
             <li class="post-action">
               
                 <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/003-longest-substring-without-repeating-characters/" data-tooltip="LeetCode 3. Longest Substring Without Repeating Characters">
               
-                <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
-                <i class="fa fa-angle-right"></i>
-              </a>
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
             </li>
+          
         </ul>
       </nav>
     <ul class="post-actions post-action-share" >
@@ -467,22 +440,24 @@ nums2 = [3, 4]
   <div class="post-actions-wrap">
       <nav >
         <ul class="post-actions post-action-nav">
+          
             <li class="post-action">
               
                 <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/005-longest-palindromic-substring/" data-tooltip="LeetCode 5. Longest Palindromic Substring">
               
-                <i class="fa fa-angle-left"></i>
-                <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
-              </a>
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
             </li>
             <li class="post-action">
               
                 <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/003-longest-substring-without-repeating-characters/" data-tooltip="LeetCode 3. Longest Substring Without Repeating Characters">
               
-                <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
-                <i class="fa fa-angle-right"></i>
-              </a>
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
             </li>
+          
         </ul>
       </nav>
     <ul class="post-actions post-action-share" >
@@ -583,15 +558,13 @@ nums2 = [3, 4]
               </span>
               <div class="media-content hide-xs font-merryweather"><h2 id="数组与切片">数组与切片</h2>
 
-<p>以前粗学时并没有留意Golang的数组，一直以为只有切片。</p>
+<p>以前粗学时并没有留意 Golang 的数组，一直以为只有切片。</p>
 
-<p>今天看《Go语言实战》时才发现Golang也有数组。</p>
+<p>今天看《Go语言实战》时才发现 Golang 也有数组。与切片的区别是定义时指定长度（例如长度为4的 int 型数组<code>var array [4]int</code>）。</p>
 
 <p>数组赋值时会拷贝整个数组，所以作为参数传递时也会完整拷贝，要考虑性能合理使用，必要时可以使用指针。</p>
 
-<p>以下代码便于理解数组和切片：</p>
-
-<p></p></div>
+<p>以下代码便于理解数组和切片：</p></div>
             </div>
             <div style="clear:both;"></div>
             <hr>
@@ -752,23 +725,6 @@ nums2 = [3, 4]
             <hr>
           </div>
         
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://www.orztu.com/post/">
-                <h3 class="media-heading">Posts</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Jun 6, 2018
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather"></div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
       </div>
     </div>
     <div class="modal-footer">
@@ -776,7 +732,7 @@ nums2 = [3, 4]
          data-message-zero="no post found"
          data-message-one="1 post found"
          data-message-other="{n} posts found">
-         9 posts found
+         8 posts found
       </p>
     </div>
   </div>
@@ -790,7 +746,9 @@ nums2 = [3, 4]
 
     
 <script src="https://cdnjs.cat.net/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<script src="https://cdnjs.cat.net/ajax/libs/highlight.js/9.10.0/highlight.min.js"></script>
+
+
+
 <script src="https://cdnjs.cat.net/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
 <script src="https://cdnjs.cat.net/ajax/libs/fancybox/2.1.5/helpers/jquery.fancybox-thumbs.js"></script>
 
@@ -798,17 +756,7 @@ nums2 = [3, 4]
 <script src="https://www.orztu.com/js/script.min.js"></script>
 
 
-<script>
-$(document).ready(function() {
-  hljs.configure({ classPrefix: '', useBR: false });
-  $('pre.code-highlight, pre > code').each(function(i, block) {
-    if (!$(this).hasClass('codeblock')) {
-      $(this).addClass('codeblock');
-    }
-    hljs.highlightBlock(block);
-  });
-});
-</script>
+
 
   
     

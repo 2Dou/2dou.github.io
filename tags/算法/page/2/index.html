@@ -62,6 +62,7 @@
     
     
     <link rel="stylesheet" href="https://www.orztu.com/css/style.min.css" />
+    <link rel="stylesheet" href="https://www.orztu.com/css/syntax.css" />
     
     
 
@@ -281,7 +282,6 @@
     
   
 
-
   </div>
 
     </div>
@@ -361,7 +361,6 @@ A solution set is:
     
   
 
-
   </div>
 
     </div>
@@ -436,7 +435,6 @@ Output: [&quot;ad&quot;, &quot;ae&quot;, &quot;af&quot;, &quot;bd&quot;, &quot;b
       <a class="category-link" href="https://www.orztu.com/categories/leetcode">LeetCode</a>
     
   
-
 
   </div>
 
@@ -514,7 +512,6 @@ A solution set is:
     
   
 
-
   </div>
 
     </div>
@@ -587,7 +584,6 @@ Input is guaranteed to be within the range from 1 to 3999.</p>
       <a class="category-link" href="https://www.orztu.com/categories/leetcode">LeetCode</a>
     
   
-
 
   </div>
 
@@ -666,7 +662,6 @@ Input is guaranteed to be within the range from 1 to 3999.</p>
     
   
 
-
   </div>
 
     </div>
@@ -738,7 +733,6 @@ Note: You may not slant the container and n is at least 2.</p>
     
   
 
-
   </div>
 
     </div>
@@ -771,20 +765,22 @@ Note: You may not slant the container and n is at least 2.</p>
   <div class="pagination-bar">
     <ul class="pagination">
       
-        <li class="pagination-prev">
-          <a class="btn btn--default btn--small" href="https://www.orztu.com/tags/%E7%AE%97%E6%B3%95/">
-            <i class="fa fa-angle-left text-base icon-mr"></i>
-            <span class="hide-xs hide-sm text-small icon-mr">NEWER POSTS</span>
-          </a>
-        </li>
-      
-      
-        <li class="pagination-next">
-          <a class="btn btn--default btn--small" href="https://www.orztu.com/tags/%E7%AE%97%E6%B3%95/page/3/">
-            <span class="hide-xs hide-sm text-small icon-ml">OLDER POSTS</span>
-            <i class="fa fa-angle-right text-base icon-ml"></i>
-          </a>
-        </li>
+        
+          <li class="pagination-prev">
+            <a class="btn btn--default btn--small" href="https://www.orztu.com/tags/%E7%AE%97%E6%B3%95/">
+              <i class="fa fa-angle-left text-base icon-mr"></i>
+              <span>NEWER POSTS</span>
+            </a>
+          </li>
+        
+        
+          <li class="pagination-next">
+            <a class="btn btn--default btn--small" href="https://www.orztu.com/tags/%E7%AE%97%E6%B3%95/page/3/">
+              <span>OLDER POSTS</span>
+              <i class="fa fa-angle-right text-base icon-ml"></i>
+            </a>
+          </li>
+        
       
       <li class="pagination-number">page 2 of 4</li>
     </ul>
@@ -863,15 +859,13 @@ Note: You may not slant the container and n is at least 2.</p>
               </span>
               <div class="media-content hide-xs font-merryweather"><h2 id="数组与切片">数组与切片</h2>
 
-<p>以前粗学时并没有留意Golang的数组，一直以为只有切片。</p>
+<p>以前粗学时并没有留意 Golang 的数组，一直以为只有切片。</p>
 
-<p>今天看《Go语言实战》时才发现Golang也有数组。</p>
+<p>今天看《Go语言实战》时才发现 Golang 也有数组。与切片的区别是定义时指定长度（例如长度为4的 int 型数组<code>var array [4]int</code>）。</p>
 
 <p>数组赋值时会拷贝整个数组，所以作为参数传递时也会完整拷贝，要考虑性能合理使用，必要时可以使用指针。</p>
 
-<p>以下代码便于理解数组和切片：</p>
-
-<p></p></div>
+<p>以下代码便于理解数组和切片：</p></div>
             </div>
             <div style="clear:both;"></div>
             <hr>
@@ -1032,23 +1026,6 @@ Note: You may not slant the container and n is at least 2.</p>
             <hr>
           </div>
         
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://www.orztu.com/post/">
-                <h3 class="media-heading">Posts</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Jun 6, 2018
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather"></div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
       </div>
     </div>
     <div class="modal-footer">
@@ -1056,7 +1033,7 @@ Note: You may not slant the container and n is at least 2.</p>
          data-message-zero="no post found"
          data-message-one="1 post found"
          data-message-other="{n} posts found">
-         9 posts found
+         8 posts found
       </p>
     </div>
   </div>
@@ -1070,7 +1047,9 @@ Note: You may not slant the container and n is at least 2.</p>
 
     
 <script src="https://cdnjs.cat.net/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<script src="https://cdnjs.cat.net/ajax/libs/highlight.js/9.10.0/highlight.min.js"></script>
+
+
+
 <script src="https://cdnjs.cat.net/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
 <script src="https://cdnjs.cat.net/ajax/libs/fancybox/2.1.5/helpers/jquery.fancybox-thumbs.js"></script>
 
@@ -1078,17 +1057,7 @@ Note: You may not slant the container and n is at least 2.</p>
 <script src="https://www.orztu.com/js/script.min.js"></script>
 
 
-<script>
-$(document).ready(function() {
-  hljs.configure({ classPrefix: '', useBR: false });
-  $('pre.code-highlight, pre > code').each(function(i, block) {
-    if (!$(this).hasClass('codeblock')) {
-      $(this).addClass('codeblock');
-    }
-    hljs.highlightBlock(block);
-  });
-});
-</script>
+
 
 
 
