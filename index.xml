@@ -21,7 +21,7 @@
 
 &lt;p&gt;以前粗学时并没有留意 Golang 的数组，一直以为只有切片。&lt;/p&gt;
 
-&lt;p&gt;今天看《Go语言实战》时才发现 Golang 也有数组。与切片的区别是定义时指定长度（例如长度为4的 int 型数组&lt;code&gt;var array [4]int&lt;/code&gt;）。&lt;/p&gt;
+&lt;p&gt;今天看&lt;a href=&#34;https://book.douban.com/subject/27015617/&#34; target=&#34;_blank&#34;&gt;《Go语言实践》&lt;/a&gt;时才发现 Golang 也有数组。与切片的区别是定义时指定长度（例如长度为4的 int 型数组&lt;code&gt;var array [4]int&lt;/code&gt;）。&lt;/p&gt;
 
 &lt;p&gt;数组赋值时会拷贝整个数组，所以作为参数传递时也会完整拷贝，要考虑性能合理使用，必要时可以使用指针。&lt;/p&gt;
 
@@ -76,7 +76,11 @@
       <pubDate>Thu, 04 Jan 2018 14:22:15 +0800</pubDate>
       
       <guid>https://www.orztu.com/books/</guid>
-      <description> 2018  June
+      <description> 2018  July
+ 余华
+ 《许三观卖血记》
+看完这本书的那天，也看了电影《我不是药神》。 唉~ 这世上只有一个病！
+   June
  威廉·肯尼迪 / 布赖恩·克特森 / 埃里克·圣马丁  《Go语言实践》   Jan
  [英] 阿加莎・克里斯蒂
  《无人生还》  [日] 东野圭吾
@@ -810,7 +814,7 @@ return [0, 1].&lt;/p&gt;
       <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
       
       <guid>https://www.orztu.com/about/</guid>
-      <description> 城市永远年轻，而我们终将老去 info  Sorry girls, I&amp;rsquo;m married. cocos2dx-lua 程序猿 我可能是个假cocos2d-x   skills  C/C++,python,golang,lua MFC,flask,cocos2dx-lua  contact  h3rvgo AT gmail.com  </description>
+      <description> 城市永远年轻，而我们终将老去 info  Sorry girls, I&amp;rsquo;m married. cocos2dx-lua 程序猿 我可能是个假cocos2d-x   skills  C/C++,python,golang,lua MFC,flask,cocos2dx-lua git  contact  h3rvgo AT gmail.com  </description>
     </item>
     
   </channel>
