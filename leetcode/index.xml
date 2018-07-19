@@ -6,10 +6,37 @@
     <description>Recent content in Leetcodes on Orz the way</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 30 Mar 2018 16:59:00 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 19 Jul 2018 10:17:07 +0800</lastBuildDate>
     
 	<atom:link href="https://www.orztu.com/leetcode/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>LeetCode 31. Next Permutation</title>
+      <link>https://www.orztu.com/leetcode/031-next-permutation/</link>
+      <pubDate>Thu, 19 Jul 2018 10:17:07 +0800</pubDate>
+      
+      <guid>https://www.orztu.com/leetcode/031-next-permutation/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/next-permutation/&#34; target=&#34;_blank&#34;&gt;Next Permutation&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Implement next permutation, which rearranges numbers into the lexicographically next greater permutation of numbers.&lt;/p&gt;
+
+&lt;p&gt;If such arrangement is not possible, it must rearrange it as the lowest possible order (ie, sorted in ascending order).&lt;/p&gt;
+
+&lt;p&gt;The replacement must be in-place and use only constant extra memory.&lt;/p&gt;
+
+&lt;p&gt;Here are some examples. Inputs are in the left-hand column and its corresponding outputs are in the right-hand column.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;1,2,3&lt;/code&gt; → &lt;code&gt;1,3,2&lt;/code&gt;&lt;br&gt;
+&lt;code&gt;3,2,1&lt;/code&gt; → &lt;code&gt;1,2,3&lt;/code&gt;&lt;br&gt;
+&lt;code&gt;1,1,5&lt;/code&gt; → &lt;code&gt;1,5,1&lt;/code&gt;&lt;br&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>LeetCode 29. Divide Two Integers</title>

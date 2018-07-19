@@ -17,7 +17,7 @@
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>算法 | 
+    <title>排列 | 
         Orz the way
       
     </title>
@@ -26,15 +26,15 @@
 
     <link rel="icon" href="https://www.orztu.com/images/favicon.ico">
     
-      <link rel="alternate" type="application/rss+xml" title="RSS" href="https://www.orztu.com/tags/%E7%AE%97%E6%B3%95/index.xml">
+      <link rel="alternate" type="application/rss+xml" title="RSS" href="https://www.orztu.com/tags/%E6%8E%92%E5%88%97/index.xml">
     
 
     
     <meta name="description" content="城市永远年轻，而我们终将老去">
     <meta property="og:description" content="城市永远年轻，而我们终将老去">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="算法">
-    <meta property="og:url" content="/tags/%E7%AE%97%E6%B3%95/">
+    <meta property="og:title" content="排列">
+    <meta property="og:url" content="/tags/%E6%8E%92%E5%88%97/">
     <meta property="og:site_name" content="Orz the way">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Orz the way">
@@ -255,20 +255,20 @@
     
     <div class="postShorten-header">
       <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.orztu.com/leetcode/019-remove-nth-node-from-end-of-list/">
-          LeetCode 19. Remove Nth Node From End of List
+        <a class="link-unstyled" href="https://www.orztu.com/leetcode/031-next-permutation/">
+          LeetCode 31. Next Permutation
         </a>
       </h1>
       
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2017-10-19T21:03:59&#43;08:00">
+      <time itemprop="datePublished" datetime="2018-07-19T10:17:07&#43;08:00">
         
   
   
   
   
-    2017-10-19
+    2018-07-19
   
 
       </time>
@@ -286,479 +286,27 @@
 
     </div>
     <div class="postShorten-excerpt" itemprop="articleBody">
-      <p><a href="https://leetcode.com/problems/remove-nth-node-from-end-of-list/" target="_blank">Remove Nth Node From End of List</a></p>
+      <p><a href="https://leetcode.com/problems/next-permutation/" target="_blank">Next Permutation</a></p>
 
 <h2 id="description">Description</h2>
 
 <blockquote>
-<p>Given a linked list, remove the nth node from the end of list and return its head.</p>
+<p>Implement next permutation, which rearranges numbers into the lexicographically next greater permutation of numbers.</p>
 
-<pre><code>For example,
-   Given linked list: 1-&gt;2-&gt;3-&gt;4-&gt;5, and n = 2.
-   After removing the second node from the end, the linked list becomes 1-&gt;2-&gt;3-&gt;5.
-</code></pre>
+<p>If such arrangement is not possible, it must rearrange it as the lowest possible order (ie, sorted in ascending order).</p>
 
-<p><strong>Note</strong>:
-Given n will always be valid.
-Try to do this in one pass.</p>
-</blockquote>
+<p>The replacement must be in-place and use only constant extra memory.</p>
 
-<p>从链表中删除倒数第n个结点（n必定有效）</p>
+<p>Here are some examples. Inputs are in the left-hand column and its corresponding outputs are in the right-hand column.</p>
 
-<p></p>
-      <p>
-        <a href="https://www.orztu.com/leetcode/019-remove-nth-node-from-end-of-list/" class="postShorten-excerpt_link link">Continue reading</a>
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-            
-              
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.orztu.com/leetcode/018-4sum/">
-          LeetCode 18. 4Sum
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2017-10-17T16:27:33&#43;08:00">
-        
-  
-  
-  
-  
-    2017-10-17
-  
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://www.orztu.com/categories/leetcode">LeetCode</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      <p><a href="https://leetcode.com/problems/4sum/" target="_blank">4Sum</a></p>
-
-<h2 id="description">Description</h2>
-
-<blockquote>
-<p>Given an array S of n integers, are there elements a, b, c, and d in S such that a + b + c + d = target? Find all unique quadruplets in the array which gives the sum of target.</p>
-
-<p><strong>Note</strong>: The solution set must not contain duplicate quadruplets.</p>
-
-<pre><code>For example, given array S = [1, 0, -1, 0, -2, 2], and target = 0.
-
-A solution set is:
-[
-  [-1,  0, 0, 1],
-  [-2, -1, 1, 2],
-  [-2,  0, 0, 2]
-]
-</code></pre>
+<p><code>1,2,3</code> → <code>1,3,2</code><br>
+<code>3,2,1</code> → <code>1,2,3</code><br>
+<code>1,1,5</code> → <code>1,5,1</code><br></p>
 </blockquote>
 
 <p></p>
       <p>
-        <a href="https://www.orztu.com/leetcode/018-4sum/" class="postShorten-excerpt_link link">Continue reading</a>
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-            
-              
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.orztu.com/leetcode/017-letter-combinations-of-a-phone-number/">
-          LeetCode 17. Letter Combinations of a Phone Number
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2017-10-17T14:39:40&#43;08:00">
-        
-  
-  
-  
-  
-    2017-10-17
-  
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://www.orztu.com/categories/leetcode">LeetCode</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      <p><a href="https://leetcode.com/problems/letter-combinations-of-a-phone-number/" target="_blank">Letter Combinations of a Phone Number</a></p>
-
-<h2 id="description">Description</h2>
-
-<blockquote>
-<p>Given a digit string, return all possible letter combinations that the number could represent.</p>
-
-<p>A mapping of digit to letters (just like on the telephone buttons) is given below.</p>
-
-<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Telephone-keypad2.svg/200px-Telephone-keypad2.svg.png" alt="" /></p>
-
-<pre><code>Input: Digit string &quot;23&quot;
-Output: [&quot;ad&quot;, &quot;ae&quot;, &quot;af&quot;, &quot;bd&quot;, &quot;be&quot;, &quot;bf&quot;, &quot;cd&quot;, &quot;ce&quot;, &quot;cf&quot;].
-</code></pre>
-</blockquote>
-
-<p></p>
-      <p>
-        <a href="https://www.orztu.com/leetcode/017-letter-combinations-of-a-phone-number/" class="postShorten-excerpt_link link">Continue reading</a>
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-            
-              
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.orztu.com/leetcode/015-3sum/">
-          LeetCode 15. 3Sum
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2017-07-28T08:54:12&#43;08:00">
-        
-  
-  
-  
-  
-    2017-07-28
-  
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://www.orztu.com/categories/leetcode">LeetCode</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      <p><a href="https://leetcode.com/problems/3sum/" target="_blank">3Sum</a></p>
-
-<h2 id="description">Description</h2>
-
-<blockquote>
-<p>Given an array S of n integers, are there elements a, b, c in S such that a + b + c = 0? Find all unique triplets in the array which gives the sum of zero. <br>
-<br>
-Note: The solution set must not contain duplicate triplets.</p>
-
-<pre><code>For example, given array S = [-1, 0, 1, 2, -1, -4],
-
-A solution set is:
-[
-  [-1, 0, 1],
-  [-1, -1, 2]
-]
-</code></pre>
-</blockquote>
-
-<p>在给定数组中找出“和为0的三个数”的所有解。</p>
-
-<p></p>
-      <p>
-        <a href="https://www.orztu.com/leetcode/015-3sum/" class="postShorten-excerpt_link link">Continue reading</a>
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-            
-              
-  
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-right" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.orztu.com/leetcode/013-roman-to-integer/">
-          LeetCode 13. Roman to Integer
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2017-07-07T14:43:41&#43;08:00">
-        
-  
-  
-  
-  
-    2017-07-07
-  
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://www.orztu.com/categories/leetcode">LeetCode</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      <p><a href="https://leetcode.com/problems/roman-to-integer/" target="_blank">Roman to Integer</a></p>
-
-<h2 id="description">Description</h2>
-
-<blockquote>
-<p>Given a roman numeral, convert it to an integer.<br>
-<br>
-Input is guaranteed to be within the range from 1 to 3999.</p>
-</blockquote>
-
-<p>将罗马数字转换成整型。</p>
-
-<p></p>
-      <p>
-        <a href="https://www.orztu.com/leetcode/013-roman-to-integer/" class="postShorten-excerpt_link link">Continue reading</a>
-        
-      </p>
-    </div>
-  </div>
-  
-    <a href="https://www.orztu.com/leetcode/013-roman-to-integer/">
-      <div class="postShorten-thumbnailimg">
-        <img alt="" itemprop="image" src="https://www.orztu.com/images/leetcode/roman-numerals.jpg"/>
-      </div>
-    </a>
-  
-</article>
-
-            
-              
-  
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-right" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.orztu.com/leetcode/012-integer-to-roman/">
-          LeetCode 12. Integer to Roman
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2017-07-07T09:18:49&#43;08:00">
-        
-  
-  
-  
-  
-    2017-07-07
-  
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://www.orztu.com/categories/leetcode">LeetCode</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      <p><a href="https://leetcode.com/problems/integer-to-roman/" target="_blank">Integer to Roman</a></p>
-
-<h2 id="description">Description</h2>
-
-<blockquote>
-<p>Given an integer, convert it to a roman numeral. <br>
-<br>
-Input is guaranteed to be within the range from 1 to 3999.</p>
-</blockquote>
-
-<p>将整型转换成罗马数字形式:</p>
-
-<p></p>
-      <p>
-        <a href="https://www.orztu.com/leetcode/012-integer-to-roman/" class="postShorten-excerpt_link link">Continue reading</a>
-        
-      </p>
-    </div>
-  </div>
-  
-    <a href="https://www.orztu.com/leetcode/012-integer-to-roman/">
-      <div class="postShorten-thumbnailimg">
-        <img alt="" itemprop="image" src="https://www.orztu.com/images/leetcode/roman-numerals.jpg"/>
-      </div>
-    </a>
-  
-</article>
-
-            
-              
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.orztu.com/leetcode/011-container-with-most-water/">
-          LeetCode 11. Container With Most Water
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2017-07-06T14:09:43&#43;08:00">
-        
-  
-  
-  
-  
-    2017-07-06
-  
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://www.orztu.com/categories/leetcode">LeetCode</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      <p><a href="https://leetcode.com/problems/container-with-most-water/" target="_blank">Container With Most Water</a></p>
-
-<h2 id="description">Description</h2>
-
-<blockquote>
-<p>Given n non-negative integers a1, a2, &hellip;, an, where each represents a point at coordinate (i, ai). n vertical lines are drawn such that the two endpoints of line i is at (i, ai) and (i, 0). Find two lines, which together with x-axis forms a container, such that the container contains the most water.<br>
-<br>
-Note: You may not slant the container and n is at least 2.</p>
-</blockquote>
-
-<p>给出n个点，它们与X轴有n条垂线，每两条垂线与X轴形成的U型容器，找出最大“容积”(面积）</p>
-
-<p></p>
-      <p>
-        <a href="https://www.orztu.com/leetcode/011-container-with-most-water/" class="postShorten-excerpt_link link">Continue reading</a>
+        <a href="https://www.orztu.com/leetcode/031-next-permutation/" class="postShorten-excerpt_link link">Continue reading</a>
         
       </p>
     </div>
@@ -768,30 +316,6 @@ Note: You may not slant the container and n is at least 2.</p>
 
             
             
-  <div class="pagination-bar">
-    <ul class="pagination">
-      
-        
-          <li class="pagination-prev">
-            <a class="btn btn--default btn--small" href="https://www.orztu.com/tags/%E7%AE%97%E6%B3%95/">
-              <i class="fa fa-angle-left text-base icon-mr"></i>
-              <span>NEWER POSTS</span>
-            </a>
-          </li>
-        
-        
-          <li class="pagination-next">
-            <a class="btn btn--default btn--small" href="https://www.orztu.com/tags/%E7%AE%97%E6%B3%95/page/3/">
-              <span>OLDER POSTS</span>
-              <i class="fa fa-angle-right text-base icon-ml"></i>
-            </a>
-          </li>
-        
-      
-      <li class="pagination-number">page 2 of 4</li>
-    </ul>
-  </div>
-
 
           </section>
         

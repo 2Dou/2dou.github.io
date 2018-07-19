@@ -21,26 +21,26 @@
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Golang Slice and Array | 
+    <title>LeetCode 31. Next Permutation | 
         Orz the way
       
     </title>
     <meta name="author" content="SelFree">
-    <meta name="keywords" content="golang, 切片, 数组, program develop, leetcode, golang, leetcode解答, 程序">
+    <meta name="keywords" content="LeetCode, 算法, LeetCode解答, 排列, Permutation, Next Permutation&#34;, program develop, leetcode, golang, leetcode解答, 程序">
 
     <link rel="icon" href="https://www.orztu.com/images/favicon.ico">
     
 
     
-    <meta name="description" content="Golang切片与数组">
-    <meta property="og:description" content="Golang切片与数组">
+    <meta name="description" content="LeetCode 练习 31. Next Permutation - Answer LeetCode编程练习解答">
+    <meta property="og:description" content="LeetCode 练习 31. Next Permutation - Answer LeetCode编程练习解答">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Golang Slice and Array">
-    <meta property="og:url" content="/post/golang-slice-and-array/">
+    <meta property="og:title" content="LeetCode 31. Next Permutation">
+    <meta property="og:url" content="/leetcode/031-next-permutation/">
     <meta property="og:site_name" content="Orz the way">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Orz the way">
-    <meta name="twitter:description" content="Golang切片与数组">
+    <meta name="twitter:description" content="LeetCode 练习 31. Next Permutation - Answer LeetCode编程练习解答">
     
     
 
@@ -240,19 +240,19 @@
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title" itemprop="headline">
-      Golang Slice and Array
+      LeetCode 31. Next Permutation
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2018-06-25T15:22:42&#43;08:00">
+      <time itemprop="datePublished" datetime="2018-07-19T10:17:07&#43;08:00">
         
   
   
   
   
-    2018-06-25
+    2018-07-19
   
 
       </time>
@@ -262,7 +262,7 @@
   
     <span>in</span>
     
-      <a class="category-link" href="https://www.orztu.com/categories/coding-life">coding life</a>
+      <a class="category-link" href="https://www.orztu.com/categories/leetcode">LeetCode</a>
     
   
 
@@ -272,123 +272,115 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <h2 id="数组与切片">数组与切片</h2>
+              <p><a href="https://leetcode.com/problems/next-permutation/" target="_blank">Next Permutation</a></p>
 
-<p>以前粗学时并没有留意 Golang 的数组，一直以为只有切片。</p>
+<h2 id="description">Description</h2>
 
-<p>今天看<a href="https://book.douban.com/subject/27015617/" target="_blank">《Go语言实践》</a>时才发现 Golang 也有数组。与切片的区别是定义时指定长度（例如长度为4的 int 型数组<code>var array [4]int</code>）。</p>
+<blockquote>
+<p>Implement next permutation, which rearranges numbers into the lexicographically next greater permutation of numbers.</p>
 
-<p>数组赋值时会拷贝整个数组，所以作为参数传递时也会完整拷贝，要考虑性能合理使用，必要时可以使用指针。</p>
+<p>If such arrangement is not possible, it must rearrange it as the lowest possible order (ie, sorted in ascending order).</p>
 
-<p>以下代码便于理解数组和切片：</p>
+<p>The replacement must be in-place and use only constant extra memory.</p>
 
-<p>
-<div class="highlight"><pre class="chroma"><code class="language-golang" data-lang="golang"><span class="kn">package</span> <span class="nx">main</span>
+<p>Here are some examples. Inputs are in the left-hand column and its corresponding outputs are in the right-hand column.</p>
 
-<span class="kn">import</span> <span class="s">&#34;fmt&#34;</span>
+<p><code>1,2,3</code> → <code>1,3,2</code><br>
+<code>3,2,1</code> → <code>1,2,3</code><br>
+<code>1,1,5</code> → <code>1,5,1</code><br></p>
+</blockquote>
 
-<span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
-    <span class="c1">// 定义数组 a1
-</span><span class="c1"></span>    <span class="nx">a1</span> <span class="o">:=</span> <span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="kt">int</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">}</span>
+<p></p>
 
-    <span class="c1">// 数组 a2 来自 a1 的拷贝
-</span><span class="c1"></span>    <span class="nx">a2</span> <span class="o">:=</span> <span class="nx">a1</span>
+<p>实现字典序排列的 nextPermutation 方法，假如已经是最大排列，则输出最小排列。</p>
 
-    <span class="kd">var</span> <span class="nx">a3</span> <span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="kt">int</span>
-    <span class="nx">a3</span> <span class="p">=</span> <span class="nx">a1</span> <span class="c1">// 同样会完整拷贝
-</span><span class="c1"></span>
-    <span class="c1">// a2 修改自己的内存区域
-</span><span class="c1"></span>    <span class="nx">a2</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="p">=</span> <span class="mi">0</span>
+<h2 id="字典序排列">字典序排列</h2>
 
-    <span class="c1">// 切片 s1 来自 a1，其空间仍由 a1 实现
-</span><span class="c1"></span>    <span class="nx">s1</span> <span class="o">:=</span> <span class="nx">a1</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
-    <span class="c1">// 修改切片 s1 会影响数组 a1
-</span><span class="c1"></span>    <span class="nx">s1</span> <span class="p">=</span> <span class="nb">append</span><span class="p">(</span><span class="nx">s1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">)</span>
+<p>我们在字符串大小比较时，就已经使用了字典序:</p>
 
-    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&#34;a1:&#34;</span><span class="p">,</span> <span class="nx">a1</span><span class="p">)</span>
-    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&#34;a2:&#34;</span><span class="p">,</span> <span class="nx">a2</span><span class="p">)</span>
-    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&#34;a3:&#34;</span><span class="p">,</span> <span class="nx">a3</span><span class="p">)</span>
-    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&#34;s1:&#34;</span><span class="p">,</span> <span class="nx">s1</span><span class="p">)</span>
+<p>例如：<code>abc</code> &lt; <code>abcd</code> &lt; <code>abde</code> &lt; <code>afab</code></p>
+
+<p>所以字典序排列算法中有：</p>
+
+<ul>
+<li>最小排列：1-n，eg：<code>1,2,3,4</code></li>
+<li>最大排列：n-1，eg：<code>4,3,2,1</code></li>
+<li><code>next-permutation</code>：根据当前排列，生成恰好比它大的下一个排列</li>
+</ul>
+
+<p>通过字典序树可以更好的理解：
+<img src="https://www.orztu.com/images/leetcode/031-next-permutation.jpg" alt="字典序树" /></p>
+
+<h2 id="solution">Solution</h2>
+
+<p>参考 <a href="https://en.wikipedia.org/wiki/Permutation#Generation_in_lexicographic_order" target="_blank">wikipedia</a> 中关于字典序排列的算法描述：</p>
+
+<blockquote>
+<ol>
+<li>Find the largest index <code>k</code> such that <code>a[k] &lt; a[k + 1]</code>. If no such index exists, the permutation is the last permutation.</li>
+<li>Find the largest index <code>l</code> greater than <code>k</code> such that <code>a[k] &lt; a[l]</code>.</li>
+<li>Swap the value of <code>a[k]</code> with that of <code>a[l]</code>.</li>
+<li>Reverse the sequence from <code>a[k + 1]</code> up to and including the final element <code>a[n]</code>.</li>
+</ol>
+</blockquote>
+
+<p>假设当前排列为长度为<code>n+1</code>的数组<code>a</code>，则其下一个排列的算法为:</p>
+
+<ol>
+<li>查找最大的索引<code>k</code>，满足<code>a[k] &lt; a[k + 1]</code>。如果不存在则当前已经是最大排列。</li>
+<li>查找最大索引<code>l</code>，满足<code>l &gt; k &amp;&amp; a[k] &lt; a[l]</code>。</li>
+<li>交换<code>a[k]</code>和<code>a[l]</code></li>
+<li>将<code>a[k + 1], a[k + 2], ..., a[n]</code>倒序</li>
+</ol>
+
+<p>实现代码如下：
+<div class="highlight"><pre class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">func</span> <span class="nx">nextPermutation</span><span class="p">(</span><span class="nx">nums</span> <span class="p">[]</span><span class="kt">int</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">length</span> <span class="o">:=</span> <span class="nb">len</span><span class="p">(</span><span class="nx">nums</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nx">length</span> <span class="o">==</span> <span class="mi">1</span> <span class="p">{</span>
+        <span class="k">return</span>
+    <span class="p">}</span>
+
+    <span class="nx">k</span> <span class="o">:=</span> <span class="nx">length</span> <span class="o">-</span> <span class="mi">2</span>
+    <span class="k">for</span> <span class="p">;</span> <span class="nx">k</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">k</span><span class="o">--</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="nx">nums</span><span class="p">[</span><span class="nx">k</span><span class="p">]</span> <span class="p">&lt;</span> <span class="nx">nums</span><span class="p">[</span><span class="nx">k</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="p">{</span>
+            <span class="k">break</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">if</span> <span class="nx">k</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span> <span class="p">{</span>
+        <span class="c1">// 当前已经是最大排列，则输出最小排列
+</span><span class="c1"></span>        <span class="nx">reverse</span><span class="p">(</span><span class="nx">nums</span><span class="p">)</span>
+        <span class="k">return</span>
+    <span class="p">}</span>
+
+    <span class="nx">l</span> <span class="o">:=</span> <span class="nx">length</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="k">for</span> <span class="p">;</span> <span class="nx">l</span> <span class="p">&gt;</span> <span class="nx">k</span><span class="p">;</span> <span class="nx">l</span><span class="o">--</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="nx">nums</span><span class="p">[</span><span class="nx">l</span><span class="p">]</span> <span class="p">&gt;</span> <span class="nx">nums</span><span class="p">[</span><span class="nx">k</span><span class="p">]</span> <span class="p">{</span>
+            <span class="k">break</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="c1">// 交换 a[k] 和 a[l]
+</span><span class="c1"></span>    <span class="nx">swap</span><span class="p">(</span><span class="nx">nums</span><span class="p">,</span> <span class="nx">k</span><span class="p">,</span> <span class="nx">l</span><span class="p">)</span>
+
+    <span class="c1">// 倒序 a[k]...a[n]
+</span><span class="c1"></span>    <span class="nx">reverse</span><span class="p">(</span><span class="nx">nums</span><span class="p">[</span><span class="nx">k</span><span class="o">+</span><span class="mi">1</span><span class="p">:])</span>
+<span class="p">}</span>
+
+<span class="c1">// 交换两个数
+</span><span class="c1"></span><span class="kd">func</span> <span class="nx">swap</span><span class="p">(</span><span class="nx">nums</span> <span class="p">[]</span><span class="kt">int</span><span class="p">,</span> <span class="nx">i</span><span class="p">,</span> <span class="nx">j</span> <span class="kt">int</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">tmp</span> <span class="o">:=</span> <span class="nx">nums</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span>
+    <span class="nx">nums</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="p">=</span> <span class="nx">nums</span><span class="p">[</span><span class="nx">j</span><span class="p">]</span>
+    <span class="nx">nums</span><span class="p">[</span><span class="nx">j</span><span class="p">]</span> <span class="p">=</span> <span class="nx">tmp</span>
+<span class="p">}</span>
+
+<span class="c1">// 将slice倒序
+</span><span class="c1"></span><span class="kd">func</span> <span class="nx">reverse</span><span class="p">(</span><span class="nx">nums</span> <span class="p">[]</span><span class="kt">int</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">length</span> <span class="o">:=</span> <span class="nb">len</span><span class="p">(</span><span class="nx">nums</span><span class="p">)</span>
+    <span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="nx">length</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
+        <span class="nx">swap</span><span class="p">(</span><span class="nx">nums</span><span class="p">,</span> <span class="nx">i</span><span class="p">,</span> <span class="nx">length</span> <span class="o">-</span> <span class="nx">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="p">}</span>
 <span class="p">}</span></code></pre></div></p>
-
-<p>输出：
-<div class="highlight"><pre class="chroma"><code class="language-c" data-lang="c"><span class="nl">a1</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span> <span class="mi">2</span> <span class="o">-</span><span class="mi">1</span> <span class="o">-</span><span class="mi">2</span><span class="p">]</span>
-<span class="nl">a2</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span><span class="p">]</span>
-<span class="nl">a3</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span><span class="p">]</span>
-<span class="nl">s1</span><span class="p">:</span> <span class="p">[</span><span class="mi">2</span> <span class="o">-</span><span class="mi">1</span> <span class="o">-</span><span class="mi">2</span><span class="p">]</span></code></pre></div></p>
-
-<p>Slice 保存的是长度、容量以及其底层数组的地址。</p>
-
-<p>这里 s1 来自 a1 的切片，底层数组与 a1 同内存区域，所以对 s1 的 append 导致 a1 的数值被修改。</p>
-
-<p>在使用中也要注意这种情况，合理使用。</p>
-
-<h2 id="使用三个索引创建切片">使用三个索引创建切片</h2>
-
-<p>如果希望 append 时不影响原有底层数组，可以使用三个索引创建切片：</p>
-
-<div class="highlight"><pre class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nx">a1</span> <span class="o">:=</span> <span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="kt">int</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">}</span>
-    <span class="nx">a2</span> <span class="o">:=</span> <span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="kt">int</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">}</span>
-
-    <span class="nx">s1</span> <span class="o">:=</span> <span class="nx">a1</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
-    <span class="nx">s2</span> <span class="o">:=</span> <span class="nx">a2</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
-
-    <span class="nx">s1</span> <span class="p">=</span> <span class="nb">append</span><span class="p">(</span><span class="nx">s1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-    <span class="nx">s2</span> <span class="p">=</span> <span class="nb">append</span><span class="p">(</span><span class="nx">s2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-
-    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&#34;a1:&#34;</span><span class="p">,</span> <span class="nx">a1</span><span class="p">)</span>
-    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&#34;a2:&#34;</span><span class="p">,</span> <span class="nx">a2</span><span class="p">)</span>
-    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&#34;s1:&#34;</span><span class="p">,</span> <span class="nx">s1</span><span class="p">)</span>
-    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&#34;s2:&#34;</span><span class="p">,</span> <span class="nx">s2</span><span class="p">)</span>
-<span class="p">}</span></code></pre></div>
-
-<p>输出：
-<div class="highlight"><pre class="chroma"><code class="language-c" data-lang="c"><span class="nl">a1</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span> <span class="mi">2</span> <span class="o">-</span><span class="mi">1</span> <span class="mi">4</span><span class="p">]</span>
-<span class="nl">a2</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span><span class="p">]</span>
-<span class="nl">s1</span><span class="p">:</span> <span class="p">[</span><span class="mi">2</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-<span class="nl">s2</span><span class="p">:</span> <span class="p">[</span><span class="mi">2</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span></code></pre></div></p>
-
-<p>可以看到此时对 s2 的 append 并没有影响 a2 数组。</p>
-
-<p>这种格式为：<code>slice[i:j:k]</code>的切片方式，前两个索引与原来相同，第三索引用于表示新切片的容量。但它不是直接表示容量大小，而是表示原切片或者数组的索引位置。当它越界时会出现运行时错误。</p>
-
-<p>所以新切片的长度和容量应该这样计算：</p>
-
-<pre><code>长度：j - i
-容量：k - i
-</code></pre>
-
-<h2 id="else">else</h2>
-
-<p>使用<code>slice[i:j:k]</code>创建切片的时候，并没有立即创建新的底层数组，而是在 append 时才创建新数组的：</p>
-
-<div class="highlight"><pre class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nx">a1</span> <span class="o">:=</span> <span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="kt">int</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">}</span>
-    <span class="c1">// s1来自a1
-</span><span class="c1"></span>    <span class="nx">s1</span> <span class="o">:=</span> <span class="nx">a1</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
-
-    <span class="c1">// 修改a[1]
-</span><span class="c1"></span>    <span class="nx">a1</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="p">=</span> <span class="mi">0</span>
-
-    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&#34;a1:&#34;</span><span class="p">,</span> <span class="nx">a1</span><span class="p">)</span>
-    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&#34;s1:&#34;</span><span class="p">,</span> <span class="nx">s1</span><span class="p">)</span>
-
-    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&#34;-------------&#34;</span><span class="p">)</span>
-
-    <span class="c1">// append s1
-</span><span class="c1"></span>    <span class="nx">s1</span> <span class="p">=</span> <span class="nb">append</span><span class="p">(</span><span class="nx">s1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-
-    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&#34;a1:&#34;</span><span class="p">,</span> <span class="nx">a1</span><span class="p">)</span>
-    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&#34;s1:&#34;</span><span class="p">,</span> <span class="nx">s1</span><span class="p">)</span>
-<span class="p">}</span></code></pre></div>
-
-<p>输出：
-<div class="highlight"><pre class="chroma"><code class="language-c" data-lang="c"><span class="nl">a1</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span> <span class="mi">0</span> <span class="mi">3</span> <span class="mi">4</span><span class="p">]</span>
-<span class="nl">s1</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1">// &lt;-对`a[1]`的修改也影响了 s1
-</span><span class="c1"></span><span class="o">-------------</span>
-<span class="nl">a1</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span> <span class="mi">0</span> <span class="mi">3</span> <span class="mi">4</span><span class="p">]</span>
-<span class="nl">s1</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span></code></pre></div></p>
               
               
 
@@ -402,7 +394,11 @@
                   <div class="post-footer-tags">
                     <span class="text-color-light text-small">TAGGED IN</span><br/>
                     
-  <a class="tag tag--primary tag--small" href="https://www.orztu.com/tags/golang/">golang</a>
+  <a class="tag tag--primary tag--small" href="https://www.orztu.com/tags/leetcode/">LeetCode</a>
+
+  <a class="tag tag--primary tag--small" href="https://www.orztu.com/tags/%E7%AE%97%E6%B3%95/">算法</a>
+
+  <a class="tag tag--primary tag--small" href="https://www.orztu.com/tags/%E6%8E%92%E5%88%97/">排列</a>
 
                   </div>
                 
@@ -416,10 +412,8 @@
             <li class="post-action">
               
               
-                
               
-              
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/031-next-permutation/" data-tooltip="LeetCode 31. Next Permutation">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -431,7 +425,7 @@
                 
               
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/post/text-watermark/" data-tooltip="python为图片添加文字水印">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/post/golang-slice-and-array/" data-tooltip="Golang Slice and Array">
               
                   <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                   <i class="fa fa-angle-right"></i>
@@ -493,10 +487,8 @@
             <li class="post-action">
               
               
-                
               
-              
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/031-next-permutation/" data-tooltip="LeetCode 31. Next Permutation">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -508,7 +500,7 @@
                 
               
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/post/text-watermark/" data-tooltip="python为图片添加文字水印">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/post/golang-slice-and-array/" data-tooltip="Golang Slice and Array">
               
                   <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                   <i class="fa fa-angle-right"></i>
@@ -819,9 +811,9 @@
     
       <script>
         var disqus_config = function () {
-          this.page.url = 'https:\/\/www.orztu.com\/post\/golang-slice-and-array\/';
+          this.page.url = 'https:\/\/www.orztu.com\/leetcode\/031-next-permutation\/';
           
-            this.page.identifier = '\/post\/golang-slice-and-array\/'
+            this.page.identifier = '\/leetcode\/031-next-permutation\/'
           
         };
         (function() {
