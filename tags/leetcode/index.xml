@@ -6,10 +6,37 @@
     <description>Recent content in Leetcode on Orz the way</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 26 Jul 2018 10:39:33 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 26 Jul 2018 15:35:19 +0800</lastBuildDate>
     
 	<atom:link href="https://www.orztu.com/tags/leetcode/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>LeetCode 43. Multiply Strings</title>
+      <link>https://www.orztu.com/leetcode/043-multiply-strings/</link>
+      <pubDate>Thu, 26 Jul 2018 15:35:19 +0800</pubDate>
+      
+      <guid>https://www.orztu.com/leetcode/043-multiply-strings/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/multiply-strings/&#34; target=&#34;_blank&#34;&gt;Multiply Strings&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Given two non-negative integers &lt;code&gt;num1&lt;/code&gt; and &lt;code&gt;num2&lt;/code&gt; represented as strings, return the product of &lt;code&gt;num1&lt;/code&gt; and &lt;code&gt;num2&lt;/code&gt;, also represented as a string.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Example 1:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Input: num1 = &amp;ldquo;2&amp;rdquo;, num2 = &amp;ldquo;3&amp;rdquo;
+Output: &amp;ldquo;6&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Example 2:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Input: num1 = &amp;ldquo;123&amp;rdquo;, num2 = &amp;ldquo;456&amp;rdquo;
+Output: &amp;ldquo;56088&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>LeetCode 40. Combination Sum II</title>

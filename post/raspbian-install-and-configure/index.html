@@ -308,12 +308,10 @@
 
 <p>打开<code>/etc/dhcpcd.conf</code>文件，找到网口（一般为<code>eth0</code>）</p>
 
-<p>指定IP:</p>
-
-<pre><code>interface eth0
-static ip_address=192.168.1.20/24
-static routers=192.168.1.1
-</code></pre>
+<p>指定IP:
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">interface eth0
+static <span class="nv">ip_address</span><span class="o">=</span><span class="m">192</span>.168.1.20/24
+static <span class="nv">routers</span><span class="o">=</span><span class="m">192</span>.168.1.1</code></pre></div></p>
 
 <h3 id="2-iptables">2. iptables</h3>
 
@@ -341,29 +339,26 @@ static routers=192.168.1.1
 <ol>
 <li><p>启用root帐号</p>
 
-<pre><code class="language-bash"># 为root帐号设置密码
-sudo passwd root
-# 启用root帐号
-sudo passwd --unlock root
-</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># 为root帐号设置密码
+</span><span class="c1"></span>sudo passwd root
+<span class="c1"># 启用root帐号
+</span><span class="c1"></span>sudo passwd --unlock root</code></pre></div>
 
 <p>ssh默认是禁止root登录的，所以还需要修改ssh配置：编辑文件<code>/etc/ssh/sshd_config</code>，添加一行<code>PermitRootLogin yes</code>即可。</p>
 
-<pre><code># 重启
-sudo reboot
-</code></pre></li>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># 重启
+</span><span class="c1"></span>sudo reboot</code></pre></div></li>
 
 <li><p>重启系统并登录root后修改pi账户</p>
 
-<pre><code class="language-bash"># 修改用户名为NEWNAME
-usermod -l NEWNAME pi
-# 修改用户group
-groupmod -n NEWNAME pi
-# 修改账户主目录
-mv /home/pi /home/NEWNAME
-# 设置主目录
-usermod -d /home/NEWNAME NEWNAME
-</code></pre></li>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># 修改用户名为NEWNAME
+</span><span class="c1"></span>usermod -l NEWNAME pi
+<span class="c1"># 修改用户group
+</span><span class="c1"></span>groupmod -n NEWNAME pi
+<span class="c1"># 修改账户主目录
+</span><span class="c1"></span>mv /home/pi /home/NEWNAME
+<span class="c1"># 设置主目录
+</span><span class="c1"></span>usermod -d /home/NEWNAME NEWNAME</code></pre></div></li>
 
 <li><p>重启登录NEWNAME</p>
 
@@ -371,9 +366,8 @@ usermod -d /home/NEWNAME NEWNAME
 
 <li><p>新账户正常后禁用root</p>
 
-<pre><code class="language-bash"># 禁用root
-sudo passwd -l root
-</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># 禁用root
+</span><span class="c1"></span>sudo passwd -l root</code></pre></div>
 
 <p>别忘了还有ssh配置文件也要修改。</p></li>
 </ol>
@@ -595,6 +589,23 @@ sudo passwd -l root
           <div class="media">
             
             <div class="media-body">
+              <a class="link-unstyled" href="https://www.orztu.com/post/poors-in-peking/">
+                <h3 class="media-heading">迎春纳福享盛世，吉祥如意贺太平</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Nov 11, 2017
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p></p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
               <a class="link-unstyled" href="https://www.orztu.com/post/golang-slice-and-array/">
                 <h3 class="media-heading">Golang Slice and Array</h3>
               </a>
@@ -651,23 +662,6 @@ sudo passwd -l root
               <div class="media-content hide-xs font-merryweather"><p>使用python+adb实现微信跳一跳外挂</p>
 
 <p></p></div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://www.orztu.com/post/poors-in-peking/">
-                <h3 class="media-heading">迎春纳福享盛世，吉祥如意贺太平</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Nov 11, 2017
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather"><p></p></div>
             </div>
             <div style="clear:both;"></div>
             <hr>

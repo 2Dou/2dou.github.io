@@ -289,26 +289,26 @@
 
 <p>然后切换到<code>Console</code>中粘贴以下代码，回车，实现自动点击。</p>
 
-<pre><code>function triggerMouseEvent (node, eventType) {
-    var clickEvent = document.createEvent ('MouseEvents');
-    clickEvent.initEvent (eventType, true, true);
-    node.dispatchEvent (clickEvent);
-}
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">triggerMouseEvent</span> <span class="p">(</span><span class="nx">node</span><span class="p">,</span> <span class="nx">eventType</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">clickEvent</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createEvent</span> <span class="p">(</span><span class="s1">&#39;MouseEvents&#39;</span><span class="p">);</span>
+    <span class="nx">clickEvent</span><span class="p">.</span><span class="nx">initEvent</span> <span class="p">(</span><span class="nx">eventType</span><span class="p">,</span> <span class="kc">true</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
+    <span class="nx">node</span><span class="p">.</span><span class="nx">dispatchEvent</span> <span class="p">(</span><span class="nx">clickEvent</span><span class="p">);</span>
+<span class="p">}</span>
 
-function clickTheBtn(){
-    // 查找按钮
-    var btn = document.getElementsByClassName(&quot;continueButton&quot;)[0];
+<span class="kd">function</span> <span class="nx">clickTheBtn</span><span class="p">(){</span>
+    <span class="c1">// 查找按钮
+</span><span class="c1"></span>    <span class="kd">var</span> <span class="nx">btn</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByClassName</span><span class="p">(</span><span class="s2">&#34;continueButton&#34;</span><span class="p">)[</span><span class="mi">0</span><span class="p">];</span>
 
-    // 模拟点击
-    triggerMouseEvent(btn, &quot;mouseover&quot;);
-    triggerMouseEvent(btn, &quot;mousedown&quot;);
-    triggerMouseEvent(btn, &quot;mouseup&quot;);
-    triggerMouseEvent(btn, &quot;click&quot;);
-}
+    <span class="c1">// 模拟点击
+</span><span class="c1"></span>    <span class="nx">triggerMouseEvent</span><span class="p">(</span><span class="nx">btn</span><span class="p">,</span> <span class="s2">&#34;mouseover&#34;</span><span class="p">);</span>
+    <span class="nx">triggerMouseEvent</span><span class="p">(</span><span class="nx">btn</span><span class="p">,</span> <span class="s2">&#34;mousedown&#34;</span><span class="p">);</span>
+    <span class="nx">triggerMouseEvent</span><span class="p">(</span><span class="nx">btn</span><span class="p">,</span> <span class="s2">&#34;mouseup&#34;</span><span class="p">);</span>
+    <span class="nx">triggerMouseEvent</span><span class="p">(</span><span class="nx">btn</span><span class="p">,</span> <span class="s2">&#34;click&#34;</span><span class="p">);</span>
+<span class="p">}</span>
 
-// 每2.5秒调用一次clickTheBtn
-setInterval(clickTheBtn, 2500);
-</code></pre>
+<span class="c1">// 每2.5秒调用一次clickTheBtn
+</span><span class="c1"></span><span class="nx">setInterval</span><span class="p">(</span><span class="nx">clickTheBtn</span><span class="p">,</span> <span class="mi">2500</span><span class="p">);</span>
+</code></pre></div>
               
               
 
@@ -525,6 +525,23 @@ setInterval(clickTheBtn, 2500);
           <div class="media">
             
             <div class="media-body">
+              <a class="link-unstyled" href="https://www.orztu.com/post/poors-in-peking/">
+                <h3 class="media-heading">迎春纳福享盛世，吉祥如意贺太平</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Nov 11, 2017
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p></p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
               <a class="link-unstyled" href="https://www.orztu.com/post/golang-slice-and-array/">
                 <h3 class="media-heading">Golang Slice and Array</h3>
               </a>
@@ -581,23 +598,6 @@ setInterval(clickTheBtn, 2500);
               <div class="media-content hide-xs font-merryweather"><p>使用python+adb实现微信跳一跳外挂</p>
 
 <p></p></div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://www.orztu.com/post/poors-in-peking/">
-                <h3 class="media-heading">迎春纳福享盛世，吉祥如意贺太平</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Nov 11, 2017
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather"><p></p></div>
             </div>
             <div style="clear:both;"></div>
             <hr>
