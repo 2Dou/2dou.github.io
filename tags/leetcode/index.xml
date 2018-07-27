@@ -6,10 +6,51 @@
     <description>Recent content in Leetcode on Orz the way</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 26 Jul 2018 15:35:19 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 27 Jul 2018 08:59:07 +0800</lastBuildDate>
     
 	<atom:link href="https://www.orztu.com/tags/leetcode/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>LeetCode 41. First Missing Positive</title>
+      <link>https://www.orztu.com/leetcode/041-first-missing-positive/</link>
+      <pubDate>Fri, 27 Jul 2018 08:59:07 +0800</pubDate>
+      
+      <guid>https://www.orztu.com/leetcode/041-first-missing-positive/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/first-missing-positive/&#34; target=&#34;_blank&#34;&gt;First Missing Positive&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Given an unsorted integer array, find the smallest missing positive integer.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Example 1:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Input: [1,2,0]
+Output: 3
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Example 2:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Input: [3,4,-1,1]
+Output: 2
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Example 3:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Input: [7,8,9,11,12]
+Output: 1
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Your algorithm should run in O(n) time and uses constant extra space.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>LeetCode 43. Multiply Strings</title>
@@ -44,7 +85,9 @@ Output: &amp;ldquo;56088&amp;rdquo;&lt;/p&gt;
       <pubDate>Thu, 26 Jul 2018 10:39:33 +0800</pubDate>
       
       <guid>https://www.orztu.com/leetcode/040-combination-sum-ii/</guid>
-      <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/combination-sum-ii/&#34; target=&#34;_blank&#34;&gt;Combination Sum II&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;Given a collection of candidate numbers (&lt;code&gt;candidates&lt;/code&gt;) and a target number (&lt;code&gt;target&lt;/code&gt;), find all unique combinations in candidates where the &lt;code&gt;candidate&lt;/code&gt; numbers sums to &lt;code&gt;target&lt;/code&gt;.&lt;/p&gt;

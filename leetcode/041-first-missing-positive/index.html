@@ -1,5 +1,9 @@
 
 
+  
+    
+  
+
 
   
 
@@ -17,28 +21,26 @@
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Leetcodes | 
+    <title>LeetCode 41. First Missing Positive | 
         Orz the way
       
     </title>
     <meta name="author" content="SelFree">
-    <meta name="keywords" content=", program develop, leetcode, golang, leetcode解答, 程序">
+    <meta name="keywords" content="LeetCode, 算法, LeetCode解答, 正数, program develop, leetcode, golang, leetcode解答, 程序">
 
     <link rel="icon" href="https://www.orztu.com/images/favicon.ico">
     
-      <link rel="alternate" type="application/rss+xml" title="RSS" href="https://www.orztu.com/leetcode/index.xml">
-    
 
     
-    <meta name="description" content="城市永远年轻，而我们终将老去">
-    <meta property="og:description" content="城市永远年轻，而我们终将老去">
+    <meta name="description" content="LeetCode 练习 41. First Missing Positive - Answer LeetCode编程练习解答 查找第一个缺失的正数">
+    <meta property="og:description" content="LeetCode 练习 41. First Missing Positive - Answer LeetCode编程练习解答 查找第一个缺失的正数">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Leetcodes">
-    <meta property="og:url" content="/leetcode/">
+    <meta property="og:title" content="LeetCode 41. First Missing Positive">
+    <meta property="og:url" content="/leetcode/041-first-missing-positive/">
     <meta property="og:site_name" content="Orz the way">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Orz the way">
-    <meta name="twitter:description" content="城市永远年轻，而我们终将老去">
+    <meta name="twitter:description" content="LeetCode 练习 41. First Missing Positive - Answer LeetCode编程练习解答 查找第一个缺失的正数">
     
     
 
@@ -74,7 +76,7 @@
 
   <body>
     <div id="blog">
-      <header id="header" data-behavior="1">
+      <header id="header" data-behavior="4">
   <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
   <div class="header-title">
     <a class="header-title-link" href="https://www.orztu.com/">Orz the way</a>
@@ -94,7 +96,7 @@
   
 </header>
 
-      <nav id="sidebar" data-behavior="1">
+      <nav id="sidebar" data-behavior="4">
   <div class="sidebar-container">
     
       <div class="sidebar-profile">
@@ -228,36 +230,20 @@
 
       
 
-      <div id="main" data-behavior="1"
+      <div id="main" data-behavior="4"
         class="
                hasCoverMetaIn
                ">
-        <div id="topToolbar">Fixed at the top of the Toolbar.</div>
-        <section class="postShorten-group main-content-wrap">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
           
           
-            
+            <div class="post-header main-content-wrap text-left">
   
-    
-      
-        
-      
-    
+    <h1 class="post-title" itemprop="headline">
+      LeetCode 41. First Missing Positive
+    </h1>
   
-
-
   
-
-<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.orztu.com/leetcode/041-first-missing-positive/">
-          LeetCode 41. First Missing Positive
-        </a>
-      </h1>
-      
   <div class="postShorten-meta post-meta">
     
       <time itemprop="datePublished" datetime="2018-07-27T08:59:07&#43;08:00">
@@ -282,9 +268,11 @@
 
   </div>
 
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      <p><a href="https://leetcode.com/problems/first-missing-positive/" target="_blank">First Missing Positive</a></p>
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <p><a href="https://leetcode.com/problems/first-missing-positive/" target="_blank">First Missing Positive</a></p>
 
 <h2 id="description">Description</h2>
 
@@ -317,642 +305,147 @@ Output: 1
 </blockquote>
 
 <p></p>
-      <p>
-        <a href="https://www.orztu.com/leetcode/041-first-missing-positive/" class="postShorten-excerpt_link link">Continue reading</a>
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
 
+<p>使用<code>O(n)</code>的时间复杂度和恒定的空间在无序数组中查找第一个缺失的正数。</p>
+
+<h2 id="solution">Solution</h2>
+
+<p>此题关键在于利用数字<strong>直接</strong>寻找其位置，达到排序目的。</p>
+
+<p>假设有数组<code>[4, 3, 5, 1]</code>：</p>
+
+<p>取第一个数<code>4</code>，检查<code>4</code>是否在第<code>4</code>个位置：<strong>否</strong>，与第四个位置数字交换得到<code>[1, 3, 5, 4]</code>。</p>
+
+<p>交换后继续判断当前数字<code>1</code>是否在第<code>1</code>个位置：<strong>是</strong>，则跳过。</p>
+
+<p>依次判断之后得到数组<code>[1, 5, 3, 4]</code>。其中遇到<code>5</code>时因为其超过数组长度，直接跳过。</p>
+
+<p>再次从第一个位置开始判断，找到第一个位置与数字不符合的地方即为缺失的数字。</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-golang" data-lang="golang"><span class="ln"> 1</span><span class="kd">func</span> <span class="nx">firstMissingPositive</span><span class="p">(</span><span class="nx">nums</span> <span class="p">[]</span><span class="kt">int</span><span class="p">)</span> <span class="kt">int</span> <span class="p">{</span>
+<span class="ln"> 2</span>    <span class="nx">l</span> <span class="o">:=</span> <span class="nb">len</span><span class="p">(</span><span class="nx">nums</span><span class="p">)</span>
+<span class="ln"> 3</span>
+<span class="ln"> 4</span>    <span class="c1">// 进行排序
+</span><span class="ln"> 5</span><span class="c1"></span>    <span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="nx">l</span><span class="p">;</span> <span class="p">{</span>
+<span class="ln"> 6</span>        <span class="nx">n</span> <span class="o">:=</span> <span class="nx">nums</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span>
+<span class="ln"> 7</span>
+<span class="ln"> 8</span>        <span class="k">if</span> <span class="nx">n</span> <span class="o">&lt;=</span> <span class="mi">0</span> <span class="o">||</span> <span class="nx">n</span> <span class="p">&gt;</span> <span class="nx">l</span> <span class="p">{</span>
+<span class="ln"> 9</span>            <span class="c1">// 溢出的不用管
+</span><span class="ln">10</span><span class="c1"></span>            <span class="nx">i</span><span class="o">++</span>
+<span class="ln">11</span>        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="nx">i</span><span class="o">+</span><span class="mi">1</span> <span class="o">!=</span> <span class="nx">n</span> <span class="o">&amp;&amp;</span> <span class="nx">nums</span><span class="p">[</span><span class="nx">n</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">!=</span> <span class="nx">n</span> <span class="p">{</span>
+<span class="ln">12</span>            <span class="c1">// 判断当前数字是否在它应该的位置上
+</span><span class="ln">13</span><span class="c1"></span>            <span class="c1">// 数字 n 应该在[n - 1]上
+</span><span class="ln">14</span><span class="c1"></span>            <span class="c1">// 需要处理目标位置与当前位置数字相同，否则死循环
+</span><span class="ln">15</span><span class="c1"></span>            <span class="nx">nums</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="p">=</span> <span class="nx">nums</span><span class="p">[</span><span class="nx">n</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="ln">16</span>            <span class="nx">nums</span><span class="p">[</span><span class="nx">n</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="p">=</span> <span class="nx">n</span>
+<span class="ln">17</span>            <span class="c1">// 交换位置后，继续处理当前位置上的数字，不需要i++
+</span><span class="ln">18</span><span class="c1"></span>        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+<span class="ln">19</span>            <span class="c1">// 处理下一个位置
+</span><span class="ln">20</span><span class="c1"></span>            <span class="nx">i</span><span class="o">++</span>
+<span class="ln">21</span>        <span class="p">}</span>
+<span class="ln">22</span>    <span class="p">}</span>
+<span class="ln">23</span>
+<span class="ln">24</span>    <span class="c1">// 查找第一个不符合的数字
+</span><span class="ln">25</span><span class="c1"></span>    <span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="nx">l</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
+<span class="ln">26</span>        <span class="k">if</span> <span class="nx">nums</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">!=</span> <span class="nx">i</span><span class="o">+</span><span class="mi">1</span> <span class="p">{</span>
+<span class="ln">27</span>            <span class="k">return</span> <span class="nx">i</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="ln">28</span>        <span class="p">}</span>
+<span class="ln">29</span>    <span class="p">}</span>
+<span class="ln">30</span>
+<span class="ln">31</span>    <span class="k">return</span> <span class="nx">l</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="ln">32</span><span class="p">}</span></code></pre></div>
+              
+              
+
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://www.orztu.com/tags/leetcode/">LeetCode</a>
+
+  <a class="tag tag--primary tag--small" href="https://www.orztu.com/tags/%E7%AE%97%E6%B3%95/">算法</a>
+
+                  </div>
+                
+              
+            
+            
+  <div class="post-actions-wrap">
+      <nav >
+        <ul class="post-actions post-action-nav">
           
-            
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.orztu.com/leetcode/043-multiply-strings/">
-          LeetCode 43. Multiply Strings
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2018-07-26T15:35:19&#43;08:00">
-        
-  
-  
-  
-  
-    2018-07-26
-  
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://www.orztu.com/categories/leetcode">LeetCode</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      <p><a href="https://leetcode.com/problems/multiply-strings/" target="_blank">Multiply Strings</a></p>
-
-<h2 id="description">Description</h2>
-
-<blockquote>
-<p>Given two non-negative integers <code>num1</code> and <code>num2</code> represented as strings, return the product of <code>num1</code> and <code>num2</code>, also represented as a string.</p>
-
-<p><strong>Example 1:</strong></p>
-
-<p>Input: num1 = &ldquo;2&rdquo;, num2 = &ldquo;3&rdquo;
-Output: &ldquo;6&rdquo;</p>
-
-<p><strong>Example 2:</strong></p>
-
-<p>Input: num1 = &ldquo;123&rdquo;, num2 = &ldquo;456&rdquo;
-Output: &ldquo;56088&rdquo;</p>
-</blockquote>
-
-<p></p>
-      <p>
-        <a href="https://www.orztu.com/leetcode/043-multiply-strings/" class="postShorten-excerpt_link link">Continue reading</a>
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
+            <li class="post-action">
+              
+              
+                
+                  
+                
+              
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+              
+                
+              
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/043-multiply-strings/" data-tooltip="LeetCode 43. Multiply Strings">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
           
-            
-  
-    
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
       
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.orztu.com/leetcode/040-combination-sum-ii/">
-          LeetCode 40. Combination Sum II
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2018-07-26T10:39:33&#43;08:00">
-        
-  
-  
-  
-  
-    2018-07-26
-  
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://www.orztu.com/categories/leetcode">LeetCode</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      <p><a href="https://leetcode.com/problems/combination-sum-ii/" target="_blank">Combination Sum II</a></p>
-
-<h2 id="description">Description</h2>
-
-<blockquote>
-<p>Given a collection of candidate numbers (<code>candidates</code>) and a target number (<code>target</code>), find all unique combinations in candidates where the <code>candidate</code> numbers sums to <code>target</code>.</p>
-
-<p>Each number in <code>candidates</code> may only be used once in the combination.</p>
-
-<p><strong>Note:</strong></p>
-
-<p>All numbers (including <code>target</code>) will be positive integers.
-The solution set must not contain duplicate combinations.</p>
-</blockquote>
-
-<p></p>
-      <p>
-        <a href="https://www.orztu.com/leetcode/040-combination-sum-ii/" class="postShorten-excerpt_link link">Continue reading</a>
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-          
-            
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.orztu.com/leetcode/039-combination-sum/">
-          LeetCode 39. Combination Sum
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2018-07-26T10:16:53&#43;08:00">
-        
-  
-  
-  
-  
-    2018-07-26
-  
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://www.orztu.com/categories/leetcode">LeetCode</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      <p><a href="https://leetcode.com/problems/combination-sum/" target="_blank">Combination Sum</a></p>
-
-<h2 id="description">Description</h2>
-
-<blockquote>
-<p>Given a set of candidate numbers (<code>candidates</code>) (without duplicates) and a target number (<code>target</code>), find all unique combinations in <code>candidates</code> where the candidate numbers sums to <code>target</code>.</p>
-
-<p>The <strong>same</strong> repeated number may be chosen from candidates unlimited number of times.</p>
-
-<p><strong>Note:</strong></p>
-
-<ul>
-<li>All numbers (including <code>target</code>) will be positive integers.</li>
-<li>The solution set must not contain duplicate combinations.</li>
-</ul>
-</blockquote>
-
-<p></p>
-      <p>
-        <a href="https://www.orztu.com/leetcode/039-combination-sum/" class="postShorten-excerpt_link link">Continue reading</a>
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-          
-            
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.orztu.com/leetcode/036-valid-sudoku/">
-          LeetCode 36. Valid Sudoku
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2018-07-26T09:22:05&#43;08:00">
-        
-  
-  
-  
-  
-    2018-07-26
-  
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://www.orztu.com/categories/leetcode">LeetCode</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      <p><a href="https://leetcode.com/problems/valid-sudoku/" target="_blank">Valid Sudoku</a></p>
-
-<h2 id="description">Description</h2>
-
-<blockquote>
-<p>Determine if a 9x9 Sudoku board is valid. Only the filled cells need to be validated according to the following rules:</p>
-
-<ol>
-<li>Each row must contain the digits <code>1-9</code> without repetition.</li>
-<li>Each column must contain the digits <code>1-9</code> without repetition.</li>
-<li>Each of the 9 <code>3x3</code> sub-boxes of the grid must contain the digits <code>1-9</code> without repetition.</li>
-</ol>
-
-<p><img src="https://www.orztu.com/images/leetcode/Sudoku-Solver-1.png" alt="" title="数独" />
-A partially filled sudoku which is valid.</p>
-
-<p>The Sudoku board could be partially filled, where empty cells are filled with the character <code>'.'</code>.</p>
-</blockquote>
-
-<p></p>
-      <p>
-        <a href="https://www.orztu.com/leetcode/036-valid-sudoku/" class="postShorten-excerpt_link link">Continue reading</a>
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-          
-            
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.orztu.com/leetcode/033-search-in-rotated-sorted-array/">
-          LeetCode 33. Search in Rotated Sorted Array
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2018-07-25T14:28:45&#43;08:00">
-        
-  
-  
-  
-  
-    2018-07-25
-  
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://www.orztu.com/categories/leetcode">LeetCode</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      <p><a href="https://leetcode.com/problems/search-in-rotated-sorted-array/" target="_blank">Search in Rotated Sorted Array</a></p>
-
-<h2 id="description">Description</h2>
-
-<blockquote>
-<p>Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.</p>
-
-<p>(i.e., <code>[0,1,2,4,5,6,7]</code> might become <code>[4,5,6,7,0,1,2]</code>).</p>
-
-<p>You are given a target value to search. If found in the array return its index, otherwise return <code>-1</code>.</p>
-
-<p>You may assume no duplicate exists in the array.</p>
-
-<p>Your algorithm&rsquo;s runtime complexity must be in the order of <code>O(log n)</code>.</p>
-</blockquote>
-
-<p></p>
-      <p>
-        <a href="https://www.orztu.com/leetcode/033-search-in-rotated-sorted-array/" class="postShorten-excerpt_link link">Continue reading</a>
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-          
-            
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.orztu.com/leetcode/032-longest-valid-parentheses/">
-          LeetCode 32. Longest Valid Parentheses
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2018-07-25T09:56:49&#43;08:00">
-        
-  
-  
-  
-  
-    2018-07-25
-  
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://www.orztu.com/categories/leetcode">LeetCode</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      <p><a href="https://leetcode.com/problems/longest-valid-parentheses/" target="_blank">Longest Valid Parentheses</a></p>
-
-<h2 id="description">Description</h2>
-
-<blockquote>
-<p>Given a string containing just the characters <code>'('</code> and <code>')'</code>, find the length of the longest valid (well-formed) parentheses substring.
-<br><br>
-<strong>Example 1:</strong></p>
-
-<pre><code>Input: &quot;(()&quot;
-Output: 2
-Explanation: The longest valid parentheses substring is &quot;()&quot;
-</code></pre>
-
-<p><br>
-<strong>Example 2:</strong>
-<br></p>
-
-<pre><code>Input: &quot;)()())&quot;
-Output: 4
-Explanation: The longest valid parentheses substring is &quot;()()&quot;
-</code></pre>
-</blockquote>
-
-<p></p>
-      <p>
-        <a href="https://www.orztu.com/leetcode/032-longest-valid-parentheses/" class="postShorten-excerpt_link link">Continue reading</a>
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-          
-            
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.orztu.com/leetcode/031-next-permutation/">
-          LeetCode 31. Next Permutation
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2018-07-19T10:17:07&#43;08:00">
-        
-  
-  
-  
-  
-    2018-07-19
-  
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://www.orztu.com/categories/leetcode">LeetCode</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      <p><a href="https://leetcode.com/problems/next-permutation/" target="_blank">Next Permutation</a></p>
-
-<h2 id="description">Description</h2>
-
-<blockquote>
-<p>Implement next permutation, which rearranges numbers into the lexicographically next greater permutation of numbers.</p>
-
-<p>If such arrangement is not possible, it must rearrange it as the lowest possible order (ie, sorted in ascending order).</p>
-
-<p>The replacement must be in-place and use only constant extra memory.</p>
-
-<p>Here are some examples. Inputs are in the left-hand column and its corresponding outputs are in the right-hand column.</p>
-
-<p><code>1,2,3</code> → <code>1,3,2</code><br>
-<code>3,2,1</code> → <code>1,2,3</code><br>
-<code>1,1,5</code> → <code>1,5,1</code><br></p>
-</blockquote>
-
-<p></p>
-      <p>
-        <a href="https://www.orztu.com/leetcode/031-next-permutation/" class="postShorten-excerpt_link link">Continue reading</a>
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-          
-          
-
-<nav class="blog-pagination">
-    <ul class="pagination-b justify-content-center">
-        
-        
-        
-            
-            
-            
-            
-                
-                
-            
-            
-                <li class="page-item active disabled">
-                    <a class="page-link" href="https://www.orztu.com/leetcode/">1</a>
-                </li>
-            
-        
-            
-            
-            
-            
-                
-                
-            
-            
-                <li class="page-item ">
-                    <a class="page-link" href="https://www.orztu.com/leetcode/page/2/">2</a>
-                </li>
-            
-        
-            
-            
-            
-            
-                
-                
-            
-            
-                <li class="page-item ">
-                    <a class="page-link" href="https://www.orztu.com/leetcode/page/3/">3</a>
-                </li>
-            
-        
-            
-            
-            
-            
-                
-                
-            
-            
-                <li class="page-item disabled">
-                    <span class="page-link" aria-hidden="true">&hellip;</span>
-                </li>
-            
-        
-            
-            
-            
-            
-                
-                
-            
-            
-                <li class="page-item ">
-                    <a class="page-link" href="https://www.orztu.com/leetcode/page/5/">5</a>
-                </li>
-            
-        
-        
-        <li class="page-item ">
-            <a class="page-link" href="https://www.orztu.com/leetcode/page/2/" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
         </li>
         
-        <li class="page-item">
-            <a class="page-link" href="https://www.orztu.com/leetcode/page/5/" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
         </li>
+      
+      <li class="post-action">
         
+          <a class="post-action-btn btn btn--default" href="#">
         
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
     </ul>
-</nav>
+  </div>
 
-        </section>
+
+            
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the comments</noscript>
+</div>
+
+              
+            
+          </div>
+        </article>
         <footer id="footer" class="main-content-wrap">
   <span class="copyrights">
     &copy; 2018 SelFree. All Rights Reserved
@@ -960,6 +453,76 @@ Explanation: The longest valid parentheses substring is &quot;()()&quot;
 </footer>
 
       </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        
+  <div class="post-actions-wrap">
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+              
+                
+                  
+                
+              
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+              
+                
+              
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/043-multiply-strings/" data-tooltip="LeetCode 43. Multiply Strings">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
     </div>
     
     <div id="about">
@@ -1222,6 +785,32 @@ Explanation: The longest valid parentheses substring is &quot;()()&quot;
 
 
 
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'https:\/\/www.orztu.com\/leetcode\/041-first-missing-positive\/';
+          
+            this.page.identifier = '\/leetcode\/041-first-missing-positive\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'orztu';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
 
 
 
