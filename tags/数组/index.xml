@@ -104,31 +104,5 @@ nums2 = [3, 4]
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
     
-    <item>
-      <title>LeetCode 1. Two Sum</title>
-      <link>https://www.orztu.com/leetcode/001-two-sum/</link>
-      <pubDate>Wed, 15 Mar 2017 16:36:59 +0800</pubDate>
-      
-      <guid>https://www.orztu.com/leetcode/001-two-sum/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/two-sum&#34; target=&#34;_blank&#34;&gt;Two Sum&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Given an array of integers, return indices of the two numbers such that they add up to a specific target.&lt;/p&gt;
-
-&lt;p&gt;You may assume that each input would have exactly one solution, and you may not use the same element twice.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;Example:
-Given nums = [2, 7, 11, 15], target = 9,
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Because nums[0] + nums[1] = 2 + 7 = 9,
-return [0, 1].&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
   </channel>
 </rss>

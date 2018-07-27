@@ -6,10 +6,29 @@
     <description>Recent content in 链表 on Orz the way</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 19 Oct 2017 21:03:59 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 22 Nov 2017 09:15:44 +0800</lastBuildDate>
     
 	<atom:link href="https://www.orztu.com/tags/%E9%93%BE%E8%A1%A8/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>LeetCode 21. Merge Two Sorted Lists</title>
+      <link>https://www.orztu.com/leetcode/021-merge-two-sorted-lists/</link>
+      <pubDate>Wed, 22 Nov 2017 09:15:44 +0800</pubDate>
+      
+      <guid>https://www.orztu.com/leetcode/021-merge-two-sorted-lists/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/merge-two-sorted-lists/&#34; target=&#34;_blank&#34;&gt;Merge Two Sorted Lists&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Merge two sorted linked lists and return it as a new list. The new list should be made by splicing together the nodes of the first two lists.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;将两个有序链表合二为一&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>LeetCode 19. Remove Nth Node From End of List</title>
