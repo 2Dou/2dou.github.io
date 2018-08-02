@@ -21,6 +21,17 @@
     </item>
     
     <item>
+      <title>govendor 使用</title>
+      <link>https://www.orztu.com/post/using-govendor/</link>
+      <pubDate>Thu, 02 Aug 2018 14:43:33 +0800</pubDate>
+      
+      <guid>https://www.orztu.com/post/using-govendor/</guid>
+      <description>&lt;p&gt;本文介绍&lt;code&gt;govendor&lt;/code&gt;，即其基本操作。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>go get through a proxy</title>
       <link>https://www.orztu.com/post/go-get-through-a-proxy/</link>
       <pubDate>Thu, 02 Aug 2018 09:47:52 +0800</pubDate>
