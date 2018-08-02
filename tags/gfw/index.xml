@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gfw on Orz the way</title>
+    <link>https://www.orztu.com/tags/gfw/</link>
+    <description>Recent content in Gfw on Orz the way</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 02 Aug 2018 09:47:52 +0800</lastBuildDate>
+    
+	<atom:link href="https://www.orztu.com/tags/gfw/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>go get through a proxy</title>
+      <link>https://www.orztu.com/post/go-get-through-a-proxy/</link>
+      <pubDate>Thu, 02 Aug 2018 09:47:52 +0800</pubDate>
+      
+      <guid>https://www.orztu.com/post/go-get-through-a-proxy/</guid>
+      <description>&lt;p&gt;由于众所不知的原因，在国内访问&lt;code&gt;golang.org&lt;/code&gt;需要爬梯子。&lt;/p&gt;
+
+&lt;p&gt;所以使用&lt;code&gt;go get&lt;/code&gt;安装包的时候，也要用梯子。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

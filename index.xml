@@ -21,6 +21,19 @@
     </item>
     
     <item>
+      <title>go get through a proxy</title>
+      <link>https://www.orztu.com/post/go-get-through-a-proxy/</link>
+      <pubDate>Thu, 02 Aug 2018 09:47:52 +0800</pubDate>
+      
+      <guid>https://www.orztu.com/post/go-get-through-a-proxy/</guid>
+      <description>&lt;p&gt;由于众所不知的原因，在国内访问&lt;code&gt;golang.org&lt;/code&gt;需要爬梯子。&lt;/p&gt;
+
+&lt;p&gt;所以使用&lt;code&gt;go get&lt;/code&gt;安装包的时候，也要用梯子。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>LeetCode 41. First Missing Positive</title>
       <link>https://www.orztu.com/leetcode/041-first-missing-positive/</link>
       <pubDate>Fri, 27 Jul 2018 08:59:07 +0800</pubDate>

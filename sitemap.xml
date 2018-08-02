@@ -8,6 +8,11 @@
   </url>
   
   <url>
+    <loc>https://www.orztu.com/post/go-get-through-a-proxy/</loc>
+    <lastmod>2018-08-02T09:47:52+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.orztu.com/leetcode/041-first-missing-positive/</loc>
     <lastmod>2018-07-27T08:59:07+08:00</lastmod>
   </url>
@@ -239,8 +244,14 @@
   </url>
   
   <url>
+    <loc>https://www.orztu.com/tags/gfw/</loc>
+    <lastmod>2018-08-02T09:47:52+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://www.orztu.com/tags/golang/</loc>
-    <lastmod>2018-06-25T15:22:42+08:00</lastmod>
+    <lastmod>2018-08-02T09:47:52+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -312,7 +323,7 @@
   
   <url>
     <loc>https://www.orztu.com/tags/</loc>
-    <lastmod>2018-06-25T15:22:42+08:00</lastmod>
+    <lastmod>2018-08-02T09:47:52+08:00</lastmod>
     <priority>0</priority>
   </url>
   
