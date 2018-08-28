@@ -26,7 +26,11 @@
       <pubDate>Thu, 02 Aug 2018 14:43:33 +0800</pubDate>
       
       <guid>https://www.orztu.com/post/using-govendor/</guid>
-      <description>&lt;p&gt;本文介绍&lt;code&gt;govendor&lt;/code&gt;，即其基本操作。&lt;/p&gt;
+      <description>&lt;h2 id=&#34;govendor&#34;&gt;govendor&lt;/h2&gt;
+
+&lt;p&gt;go vendor 是 go 1.6 官方正式引入的包管理方式。&lt;/p&gt;
+
+&lt;p&gt;其基本思路是，将引用的外部包的源代码放在当前工程的&lt;code&gt;vendor&lt;/code&gt;目录下面，go 编译时会优先从&lt;code&gt;vendor&lt;/code&gt;目录寻找依赖关系。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
