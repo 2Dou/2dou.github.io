@@ -6,10 +6,21 @@
     <description>Recent content in Golang on Orz the way</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 02 Aug 2018 14:43:33 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 03 Sep 2018 15:56:08 +0800</lastBuildDate>
     
 	<atom:link href="https://www.orztu.com/tags/golang/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>CGO —— Golang 与 C 语言混合编程</title>
+      <link>https://www.orztu.com/post/cgo-introduce/</link>
+      <pubDate>Mon, 03 Sep 2018 15:56:08 +0800</pubDate>
+      
+      <guid>https://www.orztu.com/post/cgo-introduce/</guid>
+      <description>&lt;p&gt;在此使用一段简单的代码展示 CGO 的基本用法 —— 在 Go 程序中使用 C 语言编程。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>govendor 使用</title>

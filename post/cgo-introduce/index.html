@@ -1,5 +1,9 @@
 
 
+  
+    
+  
+
 
   
 
@@ -17,28 +21,26 @@
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Leetcodes | 
+    <title>CGO —— Golang 与 C 语言混合编程 | 
         Orz the way
       
     </title>
     <meta name="author" content="SelFree">
-    <meta name="keywords" content=", program develop, leetcode, Golang, leetcode解答, 程序">
+    <meta name="keywords" content="Golang, C, 混合编程, program develop, leetcode, Golang, leetcode解答, 程序">
 
     <link rel="icon" href="https://www.orztu.com/images/favicon.ico">
     
-      <link rel="alternate" type="application/rss+xml" title="RSS" href="https://www.orztu.com/leetcode/index.xml">
-    
 
     
-    <meta name="description" content="城市永远年轻，而我们终将老去">
-    <meta property="og:description" content="城市永远年轻，而我们终将老去">
+    <meta name="description" content="简单介绍 CGO 的用法">
+    <meta property="og:description" content="简单介绍 CGO 的用法">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Leetcodes">
-    <meta property="og:url" content="/leetcode/">
+    <meta property="og:title" content="CGO —— Golang 与 C 语言混合编程">
+    <meta property="og:url" content="/post/cgo-introduce/">
     <meta property="og:site_name" content="Orz the way">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Orz the way">
-    <meta name="twitter:description" content="城市永远年轻，而我们终将老去">
+    <meta name="twitter:description" content="简单介绍 CGO 的用法">
     
     
 
@@ -74,7 +76,7 @@
 
   <body>
     <div id="blog">
-      <header id="header" data-behavior="1">
+      <header id="header" data-behavior="4">
   <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
   <div class="header-title">
     <a class="header-title-link" href="https://www.orztu.com/">Orz the way</a>
@@ -94,7 +96,7 @@
   
 </header>
 
-      <nav id="sidebar" data-behavior="1">
+      <nav id="sidebar" data-behavior="4">
   <div class="sidebar-container">
     
       <div class="sidebar-profile">
@@ -228,45 +230,29 @@
 
       
 
-      <div id="main" data-behavior="1"
+      <div id="main" data-behavior="4"
         class="
                hasCoverMetaIn
                ">
-        <div id="topToolbar">Fixed at the top of the Toolbar.</div>
-        <section class="postShorten-group main-content-wrap">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
           
           
-            
+            <div class="post-header main-content-wrap text-left">
   
-    
-      
-        
-      
-    
+    <h1 class="post-title" itemprop="headline">
+      CGO —— Golang 与 C 语言混合编程
+    </h1>
   
-
-
   
-
-<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.orztu.com/leetcode/041-first-missing-positive/">
-          LeetCode 41. First Missing Positive
-        </a>
-      </h1>
-      
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2018-07-27T08:59:07&#43;08:00">
+      <time itemprop="datePublished" datetime="2018-09-03T15:56:08&#43;08:00">
         
   
   
   
   
-    2018-07-27
+    2018-09-03
   
 
       </time>
@@ -276,683 +262,224 @@
   
     <span>in</span>
     
-      <a class="category-link" href="https://www.orztu.com/categories/leetcode">LeetCode</a>
+      <a class="category-link" href="https://www.orztu.com/categories/coding-life">coding life</a>
     
   
 
   </div>
 
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      <p><a href="https://leetcode.com/problems/first-missing-positive/" target="_blank">First Missing Positive</a></p>
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <p>在此使用一段简单的代码展示 CGO 的基本用法 —— 在 Go 程序中使用 C 语言编程。</p>
 
-<h2 id="description">Description</h2>
+<p></p>
 
-<blockquote>
-<p>Given an unsorted integer array, find the smallest missing positive integer.</p>
+<h2 id="使用-c-源码编译">使用 C 源码编译</h2>
 
-<p><strong>Example 1:</strong></p>
+<p>项目目录结构：</p>
 
-<pre><code>Input: [1,2,0]
-Output: 3
+<pre><code>project/
+    - main.go
+    - add/
+        - add.h
+        - add.c
+        - add.go
 </code></pre>
 
-<p><strong>Example 2:</strong></p>
+<p><br></p>
 
-<pre><code>Input: [3,4,-1,1]
-Output: 2
+<p>在 <code>add.h</code>、<code>add.c</code> 中，分别定义已经实现了两数相加的函数 <code>add</code>：</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-C" data-lang="C"><span class="c1">// add.h
+</span><span class="c1"></span><span class="kt">int</span> <span class="nf">add</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">);</span></code></pre></div>
+
+<div class="highlight"><pre class="chroma"><code class="language-C" data-lang="C"><span class="c1">// add.c
+</span><span class="c1"></span><span class="cp">#include</span> <span class="cpf">&#34;add.h&#34;</span><span class="cp">
+</span><span class="cp"></span>
+<span class="kt">int</span> <span class="nf">add</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">;</span>
+<span class="p">}</span></code></pre></div>
+
+<p><br></p>
+
+<p>在 <code>add.go</code> 中，对 C 语言实现的函数 <code>add</code> 进行了一次封装，以便外部调用：</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-Golang" data-lang="Golang"><span class="kn">package</span> <span class="nx">add</span>
+
+<span class="cm">/*
+</span><span class="cm">#include &#34;add.h&#34;
+</span><span class="cm">#include &lt;stdio.h&gt;
+</span><span class="cm">#include &lt;stdlib.h&gt;
+</span><span class="cm">
+</span><span class="cm">int mul(int a, int b) {
+</span><span class="cm">    return a * b;
+</span><span class="cm">}
+</span><span class="cm">*/</span>
+<span class="kn">import</span> <span class="s">&#34;C&#34;</span>
+
+<span class="kn">import</span> <span class="p">(</span>
+    <span class="s">&#34;unsafe&#34;</span>
+<span class="p">)</span>
+
+<span class="kd">func</span> <span class="nx">HelloWorld</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">s</span> <span class="o">:=</span> <span class="nx">C</span><span class="p">.</span><span class="nx">CString</span><span class="p">(</span><span class="s">&#34;Hello World!&#34;</span><span class="p">)</span>
+    <span class="nx">C</span><span class="p">.</span><span class="nx">puts</span><span class="p">(</span><span class="nx">s</span><span class="p">)</span>
+    <span class="nx">C</span><span class="p">.</span><span class="nx">free</span><span class="p">(</span><span class="nx">unsafe</span><span class="p">.</span><span class="nx">Pointer</span><span class="p">(</span><span class="nx">s</span><span class="p">))</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nx">Add</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span> <span class="kt">int</span><span class="p">)</span> <span class="kt">int</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="nx">C</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">C</span><span class="p">.</span><span class="nb">int</span><span class="p">(</span><span class="nx">a</span><span class="p">),</span> <span class="nx">C</span><span class="p">.</span><span class="nb">int</span><span class="p">(</span><span class="nx">b</span><span class="p">)))</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nx">Mul</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span> <span class="kt">int</span><span class="p">)</span> <span class="kt">int</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="nx">C</span><span class="p">.</span><span class="nx">mul</span><span class="p">(</span><span class="nx">C</span><span class="p">.</span><span class="nb">int</span><span class="p">(</span><span class="nx">a</span><span class="p">),</span> <span class="nx">C</span><span class="p">.</span><span class="nb">int</span><span class="p">(</span><span class="nx">b</span><span class="p">)))</span>
+<span class="p">}</span></code></pre></div>
+
+<p>其中的 <code>import &quot;C&quot;</code> 表示使用了 CGO 。在这条语句前面的注释是一段 C 语言代码。
+这里就定义了哪些 C 语言函数被引用。也可以在这里直接编写函数并实现。
+因为这个特殊的语法，<code>import &quot;C&quot;</code> 必须单独一行，不可与其他包一起引用。
+可以看到在代码中引用了头文件 <code>add.h</code> 以及 C 标准库的头文件，另外还实现了另一个两数相乘的函数 <code>mul</code>。</p>
+
+<p>在 Golang 中通过使用 <code>C.xxx</code> 的方式调用 C 函数。<code>HelloWorld</code> 展示了对库函数的调用。<code>Add</code> 和 <code>Mul</code> 展示了对自定义函数的调用。</p>
+
+<p>因为Golang 和 C 有各自的变量类型。所以<strong>传参时候需要进行类型转换</strong>。</p>
+
+<p><code>HelloWorld</code> 在传参时使用 <code>C.CString</code> 将 Golang 字符串类型转换为 C 语言类型。
+因为 <code>C.CString</code> 是在堆上分配空间存放字符串，需要调用者自己释放，所以最后调用 <code>C.free</code> 释放该字符串。</p>
+
+<p><a href="https://chai2010.gitbooks.io/advanced-go-programming-book/content/ch2-cgo/ch2-03-cgo-types.html" target="_blank">点击这里</a>获取更多类型转换的知识。</p>
+
+<p><br></p>
+
+<p>最后在 <code>main.go</code> 中引用 <code>add</code> 包：</p>
+
+<p><div class="highlight"><pre class="chroma"><code class="language-Golang" data-lang="Golang"><span class="kn">package</span> <span class="nx">main</span>
+
+<span class="kn">import</span> <span class="p">(</span>
+    <span class="s">&#34;fmt&#34;</span>
+
+    <span class="c1">// import package add
+</span><span class="c1"></span>    <span class="s">&#34;./add&#34;</span>
+<span class="p">)</span>
+
+<span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">add</span><span class="p">.</span><span class="nx">HelloWorld</span><span class="p">()</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">add</span><span class="p">.</span><span class="nx">Add</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">add</span><span class="p">.</span><span class="nx">Mul</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="p">}</span></code></pre></div></p>
+
+<p>编译运行后可以看到输出：</p>
+
+<pre><code>Hello World!
+15
+50
 </code></pre>
 
-<p><strong>Example 3:</strong></p>
+<p>其中 <code>add.c</code> 因为 <code>import ./add</code> 的引用而参与编译。</p>
 
-<pre><code>Input: [7,8,9,11,12]
-Output: 1
-</code></pre>
+<h2 id="使用链接库">使用链接库</h2>
 
-<p><strong>Note:</strong></p>
+<p>除了可以直接使用 C 源码编译 Go 程序，还可以调用 C 导出的静态库和动态库；把 Golang 编译成静态库和动态库供 C 其他程序调用。</p>
 
-<ul>
-<li>Your algorithm should run in O(n) time and uses constant extra space.</li>
-</ul>
-</blockquote>
+<p><a href="https://github.com/2Dou/cgo-example" target="_blank">另外几种调用方式演示</a></p>
 
-<p></p>
-      <p>
-        <a href="https://www.orztu.com/leetcode/041-first-missing-positive/" class="postShorten-excerpt_link link">Continue reading</a>
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
+<h2 id="参考">参考</h2>
 
+<p>更多 CGO 知识可以从<a href="https://chai2010.gitbooks.io/advanced-go-programming-book/content/ch2-cgo/readme.html" target="_blank">这里</a>获取</p>
+              
+              
+
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://www.orztu.com/tags/golang/">Golang</a>
+
+  <a class="tag tag--primary tag--small" href="https://www.orztu.com/tags/%E6%B7%B7%E5%90%88%E7%BC%96%E7%A8%8B/">混合编程</a>
+
+                  </div>
+                
+              
+            
+            
+  <div class="post-actions-wrap">
+      <nav >
+        <ul class="post-actions post-action-nav">
           
-            
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.orztu.com/leetcode/043-multiply-strings/">
-          LeetCode 43. Multiply Strings
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2018-07-26T15:35:19&#43;08:00">
-        
-  
-  
-  
-  
-    2018-07-26
-  
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://www.orztu.com/categories/leetcode">LeetCode</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      <p><a href="https://leetcode.com/problems/multiply-strings/" target="_blank">Multiply Strings</a></p>
-
-<h2 id="description">Description</h2>
-
-<blockquote>
-<p>Given two non-negative integers <code>num1</code> and <code>num2</code> represented as strings, return the product of <code>num1</code> and <code>num2</code>, also represented as a string.</p>
-
-<p><strong>Example 1:</strong></p>
-
-<p>Input: num1 = &ldquo;2&rdquo;, num2 = &ldquo;3&rdquo;
-Output: &ldquo;6&rdquo;</p>
-
-<p><strong>Example 2:</strong></p>
-
-<p>Input: num1 = &ldquo;123&rdquo;, num2 = &ldquo;456&rdquo;
-Output: &ldquo;56088&rdquo;</p>
-</blockquote>
-
-<p></p>
-      <p>
-        <a href="https://www.orztu.com/leetcode/043-multiply-strings/" class="postShorten-excerpt_link link">Continue reading</a>
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
+            <li class="post-action">
+              
+              
+                
+                  
+                
+              
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+              
+                
+              
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/post/using-govendor/" data-tooltip="govendor 使用">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
           
-            
-  
-    
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
       
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.orztu.com/leetcode/040-combination-sum-ii/">
-          LeetCode 40. Combination Sum II
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2018-07-26T10:39:33&#43;08:00">
-        
-  
-  
-  
-  
-    2018-07-26
-  
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://www.orztu.com/categories/leetcode">LeetCode</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      <p><a href="https://leetcode.com/problems/combination-sum-ii/" target="_blank">Combination Sum II</a></p>
-
-<h2 id="description">Description</h2>
-
-<blockquote>
-<p>Given a collection of candidate numbers (<code>candidates</code>) and a target number (<code>target</code>), find all unique combinations in candidates where the <code>candidate</code> numbers sums to <code>target</code>.</p>
-
-<p>Each number in <code>candidates</code> may only be used once in the combination.</p>
-
-<p><strong>Note:</strong></p>
-
-<p>All numbers (including <code>target</code>) will be positive integers.
-The solution set must not contain duplicate combinations.</p>
-</blockquote>
-
-<p></p>
-      <p>
-        <a href="https://www.orztu.com/leetcode/040-combination-sum-ii/" class="postShorten-excerpt_link link">Continue reading</a>
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-          
-            
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.orztu.com/leetcode/039-combination-sum/">
-          LeetCode 39. Combination Sum
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2018-07-26T10:16:53&#43;08:00">
-        
-  
-  
-  
-  
-    2018-07-26
-  
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://www.orztu.com/categories/leetcode">LeetCode</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      <p><a href="https://leetcode.com/problems/combination-sum/" target="_blank">Combination Sum</a></p>
-
-<h2 id="description">Description</h2>
-
-<blockquote>
-<p>Given a set of candidate numbers (<code>candidates</code>) (without duplicates) and a target number (<code>target</code>), find all unique combinations in <code>candidates</code> where the candidate numbers sums to <code>target</code>.</p>
-
-<p>The <strong>same</strong> repeated number may be chosen from candidates unlimited number of times.</p>
-
-<p><strong>Note:</strong></p>
-
-<ul>
-<li>All numbers (including <code>target</code>) will be positive integers.</li>
-<li>The solution set must not contain duplicate combinations.</li>
-</ul>
-</blockquote>
-
-<p></p>
-      <p>
-        <a href="https://www.orztu.com/leetcode/039-combination-sum/" class="postShorten-excerpt_link link">Continue reading</a>
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-          
-            
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.orztu.com/leetcode/036-valid-sudoku/">
-          LeetCode 36. Valid Sudoku
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2018-07-26T09:22:05&#43;08:00">
-        
-  
-  
-  
-  
-    2018-07-26
-  
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://www.orztu.com/categories/leetcode">LeetCode</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      <p><a href="https://leetcode.com/problems/valid-sudoku/" target="_blank">Valid Sudoku</a></p>
-
-<h2 id="description">Description</h2>
-
-<blockquote>
-<p>Determine if a 9x9 Sudoku board is valid. Only the filled cells need to be validated according to the following rules:</p>
-
-<ol>
-<li>Each row must contain the digits <code>1-9</code> without repetition.</li>
-<li>Each column must contain the digits <code>1-9</code> without repetition.</li>
-<li>Each of the 9 <code>3x3</code> sub-boxes of the grid must contain the digits <code>1-9</code> without repetition.</li>
-</ol>
-
-<p><img src="https://www.orztu.com/images/leetcode/Sudoku-Solver-1.png" alt="" title="数独" />
-A partially filled sudoku which is valid.</p>
-
-<p>The Sudoku board could be partially filled, where empty cells are filled with the character <code>'.'</code>.</p>
-</blockquote>
-
-<p></p>
-      <p>
-        <a href="https://www.orztu.com/leetcode/036-valid-sudoku/" class="postShorten-excerpt_link link">Continue reading</a>
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-          
-            
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.orztu.com/leetcode/033-search-in-rotated-sorted-array/">
-          LeetCode 33. Search in Rotated Sorted Array
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2018-07-25T14:28:45&#43;08:00">
-        
-  
-  
-  
-  
-    2018-07-25
-  
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://www.orztu.com/categories/leetcode">LeetCode</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      <p><a href="https://leetcode.com/problems/search-in-rotated-sorted-array/" target="_blank">Search in Rotated Sorted Array</a></p>
-
-<h2 id="description">Description</h2>
-
-<blockquote>
-<p>Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.</p>
-
-<p>(i.e., <code>[0,1,2,4,5,6,7]</code> might become <code>[4,5,6,7,0,1,2]</code>).</p>
-
-<p>You are given a target value to search. If found in the array return its index, otherwise return <code>-1</code>.</p>
-
-<p>You may assume no duplicate exists in the array.</p>
-
-<p>Your algorithm&rsquo;s runtime complexity must be in the order of <code>O(log n)</code>.</p>
-</blockquote>
-
-<p></p>
-      <p>
-        <a href="https://www.orztu.com/leetcode/033-search-in-rotated-sorted-array/" class="postShorten-excerpt_link link">Continue reading</a>
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-          
-            
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.orztu.com/leetcode/032-longest-valid-parentheses/">
-          LeetCode 32. Longest Valid Parentheses
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2018-07-25T09:56:49&#43;08:00">
-        
-  
-  
-  
-  
-    2018-07-25
-  
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://www.orztu.com/categories/leetcode">LeetCode</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      <p><a href="https://leetcode.com/problems/longest-valid-parentheses/" target="_blank">Longest Valid Parentheses</a></p>
-
-<h2 id="description">Description</h2>
-
-<blockquote>
-<p>Given a string containing just the characters <code>'('</code> and <code>')'</code>, find the length of the longest valid (well-formed) parentheses substring.
-<br><br>
-<strong>Example 1:</strong></p>
-
-<pre><code>Input: &quot;(()&quot;
-Output: 2
-Explanation: The longest valid parentheses substring is &quot;()&quot;
-</code></pre>
-
-<p><br>
-<strong>Example 2:</strong>
-<br></p>
-
-<pre><code>Input: &quot;)()())&quot;
-Output: 4
-Explanation: The longest valid parentheses substring is &quot;()()&quot;
-</code></pre>
-</blockquote>
-
-<p></p>
-      <p>
-        <a href="https://www.orztu.com/leetcode/032-longest-valid-parentheses/" class="postShorten-excerpt_link link">Continue reading</a>
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-          
-            
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.orztu.com/leetcode/031-next-permutation/">
-          LeetCode 31. Next Permutation
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2018-07-19T10:17:07&#43;08:00">
-        
-  
-  
-  
-  
-    2018-07-19
-  
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://www.orztu.com/categories/leetcode">LeetCode</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      <p><a href="https://leetcode.com/problems/next-permutation/" target="_blank">Next Permutation</a></p>
-
-<h2 id="description">Description</h2>
-
-<blockquote>
-<p>Implement next permutation, which rearranges numbers into the lexicographically next greater permutation of numbers.</p>
-
-<p>If such arrangement is not possible, it must rearrange it as the lowest possible order (ie, sorted in ascending order).</p>
-
-<p>The replacement must be in-place and use only constant extra memory.</p>
-
-<p>Here are some examples. Inputs are in the left-hand column and its corresponding outputs are in the right-hand column.</p>
-
-<p><code>1,2,3</code> → <code>1,3,2</code><br>
-<code>3,2,1</code> → <code>1,2,3</code><br>
-<code>1,1,5</code> → <code>1,5,1</code><br></p>
-</blockquote>
-
-<p></p>
-      <p>
-        <a href="https://www.orztu.com/leetcode/031-next-permutation/" class="postShorten-excerpt_link link">Continue reading</a>
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-          
-          
-
-<nav class="blog-pagination">
-    <ul class="pagination-b justify-content-center">
-        
-        
-        
-            
-            
-            
-            
-                
-                
-            
-            
-                <li class="page-item active disabled">
-                    <a class="page-link" href="https://www.orztu.com/leetcode/">1</a>
-                </li>
-            
-        
-            
-            
-            
-            
-                
-                
-            
-            
-                <li class="page-item ">
-                    <a class="page-link" href="https://www.orztu.com/leetcode/page/2/">2</a>
-                </li>
-            
-        
-            
-            
-            
-            
-                
-                
-            
-            
-                <li class="page-item ">
-                    <a class="page-link" href="https://www.orztu.com/leetcode/page/3/">3</a>
-                </li>
-            
-        
-            
-            
-            
-            
-                
-                
-            
-            
-                <li class="page-item disabled">
-                    <span class="page-link" aria-hidden="true">&hellip;</span>
-                </li>
-            
-        
-            
-            
-            
-            
-                
-                
-            
-            
-                <li class="page-item ">
-                    <a class="page-link" href="https://www.orztu.com/leetcode/page/5/">5</a>
-                </li>
-            
-        
-        
-        <li class="page-item ">
-            <a class="page-link" href="https://www.orztu.com/leetcode/page/2/" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
         </li>
         
-        <li class="page-item">
-            <a class="page-link" href="https://www.orztu.com/leetcode/page/5/" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
         </li>
+      
+      <li class="post-action">
         
+          <a class="post-action-btn btn btn--default" href="#">
         
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
     </ul>
-</nav>
+  </div>
 
-        </section>
+
+            
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the comments</noscript>
+</div>
+
+              
+            
+          </div>
+        </article>
         <footer id="footer" class="main-content-wrap">
   <span class="copyrights">
     &copy; 2018 SelFree. All Rights Reserved
@@ -960,6 +487,76 @@ Explanation: The longest valid parentheses substring is &quot;()()&quot;
 </footer>
 
       </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        
+  <div class="post-actions-wrap">
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+              
+                
+                  
+                
+              
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+              
+                
+              
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/post/using-govendor/" data-tooltip="govendor 使用">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
     </div>
     
     <div id="about">
@@ -1268,6 +865,32 @@ Explanation: The longest valid parentheses substring is &quot;()()&quot;
 
 
 
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'https:\/\/www.orztu.com\/post\/cgo-introduce\/';
+          
+            this.page.identifier = '\/post\/cgo-introduce\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'orztu';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
 
 
 
