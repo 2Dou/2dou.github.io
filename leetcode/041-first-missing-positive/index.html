@@ -322,38 +322,76 @@ Output: 1
 
 <p>再次从第一个位置开始判断，找到第一个位置与数字不符合的地方即为缺失的数字。</p>
 
-<div class="highlight"><pre class="chroma"><code class="language-golang" data-lang="golang"><span class="ln"> 1</span><span class="kd">func</span> <span class="nx">firstMissingPositive</span><span class="p">(</span><span class="nx">nums</span> <span class="p">[]</span><span class="kt">int</span><span class="p">)</span> <span class="kt">int</span> <span class="p">{</span>
-<span class="ln"> 2</span>    <span class="nx">l</span> <span class="o">:=</span> <span class="nb">len</span><span class="p">(</span><span class="nx">nums</span><span class="p">)</span>
-<span class="ln"> 3</span>
-<span class="ln"> 4</span>    <span class="c1">// 进行排序
-</span><span class="ln"> 5</span><span class="c1"></span>    <span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="nx">l</span><span class="p">;</span> <span class="p">{</span>
-<span class="ln"> 6</span>        <span class="nx">n</span> <span class="o">:=</span> <span class="nx">nums</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span>
-<span class="ln"> 7</span>
-<span class="ln"> 8</span>        <span class="k">if</span> <span class="nx">n</span> <span class="o">&lt;=</span> <span class="mi">0</span> <span class="o">||</span> <span class="nx">n</span> <span class="p">&gt;</span> <span class="nx">l</span> <span class="p">{</span>
-<span class="ln"> 9</span>            <span class="c1">// 溢出的不用管
-</span><span class="ln">10</span><span class="c1"></span>            <span class="nx">i</span><span class="o">++</span>
-<span class="ln">11</span>        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="nx">i</span><span class="o">+</span><span class="mi">1</span> <span class="o">!=</span> <span class="nx">n</span> <span class="o">&amp;&amp;</span> <span class="nx">nums</span><span class="p">[</span><span class="nx">n</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">!=</span> <span class="nx">n</span> <span class="p">{</span>
-<span class="ln">12</span>            <span class="c1">// 判断当前数字是否在它应该的位置上
-</span><span class="ln">13</span><span class="c1"></span>            <span class="c1">// 数字 n 应该在[n - 1]上
-</span><span class="ln">14</span><span class="c1"></span>            <span class="c1">// 需要处理目标位置与当前位置数字相同，否则死循环
-</span><span class="ln">15</span><span class="c1"></span>            <span class="nx">nums</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="p">=</span> <span class="nx">nums</span><span class="p">[</span><span class="nx">n</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-<span class="ln">16</span>            <span class="nx">nums</span><span class="p">[</span><span class="nx">n</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="p">=</span> <span class="nx">n</span>
-<span class="ln">17</span>            <span class="c1">// 交换位置后，继续处理当前位置上的数字，不需要i++
-</span><span class="ln">18</span><span class="c1"></span>        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-<span class="ln">19</span>            <span class="c1">// 处理下一个位置
-</span><span class="ln">20</span><span class="c1"></span>            <span class="nx">i</span><span class="o">++</span>
-<span class="ln">21</span>        <span class="p">}</span>
-<span class="ln">22</span>    <span class="p">}</span>
-<span class="ln">23</span>
-<span class="ln">24</span>    <span class="c1">// 查找第一个不符合的数字
-</span><span class="ln">25</span><span class="c1"></span>    <span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="nx">l</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
-<span class="ln">26</span>        <span class="k">if</span> <span class="nx">nums</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">!=</span> <span class="nx">i</span><span class="o">+</span><span class="mi">1</span> <span class="p">{</span>
-<span class="ln">27</span>            <span class="k">return</span> <span class="nx">i</span> <span class="o">+</span> <span class="mi">1</span>
-<span class="ln">28</span>        <span class="p">}</span>
-<span class="ln">29</span>    <span class="p">}</span>
-<span class="ln">30</span>
-<span class="ln">31</span>    <span class="k">return</span> <span class="nx">l</span> <span class="o">+</span> <span class="mi">1</span>
-<span class="ln">32</span><span class="p">}</span></code></pre></div>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-golang" data-lang="golang"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">func</span> <span class="nx">firstMissingPositive</span><span class="p">(</span><span class="nx">nums</span> <span class="p">[]</span><span class="kt">int</span><span class="p">)</span> <span class="kt">int</span> <span class="p">{</span>
+    <span class="nx">l</span> <span class="o">:=</span> <span class="nb">len</span><span class="p">(</span><span class="nx">nums</span><span class="p">)</span>
+
+    <span class="c1">// 进行排序
+</span><span class="c1"></span>    <span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="nx">l</span><span class="p">;</span> <span class="p">{</span>
+        <span class="nx">n</span> <span class="o">:=</span> <span class="nx">nums</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span>
+
+        <span class="k">if</span> <span class="nx">n</span> <span class="o">&lt;=</span> <span class="mi">0</span> <span class="o">||</span> <span class="nx">n</span> <span class="p">&gt;</span> <span class="nx">l</span> <span class="p">{</span>
+            <span class="c1">// 溢出的不用管
+</span><span class="c1"></span>            <span class="nx">i</span><span class="o">++</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="nx">i</span><span class="o">+</span><span class="mi">1</span> <span class="o">!=</span> <span class="nx">n</span> <span class="o">&amp;&amp;</span> <span class="nx">nums</span><span class="p">[</span><span class="nx">n</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">!=</span> <span class="nx">n</span> <span class="p">{</span>
+            <span class="c1">// 判断当前数字是否在它应该的位置上
+</span><span class="c1"></span>            <span class="c1">// 数字 n 应该在[n - 1]上
+</span><span class="c1"></span>            <span class="c1">// 需要处理目标位置与当前位置数字相同，否则死循环
+</span><span class="c1"></span>            <span class="nx">nums</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="p">=</span> <span class="nx">nums</span><span class="p">[</span><span class="nx">n</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+            <span class="nx">nums</span><span class="p">[</span><span class="nx">n</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="p">=</span> <span class="nx">n</span>
+            <span class="c1">// 交换位置后，继续处理当前位置上的数字，不需要i++
+</span><span class="c1"></span>        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="c1">// 处理下一个位置
+</span><span class="c1"></span>            <span class="nx">i</span><span class="o">++</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="c1">// 查找第一个不符合的数字
+</span><span class="c1"></span>    <span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="nx">l</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="nx">nums</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">!=</span> <span class="nx">i</span><span class="o">+</span><span class="mi">1</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="nx">i</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="nx">l</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
               
               
 

@@ -305,45 +305,90 @@ nums2 = [3, 4]
 
 <p>通过数组长度，计算中位数的位置。在两个数组中按大小顺序依次查找，找到中位数所在位置，取出数值计算。</p>
 
-<div class="highlight"><pre class="chroma"><code class="language-golang" data-lang="golang"><span class="ln"> 1</span><span class="kd">func</span> <span class="nx">findMedianSortedArrays</span><span class="p">(</span><span class="nx">nums1</span> <span class="p">[]</span><span class="kt">int</span><span class="p">,</span> <span class="nx">nums2</span> <span class="p">[]</span><span class="kt">int</span><span class="p">)</span> <span class="kt">float64</span> <span class="p">{</span>
-<span class="ln"> 2</span>    <span class="nx">totalLen</span> <span class="o">:=</span> <span class="nb">len</span><span class="p">(</span><span class="nx">nums1</span><span class="p">)</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="nx">nums2</span><span class="p">)</span>
-<span class="ln"> 3</span>
-<span class="ln"> 4</span>    <span class="kd">var</span> <span class="nx">p1</span><span class="p">,</span> <span class="nx">p2</span><span class="p">,</span> <span class="nx">index1</span><span class="p">,</span> <span class="nx">index2</span><span class="p">,</span> <span class="nx">sum</span> <span class="kt">int</span>
-<span class="ln"> 5</span>
-<span class="ln"> 6</span>    <span class="nx">index1</span> <span class="p">=</span> <span class="nb">int</span><span class="p">((</span><span class="nx">totalLen</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
-<span class="ln"> 7</span>    <span class="nx">index2</span> <span class="p">=</span> <span class="nb">int</span><span class="p">(</span><span class="nx">totalLen</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
-<span class="ln"> 8</span>
-<span class="ln"> 9</span>    <span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="nx">totalLen</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
-<span class="ln">10</span>        <span class="k">if</span> <span class="nx">i</span> <span class="p">&gt;</span> <span class="nx">index2</span> <span class="p">{</span>
-<span class="ln">11</span>            <span class="k">break</span>
-<span class="ln">12</span>        <span class="p">}</span>
-<span class="ln">13</span>        <span class="kd">var</span> <span class="nx">num</span> <span class="kt">int</span>
-<span class="ln">14</span>        <span class="k">if</span> <span class="nx">p1</span> <span class="p">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="nx">nums1</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="nx">p2</span> <span class="p">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="nx">nums2</span><span class="p">)</span> <span class="p">{</span>
-<span class="ln">15</span>            <span class="k">if</span> <span class="nx">nums1</span><span class="p">[</span><span class="nx">p1</span><span class="p">]</span> <span class="p">&lt;</span> <span class="nx">nums2</span><span class="p">[</span><span class="nx">p2</span><span class="p">]</span> <span class="p">{</span>
-<span class="ln">16</span>                <span class="nx">num</span> <span class="p">=</span> <span class="nx">nums1</span><span class="p">[</span><span class="nx">p1</span><span class="p">]</span>
-<span class="ln">17</span>                <span class="nx">p1</span><span class="o">++</span>
-<span class="ln">18</span>            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-<span class="ln">19</span>                <span class="nx">num</span> <span class="p">=</span> <span class="nx">nums2</span><span class="p">[</span><span class="nx">p2</span><span class="p">]</span>
-<span class="ln">20</span>                <span class="nx">p2</span><span class="o">++</span>
-<span class="ln">21</span>            <span class="p">}</span>
-<span class="ln">22</span>        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="nx">p1</span> <span class="p">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="nx">nums1</span><span class="p">)</span> <span class="p">{</span>
-<span class="ln">23</span>            <span class="nx">num</span> <span class="p">=</span> <span class="nx">nums1</span><span class="p">[</span><span class="nx">p1</span><span class="p">]</span>
-<span class="ln">24</span>            <span class="nx">p1</span><span class="o">++</span>
-<span class="ln">25</span>        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-<span class="ln">26</span>            <span class="nx">num</span> <span class="p">=</span> <span class="nx">nums2</span><span class="p">[</span><span class="nx">p2</span><span class="p">]</span>
-<span class="ln">27</span>            <span class="nx">p2</span><span class="o">++</span>
-<span class="ln">28</span>        <span class="p">}</span>
-<span class="ln">29</span>
-<span class="ln">30</span>        <span class="k">if</span> <span class="nx">i</span> <span class="o">==</span> <span class="nx">index1</span> <span class="p">{</span>
-<span class="ln">31</span>            <span class="nx">sum</span> <span class="o">+=</span> <span class="nx">num</span>
-<span class="ln">32</span>        <span class="p">}</span>
-<span class="ln">33</span>        <span class="k">if</span> <span class="nx">i</span> <span class="o">==</span> <span class="nx">index2</span> <span class="p">{</span>
-<span class="ln">34</span>            <span class="nx">sum</span> <span class="o">+=</span> <span class="nx">num</span>
-<span class="ln">35</span>        <span class="p">}</span>
-<span class="ln">36</span>    <span class="p">}</span>
-<span class="ln">37</span>
-<span class="ln">38</span>    <span class="k">return</span> <span class="nb">float64</span><span class="p">(</span><span class="nx">sum</span><span class="p">)</span> <span class="o">/</span> <span class="mf">2.0</span>
-<span class="ln">39</span><span class="p">}</span></code></pre></div>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-golang" data-lang="golang"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">func</span> <span class="nx">findMedianSortedArrays</span><span class="p">(</span><span class="nx">nums1</span> <span class="p">[]</span><span class="kt">int</span><span class="p">,</span> <span class="nx">nums2</span> <span class="p">[]</span><span class="kt">int</span><span class="p">)</span> <span class="kt">float64</span> <span class="p">{</span>
+    <span class="nx">totalLen</span> <span class="o">:=</span> <span class="nb">len</span><span class="p">(</span><span class="nx">nums1</span><span class="p">)</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="nx">nums2</span><span class="p">)</span>
+
+    <span class="kd">var</span> <span class="nx">p1</span><span class="p">,</span> <span class="nx">p2</span><span class="p">,</span> <span class="nx">index1</span><span class="p">,</span> <span class="nx">index2</span><span class="p">,</span> <span class="nx">sum</span> <span class="kt">int</span>
+
+    <span class="nx">index1</span> <span class="p">=</span> <span class="nb">int</span><span class="p">((</span><span class="nx">totalLen</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="nx">index2</span> <span class="p">=</span> <span class="nb">int</span><span class="p">(</span><span class="nx">totalLen</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="nx">totalLen</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="nx">i</span> <span class="p">&gt;</span> <span class="nx">index2</span> <span class="p">{</span>
+            <span class="k">break</span>
+        <span class="p">}</span>
+        <span class="kd">var</span> <span class="nx">num</span> <span class="kt">int</span>
+        <span class="k">if</span> <span class="nx">p1</span> <span class="p">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="nx">nums1</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="nx">p2</span> <span class="p">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="nx">nums2</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="nx">nums1</span><span class="p">[</span><span class="nx">p1</span><span class="p">]</span> <span class="p">&lt;</span> <span class="nx">nums2</span><span class="p">[</span><span class="nx">p2</span><span class="p">]</span> <span class="p">{</span>
+                <span class="nx">num</span> <span class="p">=</span> <span class="nx">nums1</span><span class="p">[</span><span class="nx">p1</span><span class="p">]</span>
+                <span class="nx">p1</span><span class="o">++</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                <span class="nx">num</span> <span class="p">=</span> <span class="nx">nums2</span><span class="p">[</span><span class="nx">p2</span><span class="p">]</span>
+                <span class="nx">p2</span><span class="o">++</span>
+            <span class="p">}</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="nx">p1</span> <span class="p">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="nx">nums1</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">num</span> <span class="p">=</span> <span class="nx">nums1</span><span class="p">[</span><span class="nx">p1</span><span class="p">]</span>
+            <span class="nx">p1</span><span class="o">++</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="nx">num</span> <span class="p">=</span> <span class="nx">nums2</span><span class="p">[</span><span class="nx">p2</span><span class="p">]</span>
+            <span class="nx">p2</span><span class="o">++</span>
+        <span class="p">}</span>
+
+        <span class="k">if</span> <span class="nx">i</span> <span class="o">==</span> <span class="nx">index1</span> <span class="p">{</span>
+            <span class="nx">sum</span> <span class="o">+=</span> <span class="nx">num</span>
+        <span class="p">}</span>
+        <span class="k">if</span> <span class="nx">i</span> <span class="o">==</span> <span class="nx">index2</span> <span class="p">{</span>
+            <span class="nx">sum</span> <span class="o">+=</span> <span class="nx">num</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="nb">float64</span><span class="p">(</span><span class="nx">sum</span><span class="p">)</span> <span class="o">/</span> <span class="mf">2.0</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
               
               
 

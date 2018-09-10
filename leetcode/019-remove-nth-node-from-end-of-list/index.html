@@ -307,40 +307,80 @@ Try to do this in one pass.</p>
 <li><p>删除<code>p2.Next</code>(即倒数第n个结点)</p></li>
 </ol>
 
-<div class="highlight"><pre class="chroma"><code class="language-golang" data-lang="golang"><span class="ln"> 1</span><span class="cm">/**
-</span><span class="ln"> 2</span><span class="cm"> * Definition for singly-linked list.
-</span><span class="ln"> 3</span><span class="cm"> * type ListNode struct {
-</span><span class="ln"> 4</span><span class="cm"> *     Val int
-</span><span class="ln"> 5</span><span class="cm"> *     Next *ListNode
-</span><span class="ln"> 6</span><span class="cm"> * }
-</span><span class="ln"> 7</span><span class="cm"> */</span>
-<span class="ln"> 8</span><span class="kd">func</span> <span class="nx">removeNthFromEnd</span><span class="p">(</span><span class="nx">head</span> <span class="o">*</span><span class="nx">ListNode</span><span class="p">,</span> <span class="nx">n</span> <span class="kt">int</span><span class="p">)</span> <span class="o">*</span><span class="nx">ListNode</span> <span class="p">{</span>
-<span class="ln"> 9</span>    <span class="nx">p1</span> <span class="o">:=</span> <span class="nx">head</span>
-<span class="ln">10</span>
-<span class="ln">11</span>    <span class="c1">// point the next Nth node
-</span><span class="ln">12</span><span class="c1"></span>    <span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="nx">n</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
-<span class="ln">13</span>        <span class="nx">p1</span> <span class="p">=</span> <span class="nx">p1</span><span class="p">.</span><span class="nx">Next</span>
-<span class="ln">14</span>    <span class="p">}</span>
-<span class="ln">15</span>
-<span class="ln">16</span>    <span class="k">if</span> <span class="nx">p1</span> <span class="o">==</span> <span class="kc">nil</span> <span class="p">{</span>
-<span class="ln">17</span>        <span class="c1">// It&#39;s removing the first node from begin
-</span><span class="ln">18</span><span class="c1"></span>        <span class="k">return</span> <span class="nx">head</span><span class="p">.</span><span class="nx">Next</span>
-<span class="ln">19</span>    <span class="p">}</span>
-<span class="ln">20</span>
-<span class="ln">21</span>    <span class="nx">p2</span> <span class="o">:=</span> <span class="nx">head</span> <span class="c1">// p2 is now n step behind p1
-</span><span class="ln">22</span><span class="c1"></span>
-<span class="ln">23</span>    <span class="c1">// let p1 point to the 1st node from end
-</span><span class="ln">24</span><span class="c1"></span>    <span class="c1">// so p2 is pointing to the (n+1)th node from end
-</span><span class="ln">25</span><span class="c1"></span>    <span class="k">for</span> <span class="nx">p1</span><span class="p">.</span><span class="nx">Next</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
-<span class="ln">26</span>        <span class="nx">p1</span> <span class="p">=</span> <span class="nx">p1</span><span class="p">.</span><span class="nx">Next</span>
-<span class="ln">27</span>        <span class="nx">p2</span> <span class="p">=</span> <span class="nx">p2</span><span class="p">.</span><span class="nx">Next</span>
-<span class="ln">28</span>    <span class="p">}</span>
-<span class="ln">29</span>
-<span class="ln">30</span>    <span class="c1">// now remove the Nth node from begin
-</span><span class="ln">31</span><span class="c1"></span>    <span class="nx">p2</span><span class="p">.</span><span class="nx">Next</span> <span class="p">=</span> <span class="nx">p2</span><span class="p">.</span><span class="nx">Next</span><span class="p">.</span><span class="nx">Next</span>
-<span class="ln">32</span>
-<span class="ln">33</span>    <span class="k">return</span> <span class="nx">head</span>
-<span class="ln">34</span><span class="p">}</span></code></pre></div>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-golang" data-lang="golang"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-golang" data-lang="golang"><span class="cm">/**
+</span><span class="cm"> * Definition for singly-linked list.
+</span><span class="cm"> * type ListNode struct {
+</span><span class="cm"> *     Val int
+</span><span class="cm"> *     Next *ListNode
+</span><span class="cm"> * }
+</span><span class="cm"> */</span>
+<span class="kd">func</span> <span class="nx">removeNthFromEnd</span><span class="p">(</span><span class="nx">head</span> <span class="o">*</span><span class="nx">ListNode</span><span class="p">,</span> <span class="nx">n</span> <span class="kt">int</span><span class="p">)</span> <span class="o">*</span><span class="nx">ListNode</span> <span class="p">{</span>
+    <span class="nx">p1</span> <span class="o">:=</span> <span class="nx">head</span>
+
+    <span class="c1">// point the next Nth node
+</span><span class="c1"></span>    <span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="nx">n</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
+        <span class="nx">p1</span> <span class="p">=</span> <span class="nx">p1</span><span class="p">.</span><span class="nx">Next</span>
+    <span class="p">}</span>
+
+    <span class="k">if</span> <span class="nx">p1</span> <span class="o">==</span> <span class="kc">nil</span> <span class="p">{</span>
+        <span class="c1">// It&#39;s removing the first node from begin
+</span><span class="c1"></span>        <span class="k">return</span> <span class="nx">head</span><span class="p">.</span><span class="nx">Next</span>
+    <span class="p">}</span>
+
+    <span class="nx">p2</span> <span class="o">:=</span> <span class="nx">head</span> <span class="c1">// p2 is now n step behind p1
+</span><span class="c1"></span>
+    <span class="c1">// let p1 point to the 1st node from end
+</span><span class="c1"></span>    <span class="c1">// so p2 is pointing to the (n+1)th node from end
+</span><span class="c1"></span>    <span class="k">for</span> <span class="nx">p1</span><span class="p">.</span><span class="nx">Next</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+        <span class="nx">p1</span> <span class="p">=</span> <span class="nx">p1</span><span class="p">.</span><span class="nx">Next</span>
+        <span class="nx">p2</span> <span class="p">=</span> <span class="nx">p2</span><span class="p">.</span><span class="nx">Next</span>
+    <span class="p">}</span>
+
+    <span class="c1">// now remove the Nth node from begin
+</span><span class="c1"></span>    <span class="nx">p2</span><span class="p">.</span><span class="nx">Next</span> <span class="p">=</span> <span class="nx">p2</span><span class="p">.</span><span class="nx">Next</span><span class="p">.</span><span class="nx">Next</span>
+
+    <span class="k">return</span> <span class="nx">head</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
 
 <h3 id="2-使用递归">2. 使用递归</h3>
 
@@ -352,41 +392,82 @@ Try to do this in one pass.</p>
 <li><p>递归完全返回后，函数<code>removeNthFromEnd</code>里的 index 如果为0，则表示parent指向第倒数n+1；不为0则没找到，原因是要删除结点的是正向第一个。</p></li>
 </ol>
 
-<p><div class="highlight"><pre class="chroma"><code class="language-golang" data-lang="golang"><span class="ln"> 1</span><span class="cm">/**
-</span><span class="ln"> 2</span><span class="cm"> * Definition for singly-linked list.
-</span><span class="ln"> 3</span><span class="cm"> * type ListNode struct {
-</span><span class="ln"> 4</span><span class="cm"> *     Val int
-</span><span class="ln"> 5</span><span class="cm"> *     Next *ListNode
-</span><span class="ln"> 6</span><span class="cm"> * }
-</span><span class="ln"> 7</span><span class="cm"> */</span>
-<span class="ln"> 8</span><span class="kd">func</span> <span class="nx">removeNthFromEnd</span><span class="p">(</span><span class="nx">head</span> <span class="o">*</span><span class="nx">ListNode</span><span class="p">,</span> <span class="nx">n</span> <span class="kt">int</span><span class="p">)</span> <span class="o">*</span><span class="nx">ListNode</span> <span class="p">{</span>
-<span class="ln"> 9</span>    <span class="nx">parent</span><span class="p">,</span> <span class="nx">index</span> <span class="o">:=</span> <span class="nx">search</span><span class="p">(</span><span class="nx">head</span><span class="p">,</span> <span class="nx">n</span><span class="p">)</span>
-<span class="ln">10</span>    <span class="k">if</span> <span class="nx">index</span> <span class="o">!=</span> <span class="nx">n</span> <span class="p">{</span>
-<span class="ln">11</span>        <span class="c1">// It must be removing the first node from begin
-</span><span class="ln">12</span><span class="c1"></span>        <span class="k">return</span> <span class="nx">head</span><span class="p">.</span><span class="nx">Next</span>
-<span class="ln">13</span>    <span class="p">}</span>
-<span class="ln">14</span>
-<span class="ln">15</span>    <span class="c1">// remove the child node
-</span><span class="ln">16</span><span class="c1"></span>    <span class="nx">parent</span><span class="p">.</span><span class="nx">Next</span> <span class="p">=</span> <span class="nx">parent</span><span class="p">.</span><span class="nx">Next</span><span class="p">.</span><span class="nx">Next</span>
-<span class="ln">17</span>
-<span class="ln">18</span>    <span class="k">return</span> <span class="nx">head</span>
-<span class="ln">19</span><span class="p">}</span>
-<span class="ln">20</span>
-<span class="ln">21</span><span class="kd">func</span> <span class="nx">search</span><span class="p">(</span><span class="nx">head</span> <span class="o">*</span><span class="nx">ListNode</span><span class="p">,</span> <span class="nx">n</span> <span class="kt">int</span><span class="p">)</span> <span class="p">(</span><span class="o">*</span><span class="nx">ListNode</span><span class="p">,</span> <span class="kt">int</span><span class="p">)</span> <span class="p">{</span>
-<span class="ln">22</span>    <span class="k">if</span> <span class="nx">head</span><span class="p">.</span><span class="nx">Next</span> <span class="o">==</span> <span class="kc">nil</span> <span class="p">{</span>
-<span class="ln">23</span>        <span class="c1">// mark last node&#39;s index as 0
-</span><span class="ln">24</span><span class="c1"></span>        <span class="k">return</span> <span class="nx">head</span><span class="p">,</span> <span class="mi">0</span>
-<span class="ln">25</span>    <span class="p">}</span>
-<span class="ln">26</span>
-<span class="ln">27</span>    <span class="nx">p</span><span class="p">,</span> <span class="nx">index</span> <span class="o">:=</span> <span class="nx">search</span><span class="p">(</span><span class="nx">head</span><span class="p">.</span><span class="nx">Next</span><span class="p">,</span> <span class="nx">n</span><span class="p">)</span>
-<span class="ln">28</span>    <span class="k">if</span> <span class="nx">index</span> <span class="o">==</span> <span class="nx">n</span> <span class="p">{</span>
-<span class="ln">29</span>        <span class="c1">// so index n is the (n+1)th node from the end
-</span><span class="ln">30</span><span class="c1"></span>        <span class="c1">// it&#39;s the parent of the node which we want to remove
-</span><span class="ln">31</span><span class="c1"></span>        <span class="k">return</span> <span class="nx">p</span><span class="p">,</span> <span class="nx">index</span>
-<span class="ln">32</span>    <span class="p">}</span>
-<span class="ln">33</span>
-<span class="ln">34</span>    <span class="k">return</span> <span class="nx">head</span><span class="p">,</span> <span class="nx">index</span> <span class="o">+</span> <span class="mi">1</span>
-<span class="ln">35</span><span class="p">}</span></code></pre></div></p>
+<p><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-golang" data-lang="golang"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-golang" data-lang="golang"><span class="cm">/**
+</span><span class="cm"> * Definition for singly-linked list.
+</span><span class="cm"> * type ListNode struct {
+</span><span class="cm"> *     Val int
+</span><span class="cm"> *     Next *ListNode
+</span><span class="cm"> * }
+</span><span class="cm"> */</span>
+<span class="kd">func</span> <span class="nx">removeNthFromEnd</span><span class="p">(</span><span class="nx">head</span> <span class="o">*</span><span class="nx">ListNode</span><span class="p">,</span> <span class="nx">n</span> <span class="kt">int</span><span class="p">)</span> <span class="o">*</span><span class="nx">ListNode</span> <span class="p">{</span>
+    <span class="nx">parent</span><span class="p">,</span> <span class="nx">index</span> <span class="o">:=</span> <span class="nx">search</span><span class="p">(</span><span class="nx">head</span><span class="p">,</span> <span class="nx">n</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nx">index</span> <span class="o">!=</span> <span class="nx">n</span> <span class="p">{</span>
+        <span class="c1">// It must be removing the first node from begin
+</span><span class="c1"></span>        <span class="k">return</span> <span class="nx">head</span><span class="p">.</span><span class="nx">Next</span>
+    <span class="p">}</span>
+
+    <span class="c1">// remove the child node
+</span><span class="c1"></span>    <span class="nx">parent</span><span class="p">.</span><span class="nx">Next</span> <span class="p">=</span> <span class="nx">parent</span><span class="p">.</span><span class="nx">Next</span><span class="p">.</span><span class="nx">Next</span>
+
+    <span class="k">return</span> <span class="nx">head</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nx">search</span><span class="p">(</span><span class="nx">head</span> <span class="o">*</span><span class="nx">ListNode</span><span class="p">,</span> <span class="nx">n</span> <span class="kt">int</span><span class="p">)</span> <span class="p">(</span><span class="o">*</span><span class="nx">ListNode</span><span class="p">,</span> <span class="kt">int</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="nx">head</span><span class="p">.</span><span class="nx">Next</span> <span class="o">==</span> <span class="kc">nil</span> <span class="p">{</span>
+        <span class="c1">// mark last node&#39;s index as 0
+</span><span class="c1"></span>        <span class="k">return</span> <span class="nx">head</span><span class="p">,</span> <span class="mi">0</span>
+    <span class="p">}</span>
+
+    <span class="nx">p</span><span class="p">,</span> <span class="nx">index</span> <span class="o">:=</span> <span class="nx">search</span><span class="p">(</span><span class="nx">head</span><span class="p">.</span><span class="nx">Next</span><span class="p">,</span> <span class="nx">n</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nx">index</span> <span class="o">==</span> <span class="nx">n</span> <span class="p">{</span>
+        <span class="c1">// so index n is the (n+1)th node from the end
+</span><span class="c1"></span>        <span class="c1">// it&#39;s the parent of the node which we want to remove
+</span><span class="c1"></span>        <span class="k">return</span> <span class="nx">p</span><span class="p">,</span> <span class="nx">index</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="nx">head</span><span class="p">,</span> <span class="nx">index</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div></p>
               
               
 

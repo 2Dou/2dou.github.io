@@ -299,62 +299,124 @@ A solution set is:
 
 <h2 id="solution">Solution</h2>
 
-<div class="highlight"><pre class="chroma"><code class="language-golang" data-lang="golang"><span class="ln"> 1</span><span class="kd">func</span> <span class="nx">threeSum</span><span class="p">(</span><span class="nx">nums</span> <span class="p">[]</span><span class="kt">int</span><span class="p">)</span> <span class="p">(</span><span class="nx">res</span> <span class="p">[][]</span><span class="kt">int</span><span class="p">)</span> <span class="p">{</span>
-<span class="ln"> 2</span>    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="nx">nums</span><span class="p">)</span> <span class="p">&lt;</span> <span class="mi">3</span> <span class="p">{</span>
-<span class="ln"> 3</span>        <span class="k">return</span>
-<span class="ln"> 4</span>    <span class="p">}</span>
-<span class="ln"> 5</span>
-<span class="ln"> 6</span>    <span class="c1">// 从小到大排序
-</span><span class="ln"> 7</span><span class="c1"></span>    <span class="nx">sort</span><span class="p">.</span><span class="nx">Ints</span><span class="p">(</span><span class="nx">nums</span><span class="p">)</span>
-<span class="ln"> 8</span>
-<span class="ln"> 9</span>    <span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="nx">nums</span><span class="p">)</span><span class="o">-</span><span class="mi">2</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
-<span class="ln">10</span>        <span class="nx">left</span><span class="p">,</span> <span class="nx">right</span> <span class="o">:=</span> <span class="nx">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="nx">nums</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span>
-<span class="ln">11</span>        <span class="nx">num0</span> <span class="o">:=</span> <span class="nx">nums</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span>
-<span class="ln">12</span>        <span class="nx">num1</span> <span class="o">:=</span> <span class="nx">nums</span><span class="p">[</span><span class="nx">left</span><span class="p">]</span>
-<span class="ln">13</span>        <span class="nx">num2</span> <span class="o">:=</span> <span class="nx">nums</span><span class="p">[</span><span class="nx">right</span><span class="p">]</span>
-<span class="ln">14</span>
-<span class="ln">15</span>        <span class="c1">// 所有数同符号则不需要继续
-</span><span class="ln">16</span><span class="c1"></span>        <span class="k">if</span> <span class="p">(</span><span class="nx">num0</span> <span class="p">&gt;</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="nx">num1</span> <span class="p">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="o">||</span>
-<span class="ln">17</span>            <span class="p">(</span><span class="nx">num0</span> <span class="p">&lt;</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="nx">num2</span> <span class="p">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-<span class="ln">18</span>            <span class="k">break</span>
-<span class="ln">19</span>        <span class="p">}</span>
-<span class="ln">20</span>
-<span class="ln">21</span>        <span class="k">for</span> <span class="nx">left</span> <span class="p">&lt;</span> <span class="nx">right</span> <span class="p">{</span>
-<span class="ln">22</span>            <span class="c1">// 求和
-</span><span class="ln">23</span><span class="c1"></span>            <span class="nx">sum</span> <span class="o">:=</span> <span class="nx">num0</span> <span class="o">+</span> <span class="nx">num1</span> <span class="o">+</span> <span class="nx">num2</span>
-<span class="ln">24</span>
-<span class="ln">25</span>            <span class="k">if</span> <span class="nx">sum</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">{</span>
-<span class="ln">26</span>                <span class="c1">// 记录满足条件的解
-</span><span class="ln">27</span><span class="c1"></span>                <span class="nx">res</span> <span class="p">=</span> <span class="nb">append</span><span class="p">(</span><span class="nx">res</span><span class="p">,</span> <span class="p">[]</span><span class="kt">int</span><span class="p">{</span><span class="nx">num0</span><span class="p">,</span> <span class="nx">num1</span><span class="p">,</span> <span class="nx">num2</span><span class="p">})</span>
-<span class="ln">28</span>
-<span class="ln">29</span>                <span class="c1">// 跳过相同的数字避免重复解
-</span><span class="ln">30</span><span class="c1"></span>                <span class="k">for</span> <span class="nx">left</span> <span class="p">&lt;</span> <span class="nx">right</span> <span class="o">&amp;&amp;</span> <span class="nx">num1</span> <span class="o">==</span> <span class="nx">nums</span><span class="p">[</span><span class="nx">left</span><span class="p">]</span> <span class="p">{</span>
-<span class="ln">31</span>                    <span class="nx">left</span><span class="o">++</span>
-<span class="ln">32</span>                <span class="p">}</span>
-<span class="ln">33</span>
-<span class="ln">34</span>                <span class="k">for</span> <span class="nx">right</span> <span class="p">&lt;</span> <span class="nx">left</span> <span class="o">&amp;&amp;</span> <span class="nx">num2</span> <span class="o">==</span> <span class="nx">nums</span><span class="p">[</span><span class="nx">right</span><span class="p">]</span> <span class="p">{</span>
-<span class="ln">35</span>                    <span class="nx">right</span><span class="o">--</span>
-<span class="ln">36</span>                <span class="p">}</span>
-<span class="ln">37</span>            <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="nx">sum</span> <span class="p">&lt;</span> <span class="mi">0</span> <span class="p">{</span>
-<span class="ln">38</span>                <span class="c1">// 和为负数则增加num1
-</span><span class="ln">39</span><span class="c1"></span>                <span class="nx">left</span><span class="o">++</span>
-<span class="ln">40</span>            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-<span class="ln">41</span>                <span class="c1">// 和为正数则减小num2
-</span><span class="ln">42</span><span class="c1"></span>                <span class="nx">right</span><span class="o">--</span>
-<span class="ln">43</span>            <span class="p">}</span>
-<span class="ln">44</span>
-<span class="ln">45</span>            <span class="nx">num1</span> <span class="p">=</span> <span class="nx">nums</span><span class="p">[</span><span class="nx">left</span><span class="p">]</span>
-<span class="ln">46</span>            <span class="nx">num2</span> <span class="p">=</span> <span class="nx">nums</span><span class="p">[</span><span class="nx">right</span><span class="p">]</span>
-<span class="ln">47</span>        <span class="p">}</span>
-<span class="ln">48</span>
-<span class="ln">49</span>        <span class="c1">// 跳过相同的num0避免重复解
-</span><span class="ln">50</span><span class="c1"></span>        <span class="k">for</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="nx">nums</span><span class="p">)</span><span class="o">-</span><span class="mi">2</span> <span class="o">&amp;&amp;</span> <span class="nx">num0</span> <span class="o">==</span> <span class="nx">nums</span><span class="p">[</span><span class="nx">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="p">{</span>
-<span class="ln">51</span>            <span class="nx">i</span><span class="o">++</span>
-<span class="ln">52</span>        <span class="p">}</span>
-<span class="ln">53</span>    <span class="p">}</span>
-<span class="ln">54</span>
-<span class="ln">55</span>    <span class="k">return</span> <span class="nx">res</span>
-<span class="ln">56</span><span class="p">}</span></code></pre></div>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-golang" data-lang="golang"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">func</span> <span class="nx">threeSum</span><span class="p">(</span><span class="nx">nums</span> <span class="p">[]</span><span class="kt">int</span><span class="p">)</span> <span class="p">(</span><span class="nx">res</span> <span class="p">[][]</span><span class="kt">int</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="nx">nums</span><span class="p">)</span> <span class="p">&lt;</span> <span class="mi">3</span> <span class="p">{</span>
+        <span class="k">return</span>
+    <span class="p">}</span>
+
+    <span class="c1">// 从小到大排序
+</span><span class="c1"></span>    <span class="nx">sort</span><span class="p">.</span><span class="nx">Ints</span><span class="p">(</span><span class="nx">nums</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="nx">nums</span><span class="p">)</span><span class="o">-</span><span class="mi">2</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
+        <span class="nx">left</span><span class="p">,</span> <span class="nx">right</span> <span class="o">:=</span> <span class="nx">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="nx">nums</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span>
+        <span class="nx">num0</span> <span class="o">:=</span> <span class="nx">nums</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span>
+        <span class="nx">num1</span> <span class="o">:=</span> <span class="nx">nums</span><span class="p">[</span><span class="nx">left</span><span class="p">]</span>
+        <span class="nx">num2</span> <span class="o">:=</span> <span class="nx">nums</span><span class="p">[</span><span class="nx">right</span><span class="p">]</span>
+
+        <span class="c1">// 所有数同符号则不需要继续
+</span><span class="c1"></span>        <span class="k">if</span> <span class="p">(</span><span class="nx">num0</span> <span class="p">&gt;</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="nx">num1</span> <span class="p">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="o">||</span>
+            <span class="p">(</span><span class="nx">num0</span> <span class="p">&lt;</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="nx">num2</span> <span class="p">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">break</span>
+        <span class="p">}</span>
+
+        <span class="k">for</span> <span class="nx">left</span> <span class="p">&lt;</span> <span class="nx">right</span> <span class="p">{</span>
+            <span class="c1">// 求和
+</span><span class="c1"></span>            <span class="nx">sum</span> <span class="o">:=</span> <span class="nx">num0</span> <span class="o">+</span> <span class="nx">num1</span> <span class="o">+</span> <span class="nx">num2</span>
+
+            <span class="k">if</span> <span class="nx">sum</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">{</span>
+                <span class="c1">// 记录满足条件的解
+</span><span class="c1"></span>                <span class="nx">res</span> <span class="p">=</span> <span class="nb">append</span><span class="p">(</span><span class="nx">res</span><span class="p">,</span> <span class="p">[]</span><span class="kt">int</span><span class="p">{</span><span class="nx">num0</span><span class="p">,</span> <span class="nx">num1</span><span class="p">,</span> <span class="nx">num2</span><span class="p">})</span>
+
+                <span class="c1">// 跳过相同的数字避免重复解
+</span><span class="c1"></span>                <span class="k">for</span> <span class="nx">left</span> <span class="p">&lt;</span> <span class="nx">right</span> <span class="o">&amp;&amp;</span> <span class="nx">num1</span> <span class="o">==</span> <span class="nx">nums</span><span class="p">[</span><span class="nx">left</span><span class="p">]</span> <span class="p">{</span>
+                    <span class="nx">left</span><span class="o">++</span>
+                <span class="p">}</span>
+
+                <span class="k">for</span> <span class="nx">right</span> <span class="p">&lt;</span> <span class="nx">left</span> <span class="o">&amp;&amp;</span> <span class="nx">num2</span> <span class="o">==</span> <span class="nx">nums</span><span class="p">[</span><span class="nx">right</span><span class="p">]</span> <span class="p">{</span>
+                    <span class="nx">right</span><span class="o">--</span>
+                <span class="p">}</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="nx">sum</span> <span class="p">&lt;</span> <span class="mi">0</span> <span class="p">{</span>
+                <span class="c1">// 和为负数则增加num1
+</span><span class="c1"></span>                <span class="nx">left</span><span class="o">++</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                <span class="c1">// 和为正数则减小num2
+</span><span class="c1"></span>                <span class="nx">right</span><span class="o">--</span>
+            <span class="p">}</span>
+
+            <span class="nx">num1</span> <span class="p">=</span> <span class="nx">nums</span><span class="p">[</span><span class="nx">left</span><span class="p">]</span>
+            <span class="nx">num2</span> <span class="p">=</span> <span class="nx">nums</span><span class="p">[</span><span class="nx">right</span><span class="p">]</span>
+        <span class="p">}</span>
+
+        <span class="c1">// 跳过相同的num0避免重复解
+</span><span class="c1"></span>        <span class="k">for</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="nx">nums</span><span class="p">)</span><span class="o">-</span><span class="mi">2</span> <span class="o">&amp;&amp;</span> <span class="nx">num0</span> <span class="o">==</span> <span class="nx">nums</span><span class="p">[</span><span class="nx">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="p">{</span>
+            <span class="nx">i</span><span class="o">++</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="nx">res</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
 
 <h2 id="similar-problem">Similar Problem</h2>
 

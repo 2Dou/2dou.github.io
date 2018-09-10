@@ -293,21 +293,42 @@ The input is assumed to be a 32-bit signed integer. Your function should <strong
 
 <h2 id="solution">Solution</h2>
 
-<div class="highlight"><pre class="chroma"><code class="language-golang" data-lang="golang"><span class="ln"> 1</span><span class="kd">func</span> <span class="nx">reverse</span><span class="p">(</span><span class="nx">x</span> <span class="kt">int</span><span class="p">)</span> <span class="kt">int</span> <span class="p">{</span>
-<span class="ln"> 2</span>    <span class="nx">r</span> <span class="o">:=</span> <span class="mi">0</span>
-<span class="ln"> 3</span>
-<span class="ln"> 4</span>    <span class="k">for</span> <span class="nx">x</span> <span class="o">!=</span> <span class="mi">0</span> <span class="p">{</span>
-<span class="ln"> 5</span>        <span class="nx">r</span> <span class="o">*=</span> <span class="mi">10</span>
-<span class="ln"> 6</span>        <span class="nx">r</span> <span class="o">+=</span> <span class="nx">x</span> <span class="o">%</span> <span class="mi">10</span>
-<span class="ln"> 7</span>        <span class="nx">x</span> <span class="o">/=</span> <span class="mi">10</span>
-<span class="ln"> 8</span>    <span class="p">}</span>
-<span class="ln"> 9</span>
-<span class="ln">10</span>    <span class="k">if</span> <span class="o">-</span><span class="nx">math</span><span class="p">.</span><span class="nx">MaxInt32</span> <span class="p">&lt;</span> <span class="nx">r</span> <span class="o">&amp;&amp;</span> <span class="nx">r</span> <span class="p">&lt;</span> <span class="nx">math</span><span class="p">.</span><span class="nx">MaxInt32</span> <span class="p">{</span>
-<span class="ln">11</span>        <span class="k">return</span> <span class="nx">r</span>
-<span class="ln">12</span>    <span class="p">}</span>
-<span class="ln">13</span>
-<span class="ln">14</span>    <span class="k">return</span> <span class="mi">0</span>
-<span class="ln">15</span><span class="p">}</span></code></pre></div>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-golang" data-lang="golang"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">func</span> <span class="nx">reverse</span><span class="p">(</span><span class="nx">x</span> <span class="kt">int</span><span class="p">)</span> <span class="kt">int</span> <span class="p">{</span>
+    <span class="nx">r</span> <span class="o">:=</span> <span class="mi">0</span>
+
+    <span class="k">for</span> <span class="nx">x</span> <span class="o">!=</span> <span class="mi">0</span> <span class="p">{</span>
+        <span class="nx">r</span> <span class="o">*=</span> <span class="mi">10</span>
+        <span class="nx">r</span> <span class="o">+=</span> <span class="nx">x</span> <span class="o">%</span> <span class="mi">10</span>
+        <span class="nx">x</span> <span class="o">/=</span> <span class="mi">10</span>
+    <span class="p">}</span>
+
+    <span class="k">if</span> <span class="o">-</span><span class="nx">math</span><span class="p">.</span><span class="nx">MaxInt32</span> <span class="p">&lt;</span> <span class="nx">r</span> <span class="o">&amp;&amp;</span> <span class="nx">r</span> <span class="p">&lt;</span> <span class="nx">math</span><span class="p">.</span><span class="nx">MaxInt32</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nx">r</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="mi">0</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
               
               
 
