@@ -339,7 +339,7 @@
 
 <p>其中的 <code>import &quot;C&quot;</code> 表示使用了 CGO 。在这条语句前面的注释是一段 C 语言代码。
 这里就定义了哪些 C 语言函数被引用。也可以在这里直接编写函数并实现。
-因为这个特殊的语法，<code>import &quot;C&quot;</code> 必须单独一行，不可与其他包一起引用。
+<del>因为这个特殊的语法，import &ldquo;C&rdquo; 必须单独一行，不可与其他包一起引用。</del>
 可以看到在代码中引用了头文件 <code>add.h</code> 以及 C 标准库的头文件，另外还实现了另一个两数相乘的函数 <code>mul</code>。</p>
 
 <p>在 Golang 中通过使用 <code>C.xxx</code> 的方式调用 C 函数。<code>HelloWorld</code> 展示了对库函数的调用。<code>Add</code> 和 <code>Mul</code> 展示了对自定义函数的调用。</p>
