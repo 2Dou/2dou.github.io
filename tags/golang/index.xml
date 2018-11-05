@@ -64,7 +64,9 @@
 
 &lt;p&gt;数组赋值时会拷贝整个数组，所以作为参数传递时也会完整拷贝，要考虑性能合理使用，必要时可以使用指针。&lt;/p&gt;
 
-&lt;p&gt;以下代码便于理解数组和切片：&lt;/p&gt;</description>
+&lt;p&gt;以下代码便于理解数组和切片：&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

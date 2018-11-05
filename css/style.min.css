@@ -226,13 +226,25 @@ h1, h2, h3, h4, h5, h6 {
     color: #5d686f;
 }
 
+/*.postShorten-excerpt>h2, .postShorten-excerpt>h3, .postShorten-excerpt>h4, .postShorten-excerpt>h5, .postShorten-excerpt>h6 {
+    background: #f5f5f5;
+    padding: 10px;
+    border-left: 3px solid #e4e4e4;
+}*/
+
+/*.post h2, .post h3, .post h4, .post h5, .post h6 {
+    background: #f7f8f8;
+    padding: 10px;
+    border-left: 3px solid #e4e4e4;
+}*/
+
 code, pre>code {
     font-family: Menlo, Consolas, monospace
 }
 
-.post h2, .post h3 {
+/*.post h2, .post h3 {
     margin: 1.2em 0 1em 0
-}
+}*/
 
 h4, h5, h6 {
     margin: 1em 0 .5em
@@ -3141,7 +3153,6 @@ a.postShorten-excerpt_link.link {
     border: none;
     border-radius: 0px;
     color: #555;
-    padding: 6px 12px;
     /*border-bottom: 1px solid #009688;*/
     text-decoration: none;
 }
