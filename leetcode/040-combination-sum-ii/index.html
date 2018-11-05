@@ -244,6 +244,7 @@
     </h1>
   
   
+  <div class="postShorten-meta-bg">
   <div class="postShorten-meta post-meta">
     
       <time itemprop="datePublished" datetime="2018-07-26T10:39:33&#43;08:00">
@@ -267,8 +268,11 @@
   
 
   </div>
+  </div>
+
 
 </div>
+
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
@@ -315,7 +319,7 @@ A solution set is:
 
 <h2 id="solution">Solution</h2>
 
-<p>与上一篇<a href="https://www.orztu.com/leetcode/039-combination-sum/" target="_blank">Combination Sum</a>几乎一毛一样。只是多了一步去重操作。</p>
+<p>与上一篇 <a href="https://www.orztu.com/leetcode/039-combination-sum/" target="_blank">Combination Sum</a> 几乎一毛一样。只是多了一步去重操作。</p>
 
 <div class="highlight"><pre class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">func</span> <span class="nx">combinationSum2</span><span class="p">(</span><span class="nx">candidates</span> <span class="p">[]</span><span class="kt">int</span><span class="p">,</span> <span class="nx">target</span> <span class="kt">int</span><span class="p">)</span> <span class="p">[][]</span><span class="kt">int</span> <span class="p">{</span>
     <span class="nx">sort</span><span class="p">.</span><span class="nx">Ints</span><span class="p">(</span><span class="nx">candidates</span><span class="p">)</span>

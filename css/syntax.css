@@ -17,6 +17,10 @@
     font-size: 1.4rem
 }
 
+.lnt {
+    color: #78909c;
+}
+
 .chroma .lntd {
     vertical-align: top;
     padding: 0;

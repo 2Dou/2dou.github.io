@@ -212,19 +212,26 @@ body.pushed {
     overflow-x: hidden
 }
 
+h1 {
+    color: #4a4a4a;
+}
+
 h1, h2, h3, h4, h5, h6 {
-    letter-spacing: -.04em;
     font-weight: 700;
     line-height: 1.45em;
-    color: #4a4a4a
+    color: #4a4a4a;
+}
+
+.postShorten-excerpt>h2, .postShorten-excerpt>h3, .postShorten-excerpt>h4, .postShorten-excerpt>h5, .postShorten-excerpt>h6 {
+    color: #5d686f;
 }
 
 code, pre>code {
     font-family: Menlo, Consolas, monospace
 }
 
-h1, h2, h3 {
-    margin: 1em 0
+.post h2, .post h3 {
+    margin: 1.2em 0 1em 0
 }
 
 h4, h5, h6 {
@@ -259,18 +266,38 @@ p {
     margin: 0 0 0.5em
 }
 
+p {
+    margin-bottom: 1.2em;
+    line-height: 1.6em;
+}
+
 dl, ol, ul {
     margin: 0 0 .5em
 }
 
-a, a:active, a:hover, a:visited {
+a:active, a:hover, a:focus {
     cursor: pointer;
-    color: #349ef3;
-    text-decoration: none
+    color: #009688;
+    text-decoration: none;
 }
 
-.archive .archive-posts .archive-post .archive-post-title:hover, .archive .archive-title:hover, a:hover {
-    text-decoration: underline
+a:hover, a:active {
+    outline: 0;
+}
+
+a {
+    color: #607D8B;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #78909c;
+    text-decoration: none;
+}
+
+
+.archive .archive-posts .archive-post .archive-post-title:hover, .archive .archive-title:hover {
+    text-decoration: underline;
 }
 
 table {
@@ -320,7 +347,11 @@ code {
     font-size: 1.5rem;
     display: inline-block;
     font-weight: 400;
-    padding: 0 10px
+    padding: 2px 4px;
+    font-size: 90%;
+    color: #c7254e;
+    background-color: #f9f2f4;
+    border-radius: 4px;
 }
 
 abbr, acronym {
@@ -2468,7 +2499,7 @@ a.link-unstyled, a.link-unstyled:active, a.link-unstyled:hover {
 }
 
 a.link-unstyled a.link, a.link-unstyled a.link:active, a.link-unstyled a.link:hover {
-    text-decoration: underline !important
+    text-decoration: none !important
 }
 
 .post .post-header .post-title:hover, .post-header .post-title:hover, .post-header-cover .post-header .post-title:hover, .tag--danger:hover, .tag--primary:hover, .tag--success:hover, a.tag--danger:hover, a.tag--primary:hover, a.tag--success:hover {
@@ -2476,7 +2507,7 @@ a.link-unstyled a.link, a.link-unstyled a.link:active, a.link-unstyled a.link:ho
 }
 
 .postShorten-header h1.postShorten-title a.link-unstyled:hover {
-    color: #0095eb !important;
+    color: #009688 !important;
     text-decoration: none;
     transition: color 0.2s ease
 }
@@ -2698,10 +2729,10 @@ a.fancybox {
     display: inline-block
 }
 
-.post .post-header .post-title {
-    margin: 0;
+.post .post-header {
     word-break: initial;
-    overflow: hidden
+    overflow: hidden;
+    text-align: center;
 }
 
 .post .post-meta {
@@ -2709,7 +2740,8 @@ a.fancybox {
     font-family: "Open Sans", sans-serif;
     font-size: 1.3rem;
     font-weight: 400;
-    color: #9eabb3
+    color: #9eabb3;
+    background: white;
 }
 
 .post .post-meta a {
@@ -3068,12 +3100,6 @@ a.fancybox {
 
 }
 
-.postShorten-group .postShorten {
-    margin-top: 15px;
-    border-bottom: 1px solid #ccc;
-    /*border-top: 1px solid #eef2f8;*/
-}
-
 .postShorten {
     position: relative;
     width: 100%;
@@ -3085,22 +3111,45 @@ a.fancybox {
     overflow: hidden
 }
 
-.postShorten .postShorten-header .postShorten-title {
+.postShorten .postShorten-header h1.postShorten-title {
     margin: 0;
+    margin-top: 1.5em;
     word-break: initial;
-    overflow: hidden
+    overflow: hidden;
 }
 
+.postShorten-meta-bg {
+    background: #009688;
+    /*padding-bottom: 2px;*/
+}
 .postShorten .postShorten-meta {
-    line-height: 1.5em
+    line-height: 1.5em;
+    background: white;
 }
 
 .postShorten .postShorten-meta, .postShorten .postShorten-meta a, .postShorten .postShorten-readingtime {
     color: #9eabb3
 }
 
-.postShorten .postShorten-excerpt_link {
-    margin-top: -15px
+div.postShorten-excerpt > p.postShorten-excerpt_link {
+    margin-top: 1em;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+a.postShorten-excerpt_link.link {
+    border: none;
+    border-radius: 0px;
+    color: #555;
+    padding: 6px 12px;
+    /*border-bottom: 1px solid #009688;*/
+    text-decoration: none;
+}
+
+a.postShorten-excerpt_link.link:hover, a.postShorten-excerpt_link.link:focus {
+    border-bottom: 1px solid #009688;
+    color: #3a3a3a;
+    /*background-color: #009688;*/
 }
 
 .postShorten .postShorten-excerpt_link, .postShorten .postShorten-meta, .postShorten .postShorten-readingtime {
@@ -3127,6 +3176,10 @@ a.fancybox {
     max-width: 100%
 }
 
+.postShorten-wrap {
+    border-bottom: 1px solid #ccc;
+}
+
 .postShorten .postShorten-excerpt {
     margin-top: 15px
 }
@@ -3149,7 +3202,7 @@ a.fancybox {
 @media only screen and (min-width:480px) {
     .postShorten.postShorten--thumbnailimg-right .postShorten-thumbnailimg {
         float: right;
-        margin: 5px 0 30px 15px
+        margin: 1.5em 0 30px 15px
     }
 
     .postShorten.postShorten--thumbnailimg-right .postShorten-thumbnailimg img {
@@ -3167,7 +3220,7 @@ a.fancybox {
 
     .postShorten.postShorten--thumbnailimg-left .postShorten-thumbnailimg {
         float: left;
-        margin: 5px 15px 30px 0
+        margin: 1.5em 15px 30px 0
     }
 
     .postShorten.postShorten--thumbnailimg-left .postShorten-thumbnailimg img {
@@ -3192,9 +3245,9 @@ a.fancybox {
         width: 100%
     }
 
-    .postShorten.postShorten--thumbnailimg-bottom .postShorten-excerpt>p {
-        margin-bottom: 0
-    }
+    /*.postShorten.postShorten--thumbnailimg-bottom .postShorten-excerpt>p {
+        margin-bottom: 0 !important;
+    }*/
 
     .postShorten.postShorten--thumbnailimg-bottom .postShorten-thumbnailimg {
         display: block;
@@ -3697,10 +3750,6 @@ pre>code.codeblock {
     overflow-x: auto
 }
 
-code {
-    background-color: #f7f8f8
-}
-
 .codeblock--tabbed figcaption .tab.active {
     background: #349ef3;
     color: #fff
@@ -4156,7 +4205,7 @@ code {
 .page-item {
     box-sizing: border-box;
     font-size: 1.6rem;
-    text-color: #9eabb3;
+    color: #9eabb3;
     box-sizing: border-box;
 }
 
