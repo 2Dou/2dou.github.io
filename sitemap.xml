@@ -8,6 +8,11 @@
   </url>
   
   <url>
+    <loc>https://www.orztu.com/post/lua-table-minify/</loc>
+    <lastmod>2018-11-06T15:14:38+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.orztu.com/leetcode/062-unique-paths/</loc>
     <lastmod>2018-09-10T14:43:03+08:00</lastmod>
   </url>
@@ -254,7 +259,7 @@
   
   <url>
     <loc>https://www.orztu.com/categories/coding-life/</loc>
-    <lastmod>2018-09-10T09:22:10+08:00</lastmod>
+    <lastmod>2018-11-06T15:14:38+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -291,6 +296,12 @@
   <url>
     <loc>https://www.orztu.com/leetcode/</loc>
     <lastmod>2018-09-10T14:43:03+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.orztu.com/tags/lua/</loc>
+    <lastmod>2018-11-06T15:14:38+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -351,6 +362,12 @@
   <url>
     <loc>https://www.orztu.com/tags/web/</loc>
     <lastmod>2017-10-12T15:48:25+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.orztu.com/tags/%E5%85%83%E8%A1%A8/</loc>
+    <lastmod>2018-11-06T15:14:38+08:00</lastmod>
     <priority>0</priority>
   </url>
   
