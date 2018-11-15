@@ -6,10 +6,46 @@
     <description>Recent content in Leetcode on Orz the way</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 15 Nov 2018 10:43:41 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 15 Nov 2018 11:29:11 +0800</lastBuildDate>
     
 	<atom:link href="https://www.orztu.com/tags/leetcode/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>LeetCode 55. Jump Game</title>
+      <link>https://www.orztu.com/leetcode/055-jump-game/</link>
+      <pubDate>Thu, 15 Nov 2018 11:29:11 +0800</pubDate>
+      
+      <guid>https://www.orztu.com/leetcode/055-jump-game/</guid>
+      <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/jump-game/&#34; target=&#34;_blank&#34;&gt;Jump Game&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Given an array of non-negative integers, you are initially positioned at the first index of the array.&lt;/p&gt;
+
+&lt;p&gt;Each element in the array represents your maximum jump length at that position.&lt;/p&gt;
+
+&lt;p&gt;Determine if you are able to reach the last index.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Example 1:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Input: [2,3,1,1,4]
+Output: true
+Explanation: Jump 1 step from index 0 to 1, then 3 steps to the last index.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Example 2:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Input: [3,2,1,0,4]
+Output: false
+Explanation: You will always arrive at index 3 no matter what. Its maximum
+             jump length is 0, which makes it impossible to reach the last index.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>LeetCode 54. Spiral Matrix</title>

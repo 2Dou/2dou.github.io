@@ -8,6 +8,11 @@
   </url>
   
   <url>
+    <loc>https://www.orztu.com/leetcode/055-jump-game/</loc>
+    <lastmod>2018-11-15T11:29:11+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.orztu.com/leetcode/054-spiral-matrix/</loc>
     <lastmod>2018-11-15T10:43:41+08:00</lastmod>
   </url>
@@ -287,20 +292,26 @@
   </url>
   
   <url>
+    <loc>https://www.orztu.com/tags/jump-game/</loc>
+    <lastmod>2018-11-15T11:29:11+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://www.orztu.com/tags/leetcode/</loc>
-    <lastmod>2018-11-15T10:43:41+08:00</lastmod>
+    <lastmod>2018-11-15T11:29:11+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.orztu.com/categories/leetcode/</loc>
-    <lastmod>2018-11-15T10:43:41+08:00</lastmod>
+    <lastmod>2018-11-15T11:29:11+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.orztu.com/leetcode/</loc>
-    <lastmod>2018-11-15T10:43:41+08:00</lastmod>
+    <lastmod>2018-11-15T11:29:11+08:00</lastmod>
     <priority>0</priority>
   </url>
   
