@@ -388,7 +388,7 @@ Explanation: Because the new interval [4,8] overlaps with [3,5],[6,7],[8,10].
 
     <span class="c1">// append 时用 newInterval 建立新的 Slice 与 intervals[rStart:] 合并
 </span><span class="c1"></span>    <span class="c1">// 再与 intervals[:lEnd] 合并
-</span><span class="c1"></span>    <span class="c1">// 之前直接将 newInterval append 到 intervals[:lEnd] 后面，
+</span><span class="c1"></span>    <span class="c1">// 之前直接将 newInterval append 到 intervals[:lEnd] 后面，再与 intervals[rStart:] 合并
 </span><span class="c1"></span>    <span class="c1">// 会导致 intervals[rStart:] 的内存区域被覆盖
 </span><span class="c1"></span>    <span class="k">return</span> <span class="nb">append</span><span class="p">(</span><span class="nx">intervals</span><span class="p">[:</span><span class="nx">lEnd</span><span class="p">],</span> <span class="nb">append</span><span class="p">([]</span><span class="nx">Interval</span><span class="p">{</span><span class="nx">newInterval</span><span class="p">},</span> <span class="nx">intervals</span><span class="p">[</span><span class="nx">rStart</span><span class="p">:]</span><span class="o">...</span><span class="p">)</span><span class="o">...</span><span class="p">)</span>
 <span class="p">}</span></code></pre></td></tr></table>
