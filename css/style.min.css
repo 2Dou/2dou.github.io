@@ -287,7 +287,7 @@ dl, ol, ul {
     margin: 0 0 .5em
 }
 
-a:visited {
+a:visited:not(.sidebar-button-link) {
     color: #88909c !important;
 }
 
