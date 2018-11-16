@@ -3183,8 +3183,8 @@ a.postShorten-excerpt_link.link:hover, a.postShorten-excerpt_link.link:focus {
     border-bottom: 1px solid #ccc
 }
 
-.postShorten .postShorten-excerpt {
-    margin-top: 15px
+.postShorten-header {
+    padding-bottom: 1em;
 }
 
 .postShorten .postShorten-content {
