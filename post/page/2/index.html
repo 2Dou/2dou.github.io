@@ -239,6 +239,91 @@
             
   
     
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-right" itemscope itemType="http://schema.org/BlogPosting">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title" itemprop="headline">
+        <a class="link-unstyled" href="https://www.orztu.com/post/raspbian-install-and-configure/">
+          树莓派 Raspbian系统安装与基本配置
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta-bg">
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2017-10-18T16:44:36&#43;08:00">
+        
+  
+  
+  
+  
+    2017-10-18
+  
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://www.orztu.com/categories/have-fun">have fun</a>
+    
+  
+
+  </div>
+  </div>
+
+
+    </div>
+    <div class="postShorten-excerpt" itemprop="articleBody">
+      <h2 id="系统安装-https-www-raspberrypi-org-documentation-installation-installing-images-readme-md"><a href="https://www.raspberrypi.org/documentation/installation/installing-images/README.md" target="_blank">系统安装</a></h2>
+
+<p>系统: <a href="https://www.raspberrypi.org/downloads/raspbian/" target="_blank">raspbian</a> <br/>
+工具（二选一）：</p>
+
+<ul>
+<li><a href="https://etcher.io/" target="_blank">Etcher</a></li>
+<li><a href="http://sourceforge.net/projects/win32diskimager/" target="_blank">Win32DiskImager</a>（windows only）</li>
+</ul>
+
+<ol>
+<li>将SD卡格式化成exFat格式</li>
+<li>使用Etcher或者Win32DiskImager将下载的raspbian系统镜像(img文件)写入SD卡</li>
+</ol>
+
+<p>写入完成之后就相当于系统安装完成了。这时候SD卡被分成两个区，有一个区是在windows下无法识别，不用理会。</p>
+
+<p>这时候如果直接将SD卡插入树莓派，会发现“无法启动”。显示屏没信号，在路由器里找到树莓派的IP也无法用ssh登录。</p>
+
+<p>我安装的时候就是踩到这个坑。以为安装失败，反复装了好几次，就差把SD卡写穿了。</p>
+
+<p></p>
+      <p class="postShorten-excerpt_link">
+        <a href="https://www.orztu.com/post/raspbian-install-and-configure/" class="postShorten-excerpt_link link">Read More →</a>
+        
+      </p>
+    </div>
+  </div>
+  
+    <a href="https://www.orztu.com/post/raspbian-install-and-configure/">
+      <div class="postShorten-thumbnailimg">
+        <img alt="" itemprop="image" src="https://www.adafruit.com/includes/templates/adafruit2013/images/little_pi.png"/>
+      </div>
+    </a>
+  
+</article>
+
+          
+            
+  
+    
       
         
       
@@ -550,6 +635,27 @@
           <div class="media">
             
             <div class="media-body">
+              <a class="link-unstyled" href="https://www.orztu.com/post/lua-table-minify-ii/">
+                <h3 class="media-heading">使用元表优化 Lua 配置文件 II</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Nov 11, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>上回提到<a href="https://www.orztu.com/post/lua-table-minify/" target="_blank">元表优化 Lua 配置文件</a>，以减少重复字段，节省内存开销。</p>
+
+<p>除了直接地减少内存开销，还能使用元表实现访问时动态加载各条数据。</p>
+
+<p></p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
               <a class="link-unstyled" href="https://www.orztu.com/post/lua-table-minify/">
                 <h3 class="media-heading">使用元表优化 Lua 配置文件</h3>
               </a>
@@ -740,33 +846,6 @@
             <hr>
           </div>
         
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://www.orztu.com/post/gvoice-number/">
-                <h3 class="media-heading">自动点击 - 申请Google Voice号码</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Aug 8, 2017
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather"><p>最近V2上很多卖GV号码的，心想这玩意也能值钱。所以想着自己试试动手申请一个。</p>
-
-<p>首先参照这篇“<a href="https://kn007.net/topics/free-application-for-google-voice-phone-number/" target="_blank">免费申请Google Voice美国电话号码</a>”申请号码。</p>
-
-<p>到了这一步：提示“There was an error with your request. Please try again.”
-<img src="https://www.orztu.com/images/post/gv-0.jpg" alt="palindromic" title="错误" /></p>
-
-<p>听说在这里反复提交直到申请成功即可。找了网上的自动提交方法（复制出来CURL提交），发现不好使，curl一直没响应。
-但是网页上确实可以反复点击提交的。于是改用自动点击的方式，一夜醒来发现已经申请成功。</p>
-
-<p></p></div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
       </div>
     </div>
     <div class="modal-footer">
@@ -774,7 +853,7 @@
          data-message-zero="no post found"
          data-message-one="1 post found"
          data-message-other="{n} posts found">
-         12 posts found
+         13 posts found
       </p>
     </div>
   </div>

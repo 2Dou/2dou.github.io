@@ -21,26 +21,38 @@
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>LeetCode 29. Divide Two Integers | 
+    <title>使用元表优化 Lua 配置文件 II | 
         Orz the way
       
     </title>
     <meta name="author" content="SelFree">
-    <meta name="keywords" content="LeetCode, 算法, LeetCode解答, 除法, program develop, leetcode, Golang, leetcode解答, 程序">
+    <meta name="keywords" content="Lua, 元表, 配置文件优化, 优化, program develop, leetcode, Golang, leetcode解答, 程序">
 
     <link rel="icon" href="https://www.orztu.com/images/favicon.ico">
     
 
     
-    <meta name="description" content="LeetCode 练习 29. Divide Two Integers - Answer LeetCode编程练习解答">
-    <meta property="og:description" content="LeetCode 练习 29. Divide Two Integers - Answer LeetCode编程练习解答">
+    <meta name="description" content="上回提到元表优化 Lua 配置文件，以减少重复字段，节省内存开销。
+
+除了直接地减少内存开销，还能使用元表实现访问时动态加载各条数据。
+
+">
+    <meta property="og:description" content="上回提到元表优化 Lua 配置文件，以减少重复字段，节省内存开销。
+
+除了直接地减少内存开销，还能使用元表实现访问时动态加载各条数据。
+
+">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="LeetCode 29. Divide Two Integers">
-    <meta property="og:url" content="/leetcode/029-divide-two-integers/">
+    <meta property="og:title" content="使用元表优化 Lua 配置文件 II">
+    <meta property="og:url" content="/post/lua-table-minify-ii/">
     <meta property="og:site_name" content="Orz the way">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Orz the way">
-    <meta name="twitter:description" content="LeetCode 练习 29. Divide Two Integers - Answer LeetCode编程练习解答">
+    <meta name="twitter:description" content="上回提到元表优化 Lua 配置文件，以减少重复字段，节省内存开销。
+
+除了直接地减少内存开销，还能使用元表实现访问时动态加载各条数据。
+
+">
     
     
 
@@ -240,20 +252,20 @@
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title" itemprop="headline">
-      LeetCode 29. Divide Two Integers
+      使用元表优化 Lua 配置文件 II
     </h1>
   
   
   <div class="postShorten-meta-bg">
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2018-03-30T16:59:00&#43;08:00">
+      <time itemprop="datePublished" datetime="2018-11-16T11:38:00&#43;08:00">
         
   
   
   
   
-    2018-03-30
+    2018-11-16
   
 
       </time>
@@ -263,7 +275,7 @@
   
     <span>in</span>
     
-      <a class="category-link" href="https://www.orztu.com/categories/leetcode">LeetCode</a>
+      <a class="category-link" href="https://www.orztu.com/categories/coding-life">coding life</a>
     
   
 
@@ -276,140 +288,69 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <p><a href="https://leetcode.com/problems/divide-two-integers/" target="_blank">Divide Two Integers</a></p>
+              <p>上回提到<a href="https://www.orztu.com/post/lua-table-minify/" target="_blank">元表优化 Lua 配置文件</a>，以减少重复字段，节省内存开销。</p>
 
-<h2 id="description">Description</h2>
-
-<blockquote>
-<p>Divide two integers without using multiplication, division and mod operator.</p>
-
-<p>If it is overflow, return MAX_INT.</p>
-</blockquote>
+<p>除了直接地减少内存开销，还能使用元表实现访问时动态加载各条数据。</p>
 
 <p></p>
 
-<p>不使用乘法、除法、取余实现两个整数相除</p>
+<h2 id="延迟加载">延迟加载</h2>
 
-<p>根据除法的原理，基本思路是使用减法获得结果。将被除数变为被减数，除数变为减数。被减数循环减去减数直到被减数比减数小，中间减去的个数即为除法结果。</p>
+<div class="highlight"><pre class="chroma"><code class="language-Lua" data-lang="Lua"><span class="c1">-- PropModel.lua</span>
+<span class="n">PropModel</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="p">[</span><span class="mi">1001</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="n">ID</span>   <span class="o">=</span> <span class="mi">1001</span><span class="p">,</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="s2">&#34;道具1001&#34;</span><span class="p">,</span>
+        <span class="n">desc</span> <span class="o">=</span> <span class="s2">&#34;道具1001描述&#34;</span><span class="p">,</span>
+        <span class="p">...</span>
+    <span class="p">},</span>
+    <span class="p">[</span><span class="mi">1002</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="n">ID</span>   <span class="o">=</span> <span class="mi">1002</span><span class="p">,</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="s2">&#34;道具1002&#34;</span><span class="p">,</span>
+        <span class="n">desc</span> <span class="o">=</span> <span class="s2">&#34;道具1002描述&#34;</span><span class="p">,</span>
+        <span class="p">...</span>
+    <span class="p">},</span>
+    <span class="p">...</span>
+<span class="p">}</span></code></pre></div>
 
-<p>考虑被除数比除数大很多的情况，为了提升效率，被减数需要指数增加。</p>
+<p>上面依然是最常见的道具表，所有道具都配置在同一个表中，初始化时会全部加载进内存。
+然而大多数道具是玩家并不拥有的，在内存中长期停留浪费空间。</p>
 
-<h2 id="solution">Solution</h2>
+<p>通过使用元表，我们能做到每个道具按需（延迟）加载。</p>
 
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-golang" data-lang="golang"><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span><span class="lnt">32
-</span><span class="lnt">33
-</span><span class="lnt">34
-</span><span class="lnt">35
-</span><span class="lnt">36
-</span><span class="lnt">37
-</span><span class="lnt">38
-</span><span class="lnt">39
-</span><span class="lnt">40
-</span><span class="lnt">41
-</span><span class="lnt">42
-</span><span class="lnt">43
-</span><span class="lnt">44
-</span><span class="lnt">45
-</span><span class="lnt">46
-</span><span class="lnt">47
-</span><span class="lnt">48
-</span><span class="lnt">49
-</span><span class="lnt">50
-</span><span class="lnt">51
-</span><span class="lnt">52
-</span><span class="lnt">53
-</span><span class="lnt">54
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">func</span> <span class="nx">abs</span><span class="p">(</span><span class="nx">n</span> <span class="kt">int</span><span class="p">)</span> <span class="kt">int</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="nx">n</span> <span class="p">&lt;</span> <span class="mi">0</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="o">-</span><span class="nx">n</span>
-    <span class="p">}</span>
-    <span class="k">return</span> <span class="nx">n</span>
+<ol>
+<li><p>首先清空表数据，使用元表的<code>__index</code>方法实现延迟加载：
+<div class="highlight"><pre class="chroma"><code class="language-Lua" data-lang="Lua"><span class="c1">-- PropModel.lua</span>
+<span class="n">PropModel</span> <span class="o">=</span> <span class="p">{}</span> <span class="c1">-- 道具表不再直接存放数据</span>
+
+<span class="c1">-- 使用元表延迟加载数据</span>
+<span class="n">setmetatable</span><span class="p">(</span><span class="n">PropModel</span><span class="p">,</span> <span class="p">{</span>
+    <span class="n">__index</span> <span class="o">=</span> <span class="kr">function</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span>
+        <span class="kd">local</span> <span class="n">item</span> <span class="o">=</span> <span class="n">require</span><span class="p">(</span><span class="n">string.format</span><span class="p">(</span><span class="s2">&#34;PropModel_%s&#34;</span><span class="p">,</span> <span class="n">k</span><span class="p">))</span>
+        <span class="n">PropModel</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">item</span>
+        <span class="kr">return</span> <span class="n">item</span>
+    <span class="kr">end</span><span class="p">,</span>
+<span class="p">})</span></code></pre></div></p></li>
+
+<li><p>将各道具数据另外存放——将<code>道具1001</code>单独存放：
+<div class="highlight"><pre class="chroma"><code class="language-Lua" data-lang="Lua"><span class="c1">-- PropModel_1001.lua</span>
+<span class="kd">local</span> <span class="n">PropModel_1001</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="n">ID</span>   <span class="o">=</span> <span class="mi">1001</span><span class="p">,</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s2">&#34;道具1001&#34;</span><span class="p">,</span>
+    <span class="n">desc</span> <span class="o">=</span> <span class="s2">&#34;道具1002描述&#34;</span><span class="p">,</span>
+    <span class="p">...</span>
 <span class="p">}</span>
+<span class="kr">return</span> <span class="n">PropModel_1001</span></code></pre></div></p></li>
+</ol>
 
-<span class="kd">func</span> <span class="nx">divide</span><span class="p">(</span><span class="nx">dividend</span> <span class="kt">int</span><span class="p">,</span> <span class="nx">divisor</span> <span class="kt">int</span><span class="p">)</span> <span class="kt">int</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="nx">divisor</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">{</span>
-        <span class="c1">// 被除数为0!?
-</span><span class="c1"></span>        <span class="k">return</span> <span class="mi">0</span>
-    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="nx">divisor</span> <span class="o">==</span> <span class="mi">1</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="nx">dividend</span>
-    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="nx">divisor</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span> <span class="p">{</span>
-        <span class="c1">// 边界检查
-</span><span class="c1"></span>        <span class="k">if</span> <span class="nx">dividend</span> <span class="o">==</span> <span class="nx">math</span><span class="p">.</span><span class="nx">MinInt32</span> <span class="p">{</span>
-            <span class="k">return</span> <span class="nx">math</span><span class="p">.</span><span class="nx">MaxInt32</span>
-        <span class="p">}</span>
+<h2 id="最后">最后</h2>
 
-        <span class="k">return</span> <span class="o">-</span><span class="nx">dividend</span>
-    <span class="p">}</span>
+<p>上面的代码是每个<code>item</code>单独拆分到一个文件中。
+如果有必要，也可以按照<code>ID</code>进行区间拆分，将多个<code>item</code>放在一个文件中。
+在<code>__index</code>方法中判断<code>ID</code>落在哪个区间，将该区间数据全部加载。</p>
 
-    <span class="nx">r</span><span class="p">,</span> <span class="nx">n</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>
-    <span class="nx">a</span><span class="p">,</span> <span class="nx">b</span> <span class="o">:=</span> <span class="nx">abs</span><span class="p">(</span><span class="nx">dividend</span><span class="p">),</span> <span class="nx">abs</span><span class="p">(</span><span class="nx">divisor</span><span class="p">)</span>
-
-    <span class="k">if</span> <span class="nx">a</span> <span class="p">&lt;</span> <span class="nx">b</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="mi">0</span>
-    <span class="p">}</span>
-
-    <span class="c1">// 指数逼近
-</span><span class="c1"></span>    <span class="k">for</span> <span class="nx">a</span> <span class="o">&gt;=</span> <span class="nx">b</span> <span class="p">{</span>
-        <span class="nx">a</span> <span class="p">=</span> <span class="nx">a</span> <span class="o">-</span> <span class="nx">b</span> <span class="c1">// 减去n个b
-</span><span class="c1"></span>        <span class="nx">r</span> <span class="o">+=</span> <span class="nx">n</span>    <span class="c1">// 结果加上n
-</span><span class="c1"></span>
-        <span class="nx">b</span> <span class="p">=</span> <span class="nx">b</span> <span class="o">&lt;&lt;</span> <span class="mi">1</span> <span class="c1">// 移位替代乘法
-</span><span class="c1"></span>        <span class="nx">n</span> <span class="p">=</span> <span class="nx">n</span> <span class="o">&lt;&lt;</span> <span class="mi">1</span>
-    <span class="p">}</span>
-
-    <span class="c1">// 判断结果是否为负数
-</span><span class="c1"></span>    <span class="k">if</span> <span class="p">(</span><span class="nx">dividend</span> <span class="p">&gt;</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="nx">divisor</span> <span class="p">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="o">||</span> <span class="p">(</span><span class="nx">dividend</span> <span class="p">&lt;</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="nx">divisor</span> <span class="p">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">r</span> <span class="p">=</span> <span class="o">-</span><span class="nx">r</span>
-    <span class="p">}</span>
-
-    <span class="c1">// 余数大于被除数，继续相除
-</span><span class="c1"></span>    <span class="k">if</span> <span class="nx">a</span> <span class="o">&gt;=</span> <span class="nx">abs</span><span class="p">(</span><span class="nx">divisor</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">if</span> <span class="nx">r</span> <span class="p">&lt;</span> <span class="mi">0</span> <span class="p">{</span>
-            <span class="k">return</span> <span class="nx">r</span> <span class="o">+</span> <span class="nx">divide</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="o">-</span><span class="nx">abs</span><span class="p">(</span><span class="nx">divisor</span><span class="p">))</span>
-        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-            <span class="k">return</span> <span class="nx">r</span> <span class="o">+</span> <span class="nx">divide</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">abs</span><span class="p">(</span><span class="nx">divisor</span><span class="p">))</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-
-    <span class="k">return</span> <span class="nx">r</span>
-<span class="p">}</span></code></pre></td></tr></table>
-</div>
-</div>
+<p>同时，拆分后的数据依然可以结合<a href="https://www.orztu.com/post/lua-table-minify/" target="_blank">上一篇</a>
+的“默认字段”的方法使用。</p>
               
               
 
@@ -423,9 +364,9 @@
                   <div class="post-footer-tags">
                     <span class="text-color-light text-small">TAGGED IN</span><br/>
                     
-  <a class="tag tag--primary tag--small" href="https://www.orztu.com/tags/leetcode/">LeetCode</a>
+  <a class="tag tag--primary tag--small" href="https://www.orztu.com/tags/lua/">Lua</a>
 
-  <a class="tag tag--primary tag--small" href="https://www.orztu.com/tags/%E9%99%A4%E6%B3%95/">除法</a>
+  <a class="tag tag--primary tag--small" href="https://www.orztu.com/tags/%E5%85%83%E8%A1%A8/">元表</a>
 
                   </div>
                 
@@ -440,9 +381,11 @@
               
               
                 
+                  
+                
               
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/post/text-watermark/" data-tooltip="python为图片添加文字水印">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -454,7 +397,7 @@
                 
               
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/post/wechat-jump/" data-tooltip="python实现微信跳一跳外挂">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/059-spiral-matrix-ii/" data-tooltip="LeetCode 59. Spiral Matrix II">
               
                   <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                   <i class="fa fa-angle-right"></i>
@@ -517,9 +460,11 @@
               
               
                 
+                  
+                
               
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/post/text-watermark/" data-tooltip="python为图片添加文字水印">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -531,7 +476,7 @@
                 
               
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/post/wechat-jump/" data-tooltip="python实现微信跳一跳外挂">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/059-spiral-matrix-ii/" data-tooltip="LeetCode 59. Spiral Matrix II">
               
                   <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                   <i class="fa fa-angle-right"></i>
@@ -893,9 +838,9 @@
     
       <script>
         var disqus_config = function () {
-          this.page.url = 'https:\/\/www.orztu.com\/leetcode\/029-divide-two-integers\/';
+          this.page.url = 'https:\/\/www.orztu.com\/post\/lua-table-minify-ii\/';
           
-            this.page.identifier = '\/leetcode\/029-divide-two-integers\/'
+            this.page.identifier = '\/post\/lua-table-minify-ii\/'
           
         };
         (function() {
