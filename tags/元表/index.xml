@@ -19,7 +19,7 @@
       <guid>https://www.orztu.com/post/lua-table-minify-ii/</guid>
       <description>&lt;p&gt;上回提到&lt;a href=&#34;https://www.orztu.com/post/lua-table-minify/&#34; target=&#34;_blank&#34;&gt;元表优化 Lua 配置文件&lt;/a&gt;，以减少重复字段，节省内存开销。&lt;/p&gt;
 
-&lt;p&gt;除了直接地减少内存开销，还能使用元表实现访问时动态加载各条数据。&lt;/p&gt;
+&lt;p&gt;除了这种直接地减少内存开销的方法，使用元表还能实现数据的延迟加载，从另一个角度节约内存。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
