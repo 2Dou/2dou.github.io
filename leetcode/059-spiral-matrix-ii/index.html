@@ -1,5 +1,9 @@
 
 
+  
+    
+  
+
 
   
 
@@ -17,28 +21,26 @@
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Leetcodes | 
+    <title>LeetCode 59. Spiral Matrix II | 
         Orz the way
       
     </title>
     <meta name="author" content="SelFree">
-    <meta name="keywords" content=", program develop, leetcode, Golang, leetcode解答, 程序">
+    <meta name="keywords" content="LeetCode, 算法, LeetCode解答, 螺旋矩阵, program develop, leetcode, Golang, leetcode解答, 程序">
 
     <link rel="icon" href="https://www.orztu.com/images/favicon.ico">
     
-      <link rel="alternate" type="application/rss+xml" title="RSS" href="https://www.orztu.com/leetcode/index.xml">
-    
 
     
-    <meta name="description" content="城市永远年轻，而我们终将老去">
-    <meta property="og:description" content="城市永远年轻，而我们终将老去">
+    <meta name="description" content="LeetCode 59. Spiral Matrix II - Answer LeetCode编程练习解答">
+    <meta property="og:description" content="LeetCode 59. Spiral Matrix II - Answer LeetCode编程练习解答">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Leetcodes">
-    <meta property="og:url" content="/leetcode/">
+    <meta property="og:title" content="LeetCode 59. Spiral Matrix II">
+    <meta property="og:url" content="/leetcode/059-spiral-matrix-ii/">
     <meta property="og:site_name" content="Orz the way">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Orz the way">
-    <meta name="twitter:description" content="城市永远年轻，而我们终将老去">
+    <meta name="twitter:description" content="LeetCode 59. Spiral Matrix II - Answer LeetCode编程练习解答">
     
     
 
@@ -74,7 +76,7 @@
 
   <body>
     <div id="blog">
-      <header id="header" data-behavior="1">
+      <header id="header" data-behavior="4">
   <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
   <div class="header-title">
     <a class="header-title-link" href="https://www.orztu.com/">Orz the way</a>
@@ -94,7 +96,7 @@
   
 </header>
 
-      <nav id="sidebar" data-behavior="1">
+      <nav id="sidebar" data-behavior="4">
   <div class="sidebar-container">
     
       <div class="sidebar-profile">
@@ -228,46 +230,30 @@
 
       
 
-      <div id="main" data-behavior="1"
+      <div id="main" data-behavior="4"
         class="
                hasCoverMetaIn
                ">
-        <div id="topToolbar">Fixed at the top of the Toolbar.</div>
-        <section class="postShorten-group main-content-wrap">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
           
           
-            
+            <div class="post-header main-content-wrap text-left">
   
-    
-      
-        
-      
-    
+    <h1 class="post-title" itemprop="headline">
+      LeetCode 59. Spiral Matrix II
+    </h1>
   
-
-
   
-
-<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.orztu.com/leetcode/015-3sum/">
-          LeetCode 15. 3Sum
-        </a>
-      </h1>
-      
   <div class="postShorten-meta-bg">
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2017-07-28T08:54:12&#43;08:00">
+      <time itemprop="datePublished" datetime="2018-11-16T08:54:44&#43;08:00">
         
   
   
   
   
-    2017-07-28
+    2018-11-16
   
 
       </time>
@@ -285,693 +271,141 @@
   </div>
 
 
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      <p><a href="https://leetcode.com/problems/3sum/" target="_blank">3Sum</a></p>
+</div>
 
-<h2 id="description">Description</h2>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <h2 id="description">Description</h2>
+
+<p><a href="https://leetcode.com/problems/spiral-matrix-ii/" target="_blank">Spiral Matrix II</a></p>
 
 <blockquote>
-<p>Given an array S of n integers, are there elements a, b, c in S such that a + b + c = 0? Find all unique triplets in the array which gives the sum of zero.</p>
+<p>Given a positive integer n, generate a square matrix filled with elements from 1 to n^2 in spiral order.</p>
 
-<p><strong>Note:</strong> The solution set must not contain duplicate triplets.</p>
+<p><strong>Example:</strong></p>
 
-<pre><code>For example, given array S = [-1, 0, 1, 2, -1, -4],
-
-A solution set is:
+<pre><code>Input: 3
+Output:
 [
-  [-1, 0, 1],
-  [-1, -1, 2]
+ [ 1, 2, 3 ],
+ [ 8, 9, 4 ],
+ [ 7, 6, 5 ]
 ]
 </code></pre>
 </blockquote>
 
-<p>在给定数组中找出“和为0的三个数”的所有解。</p>
-
 <p></p>
-      <p class="postShorten-excerpt_link">
-        <a href="https://www.orztu.com/leetcode/015-3sum/" class="postShorten-excerpt_link link">Read More →</a>
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
 
-          
+<h2 id="solution">Solution</h2>
+
+<p>This problem is very similar to <a href="https://www.orztu.com/leetcode/059-spiral-matrix-ii/" target="_blank">54. Spiral Matrix</a>.</p>
+
+<p>Just replace function <code>append_ans</code> to <code>mark_idx</code>:</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-golang" data-lang="golang"><span class="nx">idx</span> <span class="o">:=</span> <span class="mi">1</span>
+<span class="nx">mark_idx</span> <span class="o">:=</span> <span class="kd">func</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span> <span class="kt">int</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">matrix</span><span class="p">[</span><span class="nx">x</span><span class="p">][</span><span class="nx">y</span><span class="p">]</span> <span class="p">=</span> <span class="nx">idx</span>
+    <span class="nx">idx</span><span class="o">++</span>
+<span class="p">}</span></code></pre></div>
+
+<h2 id="similar-problem">Similar Problem</h2>
+
+<ul>
+<li><a href="https://www.orztu.com/leetcode/059-spiral-matrix-ii/" target="_blank">54. Spiral Matrix</a></li>
+</ul>
+              
+              
+
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
             
-  
-    
-  
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://www.orztu.com/tags/leetcode/">LeetCode</a>
 
+  <a class="tag tag--primary tag--small" href="https://www.orztu.com/tags/%E7%9F%A9%E9%98%B5/">矩阵</a>
 
-  
-
-<article class="postShorten postShorten--thumbnailimg-right" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.orztu.com/leetcode/013-roman-to-integer/">
-          LeetCode 13. Roman to Integer
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta-bg">
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2017-07-07T14:43:41&#43;08:00">
-        
-  
-  
-  
-  
-    2017-07-07
-  
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://www.orztu.com/categories/leetcode">LeetCode</a>
-    
-  
-
-  </div>
-  </div>
-
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      <p><a href="https://leetcode.com/problems/roman-to-integer/" target="_blank">Roman to Integer</a></p>
-
-<h2 id="description">Description</h2>
-
-<blockquote>
-<p>Given a roman numeral, convert it to an integer.<br>
-<br>
-Input is guaranteed to be within the range from 1 to 3999.</p>
-</blockquote>
-
-<p>将罗马数字转换成整型。</p>
-
-<p></p>
-      <p class="postShorten-excerpt_link">
-        <a href="https://www.orztu.com/leetcode/013-roman-to-integer/" class="postShorten-excerpt_link link">Read More →</a>
-        
-      </p>
-    </div>
-  </div>
-  
-    <a href="https://www.orztu.com/leetcode/013-roman-to-integer/">
-      <div class="postShorten-thumbnailimg">
-        <img alt="" itemprop="image" src="https://www.orztu.com/images/leetcode/roman-numerals.jpg"/>
-      </div>
-    </a>
-  
-</article>
-
-          
+                  </div>
+                
+              
             
-  
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-right" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.orztu.com/leetcode/012-integer-to-roman/">
-          LeetCode 12. Integer to Roman
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta-bg">
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2017-07-07T09:18:49&#43;08:00">
-        
-  
-  
-  
-  
-    2017-07-07
-  
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://www.orztu.com/categories/leetcode">LeetCode</a>
-    
-  
-
-  </div>
-  </div>
-
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      <p><a href="https://leetcode.com/problems/integer-to-roman/" target="_blank">Integer to Roman</a></p>
-
-<h2 id="description">Description</h2>
-
-<blockquote>
-<p>Given an integer, convert it to a roman numeral. <br>
-<br>
-Input is guaranteed to be within the range from 1 to 3999.</p>
-</blockquote>
-
-<p>将整型转换成罗马数字形式:</p>
-
-<p></p>
-      <p class="postShorten-excerpt_link">
-        <a href="https://www.orztu.com/leetcode/012-integer-to-roman/" class="postShorten-excerpt_link link">Read More →</a>
-        
-      </p>
-    </div>
-  </div>
-  
-    <a href="https://www.orztu.com/leetcode/012-integer-to-roman/">
-      <div class="postShorten-thumbnailimg">
-        <img alt="" itemprop="image" src="https://www.orztu.com/images/leetcode/roman-numerals.jpg"/>
-      </div>
-    </a>
-  
-</article>
-
-          
             
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.orztu.com/leetcode/011-container-with-most-water/">
-          LeetCode 11. Container With Most Water
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta-bg">
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2017-07-06T14:09:43&#43;08:00">
-        
-  
-  
-  
-  
-    2017-07-06
-  
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://www.orztu.com/categories/leetcode">LeetCode</a>
-    
-  
-
-  </div>
-  </div>
-
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      <p><a href="https://leetcode.com/problems/container-with-most-water/" target="_blank">Container With Most Water</a></p>
-
-<h2 id="description">Description</h2>
-
-<blockquote>
-<p>Given n non-negative integers a1, a2, &hellip;, an, where each represents a point at coordinate (i, ai). n vertical lines are drawn such that the two endpoints of line i is at (i, ai) and (i, 0). Find two lines, which together with x-axis forms a container, such that the container contains the most water.<br>
-<br>
-Note: You may not slant the container and n is at least 2.</p>
-</blockquote>
-
-<p>给出n个点，它们与X轴有n条垂线，每两条垂线与X轴形成的U型容器，找出最大“容积”(面积）</p>
-
-<p></p>
-      <p class="postShorten-excerpt_link">
-        <a href="https://www.orztu.com/leetcode/011-container-with-most-water/" class="postShorten-excerpt_link link">Read More →</a>
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
+  <div class="post-actions-wrap">
+      <nav >
+        <ul class="post-actions post-action-nav">
           
-            
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.orztu.com/leetcode/051-n-queens/">
-          LeetCode 51. N-Queens
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta-bg">
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2017-05-04T16:23:01&#43;08:00">
-        
-  
-  
-  
-  
-    2017-05-04
-  
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://www.orztu.com/categories/leetcode">LeetCode</a>
-    
-  
-
-  </div>
-  </div>
-
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      <p><a href="https://leetcode.com/problems/n-queens/" target="_blank">N-Queens</a></p>
-
-<h2 id="description">Description</h2>
-
-<blockquote>
-<p>The <em>n-queens</em> puzzle is the problem of placing n queens on an n×n chessboard such that no two queens attack each other.
-<img src="https://www.orztu.com/images/leetcode/8-queens.png" alt="palindromic" title="数独" /></p>
-
-<p>Given an integer n, return all distinct solutions to the n-queens puzzle.</p>
-
-<p>Each solution contains a distinct board configuration of the <em>n-queens</em>&rsquo; placement, where <code>'Q'</code> and <code>'.'</code> both indicate a queen and an empty space respectively.</p>
-</blockquote>
-
-<p></p>
-      <p class="postShorten-excerpt_link">
-        <a href="https://www.orztu.com/leetcode/051-n-queens/" class="postShorten-excerpt_link link">Read More →</a>
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
+            <li class="post-action">
+              
+              
+                
+                  
+                
+              
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+              
+                
+              
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/058-length-of-last-word/" data-tooltip="LeetCode 58. Length of Last Word">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
           
-            
-  
-    
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
       
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.orztu.com/leetcode/042-trapping-rain-water/">
-          LeetCode 42. Trapping Rain Water
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta-bg">
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2017-04-28T10:01:32&#43;08:00">
-        
-  
-  
-  
-  
-    2017-04-28
-  
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://www.orztu.com/categories/leetcode">LeetCode</a>
-    
-  
-
-  </div>
-  </div>
-
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      <p><a href="https://leetcode.com/problems/trapping-rain-water/" target="_blank">Trapping Rain Water</a></p>
-
-<h2 id="description">Description</h2>
-
-<blockquote>
-<p>Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how &gt;much water it is able to trap after raining.</p>
-
-<p>For example,
-Given <code>[0,1,0,2,1,0,1,3,2,1,2,1]</code>, return <code>6</code>.</p>
-
-<p><img src="https://www.orztu.com/images/leetcode/rainwatertrap-1.png" alt="palindromic" />
-The above elevation map is represented by array [0,1,0,2,1,0,1,3,2,1,2,1]. In this case, 6 units of rain water (blue section) are being trapped. Thanks Marcos for contributing this image!</p>
-</blockquote>
-
-<p></p>
-      <p class="postShorten-excerpt_link">
-        <a href="https://www.orztu.com/leetcode/042-trapping-rain-water/" class="postShorten-excerpt_link link">Read More →</a>
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-          
-            
-  
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-right" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.orztu.com/leetcode/037-sudoku-solver/">
-          LeetCode 37. Sudoku Solver
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta-bg">
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2017-04-22T11:35:12&#43;08:00">
-        
-  
-  
-  
-  
-    2017-04-22
-  
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://www.orztu.com/categories/leetcode">LeetCode</a>
-    
-  
-
-  </div>
-  </div>
-
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      <p><a href="https://leetcode.com/problems/sudoku-solver/" target="_blank">Sudoku Solver</a></p>
-
-<!-- ![palindromic](/images/leetcode/Sudoku-Solver-1.png "数独") -->
-
-<h2 id="description">Description</h2>
-
-<blockquote>
-<p>Write a program to solve a Sudoku puzzle by filling the empty cells.
-<br>
-<br>
-Empty cells are indicated by the character &lsquo;.&rsquo;.
-<br>
-<br>
-You may assume that there will be only one unique solution.</p>
-</blockquote>
-
-<p></p>
-      <p class="postShorten-excerpt_link">
-        <a href="https://www.orztu.com/leetcode/037-sudoku-solver/" class="postShorten-excerpt_link link">Read More →</a>
-        
-      </p>
-    </div>
-  </div>
-  
-    <a href="https://www.orztu.com/leetcode/037-sudoku-solver/">
-      <div class="postShorten-thumbnailimg">
-        <img alt="" itemprop="image" src="https://www.orztu.com/images/leetcode/Sudoku-Solver-1.png"/>
-      </div>
-    </a>
-  
-</article>
-
-          
-            
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.orztu.com/leetcode/010-regular-expression-matching/">
-          LeetCode 10. Regular Expression Matching
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta-bg">
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2017-03-24T15:00:47&#43;08:00">
-        
-  
-  
-  
-  
-    2017-03-24
-  
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://www.orztu.com/categories/leetcode">LeetCode</a>
-    
-  
-
-  </div>
-  </div>
-
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      <p><a href="https://leetcode.com/problems/regular-expression-matching" target="_blank">Regular Expression Matching</a></p>
-
-<h2 id="description">Description</h2>
-
-<blockquote>
-<p>Implement regular expression matching with support for &lsquo;.&rsquo; and &lsquo;*&lsquo;.</p>
-
-<pre><code>'.' Matches any single character.
-'*' Matches zero or more of the preceding element.
-
-The matching should cover the entire input string (not partial).
-
-The function prototype should be:
-bool isMatch(const char *s, const char *p)
-
-Some examples:
-isMatch(&quot;aa&quot;,&quot;a&quot;) → false
-isMatch(&quot;aa&quot;,&quot;aa&quot;) → true
-isMatch(&quot;aaa&quot;,&quot;aa&quot;) → false
-isMatch(&quot;aa&quot;, &quot;a*&quot;) → true
-isMatch(&quot;aa&quot;, &quot;.*&quot;) → true
-isMatch(&quot;ab&quot;, &quot;.*&quot;) → true
-isMatch(&quot;aab&quot;, &quot;c*a*b&quot;) → true
-</code></pre>
-</blockquote>
-
-<p></p>
-      <p class="postShorten-excerpt_link">
-        <a href="https://www.orztu.com/leetcode/010-regular-expression-matching/" class="postShorten-excerpt_link link">Read More →</a>
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-          
-          
-
-<nav class="blog-pagination">
-    <ul class="pagination-b justify-content-center">
-        
-        
-        <li class="page-item">
-            <a class="page-link" href="https://www.orztu.com/leetcode/" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
         </li>
         
-        <li class="page-item ">
-            <a class="page-link" href="https://www.orztu.com/leetcode/page/3/" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
         </li>
+      
+      <li class="post-action">
         
+          <a class="post-action-btn btn btn--default" href="#">
         
-        
-            
-            
-            
-            
-                
-                
-            
-            
-                <li class="page-item ">
-                    <a class="page-link" href="https://www.orztu.com/leetcode/">1</a>
-                </li>
-            
-        
-            
-            
-            
-            
-                
-                
-            
-            
-                <li class="page-item ">
-                    <a class="page-link" href="https://www.orztu.com/leetcode/page/2/">2</a>
-                </li>
-            
-        
-            
-            
-            
-            
-                
-                
-            
-            
-                <li class="page-item ">
-                    <a class="page-link" href="https://www.orztu.com/leetcode/page/3/">3</a>
-                </li>
-            
-        
-            
-            
-            
-            
-                
-                
-            
-            
-                <li class="page-item active disabled">
-                    <a class="page-link" href="https://www.orztu.com/leetcode/page/4/">4</a>
-                </li>
-            
-        
-            
-            
-            
-            
-                
-                
-            
-            
-                <li class="page-item ">
-                    <a class="page-link" href="https://www.orztu.com/leetcode/page/5/">5</a>
-                </li>
-            
-        
-            
-            
-            
-            
-                
-                
-            
-            
-                <li class="page-item ">
-                    <a class="page-link" href="https://www.orztu.com/leetcode/page/6/">6</a>
-                </li>
-            
-        
-        
-        <li class="page-item ">
-            <a class="page-link" href="https://www.orztu.com/leetcode/page/5/" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
-        </li>
-        
-        <li class="page-item">
-            <a class="page-link" href="https://www.orztu.com/leetcode/page/6/" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
-        </li>
-        
-        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
     </ul>
-</nav>
+  </div>
 
-        </section>
+
+            
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the comments</noscript>
+</div>
+
+              
+            
+          </div>
+        </article>
         <footer id="footer" class="main-content-wrap">
   <span class="copyrights">
     &copy; 2018 SelFree. All Rights Reserved
@@ -979,6 +413,76 @@ isMatch(&quot;aab&quot;, &quot;c*a*b&quot;) → true
 </footer>
 
       </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        
+  <div class="post-actions-wrap">
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+              
+                
+                  
+                
+              
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+              
+                
+              
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/058-length-of-last-word/" data-tooltip="LeetCode 58. Length of Last Word">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
     </div>
     
     <div id="about">
@@ -1298,6 +802,32 @@ isMatch(&quot;aab&quot;, &quot;c*a*b&quot;) → true
 
 
 
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'https:\/\/www.orztu.com\/leetcode\/059-spiral-matrix-ii\/';
+          
+            this.page.identifier = '\/leetcode\/059-spiral-matrix-ii\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'orztu';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
 
 
 

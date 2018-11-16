@@ -6,10 +6,38 @@
     <description>Recent content in 矩阵 on Orz the way</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 15 Nov 2018 10:43:41 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 16 Nov 2018 08:54:44 +0800</lastBuildDate>
     
 	<atom:link href="https://www.orztu.com/tags/%E7%9F%A9%E9%98%B5/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>LeetCode 59. Spiral Matrix II</title>
+      <link>https://www.orztu.com/leetcode/059-spiral-matrix-ii/</link>
+      <pubDate>Fri, 16 Nov 2018 08:54:44 +0800</pubDate>
+      
+      <guid>https://www.orztu.com/leetcode/059-spiral-matrix-ii/</guid>
+      <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/spiral-matrix-ii/&#34; target=&#34;_blank&#34;&gt;Spiral Matrix II&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Given a positive integer n, generate a square matrix filled with elements from 1 to n^2 in spiral order.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Example:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Input: 3
+Output:
+[
+ [ 1, 2, 3 ],
+ [ 8, 9, 4 ],
+ [ 7, 6, 5 ]
+]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>LeetCode 54. Spiral Matrix</title>
