@@ -21,6 +21,43 @@
     </item>
     
     <item>
+      <title>LeetCode 61. Rotate List</title>
+      <link>https://www.orztu.com/leetcode/061-rotate-list/</link>
+      <pubDate>Mon, 19 Nov 2018 14:37:06 +0800</pubDate>
+      
+      <guid>https://www.orztu.com/leetcode/061-rotate-list/</guid>
+      <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/rotate-list/&#34; target=&#34;_blank&#34;&gt;Rotate List&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Given a linked list, rotate the list to the right by &lt;code&gt;k&lt;/code&gt; places, where &lt;code&gt;k&lt;/code&gt; is non-negative.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Example 1:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Input: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL, k = 2
+Output: 4-&amp;gt;5-&amp;gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;NULL
+Explanation:
+rotate 1 steps to the right: 5-&amp;gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;NULL
+rotate 2 steps to the right: 4-&amp;gt;5-&amp;gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;NULL
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Example 2:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Input: 0-&amp;gt;1-&amp;gt;2-&amp;gt;NULL, k = 4
+Output: 2-&amp;gt;0-&amp;gt;1-&amp;gt;NULL
+Explanation:
+rotate 1 steps to the right: 2-&amp;gt;0-&amp;gt;1-&amp;gt;NULL
+rotate 2 steps to the right: 1-&amp;gt;2-&amp;gt;0-&amp;gt;NULL
+rotate 3 steps to the right: 0-&amp;gt;1-&amp;gt;2-&amp;gt;NULL
+rotate 4 steps to the right: 2-&amp;gt;0-&amp;gt;1-&amp;gt;NULL
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>LeetCode 60. Permutation Sequence</title>
       <link>https://www.orztu.com/leetcode/060-permutation-sequence/</link>
       <pubDate>Mon, 19 Nov 2018 10:52:29 +0800</pubDate>

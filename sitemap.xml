@@ -8,6 +8,11 @@
   </url>
   
   <url>
+    <loc>https://www.orztu.com/leetcode/061-rotate-list/</loc>
+    <lastmod>2018-11-19T14:37:06+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.orztu.com/leetcode/060-permutation-sequence/</loc>
     <lastmod>2018-11-19T10:52:29+08:00</lastmod>
   </url>
@@ -328,20 +333,20 @@
   </url>
   
   <url>
-    <loc>https://www.orztu.com/tags/leetcode/</loc>
-    <lastmod>2018-11-19T10:52:29+08:00</lastmod>
+    <loc>https://www.orztu.com/categories/leetcode/</loc>
+    <lastmod>2018-11-19T14:37:06+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.orztu.com/categories/leetcode/</loc>
-    <lastmod>2018-11-19T10:52:29+08:00</lastmod>
+    <loc>https://www.orztu.com/tags/leetcode/</loc>
+    <lastmod>2018-11-19T14:37:06+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.orztu.com/leetcode/</loc>
-    <lastmod>2018-11-19T10:52:29+08:00</lastmod>
+    <lastmod>2018-11-19T14:37:06+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -473,12 +478,6 @@
   
   <url>
     <loc>https://www.orztu.com/tags/%E6%8E%92%E5%88%97/</loc>
-    <lastmod>2018-07-19T10:17:07+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.orztu.com/categories/%E6%8E%92%E5%88%97/</loc>
     <lastmod>2018-11-19T10:52:29+08:00</lastmod>
     <priority>0</priority>
   </url>
@@ -533,7 +532,7 @@
   
   <url>
     <loc>https://www.orztu.com/tags/%E9%93%BE%E8%A1%A8/</loc>
-    <lastmod>2017-11-22T09:15:44+08:00</lastmod>
+    <lastmod>2018-11-19T14:37:06+08:00</lastmod>
     <priority>0</priority>
   </url>
   
