@@ -1,5 +1,9 @@
 
 
+  
+    
+  
+
 
   
 
@@ -17,28 +21,26 @@
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Leetcode | 
+    <title>LeetCode 60. Permutation Sequence | 
         Orz the way
       
     </title>
     <meta name="author" content="SelFree">
-    <meta name="keywords" content=", program develop, leetcode, Golang, leetcode解答, 程序">
+    <meta name="keywords" content="LeetCode, 算法, LeetCode解答, Permutation, Nth Permutation, program develop, leetcode, Golang, leetcode解答, 程序">
 
     <link rel="icon" href="https://www.orztu.com/images/favicon.ico">
     
-      <link rel="alternate" type="application/rss+xml" title="RSS" href="https://www.orztu.com/tags/leetcode/index.xml">
-    
 
     
-    <meta name="description" content="城市永远年轻，而我们终将老去">
-    <meta property="og:description" content="城市永远年轻，而我们终将老去">
+    <meta name="description" content="LeetCode 60. Permutation Sequence - Answer LeetCode编程练习解答">
+    <meta property="og:description" content="LeetCode 60. Permutation Sequence - Answer LeetCode编程练习解答">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Leetcode">
-    <meta property="og:url" content="/tags/leetcode/">
+    <meta property="og:title" content="LeetCode 60. Permutation Sequence">
+    <meta property="og:url" content="/leetcode/060-permutation-sequence/">
     <meta property="og:site_name" content="Orz the way">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Orz the way">
-    <meta name="twitter:description" content="城市永远年轻，而我们终将老去">
+    <meta name="twitter:description" content="LeetCode 60. Permutation Sequence - Answer LeetCode编程练习解答">
     
     
 
@@ -49,6 +51,8 @@
       <meta property="og:image" content="//www.gravatar.com/avatar/f47b51d6d6b82fd9048e3eaf64bf7e69?s=640">
     
 
+    
+      <meta property="og:image" content="https://www.orztu.com/images/leetcode/031-next-permutation.jpg">
     
     
     
@@ -74,7 +78,7 @@
 
   <body>
     <div id="blog">
-      <header id="header" data-behavior="1">
+      <header id="header" data-behavior="4">
   <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
   <div class="header-title">
     <a class="header-title-link" href="https://www.orztu.com/">Orz the way</a>
@@ -94,7 +98,7 @@
   
 </header>
 
-      <nav id="sidebar" data-behavior="1">
+      <nav id="sidebar" data-behavior="4">
   <div class="sidebar-container">
     
       <div class="sidebar-profile">
@@ -227,49 +231,31 @@
 </nav>
 
       
-        
 
-      
-      <div id="main" data-behavior="1"
+      <div id="main" data-behavior="4"
         class="
                hasCoverMetaIn
                ">
-        
-          <section class="postShorten-group main-content-wrap">
-            
-            
-              
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-left">
   
-    
-      
-        
-      
-    
+    <h1 class="post-title" itemprop="headline">
+      LeetCode 60. Permutation Sequence
+    </h1>
   
-
-
   
-
-<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.orztu.com/leetcode/002-add-two-numbers/">
-          LeetCode 2. Add Two Numbers
-        </a>
-      </h1>
-      
   <div class="postShorten-meta-bg">
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2017-03-15T16:55:54&#43;08:00">
+      <time itemprop="datePublished" datetime="2018-11-19T10:52:29&#43;08:00">
         
   
   
   
   
-    2017-03-15
+    2018-11-19
   
 
       </time>
@@ -279,7 +265,9 @@
   
     <span>in</span>
     
-      <a class="category-link" href="https://www.orztu.com/categories/leetcode">LeetCode</a>
+      <a class="category-link" href="https://www.orztu.com/categories/leetcode">LeetCode</a>, 
+    
+      <a class="category-link" href="https://www.orztu.com/categories/%e6%8e%92%e5%88%97">排列</a>
     
   
 
@@ -287,214 +275,245 @@
   </div>
 
 
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      <p><a href="https://leetcode.com/problems/add-two-numbers" target="_blank">Add Two Numbers</a></p>
+</div>
 
-<h2 id="description">Description</h2>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <h2 id="description">Description</h2>
+
+<p><a href="https://leetcode.com/problems/permutation-sequence" target="_blank">Permutation Sequence</a></p>
 
 <blockquote>
-<p>You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.</p>
+<p>The set <code>[1,2,3,...,n]</code> contains a total of n! unique permutations.</p>
 
-<p>You may assume the two numbers do not contain any leading zero, except the number 0 itself.</p>
+<p>By listing and labeling all of the permutations in order, we get the following sequence for n = 3:</p>
 
-<pre><code>Input: (2 -&gt; 4 -&gt; 3) + (5 -&gt; 6 -&gt; 4)
-Output: 7 -&gt; 0 -&gt; 8
+<ol>
+<li><code>&quot;123&quot;</code></li>
+<li><code>&quot;132&quot;</code></li>
+<li><code>&quot;213&quot;</code></li>
+<li><code>&quot;231&quot;</code></li>
+<li><code>&quot;312&quot;</code></li>
+<li><code>&quot;321&quot;</code></li>
+</ol>
+
+<p>Given <code>n</code> and <code>k</code>, return the <code>k-th</code> permutation sequence.</p>
+
+<p><strong>Note:</strong></p>
+
+<ul>
+<li>Given n will be between 1 and 9 inclusive.</li>
+<li>Given k will be between 1 and n! inclusive.</li>
+</ul>
+
+<p><strong>Example 1:</strong></p>
+
+<pre><code>Input: n = 3, k = 3
+Output: &quot;213&quot;
+</code></pre>
+
+<p><strong>Example 2:</strong></p>
+
+<pre><code>Input: n = 4, k = 9
+Output: &quot;2314&quot;
 </code></pre>
 </blockquote>
 
-<p>给定两个非空链表表示的非负整数。实现加法，向后进位。</p>
-
 <p></p>
-      <p class="postShorten-excerpt_link">
-        <a href="https://www.orztu.com/leetcode/002-add-two-numbers/" class="postShorten-excerpt_link link">Read More →</a>
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
 
+<p>假设存在长度为<code>n</code>的数组：<code>[1,2,3,...,n]</code>，输出第<code>k</code>个排列。</p>
+
+<h2 id="solution">Solution</h2>
+
+<p><img src="https://www.orztu.com/images/leetcode/031-next-permutation.jpg" alt="字典序树" /></p>
+
+<p>一个长度为<code>n</code>的数组，总共有<code>n!</code>种排列。假设第一个数字固定后，剩余<code>(n-1)!</code>种排列。</p>
+
+<p>上图中的字典序树可以更直观的看出，
+在<code>n=4:[1,2,3,4]</code>中，
+“第零层”包含<code>4!=24</code>个叶子，
+第一层包含<code>3!=6</code>个叶子，
+第二层包含<code>2!=2</code>个叶子&hellip;</p>
+
+<p>假设现在要查找第<code>k=9</code>个排列（第九个叶子），第一层应该经过第<code>⌈9/3!⌉</code> 个分支，即<code>ceil(k/(n-1)!)</code>。</p>
+
+<p>由此公式，可以依次求每层分支序号。
+比如<code>k=9</code>，依次经过：</p>
+
+<ol>
+<li><code>⌈9 / 3!⌉</code>: <code>2</code></li>
+<li><code>⌈9-3!*(2-1) / 2!⌉</code>: <code>2</code></li>
+<li><code>[9-3!*(2-1)-2!*(2-1) / 1!]</code>: <code>1</code></li>
+<li><code>1</code></li>
+</ol>
+
+<p>通过序号：<code>2,2,1,1</code>所经过的分支，可以得到结果：<code>2314</code></p>
+
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-golang" data-lang="golang"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">func</span> <span class="nx">getPermutation</span><span class="p">(</span><span class="nx">n</span> <span class="kt">int</span><span class="p">,</span> <span class="nx">k</span> <span class="kt">int</span><span class="p">)</span> <span class="kt">string</span> <span class="p">{</span>
+    <span class="nx">s</span> <span class="o">:=</span> <span class="p">[]</span><span class="kt">rune</span><span class="p">{}</span>
+
+    <span class="nx">total</span> <span class="o">:=</span> <span class="mi">1</span>
+
+    <span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;=</span> <span class="nx">n</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
+        <span class="nx">total</span> <span class="o">*=</span> <span class="nx">i</span>
+        <span class="nx">s</span> <span class="p">=</span> <span class="nb">append</span><span class="p">(</span><span class="nx">s</span><span class="p">,</span> <span class="nb">rune</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span><span class="o">+</span><span class="nb">rune</span><span class="p">(</span><span class="sc">&#39;0&#39;</span><span class="p">))</span>
+    <span class="p">}</span>
+
+    <span class="nx">ret</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">([]</span><span class="kt">rune</span><span class="p">,</span> <span class="nx">n</span><span class="p">)</span>
+    <span class="nx">idx</span> <span class="o">:=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="nx">n</span> <span class="p">&gt;</span> <span class="mi">0</span> <span class="p">{</span>
+        <span class="c1">// (n-1)!
+</span><span class="c1"></span>        <span class="nx">total</span> <span class="o">/=</span> <span class="nx">n</span>
+
+        <span class="c1">// 当前层索引
+</span><span class="c1"></span>        <span class="nx">i</span> <span class="o">:=</span> <span class="p">(</span><span class="nx">k</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="nx">total</span>
+
+        <span class="c1">// 移除 s[i]
+</span><span class="c1"></span>        <span class="nx">ret</span><span class="p">[</span><span class="nx">idx</span><span class="p">]</span> <span class="p">=</span> <span class="nx">s</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span>
+        <span class="nx">s</span> <span class="p">=</span> <span class="nb">append</span><span class="p">(</span><span class="nx">s</span><span class="p">[:</span><span class="nx">i</span><span class="p">],</span> <span class="nx">s</span><span class="p">[</span><span class="nx">i</span><span class="o">+</span><span class="mi">1</span><span class="p">:]</span><span class="o">...</span><span class="p">)</span>
+
+        <span class="c1">// 减去前面组的数量，得到下一层的索引
+</span><span class="c1"></span>        <span class="nx">k</span> <span class="o">-=</span> <span class="nx">total</span> <span class="o">*</span> <span class="nx">i</span>
+        <span class="nx">idx</span><span class="o">++</span>
+        <span class="nx">n</span><span class="o">--</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="nb">string</span><span class="p">(</span><span class="nx">ret</span><span class="p">)</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+
+<h2 id="similar-problem">Similar Problem</h2>
+
+<ul>
+<li><a href="https://www.orztu.com/leetcode/031-next-permutation/" target="_blank">31. Next Permutation</a></li>
+</ul>
+              
+              
+
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
             
               
-  
-    
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://www.orztu.com/tags/leetcode/">LeetCode</a>
+
+                  </div>
+                
+              
+            
+            
+  <div class="post-actions-wrap">
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+              
+                
+                  
+                
+              
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+              
+                
+              
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/post/lua-table-minify-ii/" data-tooltip="使用元表优化 Lua 配置文件 II">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
       
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
         
       
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.orztu.com/leetcode/001-two-sum/">
-          LeetCode 1. Two Sum
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
         </a>
-      </h1>
-      
-  <div class="postShorten-meta-bg">
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2017-03-15T16:36:59&#43;08:00">
-        
-  
-  
-  
-  
-    2017-03-15
-  
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://www.orztu.com/categories/leetcode">LeetCode</a>
-    
-  
-
-  </div>
-  </div>
-
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      <p><a href="https://leetcode.com/problems/two-sum" target="_blank">Two Sum</a></p>
-
-<h2 id="description">Description</h2>
-
-<blockquote>
-<p>Given an array of integers, return indices of the two numbers such that they add up to a specific target.</p>
-
-<p>You may assume that each input would have exactly one solution, and you may not use the same element twice.</p>
-
-<pre><code>Example:
-Given nums = [2, 7, 11, 15], target = 9,
-</code></pre>
-
-<p>Because nums[0] + nums[1] = 2 + 7 = 9,
-return [0, 1].</p>
-</blockquote>
-
-<p></p>
-      <p class="postShorten-excerpt_link">
-        <a href="https://www.orztu.com/leetcode/001-two-sum/" class="postShorten-excerpt_link link">Read More →</a>
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-            
-            
-
-<nav class="blog-pagination">
-    <ul class="pagination-b justify-content-center">
-        
-        
-        <li class="page-item">
-            <a class="page-link" href="https://www.orztu.com/tags/leetcode/" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
-        </li>
-        
-        <li class="page-item ">
-            <a class="page-link" href="https://www.orztu.com/tags/leetcode/page/5/" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
-        </li>
-        
-        
-        
-            
-            
-            
-            
-                
-                
-            
-            
-                <li class="page-item ">
-                    <a class="page-link" href="https://www.orztu.com/tags/leetcode/">1</a>
-                </li>
-            
-        
-            
-            
-            
-            
-                
-                
-            
-            
-                <li class="page-item ">
-                    <a class="page-link" href="https://www.orztu.com/tags/leetcode/page/2/">2</a>
-                </li>
-            
-        
-            
-            
-            
-            
-                
-                
-            
-            
-                <li class="page-item ">
-                    <a class="page-link" href="https://www.orztu.com/tags/leetcode/page/3/">3</a>
-                </li>
-            
-        
-            
-            
-            
-            
-                
-                
-            
-            
-                <li class="page-item disabled">
-                    <span class="page-link" aria-hidden="true">&hellip;</span>
-                </li>
-            
-        
-            
-            
-            
-            
-                
-                
-            
-            
-                <li class="page-item ">
-                    <a class="page-link" href="https://www.orztu.com/tags/leetcode/page/5/">5</a>
-                </li>
-            
-        
-            
-            
-            
-            
-                
-                
-            
-            
-                <li class="page-item active disabled">
-                    <a class="page-link" href="https://www.orztu.com/tags/leetcode/page/6/">6</a>
-                </li>
-            
-        
-        
+      </li>
     </ul>
-</nav>
+  </div>
 
-          </section>
-        
+
+            
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the comments</noscript>
+</div>
+
+              
+            
+          </div>
+        </article>
         <footer id="footer" class="main-content-wrap">
   <span class="copyrights">
     &copy; 2018 SelFree. All Rights Reserved
@@ -502,6 +521,76 @@ return [0, 1].</p>
 </footer>
 
       </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        
+  <div class="post-actions-wrap">
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+              
+                
+                  
+                
+              
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+              
+                
+              
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/post/lua-table-minify-ii/" data-tooltip="使用元表优化 Lua 配置文件 II">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
     </div>
     
     <div id="about">
@@ -815,6 +904,32 @@ return [0, 1].</p>
 
 
 
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'https:\/\/www.orztu.com\/leetcode\/060-permutation-sequence\/';
+          
+            this.page.identifier = '\/leetcode\/060-permutation-sequence\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'orztu';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
 
 
 

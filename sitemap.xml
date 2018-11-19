@@ -8,6 +8,11 @@
   </url>
   
   <url>
+    <loc>https://www.orztu.com/leetcode/060-permutation-sequence/</loc>
+    <lastmod>2018-11-19T10:52:29+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.orztu.com/post/lua-table-minify-ii/</loc>
     <lastmod>2018-11-16T11:38:00+08:00</lastmod>
   </url>
@@ -324,19 +329,19 @@
   
   <url>
     <loc>https://www.orztu.com/tags/leetcode/</loc>
-    <lastmod>2018-11-16T08:54:44+08:00</lastmod>
+    <lastmod>2018-11-19T10:52:29+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.orztu.com/categories/leetcode/</loc>
-    <lastmod>2018-11-16T08:54:44+08:00</lastmod>
+    <lastmod>2018-11-19T10:52:29+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.orztu.com/leetcode/</loc>
-    <lastmod>2018-11-16T08:54:44+08:00</lastmod>
+    <lastmod>2018-11-19T10:52:29+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -469,6 +474,12 @@
   <url>
     <loc>https://www.orztu.com/tags/%E6%8E%92%E5%88%97/</loc>
     <lastmod>2018-07-19T10:17:07+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.orztu.com/categories/%E6%8E%92%E5%88%97/</loc>
+    <lastmod>2018-11-19T10:52:29+08:00</lastmod>
     <priority>0</priority>
   </url>
   

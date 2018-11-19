@@ -21,6 +21,55 @@
     </item>
     
     <item>
+      <title>LeetCode 60. Permutation Sequence</title>
+      <link>https://www.orztu.com/leetcode/060-permutation-sequence/</link>
+      <pubDate>Mon, 19 Nov 2018 10:52:29 +0800</pubDate>
+      
+      <guid>https://www.orztu.com/leetcode/060-permutation-sequence/</guid>
+      <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/permutation-sequence&#34; target=&#34;_blank&#34;&gt;Permutation Sequence&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;The set &lt;code&gt;[1,2,3,...,n]&lt;/code&gt; contains a total of n! unique permutations.&lt;/p&gt;
+
+&lt;p&gt;By listing and labeling all of the permutations in order, we get the following sequence for n = 3:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;&amp;quot;123&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;quot;132&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;quot;213&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;quot;231&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;quot;312&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;quot;321&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Given &lt;code&gt;n&lt;/code&gt; and &lt;code&gt;k&lt;/code&gt;, return the &lt;code&gt;k-th&lt;/code&gt; permutation sequence.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Given n will be between 1 and 9 inclusive.&lt;/li&gt;
+&lt;li&gt;Given k will be between 1 and n! inclusive.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Example 1:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Input: n = 3, k = 3
+Output: &amp;quot;213&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Example 2:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Input: n = 4, k = 9
+Output: &amp;quot;2314&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>使用元表优化 Lua 配置文件 II</title>
       <link>https://www.orztu.com/post/lua-table-minify-ii/</link>
       <pubDate>Fri, 16 Nov 2018 11:38:00 +0800</pubDate>
