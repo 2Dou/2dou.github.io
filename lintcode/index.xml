@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lintcodes on Orz the way</title>
+    <link>https://www.orztu.com/lintcode/</link>
+    <description>Recent content in Lintcodes on Orz the way</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 20 Nov 2018 09:53:28 +0800</lastBuildDate>
+    
+	<atom:link href="https://www.orztu.com/lintcode/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>LintCode 1630. Interesting String</title>
+      <link>https://www.orztu.com/lintcode/1630-interesting-string/</link>
+      <pubDate>Tue, 20 Nov 2018 09:53:28 +0800</pubDate>
+      
+      <guid>https://www.orztu.com/lintcode/1630-interesting-string/</guid>
+      <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;There is now a string &lt;code&gt;s&lt;/code&gt; consisting of only numbers and lowercase letters.&lt;/p&gt;
+
+&lt;p&gt;If the string &lt;code&gt;s&lt;/code&gt; is interesting, then &lt;code&gt;s&lt;/code&gt; must be split into several substrings, each substring satisfies the beginning of the number, and the number represents the number of characters after it. For example, s = &amp;ldquo;4g12y6hunter&amp;rdquo;, we can divide it into &amp;ldquo;4g12y&amp;rdquo; and &amp;ldquo;6hunter&amp;rdquo;, so the string is interesting.&lt;/p&gt;
+
+&lt;p&gt;If &lt;code&gt;s&lt;/code&gt; is an interesting string, output &amp;ldquo;yes&amp;rdquo;, otherwise output &amp;ldquo;no&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Example:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;s = &amp;quot;124gray6hunter&amp;quot;,return &amp;quot;yes&amp;quot;&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;we can divide it into &amp;quot;12&amp;quot;, &amp;quot;4gray&amp;quot;, &amp;quot;6hunter&amp;quot;.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;s = &amp;quot;31ba2a&amp;quot; ,return &amp;quot;no&amp;quot;&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

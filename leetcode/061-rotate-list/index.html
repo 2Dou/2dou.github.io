@@ -426,11 +426,9 @@ rotate 4 steps to the right: 2-&gt;0-&gt;1-&gt;NULL
               
               
                 
-                  
-                
               
               
-                <a class="post-action-btn btn btn--disabled">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/lintcode/1630-interesting-string/" data-tooltip="LintCode 1630. Interesting String">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -505,11 +503,9 @@ rotate 4 steps to the right: 2-&gt;0-&gt;1-&gt;NULL
               
               
                 
-                  
-                
               
               
-                <a class="post-action-btn btn btn--disabled">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/lintcode/1630-interesting-string/" data-tooltip="LintCode 1630. Interesting String">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -870,6 +866,10 @@ rotate 4 steps to the right: 2-&gt;0-&gt;1-&gt;NULL
 
 
 
+<script src="http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>
+<script >hljs.initHighlightingOnLoad();</script>
+
+
 <script src="https://cdnjs.cat.net/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
 <script src="https://cdnjs.cat.net/ajax/libs/fancybox/2.1.5/helpers/jquery.fancybox-thumbs.js"></script>
 
@@ -877,6 +877,18 @@ rotate 4 steps to the right: 2-&gt;0-&gt;1-&gt;NULL
 <script src="https://www.orztu.com/js/script.min.js"></script>
 
 
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
 
 
   
