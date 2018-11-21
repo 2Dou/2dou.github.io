@@ -1,66 +1,81 @@
-
-
-  
-    
-  
-
-
-  
-
-
-
-
-  
-
-
-  
-
 <!DOCTYPE html>
 <html lang="zh-cn">
   <head>
     
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.39 with theme Tranquilpeak 0.4.3-SNAPSHOT">
+<meta name="author" content="SelFree">
+<meta name="keywords" content="LintCode, 算法, LintCode解答, BFS, program develop, leetcode, Golang, leetcode解答, 程序">
+<meta name="description" content="LintCode 1630. Interesting String - Answer LeetCode编程练习解答">
+
+
+<meta property="og:description" content="LintCode 1630. Interesting String - Answer LeetCode编程练习解答">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LintCode 1630. Interesting String">
+<meta name="twitter:title" content="LintCode 1630. Interesting String">
+<meta property="og:url" content="https://www.orztu.com/lintcode/1630-interesting-string/">
+<meta property="twitter:url" content="https://www.orztu.com/lintcode/1630-interesting-string/">
+<meta property="og:site_name" content="Orz the way">
+<meta property="og:description" content="LintCode 1630. Interesting String - Answer LeetCode编程练习解答">
+<meta name="twitter:description" content="LintCode 1630. Interesting String - Answer LeetCode编程练习解答">
+<meta property="og:locale" content="en-us">
+
+  
+    <meta property="article:published_time" content="2018-11-20T09:53:28">
+  
+  
+    <meta property="article:modified_time" content="2018-11-20T09:53:28">
+  
+  
+  
+    
+      <meta property="article:section" content="coding-life">
+    
+  
+  
+    
+      <meta property="article:tag" content="LintCode">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://www.gravatar.com/avatar/f47b51d6d6b82fd9048e3eaf64bf7e69?s=640">
+  <meta property="twitter:image" content="https://www.gravatar.com/avatar/f47b51d6d6b82fd9048e3eaf64bf7e69?s=640">
+
+
     <title>LintCode 1630. Interesting String | 
         Orz the way
       
     </title>
     <meta name="author" content="SelFree">
     <meta name="keywords" content="LintCode, 算法, LintCode解答, BFS, program develop, leetcode, Golang, leetcode解答, 程序">
+    
 
     <link rel="icon" href="https://www.orztu.com/images/favicon.ico">
     
 
     
-    <meta name="description" content="LintCode 1630. Interesting String - Answer LeetCode编程练习解答">
-    <meta property="og:description" content="LintCode 1630. Interesting String - Answer LeetCode编程练习解答">
-    <meta property="og:type" content="blog">
-    <meta property="og:title" content="LintCode 1630. Interesting String">
-    <meta property="og:url" content="/lintcode/1630-interesting-string/">
-    <meta property="og:site_name" content="Orz the way">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Orz the way">
-    <meta name="twitter:description" content="LintCode 1630. Interesting String - Answer LeetCode编程练习解答">
-    
-    
+
+    <link rel="canonical" href="https://www.orztu.com/lintcode/1630-interesting-string/">
 
     
-    
-
-    
-      <meta property="og:image" content="//www.gravatar.com/avatar/f47b51d6d6b82fd9048e3eaf64bf7e69?s=640">
-    
-
-    
-    
-    
-
-    
-
-    
-    <link rel="stylesheet" href="https://cdnjs.cat.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cat.net/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cat.net/ajax/libs/fancybox/2.1.5/helpers/jquery.fancybox-thumbs.css" />
+    <link rel="stylesheet" href="//cdnjs.cat.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="//cdnjs.cat.net/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="//cdnjs.cat.net/ajax/libs/fancybox/2.1.5/helpers/jquery.fancybox-thumbs.css" />
     
     
     <link rel="stylesheet" href="https://www.orztu.com/css/style.min.css" />
@@ -89,7 +104,7 @@
     
     
       
-        <img class="header-picture" src="//www.gravatar.com/avatar/f47b51d6d6b82fd9048e3eaf64bf7e69?s=90" alt="Author&#39;s picture" />
+        <img class="header-picture" src="https://www.gravatar.com/avatar/f47b51d6d6b82fd9048e3eaf64bf7e69?s=90" alt="Author&#39;s picture" />
       
     
     </a>
@@ -101,7 +116,7 @@
     
       <div class="sidebar-profile">
         <a href="https://www.orztu.com/#about">
-          <img class="sidebar-profile-picture" src="//www.gravatar.com/avatar/f47b51d6d6b82fd9048e3eaf64bf7e69?s=110" alt="Author&#39;s picture" />
+          <img class="sidebar-profile-picture" src="https://www.gravatar.com/avatar/f47b51d6d6b82fd9048e3eaf64bf7e69?s=110" alt="Author&#39;s picture" />
         </a>
         <h4 class="sidebar-profile-name">SelFree</h4>
         
@@ -323,10 +338,14 @@
 
 
   
+    
+  
   
 
 <figure class="codeblock codeblock--tabbed">
   <figcaption>
+    
+      <span>BFS</span>
     
     <ul class="tabs">
       
@@ -335,131 +354,215 @@
         <li class="tab ">cpp</li>
       
     </ul>
-  </figcaption> 
+  </figcaption>
   <div class="tabs-content">
     
       
-      <figure class="highlight language-golang" style="display: block;">   
-        <table>
-          <tbody>
-            <tr>
-              <td class="gutter">
-                <pre><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br><span>35</span><br><span>36</span><br><span>37</span><br><span>38</span><br><span>39</span><br><span>40</span><br><span>41</span><br><span>42</span><br><span>43</span><br></pre>
-              </td>
-              <td class="code">
-                <pre class="code-highlight language-golang"><code class="golang">func check(s string) string {
-    sLength := len(s)
+      <figure class="highlight language-golang" style="display: block;">
+        <div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-golang" data-lang="golang"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">func</span> <span class="nx">check</span><span class="p">(</span><span class="nx">s</span> <span class="kt">string</span><span class="p">)</span> <span class="kt">string</span> <span class="p">{</span>
+    <span class="nx">sLength</span> <span class="o">:=</span> <span class="nb">len</span><span class="p">(</span><span class="nx">s</span><span class="p">)</span>
 
-    if sLength &lt;= 0 {
-        return &#34;no&#34;
-    }
+    <span class="k">if</span> <span class="nx">sLength</span> <span class="o">&lt;=</span> <span class="mi">0</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="s">&#34;no&#34;</span>
+    <span class="p">}</span>
 
-    queue := []int{0}
+    <span class="nx">queue</span> <span class="o">:=</span> <span class="p">[]</span><span class="kt">int</span><span class="p">{</span><span class="mi">0</span><span class="p">}</span>
 
-    var idx, n, num, nextIdx int
-    for len(queue) &gt; 0 {
-        // pop front
-        idx = queue[0]
-        queue = queue[1:]
+    <span class="kd">var</span> <span class="nx">idx</span><span class="p">,</span> <span class="nx">n</span><span class="p">,</span> <span class="nx">num</span><span class="p">,</span> <span class="nx">nextIdx</span> <span class="kt">int</span>
+    <span class="k">for</span> <span class="nb">len</span><span class="p">(</span><span class="nx">queue</span><span class="p">)</span> <span class="p">&gt;</span> <span class="mi">0</span> <span class="p">{</span>
+        <span class="c1">// pop front
+</span><span class="c1"></span>        <span class="nx">idx</span> <span class="p">=</span> <span class="nx">queue</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="nx">queue</span> <span class="p">=</span> <span class="nx">queue</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
 
-        n = 0
-        for idx &lt; sLength {
-            num = int(s[idx] - byte(&#39;0&#39;))
-            if num &lt; 0 || num &gt; 9 {
-                break
-            }
-            n = n*10 &#43; num
+        <span class="nx">n</span> <span class="p">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="nx">idx</span> <span class="p">&lt;</span> <span class="nx">sLength</span> <span class="p">{</span>
+            <span class="nx">num</span> <span class="p">=</span> <span class="nb">int</span><span class="p">(</span><span class="nx">s</span><span class="p">[</span><span class="nx">idx</span><span class="p">]</span> <span class="o">-</span> <span class="nb">byte</span><span class="p">(</span><span class="sc">&#39;0&#39;</span><span class="p">))</span>
+            <span class="k">if</span> <span class="nx">num</span> <span class="p">&lt;</span> <span class="mi">0</span> <span class="o">||</span> <span class="nx">num</span> <span class="p">&gt;</span> <span class="mi">9</span> <span class="p">{</span>
+                <span class="k">break</span>
+            <span class="p">}</span>
+            <span class="nx">n</span> <span class="p">=</span> <span class="nx">n</span><span class="o">*</span><span class="mi">10</span> <span class="o">+</span> <span class="nx">num</span>
 
-            // 从当前位置向后跳过 n 个字符
-            // 并且检查下一个字符是否为数字或者恰好结束
-            nextIdx = idx &#43; n &#43; 1
+            <span class="c1">// 从当前位置向后跳过 n 个字符
+</span><span class="c1"></span>            <span class="c1">// 并且检查下一个字符是否为数字或者恰好结束
+</span><span class="c1"></span>            <span class="nx">nextIdx</span> <span class="p">=</span> <span class="nx">idx</span> <span class="o">+</span> <span class="nx">n</span> <span class="o">+</span> <span class="mi">1</span>
 
-            if nextIdx &gt; sLength {
-                break
-            } else if nextIdx == sLength {
-                // 当前位置恰好结束
-                return &#34;yes&#34;
-            } else if nextIdx != idx {
-                // push back
-                queue = append(queue, nextIdx)
-            }
-            idx&#43;&#43;
-        }
-    }
+            <span class="k">if</span> <span class="nx">nextIdx</span> <span class="p">&gt;</span> <span class="nx">sLength</span> <span class="p">{</span>
+                <span class="k">break</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="nx">nextIdx</span> <span class="o">==</span> <span class="nx">sLength</span> <span class="p">{</span>
+                <span class="c1">// 当前位置恰好结束
+</span><span class="c1"></span>                <span class="k">return</span> <span class="s">&#34;yes&#34;</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="nx">nextIdx</span> <span class="o">!=</span> <span class="nx">idx</span> <span class="p">{</span>
+                <span class="c1">// push back
+</span><span class="c1"></span>                <span class="nx">queue</span> <span class="p">=</span> <span class="nb">append</span><span class="p">(</span><span class="nx">queue</span><span class="p">,</span> <span class="nx">nextIdx</span><span class="p">)</span>
+            <span class="p">}</span>
+            <span class="nx">idx</span><span class="o">++</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
 
-    return &#34;no&#34;
-}
-    </code></pre>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+    <span class="k">return</span> <span class="s">&#34;no&#34;</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+    
+
       </figure>
     
       
-      <figure class="highlight language-cpp" style="display: none;">   
-        <table>
-          <tbody>
-            <tr>
-              <td class="gutter">
-                <pre><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br><span>29</span><br><span>30</span><br><span>31</span><br><span>32</span><br><span>33</span><br><span>34</span><br><span>35</span><br><span>36</span><br><span>37</span><br><span>38</span><br><span>39</span><br><span>40</span><br><span>41</span><br><span>42</span><br><span>43</span><br><span>44</span><br><span>45</span><br><span>46</span><br><span>47</span><br><span>48</span><br><span>49</span><br><span>50</span><br><span>51</span><br></pre>
-              </td>
-              <td class="code">
-                <pre class="code-highlight language-cpp"><code class="cpp">class Solution {
-public:
-    /**
-     * @param s: the string s
-     * @return: check if the string is interesting
-     */
-    string check(string &amp;s) {
-        // Write your code here
-        int sLength = s.length();
-        if (sLength == 0) {
-            return &#34;no&#34;;
-        }
+      <figure class="highlight language-cpp" style="display: none;">
+        <div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-golang" data-lang="golang"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-golang" data-lang="golang"><span class="nx">class</span> <span class="nx">Solution</span> <span class="p">{</span>
+<span class="nx">public</span><span class="p">:</span>
+    <span class="cm">/**
+</span><span class="cm">     * @param s: the string s
+</span><span class="cm">     * @return: check if the string is interesting
+</span><span class="cm">     */</span>
+    <span class="kt">string</span> <span class="nx">check</span><span class="p">(</span><span class="kt">string</span> <span class="o">&amp;</span><span class="nx">s</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// Write your code here
+</span><span class="c1"></span>        <span class="kt">int</span> <span class="nx">sLength</span> <span class="p">=</span> <span class="nx">s</span><span class="p">.</span><span class="nx">length</span><span class="p">();</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">sLength</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="s">&#34;no&#34;</span><span class="p">;</span>
+        <span class="p">}</span>
 
-        queue&lt;int&gt; q;
-        q.push(0);
+        <span class="nx">queue</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span> <span class="nx">q</span><span class="p">;</span>
+        <span class="nx">q</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
 
-        int idx, n, num, nextIdx;
-        while (q.size() &gt; 0) {
-            // pop front
-            int idx = q.front();
-            q.pop();
+        <span class="kt">int</span> <span class="nx">idx</span><span class="p">,</span> <span class="nx">n</span><span class="p">,</span> <span class="nx">num</span><span class="p">,</span> <span class="nx">nextIdx</span><span class="p">;</span>
+        <span class="nx">while</span> <span class="p">(</span><span class="nx">q</span><span class="p">.</span><span class="nx">size</span><span class="p">()</span> <span class="p">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+            <span class="c1">// pop front
+</span><span class="c1"></span>            <span class="kt">int</span> <span class="nx">idx</span> <span class="p">=</span> <span class="nx">q</span><span class="p">.</span><span class="nx">front</span><span class="p">();</span>
+            <span class="nx">q</span><span class="p">.</span><span class="nx">pop</span><span class="p">();</span>
 
-            n = 0;
-            for (; idx &lt; sLength; idx&#43;&#43;) {
-                num = s[idx] - (int)&#39;0&#39;;
-                if (num &lt; 0 || num &gt; 9) {
-                    break;
-                }
+            <span class="nx">n</span> <span class="p">=</span> <span class="mi">0</span><span class="p">;</span>
+            <span class="k">for</span> <span class="p">(;</span> <span class="nx">idx</span> <span class="p">&lt;</span> <span class="nx">sLength</span><span class="p">;</span> <span class="nx">idx</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+                <span class="nx">num</span> <span class="p">=</span> <span class="nx">s</span><span class="p">[</span><span class="nx">idx</span><span class="p">]</span> <span class="o">-</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
+                <span class="k">if</span> <span class="p">(</span><span class="nx">num</span> <span class="p">&lt;</span> <span class="mi">0</span> <span class="o">||</span> <span class="nx">num</span> <span class="p">&gt;</span> <span class="mi">9</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="k">break</span><span class="p">;</span>
+                <span class="p">}</span>
 
-                n = n*10 &#43; num;
+                <span class="nx">n</span> <span class="p">=</span> <span class="nx">n</span><span class="o">*</span><span class="mi">10</span> <span class="o">+</span> <span class="nx">num</span><span class="p">;</span>
 
-                // 从当前位置向后跳过 n 个字符
-                // 并且检查下一个字符是否为数字或者恰好结束
-                nextIdx = idx &#43; n &#43; 1;
+                <span class="c1">// 从当前位置向后跳过 n 个字符
+</span><span class="c1"></span>                <span class="c1">// 并且检查下一个字符是否为数字或者恰好结束
+</span><span class="c1"></span>                <span class="nx">nextIdx</span> <span class="p">=</span> <span class="nx">idx</span> <span class="o">+</span> <span class="nx">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
 
-                if (nextIdx &gt; sLength) {
-                    break;
-                } else if (nextIdx == sLength) {
-                    // 当前位置恰好结束
-                    return &#34;yes&#34;;
-                } else if (nextIdx != idx) {
-                    // push back
-                    q.push(nextIdx);
-                }
-            }
-        }
+                <span class="k">if</span> <span class="p">(</span><span class="nx">nextIdx</span> <span class="p">&gt;</span> <span class="nx">sLength</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="k">break</span><span class="p">;</span>
+                <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">nextIdx</span> <span class="o">==</span> <span class="nx">sLength</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="c1">// 当前位置恰好结束
+</span><span class="c1"></span>                    <span class="k">return</span> <span class="s">&#34;yes&#34;</span><span class="p">;</span>
+                <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">nextIdx</span> <span class="o">!=</span> <span class="nx">idx</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="c1">// push back
+</span><span class="c1"></span>                    <span class="nx">q</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">nextIdx</span><span class="p">);</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
 
-        return &#34;no&#34;;
-    }
-};
-    </code></pre>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <span class="k">return</span> <span class="s">&#34;no&#34;</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span></code></pre></td></tr></table>
+</div>
+</div>
+    
+
       </figure>
     
   </div>
@@ -484,8 +587,8 @@ public:
                 
               
             
-            
-  <div class="post-actions-wrap">
+            <div class="post-actions-wrap">
+  
       <nav >
         <ul class="post-actions post-action-nav">
           
@@ -542,8 +645,8 @@ public:
         </a>
       </li>
     </ul>
-  </div>
-
+  
+</div>
 
             
               
@@ -563,8 +666,8 @@ public:
 
       </div>
       <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
-        
-  <div class="post-actions-wrap">
+        <div class="post-actions-wrap">
+  
       <nav >
         <ul class="post-actions post-action-nav">
           
@@ -621,8 +724,8 @@ public:
         </a>
       </li>
     </ul>
-  </div>
-
+  
+</div>
 
       </div>
       <div id="share-options-bar" class="share-options-bar" data-behavior="4">
@@ -640,7 +743,7 @@ public:
       <i class="fa fa-remove"></i>
     </div>
     
-      <img id="about-card-picture" src="//www.gravatar.com/avatar/f47b51d6d6b82fd9048e3eaf64bf7e69?s=110" alt="Author&#39;s picture" />
+      <img id="about-card-picture" src="https://www.gravatar.com/avatar/f47b51d6d6b82fd9048e3eaf64bf7e69?s=110" alt="Author&#39;s picture" />
     
     <h4 id="about-card-name">SelFree</h4>
     
@@ -933,29 +1036,43 @@ public:
 
 
     
-<script src="https://cdnjs.cat.net/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdnjs.cat.net/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 
 
 
-<script src="https://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>
-<script >hljs.initHighlightingOnLoad();</script>
+<script src="//cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>
 
 
-<script src="https://cdnjs.cat.net/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
-<script src="https://cdnjs.cat.net/ajax/libs/fancybox/2.1.5/helpers/jquery.fancybox-thumbs.js"></script>
+
+<script src="//cdnjs.cat.net/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+<script src="//cdnjs.cat.net/ajax/libs/fancybox/2.1.5/helpers/jquery.fancybox-thumbs.js"></script>
 
 
 <script src="https://www.orztu.com/js/script.min.js"></script>
 
 
+<script lang="javascript">
+window.onload = updateMinWidth;
+window.onresize = updateMinWidth;
+document.getElementById("sidebar").addEventListener("transitionend", updateMinWidth);
+function updateMinWidth() {
+  var sidebar = document.getElementById("sidebar");
+  var main = document.getElementById("main");
+  main.style.minWidth = "";
+  var w1 = getComputedStyle(main).getPropertyValue("min-width");
+  var w2 = getComputedStyle(sidebar).getPropertyValue("width");
+  var w3 = getComputedStyle(sidebar).getPropertyValue("left");
+  main.style.minWidth = `calc(${w1} - ${w2} - ${w3})`;
+}
+</script>
 
 <script>
 $(document).ready(function() {
-  hljs.configure({ classPrefix: '', useBR: false });
-  $('pre.code-highlight > code, pre > code').each(function(i, block) {
-    if (!$(this).hasClass('codeblock')) {
-      $(this).addClass('codeblock');
-    }
+  hljs.configure({ classPrefix: '', tabReplace:'    ', useBR: false });
+  $('pre.code-highlight > code, pre:not(.chroma) > code').each(function(i, block) {
+    
+    
+    
     hljs.highlightBlock(block);
   });
 });
@@ -987,6 +1104,7 @@ $(document).ready(function() {
       </script>
     
   
+
 
 
 

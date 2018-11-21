@@ -1,68 +1,88 @@
-
-
-  
-    
-  
-
-
-  
-
-
-
-
-  
-
-
-  
-
 <!DOCTYPE html>
 <html lang="zh-cn">
   <head>
     
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.39 with theme Tranquilpeak 0.4.3-SNAPSHOT">
+<meta name="author" content="SelFree">
+<meta name="keywords" content="LeetCode 答案, LeetCode, 回文, program develop, leetcode, Golang, leetcode解答, 程序">
+<meta name="description" content="LeetCode 5. Longest Palindromic Substring - Answer LeetCode编程练习解答">
+
+
+<meta property="og:description" content="LeetCode 5. Longest Palindromic Substring - Answer LeetCode编程练习解答">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LeetCode 5. Longest Palindromic Substring">
+<meta name="twitter:title" content="LeetCode 5. Longest Palindromic Substring">
+<meta property="og:url" content="https://www.orztu.com/leetcode/005-longest-palindromic-substring/">
+<meta property="twitter:url" content="https://www.orztu.com/leetcode/005-longest-palindromic-substring/">
+<meta property="og:site_name" content="Orz the way">
+<meta property="og:description" content="LeetCode 5. Longest Palindromic Substring - Answer LeetCode编程练习解答">
+<meta name="twitter:description" content="LeetCode 5. Longest Palindromic Substring - Answer LeetCode编程练习解答">
+<meta property="og:locale" content="en-us">
+
+  
+    <meta property="article:published_time" content="2017-03-16T14:47:07">
+  
+  
+    <meta property="article:modified_time" content="2017-03-16T14:47:07">
+  
+  
+  
+    
+      <meta property="article:section" content="LeetCode">
+    
+  
+  
+    
+      <meta property="article:tag" content="LeetCode">
+    
+      <meta property="article:tag" content="子串">
+    
+      <meta property="article:tag" content="回文">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://www.orztu.com/images/leetcode/Longest-Palindromic-Substring-1.png">
+  <meta property="twitter:image" content="https://www.orztu.com/images/leetcode/Longest-Palindromic-Substring-1.png">
+
+
+
+
+
+  <meta property="og:image" content="https://www.gravatar.com/avatar/f47b51d6d6b82fd9048e3eaf64bf7e69?s=640">
+  <meta property="twitter:image" content="https://www.gravatar.com/avatar/f47b51d6d6b82fd9048e3eaf64bf7e69?s=640">
+
+
     <title>LeetCode 5. Longest Palindromic Substring | 
         Orz the way
       
     </title>
     <meta name="author" content="SelFree">
     <meta name="keywords" content="LeetCode 答案, LeetCode, 回文, program develop, leetcode, Golang, leetcode解答, 程序">
+    
 
     <link rel="icon" href="https://www.orztu.com/images/favicon.ico">
     
 
     
-    <meta name="description" content="LeetCode 5. Longest Palindromic Substring - Answer LeetCode编程练习解答">
-    <meta property="og:description" content="LeetCode 5. Longest Palindromic Substring - Answer LeetCode编程练习解答">
-    <meta property="og:type" content="blog">
-    <meta property="og:title" content="LeetCode 5. Longest Palindromic Substring">
-    <meta property="og:url" content="/leetcode/005-longest-palindromic-substring/">
-    <meta property="og:site_name" content="Orz the way">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Orz the way">
-    <meta name="twitter:description" content="LeetCode 5. Longest Palindromic Substring - Answer LeetCode编程练习解答">
-    
-    
+
+    <link rel="canonical" href="https://www.orztu.com/leetcode/005-longest-palindromic-substring/">
 
     
-    
-
-    
-      <meta property="og:image" content="//www.gravatar.com/avatar/f47b51d6d6b82fd9048e3eaf64bf7e69?s=640">
-    
-
-    
-      <meta property="og:image" content="https://www.orztu.com/images/leetcode/Longest-Palindromic-Substring-1.png">
-    
-    
-    
-
-    
-
-    
-    <link rel="stylesheet" href="https://cdnjs.cat.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cat.net/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cat.net/ajax/libs/fancybox/2.1.5/helpers/jquery.fancybox-thumbs.css" />
+    <link rel="stylesheet" href="//cdnjs.cat.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="//cdnjs.cat.net/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="//cdnjs.cat.net/ajax/libs/fancybox/2.1.5/helpers/jquery.fancybox-thumbs.css" />
     
     
     <link rel="stylesheet" href="https://www.orztu.com/css/style.min.css" />
@@ -91,7 +111,7 @@
     
     
       
-        <img class="header-picture" src="//www.gravatar.com/avatar/f47b51d6d6b82fd9048e3eaf64bf7e69?s=90" alt="Author&#39;s picture" />
+        <img class="header-picture" src="https://www.gravatar.com/avatar/f47b51d6d6b82fd9048e3eaf64bf7e69?s=90" alt="Author&#39;s picture" />
       
     
     </a>
@@ -103,7 +123,7 @@
     
       <div class="sidebar-profile">
         <a href="https://www.orztu.com/#about">
-          <img class="sidebar-profile-picture" src="//www.gravatar.com/avatar/f47b51d6d6b82fd9048e3eaf64bf7e69?s=110" alt="Author&#39;s picture" />
+          <img class="sidebar-profile-picture" src="https://www.gravatar.com/avatar/f47b51d6d6b82fd9048e3eaf64bf7e69?s=110" alt="Author&#39;s picture" />
         </a>
         <h4 class="sidebar-profile-name">SelFree</h4>
         
@@ -384,8 +404,8 @@ Output: &quot;bb&quot;
                 
               
             
-            
-  <div class="post-actions-wrap">
+            <div class="post-actions-wrap">
+  
       <nav >
         <ul class="post-actions post-action-nav">
           
@@ -440,8 +460,8 @@ Output: &quot;bb&quot;
         </a>
       </li>
     </ul>
-  </div>
-
+  
+</div>
 
             
               
@@ -461,8 +481,8 @@ Output: &quot;bb&quot;
 
       </div>
       <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
-        
-  <div class="post-actions-wrap">
+        <div class="post-actions-wrap">
+  
       <nav >
         <ul class="post-actions post-action-nav">
           
@@ -517,8 +537,8 @@ Output: &quot;bb&quot;
         </a>
       </li>
     </ul>
-  </div>
-
+  
+</div>
 
       </div>
       <div id="share-options-bar" class="share-options-bar" data-behavior="4">
@@ -536,7 +556,7 @@ Output: &quot;bb&quot;
       <i class="fa fa-remove"></i>
     </div>
     
-      <img id="about-card-picture" src="//www.gravatar.com/avatar/f47b51d6d6b82fd9048e3eaf64bf7e69?s=110" alt="Author&#39;s picture" />
+      <img id="about-card-picture" src="https://www.gravatar.com/avatar/f47b51d6d6b82fd9048e3eaf64bf7e69?s=110" alt="Author&#39;s picture" />
     
     <h4 id="about-card-name">SelFree</h4>
     
@@ -829,29 +849,43 @@ Output: &quot;bb&quot;
 
 
     
-<script src="https://cdnjs.cat.net/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdnjs.cat.net/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 
 
 
-<script src="https://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>
-<script >hljs.initHighlightingOnLoad();</script>
+<script src="//cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>
 
 
-<script src="https://cdnjs.cat.net/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
-<script src="https://cdnjs.cat.net/ajax/libs/fancybox/2.1.5/helpers/jquery.fancybox-thumbs.js"></script>
+
+<script src="//cdnjs.cat.net/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+<script src="//cdnjs.cat.net/ajax/libs/fancybox/2.1.5/helpers/jquery.fancybox-thumbs.js"></script>
 
 
 <script src="https://www.orztu.com/js/script.min.js"></script>
 
 
+<script lang="javascript">
+window.onload = updateMinWidth;
+window.onresize = updateMinWidth;
+document.getElementById("sidebar").addEventListener("transitionend", updateMinWidth);
+function updateMinWidth() {
+  var sidebar = document.getElementById("sidebar");
+  var main = document.getElementById("main");
+  main.style.minWidth = "";
+  var w1 = getComputedStyle(main).getPropertyValue("min-width");
+  var w2 = getComputedStyle(sidebar).getPropertyValue("width");
+  var w3 = getComputedStyle(sidebar).getPropertyValue("left");
+  main.style.minWidth = `calc(${w1} - ${w2} - ${w3})`;
+}
+</script>
 
 <script>
 $(document).ready(function() {
-  hljs.configure({ classPrefix: '', useBR: false });
-  $('pre.code-highlight > code, pre > code').each(function(i, block) {
-    if (!$(this).hasClass('codeblock')) {
-      $(this).addClass('codeblock');
-    }
+  hljs.configure({ classPrefix: '', tabReplace:'    ', useBR: false });
+  $('pre.code-highlight > code, pre:not(.chroma) > code').each(function(i, block) {
+    
+    
+    
     hljs.highlightBlock(block);
   });
 });
@@ -883,6 +917,7 @@ $(document).ready(function() {
       </script>
     
   
+
 
 
 
