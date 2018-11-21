@@ -31,25 +31,33 @@
 &lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/powx-n/&#34; target=&#34;_blank&#34;&gt;Pow(x, n)&lt;/a&gt;&lt;/p&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;Implement pow(x, n), which calculates x raised to the power n (x^n).
-&lt;strong&gt;Example 1:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Implement pow(x, n), which calculates x raised to the power n (x^n).&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;Input: 2.00000, 10
-Output: 1024.00000
-&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Example 1:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Input:&lt;/strong&gt; 2.00000, 10&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Output:&lt;/strong&gt; 1024.00000&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;p&gt;&lt;strong&gt;Example 2:&lt;/strong&gt;&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;Input: 2.10000, 3
-Output: 9.26100
-&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Input:&lt;/strong&gt; 2.10000, 3&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Output:&lt;/strong&gt; 9.26100&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;p&gt;&lt;strong&gt;Example 3:&lt;/strong&gt;&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;Input: 2.00000, -2
-Output: 0.25000
-Explanation: 2^-2 = 1/2^2 = 1/4 = 0.25
-&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Input:&lt;/strong&gt; 2.00000, -2&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Output:&lt;/strong&gt; 0.25000&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Explanation:&lt;/strong&gt; 2^{-2} = {&lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;2&lt;/sub&gt;}^2 = &lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;4&lt;/sub&gt; = 0.25&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt;&lt;/p&gt;
 
