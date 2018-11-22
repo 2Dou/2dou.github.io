@@ -6,10 +6,41 @@
     <description>Recent content in Leetcode on Orz the way</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 22 Nov 2018 09:06:11 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 22 Nov 2018 14:44:37 +0800</lastBuildDate>
     
 	<atom:link href="https://www.orztu.com/categories/leetcode/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>LeetCode 64. Minimum Path Sum</title>
+      <link>https://www.orztu.com/leetcode/064-minimum-path-sum/</link>
+      <pubDate>Thu, 22 Nov 2018 14:44:37 +0800</pubDate>
+      
+      <guid>https://www.orztu.com/leetcode/064-minimum-path-sum/</guid>
+      <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/minimum-path-sum/&#34; target=&#34;_blank&#34;&gt;Minimum Path Sum&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Given a m x n grid filled with non-negative numbers, find a path from top left to bottom right which minimizes the sum of all numbers along its path.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; You can only move either down or right at any point in time.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Example:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Input:
+[
+  [1,3,1],
+  [1,5,1],
+  [4,2,1]
+]
+Output: 7
+Explanation: Because the path 1→3→1→1→1 minimizes the sum.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>LeetCode 63. Unique Paths II</title>
