@@ -7,20 +7,38 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="generator" content="Hugo 0.39 with theme Tranquilpeak 0.4.3-SNAPSHOT">
 <meta name="author" content="SelFree">
-<meta name="keywords" content=", program develop, leetcode, Golang, leetcode解答, 程序">
-<meta name="description" content="城市永远年轻，而我们终将老去">
+<meta name="keywords" content="LeetCode, 算法, LeetCode解答, Unique Paths, program develop, leetcode, Golang, leetcode解答, 程序">
+<meta name="description" content="LeetCode 63. Unique Paths II - Answer LeetCode编程练习解答">
 
 
-<meta property="og:description" content="城市永远年轻，而我们终将老去">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Leetcode">
-<meta name="twitter:title" content="Leetcode">
-<meta property="og:url" content="https://www.orztu.com/categories/leetcode/">
-<meta property="twitter:url" content="https://www.orztu.com/categories/leetcode/">
+<meta property="og:description" content="LeetCode 63. Unique Paths II - Answer LeetCode编程练习解答">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LeetCode 63. Unique Paths II">
+<meta name="twitter:title" content="LeetCode 63. Unique Paths II">
+<meta property="og:url" content="https://www.orztu.com/leetcode/063-unique-paths-ii/">
+<meta property="twitter:url" content="https://www.orztu.com/leetcode/063-unique-paths-ii/">
 <meta property="og:site_name" content="Orz the way">
-<meta property="og:description" content="城市永远年轻，而我们终将老去">
-<meta name="twitter:description" content="城市永远年轻，而我们终将老去">
+<meta property="og:description" content="LeetCode 63. Unique Paths II - Answer LeetCode编程练习解答">
+<meta name="twitter:description" content="LeetCode 63. Unique Paths II - Answer LeetCode编程练习解答">
 <meta property="og:locale" content="en-us">
+
+  
+    <meta property="article:published_time" content="2018-11-22T09:06:11">
+  
+  
+    <meta property="article:modified_time" content="2018-11-22T09:06:11">
+  
+  
+  
+    
+      <meta property="article:section" content="LeetCode">
+    
+  
+  
+    
+      <meta property="article:tag" content="LeetCode">
+    
+  
 
 
 <meta name="twitter:card" content="summary">
@@ -39,22 +57,20 @@
   <meta property="twitter:image" content="https://www.gravatar.com/avatar/f47b51d6d6b82fd9048e3eaf64bf7e69?s=640">
 
 
-    <title>Leetcode | 
+    <title>LeetCode 63. Unique Paths II | 
         Orz the way
       
     </title>
     <meta name="author" content="SelFree">
-    <meta name="keywords" content=", program develop, leetcode, Golang, leetcode解答, 程序">
+    <meta name="keywords" content="LeetCode, 算法, LeetCode解答, Unique Paths, program develop, leetcode, Golang, leetcode解答, 程序">
     
 
     <link rel="icon" href="https://www.orztu.com/images/favicon.ico">
     
-      <link rel="alternate" type="application/rss+xml" title="RSS" href="https://www.orztu.com/categories/leetcode/index.xml">
-    
 
     
 
-    <link rel="canonical" href="https://www.orztu.com/categories/leetcode/">
+    <link rel="canonical" href="https://www.orztu.com/leetcode/063-unique-paths-ii/">
 
     
     <link rel="stylesheet" href="//cdnjs.cat.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
@@ -75,7 +91,7 @@
 
   <body>
     <div id="blog">
-      <header id="header" data-behavior="1">
+      <header id="header" data-behavior="4">
   <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
   <div class="header-title">
     <a class="header-title-link" href="https://www.orztu.com/">Orz the way</a>
@@ -95,7 +111,7 @@
   
 </header>
 
-      <nav id="sidebar" data-behavior="1">
+      <nav id="sidebar" data-behavior="4">
   <div class="sidebar-container">
     
       <div class="sidebar-profile">
@@ -228,45 +244,31 @@
 </nav>
 
       
-        
 
-      
-      <div id="main" data-behavior="1"
+      <div id="main" data-behavior="4"
         class="
                hasCoverMetaIn
                ">
-        
-          <section class="postShorten-group main-content-wrap">
-            
-            
-              
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-left">
   
-    
+    <h1 class="post-title" itemprop="headline">
+      LeetCode 63. Unique Paths II
+    </h1>
   
-
-
   
-
-<article class="postShorten postShorten--thumbnailimg-right" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.orztu.com/leetcode/005-longest-palindromic-substring/">
-          LeetCode 5. Longest Palindromic Substring
-        </a>
-      </h1>
-      
   <div class="postShorten-meta-bg">
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2017-03-16T14:47:07&#43;08:00">
+      <time itemprop="datePublished" datetime="2018-11-22T09:06:11&#43;08:00">
         
   
   
   
   
-    2017-03-16
+    2018-11-22
   
 
       </time>
@@ -284,488 +286,287 @@
   </div>
 
 
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      
-        <p><a href="https://leetcode.com/problems/longest-palindromic-substring" target="_blank">Longest Palindromic Substring</a></p>
+</div>
 
-<!-- ![palindromic](/images/leetcode/Longest-Palindromic-Substring-1.png "回文") -->
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <h2 id="description">Description</h2>
 
-<h2 id="description">Description</h2>
+<p><a href="https://leetcode.com/problems/unique-paths-ii/" target="_blank">Unique Paths II</a></p>
 
 <blockquote>
-<p>Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000.</p>
+<p>A robot is located at the top-left corner of a m x n grid (marked &lsquo;Start&rsquo; in the diagram below).</p>
 
-<p>Example:</p>
+<p>The robot can only move either down or right at any point in time. The robot is trying to reach the bottom-right corner of the grid (marked &lsquo;Finish&rsquo; in the diagram below).</p>
 
-<pre><code>Input: &quot;babad&quot;
-Output: &quot;bab&quot;
-</code></pre>
+<p>Now consider if some obstacles are added to the grids. How many unique paths would there be?</p>
 
-<p>Note: &ldquo;aba&rdquo; is also a valid answer.</p>
+<p><img src="https://www.orztu.com/images/leetcode/062-unique-paths-1.png" alt="" /></p>
 
-<p>Example:</p>
+<p>An obstacle and empty space is marked as 1 and 0 respectively in the grid.</p>
 
-<pre><code>Input: &quot;cbbd&quot;
-Output: &quot;bb&quot;
+<p><strong>Note:</strong> m and n will be at most 100.</p>
+
+<p><strong>Example 1:</strong></p>
+
+<pre><code>Input:
+[
+  [0,0,0],
+  [0,1,0],
+  [0,0,0]
+]
+Output: 2
+Explanation:
+There is one obstacle in the middle of the 3x3 grid above.
+There are two ways to reach the bottom-right corner:
+1. Right -&gt; Right -&gt; Down -&gt; Down
+2. Down -&gt; Down -&gt; Right -&gt; Right
 </code></pre>
 </blockquote>
 
-<p>从给定字符串中找出最长的回文子串</p>
-
 <p></p>
-      
-      <p>
-        <a href="https://www.orztu.com/leetcode/005-longest-palindromic-substring/" class="postShorten-excerpt_link link">Read More</a>
 
-        
-      </p>
-    </div>
-  </div>
-  
-    <a href="https://www.orztu.com/leetcode/005-longest-palindromic-substring/">
-      <div class="postShorten-thumbnailimg">
-        <img alt="" itemprop="image" src="https://www.orztu.com/images/leetcode/Longest-Palindromic-Substring-1.png"/>
-      </div>
-    </a>
-  
-</article>
+<p>给出地图，求左上角到右下角的路径数量（只能向下或向右移动）。</p>
 
+<p>其中地图中<code>1</code>表示障碍，无法通过。</p>
+
+<h2 id="solution">Solution</h2>
+
+<h3 id="分治法">分治法</h3>
+
+<p>要到达最后一个格子，只能通过它左边和上边两个格子到达，
+那么达到它的路径数量等于到达左边和上边两个格子的路径数量相加。</p>
+
+<p>依此类推，到达左边和上边两个格子的路径数量又分别等于它们的左边和上边两条路径之和。</p>
+
+<p>最终我们将反推到第一个格子，它的路径数量只有一条。</p>
+
+<p>所以可以从左上方开始，依次计算每个格子的路径数量，最终得到最后格子的路径数量。</p>
+
+<h3 id="example">Example</h3>
+
+<p>比如地图<code>4x3</code>的地图，将第一个格子路径数量标记为<code>1</code>，然后依次标记后边的格子，得到达到最后一个格子的路径数量为<code>10</code>：</p>
+
+<pre><code>0, 0, 0, 0       1, 1, 1, 1
+0, 0, 0, 0  ==&gt;  1, 2, 3, 4
+0, 0, 0, 0       1, 3, 6, 10
+</code></pre>
+
+<p>现在假设有一个障碍： 只需要在遇到障碍时，将障碍的路径数量标记为<code>0</code>即可：</p>
+
+<pre><code>0, 0, 0, 0       1, 1, 1, 1
+0, 0, 1, 0  ==&gt;  1, 2, 0, 1
+0, 0, 0, 0       1, 3, 3, 4
+</code></pre>
+
+<h3 id="code-here">Code Here</h3>
+
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-golang" data-lang="golang"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">func</span> <span class="nx">uniquePathsWithObstacles</span><span class="p">(</span><span class="nx">obstacleGrid</span> <span class="p">[][]</span><span class="kt">int</span><span class="p">)</span> <span class="kt">int</span> <span class="p">{</span>
+    <span class="nx">row</span> <span class="o">:=</span> <span class="nb">len</span><span class="p">(</span><span class="nx">obstacleGrid</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nx">row</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="mi">0</span>
+    <span class="p">}</span>
+
+    <span class="nx">col</span> <span class="o">:=</span> <span class="nb">len</span><span class="p">(</span><span class="nx">obstacleGrid</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="k">if</span> <span class="nx">col</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">||</span> <span class="nx">obstacleGrid</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="mi">0</span>
+    <span class="p">}</span>
+
+    <span class="kd">var</span> <span class="nx">left</span><span class="p">,</span> <span class="nx">up</span> <span class="kt">int</span>
+    <span class="kd">var</span> <span class="nx">ways</span> <span class="kt">int</span>
+
+    <span class="c1">// 标记第一格到达路径数量为1
+</span><span class="c1"></span>    <span class="nx">obstacleGrid</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="p">=</span> <span class="mi">1</span>
+    <span class="nx">j</span> <span class="o">:=</span> <span class="mi">1</span> <span class="c1">// 从第二个格子开始
+</span><span class="c1"></span>    <span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="nx">row</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
+        <span class="k">for</span> <span class="p">;</span> <span class="nx">j</span> <span class="p">&lt;</span> <span class="nx">col</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span> <span class="p">{</span>
+            <span class="c1">// 如果为障碍，标记当前格子达到路径数量为 0
+</span><span class="c1"></span>            <span class="k">if</span> <span class="nx">obstacleGrid</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="nx">j</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span> <span class="p">{</span>
+                <span class="nx">obstacleGrid</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="nx">j</span><span class="p">]</span> <span class="p">=</span> <span class="mi">0</span>
+                <span class="k">continue</span>
+            <span class="p">}</span>
+
+            <span class="c1">// 表示当前格子到达路径数量
+</span><span class="c1"></span>            <span class="c1">// 它等于左边格子路径数量+上边格子路径数量
+</span><span class="c1"></span>            <span class="nx">ways</span> <span class="p">=</span> <span class="mi">0</span>
+
+            <span class="nx">left</span> <span class="p">=</span> <span class="nx">j</span> <span class="o">-</span> <span class="mi">1</span>
+            <span class="k">if</span> <span class="nx">left</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="p">{</span>
+                <span class="c1">// 加上左边格子路径数量
+</span><span class="c1"></span>                <span class="c1">// ways += leftWays
+</span><span class="c1"></span>                <span class="nx">ways</span> <span class="p">=</span> <span class="nx">obstacleGrid</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="nx">left</span><span class="p">]</span>
+            <span class="p">}</span>
+
+            <span class="nx">up</span> <span class="p">=</span> <span class="nx">i</span> <span class="o">-</span> <span class="mi">1</span>
+            <span class="k">if</span> <span class="nx">up</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="p">{</span>
+                <span class="c1">// 加上上边格子路径数量
+</span><span class="c1"></span>                <span class="nx">ways</span> <span class="o">+=</span> <span class="nx">obstacleGrid</span><span class="p">[</span><span class="nx">up</span><span class="p">][</span><span class="nx">j</span><span class="p">]</span>
+            <span class="p">}</span>
+
+            <span class="c1">// 保存当前格子路径数量
+</span><span class="c1"></span>            <span class="nx">obstacleGrid</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="nx">j</span><span class="p">]</span> <span class="p">=</span> <span class="nx">ways</span>
+        <span class="p">}</span>
+        <span class="nx">j</span> <span class="p">=</span> <span class="mi">0</span>
+    <span class="p">}</span>
+
+    <span class="c1">// 返回最后一个格子路径数量
+</span><span class="c1"></span>    <span class="k">return</span> <span class="nx">obstacleGrid</span><span class="p">[</span><span class="nx">row</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="nx">col</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+
+<h2 id="similar-problem">Similar Problem</h2>
+
+<ul>
+<li><a href="https://www.orztu.com/leetcode/062-unique-paths/" target="_blank">62. Unique Paths</a></li>
+</ul>
+              
+              
+
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
             
               
-  
-    
-      
-        
-      
-    
-  
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://www.orztu.com/tags/leetcode/">LeetCode</a>
 
 
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.orztu.com/leetcode/004-median-of-two-sorted-arrays/">
-          LeetCode 4. Median of Two Sorted Arrays
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta-bg">
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2017-03-16T10:53:58&#43;08:00">
-        
-  
-  
-  
-  
-    2017-03-16
-  
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://www.orztu.com/categories/leetcode">LeetCode</a>
-    
-  
-
-  </div>
-  </div>
-
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      
-        <p><a href="https://leetcode.com/problems/median-of-two-sorted-arrays" target="_blank">Median of Two Sorted Arrays</a></p>
-
-<h2 id="description">Description</h2>
-
-<blockquote>
-<p>There are two sorted arrays nums1 and nums2 of size m and n respectively.</p>
-
-<p>Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).</p>
-
-<p>Example 1:</p>
-
-<pre><code>nums1 = [1, 3]
-nums2 = [2]
-</code></pre>
-
-<p>The median is 2.0
-Example 2:</p>
-
-<pre><code>nums1 = [1, 2]
-nums2 = [3, 4]
-</code></pre>
-
-<p>The median is (2 + 3)/2 = 2.5</p>
-</blockquote>
-
-<p></p>
-      
-      <p>
-        <a href="https://www.orztu.com/leetcode/004-median-of-two-sorted-arrays/" class="postShorten-excerpt_link link">Read More</a>
-
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-            
+                  </div>
+                
               
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.orztu.com/leetcode/003-longest-substring-without-repeating-characters/">
-          LeetCode 3. Longest Substring Without Repeating Characters
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta-bg">
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2017-03-15T19:38:58&#43;08:00">
-        
-  
-  
-  
-  
-    2017-03-15
-  
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://www.orztu.com/categories/leetcode">LeetCode</a>
-    
-  
-
-  </div>
-  </div>
-
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      
-        <p><a href="https://leetcode.com/problems/longest-substring-without-repeating-characters" target="_blank">Longest Substring Without Repeating Characters</a></p>
-
-<h2 id="description">Description</h2>
-
-<blockquote>
-<p>Given a string, find the length of the longest substring without repeating characters.</p>
-
-<p>Given &ldquo;abcabcbb&rdquo;, the answer is &ldquo;abc&rdquo;, which the length is 3.</p>
-
-<p>Given &ldquo;bbbbb&rdquo;, the answer is &ldquo;b&rdquo;, with the length of 1.</p>
-
-<p>Given &ldquo;pwwkew&rdquo;, the answer is &ldquo;wke&rdquo;, with the length of 3. Note that the answer must be a substring, &ldquo;pwke&rdquo; is a subsequence and not a substring.</p>
-</blockquote>
-
-<p>在给定字符串中找出无重复字符的最长子串。</p>
-
-<p></p>
-      
-      <p>
-        <a href="https://www.orztu.com/leetcode/003-longest-substring-without-repeating-characters/" class="postShorten-excerpt_link link">Read More</a>
-
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
             
+            <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
               
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.orztu.com/leetcode/002-add-two-numbers/">
-          LeetCode 2. Add Two Numbers
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta-bg">
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2017-03-15T16:55:54&#43;08:00">
-        
-  
-  
-  
-  
-    2017-03-15
-  
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://www.orztu.com/categories/leetcode">LeetCode</a>
-    
-  
-
-  </div>
-  </div>
-
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      
-        <p><a href="https://leetcode.com/problems/add-two-numbers" target="_blank">Add Two Numbers</a></p>
-
-<h2 id="description">Description</h2>
-
-<blockquote>
-<p>You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.</p>
-
-<p>You may assume the two numbers do not contain any leading zero, except the number 0 itself.</p>
-
-<pre><code>Input: (2 -&gt; 4 -&gt; 3) + (5 -&gt; 6 -&gt; 4)
-Output: 7 -&gt; 0 -&gt; 8
-</code></pre>
-</blockquote>
-
-<p>给定两个非空链表表示的非负整数。实现加法，向后进位。</p>
-
-<p></p>
-      
-      <p>
-        <a href="https://www.orztu.com/leetcode/002-add-two-numbers/" class="postShorten-excerpt_link link">Read More</a>
-
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-            
               
-  
-    
+                
+                  
+                
+              
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+              
+                
+              
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/050-pow/" data-tooltip="LeetCode 50. Pow(x, n)">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
       
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.orztu.com/leetcode/001-two-sum/">
-          LeetCode 1. Two Sum
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta-bg">
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2017-03-15T16:36:59&#43;08:00">
-        
-  
-  
-  
-  
-    2017-03-15
-  
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://www.orztu.com/categories/leetcode">LeetCode</a>
-    
-  
-
-  </div>
-  </div>
-
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      
-        <p><a href="https://leetcode.com/problems/two-sum" target="_blank">Two Sum</a></p>
-
-<h2 id="description">Description</h2>
-
-<blockquote>
-<p>Given an array of integers, return indices of the two numbers such that they add up to a specific target.</p>
-
-<p>You may assume that each input would have exactly one solution, and you may not use the same element twice.</p>
-
-<pre><code>Example:
-Given nums = [2, 7, 11, 15], target = 9,
-</code></pre>
-
-<p>Because nums[0] + nums[1] = 2 + 7 = 9,
-return [0, 1].</p>
-</blockquote>
-
-<p></p>
-      
-      <p>
-        <a href="https://www.orztu.com/leetcode/001-two-sum/" class="postShorten-excerpt_link link">Read More</a>
-
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-            
-            
-
-<nav class="blog-pagination">
-    <ul class="pagination-b justify-content-center">
-        
-        
-        <li class="page-item">
-            <a class="page-link" href="https://www.orztu.com/categories/leetcode/" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
         </li>
         
-        <li class="page-item ">
-            <a class="page-link" href="https://www.orztu.com/categories/leetcode/page/5/" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
         </li>
+      
+      <li class="post-action">
         
+          <a class="post-action-btn btn btn--default" href="#">
         
-        
-            
-            
-            
-            
-                
-                
-            
-            
-                <li class="page-item ">
-                    <a class="page-link" href="https://www.orztu.com/categories/leetcode/">1</a>
-                </li>
-            
-        
-            
-            
-            
-            
-                
-                
-            
-            
-                <li class="page-item ">
-                    <a class="page-link" href="https://www.orztu.com/categories/leetcode/page/2/">2</a>
-                </li>
-            
-        
-            
-            
-            
-            
-                
-                
-            
-            
-                <li class="page-item ">
-                    <a class="page-link" href="https://www.orztu.com/categories/leetcode/page/3/">3</a>
-                </li>
-            
-        
-            
-            
-            
-            
-                
-                
-            
-            
-                <li class="page-item disabled">
-                    <span class="page-link" aria-hidden="true">&hellip;</span>
-                </li>
-            
-        
-            
-            
-            
-            
-                
-                
-            
-            
-                <li class="page-item ">
-                    <a class="page-link" href="https://www.orztu.com/categories/leetcode/page/5/">5</a>
-                </li>
-            
-        
-            
-            
-            
-            
-                
-                
-            
-            
-                <li class="page-item active disabled">
-                    <a class="page-link" href="https://www.orztu.com/categories/leetcode/page/6/">6</a>
-                </li>
-            
-        
-        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
     </ul>
-</nav>
+  
+</div>
 
-          </section>
-        
+            
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the comments</noscript>
+</div>
+
+              
+            
+          </div>
+        </article>
         <footer id="footer" class="main-content-wrap">
   <span class="copyrights">
     &copy; 2018 SelFree. All Rights Reserved
@@ -773,6 +574,76 @@ return [0, 1].</p>
 </footer>
 
       </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+              
+                
+                  
+                
+              
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+              
+                
+              
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/050-pow/" data-tooltip="LeetCode 50. Pow(x, n)">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
     </div>
     
     <div id="about">
@@ -1116,6 +987,32 @@ $(document).ready(function() {
 });
 </script>
 
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'https:\/\/www.orztu.com\/leetcode\/063-unique-paths-ii\/';
+          
+            this.page.identifier = '\/leetcode\/063-unique-paths-ii\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'orztu';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
 
 
 

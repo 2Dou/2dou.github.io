@@ -6,10 +6,53 @@
     <description>Recent content in Leetcodes on Orz the way</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 21 Nov 2018 15:27:28 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 22 Nov 2018 09:06:11 +0800</lastBuildDate>
     
 	<atom:link href="https://www.orztu.com/leetcode/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>LeetCode 63. Unique Paths II</title>
+      <link>https://www.orztu.com/leetcode/063-unique-paths-ii/</link>
+      <pubDate>Thu, 22 Nov 2018 09:06:11 +0800</pubDate>
+      
+      <guid>https://www.orztu.com/leetcode/063-unique-paths-ii/</guid>
+      <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/unique-paths-ii/&#34; target=&#34;_blank&#34;&gt;Unique Paths II&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;A robot is located at the top-left corner of a m x n grid (marked &amp;lsquo;Start&amp;rsquo; in the diagram below).&lt;/p&gt;
+
+&lt;p&gt;The robot can only move either down or right at any point in time. The robot is trying to reach the bottom-right corner of the grid (marked &amp;lsquo;Finish&amp;rsquo; in the diagram below).&lt;/p&gt;
+
+&lt;p&gt;Now consider if some obstacles are added to the grids. How many unique paths would there be?&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.orztu.com/images/leetcode/062-unique-paths-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;An obstacle and empty space is marked as 1 and 0 respectively in the grid.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; m and n will be at most 100.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Example 1:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Input:
+[
+  [0,0,0],
+  [0,1,0],
+  [0,0,0]
+]
+Output: 2
+Explanation:
+There is one obstacle in the middle of the 3x3 grid above.
+There are two ways to reach the bottom-right corner:
+1. Right -&amp;gt; Right -&amp;gt; Down -&amp;gt; Down
+2. Down -&amp;gt; Down -&amp;gt; Right -&amp;gt; Right
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>LeetCode 50. Pow(x, n)</title>
@@ -350,7 +393,9 @@ Output: [1,2,3,4,8,12,11,10,9,5,6,7]
 
 &lt;p&gt;How many possible unique paths are there?
 &lt;img src=&#34;https://www.orztu.com/images/leetcode/062-unique-paths-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;/blockquote&gt;</description>
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
