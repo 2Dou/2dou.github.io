@@ -671,59 +671,6 @@ A solution set is:
           <div class="media">
             
             <div class="media-body">
-              <a class="link-unstyled" href="https://www.orztu.com/post/tcp-learning/">
-                <h3 class="media-heading">Tcp Learning</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Nov 11, 2018
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather"><h2 id="连接-三次握手">连接：三次握手</h2>
-
-<ol>
-<li>A 向 B<code>Say Hello</code>，这时候 B 知道 A 想要连接</li>
-<li>B 应答<code>Say Hello</code>，表示接受连接</li>
-<li>A 应答：表示收到 B 的应答，可以开始通信啦</li>
-</ol>
-
-<p>为什么不是两次：</p>
-
-<p>因为网络不可靠，假设 A 的<code>Say Hello</code>绕路，到达 B 的时候 A 已经放弃或者已经连接上又断开了，甚至挂了，
-这时候 B 会认为 A 在向它发起连接请求，
-如果没有第三次握手，B 在应答这个请求之后就会误以为连接建立了，而其实 A 早已经跑了。</p>
-
-<p>而第三次应答在网络中也有可能丢失、绕路、B挂了，但是 A 只要发送了第三次握手就认为连接成功。
-如果第三次握手之后还需要 B 应答的话，按理又要对这个应答进行应答，就无休止了。</p>
-
-<p>大多数情况在第三次握手之后，A 会马上发送数据。如果第三次握手丢失，B 在收到数据之后仍可以认为连接成功。
-或者 B 挂了，A 在发送数据的时候会说到报错网络不可达。</p>
-
-<p>如果 A 建立连接之后不发送数据，B 可以通过 keepalive 机制把连接关闭。</p>
-
-<h2 id="序号-seq">序号 seq</h2>
-
-<p>三次握手除了建立连接，还要通知自己包的起始序号。</p>
-
-<p>这个序号通常是随这时间变化的，而不是每次从 1 开始。</p>
-
-<p>如果每次从 1 开始，很容易出现冲突：</p>
-
-<p>比如 A 第一次连接 B 之后发送了 1，2，3 三个包，但是 3 号包在网络可能绕路或者丢失重发。</p>
-
-<p>后来 A 又第二次连接 B ，发送了 1，2 两个包，如果这时候之前的 3 号包到达，就会被 B 认为是下一个包，导致出错。</p>
-
-<h2 id="断开-四次挥手">断开：四次挥手</h2>
-
-<p></p></div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
-          <div class="media">
-            
-            <div class="media-body">
               <a class="link-unstyled" href="https://www.orztu.com/post/lua-table-minify-ii/">
                 <h3 class="media-heading">使用元表优化 Lua 配置文件 II</h3>
               </a>
@@ -897,6 +844,44 @@ A solution set is:
             <hr>
           </div>
         
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://www.orztu.com/post/raspbian-install-and-configure/">
+                <h3 class="media-heading">树莓派 Raspbian系统安装与基本配置</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Oct 10, 2017
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><h2 id="系统安装-https-www-raspberrypi-org-documentation-installation-installing-images-readme-md"><a href="https://www.raspberrypi.org/documentation/installation/installing-images/README.md" target="_blank">系统安装</a></h2>
+
+<p>系统: <a href="https://www.raspberrypi.org/downloads/raspbian/" target="_blank">raspbian</a> <br/>
+工具（二选一）：</p>
+
+<ul>
+<li><a href="https://etcher.io/" target="_blank">Etcher</a></li>
+<li><a href="http://sourceforge.net/projects/win32diskimager/" target="_blank">Win32DiskImager</a>（windows only）</li>
+</ul>
+
+<ol>
+<li>将SD卡格式化成exFat格式</li>
+<li>使用Etcher或者Win32DiskImager将下载的raspbian系统镜像(img文件)写入SD卡</li>
+</ol>
+
+<p>写入完成之后就相当于系统安装完成了。这时候SD卡被分成两个区，有一个区是在windows下无法识别，不用理会。</p>
+
+<p>这时候如果直接将SD卡插入树莓派，会发现“无法启动”。显示屏没信号，在路由器里找到树莓派的IP也无法用ssh登录。</p>
+
+<p>我安装的时候就是踩到这个坑。以为安装失败，反复装了好几次，就差把SD卡写穿了。</p>
+
+<p></p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
       </div>
     </div>
     <div class="modal-footer">
@@ -904,7 +889,7 @@ A solution set is:
          data-message-zero="no post found"
          data-message-one="1 post found"
          data-message-other="{n} posts found">
-         14 posts found
+         13 posts found
       </p>
     </div>
   </div>

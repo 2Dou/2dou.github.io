@@ -8,11 +8,6 @@
   </url>
   
   <url>
-    <loc>https://www.orztu.com/post/tcp-learning/</loc>
-    <lastmod>2018-11-22T16:40:19+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://www.orztu.com/leetcode/064-minimum-path-sum/</loc>
     <lastmod>2018-11-22T14:44:37+08:00</lastmod>
   </url>
@@ -329,7 +324,7 @@
   
   <url>
     <loc>https://www.orztu.com/categories/coding-life/</loc>
-    <lastmod>2018-11-22T16:40:19+08:00</lastmod>
+    <lastmod>2018-11-20T09:53:28+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -438,12 +433,6 @@
   <url>
     <loc>https://www.orztu.com/tags/</loc>
     <lastmod>2018-08-02T09:47:52+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.orztu.com/tags/tcp/</loc>
-    <lastmod>2018-11-22T16:40:19+08:00</lastmod>
     <priority>0</priority>
   </url>
   

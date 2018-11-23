@@ -6,55 +6,10 @@
     <description>Recent content in Coding Life on Orz the way</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 22 Nov 2018 16:40:19 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 20 Nov 2018 09:53:28 +0800</lastBuildDate>
     
 	<atom:link href="https://www.orztu.com/categories/coding-life/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Tcp Learning</title>
-      <link>https://www.orztu.com/post/tcp-learning/</link>
-      <pubDate>Thu, 22 Nov 2018 16:40:19 +0800</pubDate>
-      
-      <guid>https://www.orztu.com/post/tcp-learning/</guid>
-      <description>&lt;h2 id=&#34;连接-三次握手&#34;&gt;连接：三次握手&lt;/h2&gt;
-
-&lt;ol&gt;
-&lt;li&gt;A 向 B&lt;code&gt;Say Hello&lt;/code&gt;，这时候 B 知道 A 想要连接&lt;/li&gt;
-&lt;li&gt;B 应答&lt;code&gt;Say Hello&lt;/code&gt;，表示接受连接&lt;/li&gt;
-&lt;li&gt;A 应答：表示收到 B 的应答，可以开始通信啦&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;为什么不是两次：&lt;/p&gt;
-
-&lt;p&gt;因为网络不可靠，假设 A 的&lt;code&gt;Say Hello&lt;/code&gt;绕路，到达 B 的时候 A 已经放弃或者已经连接上又断开了，甚至挂了，
-这时候 B 会认为 A 在向它发起连接请求，
-如果没有第三次握手，B 在应答这个请求之后就会误以为连接建立了，而其实 A 早已经跑了。&lt;/p&gt;
-
-&lt;p&gt;而第三次应答在网络中也有可能丢失、绕路、B挂了，但是 A 只要发送了第三次握手就认为连接成功。
-如果第三次握手之后还需要 B 应答的话，按理又要对这个应答进行应答，就无休止了。&lt;/p&gt;
-
-&lt;p&gt;大多数情况在第三次握手之后，A 会马上发送数据。如果第三次握手丢失，B 在收到数据之后仍可以认为连接成功。
-或者 B 挂了，A 在发送数据的时候会说到报错网络不可达。&lt;/p&gt;
-
-&lt;p&gt;如果 A 建立连接之后不发送数据，B 可以通过 keepalive 机制把连接关闭。&lt;/p&gt;
-
-&lt;h2 id=&#34;序号-seq&#34;&gt;序号 seq&lt;/h2&gt;
-
-&lt;p&gt;三次握手除了建立连接，还要通知自己包的起始序号。&lt;/p&gt;
-
-&lt;p&gt;这个序号通常是随这时间变化的，而不是每次从 1 开始。&lt;/p&gt;
-
-&lt;p&gt;如果每次从 1 开始，很容易出现冲突：&lt;/p&gt;
-
-&lt;p&gt;比如 A 第一次连接 B 之后发送了 1，2，3 三个包，但是 3 号包在网络可能绕路或者丢失重发。&lt;/p&gt;
-
-&lt;p&gt;后来 A 又第二次连接 B ，发送了 1，2 两个包，如果这时候之前的 3 号包到达，就会被 B 认为是下一个包，导致出错。&lt;/p&gt;
-
-&lt;h2 id=&#34;断开-四次挥手&#34;&gt;断开：四次挥手&lt;/h2&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
     
     <item>
       <title>LintCode 1630. Interesting String</title>
