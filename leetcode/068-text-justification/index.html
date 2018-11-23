@@ -7,20 +7,38 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="generator" content="Hugo 0.39 with theme Tranquilpeak 0.4.3-SNAPSHOT">
 <meta name="author" content="SelFree">
-<meta name="keywords" content=", program develop, leetcode, Golang, leetcode解答, 程序">
-<meta name="description" content="城市永远年轻，而我们终将老去">
+<meta name="keywords" content="LeetCode, 算法, LeetCode解答, program develop, leetcode, Golang, leetcode解答, 程序">
+<meta name="description" content="LeetCode 68. Text Justification - Answer LeetCode编程练习解答">
 
 
-<meta property="og:description" content="城市永远年轻，而我们终将老去">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Leetcodes">
-<meta name="twitter:title" content="Leetcodes">
-<meta property="og:url" content="https://www.orztu.com/leetcode/">
-<meta property="twitter:url" content="https://www.orztu.com/leetcode/">
+<meta property="og:description" content="LeetCode 68. Text Justification - Answer LeetCode编程练习解答">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LeetCode 68. Text Justification">
+<meta name="twitter:title" content="LeetCode 68. Text Justification">
+<meta property="og:url" content="https://www.orztu.com/leetcode/068-text-justification/">
+<meta property="twitter:url" content="https://www.orztu.com/leetcode/068-text-justification/">
 <meta property="og:site_name" content="Orz the way">
-<meta property="og:description" content="城市永远年轻，而我们终将老去">
-<meta name="twitter:description" content="城市永远年轻，而我们终将老去">
+<meta property="og:description" content="LeetCode 68. Text Justification - Answer LeetCode编程练习解答">
+<meta name="twitter:description" content="LeetCode 68. Text Justification - Answer LeetCode编程练习解答">
 <meta property="og:locale" content="en-us">
+
+  
+    <meta property="article:published_time" content="2018-11-23T14:26:13">
+  
+  
+    <meta property="article:modified_time" content="2018-11-23T14:26:13">
+  
+  
+  
+    
+      <meta property="article:section" content="LeetCode">
+    
+  
+  
+    
+      <meta property="article:tag" content="LeetCode">
+    
+  
 
 
 <meta name="twitter:card" content="summary">
@@ -39,22 +57,20 @@
   <meta property="twitter:image" content="https://www.gravatar.com/avatar/f47b51d6d6b82fd9048e3eaf64bf7e69?s=640">
 
 
-    <title>Leetcodes | 
+    <title>LeetCode 68. Text Justification | 
         Orz the way
       
     </title>
     <meta name="author" content="SelFree">
-    <meta name="keywords" content=", program develop, leetcode, Golang, leetcode解答, 程序">
+    <meta name="keywords" content="LeetCode, 算法, LeetCode解答, program develop, leetcode, Golang, leetcode解答, 程序">
     
 
     <link rel="icon" href="https://www.orztu.com/images/favicon.ico">
     
-      <link rel="alternate" type="application/rss+xml" title="RSS" href="https://www.orztu.com/leetcode/index.xml">
-    
 
     
 
-    <link rel="canonical" href="https://www.orztu.com/leetcode/">
+    <link rel="canonical" href="https://www.orztu.com/leetcode/068-text-justification/">
 
     
     <link rel="stylesheet" href="//cdnjs.cat.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
@@ -75,7 +91,7 @@
 
   <body>
     <div id="blog">
-      <header id="header" data-behavior="1">
+      <header id="header" data-behavior="4">
   <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
   <div class="header-title">
     <a class="header-title-link" href="https://www.orztu.com/">Orz the way</a>
@@ -95,7 +111,7 @@
   
 </header>
 
-      <nav id="sidebar" data-behavior="1">
+      <nav id="sidebar" data-behavior="4">
   <div class="sidebar-container">
     
       <div class="sidebar-profile">
@@ -229,46 +245,30 @@
 
       
 
-      <div id="main" data-behavior="1"
+      <div id="main" data-behavior="4"
         class="
                hasCoverMetaIn
                ">
-        <div id="topToolbar">Fixed at the top of the Toolbar.</div>
-        <section class="postShorten-group main-content-wrap">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
           
           
-            
+            <div class="post-header main-content-wrap text-left">
   
-    
-      
-        
-      
-    
+    <h1 class="post-title" itemprop="headline">
+      LeetCode 68. Text Justification
+    </h1>
   
-
-
   
-
-<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.orztu.com/leetcode/058-length-of-last-word/">
-          LeetCode 58. Length of Last Word
-        </a>
-      </h1>
-      
   <div class="postShorten-meta-bg">
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2018-11-16T08:35:56&#43;08:00">
+      <time itemprop="datePublished" datetime="2018-11-23T14:26:13&#43;08:00">
         
   
   
   
   
-    2018-11-16
+    2018-11-23
   
 
       </time>
@@ -286,764 +286,262 @@
   </div>
 
 
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      
-        <h2 id="description">Description</h2>
-
-<p><a href="https://leetcode.com/problems/length-of-last-word/" target="_blank">Length of Last Word</a></p>
-
-<blockquote>
-<p>Given a string s consists of upper/lower-case alphabets and empty space characters &lsquo; &lsquo;, return the length of last word in the string.</p>
-
-<p>If the last word does not exist, return 0.</p>
-
-<p><strong>Note:</strong> A word is defined as a character sequence consists of non-space characters only.</p>
-
-<p><strong>Example:</strong></p>
-
-<pre><code>Input: &quot;Hello World&quot;
-Output: 5
-</code></pre>
-</blockquote>
-
-<p></p>
-      
-      <p>
-        <a href="https://www.orztu.com/leetcode/058-length-of-last-word/" class="postShorten-excerpt_link link">Read More</a>
-
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
+</div>
 
           
-            
-  
-    
-      
-        
-      
-    
-  
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <h2 id="description">Description</h2>
 
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.orztu.com/leetcode/057-insert-interval/">
-          LeetCode 57. Insert Interval
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta-bg">
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2018-11-15T16:31:58&#43;08:00">
-        
-  
-  
-  
-  
-    2018-11-15
-  
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://www.orztu.com/categories/leetcode">LeetCode</a>
-    
-  
-
-  </div>
-  </div>
-
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      
-        <h2 id="description">Description</h2>
-
-<p><a href="https://leetcode.com/problems/insert-interval" target="_blank">Insert Interval</a></p>
+<p><a href="https://leetcode.com/problems/text-justification/" target="_blank">Text Justification</a></p>
 
 <blockquote>
-<p>Given a set of non-overlapping intervals, insert a new interval into the intervals (merge if necessary).</p>
+<p>Given an array of words and a width maxWidth, format the text such that each line has exactly maxWidth characters and is fully (left and right) justified.</p>
 
-<p>You may assume that the intervals were initially sorted according to their start times.</p>
+<p>You should pack your words in a greedy approach; that is, pack as many words as you can in each line. Pad extra spaces <code>' '</code> when necessary so that each line has exactly maxWidth characters.</p>
 
-<p><strong>Example 1:</strong></p>
+<p>Extra spaces between words should be distributed as evenly as possible. If the number of spaces on a line do not divide evenly between words, the empty slots on the left will be assigned more spaces than the slots on the right.</p>
 
-<pre><code>Input: intervals = [[1,3],[6,9]], newInterval = [2,5]
-Output: [[1,5],[6,9]]
-</code></pre>
-
-<p><strong>Example 2:</strong></p>
-
-<pre><code>Input: intervals = [[1,2],[3,5],[6,7],[8,10],[12,16]], newInterval = [4,8]
-Output: [[1,2],[3,10],[12,16]]
-Explanation: Because the new interval [4,8] overlaps with [3,5],[6,7],[8,10].
-</code></pre>
-</blockquote>
-
-<p></p>
-      
-      <p>
-        <a href="https://www.orztu.com/leetcode/057-insert-interval/" class="postShorten-excerpt_link link">Read More</a>
-
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-          
-            
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.orztu.com/leetcode/056-merge-intervals/">
-          LeetCode 56. Merge Intervals
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta-bg">
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2018-11-15T14:49:19&#43;08:00">
-        
-  
-  
-  
-  
-    2018-11-15
-  
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://www.orztu.com/categories/leetcode">LeetCode</a>
-    
-  
-
-  </div>
-  </div>
-
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      
-        <h2 id="description">Description</h2>
-
-<p><a href="https://leetcode.com/problems/merge-intervals" target="_blank">Merge Intervals</a></p>
-
-<blockquote>
-<p>Given a collection of intervals, merge all overlapping intervals.</p>
-
-<p><strong>Example 1:</strong></p>
-
-<pre><code>Input: [[1,3],[2,6],[8,10],[15,18]]
-Output: [[1,6],[8,10],[15,18]]
-Explanation: Since intervals [1,3] and [2,6] overlaps, merge them into [1,6].
-</code></pre>
-
-<p><strong>Example 2:</strong></p>
-
-<pre><code>Input: [[1,4],[4,5]]
-Output: [[1,5]]
-Explanation: Intervals [1,4] and [4,5] are considerred overlapping.
-</code></pre>
-</blockquote>
-
-<p></p>
-      
-      <p>
-        <a href="https://www.orztu.com/leetcode/056-merge-intervals/" class="postShorten-excerpt_link link">Read More</a>
-
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-          
-            
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.orztu.com/leetcode/055-jump-game/">
-          LeetCode 55. Jump Game
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta-bg">
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2018-11-15T11:29:11&#43;08:00">
-        
-  
-  
-  
-  
-    2018-11-15
-  
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://www.orztu.com/categories/leetcode">LeetCode</a>
-    
-  
-
-  </div>
-  </div>
-
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      
-        <h2 id="description">Description</h2>
-
-<p><a href="https://leetcode.com/problems/jump-game/" target="_blank">Jump Game</a></p>
-
-<blockquote>
-<p>Given an array of non-negative integers, you are initially positioned at the first index of the array.</p>
-
-<p>Each element in the array represents your maximum jump length at that position.</p>
-
-<p>Determine if you are able to reach the last index.</p>
-
-<p><strong>Example 1:</strong></p>
-
-<pre><code>Input: [2,3,1,1,4]
-Output: true
-Explanation: Jump 1 step from index 0 to 1, then 3 steps to the last index.
-</code></pre>
-
-<p><strong>Example 2:</strong></p>
-
-<pre><code>Input: [3,2,1,0,4]
-Output: false
-Explanation: You will always arrive at index 3 no matter what. Its maximum
-             jump length is 0, which makes it impossible to reach the last index.
-</code></pre>
-</blockquote>
-
-<p></p>
-      
-      <p>
-        <a href="https://www.orztu.com/leetcode/055-jump-game/" class="postShorten-excerpt_link link">Read More</a>
-
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-          
-            
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.orztu.com/leetcode/054-spiral-matrix/">
-          LeetCode 54. Spiral Matrix
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta-bg">
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2018-11-15T10:43:41&#43;08:00">
-        
-  
-  
-  
-  
-    2018-11-15
-  
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://www.orztu.com/categories/leetcode">LeetCode</a>
-    
-  
-
-  </div>
-  </div>
-
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      
-        <h2 id="description">Description</h2>
-
-<p><a href="https://leetcode.com/problems/spiral-matrix/" target="_blank">Spiral Matrix</a></p>
-
-<blockquote>
-<p>Given a matrix of m x n elements (m rows, n columns), return all elements of the matrix in spiral order.</p>
-
-<p><strong>Example 1:</strong></p>
-
-<pre><code>Input:
-[
- [ 1, 2, 3 ],
- [ 4, 5, 6 ],
- [ 7, 8, 9 ]
-]
-Output: [1,2,3,6,9,8,7,4,5]
-</code></pre>
-
-<p><strong>Example 2:</strong></p>
-
-<pre><code>Input:
-[
-  [1, 2, 3, 4],
-  [5, 6, 7, 8],
-  [9,10,11,12]
-]
-Output: [1,2,3,4,8,12,11,10,9,5,6,7]
-</code></pre>
-</blockquote>
-
-<p></p>
-      
-      <p>
-        <a href="https://www.orztu.com/leetcode/054-spiral-matrix/" class="postShorten-excerpt_link link">Read More</a>
-
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-          
-            
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.orztu.com/leetcode/062-unique-paths/">
-          LeetCode 62. Unique Paths
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta-bg">
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2018-09-10T14:43:03&#43;08:00">
-        
-  
-  
-  
-  
-    2018-09-10
-  
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://www.orztu.com/categories/leetcode">LeetCode</a>
-    
-  
-
-  </div>
-  </div>
-
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      
-        <h2 id="description">Description</h2>
-
-<p><a href="https://leetcode.com/problems/unique-paths/" target="_blank">Unique Paths</a></p>
-
-<blockquote>
-<p>A robot is located at the top-left corner of a m x n grid (marked &lsquo;Start&rsquo; in the diagram below).</p>
-
-<p>The robot can only move either down or right at any point in time. The robot is trying to reach the bottom-right corner of the grid (marked &lsquo;Finish&rsquo; in the diagram below).</p>
-
-<p>How many possible unique paths are there?
-<img src="https://www.orztu.com/images/leetcode/062-unique-paths-1.png" alt="" /></p>
-</blockquote>
-
-<p></p>
-      
-      <p>
-        <a href="https://www.orztu.com/leetcode/062-unique-paths/" class="postShorten-excerpt_link link">Read More</a>
-
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-          
-            
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.orztu.com/leetcode/041-first-missing-positive/">
-          LeetCode 41. First Missing Positive
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta-bg">
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2018-07-27T08:59:07&#43;08:00">
-        
-  
-  
-  
-  
-    2018-07-27
-  
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://www.orztu.com/categories/leetcode">LeetCode</a>
-    
-  
-
-  </div>
-  </div>
-
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      
-        <p><a href="https://leetcode.com/problems/first-missing-positive/" target="_blank">First Missing Positive</a></p>
-
-<h2 id="description">Description</h2>
-
-<blockquote>
-<p>Given an unsorted integer array, find the smallest missing positive integer.</p>
-
-<p><strong>Example 1:</strong></p>
-
-<pre><code>Input: [1,2,0]
-Output: 3
-</code></pre>
-
-<p><strong>Example 2:</strong></p>
-
-<pre><code>Input: [3,4,-1,1]
-Output: 2
-</code></pre>
-
-<p><strong>Example 3:</strong></p>
-
-<pre><code>Input: [7,8,9,11,12]
-Output: 1
-</code></pre>
+<p>For the last line of text, it should be left justified and no <strong>extra</strong> space is inserted between words.</p>
 
 <p><strong>Note:</strong></p>
 
 <ul>
-<li>Your algorithm should run in O(n) time and uses constant extra space.</li>
+<li>A word is defined as a character sequence consisting of non-space characters only.</li>
+<li>Each word&rsquo;s length is guaranteed to be greater than 0 and not exceed maxWidth.</li>
+<li>The input array words contains at least one word.</li>
 </ul>
 </blockquote>
 
 <p></p>
-      
-      <p>
-        <a href="https://www.orztu.com/leetcode/041-first-missing-positive/" class="postShorten-excerpt_link link">Read More</a>
-
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-          
-            
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.orztu.com/leetcode/043-multiply-strings/">
-          LeetCode 43. Multiply Strings
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta-bg">
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2018-07-26T15:35:19&#43;08:00">
-        
-  
-  
-  
-  
-    2018-07-26
-  
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://www.orztu.com/categories/leetcode">LeetCode</a>
-    
-  
-
-  </div>
-  </div>
-
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      
-        <p><a href="https://leetcode.com/problems/multiply-strings/" target="_blank">Multiply Strings</a></p>
-
-<h2 id="description">Description</h2>
 
 <blockquote>
-<p>Given two non-negative integers <code>num1</code> and <code>num2</code> represented as strings, return the product of <code>num1</code> and <code>num2</code>, also represented as a string.</p>
-
 <p><strong>Example 1:</strong></p>
 
-<p>Input: num1 = &ldquo;2&rdquo;, num2 = &ldquo;3&rdquo;
-Output: &ldquo;6&rdquo;</p>
+<pre><code>Input:
+words = [&quot;This&quot;, &quot;is&quot;, &quot;an&quot;, &quot;example&quot;, &quot;of&quot;, &quot;text&quot;, &quot;justification.&quot;]
+maxWidth = 16
+Output:
+[
+   &quot;This    is    an&quot;,
+   &quot;example  of text&quot;,
+   &quot;justification.  &quot;
+]
+</code></pre>
 
 <p><strong>Example 2:</strong></p>
 
-<p>Input: num1 = &ldquo;123&rdquo;, num2 = &ldquo;456&rdquo;
-Output: &ldquo;56088&rdquo;</p>
+<pre><code>Input:
+words = [&quot;What&quot;,&quot;must&quot;,&quot;be&quot;,&quot;acknowledgment&quot;,&quot;shall&quot;,&quot;be&quot;]
+maxWidth = 16
+Output:
+[
+  &quot;What   must   be&quot;,
+  &quot;acknowledgment  &quot;,
+  &quot;shall be        &quot;
+]
+Explanation: Note that the last line is &quot;shall be    &quot; instead of &quot;shall     be&quot;,
+             because the last line must be left-justified instead of fully-justified.
+             Note that the second line is also left-justified becase it contains only one word.
+</code></pre>
+
+<p><strong>Example 3:</strong></p>
+
+<pre><code>Input:
+words = [&quot;Science&quot;,&quot;is&quot;,&quot;what&quot;,&quot;we&quot;,&quot;understand&quot;,&quot;well&quot;,&quot;enough&quot;,&quot;to&quot;,&quot;explain&quot;,
+         &quot;to&quot;,&quot;a&quot;,&quot;computer.&quot;,&quot;Art&quot;,&quot;is&quot;,&quot;everything&quot;,&quot;else&quot;,&quot;we&quot;,&quot;do&quot;]
+maxWidth = 20
+Output:
+[
+  &quot;Science  is  what we&quot;,
+  &quot;understand      well&quot;,
+  &quot;enough to explain to&quot;,
+  &quot;a  computer.  Art is&quot;,
+  &quot;everything  else  we&quot;,
+  &quot;do                  &quot;
+]
+</code></pre>
 </blockquote>
 
-<p></p>
-      
-      <p>
-        <a href="https://www.orztu.com/leetcode/043-multiply-strings/" class="postShorten-excerpt_link link">Read More</a>
+<h2 id="solution">Solution</h2>
 
-        
-      </p>
-    </div>
-  </div>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-golang" data-lang="golang"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">func</span> <span class="nx">fullJustify</span><span class="p">(</span><span class="nx">words</span> <span class="p">[]</span><span class="kt">string</span><span class="p">,</span> <span class="nx">maxWidth</span> <span class="kt">int</span><span class="p">)</span> <span class="p">[]</span><span class="kt">string</span> <span class="p">{</span>
+    <span class="nx">buildLine</span> <span class="o">:=</span> <span class="kd">func</span><span class="p">(</span><span class="nx">end</span><span class="p">,</span> <span class="nx">lineLen</span> <span class="kt">int</span><span class="p">)</span> <span class="kt">string</span> <span class="p">{</span>
+        <span class="c1">// 只有一个单词
+</span><span class="c1"></span>        <span class="k">if</span> <span class="nx">end</span> <span class="o">==</span> <span class="mi">1</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="nx">words</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="nx">strings</span><span class="p">.</span><span class="nx">Repeat</span><span class="p">(</span><span class="s">&#34; &#34;</span><span class="p">,</span> <span class="nx">maxWidth</span><span class="o">-</span><span class="nx">lineLen</span><span class="p">)</span>
+        <span class="p">}</span>
+
+        <span class="nx">space</span> <span class="o">:=</span> <span class="nx">maxWidth</span> <span class="o">-</span> <span class="nx">lineLen</span>
+        <span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">space</span> <span class="p">&gt;</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">space</span><span class="o">--</span> <span class="p">{</span>
+            <span class="nx">words</span><span class="p">[</span><span class="nx">i</span><span class="o">%</span><span class="p">(</span><span class="nx">end</span><span class="o">-</span><span class="mi">1</span><span class="p">)]</span> <span class="o">+=</span> <span class="s">&#34; &#34;</span>
+            <span class="nx">i</span><span class="o">++</span>
+        <span class="p">}</span>
+
+        <span class="k">return</span> <span class="nx">strings</span><span class="p">.</span><span class="nx">Join</span><span class="p">(</span><span class="nx">words</span><span class="p">[:</span><span class="nx">end</span><span class="p">],</span> <span class="s">&#34;&#34;</span><span class="p">)</span>
+    <span class="p">}</span>
+
+    <span class="nx">result</span> <span class="o">:=</span> <span class="p">[]</span><span class="kt">string</span><span class="p">{}</span>
+    <span class="nx">curLen</span><span class="p">,</span> <span class="nx">wordLen</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="nx">words</span><span class="p">);</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
+        <span class="nx">wordLen</span> <span class="p">=</span> <span class="nb">len</span><span class="p">(</span><span class="nx">words</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span>
+
+        <span class="c1">// i 表示单词个数减一，等于单词之间单个空格数量
+</span><span class="c1"></span>        <span class="k">if</span> <span class="nx">i</span><span class="o">+</span><span class="nx">curLen</span><span class="o">+</span><span class="nx">wordLen</span> <span class="p">&gt;</span> <span class="nx">maxWidth</span> <span class="p">{</span>
+            <span class="nx">result</span> <span class="p">=</span> <span class="nb">append</span><span class="p">(</span><span class="nx">result</span><span class="p">,</span> <span class="nx">buildLine</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span> <span class="nx">curLen</span><span class="p">))</span>
+            <span class="nx">i</span><span class="p">,</span> <span class="nx">curLen</span><span class="p">,</span> <span class="nx">words</span> <span class="p">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">wordLen</span><span class="p">,</span> <span class="nx">words</span><span class="p">[</span><span class="nx">i</span><span class="p">:]</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="nx">curLen</span> <span class="o">+=</span> <span class="nx">wordLen</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="c1">// build last line
+</span><span class="c1"></span>    <span class="nx">lastLine</span> <span class="o">:=</span> <span class="nx">strings</span><span class="p">.</span><span class="nx">Join</span><span class="p">(</span><span class="nx">words</span><span class="p">,</span> <span class="s">&#34; &#34;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="nx">lastLine</span><span class="p">)</span> <span class="p">&lt;</span> <span class="nx">maxWidth</span> <span class="p">{</span>
+        <span class="nx">lastLine</span> <span class="o">+=</span> <span class="nx">strings</span><span class="p">.</span><span class="nx">Repeat</span><span class="p">(</span><span class="s">&#34; &#34;</span><span class="p">,</span> <span class="nx">maxWidth</span><span class="o">-</span><span class="nb">len</span><span class="p">(</span><span class="nx">lastLine</span><span class="p">))</span>
+    <span class="p">}</span>
+
+    <span class="nx">result</span> <span class="p">=</span> <span class="nb">append</span><span class="p">(</span><span class="nx">result</span><span class="p">,</span> <span class="nx">lastLine</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="nx">result</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+              
+              
+
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://www.orztu.com/tags/leetcode/">LeetCode</a>
+
+
+                  </div>
+                
+              
+            
+            <div class="post-actions-wrap">
   
-</article>
-
+      <nav >
+        <ul class="post-actions post-action-nav">
           
+            <li class="post-action">
+              
+              
+                
+                  
+                
+              
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+              
+                
+              
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/066-and-067/" data-tooltip="LeetCode 66. Plus One &amp; 67. Add Binary">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
           
-
-<nav class="blog-pagination">
-    <ul class="pagination-b justify-content-center">
-        
-        
-        <li class="page-item">
-            <a class="page-link" href="https://www.orztu.com/leetcode/" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
         </li>
         
-        <li class="page-item ">
-            <a class="page-link" href="https://www.orztu.com/leetcode/" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
         </li>
+      
+      <li class="post-action">
         
+          <a class="post-action-btn btn btn--default" href="#">
         
-        
-            
-            
-            
-            
-                
-                
-            
-            
-                <li class="page-item ">
-                    <a class="page-link" href="https://www.orztu.com/leetcode/">1</a>
-                </li>
-            
-        
-            
-            
-            
-            
-                
-                
-            
-            
-                <li class="page-item active disabled">
-                    <a class="page-link" href="https://www.orztu.com/leetcode/page/2/">2</a>
-                </li>
-            
-        
-            
-            
-            
-            
-                
-                
-            
-            
-                <li class="page-item ">
-                    <a class="page-link" href="https://www.orztu.com/leetcode/page/3/">3</a>
-                </li>
-            
-        
-            
-            
-            
-            
-                
-                
-            
-            
-                <li class="page-item disabled">
-                    <span class="page-link" aria-hidden="true">&hellip;</span>
-                </li>
-            
-        
-            
-            
-            
-            
-                
-                
-            
-            
-        
-            
-            
-            
-            
-                
-                
-            
-            
-                <li class="page-item ">
-                    <a class="page-link" href="https://www.orztu.com/leetcode/page/6/">6</a>
-                </li>
-            
-        
-        
-        <li class="page-item ">
-            <a class="page-link" href="https://www.orztu.com/leetcode/page/3/" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
-        </li>
-        
-        <li class="page-item">
-            <a class="page-link" href="https://www.orztu.com/leetcode/page/6/" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
-        </li>
-        
-        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
     </ul>
-</nav>
+  
+</div>
 
-        </section>
+            
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the comments</noscript>
+</div>
+
+              
+            
+          </div>
+        </article>
         <footer id="footer" class="main-content-wrap">
   <span class="copyrights">
     &copy; 2018 SelFree. All Rights Reserved
@@ -1051,6 +549,76 @@ Output: &ldquo;56088&rdquo;</p>
 </footer>
 
       </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+              
+                
+                  
+                
+              
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+              
+                
+              
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/066-and-067/" data-tooltip="LeetCode 66. Plus One &amp; 67. Add Binary">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
     </div>
     
     <div id="about">
@@ -1394,6 +962,32 @@ $(document).ready(function() {
 });
 </script>
 
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'https:\/\/www.orztu.com\/leetcode\/068-text-justification\/';
+          
+            this.page.identifier = '\/leetcode\/068-text-justification\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'orztu';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
 
 
 

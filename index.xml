@@ -21,6 +21,37 @@
     </item>
     
     <item>
+      <title>LeetCode 68. Text Justification</title>
+      <link>https://www.orztu.com/leetcode/068-text-justification/</link>
+      <pubDate>Fri, 23 Nov 2018 14:26:13 +0800</pubDate>
+      
+      <guid>https://www.orztu.com/leetcode/068-text-justification/</guid>
+      <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/text-justification/&#34; target=&#34;_blank&#34;&gt;Text Justification&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Given an array of words and a width maxWidth, format the text such that each line has exactly maxWidth characters and is fully (left and right) justified.&lt;/p&gt;
+
+&lt;p&gt;You should pack your words in a greedy approach; that is, pack as many words as you can in each line. Pad extra spaces &lt;code&gt;&#39; &#39;&lt;/code&gt; when necessary so that each line has exactly maxWidth characters.&lt;/p&gt;
+
+&lt;p&gt;Extra spaces between words should be distributed as evenly as possible. If the number of spaces on a line do not divide evenly between words, the empty slots on the left will be assigned more spaces than the slots on the right.&lt;/p&gt;
+
+&lt;p&gt;For the last line of text, it should be left justified and no &lt;strong&gt;extra&lt;/strong&gt; space is inserted between words.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;A word is defined as a character sequence consisting of non-space characters only.&lt;/li&gt;
+&lt;li&gt;Each word&amp;rsquo;s length is guaranteed to be greater than 0 and not exceed maxWidth.&lt;/li&gt;
+&lt;li&gt;The input array words contains at least one word.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>LeetCode 66. Plus One &amp; 67. Add Binary</title>
       <link>https://www.orztu.com/leetcode/066-and-067/</link>
       <pubDate>Fri, 23 Nov 2018 09:54:07 +0800</pubDate>
