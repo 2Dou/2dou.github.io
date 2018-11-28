@@ -21,6 +21,44 @@
     </item>
     
     <item>
+      <title>LeetCode 74. Search a 2D Matrix</title>
+      <link>https://www.orztu.com/leetcode/074-search-a-2d-matrix/</link>
+      <pubDate>Wed, 28 Nov 2018 15:07:51 +0800</pubDate>
+      
+      <guid>https://www.orztu.com/leetcode/074-search-a-2d-matrix/</guid>
+      <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/search-a-2d-matrix/&#34; target=&#34;_blank&#34;&gt;Search a 2D Matrix&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Write an efficient algorithm that searches for a value in an m x n matrix. This matrix has the following properties:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Integers in each row are sorted from left to right.&lt;/li&gt;
+&lt;li&gt;The first integer of each row is greater than the last integer of the previous row.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Example 1:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Input:
+matrix = [
+  [1,   3,  5,  7],
+  [10, 11, 16, 20],
+  [23, 30, 34, 50]
+]
+
+target = 3
+Output: true
+
+target = 13
+Output: false
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>LeetCode 73. Set Matrix Zeroes</title>
       <link>https://www.orztu.com/leetcode/073-set-matrix-zeroes/</link>
       <pubDate>Wed, 28 Nov 2018 14:33:12 +0800</pubDate>
