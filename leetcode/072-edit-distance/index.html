@@ -8,25 +8,25 @@
 <meta name="generator" content="Hugo 0.39 with theme Tranquilpeak 0.4.3-SNAPSHOT">
 <meta name="author" content="SelFree">
 <meta name="keywords" content="LeetCode, 算法, LeetCode解答, 动态规划, program develop, leetcode, Golang, leetcode解答, 程序">
-<meta name="description" content="LeetCode 70. Climbing Stairs - Answer LeetCode编程练习解答">
+<meta name="description" content="LeetCode 72. Edit Distance - Answer LeetCode编程练习解答">
 
 
-<meta property="og:description" content="LeetCode 70. Climbing Stairs - Answer LeetCode编程练习解答">
+<meta property="og:description" content="LeetCode 72. Edit Distance - Answer LeetCode编程练习解答">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LeetCode 70. Climbing Stairs">
-<meta name="twitter:title" content="LeetCode 70. Climbing Stairs">
-<meta property="og:url" content="https://www.orztu.com/leetcode/070-climbing-stairs/">
-<meta property="twitter:url" content="https://www.orztu.com/leetcode/070-climbing-stairs/">
+<meta property="og:title" content="LeetCode 72. Edit Distance">
+<meta name="twitter:title" content="LeetCode 72. Edit Distance">
+<meta property="og:url" content="https://www.orztu.com/leetcode/072-edit-distance/">
+<meta property="twitter:url" content="https://www.orztu.com/leetcode/072-edit-distance/">
 <meta property="og:site_name" content="Orz the way">
-<meta property="og:description" content="LeetCode 70. Climbing Stairs - Answer LeetCode编程练习解答">
-<meta name="twitter:description" content="LeetCode 70. Climbing Stairs - Answer LeetCode编程练习解答">
+<meta property="og:description" content="LeetCode 72. Edit Distance - Answer LeetCode编程练习解答">
+<meta name="twitter:description" content="LeetCode 72. Edit Distance - Answer LeetCode编程练习解答">
 <meta property="og:locale" content="en-us">
 
   
-    <meta property="article:published_time" content="2018-11-26T09:11:58">
+    <meta property="article:published_time" content="2018-11-27T10:51:41">
   
   
-    <meta property="article:modified_time" content="2018-11-26T09:11:58">
+    <meta property="article:modified_time" content="2018-11-27T10:51:41">
   
   
   
@@ -59,7 +59,7 @@
   <meta property="twitter:image" content="https://www.gravatar.com/avatar/f47b51d6d6b82fd9048e3eaf64bf7e69?s=640">
 
 
-    <title>LeetCode 70. Climbing Stairs | 
+    <title>LeetCode 72. Edit Distance | 
         Orz the way
       
     </title>
@@ -72,7 +72,7 @@
 
     
 
-    <link rel="canonical" href="https://www.orztu.com/leetcode/070-climbing-stairs/">
+    <link rel="canonical" href="https://www.orztu.com/leetcode/072-edit-distance/">
 
     
     <link rel="stylesheet" href="//cdnjs.cat.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
@@ -257,20 +257,20 @@
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title" itemprop="headline">
-      LeetCode 70. Climbing Stairs
+      LeetCode 72. Edit Distance
     </h1>
   
   
   <div class="postShorten-meta-bg">
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2018-11-26T09:11:58&#43;08:00">
+      <time itemprop="datePublished" datetime="2018-11-27T10:51:41&#43;08:00">
         
   
   
   
   
-    2018-11-26
+    2018-11-27
   
 
       </time>
@@ -295,50 +295,73 @@
             <div class="main-content-wrap">
               <h2 id="description">Description</h2>
 
-<p><a href="https://leetcode.com/problems/climbing-stairs/" target="_blank">Climbing Stairs</a></p>
+<p><a href="https://leetcode.com/problems/edit-distance/" target="_blank">Edit Distance</a></p>
 
 <blockquote>
-<p>You are climbing a stair case. It takes n steps to reach to the top.</p>
+<p>Given two words word1 and word2, find the minimum number of operations required to convert word1 to word2.</p>
 
-<p>Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?</p>
+<p>You have the following 3 operations permitted on a word:</p>
 
-<p><strong>Note:</strong> Given n will be a positive integer.</p>
+<ol>
+<li>Insert a character</li>
+<li>Delete a character</li>
+<li>Replace a character</li>
+</ol>
 
 <p><strong>Example 1:</strong></p>
 
-<pre><code>Input: 2
-Output: 2
-Explanation: There are two ways to climb to the top.
-1. 1 step + 1 step
-2. 2 steps
+<pre><code>Input: word1 = &quot;horse&quot;, word2 = &quot;ros&quot;
+Output: 3
+Explanation:
+horse -&gt; rorse (replace 'h' with 'r')
+rorse -&gt; rose (remove 'r')
+rose -&gt; ros (remove 'e')
 </code></pre>
 
 <p><strong>Example 2:</strong></p>
 
-<pre><code>Input: 3
-Output: 3
-Explanation: There are three ways to climb to the top.
-1. 1 step + 1 step + 1 step
-2. 1 step + 2 steps
-3. 2 steps + 1 step
+<pre><code>Input: word1 = &quot;intention&quot;, word2 = &quot;execution&quot;
+Output: 5
+Explanation:
+intention -&gt; inention (remove 't')
+inention -&gt; enention (replace 'i' with 'e')
+enention -&gt; exention (replace 'n' with 'x')
+exention -&gt; exection (replace 'n' with 'c')
+exection -&gt; execution (insert 'u')
 </code></pre>
 </blockquote>
 
 <p></p>
 
-<p>好像网上讲动态规划经常举例的题目。</p>
-
-<p>爬楼梯，可以一次爬一格或者两格，问有多少中不同的方式爬到顶。</p>
-
 <h2 id="solution">Solution</h2>
 
-<p>与<a href="https://www.orztu.com/leetcode/063-unique-paths-ii/" target="_blank">《63. Unique Paths II》</a>非常相似。</p>
+<p>设最短距离方法为<code>f</code>：</p>
 
-<p>到达第<code>n</code>格可以通过第<code>n-1</code>格爬一格和第<code>n-2</code>格爬两格，两种方式达到。</p>
+<pre><code>反推：
 
-<p>所以有：$$ f(n) = f(n-1) + f(n-2) $$</p>
+f(&quot;horse&quot;, &quot;ros&quot;) = 1 + min(f(&quot;hors&quot;, &quot;ros&quot;), // 删除 hors[e]
+                            f(&quot;horse&quot;, &quot;ro&quot;), // 插入 ro[s]
+                            f(&quot;hors&quot;, &quot;ro&quot;))  // 替换 hors[e] ro[s]
 
-<h3 id="动态规划-dynamic-programming">动态规划（Dynamic Programming）</h3>
+f(&quot;hors&quot;, &quot;ros&quot;) = 1 + min(f(&quot;hor&quot;, &quot;ros&quot;), // 删除 hor[s]
+                           f(&quot;hors&quot;, &quot;ro&quot;), // 插入 ro[s]
+                           f(&quot;hor&quot;, &quot;ro&quot;))  // 替换 hor[s] ro[s]
+...
+
+特殊情况和边界条件：
+如果最后一个字符相同，则不用操作，distance = 0
+如果其中一个字符串为空，则 distance = 另一个字符串长度
+</code></pre>
+
+<p>解释：</p>
+
+<ul>
+<li>删除<code>hors[e]</code>：通过<code>f(&quot;hors&quot;, &quot;ros&quot;)</code>将<code>hors</code>变成<code>ros</code>，则有<code>rose</code>删除最后一位得到<code>ros</code></li>
+<li>插入<code>ro[s]</code>：通过<code>f(&quot;horse&quot;, &quot;ro&quot;)</code>将<code>horse</code>变成<code>ro</code>，则插入一位<code>s</code>得到<code>ros</code></li>
+<li>替换<code>替换 hors[e] ro[s]</code>：通过<code>f(&quot;hors&quot;, &quot;ro&quot;)</code>将<code>hors</code>变成<code>ro</code>，则有<code>roe</code>替换最后一位得到<code>ros</code></li>
+</ul>
+
+<h3 id="递归-recursive">递归（Recursive）</h3>
 
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -357,27 +380,103 @@ Explanation: There are three ways to climb to the top.
 </span><span class="lnt">13
 </span><span class="lnt">14
 </span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">func</span> <span class="nx">climbStairs</span><span class="p">(</span><span class="nx">n</span> <span class="kt">int</span><span class="p">)</span> <span class="kt">int</span> <span class="p">{</span>
-    <span class="nx">steps</span> <span class="o">:=</span> <span class="p">[]</span><span class="kt">int</span><span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">}</span>
-    <span class="k">if</span> <span class="nx">n</span> <span class="o">&lt;=</span> <span class="mi">2</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="nx">steps</span><span class="p">[</span><span class="nx">n</span><span class="p">]</span>
+<pre class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">func</span> <span class="nx">min</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span> <span class="kt">int</span><span class="p">)</span> <span class="kt">int</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="nx">a</span> <span class="p">&lt;</span> <span class="nx">b</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nx">a</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="nx">b</span>
+<span class="p">}</span>
+<span class="kd">func</span> <span class="nx">min3</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">,</span> <span class="nx">c</span> <span class="kt">int</span><span class="p">)</span> <span class="kt">int</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">min</span><span class="p">(</span><span class="nx">min</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">),</span> <span class="nx">c</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nx">minDistance</span><span class="p">(</span><span class="nx">word1</span><span class="p">,</span> <span class="nx">word2</span> <span class="kt">string</span><span class="p">)</span> <span class="kt">int</span> <span class="p">{</span>
+    <span class="nx">w1</span><span class="p">,</span> <span class="nx">w2</span> <span class="o">:=</span> <span class="p">[]</span><span class="nb">byte</span><span class="p">(</span><span class="nx">word1</span><span class="p">),</span> <span class="p">[]</span><span class="nb">byte</span><span class="p">(</span><span class="nx">word2</span><span class="p">)</span>
+
+    <span class="nx">l1</span><span class="p">,</span> <span class="nx">l2</span> <span class="o">:=</span> <span class="nb">len</span><span class="p">(</span><span class="nx">w1</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="nx">w2</span><span class="p">)</span>
+
+    <span class="nx">cache</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">([][]</span><span class="kt">int</span><span class="p">,</span> <span class="nx">l1</span><span class="p">)</span>
+    <span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="nx">l1</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
+        <span class="nx">cache</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="p">=</span> <span class="nb">make</span><span class="p">([]</span><span class="kt">int</span><span class="p">,</span> <span class="nx">l2</span><span class="p">)</span>
     <span class="p">}</span>
 
-    <span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">2</span><span class="p">;</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="nx">n</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
-        <span class="c1">// tmp := steps[2]
-</span><span class="c1"></span>        <span class="c1">// steps[2] = steps[1] + steps[2]
-</span><span class="c1"></span>        <span class="c1">// steps[1] = tmp
-</span><span class="c1"></span>        <span class="nx">steps</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="nx">steps</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="p">=</span> <span class="nx">steps</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="nx">steps</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="nx">steps</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+    <span class="kd">var</span> <span class="nx">solve</span> <span class="kd">func</span><span class="p">(</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="p">)</span> <span class="kt">int</span>
+    <span class="nx">solve</span> <span class="p">=</span> <span class="kd">func</span><span class="p">(</span><span class="nx">l1</span><span class="p">,</span> <span class="nx">l2</span> <span class="kt">int</span><span class="p">)</span> <span class="kt">int</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="nx">l1</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">||</span> <span class="nx">l2</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="nx">l1</span> <span class="o">+</span> <span class="nx">l2</span>
+        <span class="p">}</span>
+
+        <span class="nx">idx1</span><span class="p">,</span> <span class="nx">idx2</span> <span class="o">:=</span> <span class="nx">l1</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="nx">l2</span><span class="o">-</span><span class="mi">1</span>
+
+        <span class="k">if</span> <span class="nx">cache</span><span class="p">[</span><span class="nx">idx1</span><span class="p">][</span><span class="nx">idx2</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">1</span> <span class="p">{</span>
+            <span class="c1">// 缓存减一后返回
+</span><span class="c1"></span>            <span class="k">return</span> <span class="nx">cache</span><span class="p">[</span><span class="nx">idx1</span><span class="p">][</span><span class="nx">idx2</span><span class="p">]</span> <span class="o">-</span> <span class="mi">1</span>
+        <span class="p">}</span>
+
+        <span class="kd">var</span> <span class="nx">r</span> <span class="kt">int</span>
+        <span class="k">if</span> <span class="nx">w1</span><span class="p">[</span><span class="nx">idx1</span><span class="p">]</span> <span class="o">==</span> <span class="nx">w2</span><span class="p">[</span><span class="nx">idx2</span><span class="p">]</span> <span class="p">{</span>
+            <span class="c1">// 末位相等
+</span><span class="c1"></span>            <span class="nx">r</span> <span class="p">=</span> <span class="nx">solve</span><span class="p">(</span><span class="nx">l1</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="nx">l2</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+
+            <span class="nx">r</span> <span class="p">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="nx">min3</span><span class="p">(</span><span class="nx">solve</span><span class="p">(</span><span class="nx">l1</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="nx">l2</span><span class="p">),</span> <span class="c1">// 删除
+</span><span class="c1"></span>                <span class="nx">solve</span><span class="p">(</span><span class="nx">l1</span><span class="p">,</span> <span class="nx">l2</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span>   <span class="c1">// 插入
+</span><span class="c1"></span>                <span class="nx">solve</span><span class="p">(</span><span class="nx">l1</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="nx">l2</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span> <span class="c1">// 替换
+</span><span class="c1"></span>        <span class="p">}</span>
+
+        <span class="c1">// 避免需要初始化成`-1`
+</span><span class="c1"></span>        <span class="c1">// 加一后缓存
+</span><span class="c1"></span>        <span class="nx">cache</span><span class="p">[</span><span class="nx">idx1</span><span class="p">][</span><span class="nx">idx2</span><span class="p">]</span> <span class="p">=</span> <span class="nx">r</span> <span class="o">+</span> <span class="mi">1</span>
+
+        <span class="k">return</span> <span class="nx">r</span>
     <span class="p">}</span>
 
-    <span class="k">return</span> <span class="nx">steps</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+    <span class="k">return</span> <span class="nx">solve</span><span class="p">(</span><span class="nx">l1</span><span class="p">,</span> <span class="nx">l2</span><span class="p">)</span>
 <span class="p">}</span></code></pre></td></tr></table>
 </div>
 </div>
 
-<h3 id="递归-recursive">递归（Recursive）</h3>
+<h3 id="动态规划-dynamic-programming">动态规划（Dynamic Programming）</h3>
 
 <p><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -397,32 +496,56 @@ Explanation: There are three ways to climb to the top.
 </span><span class="lnt">14
 </span><span class="lnt">15
 </span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">func</span> <span class="nx">climbStairs</span><span class="p">(</span><span class="nx">n</span> <span class="kt">int</span><span class="p">)</span> <span class="kt">int</span> <span class="p">{</span>
-    <span class="c1">// f(n) = f(n-1) + f(n-2)
-</span><span class="c1"></span>    <span class="c1">// f(n-1) = f(n-2) + f(n-3)
-</span><span class="c1"></span>    <span class="c1">// 为了避免计算两次f(n-2) 增加缓存
-</span><span class="c1"></span>    <span class="nx">m</span> <span class="o">:=</span> <span class="kd">map</span><span class="p">[</span><span class="kt">int</span><span class="p">]</span><span class="kt">int</span><span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="mi">2</span><span class="p">}</span>
+<pre class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">func</span> <span class="nx">minDistance</span><span class="p">(</span><span class="nx">word1</span> <span class="kt">string</span><span class="p">,</span> <span class="nx">word2</span> <span class="kt">string</span><span class="p">)</span> <span class="kt">int</span> <span class="p">{</span>
+    <span class="nx">l1</span><span class="p">,</span> <span class="nx">l2</span> <span class="o">:=</span> <span class="nb">len</span><span class="p">(</span><span class="nx">word1</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="nx">word2</span><span class="p">)</span>
 
-    <span class="kd">var</span> <span class="nx">solve</span> <span class="kd">func</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="kt">int</span>
-    <span class="nx">solve</span> <span class="p">=</span> <span class="kd">func</span><span class="p">(</span><span class="nx">n</span> <span class="kt">int</span><span class="p">)</span> <span class="kt">int</span> <span class="p">{</span>
-        <span class="k">if</span> <span class="nx">num</span><span class="p">,</span> <span class="nx">ok</span> <span class="o">:=</span> <span class="nx">m</span><span class="p">[</span><span class="nx">n</span><span class="p">];</span> <span class="nx">ok</span> <span class="p">{</span>
-            <span class="k">return</span> <span class="nx">num</span>
-        <span class="p">}</span>
-        <span class="nx">m</span><span class="p">[</span><span class="nx">n</span><span class="p">]</span> <span class="p">=</span> <span class="nx">solve</span><span class="p">(</span><span class="nx">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="nx">solve</span><span class="p">(</span><span class="nx">n</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
-        <span class="k">return</span> <span class="nx">m</span><span class="p">[</span><span class="nx">n</span><span class="p">]</span>
+    <span class="k">if</span> <span class="nx">l1</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">||</span> <span class="nx">l2</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nx">l1</span> <span class="o">+</span> <span class="nx">l2</span>
     <span class="p">}</span>
-    <span class="k">return</span> <span class="nx">solve</span><span class="p">(</span><span class="nx">n</span><span class="p">)</span>
+
+    <span class="nx">matrix</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">([][]</span><span class="kt">int</span><span class="p">,</span> <span class="nx">l1</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;=</span> <span class="nx">l1</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
+        <span class="nx">matrix</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="p">=</span> <span class="nb">make</span><span class="p">([]</span><span class="kt">int</span><span class="p">,</span> <span class="nx">l2</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+        <span class="nx">matrix</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="p">=</span> <span class="nx">i</span>
+    <span class="p">}</span>
+    <span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;=</span> <span class="nx">l2</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
+        <span class="nx">matrix</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="nx">i</span><span class="p">]</span> <span class="p">=</span> <span class="nx">i</span>
+    <span class="p">}</span>
+
+    <span class="nx">w1</span><span class="p">,</span> <span class="nx">w2</span> <span class="o">:=</span> <span class="p">[]</span><span class="nb">byte</span><span class="p">(</span><span class="nx">word1</span><span class="p">),</span> <span class="p">[]</span><span class="nb">byte</span><span class="p">(</span><span class="nx">word2</span><span class="p">)</span>
+    <span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;=</span> <span class="nx">l1</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
+        <span class="k">for</span> <span class="nx">j</span> <span class="o">:=</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">j</span> <span class="o">&lt;=</span> <span class="nx">l2</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="nx">w1</span><span class="p">[</span><span class="nx">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="nx">w2</span><span class="p">[</span><span class="nx">j</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="p">{</span>
+                <span class="nx">matrix</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="nx">j</span><span class="p">]</span> <span class="p">=</span> <span class="nx">matrix</span><span class="p">[</span><span class="nx">i</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="nx">j</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                <span class="nx">matrix</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="nx">j</span><span class="p">]</span> <span class="p">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="nx">min3</span><span class="p">(</span><span class="nx">matrix</span><span class="p">[</span><span class="nx">i</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="nx">j</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span>
+                                <span class="nx">matrix</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="nx">j</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span>
+                                <span class="nx">matrix</span><span class="p">[</span><span class="nx">i</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="nx">j</span><span class="p">])</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="nx">matrix</span><span class="p">[</span><span class="nx">l1</span><span class="p">][</span><span class="nx">l2</span><span class="p">]</span>
 <span class="p">}</span></code></pre></td></tr></table>
 </div>
 </div></p>
-
-<h2 id="similar-problem">Similar Problem</h2>
-
-<ul>
-<li><a href="https://www.orztu.com/leetcode/063-unique-paths-ii/" target="_blank">63. Unique Paths II</a></li>
-</ul>
               
               
 
@@ -456,7 +579,7 @@ Explanation: There are three ways to climb to the top.
                 
               
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/072-edit-distance/" data-tooltip="LeetCode 72. Edit Distance">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/073-set-matrix-zeroes/" data-tooltip="LeetCode 73. Set Matrix Zeroes">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -468,7 +591,7 @@ Explanation: There are three ways to climb to the top.
                 
               
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/069-sqrt-x/" data-tooltip="LeetCode 69. Sqrt(x)">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/070-climbing-stairs/" data-tooltip="LeetCode 70. Climbing Stairs">
               
                   <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                   <i class="fa fa-angle-right"></i>
@@ -533,7 +656,7 @@ Explanation: There are three ways to climb to the top.
                 
               
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/072-edit-distance/" data-tooltip="LeetCode 72. Edit Distance">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/073-set-matrix-zeroes/" data-tooltip="LeetCode 73. Set Matrix Zeroes">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -545,7 +668,7 @@ Explanation: There are three ways to climb to the top.
                 
               
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/069-sqrt-x/" data-tooltip="LeetCode 69. Sqrt(x)">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/070-climbing-stairs/" data-tooltip="LeetCode 70. Climbing Stairs">
               
                   <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                   <i class="fa fa-angle-right"></i>
@@ -937,9 +1060,9 @@ $(document).ready(function() {
     
       <script>
         var disqus_config = function () {
-          this.page.url = 'https:\/\/www.orztu.com\/leetcode\/070-climbing-stairs\/';
+          this.page.url = 'https:\/\/www.orztu.com\/leetcode\/072-edit-distance\/';
           
-            this.page.identifier = '\/leetcode\/070-climbing-stairs\/'
+            this.page.identifier = '\/leetcode\/072-edit-distance\/'
           
         };
         (function() {
@@ -959,20 +1082,6 @@ $(document).ready(function() {
     
   
 
-
-  <script type="text/javascript" async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_CHTML-full" integrity="sha256-GhM+5JHb6QUzOQPXSJLEWP7R73CbkisjzK5Eyij4U9w=" crossorigin="anonymous"></script>
-  <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-      CommonHTML: { linebreaks: { automatic: true } },
-      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-      tex2jax: {
-        inlineMath: [ ['$', '$'], ['((','))'] ],
-        displayMath: [ ['$$','$$'], ['\\[', '\\]'] ],
-        processEscapes: true
-      },
-      messageStyle: 'none'
-    });
-  </script>
 
 
 
