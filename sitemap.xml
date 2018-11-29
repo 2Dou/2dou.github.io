@@ -8,6 +8,11 @@
   </url>
   
   <url>
+    <loc>https://www.orztu.com/leetcode/075-sort-colors/</loc>
+    <lastmod>2018-11-29T10:50:23+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.orztu.com/leetcode/074-search-a-2d-matrix/</loc>
     <lastmod>2018-11-28T15:07:51+08:00</lastmod>
   </url>
@@ -389,19 +394,19 @@
   
   <url>
     <loc>https://www.orztu.com/tags/leetcode/</loc>
-    <lastmod>2018-11-28T15:07:51+08:00</lastmod>
+    <lastmod>2018-11-29T10:50:23+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.orztu.com/categories/leetcode/</loc>
-    <lastmod>2018-11-28T15:07:51+08:00</lastmod>
+    <lastmod>2018-11-29T10:50:23+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.orztu.com/leetcode/</loc>
-    <lastmod>2018-11-28T15:07:51+08:00</lastmod>
+    <lastmod>2018-11-29T10:50:23+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -564,6 +569,12 @@
   <url>
     <loc>https://www.orztu.com/tags/%E6%8E%92%E5%88%97/</loc>
     <lastmod>2018-11-19T10:52:29+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.orztu.com/tags/%E6%8E%92%E5%BA%8F/</loc>
+    <lastmod>2018-11-29T10:50:23+08:00</lastmod>
     <priority>0</priority>
   </url>
   

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>排序 on Orz the way</title>
+    <link>https://www.orztu.com/tags/%E6%8E%92%E5%BA%8F/</link>
+    <description>Recent content in 排序 on Orz the way</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 29 Nov 2018 10:50:23 +0800</lastBuildDate>
+    
+	<atom:link href="https://www.orztu.com/tags/%E6%8E%92%E5%BA%8F/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>LeetCode 75. Sort Colors</title>
+      <link>https://www.orztu.com/leetcode/075-sort-colors/</link>
+      <pubDate>Thu, 29 Nov 2018 10:50:23 +0800</pubDate>
+      
+      <guid>https://www.orztu.com/leetcode/075-sort-colors/</guid>
+      <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/sort-colors/&#34; target=&#34;_blank&#34;&gt;Sort Colors&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Given an array with n objects colored red, white or blue, sort them in-place so that objects of the same color are adjacent, with the colors in the order red, white and blue.&lt;/p&gt;
+
+&lt;p&gt;Here, we will use the integers &lt;code&gt;0&lt;/code&gt;, &lt;code&gt;1&lt;/code&gt;, and &lt;code&gt;2&lt;/code&gt; to represent the color &lt;code&gt;red&lt;/code&gt;, &lt;code&gt;white&lt;/code&gt;, and &lt;code&gt;blue&lt;/code&gt; respectively.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; You are not suppose to use the library&amp;rsquo;s sort function for this problem.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Example:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Input: [2,0,2,1,1,0]
+Output: [0,0,1,1,2,2]
+Follow up:
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;A rather straight forward solution is a two-pass algorithm using counting sort.&lt;br&gt;
+First, iterate the array counting number of 0&amp;rsquo;s, 1&amp;rsquo;s, and 2&amp;rsquo;s, then overwrite array with total number of 0&amp;rsquo;s, then 1&amp;rsquo;s and followed by 2&amp;rsquo;s.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Could you come up with a one-pass algorithm using only constant space?&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
