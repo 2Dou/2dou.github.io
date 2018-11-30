@@ -21,6 +21,36 @@
     </item>
     
     <item>
+      <title>LeetCode 76. Minimum Window Substring</title>
+      <link>https://www.orztu.com/leetcode/076-minimum-window-substring/</link>
+      <pubDate>Fri, 30 Nov 2018 10:53:51 +0800</pubDate>
+      
+      <guid>https://www.orztu.com/leetcode/076-minimum-window-substring/</guid>
+      <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/minimum-window-substring/&#34; target=&#34;_blank&#34;&gt;Minimum Window Substring&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Given a string S and a string T, find the minimum window in S which will contain all the characters in T in complexity O(n).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Example:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Input: S = &amp;quot;ADOBECODEBANC&amp;quot;, T = &amp;quot;ABC&amp;quot;
+Output: &amp;quot;BANC&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;If there is no such window in S that covers all characters in T, return the empty string &amp;ldquo;&amp;rdquo;.&lt;/li&gt;
+&lt;li&gt;If there is such window, you are guaranteed that there will always be only one unique minimum window in S.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>LeetCode 75. Sort Colors</title>
       <link>https://www.orztu.com/leetcode/075-sort-colors/</link>
       <pubDate>Thu, 29 Nov 2018 10:50:23 +0800</pubDate>
