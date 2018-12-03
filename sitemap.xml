@@ -8,6 +8,11 @@
   </url>
   
   <url>
+    <loc>https://www.orztu.com/leetcode/077-combinations/</loc>
+    <lastmod>2018-12-03T08:56:03+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.orztu.com/leetcode/076-minimum-window-substring/</loc>
     <lastmod>2018-11-30T10:53:51+08:00</lastmod>
   </url>
@@ -399,19 +404,19 @@
   
   <url>
     <loc>https://www.orztu.com/tags/leetcode/</loc>
-    <lastmod>2018-11-30T10:53:51+08:00</lastmod>
+    <lastmod>2018-12-03T08:56:03+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.orztu.com/categories/leetcode/</loc>
-    <lastmod>2018-11-30T10:53:51+08:00</lastmod>
+    <lastmod>2018-12-03T08:56:03+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.orztu.com/leetcode/</loc>
-    <lastmod>2018-11-30T10:53:51+08:00</lastmod>
+    <lastmod>2018-12-03T08:56:03+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -610,6 +615,12 @@
   <url>
     <loc>https://www.orztu.com/tags/%E7%9F%A9%E9%98%B5/</loc>
     <lastmod>2018-11-28T15:07:51+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.orztu.com/tags/%E7%BB%84%E5%90%88/</loc>
+    <lastmod>2018-12-03T08:56:03+08:00</lastmod>
     <priority>0</priority>
   </url>
   
