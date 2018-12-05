@@ -7,26 +7,26 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="generator" content="Hugo 0.39 with theme Tranquilpeak 0.4.3-SNAPSHOT">
 <meta name="author" content="SelFree">
-<meta name="keywords" content="LeetCode, 算法, LeetCode解答, 组合, Combinations, program develop, leetcode, Golang, leetcode解答, 程序">
-<meta name="description" content="LeetCode 77. Combinations - Answer LeetCode编程练习解答">
+<meta name="keywords" content="LeetCode, 算法, LeetCode解答, 集合, 位运算, 子集, program develop, leetcode, Golang, leetcode解答, 程序">
+<meta name="description" content="LeetCode 78. Subsets - Answer LeetCode编程练习解答">
 
 
-<meta property="og:description" content="LeetCode 77. Combinations - Answer LeetCode编程练习解答">
+<meta property="og:description" content="LeetCode 78. Subsets - Answer LeetCode编程练习解答">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LeetCode 77. Combinations">
-<meta name="twitter:title" content="LeetCode 77. Combinations">
-<meta property="og:url" content="https://www.orztu.com/leetcode/077-combinations/">
-<meta property="twitter:url" content="https://www.orztu.com/leetcode/077-combinations/">
+<meta property="og:title" content="LeetCode 78. Subsets">
+<meta name="twitter:title" content="LeetCode 78. Subsets">
+<meta property="og:url" content="https://www.orztu.com/leetcode/078-subsets/">
+<meta property="twitter:url" content="https://www.orztu.com/leetcode/078-subsets/">
 <meta property="og:site_name" content="Orz the way">
-<meta property="og:description" content="LeetCode 77. Combinations - Answer LeetCode编程练习解答">
-<meta name="twitter:description" content="LeetCode 77. Combinations - Answer LeetCode编程练习解答">
+<meta property="og:description" content="LeetCode 78. Subsets - Answer LeetCode编程练习解答">
+<meta name="twitter:description" content="LeetCode 78. Subsets - Answer LeetCode编程练习解答">
 <meta property="og:locale" content="en-us">
 
   
-    <meta property="article:published_time" content="2018-12-03T08:56:03">
+    <meta property="article:published_time" content="2018-12-05T11:03:48">
   
   
-    <meta property="article:modified_time" content="2018-12-03T08:56:03">
+    <meta property="article:modified_time" content="2018-12-05T11:03:48">
   
   
   
@@ -38,7 +38,9 @@
     
       <meta property="article:tag" content="LeetCode">
     
-      <meta property="article:tag" content="组合">
+      <meta property="article:tag" content="集合">
+    
+      <meta property="article:tag" content="位运算">
     
   
 
@@ -59,12 +61,12 @@
   <meta property="twitter:image" content="https://www.gravatar.com/avatar/f47b51d6d6b82fd9048e3eaf64bf7e69?s=640">
 
 
-    <title>LeetCode 77. Combinations | 
+    <title>LeetCode 78. Subsets | 
         Orz the way
       
     </title>
     <meta name="author" content="SelFree">
-    <meta name="keywords" content="LeetCode, 算法, LeetCode解答, 组合, Combinations, program develop, leetcode, Golang, leetcode解答, 程序">
+    <meta name="keywords" content="LeetCode, 算法, LeetCode解答, 集合, 位运算, 子集, program develop, leetcode, Golang, leetcode解答, 程序">
     
 
     <link rel="icon" href="https://www.orztu.com/images/favicon.ico">
@@ -72,7 +74,7 @@
 
     
 
-    <link rel="canonical" href="https://www.orztu.com/leetcode/077-combinations/">
+    <link rel="canonical" href="https://www.orztu.com/leetcode/078-subsets/">
 
     
     <link rel="stylesheet" href="//cdnjs.cat.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
@@ -257,20 +259,20 @@
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title" itemprop="headline">
-      LeetCode 77. Combinations
+      LeetCode 78. Subsets
     </h1>
   
   
   <div class="postShorten-meta-bg">
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2018-12-03T08:56:03&#43;08:00">
+      <time itemprop="datePublished" datetime="2018-12-05T11:03:48&#43;08:00">
         
   
   
   
   
-    2018-12-03
+    2018-12-05
   
 
       </time>
@@ -295,31 +297,65 @@
             <div class="main-content-wrap">
               <h2 id="description">Description</h2>
 
-<p><a href="https://leetcode.com/problems/combinations/" target="_blank">Combinations</a></p>
+<p><a href="https://leetcode.com/problems/subsets/" target="_blank">Subsets</a></p>
 
 <blockquote>
-<p>Given two integers n and k, return all possible combinations of k numbers out of 1 &hellip; n.</p>
+<p>Given a set of distinct integers, nums, return all possible subsets (the power set).</p>
+
+<p><strong>Note:</strong> The solution set must not contain duplicate subsets.</p>
 
 <p><strong>Example:</strong></p>
 
-<pre><code>Input: n = 4, k = 2
-Output:
-[
-  [2,4],
-  [3,4],
-  [2,3],
-  [1,2],
-  [1,3],
-  [1,4],
-]
+<pre><code>&gt; Input: nums = [1,2,3]
+&gt; Output:
+&gt; [
+&gt;   [3],
+&gt;   [1],
+&gt;   [2],
+&gt;   [1,2,3],
+&gt;   [1,3],
+&gt;   [2,3],
+&gt;   [1,2],
+&gt;   []
+&gt; ]
 </code></pre>
 </blockquote>
 
 <p></p>
 
+<p>求所有子集（幂集），包含一个空集。</p>
+
 <h2 id="solution">Solution</h2>
 
-<p><code>224 ms, faster than 97.50%</code></p>
+<h3 id="回溯-backtracking">回溯（Backtracking）</h3>
+
+<p>与上一题<a href="https://www.orztu.com/leetcode/077-combinations/" target="_blank">《LeetCode 77. Combinations》</a>
+的思路相似</p>
+
+<p>可以递归回溯，分别找出<code>k</code>从<code>0-&gt;len(nums)</code>的所有组合。</p>
+
+<h3 id="位运算-bit-manipulation">位运算（Bit Manipulation）</h3>
+
+<p>设长度<code>l = len(nums)</code>，设有一个<code>l</code>位二进制数<code>flag</code>，每一位对应<code>nums</code>中的一个数字。</p>
+
+<p>如果这一位为<code>1</code>，表示对应数字显示；为<code>0</code>表示隐藏。</p>
+
+<p>那么<code>flag</code>的所有二进制组合可以对应<code>nums</code>的所有子集</p>
+
+<p>很容易得到：$ flag \in [0, 2^l) $</p>
+
+<pre><code># 比如题目中的例子：
+nums = [1, 2, 3]
+
+when flag=0 b(000) =&gt; []
+when flag=1 b(001) =&gt; [ ,  , 3]
+when flag=2 b(010) =&gt; [ , 2,  ]
+when flag=3 b(011) =&gt; [ , 2, 3]
+when flag=4 b(100) =&gt; [1,  ,  ]
+when flag=5 b(101) =&gt; [1,  , 3]
+when flag=6 b(110) =&gt; [1, 2,  ]
+when flag=7 b(111) =&gt; [1, 2, 3]
+</code></pre>
 
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -352,70 +388,34 @@ Output:
 </span><span class="lnt">27
 </span><span class="lnt">28
 </span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span><span class="lnt">32
-</span><span class="lnt">33
-</span><span class="lnt">34
-</span><span class="lnt">35
-</span><span class="lnt">36
-</span><span class="lnt">37
-</span><span class="lnt">38
-</span><span class="lnt">39
-</span><span class="lnt">40
-</span><span class="lnt">41
-</span><span class="lnt">42
-</span><span class="lnt">43
-</span><span class="lnt">44
-</span><span class="lnt">45
-</span><span class="lnt">46
-</span><span class="lnt">47
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">func</span> <span class="nx">combine</span><span class="p">(</span><span class="nx">n</span> <span class="kt">int</span><span class="p">,</span> <span class="nx">k</span> <span class="kt">int</span><span class="p">)</span> <span class="p">[][]</span><span class="kt">int</span> <span class="p">{</span>
+<pre class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">func</span> <span class="nx">subsets</span><span class="p">(</span><span class="nx">nums</span> <span class="p">[]</span><span class="kt">int</span><span class="p">)</span> <span class="p">[][]</span><span class="kt">int</span> <span class="p">{</span>
+    <span class="nx">l</span> <span class="o">:=</span> <span class="nb">len</span><span class="p">(</span><span class="nx">nums</span><span class="p">)</span>
+
+    <span class="c1">// power: 2^l
+</span><span class="c1"></span>    <span class="nx">n</span> <span class="o">:=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="nb">uint</span><span class="p">(</span><span class="nx">l</span><span class="p">)</span>
+
     <span class="nx">result</span> <span class="o">:=</span> <span class="p">[][]</span><span class="kt">int</span><span class="p">{}</span>
 
-    <span class="c1">// C(n, k)
-</span><span class="c1"></span>    <span class="nx">minK</span> <span class="o">:=</span> <span class="nx">k</span>
-    <span class="k">if</span> <span class="nx">n</span><span class="o">-</span><span class="nx">k</span> <span class="p">&lt;</span> <span class="nx">minK</span> <span class="p">{</span>
-        <span class="nx">minK</span> <span class="p">=</span> <span class="nx">n</span> <span class="o">-</span> <span class="nx">k</span>
-    <span class="p">}</span>
-    <span class="nx">p</span><span class="p">,</span> <span class="nx">c</span> <span class="o">:=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span>
-    <span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="nx">minK</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
-        <span class="nx">c</span> <span class="o">*=</span> <span class="nx">minK</span> <span class="o">-</span> <span class="nx">i</span>
-        <span class="nx">p</span> <span class="o">*=</span> <span class="nx">n</span> <span class="o">-</span> <span class="nx">i</span>
-    <span class="p">}</span>
-    <span class="nx">c</span> <span class="p">=</span> <span class="nx">p</span> <span class="o">/</span> <span class="nx">c</span>
+    <span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="nx">n</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
+        <span class="c1">// each bit means a number in []nums
+</span><span class="c1"></span>        <span class="c1">// if the bit is 1, the number is visible
+</span><span class="c1"></span>        <span class="c1">// else the number is invisible
+</span><span class="c1"></span>        <span class="nx">flag</span> <span class="o">:=</span> <span class="nx">i</span>
 
-    <span class="c1">// 一次性申请内存，+k额外用于递归时存放
-</span><span class="c1"></span>    <span class="nx">memo</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">([]</span><span class="kt">int</span><span class="p">,</span> <span class="nx">c</span><span class="o">*</span><span class="nx">k</span><span class="o">+</span><span class="nx">k</span><span class="p">)</span>
-
-    <span class="c1">// 前面k个用于递归时使用，结果从第k+1个开始
-</span><span class="c1"></span>    <span class="nx">start</span> <span class="o">:=</span> <span class="nx">k</span>
-
-    <span class="kd">var</span> <span class="nx">solve</span> <span class="kd">func</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span> <span class="nx">kk</span> <span class="kt">int</span><span class="p">)</span>
-    <span class="nx">solve</span> <span class="p">=</span> <span class="kd">func</span><span class="p">(</span><span class="nx">it</span><span class="p">,</span> <span class="nx">kk</span> <span class="kt">int</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">if</span> <span class="nx">kk</span> <span class="o">==</span> <span class="nx">k</span><span class="o">-</span><span class="mi">1</span> <span class="p">{</span>
-            <span class="k">for</span> <span class="nx">it</span> <span class="p">&lt;</span> <span class="nx">n</span> <span class="p">{</span>
-                <span class="nx">it</span><span class="o">++</span>
-                <span class="nx">memo</span><span class="p">[</span><span class="nx">kk</span><span class="p">]</span> <span class="p">=</span> <span class="nx">it</span>
-
-                <span class="nx">r</span> <span class="o">:=</span> <span class="nx">memo</span><span class="p">[</span><span class="nx">start</span> <span class="p">:</span> <span class="nx">start</span><span class="o">+</span><span class="nx">k</span><span class="p">]</span>
-                <span class="nb">copy</span><span class="p">(</span><span class="nx">r</span><span class="p">,</span> <span class="nx">memo</span><span class="p">)</span>
-                <span class="nx">result</span> <span class="p">=</span> <span class="nb">append</span><span class="p">(</span><span class="nx">result</span><span class="p">,</span> <span class="nx">r</span><span class="p">)</span>
-
-                <span class="nx">start</span> <span class="o">+=</span> <span class="nx">k</span>
+        <span class="nx">r</span> <span class="o">:=</span> <span class="p">[]</span><span class="kt">int</span><span class="p">{}</span>
+        <span class="k">for</span> <span class="nx">j</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">j</span> <span class="p">&lt;</span> <span class="nx">l</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span> <span class="p">{</span>
+            <span class="c1">// check if this number visible
+</span><span class="c1"></span>            <span class="k">if</span> <span class="nx">flag</span><span class="o">&amp;</span><span class="mh">0x01</span> <span class="p">&gt;</span> <span class="mi">0</span> <span class="p">{</span>
+                <span class="nx">r</span> <span class="p">=</span> <span class="nb">append</span><span class="p">(</span><span class="nx">r</span><span class="p">,</span> <span class="nx">nums</span><span class="p">[</span><span class="nx">j</span><span class="p">])</span>
             <span class="p">}</span>
-        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-            <span class="k">for</span> <span class="nx">it</span> <span class="p">&lt;</span> <span class="nx">n</span> <span class="p">{</span>
-                <span class="nx">it</span><span class="o">++</span>
-                <span class="nx">memo</span><span class="p">[</span><span class="nx">kk</span><span class="p">]</span> <span class="p">=</span> <span class="nx">it</span>
-                <span class="nx">solve</span><span class="p">(</span><span class="nx">it</span><span class="p">,</span> <span class="nx">kk</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
-            <span class="p">}</span>
+            <span class="c1">// right-shift
+</span><span class="c1"></span>            <span class="nx">flag</span> <span class="o">&gt;&gt;=</span> <span class="mi">1</span>
         <span class="p">}</span>
-    <span class="p">}</span>
 
-    <span class="nx">solve</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="nx">result</span> <span class="p">=</span> <span class="nb">append</span><span class="p">(</span><span class="nx">result</span><span class="p">,</span> <span class="nx">r</span><span class="p">)</span>
+    <span class="p">}</span>
 
     <span class="k">return</span> <span class="nx">result</span>
 <span class="p">}</span></code></pre></td></tr></table>
@@ -436,7 +436,9 @@ Output:
                     
   <a class="tag tag--primary tag--small" href="https://www.orztu.com/tags/leetcode/">LeetCode</a>
 
-  <a class="tag tag--primary tag--small" href="https://www.orztu.com/tags/%E7%BB%84%E5%90%88/">组合</a>
+  <a class="tag tag--primary tag--small" href="https://www.orztu.com/tags/%E9%9B%86%E5%90%88/">集合</a>
+
+  <a class="tag tag--primary tag--small" href="https://www.orztu.com/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/">位运算</a>
 
 
                   </div>
@@ -451,10 +453,8 @@ Output:
             <li class="post-action">
               
               
-                
               
-              
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/078-subsets/" data-tooltip="LeetCode 78. Subsets">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -466,7 +466,7 @@ Output:
                 
               
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/076-minimum-window-substring/" data-tooltip="LeetCode 76. Minimum Window Substring">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/077-combinations/" data-tooltip="LeetCode 77. Combinations">
               
                   <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                   <i class="fa fa-angle-right"></i>
@@ -528,10 +528,8 @@ Output:
             <li class="post-action">
               
               
-                
               
-              
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/078-subsets/" data-tooltip="LeetCode 78. Subsets">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -543,7 +541,7 @@ Output:
                 
               
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/076-minimum-window-substring/" data-tooltip="LeetCode 76. Minimum Window Substring">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/077-combinations/" data-tooltip="LeetCode 77. Combinations">
               
                   <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                   <i class="fa fa-angle-right"></i>
@@ -935,9 +933,9 @@ $(document).ready(function() {
     
       <script>
         var disqus_config = function () {
-          this.page.url = 'https:\/\/www.orztu.com\/leetcode\/077-combinations\/';
+          this.page.url = 'https:\/\/www.orztu.com\/leetcode\/078-subsets\/';
           
-            this.page.identifier = '\/leetcode\/077-combinations\/'
+            this.page.identifier = '\/leetcode\/078-subsets\/'
           
         };
         (function() {
@@ -957,6 +955,20 @@ $(document).ready(function() {
     
   
 
+
+  <script type="text/javascript" async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_CHTML-full" integrity="sha256-GhM+5JHb6QUzOQPXSJLEWP7R73CbkisjzK5Eyij4U9w=" crossorigin="anonymous"></script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      CommonHTML: { linebreaks: { automatic: true } },
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      tex2jax: {
+        inlineMath: [ ['$', '$'], ['((','))'] ],
+        displayMath: [ ['$$','$$'], ['\\[', '\\]'] ],
+        processEscapes: true
+      },
+      messageStyle: 'none'
+    });
+  </script>
 
 
 
