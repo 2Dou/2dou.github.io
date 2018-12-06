@@ -43,6 +43,8 @@ First, iterate the array counting number of 0&amp;rsquo;s, 1&amp;rsquo;s, and 2&
 &lt;/ul&gt;
 &lt;/blockquote&gt;
 
+&lt;p&gt;对一个只包含&lt;code&gt;0&lt;/code&gt;、&lt;code&gt;1&lt;/code&gt;、&lt;code&gt;2&lt;/code&gt;三个数字的数组进行排序，要求时间复杂度&lt;code&gt;O(n)&lt;/code&gt;，空间复杂度&lt;code&gt;O(1)&lt;/code&gt;。&lt;/p&gt;
+
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
     
@@ -136,6 +138,8 @@ A solution set is:
 ]
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
+
+&lt;p&gt;在给定数组中找出“和为 target 的四个数”的所有解。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>

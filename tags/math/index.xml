@@ -43,6 +43,8 @@ Explanation: The square root of 8 is 2.82842..., and since
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
 
+&lt;p&gt;整型“开方”&lt;/p&gt;
+
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
     
@@ -119,6 +121,8 @@ Explanation: 2^{-2} = {1/2}^2 = 1/4 = 0.25
 &lt;/ul&gt;
 &lt;/blockquote&gt;
 
+&lt;p&gt;求&lt;code&gt;x&lt;/code&gt;的&lt;code&gt;n&lt;/code&gt;次方。&lt;/p&gt;
+
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
     
@@ -168,6 +172,8 @@ Output: &amp;quot;2314&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
 
+&lt;p&gt;假设存在长度为&lt;code&gt;n&lt;/code&gt;的数组：&lt;code&gt;[1,2,3,...,n]&lt;/code&gt;，输出第&lt;code&gt;k&lt;/code&gt;个排列。&lt;/p&gt;
+
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
     
@@ -195,6 +201,8 @@ Output: &amp;ldquo;6&amp;rdquo;&lt;/p&gt;
 Output: &amp;ldquo;56088&amp;rdquo;&lt;/p&gt;
 &lt;/blockquote&gt;
 
+&lt;p&gt;将两个字符串表示的数字相乘（大数相乘）。&lt;/p&gt;
+
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
     
@@ -213,6 +221,8 @@ Output: &amp;ldquo;56088&amp;rdquo;&lt;/p&gt;
 
 &lt;p&gt;If it is overflow, return MAX_INT.&lt;/p&gt;
 &lt;/blockquote&gt;
+
+&lt;p&gt;不使用乘法、除法、取余实现两个整数相除。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>

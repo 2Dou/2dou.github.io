@@ -39,6 +39,8 @@ For example,&lt;/p&gt;
 &lt;p&gt;For k = 3, you should return: &lt;code&gt;3-&amp;gt;2-&amp;gt;1-&amp;gt;4-&amp;gt;5&lt;/code&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
+&lt;p&gt;将链表按长度&lt;code&gt;k&lt;/code&gt;分组并反转&lt;/p&gt;
+
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
     

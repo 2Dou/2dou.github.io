@@ -25,7 +25,7 @@
 &lt;p&gt;Merge k sorted linked lists and return it as one sorted list. Analyze and describe its complexity.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;将k个有序链表合并为一个链表&lt;/p&gt;
+&lt;p&gt;将&lt;code&gt;k&lt;/code&gt;个有序链表合并为一个链表&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
@@ -60,6 +60,8 @@ nums2 = [3, 4]
 
 &lt;p&gt;The median is (2 + 3)/2 = 2.5&lt;/p&gt;
 &lt;/blockquote&gt;
+
+&lt;p&gt;从两个有序数组中求中位数&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>

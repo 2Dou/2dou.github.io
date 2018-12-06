@@ -62,7 +62,7 @@ rotate 4 steps to the right: 2-&amp;gt;0-&amp;gt;1-&amp;gt;NULL
 &lt;p&gt;Merge k sorted linked lists and return it as one sorted list. Analyze and describe its complexity.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;将k个有序链表合并为一个链表&lt;/p&gt;
+&lt;p&gt;将&lt;code&gt;k&lt;/code&gt;个有序链表合并为一个链表&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>

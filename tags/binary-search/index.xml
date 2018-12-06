@@ -46,6 +46,8 @@ Output: false
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
 
+&lt;p&gt;矩阵中有序存地放着一些数字，查找是否存在某个数字。&lt;/p&gt;
+
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
     
@@ -80,6 +82,8 @@ Explanation: The square root of 8 is 2.82842..., and since
               the decimal part is truncated, 2 is returned.
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
+
+&lt;p&gt;整型“开方”&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
@@ -123,6 +127,8 @@ Explanation: 2^{-2} = {1/2}^2 = 1/4 = 0.25
 &lt;li&gt;n is a 32-bit signed integer, within the range [−2^31, 2^31 − 1]&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/blockquote&gt;
+
+&lt;p&gt;求&lt;code&gt;x&lt;/code&gt;的&lt;code&gt;n&lt;/code&gt;次方。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
@@ -168,6 +174,8 @@ Explanation: 2^{-2} = {1/2}^2 = 1/4 = 0.25
 &lt;p&gt;If it is overflow, return MAX_INT.&lt;/p&gt;
 &lt;/blockquote&gt;
 
+&lt;p&gt;不使用乘法、除法、取余实现两个整数相除。&lt;/p&gt;
+
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
     
@@ -201,6 +209,8 @@ nums2 = [3, 4]
 
 &lt;p&gt;The median is (2 + 3)/2 = 2.5&lt;/p&gt;
 &lt;/blockquote&gt;
+
+&lt;p&gt;从两个有序数组中求中位数&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>

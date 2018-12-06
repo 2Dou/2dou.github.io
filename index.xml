@@ -43,6 +43,8 @@ Output:
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
 
+&lt;p&gt;求所有子集（幂集），包含一个空集。&lt;/p&gt;
+
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
     
@@ -74,6 +76,8 @@ Output:
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
 
+&lt;p&gt;给出两个整数&lt;code&gt;n&lt;/code&gt;和&lt;code&gt;k&lt;/code&gt;，输出所有包含&lt;code&gt;k&lt;/code&gt;个数字的组合，数字范围&lt;code&gt;1..n&lt;/code&gt;。&lt;/p&gt;
+
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
     
@@ -103,6 +107,8 @@ Output: &amp;quot;BANC&amp;quot;
 &lt;li&gt;If there is such window, you are guaranteed that there will always be only one unique minimum window in S.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/blockquote&gt;
+
+&lt;p&gt;给出两个字符串&lt;code&gt;S&lt;/code&gt;和&lt;code&gt;T&lt;/code&gt;，在&lt;code&gt;S&lt;/code&gt;中找到一个最短的子串，它包含&lt;code&gt;T&lt;/code&gt;中所有的字符。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
@@ -138,6 +144,8 @@ First, iterate the array counting number of 0&amp;rsquo;s, 1&amp;rsquo;s, and 2&
 &lt;li&gt;&lt;p&gt;Could you come up with a one-pass algorithm using only constant space?&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/blockquote&gt;
+
+&lt;p&gt;对一个只包含&lt;code&gt;0&lt;/code&gt;、&lt;code&gt;1&lt;/code&gt;、&lt;code&gt;2&lt;/code&gt;三个数字的数组进行排序，要求时间复杂度&lt;code&gt;O(n)&lt;/code&gt;，空间复杂度&lt;code&gt;O(1)&lt;/code&gt;。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
@@ -176,6 +184,8 @@ target = 13
 Output: false
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
+
+&lt;p&gt;矩阵中有序存地放着一些数字，查找是否存在某个数字。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
@@ -322,6 +332,10 @@ Explanation: There are three ways to climb to the top.
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
 
+&lt;p&gt;好像网上讲动态规划经常举例的题目。&lt;/p&gt;
+
+&lt;p&gt;爬楼梯，可以一次爬一格或者两格，问有多少种不同的方式爬到顶。&lt;/p&gt;
+
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
     
@@ -356,6 +370,8 @@ Explanation: The square root of 8 is 2.82842..., and since
               the decimal part is truncated, 2 is returned.
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
+
+&lt;p&gt;整型“开方”&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
@@ -452,6 +468,8 @@ Explanation: Because the path 1→3→1→1→1 minimizes the sum.
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
 
+&lt;p&gt;每个格子的数字表示经过它所需的消耗大小。寻找从左上到右下的最少路径消耗。&lt;/p&gt;
+
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
     
@@ -495,6 +513,8 @@ There are two ways to reach the bottom-right corner:
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
 
+&lt;p&gt;给出地图，求左上角到右下角的路径数量（只能向下或向右移动）。&lt;/p&gt;
+
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
     
@@ -537,6 +557,8 @@ Explanation: 2^{-2} = {1/2}^2 = 1/4 = 0.25
 &lt;li&gt;n is a 32-bit signed integer, within the range [−2^31, 2^31 − 1]&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/blockquote&gt;
+
+&lt;p&gt;求&lt;code&gt;x&lt;/code&gt;的&lt;code&gt;n&lt;/code&gt;次方。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
@@ -652,6 +674,8 @@ Output: &amp;quot;2314&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
 
+&lt;p&gt;假设存在长度为&lt;code&gt;n&lt;/code&gt;的数组：&lt;code&gt;[1,2,3,...,n]&lt;/code&gt;，输出第&lt;code&gt;k&lt;/code&gt;个排列。&lt;/p&gt;
+
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
     
@@ -720,6 +744,8 @@ Output: 5
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
 
+&lt;p&gt;求给出的字符串中最后一个单词的长度。&lt;/p&gt;
+
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
     
@@ -752,6 +778,8 @@ Explanation: Because the new interval [4,8] overlaps with [3,5],[6,7],[8,10].
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
 
+&lt;p&gt;在给出的有序区间中插入新的区间，需要合并相邻的区间。&lt;/p&gt;
+
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
     
@@ -782,6 +810,8 @@ Output: [[1,5]]
 Explanation: Intervals [1,4] and [4,5] are considerred overlapping.
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
+
+&lt;p&gt;合并区间重叠/相邻的区间。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
@@ -818,6 +848,10 @@ Explanation: You will always arrive at index 3 no matter what. Its maximum
              jump length is 0, which makes it impossible to reach the last index.
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
+
+&lt;p&gt;给定一个非负整型数组，每个数字表示可以从该位置向后跳跃的最大步数。&lt;/p&gt;
+
+&lt;p&gt;判断是否能从第一个数字开始跳跃到最后一个数字。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
@@ -857,6 +891,8 @@ Output: [1,2,3,6,9,8,7,4,5]
 Output: [1,2,3,4,8,12,11,10,9,5,6,7]
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
+
+&lt;p&gt;从外向内螺旋形遍历矩阵。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
@@ -977,6 +1013,8 @@ Output: 1
 &lt;/ul&gt;
 &lt;/blockquote&gt;
 
+&lt;p&gt;使用&lt;code&gt;O(n)&lt;/code&gt;的时间复杂度和&lt;code&gt;O(1)&lt;/code&gt;的空间在无序数组中查找第一个缺失的正数。&lt;/p&gt;
+
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
     
@@ -1003,6 +1041,8 @@ Output: &amp;ldquo;6&amp;rdquo;&lt;/p&gt;
 &lt;p&gt;Input: num1 = &amp;ldquo;123&amp;rdquo;, num2 = &amp;ldquo;456&amp;rdquo;
 Output: &amp;ldquo;56088&amp;rdquo;&lt;/p&gt;
 &lt;/blockquote&gt;
+
+&lt;p&gt;将两个字符串表示的数字相乘（大数相乘）。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
@@ -1082,6 +1122,8 @@ A partially filled sudoku which is valid.&lt;/p&gt;
 &lt;p&gt;The Sudoku board could be partially filled, where empty cells are filled with the character &lt;code&gt;&#39;.&#39;&lt;/code&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
 
+&lt;p&gt;验证数独&lt;/p&gt;
+
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
     
@@ -1140,6 +1182,8 @@ Explanation: The longest valid parentheses substring is &amp;quot;()()&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
 
+&lt;p&gt;输出最长的左右括号匹配的子串长度&lt;/p&gt;
+
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
     
@@ -1166,6 +1210,8 @@ Explanation: The longest valid parentheses substring is &amp;quot;()()&amp;quot;
 &lt;code&gt;3,2,1&lt;/code&gt; → &lt;code&gt;1,2,3&lt;/code&gt;&lt;br&gt;
 &lt;code&gt;1,1,5&lt;/code&gt; → &lt;code&gt;1,5,1&lt;/code&gt;&lt;br&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
+
+&lt;p&gt;实现字典序排列的 nextPermutation 方法，假如已经是最大排列，则输出最小排列。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
@@ -1217,6 +1263,8 @@ Explanation: The longest valid parentheses substring is &amp;quot;()()&amp;quot;
 
 &lt;p&gt;If it is overflow, return MAX_INT.&lt;/p&gt;
 &lt;/blockquote&gt;
+
+&lt;p&gt;不使用乘法、除法、取余实现两个整数相除。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
@@ -1279,6 +1327,8 @@ For example,&lt;/p&gt;
 &lt;p&gt;For k = 3, you should return: &lt;code&gt;3-&amp;gt;2-&amp;gt;1-&amp;gt;4-&amp;gt;5&lt;/code&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
+&lt;p&gt;将链表按长度&lt;code&gt;k&lt;/code&gt;分组并反转&lt;/p&gt;
+
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
     
@@ -1305,7 +1355,7 @@ For example,&lt;/p&gt;
 &lt;p&gt;Merge k sorted linked lists and return it as one sorted list. Analyze and describe its complexity.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;将k个有序链表合并为一个链表&lt;/p&gt;
+&lt;p&gt;将&lt;code&gt;k&lt;/code&gt;个有序链表合并为一个链表&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
@@ -1333,9 +1383,9 @@ For example,&lt;/p&gt;
   &amp;quot;()()()&amp;quot;
 ]
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
 
 &lt;p&gt;给出n组括号，生成所有正确的匹配组合&lt;/p&gt;
-&lt;/blockquote&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
@@ -1464,6 +1514,8 @@ A solution set is:
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
 
+&lt;p&gt;在给定数组中找出“和为 target 的四个数”的所有解。&lt;/p&gt;
+
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
     
@@ -1488,6 +1540,8 @@ A solution set is:
 Output: [&amp;quot;ad&amp;quot;, &amp;quot;ae&amp;quot;, &amp;quot;af&amp;quot;, &amp;quot;bd&amp;quot;, &amp;quot;be&amp;quot;, &amp;quot;bf&amp;quot;, &amp;quot;cd&amp;quot;, &amp;quot;ce&amp;quot;, &amp;quot;cf&amp;quot;].
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
+
+&lt;p&gt;输入九宫格输入法数字，输出对应的所有字母组合&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
@@ -1883,6 +1937,8 @@ nums2 = [3, 4]
 &lt;p&gt;The median is (2 + 3)/2 = 2.5&lt;/p&gt;
 &lt;/blockquote&gt;
 
+&lt;p&gt;从两个有序数组中求中位数&lt;/p&gt;
+
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
     
@@ -1958,6 +2014,8 @@ Given nums = [2, 7, 11, 15], target = 9,
 &lt;p&gt;Because nums[0] + nums[1] = 2 + 7 = 9,
 return [0, 1].&lt;/p&gt;
 &lt;/blockquote&gt;
+
+&lt;p&gt;假定只有&lt;strong&gt;唯一&lt;/strong&gt;解的情况下在数组中找出和为&lt;code&gt;target&lt;/code&gt;的两个数&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>

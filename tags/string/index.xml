@@ -38,6 +38,8 @@ Output: &amp;quot;BANC&amp;quot;
 &lt;/ul&gt;
 &lt;/blockquote&gt;
 
+&lt;p&gt;给出两个字符串&lt;code&gt;S&lt;/code&gt;和&lt;code&gt;T&lt;/code&gt;，在&lt;code&gt;S&lt;/code&gt;中找到一个最短的子串，它包含&lt;code&gt;T&lt;/code&gt;中所有的字符。&lt;/p&gt;
+
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
     
@@ -176,6 +178,8 @@ Output: 5
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
 
+&lt;p&gt;求给出的字符串中最后一个单词的长度。&lt;/p&gt;
+
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
     
@@ -202,6 +206,8 @@ Output: &amp;ldquo;6&amp;rdquo;&lt;/p&gt;
 &lt;p&gt;Input: num1 = &amp;ldquo;123&amp;rdquo;, num2 = &amp;ldquo;456&amp;rdquo;
 Output: &amp;ldquo;56088&amp;rdquo;&lt;/p&gt;
 &lt;/blockquote&gt;
+
+&lt;p&gt;将两个字符串表示的数字相乘（大数相乘）。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
@@ -236,6 +242,8 @@ Explanation: The longest valid parentheses substring is &amp;quot;()()&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
 
+&lt;p&gt;输出最长的左右括号匹配的子串长度&lt;/p&gt;
+
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
     
@@ -262,9 +270,9 @@ Explanation: The longest valid parentheses substring is &amp;quot;()()&amp;quot;
   &amp;quot;()()()&amp;quot;
 ]
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
 
 &lt;p&gt;给出n组括号，生成所有正确的匹配组合&lt;/p&gt;
-&lt;/blockquote&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
@@ -311,6 +319,8 @@ The brackets must close in the correct order, &lt;code&gt;&amp;quot;()&amp;quot;
 Output: [&amp;quot;ad&amp;quot;, &amp;quot;ae&amp;quot;, &amp;quot;af&amp;quot;, &amp;quot;bd&amp;quot;, &amp;quot;be&amp;quot;, &amp;quot;bf&amp;quot;, &amp;quot;cd&amp;quot;, &amp;quot;ce&amp;quot;, &amp;quot;cf&amp;quot;].
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
+
+&lt;p&gt;输入九宫格输入法数字，输出对应的所有字母组合&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
