@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://www.orztu.com/leetcode/079-word-search/</loc>
+    <lastmod>2018-12-05T14:29:27+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.orztu.com/leetcode/078-subsets/</loc>
     <lastmod>2018-12-05T11:03:48+08:00</lastmod>
   </url>
@@ -457,19 +462,19 @@
   
   <url>
     <loc>https://www.orztu.com/tags/leetcode/</loc>
-    <lastmod>2018-12-05T11:03:48+08:00</lastmod>
+    <lastmod>2018-12-05T14:29:27+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.orztu.com/categories/leetcode/</loc>
-    <lastmod>2018-12-05T11:03:48+08:00</lastmod>
+    <lastmod>2018-12-05T14:29:27+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.orztu.com/leetcode/</loc>
-    <lastmod>2018-12-05T11:03:48+08:00</lastmod>
+    <lastmod>2018-12-05T14:29:27+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -511,7 +516,7 @@
   
   <url>
     <loc>https://www.orztu.com/</loc>
-    <lastmod>2018-12-05T11:03:48+08:00</lastmod>
+    <lastmod>2018-12-05T14:29:27+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -608,6 +613,12 @@
   <url>
     <loc>https://www.orztu.com/tags/%E5%9B%9E%E6%96%87/</loc>
     <lastmod>2017-03-24T15:00:46+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.orztu.com/tags/%E5%9B%9E%E6%BA%AF/</loc>
+    <lastmod>2018-12-05T14:29:27+08:00</lastmod>
     <priority>0</priority>
   </url>
   
