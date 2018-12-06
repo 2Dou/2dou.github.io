@@ -6,47 +6,10 @@
     <description>Recent content in Leetcodes on Orz the way</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 05 Dec 2018 14:29:27 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 05 Dec 2018 11:03:48 +0800</lastBuildDate>
     
 	<atom:link href="https://www.orztu.com/leetcode/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>LeetCode 79. Word Search</title>
-      <link>https://www.orztu.com/leetcode/079-word-search/</link>
-      <pubDate>Wed, 05 Dec 2018 14:29:27 +0800</pubDate>
-      
-      <guid>https://www.orztu.com/leetcode/079-word-search/</guid>
-      <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/word-search/&#34; target=&#34;_blank&#34;&gt;Word Search&lt;/a&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Given a 2D board and a word, find if the word exists in the grid.&lt;/p&gt;
-
-&lt;p&gt;The word can be constructed from letters of sequentially adjacent cell, where &amp;ldquo;adjacent&amp;rdquo; cells are those horizontally or vertically neighboring. The same letter cell may not be used more than once.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Example:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;board =
-[
-  [&#39;A&#39;,&#39;B&#39;,&#39;C&#39;,&#39;E&#39;],
-  [&#39;S&#39;,&#39;F&#39;,&#39;C&#39;,&#39;S&#39;],
-  [&#39;A&#39;,&#39;D&#39;,&#39;E&#39;,&#39;E&#39;]
-]
-
-Given word = &amp;quot;ABCCED&amp;quot;, return true.
-Given word = &amp;quot;SEE&amp;quot;, return true.
-Given word = &amp;quot;ABCB&amp;quot;, return false.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;在&lt;code&gt;board&lt;/code&gt;中查找是否存在相连（相邻）的字符与给定的单词对应。&lt;/p&gt;
-
-&lt;p&gt;很像一个走迷宫的题目，搜索下一步是否与单词的字母匹配，是则走到该位置。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
     
     <item>
       <title>LeetCode 78. Subsets</title>

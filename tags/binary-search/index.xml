@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Binary Search on Orz the way</title>
+    <link>https://www.orztu.com/tags/binary-search/</link>
+    <description>Recent content in Binary Search on Orz the way</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 28 Nov 2018 15:07:51 +0800</lastBuildDate>
+    
+	<atom:link href="https://www.orztu.com/tags/binary-search/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>LeetCode 74. Search a 2D Matrix</title>
+      <link>https://www.orztu.com/leetcode/074-search-a-2d-matrix/</link>
+      <pubDate>Wed, 28 Nov 2018 15:07:51 +0800</pubDate>
+      
+      <guid>https://www.orztu.com/leetcode/074-search-a-2d-matrix/</guid>
+      <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/search-a-2d-matrix/&#34; target=&#34;_blank&#34;&gt;Search a 2D Matrix&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Write an efficient algorithm that searches for a value in an m x n matrix. This matrix has the following properties:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Integers in each row are sorted from left to right.&lt;/li&gt;
+&lt;li&gt;The first integer of each row is greater than the last integer of the previous row.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Example 1:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Input:
+matrix = [
+  [1,   3,  5,  7],
+  [10, 11, 16, 20],
+  [23, 30, 34, 50]
+]
+
+target = 3
+Output: true
+
+target = 13
+Output: false
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>LeetCode 69. Sqrt(x)</title>
+      <link>https://www.orztu.com/leetcode/069-sqrt-x/</link>
+      <pubDate>Fri, 23 Nov 2018 14:51:19 +0800</pubDate>
+      
+      <guid>https://www.orztu.com/leetcode/069-sqrt-x/</guid>
+      <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/sqrtx/&#34; target=&#34;_blank&#34;&gt;Sqrt(x)&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Implement &lt;code&gt;int sqrt(int x)&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Compute and return the square root of x, where x is guaranteed to be a non-negative integer.&lt;/p&gt;
+
+&lt;p&gt;Since the return type is an integer, the decimal digits are truncated and only the integer part of the result is returned.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Example 1:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Input: 4
+Output: 2
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Example 2:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Input: 8
+Output: 2
+Explanation: The square root of 8 is 2.82842..., and since
+              the decimal part is truncated, 2 is returned.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>LeetCode 50. Pow(x, n)</title>
+      <link>https://www.orztu.com/leetcode/050-pow/</link>
+      <pubDate>Wed, 21 Nov 2018 15:27:28 +0800</pubDate>
+      
+      <guid>https://www.orztu.com/leetcode/050-pow/</guid>
+      <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/powx-n/&#34; target=&#34;_blank&#34;&gt;Pow(x, n)&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Implement pow(x, n), which calculates x raised to the power n (x^n).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Example 1:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Input: 2.00000, 10
+Output: 1024.00000
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Example 2:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Input: 2.10000, 3
+Output: 9.26100
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Example 3:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Input: 2.00000, -2
+Output: 0.25000
+Explanation: 2^{-2} = {1/2}^2 = 1/4 = 0.25
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;-100.0 &amp;lt; x &amp;lt; 100.0&lt;/li&gt;
+&lt;li&gt;n is a 32-bit signed integer, within the range [−2^31, 2^31 − 1]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>LeetCode 33. Search in Rotated Sorted Array</title>
+      <link>https://www.orztu.com/leetcode/033-search-in-rotated-sorted-array/</link>
+      <pubDate>Wed, 25 Jul 2018 14:28:45 +0800</pubDate>
+      
+      <guid>https://www.orztu.com/leetcode/033-search-in-rotated-sorted-array/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/search-in-rotated-sorted-array/&#34; target=&#34;_blank&#34;&gt;Search in Rotated Sorted Array&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.&lt;/p&gt;
+
+&lt;p&gt;(i.e., &lt;code&gt;[0,1,2,4,5,6,7]&lt;/code&gt; might become &lt;code&gt;[4,5,6,7,0,1,2]&lt;/code&gt;).&lt;/p&gt;
+
+&lt;p&gt;You are given a target value to search. If found in the array return its index, otherwise return &lt;code&gt;-1&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;You may assume no duplicate exists in the array.&lt;/p&gt;
+
+&lt;p&gt;Your algorithm&amp;rsquo;s runtime complexity must be in the order of &lt;code&gt;O(log n)&lt;/code&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>LeetCode 29. Divide Two Integers</title>
+      <link>https://www.orztu.com/leetcode/029-divide-two-integers/</link>
+      <pubDate>Fri, 30 Mar 2018 16:59:00 +0800</pubDate>
+      
+      <guid>https://www.orztu.com/leetcode/029-divide-two-integers/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/divide-two-integers/&#34; target=&#34;_blank&#34;&gt;Divide Two Integers&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Divide two integers without using multiplication, division and mod operator.&lt;/p&gt;
+
+&lt;p&gt;If it is overflow, return MAX_INT.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>LeetCode 4. Median of Two Sorted Arrays</title>
+      <link>https://www.orztu.com/leetcode/004-median-of-two-sorted-arrays/</link>
+      <pubDate>Thu, 16 Mar 2017 10:53:58 +0800</pubDate>
+      
+      <guid>https://www.orztu.com/leetcode/004-median-of-two-sorted-arrays/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/median-of-two-sorted-arrays&#34; target=&#34;_blank&#34;&gt;Median of Two Sorted Arrays&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;There are two sorted arrays nums1 and nums2 of size m and n respectively.&lt;/p&gt;
+
+&lt;p&gt;Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).&lt;/p&gt;
+
+&lt;p&gt;Example 1:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;nums1 = [1, 3]
+nums2 = [2]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The median is 2.0
+Example 2:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;nums1 = [1, 2]
+nums2 = [3, 4]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The median is (2 + 3)/2 = 2.5&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

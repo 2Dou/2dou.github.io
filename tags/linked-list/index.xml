@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linked List on Orz the way</title>
+    <link>https://www.orztu.com/tags/linked-list/</link>
+    <description>Recent content in Linked List on Orz the way</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 19 Nov 2018 14:37:06 +0800</lastBuildDate>
+    
+	<atom:link href="https://www.orztu.com/tags/linked-list/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>LeetCode 61. Rotate List</title>
+      <link>https://www.orztu.com/leetcode/061-rotate-list/</link>
+      <pubDate>Mon, 19 Nov 2018 14:37:06 +0800</pubDate>
+      
+      <guid>https://www.orztu.com/leetcode/061-rotate-list/</guid>
+      <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/rotate-list/&#34; target=&#34;_blank&#34;&gt;Rotate List&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Given a linked list, rotate the list to the right by &lt;code&gt;k&lt;/code&gt; places, where &lt;code&gt;k&lt;/code&gt; is non-negative.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Example 1:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Input: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL, k = 2
+Output: 4-&amp;gt;5-&amp;gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;NULL
+Explanation:
+rotate 1 steps to the right: 5-&amp;gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;NULL
+rotate 2 steps to the right: 4-&amp;gt;5-&amp;gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;NULL
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Example 2:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Input: 0-&amp;gt;1-&amp;gt;2-&amp;gt;NULL, k = 4
+Output: 2-&amp;gt;0-&amp;gt;1-&amp;gt;NULL
+Explanation:
+rotate 1 steps to the right: 2-&amp;gt;0-&amp;gt;1-&amp;gt;NULL
+rotate 2 steps to the right: 1-&amp;gt;2-&amp;gt;0-&amp;gt;NULL
+rotate 3 steps to the right: 0-&amp;gt;1-&amp;gt;2-&amp;gt;NULL
+rotate 4 steps to the right: 2-&amp;gt;0-&amp;gt;1-&amp;gt;NULL
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>LeetCode 23. Merge K Sorted Lists</title>
+      <link>https://www.orztu.com/leetcode/023-merge-k-sorted-lists/</link>
+      <pubDate>Fri, 24 Nov 2017 14:55:46 +0800</pubDate>
+      
+      <guid>https://www.orztu.com/leetcode/023-merge-k-sorted-lists/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/merge-k-sorted-lists/description/&#34; target=&#34;_blank&#34;&gt;Merge k Sorted Lists&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Merge k sorted linked lists and return it as one sorted list. Analyze and describe its complexity.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;将k个有序链表合并为一个链表&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>LeetCode 21. Merge Two Sorted Lists</title>
+      <link>https://www.orztu.com/leetcode/021-merge-two-sorted-lists/</link>
+      <pubDate>Wed, 22 Nov 2017 09:15:44 +0800</pubDate>
+      
+      <guid>https://www.orztu.com/leetcode/021-merge-two-sorted-lists/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/merge-two-sorted-lists/&#34; target=&#34;_blank&#34;&gt;Merge Two Sorted Lists&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Merge two sorted linked lists and return it as a new list. The new list should be made by splicing together the nodes of the first two lists.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;将两个有序链表合二为一&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>LeetCode 19. Remove Nth Node From End of List</title>
+      <link>https://www.orztu.com/leetcode/019-remove-nth-node-from-end-of-list/</link>
+      <pubDate>Thu, 19 Oct 2017 21:03:59 +0800</pubDate>
+      
+      <guid>https://www.orztu.com/leetcode/019-remove-nth-node-from-end-of-list/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/remove-nth-node-from-end-of-list/&#34; target=&#34;_blank&#34;&gt;Remove Nth Node From End of List&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Given a linked list, remove the nth node from the end of list and return its head.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;For example,
+   Given linked list: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5, and n = 2.
+   After removing the second node from the end, the linked list becomes 1-&amp;gt;2-&amp;gt;3-&amp;gt;5.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;:
+Given n will always be valid.
+Try to do this in one pass.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;从链表中删除倒数第n个结点（n必定有效）&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>LeetCode 2. Add Two Numbers</title>
+      <link>https://www.orztu.com/leetcode/002-add-two-numbers/</link>
+      <pubDate>Wed, 15 Mar 2017 16:55:54 +0800</pubDate>
+      
+      <guid>https://www.orztu.com/leetcode/002-add-two-numbers/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/add-two-numbers&#34; target=&#34;_blank&#34;&gt;Add Two Numbers&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.&lt;/p&gt;
+
+&lt;p&gt;You may assume the two numbers do not contain any leading zero, except the number 0 itself.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Input: (2 -&amp;gt; 4 -&amp;gt; 3) + (5 -&amp;gt; 6 -&amp;gt; 4)
+Output: 7 -&amp;gt; 0 -&amp;gt; 8
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;给定两个非空链表表示的非负整数。实现加法，向后进位。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

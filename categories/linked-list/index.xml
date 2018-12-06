@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linked List on Orz the way</title>
+    <link>https://www.orztu.com/categories/linked-list/</link>
+    <description>Recent content in Linked List on Orz the way</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 29 Dec 2017 14:23:13 +0800</lastBuildDate>
+    
+	<atom:link href="https://www.orztu.com/categories/linked-list/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>LeetCode 25. Reverse Nodes in k-Group</title>
+      <link>https://www.orztu.com/leetcode/025-reverse-nodes-in-k-group/</link>
+      <pubDate>Fri, 29 Dec 2017 14:23:13 +0800</pubDate>
+      
+      <guid>https://www.orztu.com/leetcode/025-reverse-nodes-in-k-group/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/reverse-nodes-in-k-group/&#34; target=&#34;_blank&#34;&gt;Reverse Nodes in k-Group&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Given a linked list, reverse the nodes of a linked list k at a time and return its modified list.&lt;br&gt;
+&lt;br&gt;
+k is a positive integer and is less than or equal to the length of the linked list. If the number of nodes is not a multiple of k then left-out nodes in the end should remain as it is.&lt;br&gt;
+&lt;br&gt;
+You may not alter the values in the nodes, only nodes itself may be changed.&lt;/p&gt;
+
+&lt;p&gt;Only constant memory is allowed.&lt;br&gt;
+&lt;br&gt;
+For example,&lt;/p&gt;
+
+&lt;p&gt;Given this linked list: &lt;code&gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;For k = 2, you should return: &lt;code&gt;2-&amp;gt;1-&amp;gt;4-&amp;gt;3-&amp;gt;5&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;For k = 3, you should return: &lt;code&gt;3-&amp;gt;2-&amp;gt;1-&amp;gt;4-&amp;gt;5&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>String on Orz the way</title>
+    <link>https://www.orztu.com/tags/string/</link>
+    <description>Recent content in String on Orz the way</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 30 Nov 2018 10:53:51 +0800</lastBuildDate>
+    
+	<atom:link href="https://www.orztu.com/tags/string/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>LeetCode 76. Minimum Window Substring</title>
+      <link>https://www.orztu.com/leetcode/076-minimum-window-substring/</link>
+      <pubDate>Fri, 30 Nov 2018 10:53:51 +0800</pubDate>
+      
+      <guid>https://www.orztu.com/leetcode/076-minimum-window-substring/</guid>
+      <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/minimum-window-substring/&#34; target=&#34;_blank&#34;&gt;Minimum Window Substring&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Given a string S and a string T, find the minimum window in S which will contain all the characters in T in complexity O(n).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Example:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Input: S = &amp;quot;ADOBECODEBANC&amp;quot;, T = &amp;quot;ABC&amp;quot;
+Output: &amp;quot;BANC&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;If there is no such window in S that covers all characters in T, return the empty string &amp;ldquo;&amp;rdquo;.&lt;/li&gt;
+&lt;li&gt;If there is such window, you are guaranteed that there will always be only one unique minimum window in S.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>LeetCode 72. Edit Distance</title>
+      <link>https://www.orztu.com/leetcode/072-edit-distance/</link>
+      <pubDate>Tue, 27 Nov 2018 10:51:41 +0800</pubDate>
+      
+      <guid>https://www.orztu.com/leetcode/072-edit-distance/</guid>
+      <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/edit-distance/&#34; target=&#34;_blank&#34;&gt;Edit Distance&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Given two words word1 and word2, find the minimum number of operations required to convert word1 to word2.&lt;/p&gt;
+
+&lt;p&gt;You have the following 3 operations permitted on a word:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Insert a character&lt;/li&gt;
+&lt;li&gt;Delete a character&lt;/li&gt;
+&lt;li&gt;Replace a character&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;Example 1:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Input: word1 = &amp;quot;horse&amp;quot;, word2 = &amp;quot;ros&amp;quot;
+Output: 3
+Explanation:
+horse -&amp;gt; rorse (replace &#39;h&#39; with &#39;r&#39;)
+rorse -&amp;gt; rose (remove &#39;r&#39;)
+rose -&amp;gt; ros (remove &#39;e&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Example 2:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Input: word1 = &amp;quot;intention&amp;quot;, word2 = &amp;quot;execution&amp;quot;
+Output: 5
+Explanation:
+intention -&amp;gt; inention (remove &#39;t&#39;)
+inention -&amp;gt; enention (replace &#39;i&#39; with &#39;e&#39;)
+enention -&amp;gt; exention (replace &#39;n&#39; with &#39;x&#39;)
+exention -&amp;gt; exection (replace &#39;n&#39; with &#39;c&#39;)
+exection -&amp;gt; execution (insert &#39;u&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>LeetCode 68. Text Justification</title>
+      <link>https://www.orztu.com/leetcode/068-text-justification/</link>
+      <pubDate>Fri, 23 Nov 2018 14:26:13 +0800</pubDate>
+      
+      <guid>https://www.orztu.com/leetcode/068-text-justification/</guid>
+      <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/text-justification/&#34; target=&#34;_blank&#34;&gt;Text Justification&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Given an array of words and a width maxWidth, format the text such that each line has exactly maxWidth characters and is fully (left and right) justified.&lt;/p&gt;
+
+&lt;p&gt;You should pack your words in a greedy approach; that is, pack as many words as you can in each line. Pad extra spaces &lt;code&gt;&#39; &#39;&lt;/code&gt; when necessary so that each line has exactly maxWidth characters.&lt;/p&gt;
+
+&lt;p&gt;Extra spaces between words should be distributed as evenly as possible. If the number of spaces on a line do not divide evenly between words, the empty slots on the left will be assigned more spaces than the slots on the right.&lt;/p&gt;
+
+&lt;p&gt;For the last line of text, it should be left justified and no &lt;strong&gt;extra&lt;/strong&gt; space is inserted between words.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;A word is defined as a character sequence consisting of non-space characters only.&lt;/li&gt;
+&lt;li&gt;Each word&amp;rsquo;s length is guaranteed to be greater than 0 and not exceed maxWidth.&lt;/li&gt;
+&lt;li&gt;The input array words contains at least one word.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>LeetCode 66. Plus One &amp; 67. Add Binary</title>
+      <link>https://www.orztu.com/leetcode/066-and-067/</link>
+      <pubDate>Fri, 23 Nov 2018 09:54:07 +0800</pubDate>
+      
+      <guid>https://www.orztu.com/leetcode/066-and-067/</guid>
+      <description>&lt;h2 id=&#34;plus-one&#34;&gt;Plus One&lt;/h2&gt;
+
+&lt;h3 id=&#34;description&#34;&gt;Description&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/plus-one/&#34; target=&#34;_blank&#34;&gt;Plus One&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;给定一个用数组表示的十进制数，将数字加一。&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Example 1:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Input: [1,2,3]
+Output: [1,2,4]
+Explanation: The array represents the integer 123.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Example 2:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Input: [4,3,2,1]
+Output: [4,3,2,2]
+Explanation: The array represents the integer 4321.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>LeetCode 58. Length of Last Word</title>
+      <link>https://www.orztu.com/leetcode/058-length-of-last-word/</link>
+      <pubDate>Fri, 16 Nov 2018 08:35:56 +0800</pubDate>
+      
+      <guid>https://www.orztu.com/leetcode/058-length-of-last-word/</guid>
+      <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/length-of-last-word/&#34; target=&#34;_blank&#34;&gt;Length of Last Word&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Given a string s consists of upper/lower-case alphabets and empty space characters &amp;lsquo; &amp;lsquo;, return the length of last word in the string.&lt;/p&gt;
+
+&lt;p&gt;If the last word does not exist, return 0.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; A word is defined as a character sequence consists of non-space characters only.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Example:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Input: &amp;quot;Hello World&amp;quot;
+Output: 5
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>LeetCode 43. Multiply Strings</title>
+      <link>https://www.orztu.com/leetcode/043-multiply-strings/</link>
+      <pubDate>Thu, 26 Jul 2018 15:35:19 +0800</pubDate>
+      
+      <guid>https://www.orztu.com/leetcode/043-multiply-strings/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/multiply-strings/&#34; target=&#34;_blank&#34;&gt;Multiply Strings&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Given two non-negative integers &lt;code&gt;num1&lt;/code&gt; and &lt;code&gt;num2&lt;/code&gt; represented as strings, return the product of &lt;code&gt;num1&lt;/code&gt; and &lt;code&gt;num2&lt;/code&gt;, also represented as a string.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Example 1:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Input: num1 = &amp;ldquo;2&amp;rdquo;, num2 = &amp;ldquo;3&amp;rdquo;
+Output: &amp;ldquo;6&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Example 2:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Input: num1 = &amp;ldquo;123&amp;rdquo;, num2 = &amp;ldquo;456&amp;rdquo;
+Output: &amp;ldquo;56088&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>LeetCode 32. Longest Valid Parentheses</title>
+      <link>https://www.orztu.com/leetcode/032-longest-valid-parentheses/</link>
+      <pubDate>Wed, 25 Jul 2018 09:56:49 +0800</pubDate>
+      
+      <guid>https://www.orztu.com/leetcode/032-longest-valid-parentheses/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/longest-valid-parentheses/&#34; target=&#34;_blank&#34;&gt;Longest Valid Parentheses&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Given a string containing just the characters &lt;code&gt;&#39;(&#39;&lt;/code&gt; and &lt;code&gt;&#39;)&#39;&lt;/code&gt;, find the length of the longest valid (well-formed) parentheses substring.
+&lt;br&gt;&lt;br&gt;
+&lt;strong&gt;Example 1:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Input: &amp;quot;(()&amp;quot;
+Output: 2
+Explanation: The longest valid parentheses substring is &amp;quot;()&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;br&gt;
+&lt;strong&gt;Example 2:&lt;/strong&gt;
+&lt;br&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Input: &amp;quot;)()())&amp;quot;
+Output: 4
+Explanation: The longest valid parentheses substring is &amp;quot;()()&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>LeetCode 22. Generate Parentheses</title>
+      <link>https://www.orztu.com/leetcode/022-generate-parentheses/</link>
+      <pubDate>Wed, 22 Nov 2017 11:32:00 +0800</pubDate>
+      
+      <guid>https://www.orztu.com/leetcode/022-generate-parentheses/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/generate-parentheses/&#34; target=&#34;_blank&#34;&gt;Generate Parentheses&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.&lt;/p&gt;
+
+&lt;p&gt;For example, given n = 3, a solution set is:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[
+  &amp;quot;((()))&amp;quot;,
+  &amp;quot;(()())&amp;quot;,
+  &amp;quot;(())()&amp;quot;,
+  &amp;quot;()(())&amp;quot;,
+  &amp;quot;()()()&amp;quot;
+]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;给出n组括号，生成所有正确的匹配组合&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>LeetCode 20. Valid Parentheses</title>
+      <link>https://www.orztu.com/leetcode/020-valid-parentheses/</link>
+      <pubDate>Mon, 30 Oct 2017 19:25:35 +0800</pubDate>
+      
+      <guid>https://www.orztu.com/leetcode/020-valid-parentheses/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/valid-parentheses/&#34; target=&#34;_blank&#34;&gt;Valid Parentheses&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Given a string containing just the characters &lt;code&gt;&#39;(&#39;&lt;/code&gt;, &lt;code&gt;&#39;)&#39;&lt;/code&gt;, &lt;code&gt;&#39;{&#39;&lt;/code&gt;, &lt;code&gt;&#39;}&#39;&lt;/code&gt;, &lt;code&gt;&#39;[&#39;&lt;/code&gt; and &lt;code&gt;&#39;]&#39;&lt;/code&gt;, determine if the input string is valid.
+&lt;/br&gt; &lt;/br&gt;
+The brackets must close in the correct order, &lt;code&gt;&amp;quot;()&amp;quot;&lt;/code&gt; and &lt;code&gt;&amp;quot;()[]{}&amp;quot;&lt;/code&gt; are all valid but &lt;code&gt;&amp;quot;(]&amp;quot;&lt;/code&gt; and &lt;code&gt;&amp;quot;([)]&amp;quot;&lt;/code&gt; are not.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;给出包含三种括号的字符串，验证括号是否左右匹配&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>LeetCode 17. Letter Combinations of a Phone Number</title>
+      <link>https://www.orztu.com/leetcode/017-letter-combinations-of-a-phone-number/</link>
+      <pubDate>Tue, 17 Oct 2017 14:39:40 +0800</pubDate>
+      
+      <guid>https://www.orztu.com/leetcode/017-letter-combinations-of-a-phone-number/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/letter-combinations-of-a-phone-number/&#34; target=&#34;_blank&#34;&gt;Letter Combinations of a Phone Number&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Given a digit string, return all possible letter combinations that the number could represent.&lt;/p&gt;
+
+&lt;p&gt;A mapping of digit to letters (just like on the telephone buttons) is given below.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Telephone-keypad2.svg/200px-Telephone-keypad2.svg.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Input: Digit string &amp;quot;23&amp;quot;
+Output: [&amp;quot;ad&amp;quot;, &amp;quot;ae&amp;quot;, &amp;quot;af&amp;quot;, &amp;quot;bd&amp;quot;, &amp;quot;be&amp;quot;, &amp;quot;bf&amp;quot;, &amp;quot;cd&amp;quot;, &amp;quot;ce&amp;quot;, &amp;quot;cf&amp;quot;].
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>LeetCode 13. Roman to Integer</title>
+      <link>https://www.orztu.com/leetcode/013-roman-to-integer/</link>
+      <pubDate>Fri, 07 Jul 2017 14:43:41 +0800</pubDate>
+      
+      <guid>https://www.orztu.com/leetcode/013-roman-to-integer/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/roman-to-integer/&#34; target=&#34;_blank&#34;&gt;Roman to Integer&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Given a roman numeral, convert it to an integer.&lt;br&gt;
+&lt;br&gt;
+Input is guaranteed to be within the range from 1 to 3999.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;将罗马数字转换成整型。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>LeetCode 12. Integer to Roman</title>
+      <link>https://www.orztu.com/leetcode/012-integer-to-roman/</link>
+      <pubDate>Fri, 07 Jul 2017 09:18:49 +0800</pubDate>
+      
+      <guid>https://www.orztu.com/leetcode/012-integer-to-roman/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/integer-to-roman/&#34; target=&#34;_blank&#34;&gt;Integer to Roman&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Given an integer, convert it to a roman numeral. &lt;br&gt;
+&lt;br&gt;
+Input is guaranteed to be within the range from 1 to 3999.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;将整型转换成罗马数字形式:&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>LeetCode 10. Regular Expression Matching</title>
+      <link>https://www.orztu.com/leetcode/010-regular-expression-matching/</link>
+      <pubDate>Fri, 24 Mar 2017 15:00:47 +0800</pubDate>
+      
+      <guid>https://www.orztu.com/leetcode/010-regular-expression-matching/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/regular-expression-matching&#34; target=&#34;_blank&#34;&gt;Regular Expression Matching&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Implement regular expression matching with support for &amp;lsquo;.&amp;rsquo; and &amp;lsquo;*&amp;lsquo;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&#39;.&#39; Matches any single character.
+&#39;*&#39; Matches zero or more of the preceding element.
+
+The matching should cover the entire input string (not partial).
+
+The function prototype should be:
+bool isMatch(const char *s, const char *p)
+
+Some examples:
+isMatch(&amp;quot;aa&amp;quot;,&amp;quot;a&amp;quot;) → false
+isMatch(&amp;quot;aa&amp;quot;,&amp;quot;aa&amp;quot;) → true
+isMatch(&amp;quot;aaa&amp;quot;,&amp;quot;aa&amp;quot;) → false
+isMatch(&amp;quot;aa&amp;quot;, &amp;quot;a*&amp;quot;) → true
+isMatch(&amp;quot;aa&amp;quot;, &amp;quot;.*&amp;quot;) → true
+isMatch(&amp;quot;ab&amp;quot;, &amp;quot;.*&amp;quot;) → true
+isMatch(&amp;quot;aab&amp;quot;, &amp;quot;c*a*b&amp;quot;) → true
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>LeetCode 8. String to Integer (atoi)</title>
+      <link>https://www.orztu.com/leetcode/008-string-to-integer-atoi/</link>
+      <pubDate>Wed, 22 Mar 2017 09:05:12 +0800</pubDate>
+      
+      <guid>https://www.orztu.com/leetcode/008-string-to-integer-atoi/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/string-to-integer-atoi&#34; target=&#34;_blank&#34;&gt;String to Integer (atoi)&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Implement atoi to convert a string to an integer.
+&lt;br&gt;
+&lt;br&gt;
+&lt;strong&gt;Hint&lt;/strong&gt;: Carefully consider all possible input cases. If you want a challenge, please do not see below and ask yourself what are the &amp;gt; possible input cases.
+&lt;br&gt;
+&lt;br&gt;
+&lt;strong&gt;Notes:&lt;/strong&gt; It is intended for this problem to be specified vaguely (ie, no given input specs). You are responsible to gather all the &amp;gt; input requirements up front.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;实现&lt;code&gt;atoi&lt;/code&gt;功能&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>LeetCode 6. ZigZag Conversion</title>
+      <link>https://www.orztu.com/leetcode/006-zigzag-conversion/</link>
+      <pubDate>Fri, 17 Mar 2017 17:52:46 +0800</pubDate>
+      
+      <guid>https://www.orztu.com/leetcode/006-zigzag-conversion/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/zigzag-conversion&#34; target=&#34;_blank&#34;&gt;ZigZag Conversion&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;The string &lt;code&gt;&amp;quot;PAYPALISHIRING&amp;quot;&lt;/code&gt; is written in a zigzag pattern on a given number of rows like this: (you may want to display this &amp;gt; pattern in a fixed font for better legibility)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;P   A   H   N
+A P L S I I G
+Y   I   R
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And then read line by line: &lt;code&gt;&amp;quot;PAHNAPLSIIGYIR&amp;quot;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Write the code that will take a string and make this conversion given a number of rows:&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-golang&#34; data-lang=&#34;golang&#34;&gt;&lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;convert&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;nRows&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;code&gt;convert(&amp;quot;PAYPALISHIRING&amp;quot;, 3)&lt;/code&gt; should return &lt;code&gt;&amp;quot;PAHNAPLSIIGYIR&amp;quot;&lt;/code&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>LeetCode 5. Longest Palindromic Substring</title>
+      <link>https://www.orztu.com/leetcode/005-longest-palindromic-substring/</link>
+      <pubDate>Thu, 16 Mar 2017 14:47:07 +0800</pubDate>
+      
+      <guid>https://www.orztu.com/leetcode/005-longest-palindromic-substring/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/longest-palindromic-substring&#34; target=&#34;_blank&#34;&gt;Longest Palindromic Substring&lt;/a&gt;&lt;/p&gt;
+
+&lt;!-- ![palindromic](/images/leetcode/Longest-Palindromic-Substring-1.png &#34;回文&#34;) --&gt;
+
+&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000.&lt;/p&gt;
+
+&lt;p&gt;Example:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Input: &amp;quot;babad&amp;quot;
+Output: &amp;quot;bab&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Note: &amp;ldquo;aba&amp;rdquo; is also a valid answer.&lt;/p&gt;
+
+&lt;p&gt;Example:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Input: &amp;quot;cbbd&amp;quot;
+Output: &amp;quot;bb&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;从给定字符串中找出最长的回文子串&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>LeetCode 3. Longest Substring Without Repeating Characters</title>
+      <link>https://www.orztu.com/leetcode/003-longest-substring-without-repeating-characters/</link>
+      <pubDate>Wed, 15 Mar 2017 19:38:58 +0800</pubDate>
+      
+      <guid>https://www.orztu.com/leetcode/003-longest-substring-without-repeating-characters/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/longest-substring-without-repeating-characters&#34; target=&#34;_blank&#34;&gt;Longest Substring Without Repeating Characters&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Given a string, find the length of the longest substring without repeating characters.&lt;/p&gt;
+
+&lt;p&gt;Given &amp;ldquo;abcabcbb&amp;rdquo;, the answer is &amp;ldquo;abc&amp;rdquo;, which the length is 3.&lt;/p&gt;
+
+&lt;p&gt;Given &amp;ldquo;bbbbb&amp;rdquo;, the answer is &amp;ldquo;b&amp;rdquo;, with the length of 1.&lt;/p&gt;
+
+&lt;p&gt;Given &amp;ldquo;pwwkew&amp;rdquo;, the answer is &amp;ldquo;wke&amp;rdquo;, with the length of 3. Note that the answer must be a substring, &amp;ldquo;pwke&amp;rdquo; is a subsequence and not a substring.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;在给定字符串中找出无重复字符的最长子串。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
