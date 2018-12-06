@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://www.orztu.com/leetcode/080-remove-duplicates-from-sorted-array-ii/</loc>
+    <lastmod>2018-12-06T09:33:43+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.orztu.com/leetcode/079-word-search/</loc>
     <lastmod>2018-12-05T14:29:27+08:00</lastmod>
   </url>
@@ -379,7 +384,7 @@
   
   <url>
     <loc>https://www.orztu.com/tags/array/</loc>
-    <lastmod>2018-12-05T14:29:27+08:00</lastmod>
+    <lastmod>2018-12-06T09:33:43+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -461,32 +466,32 @@
   </url>
   
   <url>
-    <loc>https://www.orztu.com/categories/leetcode/</loc>
-    <lastmod>2018-12-05T14:29:27+08:00</lastmod>
+    <loc>https://www.orztu.com/tags/leetcode/</loc>
+    <lastmod>2018-12-06T09:33:43+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.orztu.com/tags/leetcode/</loc>
-    <lastmod>2018-12-05T14:29:27+08:00</lastmod>
+    <loc>https://www.orztu.com/categories/leetcode/</loc>
+    <lastmod>2018-12-06T09:33:43+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.orztu.com/leetcode/</loc>
-    <lastmod>2018-12-05T14:29:27+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.orztu.com/categories/linked-list/</loc>
-    <lastmod>2017-12-29T14:23:13+08:00</lastmod>
+    <lastmod>2018-12-06T09:33:43+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.orztu.com/tags/linked-list/</loc>
     <lastmod>2018-11-19T14:37:06+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.orztu.com/categories/linked-list/</loc>
+    <lastmod>2017-12-29T14:23:13+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -516,7 +521,7 @@
   
   <url>
     <loc>https://www.orztu.com/</loc>
-    <lastmod>2018-12-05T14:29:27+08:00</lastmod>
+    <lastmod>2018-12-06T09:33:43+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -576,13 +581,13 @@
   
   <url>
     <loc>https://www.orztu.com/tags/</loc>
-    <lastmod>2018-12-05T14:29:27+08:00</lastmod>
+    <lastmod>2018-12-06T09:33:43+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.orztu.com/tags/two-pointers/</loc>
-    <lastmod>2018-11-29T10:50:23+08:00</lastmod>
+    <lastmod>2018-12-06T09:33:43+08:00</lastmod>
     <priority>0</priority>
   </url>
   
