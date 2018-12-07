@@ -122,7 +122,7 @@
 
   <li class="sidebar-button">
     
-      <a class="sidebar-button-link " href="https://www.orztu.com/categories/#posts-list-leetcode">
+      <a class="sidebar-button-link " href="https://www.orztu.com/leetcode/">
     
       <i class="sidebar-button-icon fa fa-lg fa-file-code-o"></i>
       
@@ -258,6 +258,7 @@
           </div>
           
           
+          
             
   
     
@@ -275,21 +276,21 @@
     
     <div class="postShorten-header">
       <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.orztu.com/leetcode/080-remove-duplicates-from-sorted-array-ii/">
-          LeetCode 80. Remove Duplicates from Sorted Array II
+        <a class="link-unstyled" href="https://www.orztu.com/post/lua-table-minify-ii/">
+          使用元表优化 Lua 配置文件 II
         </a>
       </h1>
       
   <div class="postShorten-meta-bg">
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2018-12-06T09:33:43&#43;08:00">
+      <time itemprop="datePublished" datetime="2018-11-16T11:38:00&#43;08:00">
         
   
   
   
   
-    2018-12-06
+    2018-11-16
   
 
       </time>
@@ -299,7 +300,7 @@
   
     <span>in</span>
     
-      <a class="category-link" href="https://www.orztu.com/categories/leetcode">LeetCode</a>
+      <a class="category-link" href="https://www.orztu.com/categories/coding-life">coding life</a>
     
   
 
@@ -310,42 +311,14 @@
     </div>
     <div class="postShorten-excerpt" itemprop="articleBody">
       
-        <h2 id="description">Description</h2>
+        <p>上回提到<a href="https://www.orztu.com/post/lua-table-minify/" target="_blank">元表优化 Lua 配置文件</a>，以减少重复字段，节省内存开销。</p>
 
-<p><a href="https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/" target="_blank">Remove Duplicates from Sorted Array II</a></p>
-
-<blockquote>
-<p>Given a sorted array nums, remove the duplicates in-place such that duplicates appeared at most twice and return the new length.</p>
-
-<p>Do not allocate extra space for another array, you must do this by <strong>modifying the input array in-place</strong> with O(1) extra memory.</p>
-
-<p><strong>Example 1:</strong></p>
-
-<pre><code>Given nums = [1,1,1,2,2,3],
-
-Your function should return length = 5, with the first five elements
-of nums being 1, 1, 2, 2 and 3 respectively.
-
-It doesn't matter what you leave beyond the returned length.
-</code></pre>
-
-<p><strong>Example 2:</strong></p>
-
-<pre><code>Given nums = [0,0,1,1,1,1,2,3,3],
-
-Your function should return length = 7, with the first seven elements
-of nums being modified to 0, 0, 1, 1, 2, 3 and 3 respectively.
-
-It doesn't matter what values are set beyond the returned length.
-</code></pre>
-</blockquote>
-
-<p>在有序数组中删除重复的元素，每个元素允许重复一次（出现两次）。</p>
+<p>除了这种直接地减少内存开销的方法，使用元表还能实现数据的延迟加载，从另一个角度节约内存。</p>
 
 <p></p>
       
       <p>
-        <a href="https://www.orztu.com/leetcode/080-remove-duplicates-from-sorted-array-ii/" class="postShorten-excerpt_link link">Read More</a>
+        <a href="https://www.orztu.com/post/lua-table-minify-ii/" class="postShorten-excerpt_link link">Read More</a>
 
         
       </p>
@@ -372,21 +345,21 @@ It doesn't matter what values are set beyond the returned length.
     
     <div class="postShorten-header">
       <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.orztu.com/leetcode/079-word-search/">
-          LeetCode 79. Word Search
+        <a class="link-unstyled" href="https://www.orztu.com/post/lua-table-minify/">
+          使用元表优化 Lua 配置文件
         </a>
       </h1>
       
   <div class="postShorten-meta-bg">
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2018-12-05T14:29:27&#43;08:00">
+      <time itemprop="datePublished" datetime="2018-11-06T15:14:38&#43;08:00">
         
   
   
   
   
-    2018-12-05
+    2018-11-06
   
 
       </time>
@@ -396,7 +369,7 @@ It doesn't matter what values are set beyond the returned length.
   
     <span>in</span>
     
-      <a class="category-link" href="https://www.orztu.com/categories/leetcode">LeetCode</a>
+      <a class="category-link" href="https://www.orztu.com/categories/coding-life">coding life</a>
     
   
 
@@ -407,38 +380,18 @@ It doesn't matter what values are set beyond the returned length.
     </div>
     <div class="postShorten-excerpt" itemprop="articleBody">
       
-        <h2 id="description">Description</h2>
+        <h2 id="配置文件">配置文件</h2>
 
-<p><a href="https://leetcode.com/problems/word-search/" target="_blank">Word Search</a></p>
+<p>在游戏工程中，通常有大量配置是由策划提供，再转换成程序方便读取的格式添加到工程中。</p>
 
-<blockquote>
-<p>Given a 2D board and a word, find if the word exists in the grid.</p>
+<p>在我参与的<code>Cocos2dx-Lua</code>工程中，策划通常在<code>Excel</code>中配置，再通过脚本转换为<code>Lua-Table</code>的文件。</p>
 
-<p>The word can be constructed from letters of sequentially adjacent cell, where &ldquo;adjacent&rdquo; cells are those horizontally or vertically neighboring. The same letter cell may not be used more than once.</p>
-
-<p><strong>Example:</strong></p>
-
-<pre><code>board =
-[
-  ['A','B','C','E'],
-  ['S','F','C','S'],
-  ['A','D','E','E']
-]
-
-Given word = &quot;ABCCED&quot;, return true.
-Given word = &quot;SEE&quot;, return true.
-Given word = &quot;ABCB&quot;, return false.
-</code></pre>
-</blockquote>
-
-<p>在<code>board</code>中查找是否存在相连（相邻）的字符与给定的单词对应。</p>
-
-<p>很像一个走迷宫的题目，搜索下一步是否与单词的字母匹配，是则走到该位置。</p>
+<p>比如常见的道具表转换后：</p>
 
 <p></p>
       
       <p>
-        <a href="https://www.orztu.com/leetcode/079-word-search/" class="postShorten-excerpt_link link">Read More</a>
+        <a href="https://www.orztu.com/post/lua-table-minify/" class="postShorten-excerpt_link link">Read More</a>
 
         
       </p>
@@ -465,21 +418,21 @@ Given word = &quot;ABCB&quot;, return false.
     
     <div class="postShorten-header">
       <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.orztu.com/leetcode/078-subsets/">
-          LeetCode 78. Subsets
+        <a class="link-unstyled" href="https://www.orztu.com/post/cgo-introduce/">
+          CGO —— Golang 与 C 语言混合编程
         </a>
       </h1>
       
   <div class="postShorten-meta-bg">
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2018-12-05T11:03:48&#43;08:00">
+      <time itemprop="datePublished" datetime="2018-09-03T15:56:08&#43;08:00">
         
   
   
   
   
-    2018-12-05
+    2018-09-03
   
 
       </time>
@@ -489,7 +442,7 @@ Given word = &quot;ABCB&quot;, return false.
   
     <span>in</span>
     
-      <a class="category-link" href="https://www.orztu.com/categories/leetcode">LeetCode</a>
+      <a class="category-link" href="https://www.orztu.com/categories/coding-life">coding life</a>
     
   
 
@@ -500,38 +453,12 @@ Given word = &quot;ABCB&quot;, return false.
     </div>
     <div class="postShorten-excerpt" itemprop="articleBody">
       
-        <h2 id="description">Description</h2>
-
-<p><a href="https://leetcode.com/problems/subsets/" target="_blank">Subsets</a></p>
-
-<blockquote>
-<p>Given a set of distinct integers, nums, return all possible subsets (the power set).</p>
-
-<p><strong>Note:</strong> The solution set must not contain duplicate subsets.</p>
-
-<p><strong>Example:</strong></p>
-
-<pre><code>Input: nums = [1,2,3]
-Output:
-[
-  [3],
-  [1],
-  [2],
-  [1,2,3],
-  [1,3],
-  [2,3],
-  [1,2],
-  []
-]
-</code></pre>
-</blockquote>
-
-<p>求所有子集（幂集），包含一个空集。</p>
+        <p>在此使用一段简单的代码展示 CGO 的基本用法 —— 在 Go 程序中使用 C 语言编程。</p>
 
 <p></p>
       
       <p>
-        <a href="https://www.orztu.com/leetcode/078-subsets/" class="postShorten-excerpt_link link">Read More</a>
+        <a href="https://www.orztu.com/post/cgo-introduce/" class="postShorten-excerpt_link link">Read More</a>
 
         
       </p>
@@ -558,21 +485,21 @@ Output:
     
     <div class="postShorten-header">
       <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.orztu.com/leetcode/077-combinations/">
-          LeetCode 77. Combinations
+        <a class="link-unstyled" href="https://www.orztu.com/post/using-govendor/">
+          govendor 使用
         </a>
       </h1>
       
   <div class="postShorten-meta-bg">
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2018-12-03T08:56:03&#43;08:00">
+      <time itemprop="datePublished" datetime="2018-08-02T14:43:33&#43;08:00">
         
   
   
   
   
-    2018-12-03
+    2018-08-02
   
 
       </time>
@@ -582,7 +509,7 @@ Output:
   
     <span>in</span>
     
-      <a class="category-link" href="https://www.orztu.com/categories/leetcode">LeetCode</a>
+      <a class="category-link" href="https://www.orztu.com/categories/coding-life">coding-life</a>
     
   
 
@@ -593,34 +520,16 @@ Output:
     </div>
     <div class="postShorten-excerpt" itemprop="articleBody">
       
-        <h2 id="description">Description</h2>
+        <h2 id="govendor">govendor</h2>
 
-<p><a href="https://leetcode.com/problems/combinations/" target="_blank">Combinations</a></p>
+<p>go vendor 是 go 1.6 官方正式引入的包管理方式。</p>
 
-<blockquote>
-<p>Given two integers n and k, return all possible combinations of k numbers out of 1 &hellip; n.</p>
-
-<p><strong>Example:</strong></p>
-
-<pre><code>Input: n = 4, k = 2
-Output:
-[
-  [2,4],
-  [3,4],
-  [2,3],
-  [1,2],
-  [1,3],
-  [1,4],
-]
-</code></pre>
-</blockquote>
-
-<p>给出两个整数<code>n</code>和<code>k</code>，输出所有包含<code>k</code>个数字的组合，数字范围<code>1..n</code>。</p>
+<p>其基本思路是，将引用的外部包的源代码放在当前工程的<code>vendor</code>目录下面，go 编译时会优先从<code>vendor</code>目录寻找依赖关系。</p>
 
 <p></p>
       
       <p>
-        <a href="https://www.orztu.com/leetcode/077-combinations/" class="postShorten-excerpt_link link">Read More</a>
+        <a href="https://www.orztu.com/post/using-govendor/" class="postShorten-excerpt_link link">Read More</a>
 
         
       </p>
@@ -647,34 +556,26 @@ Output:
     
     <div class="postShorten-header">
       <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.orztu.com/leetcode/076-minimum-window-substring/">
-          LeetCode 76. Minimum Window Substring
+        <a class="link-unstyled" href="https://www.orztu.com/post/go-get-through-a-proxy/">
+          go get through a proxy
         </a>
       </h1>
       
   <div class="postShorten-meta-bg">
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2018-11-30T10:53:51&#43;08:00">
+      <time itemprop="datePublished" datetime="2018-08-02T09:47:52&#43;08:00">
         
   
   
   
   
-    2018-11-30
+    2018-08-02
   
 
       </time>
     
     
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://www.orztu.com/categories/leetcode">LeetCode</a>
-    
-  
-
   </div>
   </div>
 
@@ -682,33 +583,14 @@ Output:
     </div>
     <div class="postShorten-excerpt" itemprop="articleBody">
       
-        <h2 id="description">Description</h2>
+        <p>由于众所不知的原因，在国内访问<code>golang.org</code>需要爬梯子。</p>
 
-<p><a href="https://leetcode.com/problems/minimum-window-substring/" target="_blank">Minimum Window Substring</a></p>
-
-<blockquote>
-<p>Given a string S and a string T, find the minimum window in S which will contain all the characters in T in complexity O(n).</p>
-
-<p><strong>Example:</strong></p>
-
-<pre><code>Input: S = &quot;ADOBECODEBANC&quot;, T = &quot;ABC&quot;
-Output: &quot;BANC&quot;
-</code></pre>
-
-<p><strong>Note:</strong></p>
-
-<ul>
-<li>If there is no such window in S that covers all characters in T, return the empty string &ldquo;&rdquo;.</li>
-<li>If there is such window, you are guaranteed that there will always be only one unique minimum window in S.</li>
-</ul>
-</blockquote>
-
-<p>给出两个字符串<code>S</code>和<code>T</code>，在<code>S</code>中找到一个最短的子串，它包含<code>T</code>中所有的字符。</p>
+<p>所以使用<code>go get</code>安装包的时候，也要用梯子。</p>
 
 <p></p>
       
       <p>
-        <a href="https://www.orztu.com/leetcode/076-minimum-window-substring/" class="postShorten-excerpt_link link">Read More</a>
+        <a href="https://www.orztu.com/post/go-get-through-a-proxy/" class="postShorten-excerpt_link link">Read More</a>
 
         
       </p>
@@ -735,21 +617,21 @@ Output: &quot;BANC&quot;
     
     <div class="postShorten-header">
       <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.orztu.com/leetcode/075-sort-colors/">
-          LeetCode 75. Sort Colors
+        <a class="link-unstyled" href="https://www.orztu.com/post/golang-slice-and-array/">
+          Golang Slice and Array
         </a>
       </h1>
       
   <div class="postShorten-meta-bg">
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2018-11-29T10:50:23&#43;08:00">
+      <time itemprop="datePublished" datetime="2018-06-25T15:22:42&#43;08:00">
         
   
   
   
   
-    2018-11-29
+    2018-06-25
   
 
       </time>
@@ -759,7 +641,7 @@ Output: &quot;BANC&quot;
   
     <span>in</span>
     
-      <a class="category-link" href="https://www.orztu.com/categories/leetcode">LeetCode</a>
+      <a class="category-link" href="https://www.orztu.com/categories/coding-life">coding life</a>
     
   
 
@@ -770,43 +652,104 @@ Output: &quot;BANC&quot;
     </div>
     <div class="postShorten-excerpt" itemprop="articleBody">
       
-        <h2 id="description">Description</h2>
+        <h2 id="数组与切片">数组与切片</h2>
 
-<p><a href="https://leetcode.com/problems/sort-colors/" target="_blank">Sort Colors</a></p>
+<p>以前粗学时并没有留意 Golang 的数组，一直以为只有切片。</p>
 
-<blockquote>
-<p>Given an array with n objects colored red, white or blue, sort them in-place so that objects of the same color are adjacent, with the colors in the order red, white and blue.</p>
+<p>今天看<a href="https://book.douban.com/subject/27015617/" target="_blank">《Go语言实践》</a>时才发现 Golang 也有数组。与切片的区别是定义时指定长度（例如长度为4的 int 型数组<code>var array [4]int</code>）。</p>
 
-<p>Here, we will use the integers <code>0</code>, <code>1</code>, and <code>2</code> to represent the color <code>red</code>, <code>white</code>, and <code>blue</code> respectively.</p>
+<p>数组赋值时会拷贝整个数组，所以作为参数传递时也会完整拷贝，要考虑性能合理使用，必要时可以使用指针。</p>
 
-<p><strong>Note:</strong> You are not suppose to use the library&rsquo;s sort function for this problem.</p>
-
-<p><strong>Example:</strong></p>
-
-<pre><code>Input: [2,0,2,1,1,0]
-Output: [0,0,1,1,2,2]
-Follow up:
-</code></pre>
-
-<ul>
-<li><p>A rather straight forward solution is a two-pass algorithm using counting sort.<br>
-First, iterate the array counting number of 0&rsquo;s, 1&rsquo;s, and 2&rsquo;s, then overwrite array with total number of 0&rsquo;s, then 1&rsquo;s and followed by 2&rsquo;s.</p></li>
-
-<li><p>Could you come up with a one-pass algorithm using only constant space?</p></li>
-</ul>
-</blockquote>
-
-<p>对一个只包含<code>0</code>、<code>1</code>、<code>2</code>三个数字的数组进行排序，要求时间复杂度<code>O(n)</code>，空间复杂度<code>O(1)</code>。</p>
+<p>以下代码便于理解数组和切片：</p>
 
 <p></p>
       
       <p>
-        <a href="https://www.orztu.com/leetcode/075-sort-colors/" class="postShorten-excerpt_link link">Read More</a>
+        <a href="https://www.orztu.com/post/golang-slice-and-array/" class="postShorten-excerpt_link link">Read More</a>
 
         
       </p>
     </div>
   </div>
+  
+</article>
+
+          
+            
+  
+    
+      
+        
+          
+            
+          
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-right" itemscope itemType="http://schema.org/BlogPosting">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title" itemprop="headline">
+        <a class="link-unstyled" href="https://www.orztu.com/post/text-watermark/">
+          python为图片添加文字水印
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta-bg">
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2018-05-10T10:54:06&#43;08:00">
+        
+  
+  
+  
+  
+    2018-05-10
+  
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://www.orztu.com/categories/coding-life">coding life</a>
+    
+  
+
+  </div>
+  </div>
+
+
+    </div>
+    <div class="postShorten-excerpt" itemprop="articleBody">
+      
+        <h2 id="功能">功能</h2>
+
+<p>使用知名python图片处理库PIL，为图片添加文字水印。</p>
+
+<p></p>
+      
+      <p>
+        <a href="https://www.orztu.com/post/text-watermark/" class="postShorten-excerpt_link link">Read More</a>
+
+        
+      </p>
+    </div>
+  </div>
+  
+    <a href="https://www.orztu.com/post/text-watermark/">
+      <div class="postShorten-thumbnailimg">
+        <img alt="" itemprop="image" src="https://www.orztu.com/images/post/coding-life/text-watermark-test.png"/>
+      </div>
+    </a>
   
 </article>
 
@@ -828,21 +771,21 @@ First, iterate the array counting number of 0&rsquo;s, 1&rsquo;s, and 2&rsquo;s,
     
     <div class="postShorten-header">
       <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.orztu.com/leetcode/074-search-a-2d-matrix/">
-          LeetCode 74. Search a 2D Matrix
+        <a class="link-unstyled" href="https://www.orztu.com/post/wechat-jump/">
+          python实现微信跳一跳外挂
         </a>
       </h1>
       
   <div class="postShorten-meta-bg">
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2018-11-28T15:07:51&#43;08:00">
+      <time itemprop="datePublished" datetime="2018-01-08T10:00:41&#43;08:00">
         
   
   
   
   
-    2018-11-28
+    2018-01-08
   
 
       </time>
@@ -852,7 +795,7 @@ First, iterate the array counting number of 0&rsquo;s, 1&rsquo;s, and 2&rsquo;s,
   
     <span>in</span>
     
-      <a class="category-link" href="https://www.orztu.com/categories/leetcode">LeetCode</a>
+      <a class="category-link" href="https://www.orztu.com/categories/coding-life">coding life</a>
     
   
 
@@ -863,155 +806,12 @@ First, iterate the array counting number of 0&rsquo;s, 1&rsquo;s, and 2&rsquo;s,
     </div>
     <div class="postShorten-excerpt" itemprop="articleBody">
       
-        <h2 id="description">Description</h2>
-
-<p><a href="https://leetcode.com/problems/search-a-2d-matrix/" target="_blank">Search a 2D Matrix</a></p>
-
-<blockquote>
-<p>Write an efficient algorithm that searches for a value in an m x n matrix. This matrix has the following properties:</p>
-
-<ul>
-<li>Integers in each row are sorted from left to right.</li>
-<li>The first integer of each row is greater than the last integer of the previous row.</li>
-</ul>
-
-<p><strong>Example 1:</strong></p>
-
-<pre><code>Input:
-matrix = [
-  [1,   3,  5,  7],
-  [10, 11, 16, 20],
-  [23, 30, 34, 50]
-]
-
-target = 3
-Output: true
-
-target = 13
-Output: false
-</code></pre>
-</blockquote>
-
-<p>矩阵中有序存地放着一些数字，查找是否存在某个数字。</p>
+        <p>使用python+adb实现微信跳一跳外挂</p>
 
 <p></p>
       
       <p>
-        <a href="https://www.orztu.com/leetcode/074-search-a-2d-matrix/" class="postShorten-excerpt_link link">Read More</a>
-
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-          
-            
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.orztu.com/leetcode/073-set-matrix-zeroes/">
-          LeetCode 73. Set Matrix Zeroes
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta-bg">
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2018-11-28T14:33:12&#43;08:00">
-        
-  
-  
-  
-  
-    2018-11-28
-  
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://www.orztu.com/categories/leetcode">LeetCode</a>
-    
-  
-
-  </div>
-  </div>
-
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      
-        <h2 id="description">Description</h2>
-
-<p><a href="https://leetcode.com/problems/set-matrix-zeroes/" target="_blank">Set Matrix Zeroes</a></p>
-
-<blockquote>
-<p>Given a m x n matrix, if an element is <code>0</code>, set its entire row and column to 0. Do it in-place.
-<strong>Example 1:</strong></p>
-
-<pre><code>Input:
-[
-  [1,1,1],
-  [1,0,1],
-  [1,1,1]
-]
-Output:
-[
-  [1,0,1],
-  [0,0,0],
-  [1,0,1]
-]
-</code></pre>
-
-<p><strong>Example 2:</strong></p>
-
-<pre><code>Input:
-[
-  [0,1,2,0],
-  [3,4,5,2],
-  [1,3,1,5]
-]
-Output:
-[
-  [0,0,0,0],
-  [0,4,5,0],
-  [0,3,1,0]
-]
-</code></pre>
-
-<p><strong>Follow up:</strong></p>
-
-<ul>
-<li>A straight forward solution using O(mn) space is probably a bad idea.</li>
-<li>A simple improvement uses O(m + n) space, but still not the best solution.</li>
-<li><strong>Could you devise a constant space solution?</strong></li>
-</ul>
-</blockquote>
-
-<p>在<code>m x n</code>的矩阵中，如果一个元素为<code>0</code>，则将它所在的行和列都置为<code>0</code>。</p>
-
-<p></p>
-      
-      <p>
-        <a href="https://www.orztu.com/leetcode/073-set-matrix-zeroes/" class="postShorten-excerpt_link link">Read More</a>
+        <a href="https://www.orztu.com/post/wechat-jump/" class="postShorten-excerpt_link link">Read More</a>
 
         
       </p>
@@ -1054,88 +854,13 @@ Output:
                 </li>
             
         
-            
-            
-            
-            
-                
-                
-            
-            
-                <li class="page-item ">
-                    <a class="page-link" href="https://www.orztu.com/page/3/">3</a>
-                </li>
-            
-        
-            
-            
-            
-            
-                
-                
-            
-            
-                <li class="page-item disabled">
-                    <span class="page-link" aria-hidden="true">&hellip;</span>
-                </li>
-            
-        
-            
-            
-            
-            
-                
-                
-            
-            
-        
-            
-            
-            
-            
-                
-                
-            
-            
-        
-            
-            
-            
-            
-                
-                
-            
-            
-        
-            
-            
-            
-            
-                
-                
-            
-            
-        
-            
-            
-            
-            
-                
-                
-            
-            
-                <li class="page-item ">
-                    <a class="page-link" href="https://www.orztu.com/page/9/">9</a>
-                </li>
-            
-        
         
         <li class="page-item ">
             <a class="page-link" href="https://www.orztu.com/page/2/" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
         </li>
         
         <li class="page-item">
-            <a class="page-link" href="https://www.orztu.com/page/9/" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+            <a class="page-link" href="https://www.orztu.com/page/2/" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
         </li>
         
         
