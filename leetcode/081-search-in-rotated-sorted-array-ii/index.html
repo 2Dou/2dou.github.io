@@ -7,26 +7,26 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="generator" content="Hugo 0.39 with theme Tranquilpeak 0.4.3-SNAPSHOT">
 <meta name="author" content="SelFree">
-<meta name="keywords" content="Roman Numerals, program develop, leetcode, Golang, leetcode解答, 程序">
-<meta name="description" content="LeetCode 12. Integer to Roman - Answer LeetCode编程练习解答">
+<meta name="keywords" content="二分查找, program develop, leetcode, Golang, leetcode解答, 程序">
+<meta name="description" content="LeetCode 81. Search in Rotated Sorted Array II - Answer LeetCode编程练习解答">
 
 
-<meta property="og:description" content="LeetCode 12. Integer to Roman - Answer LeetCode编程练习解答">
+<meta property="og:description" content="LeetCode 81. Search in Rotated Sorted Array II - Answer LeetCode编程练习解答">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LeetCode 12. Integer to Roman">
-<meta name="twitter:title" content="LeetCode 12. Integer to Roman">
-<meta property="og:url" content="https://www.orztu.com/leetcode/012-integer-to-roman/">
-<meta property="twitter:url" content="https://www.orztu.com/leetcode/012-integer-to-roman/">
+<meta property="og:title" content="LeetCode 81. Search in Rotated Sorted Array II">
+<meta name="twitter:title" content="LeetCode 81. Search in Rotated Sorted Array II">
+<meta property="og:url" content="https://www.orztu.com/leetcode/081-search-in-rotated-sorted-array-ii/">
+<meta property="twitter:url" content="https://www.orztu.com/leetcode/081-search-in-rotated-sorted-array-ii/">
 <meta property="og:site_name" content="Orz the way">
-<meta property="og:description" content="LeetCode 12. Integer to Roman - Answer LeetCode编程练习解答">
-<meta name="twitter:description" content="LeetCode 12. Integer to Roman - Answer LeetCode编程练习解答">
+<meta property="og:description" content="LeetCode 81. Search in Rotated Sorted Array II - Answer LeetCode编程练习解答">
+<meta name="twitter:description" content="LeetCode 81. Search in Rotated Sorted Array II - Answer LeetCode编程练习解答">
 <meta property="og:locale" content="en-us">
 
   
-    <meta property="article:published_time" content="2017-07-07T09:18:49">
+    <meta property="article:published_time" content="2018-12-10T14:34:14">
   
   
-    <meta property="article:modified_time" content="2017-07-07T09:18:49">
+    <meta property="article:modified_time" content="2018-12-10T14:34:14">
   
   
   
@@ -38,9 +38,9 @@
     
       <meta property="article:tag" content="LeetCode">
     
-      <meta property="article:tag" content="Math">
+      <meta property="article:tag" content="Array">
     
-      <meta property="article:tag" content="String">
+      <meta property="article:tag" content="Binary Search">
     
   
 
@@ -53,9 +53,6 @@
 
 
 
-  <meta property="og:image" content="https://www.orztu.com/images/leetcode/roman-numerals.jpg">
-  <meta property="twitter:image" content="https://www.orztu.com/images/leetcode/roman-numerals.jpg">
-
 
 
 
@@ -64,12 +61,12 @@
   <meta property="twitter:image" content="https://www.gravatar.com/avatar/f47b51d6d6b82fd9048e3eaf64bf7e69?s=640">
 
 
-    <title>LeetCode 12. Integer to Roman | 
+    <title>LeetCode 81. Search in Rotated Sorted Array II | 
         Orz the way
       
     </title>
     <meta name="author" content="SelFree">
-    <meta name="keywords" content="Roman Numerals, program develop, leetcode, Golang, leetcode解答, 程序">
+    <meta name="keywords" content="二分查找, program develop, leetcode, Golang, leetcode解答, 程序">
     
 
     <link rel="icon" href="https://www.orztu.com/images/favicon.ico">
@@ -77,7 +74,7 @@
 
     
 
-    <link rel="canonical" href="https://www.orztu.com/leetcode/012-integer-to-roman/">
+    <link rel="canonical" href="https://www.orztu.com/leetcode/081-search-in-rotated-sorted-array-ii/">
 
     
     <link rel="stylesheet" href="//cdnjs.cat.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
@@ -262,20 +259,20 @@
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title" itemprop="headline">
-      LeetCode 12. Integer to Roman
+      LeetCode 81. Search in Rotated Sorted Array II
     </h1>
   
   
   <div class="postShorten-meta-bg">
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2017-07-07T09:18:49&#43;08:00">
+      <time itemprop="datePublished" datetime="2018-12-10T14:34:14&#43;08:00">
         
   
   
   
   
-    2017-07-07
+    2018-12-10
   
 
       </time>
@@ -298,96 +295,135 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <p><a href="https://leetcode.com/problems/integer-to-roman/" target="_blank">Integer to Roman</a></p>
+              <h2 id="description">Description</h2>
 
-<h2 id="description">Description</h2>
+<p><a href="https://leetcode.com/problems/search-in-rotated-sorted-array-ii/" target="_blank">Search in Rotated Sorted Array II</a></p>
 
 <blockquote>
-<p>Given an integer, convert it to a roman numeral. <br>
-<br>
-Input is guaranteed to be within the range from 1 to 3999.</p>
-</blockquote>
+<p>Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.</p>
 
-<p>将整型转换成罗马数字形式:</p>
+<p>(i.e., <code>[0,0,1,2,2,5,6]</code> might become <code>[2,5,6,0,0,1,2]</code>).</p>
+
+<p>You are given a target value to search. If found in the array return <code>true</code>, otherwise return <code>false</code>.</p>
+
+<p><strong>Example 1:</strong></p>
+
+<pre><code>Input: nums = [2,5,6,0,0,1,2], target = 0
+Output: true
+</code></pre>
+
+<p><strong>Example 2:</strong></p>
+
+<pre><code>Input: nums = [2,5,6,0,0,1,2], target = 3
+Output: false
+</code></pre>
+
+<p><strong>Follow up:</strong></p>
+
+<ul>
+<li>This is a follow up problem to Search in Rotated Sorted Array, where nums may contain duplicates.</li>
+<li>Would this affect the run-time complexity? How and why?</li>
+</ul>
+</blockquote>
 
 <p></p>
 
-<table>
-<thead>
-<tr>
-<th>Symbol</th>
-<th>Value</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td>I</td>
-<td>1</td>
-</tr>
-
-<tr>
-<td>V</td>
-<td>5</td>
-</tr>
-
-<tr>
-<td>X</td>
-<td>10</td>
-</tr>
-
-<tr>
-<td>L</td>
-<td>50</td>
-</tr>
-
-<tr>
-<td>C</td>
-<td>100</td>
-</tr>
-
-<tr>
-<td>D</td>
-<td>500</td>
-</tr>
-
-<tr>
-<td>M</td>
-<td>1000</td>
-</tr>
-</tbody>
-</table>
-
 <h2 id="solution">Solution</h2>
-
-<p>因为限定了范围，所以千位数也用了Slice</p>
 
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-golang" data-lang="golang"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
+<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">func</span> <span class="nx">intToRoman</span><span class="p">(</span><span class="nx">num</span> <span class="kt">int</span><span class="p">)</span> <span class="kt">string</span> <span class="p">{</span>
-    <span class="nx">M</span> <span class="o">:=</span> <span class="p">[]</span><span class="kt">string</span><span class="p">{</span><span class="s">&#34;&#34;</span><span class="p">,</span> <span class="s">&#34;M&#34;</span><span class="p">,</span> <span class="s">&#34;MM&#34;</span><span class="p">,</span> <span class="s">&#34;MMM&#34;</span><span class="p">}</span>
-    <span class="nx">C</span> <span class="o">:=</span> <span class="p">[]</span><span class="kt">string</span><span class="p">{</span><span class="s">&#34;&#34;</span><span class="p">,</span> <span class="s">&#34;C&#34;</span><span class="p">,</span> <span class="s">&#34;CC&#34;</span><span class="p">,</span> <span class="s">&#34;CCC&#34;</span><span class="p">,</span> <span class="s">&#34;CD&#34;</span><span class="p">,</span> <span class="s">&#34;D&#34;</span><span class="p">,</span> <span class="s">&#34;DC&#34;</span><span class="p">,</span> <span class="s">&#34;DCC&#34;</span><span class="p">,</span> <span class="s">&#34;DCCC&#34;</span><span class="p">,</span> <span class="s">&#34;CM&#34;</span><span class="p">}</span>
-    <span class="nx">X</span> <span class="o">:=</span> <span class="p">[]</span><span class="kt">string</span><span class="p">{</span><span class="s">&#34;&#34;</span><span class="p">,</span> <span class="s">&#34;X&#34;</span><span class="p">,</span> <span class="s">&#34;XX&#34;</span><span class="p">,</span> <span class="s">&#34;XXX&#34;</span><span class="p">,</span> <span class="s">&#34;XL&#34;</span><span class="p">,</span> <span class="s">&#34;L&#34;</span><span class="p">,</span> <span class="s">&#34;LX&#34;</span><span class="p">,</span> <span class="s">&#34;LXX&#34;</span><span class="p">,</span> <span class="s">&#34;LXXX&#34;</span><span class="p">,</span> <span class="s">&#34;XC&#34;</span><span class="p">}</span>
-    <span class="nx">I</span> <span class="o">:=</span> <span class="p">[]</span><span class="kt">string</span><span class="p">{</span><span class="s">&#34;&#34;</span><span class="p">,</span> <span class="s">&#34;I&#34;</span><span class="p">,</span> <span class="s">&#34;II&#34;</span><span class="p">,</span> <span class="s">&#34;III&#34;</span><span class="p">,</span> <span class="s">&#34;IV&#34;</span><span class="p">,</span> <span class="s">&#34;V&#34;</span><span class="p">,</span> <span class="s">&#34;VI&#34;</span><span class="p">,</span> <span class="s">&#34;VII&#34;</span><span class="p">,</span> <span class="s">&#34;VIII&#34;</span><span class="p">,</span> <span class="s">&#34;IX&#34;</span><span class="p">}</span>
+<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+ <span class="k">public</span><span class="o">:</span>
+    <span class="kt">bool</span> <span class="n">search</span><span class="p">(</span><span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">nums</span><span class="p">,</span> <span class="kt">int</span> <span class="n">target</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">l</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">r</span> <span class="o">=</span> <span class="n">nums</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">mid</span><span class="p">,</span> <span class="n">lnum</span><span class="p">,</span> <span class="n">mnum</span><span class="p">,</span> <span class="n">rnum</span><span class="p">;</span>
 
-    <span class="k">return</span> <span class="nx">M</span><span class="p">[</span><span class="nx">num</span><span class="o">/</span><span class="mi">1000</span><span class="p">]</span> <span class="o">+</span> <span class="nx">C</span><span class="p">[(</span><span class="nx">num</span><span class="o">%</span><span class="mi">1000</span><span class="p">)</span><span class="o">/</span><span class="mi">100</span><span class="p">]</span> <span class="o">+</span> <span class="nx">X</span><span class="p">[(</span><span class="nx">num</span><span class="o">%</span><span class="mi">100</span><span class="p">)</span><span class="o">/</span><span class="mi">10</span><span class="p">]</span> <span class="o">+</span> <span class="nx">I</span><span class="p">[</span><span class="nx">num</span><span class="o">%</span><span class="mi">10</span><span class="p">]</span>
-<span class="p">}</span></code></pre></td></tr></table>
+        <span class="k">while</span> <span class="p">(</span><span class="n">l</span> <span class="o">&lt;=</span> <span class="n">r</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">mid</span> <span class="o">=</span> <span class="n">l</span> <span class="o">+</span> <span class="p">(</span><span class="n">r</span> <span class="o">-</span> <span class="n">l</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span>
+
+            <span class="n">lnum</span> <span class="o">=</span> <span class="n">nums</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">l</span><span class="p">);</span>
+            <span class="n">mnum</span> <span class="o">=</span> <span class="n">nums</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">mid</span><span class="p">);</span>
+            <span class="n">rnum</span> <span class="o">=</span> <span class="n">nums</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">r</span><span class="p">);</span>
+
+            <span class="c1">// 一次判断三个数
+</span><span class="c1"></span>            <span class="k">if</span> <span class="p">(</span><span class="n">mnum</span> <span class="o">==</span> <span class="n">target</span> <span class="o">||</span> <span class="n">lnum</span> <span class="o">==</span> <span class="n">target</span> <span class="o">||</span> <span class="n">rnum</span> <span class="o">==</span> <span class="n">target</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">lnum</span> <span class="o">&lt;</span> <span class="n">mnum</span><span class="p">)</span> <span class="p">{</span>
+                <span class="c1">// lnum &lt; mnum 表示左边有序，那么判断target是否落在左边
+</span><span class="c1"></span>                <span class="k">if</span> <span class="p">(</span><span class="n">target</span> <span class="o">&lt;</span> <span class="n">mnum</span> <span class="o">&amp;&amp;</span> <span class="n">target</span> <span class="o">&gt;=</span> <span class="n">lnum</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="n">r</span> <span class="o">=</span> <span class="n">mid</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+                <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                    <span class="n">l</span> <span class="o">=</span> <span class="n">mid</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+                <span class="p">}</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">rnum</span> <span class="o">&gt;</span> <span class="n">mnum</span><span class="p">)</span> <span class="p">{</span>
+                <span class="c1">// rnum &gt; mnum 表示右边有序，那么判断target是否落在右边
+</span><span class="c1"></span>                <span class="k">if</span> <span class="p">(</span><span class="n">target</span> <span class="o">&gt;</span> <span class="n">mnum</span> <span class="o">&amp;&amp;</span> <span class="n">target</span> <span class="o">&lt;=</span> <span class="n">rnum</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="n">l</span> <span class="o">=</span> <span class="n">mid</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+                <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                    <span class="n">r</span> <span class="o">=</span> <span class="n">mid</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+                <span class="p">}</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                <span class="c1">// 收紧区域
+</span><span class="c1"></span>                <span class="n">r</span><span class="o">--</span><span class="p">,</span> <span class="n">l</span><span class="o">++</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></td></tr></table>
 </div>
 </div>
 
 <h2 id="similar-problem">Similar Problem</h2>
 
-<p><a href="https://www.orztu.com/leetcode/013-roman-to-integer/" target="_blank">13. Integer to Roman</a></p>
+<ul>
+<li><a href="https://www.orztu.com/leetcode/033-search-in-rotated-sorted-array/" target="_blank">33. Search in Rotated Sorted Array</a></li>
+</ul>
               
               
 
@@ -403,9 +439,9 @@ Input is guaranteed to be within the range from 1 to 3999.</p>
                     
   <a class="tag tag--primary tag--small" href="https://www.orztu.com/tags/leetcode/">LeetCode</a>
 
-  <a class="tag tag--primary tag--small" href="https://www.orztu.com/tags/math/">Math</a>
+  <a class="tag tag--primary tag--small" href="https://www.orztu.com/tags/array/">Array</a>
 
-  <a class="tag tag--primary tag--small" href="https://www.orztu.com/tags/string/">String</a>
+  <a class="tag tag--primary tag--small" href="https://www.orztu.com/tags/binary-search/">Binary Search</a>
 
 
                   </div>
@@ -419,7 +455,7 @@ Input is guaranteed to be within the range from 1 to 3999.</p>
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/011-container-with-most-water/" data-tooltip="LeetCode 11. Container With Most Water">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/080-remove-duplicates-from-sorted-array-ii/" data-tooltip="LeetCode 80. Remove Duplicates from Sorted Array II">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
@@ -427,7 +463,7 @@ Input is guaranteed to be within the range from 1 to 3999.</p>
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/013-roman-to-integer/" data-tooltip="LeetCode 13. Roman to Integer">
+                <a class="post-action-btn btn btn--disabled">
               
                   <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
                   <i class="fa fa-angle-right"></i>
@@ -488,7 +524,7 @@ Input is guaranteed to be within the range from 1 to 3999.</p>
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/011-container-with-most-water/" data-tooltip="LeetCode 11. Container With Most Water">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/080-remove-duplicates-from-sorted-array-ii/" data-tooltip="LeetCode 80. Remove Duplicates from Sorted Array II">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
@@ -496,7 +532,7 @@ Input is guaranteed to be within the range from 1 to 3999.</p>
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/013-roman-to-integer/" data-tooltip="LeetCode 13. Roman to Integer">
+                <a class="post-action-btn btn btn--disabled">
               
                   <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
                   <i class="fa fa-angle-right"></i>
@@ -892,9 +928,9 @@ $(document).ready(function() {
     
       <script>
         var disqus_config = function () {
-          this.page.url = 'https:\/\/www.orztu.com\/leetcode\/012-integer-to-roman\/';
+          this.page.url = 'https:\/\/www.orztu.com\/leetcode\/081-search-in-rotated-sorted-array-ii\/';
           
-            this.page.identifier = '\/leetcode\/012-integer-to-roman\/'
+            this.page.identifier = '\/leetcode\/081-search-in-rotated-sorted-array-ii\/'
           
         };
         (function() {

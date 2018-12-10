@@ -45,7 +45,7 @@
       <guid>https://www.orztu.com/post/go-get-through-a-proxy/</guid>
       <description>&lt;p&gt;由于众所不知的原因，在国内访问&lt;code&gt;golang.org&lt;/code&gt;需要爬梯子。&lt;/p&gt;
 
-&lt;p&gt;所以使用&lt;code&gt;go get&lt;/code&gt;安装包的时候，也要用梯子。&lt;/p&gt;
+&lt;p&gt;所以使用&lt;code&gt;go get&lt;/code&gt;安装某些包的时候，也要用梯子。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>

@@ -6,10 +6,50 @@
     <description>Recent content in Leetcodes on Orz the way</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 06 Dec 2018 09:33:43 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 10 Dec 2018 14:34:14 +0800</lastBuildDate>
     
 	<atom:link href="https://www.orztu.com/leetcode/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>LeetCode 81. Search in Rotated Sorted Array II</title>
+      <link>https://www.orztu.com/leetcode/081-search-in-rotated-sorted-array-ii/</link>
+      <pubDate>Mon, 10 Dec 2018 14:34:14 +0800</pubDate>
+      
+      <guid>https://www.orztu.com/leetcode/081-search-in-rotated-sorted-array-ii/</guid>
+      <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/search-in-rotated-sorted-array-ii/&#34; target=&#34;_blank&#34;&gt;Search in Rotated Sorted Array II&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.&lt;/p&gt;
+
+&lt;p&gt;(i.e., &lt;code&gt;[0,0,1,2,2,5,6]&lt;/code&gt; might become &lt;code&gt;[2,5,6,0,0,1,2]&lt;/code&gt;).&lt;/p&gt;
+
+&lt;p&gt;You are given a target value to search. If found in the array return &lt;code&gt;true&lt;/code&gt;, otherwise return &lt;code&gt;false&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Example 1:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Input: nums = [2,5,6,0,0,1,2], target = 0
+Output: true
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Example 2:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Input: nums = [2,5,6,0,0,1,2], target = 3
+Output: false
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Follow up:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;This is a follow up problem to Search in Rotated Sorted Array, where nums may contain duplicates.&lt;/li&gt;
+&lt;li&gt;Would this affect the run-time complexity? How and why?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>LeetCode 80. Remove Duplicates from Sorted Array II</title>
