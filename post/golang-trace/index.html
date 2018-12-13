@@ -7,20 +7,34 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="generator" content="Hugo 0.39 with theme Tranquilpeak 0.4.3-SNAPSHOT">
 <meta name="author" content="SelFree">
-<meta name="keywords" content=", program develop, leetcode, Golang, leetcode解答, 程序">
-<meta name="description" content="城市永远年轻，而我们终将老去">
+<meta name="keywords" content="Print Trace in Golang, 打印Go语言调用栈, program develop, leetcode, Golang, leetcode解答, 程序">
+<meta name="description" content="在 Go 语言中获取调用的函数名，调用栈">
 
 
-<meta property="og:description" content="城市永远年轻，而我们终将老去">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Regular">
-<meta name="twitter:title" content="Regular">
-<meta property="og:url" content="https://www.orztu.com/tags/regular/">
-<meta property="twitter:url" content="https://www.orztu.com/tags/regular/">
+<meta property="og:description" content="在 Go 语言中获取调用的函数名，调用栈">
+<meta property="og:type" content="article">
+<meta property="og:title" content="在 Golang 中打印调用栈信息">
+<meta name="twitter:title" content="在 Golang 中打印调用栈信息">
+<meta property="og:url" content="https://www.orztu.com/post/golang-trace/">
+<meta property="twitter:url" content="https://www.orztu.com/post/golang-trace/">
 <meta property="og:site_name" content="Orz the way">
-<meta property="og:description" content="城市永远年轻，而我们终将老去">
-<meta name="twitter:description" content="城市永远年轻，而我们终将老去">
+<meta property="og:description" content="在 Go 语言中获取调用的函数名，调用栈">
+<meta name="twitter:description" content="在 Go 语言中获取调用的函数名，调用栈">
 <meta property="og:locale" content="en-us">
+
+  
+    <meta property="article:published_time" content="2018-12-12T15:38:49">
+  
+  
+    <meta property="article:modified_time" content="2018-12-12T15:38:49">
+  
+  
+  
+  
+    
+      <meta property="article:tag" content="Golang">
+    
+  
 
 
 <meta name="twitter:card" content="summary">
@@ -39,22 +53,20 @@
   <meta property="twitter:image" content="https://www.gravatar.com/avatar/f47b51d6d6b82fd9048e3eaf64bf7e69?s=640">
 
 
-    <title>Regular | 
+    <title>在 Golang 中打印调用栈信息 | 
         Orz the way
       
     </title>
     <meta name="author" content="SelFree">
-    <meta name="keywords" content=", program develop, leetcode, Golang, leetcode解答, 程序">
+    <meta name="keywords" content="Print Trace in Golang, 打印Go语言调用栈, program develop, leetcode, Golang, leetcode解答, 程序">
     
 
     <link rel="icon" href="https://www.orztu.com/images/favicon.ico">
     
-      <link rel="alternate" type="application/rss+xml" title="RSS" href="https://www.orztu.com/tags/regular/index.xml">
-    
 
     
 
-    <link rel="canonical" href="https://www.orztu.com/tags/regular/">
+    <link rel="canonical" href="https://www.orztu.com/post/golang-trace/">
 
     
     <link rel="stylesheet" href="//cdnjs.cat.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
@@ -83,7 +95,7 @@
 
   <body>
     <div id="blog">
-      <header id="header" data-behavior="1">
+      <header id="header" data-behavior="4">
   <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
   <div class="header-title">
     <a class="header-title-link" href="https://www.orztu.com/">Orz the way</a>
@@ -103,7 +115,7 @@
   
 </header>
 
-      <nav id="sidebar" data-behavior="1">
+      <nav id="sidebar" data-behavior="4">
   <div class="sidebar-container">
     
       <div class="sidebar-profile">
@@ -236,190 +248,339 @@
 </nav>
 
       
-        
 
-      
-      <div id="main" data-behavior="1"
+      <div id="main" data-behavior="4"
         class="
                hasCoverMetaIn
                ">
-        
-          <section class="postShorten-group main-content-wrap">
-            
-            
-            
-              
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-left">
   
-    
-      
-        
-      
-    
+    <h1 class="post-title" itemprop="headline">
+      在 Golang 中打印调用栈信息
+    </h1>
   
-
-
   
-
-<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.orztu.com/leetcode/020-valid-parentheses/">
-          LeetCode 20. Valid Parentheses
-        </a>
-      </h1>
-      
   <div class="postShorten-meta-bg">
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2017-10-30T19:25:35&#43;08:00">
+      <time itemprop="datePublished" datetime="2018-12-12T15:38:49&#43;08:00">
         
   
   
   
   
-    2017-10-30
+    2018-12-12
   
 
       </time>
     
     
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://www.orztu.com/categories/leetcode">LeetCode</a>
-    
-  
-
   </div>
   </div>
 
 
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      
-        <p><a href="https://leetcode.com/problems/valid-parentheses/" target="_blank">Valid Parentheses</a></p>
+</div>
 
-<h2 id="description">Description</h2>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <p>在日志信息中，有时需要获取当前函数的调用信息，比如打印调用栈：</p>
 
-<blockquote>
-<p>Given a string containing just the characters <code>'('</code>, <code>')'</code>, <code>'{'</code>, <code>'}'</code>, <code>'['</code> and <code>']'</code>, determine if the input string is valid.
-</br> </br>
-The brackets must close in the correct order, <code>&quot;()&quot;</code> and <code>&quot;()[]{}&quot;</code> are all valid but <code>&quot;(]&quot;</code> and <code>&quot;([)]&quot;</code> are not.</p>
-</blockquote>
+<h2 id="调用栈">调用栈</h2>
 
-<p>给出包含三种括号的字符串，验证括号是否左右匹配</p>
+<h3 id="debug-stack-byte">debug.Stack() []byte</h3>
+
+<p><code>debug.Stack()</code>函数可以获取当前 goroutine 的调用栈信息，需要<code>import &quot;runtime/debug&quot;</code>。</p>
+
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-golang" data-lang="golang"><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">func</span> <span class="nx">foo</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&#34;--- BEGIN ---&#34;</span><span class="p">)</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nb">string</span><span class="p">(</span><span class="nx">debug</span><span class="p">.</span><span class="nx">Stack</span><span class="p">()))</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&#34;--- END ---&#34;</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nx">boom</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">foo</span><span class="p">()</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">boom</span><span class="p">()</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
 
 <p></p>
-      
-      <p>
-        <a href="https://www.orztu.com/leetcode/020-valid-parentheses/" class="postShorten-excerpt_link link">Read More</a>
 
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
+<p>可以获得类似输出结果：</p>
 
-            
-              
-  
-    
-      
-        
-      
-    
-  
+<pre><code>--- BEGIN ---
+goroutine 1 [running]:
+runtime/debug.Stack(0xc00006ef58, 0x1, 0x1)
+    /usr/local/Cellar/go/1.11.2/libexec/src/runtime/debug/stack.go:24 +0xa7
+main.foo()
+    xxx/trace.go:10 +0x66
+main.boom()
+    xxx/trace.go:15 +0x20
+main.main()
+    xxx/trace.go:19 +0x20
 
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.orztu.com/leetcode/010-regular-expression-matching/">
-          LeetCode 10. Regular Expression Matching
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta-bg">
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2017-03-24T15:00:47&#43;08:00">
-        
-  
-  
-  
-  
-    2017-03-24
-  
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://www.orztu.com/categories/leetcode">LeetCode</a>
-    
-  
-
-  </div>
-  </div>
-
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      
-        <p><a href="https://leetcode.com/problems/regular-expression-matching" target="_blank">Regular Expression Matching</a></p>
-
-<h2 id="description">Description</h2>
-
-<blockquote>
-<p>Implement regular expression matching with support for &lsquo;.&rsquo; and &lsquo;*&lsquo;.</p>
-
-<pre><code>'.' Matches any single character.
-'*' Matches zero or more of the preceding element.
-
-The matching should cover the entire input string (not partial).
-
-The function prototype should be:
-bool isMatch(const char *s, const char *p)
-
-Some examples:
-isMatch(&quot;aa&quot;,&quot;a&quot;) → false
-isMatch(&quot;aa&quot;,&quot;aa&quot;) → true
-isMatch(&quot;aaa&quot;,&quot;aa&quot;) → false
-isMatch(&quot;aa&quot;, &quot;a*&quot;) → true
-isMatch(&quot;aa&quot;, &quot;.*&quot;) → true
-isMatch(&quot;ab&quot;, &quot;.*&quot;) → true
-isMatch(&quot;aab&quot;, &quot;c*a*b&quot;) → true
+--- END ---
 </code></pre>
-</blockquote>
 
-<p></p>
-      
-      <p>
-        <a href="https://www.orztu.com/leetcode/010-regular-expression-matching/" class="postShorten-excerpt_link link">Read More</a>
+<h3 id="runtime-stack-buf-byte-all-bool-int">runtime.Stack(buf []byte, all bool) int</h3>
 
-        
-      </p>
-    </div>
-  </div>
+<p><code>debug.Stack()</code>函数源码在<code>runtime/debug/stack.go</code>中：</p>
+
+<pre><code class="language-golang">func Stack() []byte {
+    buf := make([]byte, 1024)
+    for {
+        n := runtime.Stack(buf, false)
+        if n &lt; len(buf) {
+            return buf[:n]
+        }
+        buf = make([]byte, 2*len(buf))
+    }
+}
+</code></pre>
+
+<p>可以看到它是通过调用<code>runtime.Stack</code>获取的调用栈信息，
+其中第二个参数<code>all</code>表示是否获取所有 goroutine 的调用栈。</p>
+
+<p>可以将第二个参数改为<code>true</code>然后创建多个 goroutine 查看输出效果。</p>
+
+<h2 id="更可控的调用信息">更可控的调用信息</h2>
+
+<p>上面两个函数虽然可以获取调用栈，但是直接将所有调用信息返回，控制参数较少。</p>
+
+<p>下面几个函数可以实现获取单层的调用信息。</p>
+
+<h3 id="runtime-caller-skip-int-pc-uintptr-file-string-line-int-ok-bool">runtime.Caller(skip int) (pc uintptr, file string, line int, ok bool)</h3>
+
+<p><code>runtime.Caller</code>函数可以获取调用者的信息</p>
+
+<ul>
+<li><p>参数<code>skip</code>：表示跳过的层级，相当于往上获取第几层的调用者。0 表示当前函数，1 表示上一层函数，依次往上。</p></li>
+
+<li><p>返回值</p>
+
+<ul>
+<li><code>pc</code>：<code>program counter</code>（不知道该怎么翻译，程序计数器？），可以大概理解为函数编号，可以通过<code>runtime.FuncForPC</code>解析</li>
+<li><code>file</code>：文件名</li>
+<li><code>line</code>：行号</li>
+</ul></li>
+</ul>
+
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-golang" data-lang="golang"><span class="lnt">8
+</span><span class="lnt">9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">func</span> <span class="nx">foo</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">pc</span><span class="p">,</span> <span class="nx">file</span><span class="p">,</span> <span class="nx">line</span><span class="p">,</span> <span class="nx">ok</span> <span class="o">:=</span> <span class="nx">runtime</span><span class="p">.</span><span class="nx">Caller</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nx">ok</span> <span class="p">{</span>
+        <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">runtime</span><span class="p">.</span><span class="nx">FuncForPC</span><span class="p">(</span><span class="nx">pc</span><span class="p">).</span><span class="nx">Name</span><span class="p">(),</span> <span class="nx">file</span><span class="p">,</span> <span class="nx">line</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+
+<p>可以得到这样一条输出：</p>
+
+<pre><code>main.boom xxx/trace.go 16
+</code></pre>
+
+<h3 id="runtime-callers-skip-int-pc-uintptr-int">runtime.Callers(skip int, pc []uintptr) int</h3>
+
+<p><code>runtime.Callers</code>一次可以获取调用栈中多个<code>program counter</code>。</p>
+
+<p>但是第一个参数<code>skip</code>与上面的<code>runtime.Caller</code>稍有不同，如果传<code>0</code>会获取到<code>Callers</code>函数本身的信息。
+传<code>1</code>时才与上面的<code>Caller</code>函数对应。</p>
+
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-golang" data-lang="golang"><span class="lnt">8
+</span><span class="lnt">9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">func</span> <span class="nx">foo</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">pc</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">([]</span><span class="kt">uintptr</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+    <span class="nx">n</span> <span class="o">:=</span> <span class="nx">runtime</span><span class="p">.</span><span class="nx">Callers</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nx">pc</span><span class="p">)</span>
+    <span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="nx">n</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
+        <span class="nx">f</span> <span class="o">:=</span> <span class="nx">runtime</span><span class="p">.</span><span class="nx">FuncForPC</span><span class="p">(</span><span class="nx">pc</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span>
+        <span class="nx">file</span><span class="p">,</span> <span class="nx">line</span> <span class="o">:=</span> <span class="nx">f</span><span class="p">.</span><span class="nx">FileLine</span><span class="p">(</span><span class="nx">pc</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span>
+        <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&#34;%s %d %s\n&#34;</span><span class="p">,</span> <span class="nx">file</span><span class="p">,</span> <span class="nx">line</span><span class="p">,</span> <span class="nx">f</span><span class="p">.</span><span class="nx">Name</span><span class="p">())</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+
+<p>输出：</p>
+
+<pre><code>xxx/trace.go 10 main.foo
+xxx/trace.go 20 main.boom
+xxx/trace.go 24 main.main
+/usr/local/Cellar/go/1.11.2/libexec/src/runtime/proc.go 210 runtime.main
+/usr/local/Cellar/go/1.11.2/libexec/src/runtime/asm_amd64.s 1334 runtime.goexit
+</code></pre>
+
+<h3 id="runtime-callersframes-callers-uintptr-runtime-frames">runtime.CallersFrames(callers []uintptr) *runtime.Frames</h3>
+
+<p><code>runtime.CallersFrames</code>可以一次解析多个<code>pc</code></p>
+
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-golang" data-lang="golang"><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">func</span> <span class="nx">foo</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">pc</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">([]</span><span class="kt">uintptr</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+    <span class="nx">n</span> <span class="o">:=</span> <span class="nx">runtime</span><span class="p">.</span><span class="nx">Callers</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nx">pc</span><span class="p">)</span>
+    <span class="nx">frames</span> <span class="o">:=</span> <span class="nx">runtime</span><span class="p">.</span><span class="nx">CallersFrames</span><span class="p">(</span><span class="nx">pc</span><span class="p">[:</span><span class="nx">n</span><span class="p">])</span>
+
+    <span class="kd">var</span> <span class="nx">frame</span> <span class="nx">runtime</span><span class="p">.</span><span class="nx">Frame</span>
+    <span class="nx">more</span> <span class="o">:=</span> <span class="nx">n</span> <span class="p">&gt;</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="nx">more</span> <span class="p">{</span>
+        <span class="nx">frame</span><span class="p">,</span> <span class="nx">more</span> <span class="p">=</span> <span class="nx">frames</span><span class="p">.</span><span class="nx">Next</span><span class="p">()</span>
+        <span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&#34;%s %d %s\n&#34;</span><span class="p">,</span> <span class="nx">frame</span><span class="p">.</span><span class="nx">File</span><span class="p">,</span> <span class="nx">frame</span><span class="p">.</span><span class="nx">Line</span><span class="p">,</span> <span class="nx">frame</span><span class="p">.</span><span class="nx">Function</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+
+<h3 id="func-runtime-funcforpc-pc-uintptr-runtime-func">func runtime.FuncForPC(pc uintptr) *runtime.Func</h3>
+
+<p>前面使用了<code>runtime.FuncForPC</code>来解析<code>pc</code>，获得函数信息。</p>
+
+<p>它返回的<code>*runtime.Func</code>主要有三个方法：</p>
+
+<ul>
+<li><code>Entry() uintptr</code>: 返回函数入口地址（函数注释Entry address of the function）</li>
+<li><code>Name() string</code>: 返回函数名</li>
+<li><code>FileLine(pc uintptr) (file string, line int)</code>: 返回文件名和行号</li>
+</ul>
+              
+              
+
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://www.orztu.com/tags/golang/">Golang</a>
+
+
+                  </div>
+                
+              
+            
+            <div class="post-actions-wrap">
   
-</article>
-
-            
-            
-
-          </section>
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/post/lua-table-minify-ii/" data-tooltip="使用元表优化 Lua 配置文件 II">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
         
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+            
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the comments</noscript>
+</div>
+
+              
+            
+          </div>
+        </article>
         <footer id="footer" class="main-content-wrap">
   <span class="copyrights">
     &copy; 2018 SelFree. All Rights Reserved
@@ -427,6 +588,66 @@ isMatch(&quot;aab&quot;, &quot;c*a*b&quot;) → true
 </footer>
 
       </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/post/lua-table-minify-ii/" data-tooltip="使用元表优化 Lua 配置文件 II">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
     </div>
     
     <div id="about">
@@ -794,6 +1015,32 @@ $(document).ready(function() {
 });
 </script>
 
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'https:\/\/www.orztu.com\/post\/golang-trace\/';
+          
+            this.page.identifier = '\/post\/golang-trace\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'orztu';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
 
 
 

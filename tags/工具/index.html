@@ -384,6 +384,64 @@
           <div class="media">
             
             <div class="media-body">
+              <a class="link-unstyled" href="https://www.orztu.com/post/golang-trace/">
+                <h3 class="media-heading">在 Golang 中打印调用栈信息</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Dec 12, 2018
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>在日志信息中，有时需要获取当前函数的调用信息，比如打印调用栈：</p>
+
+<h2 id="调用栈">调用栈</h2>
+
+<h3 id="debug-stack-byte">debug.Stack() []byte</h3>
+
+<p><code>debug.Stack()</code>函数可以获取当前 goroutine 的调用栈信息，需要<code>import &quot;runtime/debug&quot;</code>。</p>
+
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-golang" data-lang="golang"><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">func</span> <span class="nx">foo</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&#34;--- BEGIN ---&#34;</span><span class="p">)</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nb">string</span><span class="p">(</span><span class="nx">debug</span><span class="p">.</span><span class="nx">Stack</span><span class="p">()))</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&#34;--- END ---&#34;</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nx">boom</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">foo</span><span class="p">()</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">boom</span><span class="p">()</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+
+<p></p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
               <a class="link-unstyled" href="https://www.orztu.com/post/lua-table-minify-ii/">
                 <h3 class="media-heading">使用元表优化 Lua 配置文件 II</h3>
               </a>
@@ -438,7 +496,9 @@
                   Sep 9, 2018
                 </span>
               </span>
-              <div class="media-content hide-xs font-merryweather"><p>在此使用一段简单的代码展示 CGO 的基本用法 —— 在 Go 程序中使用 C 语言编程。</p>
+              <div class="media-content hide-xs font-merryweather"><p>C 语言与 Golang 相互调用的简单例子。</p>
+
+<p>在此使用一段简单的代码展示 CGO 的基本用法 —— 在 Go 程序中使用 C 语言编程。</p>
 
 <p></p></div>
             </div>
@@ -574,46 +634,6 @@
             <hr>
           </div>
         
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://www.orztu.com/post/raspbian-install-and-configure/">
-                <h3 class="media-heading">树莓派 Raspbian系统安装与基本配置</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Oct 10, 2017
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather"><!-- toc -->
-
-<h2 id="系统安装-https-www-raspberrypi-org-documentation-installation-installing-images-readme-md"><a href="https://www.raspberrypi.org/documentation/installation/installing-images/README.md" target="_blank">系统安装</a></h2>
-
-<p>系统: <a href="https://www.raspberrypi.org/downloads/raspbian/" target="_blank">raspbian</a> <br/>
-工具（二选一）：</p>
-
-<ul>
-<li><a href="https://etcher.io/" target="_blank">Etcher</a></li>
-<li><a href="http://sourceforge.net/projects/win32diskimager/" target="_blank">Win32DiskImager</a>（windows only）</li>
-</ul>
-
-<ol>
-<li>将SD卡格式化成exFat格式</li>
-<li>使用Etcher或者Win32DiskImager将下载的raspbian系统镜像(img文件)写入SD卡</li>
-</ol>
-
-<p>写入完成之后就相当于系统安装完成了。这时候SD卡被分成两个区，有一个区是在windows下无法识别，不用理会。</p>
-
-<p>这时候如果直接将SD卡插入树莓派，会发现“无法启动”。显示屏没信号，在路由器里找到树莓派的IP也无法用ssh登录。</p>
-
-<p>我安装的时候就是踩到这个坑。以为安装失败，反复装了好几次，就差把SD卡写穿了。</p>
-
-<p></p></div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
       </div>
     </div>
     <div class="modal-footer">
@@ -621,7 +641,7 @@
          data-message-zero="no post found"
          data-message-one="1 post found"
          data-message-other="{n} posts found">
-         13 posts found
+         14 posts found
       </p>
     </div>
   </div>
