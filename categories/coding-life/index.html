@@ -265,6 +265,112 @@
     
     <div class="postShorten-header">
       <h1 class="postShorten-title" itemprop="headline">
+        <a class="link-unstyled" href="https://www.orztu.com/post/golang-trace/">
+          在 Golang 中打印调用栈信息
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta-bg">
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2018-12-12T15:38:49&#43;08:00">
+        
+  
+  
+  
+  
+    2018-12-12
+  
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://www.orztu.com/categories/coding-life">coding life</a>
+    
+  
+
+  </div>
+  </div>
+
+
+    </div>
+    <div class="postShorten-excerpt" itemprop="articleBody">
+      
+        <p>在日志信息中，有时需要获取当前函数的调用信息，比如打印调用栈：</p>
+
+<h2 id="调用栈">调用栈</h2>
+
+<h3 id="debug-stack-byte">debug.Stack() []byte</h3>
+
+<p><code>debug.Stack()</code>函数可以获取当前 goroutine 的调用栈信息，需要<code>import &quot;runtime/debug&quot;</code>。</p>
+
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-golang" data-lang="golang"><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">func</span> <span class="nx">foo</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&#34;--- BEGIN ---&#34;</span><span class="p">)</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nb">string</span><span class="p">(</span><span class="nx">debug</span><span class="p">.</span><span class="nx">Stack</span><span class="p">()))</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&#34;--- END ---&#34;</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nx">boom</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">foo</span><span class="p">()</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">boom</span><span class="p">()</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+
+<p></p>
+      
+      <p>
+        <a href="https://www.orztu.com/post/golang-trace/" class="postShorten-excerpt_link link">Read More</a>
+
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+            
+              
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title" itemprop="headline">
         <a class="link-unstyled" href="https://www.orztu.com/post/lua-table-minify-ii/">
           使用元表优化 Lua 配置文件 II
         </a>
