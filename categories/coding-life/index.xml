@@ -6,10 +6,28 @@
     <description>Recent content in Coding Life on Orz the way</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 12 Dec 2018 15:38:49 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 22 Dec 2018 09:22:48 +0800</lastBuildDate>
     
 	<atom:link href="https://www.orztu.com/categories/coding-life/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>记一次 Cocos2dx-Lua 闪退</title>
+      <link>https://www.orztu.com/post/little-problem-while-using-cocos2dx-lua/</link>
+      <pubDate>Sat, 22 Dec 2018 09:22:48 +0800</pubDate>
+      
+      <guid>https://www.orztu.com/post/little-problem-while-using-cocos2dx-lua/</guid>
+      <description>&lt;h2 id=&#34;闪退点&#34;&gt;闪退点&lt;/h2&gt;
+
+&lt;p&gt;Version: Cocos2dx-Lua 3.16&lt;/p&gt;
+
+&lt;p&gt;在某个页面修改后，出现闪退。查看修改记录没有特别的地方，均为修改图片或者条件判断。&lt;/p&gt;
+
+&lt;p&gt;启动 XCode 发现闪退位置出现在&lt;code&gt;void Node::onEnterTransitionDidFinish()&lt;/code&gt;中，
+在其调用子节点的&lt;code&gt;child-&amp;gt;onEnterTransitionDidFinish()&lt;/code&gt;时，&lt;code&gt;child&lt;/code&gt;指针无效。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>在 Golang 中打印调用栈信息</title>
