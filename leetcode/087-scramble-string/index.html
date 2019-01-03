@@ -7,26 +7,26 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="generator" content="Hugo 0.39 with theme Tranquilpeak 0.4.3-SNAPSHOT">
 <meta name="author" content="SelFree">
-<meta name="keywords" content="Partition List, LeetCode 86, program develop, leetcode, Golang, leetcode解答, 程序">
-<meta name="description" content="LeetCode 86. Partition List - Answer LeetCode编程练习解答">
+<meta name="keywords" content="Scramble String, LeetCode 87 Dynamic Programming Solution, program develop, leetcode, Golang, leetcode解答, 程序">
+<meta name="description" content="LeetCode 87. Scramble String - Answer LeetCode编程练习解答">
 
 
-<meta property="og:description" content="LeetCode 86. Partition List - Answer LeetCode编程练习解答">
+<meta property="og:description" content="LeetCode 87. Scramble String - Answer LeetCode编程练习解答">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LeetCode 86. Partition List">
-<meta name="twitter:title" content="LeetCode 86. Partition List">
-<meta property="og:url" content="https://www.orztu.com/leetcode/086-partition-list/">
-<meta property="twitter:url" content="https://www.orztu.com/leetcode/086-partition-list/">
+<meta property="og:title" content="LeetCode 87. Scramble String">
+<meta name="twitter:title" content="LeetCode 87. Scramble String">
+<meta property="og:url" content="https://www.orztu.com/leetcode/087-scramble-string/">
+<meta property="twitter:url" content="https://www.orztu.com/leetcode/087-scramble-string/">
 <meta property="og:site_name" content="Orz the way">
-<meta property="og:description" content="LeetCode 86. Partition List - Answer LeetCode编程练习解答">
-<meta name="twitter:description" content="LeetCode 86. Partition List - Answer LeetCode编程练习解答">
+<meta property="og:description" content="LeetCode 87. Scramble String - Answer LeetCode编程练习解答">
+<meta name="twitter:description" content="LeetCode 87. Scramble String - Answer LeetCode编程练习解答">
 <meta property="og:locale" content="en-us">
 
   
-    <meta property="article:published_time" content="2018-12-18T10:07:22">
+    <meta property="article:published_time" content="2019-01-03T09:14:13">
   
   
-    <meta property="article:modified_time" content="2018-12-18T10:07:22">
+    <meta property="article:modified_time" content="2019-01-03T09:14:13">
   
   
   
@@ -38,9 +38,11 @@
     
       <meta property="article:tag" content="LeetCode">
     
-      <meta property="article:tag" content="Linked List">
+      <meta property="article:tag" content="String">
     
-      <meta property="article:tag" content="Two Pointers">
+      <meta property="article:tag" content="Dynamic Programming">
+    
+      <meta property="article:tag" content="Divide And Conquer">
     
   
 
@@ -61,12 +63,12 @@
   <meta property="twitter:image" content="https://www.gravatar.com/avatar/f47b51d6d6b82fd9048e3eaf64bf7e69?s=640">
 
 
-    <title>LeetCode 86. Partition List | 
+    <title>LeetCode 87. Scramble String | 
         Orz the way
       
     </title>
     <meta name="author" content="SelFree">
-    <meta name="keywords" content="Partition List, LeetCode 86, program develop, leetcode, Golang, leetcode解答, 程序">
+    <meta name="keywords" content="Scramble String, LeetCode 87 Dynamic Programming Solution, program develop, leetcode, Golang, leetcode解答, 程序">
     
 
     <link rel="icon" href="https://www.orztu.com/images/favicon.ico">
@@ -74,7 +76,7 @@
 
     
 
-    <link rel="canonical" href="https://www.orztu.com/leetcode/086-partition-list/">
+    <link rel="canonical" href="https://www.orztu.com/leetcode/087-scramble-string/">
 
     
     <link rel="stylesheet" href="//cdnjs.cat.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
@@ -274,20 +276,20 @@
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title" itemprop="headline">
-      LeetCode 86. Partition List
+      LeetCode 87. Scramble String
     </h1>
   
   
   <div class="postShorten-meta-bg">
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2018-12-18T10:07:22&#43;08:00">
+      <time itemprop="datePublished" datetime="2019-01-03T09:14:13&#43;08:00">
         
   
   
   
   
-    2018-12-18
+    2019-01-03
   
 
       </time>
@@ -312,23 +314,84 @@
             <div class="main-content-wrap">
               <h2 id="description">Description</h2>
 
-<p><a href="https://leetcode.com/problems/partition-list/" target="_blank">Partition List</a></p>
+<p><a href="https://leetcode.com/problems/scramble-string/" target="_blank">Scramble String</a></p>
 
 <blockquote>
-<p>Given a linked list and a value x, partition it such that all nodes less than x come before nodes greater than or equal to x.</p>
+<p>Given a string s1, we may represent it as a binary tree by partitioning it to two non-empty substrings recursively.</p>
 
-<p>You should preserve the original relative order of the nodes in each of the two partitions.</p>
+<p>Below is one possible representation of s1 = <code>&quot;great&quot;</code>:</p>
 
-<p><strong>Example:</strong></p>
-
-<pre><code>Input: head = 1-&gt;4-&gt;3-&gt;2-&gt;5-&gt;2, x = 3
-Output: 1-&gt;2-&gt;2-&gt;4-&gt;3-&gt;5
+<pre><code>    great
+   /    \
+  gr    eat
+ / \    /  \
+g   r  e   at
+           / \
+          a   t
 </code></pre>
+
+<p>To scramble the string, we may choose any non-leaf node and swap its two children.</p>
 </blockquote>
 
 <p></p>
 
+<blockquote>
+<p>For example, if we choose the node <code>&quot;gr&quot;</code> and swap its two children, it produces a scrambled string <code>&quot;rgeat&quot;</code>.</p>
+
+<pre><code>    rgeat
+   /    \
+  rg    eat
+ / \    /  \
+r   g  e   at
+           / \
+          a   t
+</code></pre>
+
+<p>We say that <code>&quot;rgeat&quot;</code> is a scrambled string of <code>&quot;great&quot;</code>.</p>
+
+<p>Similarly, if we continue to swap the children of nodes <code>&quot;eat&quot;</code> and <code>&quot;at&quot;</code>, it produces a scrambled string <code>&quot;rgtae&quot;</code>.</p>
+
+<pre><code>    rgtae
+   /    \
+  rg    tae
+ / \    /  \
+r   g  ta  e
+       / \
+      t   a
+</code></pre>
+
+<p>We say that <code>&quot;rgtae&quot;</code> is a scrambled string of <code>&quot;great&quot;</code>.</p>
+
+<p>Given two strings s1 and s2 of the same length, determine if s2 is a scrambled string of s1.</p>
+
+<p><strong>Example 1:</strong></p>
+
+<pre><code>Input: s1 = &quot;great&quot;, s2 = &quot;rgeat&quot;
+Output: true
+</code></pre>
+
+<p><strong>Example 2:</strong></p>
+
+<pre><code>Input: s1 = &quot;abcde&quot;, s2 = &quot;caebd&quot;
+Output: false
+</code></pre>
+</blockquote>
+
 <h2 id="solution">Solution</h2>
+
+<p>You may considering the string is not always split at the middle.</p>
+
+<p>The tree could be like this:</p>
+
+<pre><code>     great
+    /     \
+   g       reat
+          /    \
+         r      eat
+                ...
+</code></pre>
+
+<h3 id="divide-and-conquer-top-to-down">Divide And Conquer (Top to Down)</h3>
 
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -366,46 +429,149 @@ Output: 1-&gt;2-&gt;2-&gt;4-&gt;3-&gt;5
 </span><span class="lnt">32
 </span><span class="lnt">33
 </span><span class="lnt">34
-</span><span class="lnt">35
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">func</span> <span class="nx">partition</span><span class="p">(</span><span class="nx">head</span> <span class="o">*</span><span class="nx">ListNode</span><span class="p">,</span> <span class="nx">x</span> <span class="kt">int</span><span class="p">)</span> <span class="o">*</span><span class="nx">ListNode</span> <span class="p">{</span>
-    <span class="c1">// use a new linked list to save &#39;bigger nodes&#39;
-</span><span class="c1"></span>    <span class="nx">bigger</span> <span class="o">:=</span> <span class="o">&amp;</span><span class="nx">ListNode</span><span class="p">{}</span>
-    <span class="nx">biggerTail</span> <span class="o">:=</span> <span class="nx">bigger</span>
-
-    <span class="c1">// this linked list to save &#39;smaller nodes&#39;
-</span><span class="c1"></span>    <span class="nx">slow</span> <span class="o">:=</span> <span class="o">&amp;</span><span class="nx">ListNode</span><span class="p">{</span>
-        <span class="nx">Next</span><span class="p">:</span> <span class="nx">head</span><span class="p">,</span>
+<pre class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">func</span> <span class="nx">isScramble</span><span class="p">(</span><span class="nx">s1</span> <span class="kt">string</span><span class="p">,</span> <span class="nx">s2</span> <span class="kt">string</span><span class="p">)</span> <span class="kt">bool</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="nx">s1</span> <span class="o">==</span> <span class="nx">s2</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="kc">true</span>
     <span class="p">}</span>
-    <span class="nx">head</span> <span class="p">=</span> <span class="nx">slow</span>
-    <span class="nx">fast</span> <span class="o">:=</span> <span class="nx">slow</span><span class="p">.</span><span class="nx">Next</span>
 
-    <span class="k">for</span> <span class="nx">fast</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
-        <span class="k">if</span> <span class="nx">fast</span><span class="p">.</span><span class="nx">Val</span> <span class="p">&lt;</span> <span class="nx">x</span> <span class="p">{</span>
-            <span class="c1">// slow go to fast(go to slow.next)
-</span><span class="c1"></span>            <span class="nx">slow</span> <span class="p">=</span> <span class="nx">fast</span>
-        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-            <span class="c1">// skip fast, go fast.Next(got slow.next.next)
-</span><span class="c1"></span>            <span class="nx">slow</span><span class="p">.</span><span class="nx">Next</span> <span class="p">=</span> <span class="nx">fast</span><span class="p">.</span><span class="nx">Next</span>
+    <span class="nx">length</span> <span class="o">:=</span> <span class="nb">len</span><span class="p">(</span><span class="nx">s1</span><span class="p">)</span>
 
-            <span class="c1">// break after fast
-</span><span class="c1"></span>            <span class="nx">fast</span><span class="p">.</span><span class="nx">Next</span> <span class="p">=</span> <span class="kc">nil</span>
+    <span class="c1">// couting letters
+</span><span class="c1"></span>    <span class="kd">var</span> <span class="nx">count</span> <span class="p">[</span><span class="mi">26</span><span class="p">]</span><span class="kt">int</span>
+    <span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
+        <span class="nx">count</span><span class="p">[</span><span class="nx">s1</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span><span class="o">-</span><span class="sc">&#39;a&#39;</span><span class="p">]</span><span class="o">++</span>
+        <span class="nx">count</span><span class="p">[</span><span class="nx">s2</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span><span class="o">-</span><span class="sc">&#39;a&#39;</span><span class="p">]</span><span class="o">--</span>
+    <span class="p">}</span>
 
-            <span class="c1">// append fast to bigger linked list
-</span><span class="c1"></span>            <span class="nx">biggerTail</span><span class="p">.</span><span class="nx">Next</span> <span class="p">=</span> <span class="nx">fast</span>
-            <span class="nx">biggerTail</span> <span class="p">=</span> <span class="nx">biggerTail</span><span class="p">.</span><span class="nx">Next</span>
+    <span class="c1">// Does letters same?
+</span><span class="c1"></span>    <span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="mi">26</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="nx">count</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">0</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="kc">false</span>
         <span class="p">}</span>
-        <span class="nx">fast</span> <span class="p">=</span> <span class="nx">slow</span><span class="p">.</span><span class="nx">Next</span>
     <span class="p">}</span>
 
-    <span class="c1">// concat the two linked lists
-</span><span class="c1"></span>    <span class="nx">slow</span><span class="p">.</span><span class="nx">Next</span> <span class="p">=</span> <span class="nx">bigger</span><span class="p">.</span><span class="nx">Next</span>
+    <span class="k">for</span> <span class="nx">k</span> <span class="o">:=</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">k</span> <span class="p">&lt;</span> <span class="nx">length</span><span class="p">;</span> <span class="nx">k</span><span class="o">++</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="nx">isScramble</span><span class="p">(</span><span class="nx">s1</span><span class="p">[</span><span class="nx">k</span><span class="p">:],</span> <span class="nx">s2</span><span class="p">[</span><span class="nx">k</span><span class="p">:])</span> <span class="o">&amp;&amp;</span> <span class="nx">isScramble</span><span class="p">(</span><span class="nx">s1</span><span class="p">[:</span><span class="nx">k</span><span class="p">],</span> <span class="nx">s2</span><span class="p">[:</span><span class="nx">k</span><span class="p">])</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="kc">true</span>
+        <span class="p">}</span>
 
-    <span class="k">return</span> <span class="nx">head</span><span class="p">.</span><span class="nx">Next</span>
+        <span class="c1">// exchange substrings
+</span><span class="c1"></span>        <span class="k">if</span> <span class="nx">isScramble</span><span class="p">(</span><span class="nx">s1</span><span class="p">[</span><span class="nx">k</span><span class="p">:],</span> <span class="nx">s2</span><span class="p">[:</span><span class="nx">length</span><span class="o">-</span><span class="nx">k</span><span class="p">])</span> <span class="o">&amp;&amp;</span> <span class="nx">isScramble</span><span class="p">(</span><span class="nx">s1</span><span class="p">[:</span><span class="nx">k</span><span class="p">],</span> <span class="nx">s2</span><span class="p">[</span><span class="nx">length</span><span class="o">-</span><span class="nx">k</span><span class="p">:])</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="kc">true</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="kc">false</span>
 <span class="p">}</span></code></pre></td></tr></table>
 </div>
 </div>
+
+<h3 id="dynamic-programming-bottom-to-up">Dynamic Programming (Bottom to Up)</h3>
+
+<p>Definition <code>dp[l][i][j]</code>:</p>
+
+<ul>
+<li><code>s1[i]</code> start from <code>'i'</code></li>
+<li><code>s2[j]</code> start from <code>'j'</code></li>
+<li><code>'l'</code> is the length of substring, the <code>length</code> in recursive solution.</li>
+</ul>
+
+<p>Initialization <code>dp[1][i][j] = (s1[i] == s2[j] ? true : false)</code>.</p>
+
+<pre><code class="language-cpp">dp[l][i][j] =
+    // isScramble(s1[k:], s2[k:]) &amp;&amp; isScramble(s1[:k], s2[:k])
+    (dp[k][i][j] &amp;&amp; dp[l-k][i+k][j+k]) ||
+
+    // isScramble(s1[k:], s2[:length-k]) &amp;&amp; isScramble(s1[:k], s2[length-k:])
+    (dp[k][i][j+l-k] &amp;&amp; dp[l-k][i+k][j])
+</code></pre>
+
+<p><code>k</code> means split the <code>l</code> to two parts, so <code>0 &lt;= k &lt;= l</code>;</p>
+
+<p><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-golang" data-lang="golang"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">func</span> <span class="nx">isScramble</span><span class="p">(</span><span class="nx">s1</span> <span class="kt">string</span><span class="p">,</span> <span class="nx">s2</span> <span class="kt">string</span><span class="p">)</span> <span class="kt">bool</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="nx">s1</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="nx">s2</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="kc">false</span>
+    <span class="p">}</span>
+
+    <span class="nx">length</span> <span class="o">:=</span> <span class="nb">len</span><span class="p">(</span><span class="nx">s1</span><span class="p">)</span>
+
+    <span class="nx">dp</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">([][][]</span><span class="kt">bool</span><span class="p">,</span> <span class="nx">length</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;=</span> <span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
+        <span class="nx">dp</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="p">=</span> <span class="nb">make</span><span class="p">([][]</span><span class="kt">bool</span><span class="p">,</span> <span class="nx">length</span><span class="p">)</span>
+        <span class="k">for</span> <span class="nx">j</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">j</span> <span class="p">&lt;</span> <span class="nx">length</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span> <span class="p">{</span>
+            <span class="nx">dp</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="nx">j</span><span class="p">]</span> <span class="p">=</span> <span class="nb">make</span><span class="p">([]</span><span class="kt">bool</span><span class="p">,</span> <span class="nx">length</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
+        <span class="k">for</span> <span class="nx">j</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">j</span> <span class="p">&lt;</span> <span class="nx">length</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span> <span class="p">{</span>
+            <span class="nx">dp</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="nx">i</span><span class="p">][</span><span class="nx">j</span><span class="p">]</span> <span class="p">=</span> <span class="p">(</span><span class="nx">s1</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">==</span> <span class="nx">s2</span><span class="p">[</span><span class="nx">j</span><span class="p">])</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">for</span> <span class="nx">l</span> <span class="o">:=</span> <span class="mi">2</span><span class="p">;</span> <span class="nx">l</span> <span class="o">&lt;=</span> <span class="nx">length</span><span class="p">;</span> <span class="nx">l</span><span class="o">++</span> <span class="p">{</span>
+        <span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="nx">length</span><span class="o">-</span><span class="nx">l</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
+            <span class="k">for</span> <span class="nx">j</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">j</span> <span class="p">&lt;</span> <span class="nx">length</span><span class="o">-</span><span class="nx">l</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span> <span class="p">{</span>
+                <span class="k">if</span> <span class="nx">dp</span><span class="p">[</span><span class="nx">l</span><span class="p">][</span><span class="nx">i</span><span class="p">][</span><span class="nx">j</span><span class="p">]</span> <span class="p">{</span>
+                    <span class="k">continue</span>
+                <span class="p">}</span>
+
+                <span class="k">for</span> <span class="nx">k</span> <span class="o">:=</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">k</span> <span class="p">&lt;</span> <span class="nx">l</span> <span class="o">&amp;&amp;</span> <span class="p">(!</span><span class="nx">dp</span><span class="p">[</span><span class="nx">l</span><span class="p">][</span><span class="nx">i</span><span class="p">][</span><span class="nx">j</span><span class="p">]);</span> <span class="nx">k</span><span class="o">++</span> <span class="p">{</span>
+                    <span class="nx">dp</span><span class="p">[</span><span class="nx">l</span><span class="p">][</span><span class="nx">i</span><span class="p">][</span><span class="nx">j</span><span class="p">]</span> <span class="p">=</span> <span class="p">(</span><span class="nx">dp</span><span class="p">[</span><span class="nx">k</span><span class="p">][</span><span class="nx">i</span><span class="p">][</span><span class="nx">j</span><span class="p">]</span> <span class="o">&amp;&amp;</span> <span class="nx">dp</span><span class="p">[</span><span class="nx">l</span><span class="o">-</span><span class="nx">k</span><span class="p">][</span><span class="nx">i</span><span class="o">+</span><span class="nx">k</span><span class="p">][</span><span class="nx">j</span><span class="o">+</span><span class="nx">k</span><span class="p">])</span> <span class="o">||</span>
+                        <span class="p">(</span><span class="nx">dp</span><span class="p">[</span><span class="nx">k</span><span class="p">][</span><span class="nx">i</span><span class="p">][</span><span class="nx">j</span><span class="o">+</span><span class="nx">l</span><span class="o">-</span><span class="nx">k</span><span class="p">]</span> <span class="o">&amp;&amp;</span> <span class="nx">dp</span><span class="p">[</span><span class="nx">l</span><span class="o">-</span><span class="nx">k</span><span class="p">][</span><span class="nx">i</span><span class="o">+</span><span class="nx">k</span><span class="p">][</span><span class="nx">j</span><span class="p">])</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="nx">dp</span><span class="p">[</span><span class="nx">length</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div></p>
               
               
 
@@ -421,9 +587,11 @@ Output: 1-&gt;2-&gt;2-&gt;4-&gt;3-&gt;5
                     
   <a class="tag tag--primary tag--small" href="https://www.orztu.com/tags/leetcode/">LeetCode</a>
 
-  <a class="tag tag--primary tag--small" href="https://www.orztu.com/tags/linked-list/">Linked List</a>
+  <a class="tag tag--primary tag--small" href="https://www.orztu.com/tags/string/">String</a>
 
-  <a class="tag tag--primary tag--small" href="https://www.orztu.com/tags/two-pointers/">Two Pointers</a>
+  <a class="tag tag--primary tag--small" href="https://www.orztu.com/tags/dynamic-programming/">Dynamic Programming</a>
+
+  <a class="tag tag--primary tag--small" href="https://www.orztu.com/tags/divide-and-conquer/">Divide And Conquer</a>
 
 
                   </div>
@@ -438,10 +606,8 @@ Output: 1-&gt;2-&gt;2-&gt;4-&gt;3-&gt;5
             <li class="post-action">
               
               
-                
               
-              
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/087-scramble-string/" data-tooltip="LeetCode 87. Scramble String">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -453,7 +619,7 @@ Output: 1-&gt;2-&gt;2-&gt;4-&gt;3-&gt;5
                 
               
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/085-maximal-rectangle/" data-tooltip="LeetCode 85. Maximal Rectangle">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/086-partition-list/" data-tooltip="LeetCode 86. Partition List">
               
                   <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                   <i class="fa fa-angle-right"></i>
@@ -515,10 +681,8 @@ Output: 1-&gt;2-&gt;2-&gt;4-&gt;3-&gt;5
             <li class="post-action">
               
               
-                
               
-              
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/087-scramble-string/" data-tooltip="LeetCode 87. Scramble String">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -530,7 +694,7 @@ Output: 1-&gt;2-&gt;2-&gt;4-&gt;3-&gt;5
                 
               
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/085-maximal-rectangle/" data-tooltip="LeetCode 85. Maximal Rectangle">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/086-partition-list/" data-tooltip="LeetCode 86. Partition List">
               
                   <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                   <i class="fa fa-angle-right"></i>
@@ -955,9 +1119,9 @@ $(document).ready(function() {
     
       <script>
         var disqus_config = function () {
-          this.page.url = 'https:\/\/www.orztu.com\/leetcode\/086-partition-list\/';
+          this.page.url = 'https:\/\/www.orztu.com\/leetcode\/087-scramble-string\/';
           
-            this.page.identifier = '\/leetcode\/086-partition-list\/'
+            this.page.identifier = '\/leetcode\/087-scramble-string\/'
           
         };
         (function() {
