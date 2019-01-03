@@ -6,10 +6,46 @@
     <description>Recent content in Two Pointers on Orz the way</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 18 Dec 2018 10:07:22 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 03 Jan 2019 11:46:11 +0800</lastBuildDate>
     
 	<atom:link href="https://www.orztu.com/tags/two-pointers/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>LeetCode 88. Merge Sorted Array</title>
+      <link>https://www.orztu.com/leetcode/088-merge-sorted-array/</link>
+      <pubDate>Thu, 03 Jan 2019 11:46:11 +0800</pubDate>
+      
+      <guid>https://www.orztu.com/leetcode/088-merge-sorted-array/</guid>
+      <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/merge-sorted-array/&#34; target=&#34;_blank&#34;&gt;Merge Sorted Array&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Given two sorted integer arrays nums1 and nums2, merge nums2 into nums1 as one sorted array.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;The number of elements initialized in nums1 and nums2 are m and n respectively.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;You may assume that nums1 has enough space (size that is greater or equal to m + n) to hold additional elements from nums2.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Example:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Input:
+nums1 = [1,2,3,0,0,0], m = 3
+nums2 = [2,5,6],       n = 3
+
+Output: [1,2,2,3,5,6]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;将&lt;code&gt;nums1&lt;/code&gt;、&lt;code&gt;nums2&lt;/code&gt;两个有序数组合并到&lt;code&gt;nums1&lt;/code&gt;一个中，&lt;code&gt;nums1&lt;/code&gt;已分配足够空间存放元素。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>LeetCode 86. Partition List</title>

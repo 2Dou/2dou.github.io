@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://www.orztu.com/leetcode/088-merge-sorted-array/</loc>
+    <lastmod>2019-01-03T11:46:11+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.orztu.com/leetcode/087-scramble-string/</loc>
     <lastmod>2019-01-03T09:14:13+08:00</lastmod>
   </url>
@@ -424,7 +429,7 @@
   
   <url>
     <loc>https://www.orztu.com/tags/array/</loc>
-    <lastmod>2018-12-12T11:42:17+08:00</lastmod>
+    <lastmod>2019-01-03T11:46:11+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -506,20 +511,20 @@
   </url>
   
   <url>
-    <loc>https://www.orztu.com/tags/leetcode/</loc>
-    <lastmod>2019-01-03T09:14:13+08:00</lastmod>
+    <loc>https://www.orztu.com/categories/leetcode/</loc>
+    <lastmod>2019-01-03T11:46:11+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.orztu.com/categories/leetcode/</loc>
-    <lastmod>2019-01-03T09:14:13+08:00</lastmod>
+    <loc>https://www.orztu.com/tags/leetcode/</loc>
+    <lastmod>2019-01-03T11:46:11+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.orztu.com/leetcode/</loc>
-    <lastmod>2019-01-03T09:14:13+08:00</lastmod>
+    <lastmod>2019-01-03T11:46:11+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -555,7 +560,7 @@
   
   <url>
     <loc>https://www.orztu.com/</loc>
-    <lastmod>2019-01-03T09:14:13+08:00</lastmod>
+    <lastmod>2019-01-03T11:46:11+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -615,13 +620,13 @@
   
   <url>
     <loc>https://www.orztu.com/tags/</loc>
-    <lastmod>2018-12-12T11:42:17+08:00</lastmod>
+    <lastmod>2019-01-03T11:46:11+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.orztu.com/tags/two-pointers/</loc>
-    <lastmod>2018-12-18T10:07:22+08:00</lastmod>
+    <lastmod>2019-01-03T11:46:11+08:00</lastmod>
     <priority>0</priority>
   </url>
   
