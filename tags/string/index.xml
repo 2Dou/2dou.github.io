@@ -6,10 +6,49 @@
     <description>Recent content in String on Orz the way</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 03 Jan 2019 09:14:13 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 30 Jan 2019 17:19:21 +0800</lastBuildDate>
     
 	<atom:link href="https://www.orztu.com/tags/string/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>LeetCode 91. Decode Ways</title>
+      <link>https://www.orztu.com/leetcode/091-decode-ways/</link>
+      <pubDate>Wed, 30 Jan 2019 17:19:21 +0800</pubDate>
+      
+      <guid>https://www.orztu.com/leetcode/091-decode-ways/</guid>
+      <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/decode-ways/&#34; target=&#34;_blank&#34;&gt;Decode Ways&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;A message containing letters from A-Z is being encoded to numbers using the following mapping:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&#39;A&#39; -&amp;gt; 1
+&#39;B&#39; -&amp;gt; 2
+...
+&#39;Z&#39; -&amp;gt; 26
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Given a &lt;strong&gt;non-empty&lt;/strong&gt; string containing only digits, determine the total number of ways to decode it.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Example 1:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Input: &amp;quot;12&amp;quot;
+Output: 2
+Explanation: It could be decoded as &amp;quot;AB&amp;quot; (1 2) or &amp;quot;L&amp;quot; (12).
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Example 2:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Input: &amp;quot;226&amp;quot;
+Output: 3
+Explanation: It could be decoded as &amp;quot;BZ&amp;quot; (2 26), &amp;quot;VF&amp;quot; (22 6), or &amp;quot;BBF&amp;quot; (2 2 6).
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>LeetCode 87. Scramble String</title>
