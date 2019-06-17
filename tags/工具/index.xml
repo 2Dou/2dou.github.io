@@ -21,9 +21,7 @@
 
 &lt;p&gt;go vendor 是 go 1.6 官方正式引入的包管理方式。&lt;/p&gt;
 
-&lt;p&gt;其基本思路是，将引用的外部包的源代码放在当前工程的&lt;code&gt;vendor&lt;/code&gt;目录下面，go 编译时会优先从&lt;code&gt;vendor&lt;/code&gt;目录寻找依赖关系。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;其基本思路是，将引用的外部包的源代码放在当前工程的&lt;code&gt;vendor&lt;/code&gt;目录下面，go 编译时会优先从&lt;code&gt;vendor&lt;/code&gt;目录寻找依赖关系。&lt;/p&gt;</description>
     </item>
     
   </channel>

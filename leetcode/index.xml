@@ -33,9 +33,7 @@ Output: 1-&amp;gt;4-&amp;gt;3-&amp;gt;2-&amp;gt;5-&amp;gt;NULL
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;遍历一次将链表的第&lt;code&gt;m&lt;/code&gt;至&lt;code&gt;n&lt;/code&gt;个结点翻转。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;遍历一次将链表的第&lt;code&gt;m&lt;/code&gt;至&lt;code&gt;n&lt;/code&gt;个结点翻转。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -72,9 +70,7 @@ Explanation: It could be decoded as &amp;quot;AB&amp;quot; (1 2) or &amp;quot;L&
 Output: 3
 Explanation: It could be decoded as &amp;quot;BZ&amp;quot; (2 26), &amp;quot;VF&amp;quot; (22 6), or &amp;quot;BBF&amp;quot; (2 2 6).
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;/blockquote&gt;</description>
     </item>
     
     <item>
@@ -105,9 +101,7 @@ Output:
  []
 ]
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;/blockquote&gt;</description>
     </item>
     
     <item>
@@ -141,9 +135,7 @@ Output: [1,2,2,3,5,6]
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;将&lt;code&gt;nums1&lt;/code&gt;、&lt;code&gt;nums2&lt;/code&gt;两个有序数组合并到&lt;code&gt;nums1&lt;/code&gt;一个中，&lt;code&gt;nums1&lt;/code&gt;已分配足够空间存放元素。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;将&lt;code&gt;nums1&lt;/code&gt;、&lt;code&gt;nums2&lt;/code&gt;两个有序数组合并到&lt;code&gt;nums1&lt;/code&gt;一个中，&lt;code&gt;nums1&lt;/code&gt;已分配足够空间存放元素。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -171,9 +163,7 @@ g   r  e   at
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;To scramble the string, we may choose any non-leaf node and swap its two children.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;/blockquote&gt;</description>
     </item>
     
     <item>
@@ -196,9 +186,7 @@ g   r  e   at
 &lt;pre&gt;&lt;code&gt;Input: head = 1-&amp;gt;4-&amp;gt;3-&amp;gt;2-&amp;gt;5-&amp;gt;2, x = 3
 Output: 1-&amp;gt;2-&amp;gt;2-&amp;gt;4-&amp;gt;3-&amp;gt;5
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;/blockquote&gt;</description>
     </item>
     
     <item>
@@ -227,9 +215,7 @@ Output: 6
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;在给出的矩阵中，&lt;code&gt;1&lt;/code&gt;表示元素，&lt;code&gt;0&lt;/code&gt;表示空，找出最大矩形的面积。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;在给出的矩阵中，&lt;code&gt;1&lt;/code&gt;表示元素，&lt;code&gt;0&lt;/code&gt;表示空，找出最大矩形的面积。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -252,9 +238,7 @@ Above is a histogram where width of each bar is &lt;code&gt;1&lt;/code&gt;, give
 The largest rectangle is shown in the shaded area, which has area = &lt;code&gt;10&lt;/code&gt; unit.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;给出一个直方图，求最大矩形面积。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;给出一个直方图，求最大矩形面积。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -283,9 +267,7 @@ Output: 2-&amp;gt;3
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;删除链表中有重复的结点&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;删除链表中有重复的结点&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -323,9 +305,7 @@ Output: false
 &lt;li&gt;This is a follow up problem to Search in Rotated Sorted Array, where nums may contain duplicates.&lt;/li&gt;
 &lt;li&gt;Would this affect the run-time complexity? How and why?&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;/blockquote&gt;</description>
     </item>
     
     <item>
@@ -364,9 +344,7 @@ It doesn&#39;t matter what values are set beyond the returned length.
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;在有序数组中删除重复的元素，每个元素允许重复一次（出现两次）。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;在有序数组中删除重复的元素，每个元素允许重复一次（出现两次）。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -401,9 +379,7 @@ Given word = &amp;quot;ABCB&amp;quot;, return false.
 
 &lt;p&gt;在&lt;code&gt;board&lt;/code&gt;中查找是否存在相连（相邻）的字符与给定的单词对应。&lt;/p&gt;
 
-&lt;p&gt;很像一个走迷宫的题目，搜索下一步是否与单词的字母匹配，是则走到该位置。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;很像一个走迷宫的题目，搜索下一步是否与单词的字母匹配，是则走到该位置。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -438,9 +414,7 @@ Output:
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;求所有子集（幂集），包含一个空集。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;求所有子集（幂集），包含一个空集。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -471,9 +445,7 @@ Output:
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;给出两个整数&lt;code&gt;n&lt;/code&gt;和&lt;code&gt;k&lt;/code&gt;，输出所有包含&lt;code&gt;k&lt;/code&gt;个数字的组合，数字范围&lt;code&gt;1..n&lt;/code&gt;。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;给出两个整数&lt;code&gt;n&lt;/code&gt;和&lt;code&gt;k&lt;/code&gt;，输出所有包含&lt;code&gt;k&lt;/code&gt;个数字的组合，数字范围&lt;code&gt;1..n&lt;/code&gt;。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -503,9 +475,7 @@ Output: &amp;quot;BANC&amp;quot;
 &lt;/ul&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;给出两个字符串&lt;code&gt;S&lt;/code&gt;和&lt;code&gt;T&lt;/code&gt;，在&lt;code&gt;S&lt;/code&gt;中找到一个最短的子串，它包含&lt;code&gt;T&lt;/code&gt;中所有的字符。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;给出两个字符串&lt;code&gt;S&lt;/code&gt;和&lt;code&gt;T&lt;/code&gt;，在&lt;code&gt;S&lt;/code&gt;中找到一个最短的子串，它包含&lt;code&gt;T&lt;/code&gt;中所有的字符。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -540,9 +510,7 @@ First, iterate the array counting number of 0&amp;rsquo;s, 1&amp;rsquo;s, and 2&
 &lt;/ul&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;对一个只包含&lt;code&gt;0&lt;/code&gt;、&lt;code&gt;1&lt;/code&gt;、&lt;code&gt;2&lt;/code&gt;三个数字的数组进行排序，要求时间复杂度&lt;code&gt;O(n)&lt;/code&gt;，空间复杂度&lt;code&gt;O(1)&lt;/code&gt;。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;对一个只包含&lt;code&gt;0&lt;/code&gt;、&lt;code&gt;1&lt;/code&gt;、&lt;code&gt;2&lt;/code&gt;三个数字的数组进行排序，要求时间复杂度&lt;code&gt;O(n)&lt;/code&gt;，空间复杂度&lt;code&gt;O(1)&lt;/code&gt;。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -580,9 +548,7 @@ Output: false
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;矩阵中有序存地放着一些数字，查找是否存在某个数字。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;矩阵中有序存地放着一些数字，查找是否存在某个数字。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -638,9 +604,7 @@ Output:
 &lt;/ul&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;在&lt;code&gt;m x n&lt;/code&gt;的矩阵中，如果一个元素为&lt;code&gt;0&lt;/code&gt;，则将它所在的行和列都置为&lt;code&gt;0&lt;/code&gt;。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;在&lt;code&gt;m x n&lt;/code&gt;的矩阵中，如果一个元素为&lt;code&gt;0&lt;/code&gt;，则将它所在的行和列都置为&lt;code&gt;0&lt;/code&gt;。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -685,9 +649,7 @@ enention -&amp;gt; exention (replace &#39;n&#39; with &#39;x&#39;)
 exention -&amp;gt; exection (replace &#39;n&#39; with &#39;c&#39;)
 exection -&amp;gt; execution (insert &#39;u&#39;)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;/blockquote&gt;</description>
     </item>
     
     <item>
@@ -729,9 +691,7 @@ Explanation: There are three ways to climb to the top.
 
 &lt;p&gt;好像网上讲动态规划经常举例的题目。&lt;/p&gt;
 
-&lt;p&gt;爬楼梯，可以一次爬一格或者两格，问有多少种不同的方式爬到顶。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;爬楼梯，可以一次爬一格或者两格，问有多少种不同的方式爬到顶。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -766,9 +726,7 @@ Explanation: The square root of 8 is 2.82842..., and since
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;整型“开方”&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;整型“开方”&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -797,9 +755,7 @@ Explanation: The square root of 8 is 2.82842..., and since
 &lt;li&gt;Each word&amp;rsquo;s length is guaranteed to be greater than 0 and not exceed maxWidth.&lt;/li&gt;
 &lt;li&gt;The input array words contains at least one word.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;/blockquote&gt;</description>
     </item>
     
     <item>
@@ -830,9 +786,7 @@ Explanation: The array represents the integer 123.
 Output: [4,3,2,2]
 Explanation: The array represents the integer 4321.
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;/blockquote&gt;</description>
     </item>
     
     <item>
@@ -863,9 +817,7 @@ Explanation: Because the path 1→3→1→1→1 minimizes the sum.
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;每个格子的数字表示经过它所需的消耗大小。寻找从左上到右下的最少路径消耗。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;每个格子的数字表示经过它所需的消耗大小。寻找从左上到右下的最少路径消耗。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -908,9 +860,7 @@ There are two ways to reach the bottom-right corner:
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;给出地图，求左上角到右下角的路径数量（只能向下或向右移动）。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;给出地图，求左上角到右下角的路径数量（只能向下或向右移动）。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -953,9 +903,7 @@ Explanation: 2^{-2} = {1/2}^2 = 1/4 = 0.25
 &lt;/ul&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;求&lt;code&gt;x&lt;/code&gt;的&lt;code&gt;n&lt;/code&gt;次方。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;求&lt;code&gt;x&lt;/code&gt;的&lt;code&gt;n&lt;/code&gt;次方。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -990,9 +938,7 @@ rotate 2 steps to the right: 1-&amp;gt;2-&amp;gt;0-&amp;gt;NULL
 rotate 3 steps to the right: 0-&amp;gt;1-&amp;gt;2-&amp;gt;NULL
 rotate 4 steps to the right: 2-&amp;gt;0-&amp;gt;1-&amp;gt;NULL
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;/blockquote&gt;</description>
     </item>
     
     <item>
@@ -1041,9 +987,7 @@ Output: &amp;quot;2314&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;假设存在长度为&lt;code&gt;n&lt;/code&gt;的数组：&lt;code&gt;[1,2,3,...,n]&lt;/code&gt;，输出第&lt;code&gt;k&lt;/code&gt;个排列。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;假设存在长度为&lt;code&gt;n&lt;/code&gt;的数组：&lt;code&gt;[1,2,3,...,n]&lt;/code&gt;，输出第&lt;code&gt;k&lt;/code&gt;个排列。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -1069,9 +1013,7 @@ Output:
  [ 7, 6, 5 ]
 ]
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;/blockquote&gt;</description>
     </item>
     
     <item>
@@ -1098,9 +1040,7 @@ Output: 5
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;求给出的字符串中最后一个单词的长度。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;求给出的字符串中最后一个单词的长度。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -1132,9 +1072,7 @@ Explanation: Because the new interval [4,8] overlaps with [3,5],[6,7],[8,10].
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;在给出的有序区间中插入新的区间，需要合并相邻的区间。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;在给出的有序区间中插入新的区间，需要合并相邻的区间。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -1165,9 +1103,7 @@ Explanation: Intervals [1,4] and [4,5] are considerred overlapping.
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;合并区间重叠/相邻的区间。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;合并区间重叠/相邻的区间。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -1205,9 +1141,7 @@ Explanation: You will always arrive at index 3 no matter what. Its maximum
 
 &lt;p&gt;给定一个非负整型数组，每个数字表示可以从该位置向后跳跃的最大步数。&lt;/p&gt;
 
-&lt;p&gt;判断是否能从第一个数字开始跳跃到最后一个数字。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;判断是否能从第一个数字开始跳跃到最后一个数字。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -1246,9 +1180,7 @@ Output: [1,2,3,4,8,12,11,10,9,5,6,7]
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;从外向内螺旋形遍历矩阵。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;从外向内螺旋形遍历矩阵。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -1268,9 +1200,7 @@ Output: [1,2,3,4,8,12,11,10,9,5,6,7]
 
 &lt;p&gt;How many possible unique paths are there?
 &lt;img src=&#34;https://www.orztu.com/images/leetcode/062-unique-paths-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;/blockquote&gt;</description>
     </item>
     
     <item>
@@ -1311,9 +1241,7 @@ Output: 1
 &lt;/ul&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;使用&lt;code&gt;O(n)&lt;/code&gt;的时间复杂度和&lt;code&gt;O(1)&lt;/code&gt;的空间在无序数组中查找第一个缺失的正数。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;使用&lt;code&gt;O(n)&lt;/code&gt;的时间复杂度和&lt;code&gt;O(1)&lt;/code&gt;的空间在无序数组中查找第一个缺失的正数。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -1340,9 +1268,7 @@ Output: &amp;ldquo;6&amp;rdquo;&lt;/p&gt;
 Output: &amp;ldquo;56088&amp;rdquo;&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;将两个字符串表示的数字相乘（大数相乘）。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;将两个字符串表示的数字相乘（大数相乘）。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -1364,9 +1290,7 @@ Output: &amp;ldquo;56088&amp;rdquo;&lt;/p&gt;
 
 &lt;p&gt;All numbers (including &lt;code&gt;target&lt;/code&gt;) will be positive integers.
 The solution set must not contain duplicate combinations.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;/blockquote&gt;</description>
     </item>
     
     <item>
@@ -1390,9 +1314,7 @@ The solution set must not contain duplicate combinations.&lt;/p&gt;
 &lt;li&gt;All numbers (including &lt;code&gt;target&lt;/code&gt;) will be positive integers.&lt;/li&gt;
 &lt;li&gt;The solution set must not contain duplicate combinations.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;/blockquote&gt;</description>
     </item>
     
     <item>
@@ -1420,9 +1342,7 @@ A partially filled sudoku which is valid.&lt;/p&gt;
 &lt;p&gt;The Sudoku board could be partially filled, where empty cells are filled with the character &lt;code&gt;&#39;.&#39;&lt;/code&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;验证数独&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;验证数独&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -1445,9 +1365,7 @@ A partially filled sudoku which is valid.&lt;/p&gt;
 &lt;p&gt;You may assume no duplicate exists in the array.&lt;/p&gt;
 
 &lt;p&gt;Your algorithm&amp;rsquo;s runtime complexity must be in the order of &lt;code&gt;O(log n)&lt;/code&gt;.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;/blockquote&gt;</description>
     </item>
     
     <item>
@@ -1480,9 +1398,7 @@ Explanation: The longest valid parentheses substring is &amp;quot;()()&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;输出最长的左右括号匹配的子串长度&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;输出最长的左右括号匹配的子串长度&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -1509,9 +1425,7 @@ Explanation: The longest valid parentheses substring is &amp;quot;()()&amp;quot;
 &lt;code&gt;1,1,5&lt;/code&gt; → &lt;code&gt;1,5,1&lt;/code&gt;&lt;br&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;实现字典序排列的 nextPermutation 方法，假如已经是最大排列，则输出最小排列。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;实现字典序排列的 nextPermutation 方法，假如已经是最大排列，则输出最小排列。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -1530,9 +1444,7 @@ Explanation: The longest valid parentheses substring is &amp;quot;()()&amp;quot;
 &lt;p&gt;If it is overflow, return MAX_INT.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;不使用乘法、除法、取余实现两个整数相除。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;不使用乘法、除法、取余实现两个整数相除。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -1563,9 +1475,7 @@ For example,&lt;/p&gt;
 &lt;p&gt;For k = 3, you should return: &lt;code&gt;3-&amp;gt;2-&amp;gt;1-&amp;gt;4-&amp;gt;5&lt;/code&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;将链表按长度&lt;code&gt;k&lt;/code&gt;分组并反转&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;将链表按长度&lt;code&gt;k&lt;/code&gt;分组并反转&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -1582,9 +1492,7 @@ For example,&lt;/p&gt;
 &lt;p&gt;Merge k sorted linked lists and return it as one sorted list. Analyze and describe its complexity.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;将&lt;code&gt;k&lt;/code&gt;个有序链表合并为一个链表&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;将&lt;code&gt;k&lt;/code&gt;个有序链表合并为一个链表&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -1612,9 +1520,7 @@ For example,&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;给出n组括号，生成所有正确的匹配组合&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;给出n组括号，生成所有正确的匹配组合&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -1631,9 +1537,7 @@ For example,&lt;/p&gt;
 &lt;p&gt;Merge two sorted linked lists and return it as a new list. The new list should be made by splicing together the nodes of the first two lists.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;将两个有序链表合二为一&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;将两个有序链表合二为一&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -1652,9 +1556,7 @@ For example,&lt;/p&gt;
 The brackets must close in the correct order, &lt;code&gt;&amp;quot;()&amp;quot;&lt;/code&gt; and &lt;code&gt;&amp;quot;()[]{}&amp;quot;&lt;/code&gt; are all valid but &lt;code&gt;&amp;quot;(]&amp;quot;&lt;/code&gt; and &lt;code&gt;&amp;quot;([)]&amp;quot;&lt;/code&gt; are not.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;给出包含三种括号的字符串，验证括号是否左右匹配&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;给出包含三种括号的字符串，验证括号是否左右匹配&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -1680,9 +1582,7 @@ Given n will always be valid.
 Try to do this in one pass.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;从链表中删除倒数第n个结点（n必定有效）&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;从链表中删除倒数第n个结点（n必定有效）&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -1711,9 +1611,7 @@ A solution set is:
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;在给定数组中找出“和为 target 的四个数”的所有解。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;在给定数组中找出“和为 target 的四个数”的所有解。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -1738,9 +1636,7 @@ Output: [&amp;quot;ad&amp;quot;, &amp;quot;ae&amp;quot;, &amp;quot;af&amp;quot;,
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;输入九宫格输入法数字，输出对应的所有字母组合&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;输入九宫格输入法数字，输出对应的所有字母组合&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -1768,9 +1664,7 @@ A solution set is:
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;在给定数组中找出“和为0的三个数”的所有解。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;在给定数组中找出“和为0的三个数”的所有解。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -1789,9 +1683,7 @@ A solution set is:
 Input is guaranteed to be within the range from 1 to 3999.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;将罗马数字转换成整型。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;将罗马数字转换成整型。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -1810,9 +1702,7 @@ Input is guaranteed to be within the range from 1 to 3999.&lt;/p&gt;
 Input is guaranteed to be within the range from 1 to 3999.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;将整型转换成罗马数字形式:&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;将整型转换成罗马数字形式:&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -1831,9 +1721,7 @@ Input is guaranteed to be within the range from 1 to 3999.&lt;/p&gt;
 Note: You may not slant the container and n is at least 2.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;给出n个点，它们与X轴有n条垂线，每两条垂线与X轴形成的U型容器，找出最大“容积”(面积）&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;给出n个点，它们与X轴有n条垂线，每两条垂线与X轴形成的U型容器，找出最大“容积”(面积）&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -1853,9 +1741,7 @@ Note: You may not slant the container and n is at least 2.&lt;/p&gt;
 &lt;p&gt;Given an integer n, return all distinct solutions to the n-queens puzzle.&lt;/p&gt;
 
 &lt;p&gt;Each solution contains a distinct board configuration of the &lt;em&gt;n-queens&lt;/em&gt;&amp;rsquo; placement, where &lt;code&gt;&#39;Q&#39;&lt;/code&gt; and &lt;code&gt;&#39;.&#39;&lt;/code&gt; both indicate a queen and an empty space respectively.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;/blockquote&gt;</description>
     </item>
     
     <item>
@@ -1876,9 +1762,7 @@ Given &lt;code&gt;[0,1,0,2,1,0,1,3,2,1,2,1]&lt;/code&gt;, return &lt;code&gt;6&l
 
 &lt;p&gt;&lt;img src=&#34;https://www.orztu.com/images/leetcode/rainwatertrap-1.png&#34; alt=&#34;palindromic&#34; /&gt;
 The above elevation map is represented by array [0,1,0,2,1,0,1,3,2,1,2,1]. In this case, 6 units of rain water (blue section) are being trapped. Thanks Marcos for contributing this image!&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;/blockquote&gt;</description>
     </item>
     
     <item>
@@ -1901,9 +1785,7 @@ Empty cells are indicated by the character &amp;lsquo;.&amp;rsquo;.
 &lt;br&gt;
 &lt;br&gt;
 You may assume that there will be only one unique solution.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;/blockquote&gt;</description>
     </item>
     
     <item>
@@ -1936,9 +1818,7 @@ isMatch(&amp;quot;aa&amp;quot;, &amp;quot;.*&amp;quot;) → true
 isMatch(&amp;quot;ab&amp;quot;, &amp;quot;.*&amp;quot;) → true
 isMatch(&amp;quot;aab&amp;quot;, &amp;quot;c*a*b&amp;quot;) → true
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;/blockquote&gt;</description>
     </item>
     
     <item>
@@ -1955,9 +1835,7 @@ isMatch(&amp;quot;aab&amp;quot;, &amp;quot;c*a*b&amp;quot;) → true
 &lt;p&gt;Determine whether an integer is a palindrome. Do this without extra space.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;在不使用额外空间的条件下判断一个整型是否为回文&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;在不使用额外空间的条件下判断一个整型是否为回文&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -1980,9 +1858,7 @@ isMatch(&amp;quot;aab&amp;quot;, &amp;quot;c*a*b&amp;quot;) → true
 &lt;strong&gt;Notes:&lt;/strong&gt; It is intended for this problem to be specified vaguely (ie, no given input specs). You are responsible to gather all the &amp;gt; input requirements up front.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;实现&lt;code&gt;atoi&lt;/code&gt;功能&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;实现&lt;code&gt;atoi&lt;/code&gt;功能&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -2006,9 +1882,7 @@ isMatch(&amp;quot;aab&amp;quot;, &amp;quot;c*a*b&amp;quot;) → true
 The input is assumed to be a 32-bit signed integer. Your function should &lt;strong&gt;return 0 when the reversed integer overflows&lt;/strong&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;将输入的十进制数倒序输出&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;将输入的十进制数倒序输出&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -2033,11 +1907,9 @@ Y   I   R
 
 &lt;p&gt;Write the code that will take a string and make this conversion given a number of rows:&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-golang&#34; data-lang=&#34;golang&#34;&gt;&lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;convert&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;nRows&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-golang&#34; data-lang=&#34;golang&#34;&gt;&lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;convert&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;nRows&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;code&gt;convert(&amp;quot;PAYPALISHIRING&amp;quot;, 3)&lt;/code&gt; should return &lt;code&gt;&amp;quot;PAHNAPLSIIGYIR&amp;quot;&lt;/code&gt;.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;/blockquote&gt;</description>
     </item>
     
     <item>
@@ -2070,9 +1942,7 @@ Output: &amp;quot;bb&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;从给定字符串中找出最长的回文子串&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;从给定字符串中找出最长的回文子串&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -2106,9 +1976,7 @@ nums2 = [3, 4]
 &lt;p&gt;The median is (2 + 3)/2 = 2.5&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;从两个有序数组中求中位数&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;从两个有序数组中求中位数&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -2131,9 +1999,7 @@ nums2 = [3, 4]
 &lt;p&gt;Given &amp;ldquo;pwwkew&amp;rdquo;, the answer is &amp;ldquo;wke&amp;rdquo;, with the length of 3. Note that the answer must be a substring, &amp;ldquo;pwke&amp;rdquo; is a subsequence and not a substring.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;在给定字符串中找出无重复字符的最长子串。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;在给定字符串中找出无重复字符的最长子串。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -2156,9 +2022,7 @@ Output: 7 -&amp;gt; 0 -&amp;gt; 8
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;给定两个非空链表表示的非负整数。实现加法，向后进位。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;给定两个非空链表表示的非负整数。实现加法，向后进位。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -2184,9 +2048,7 @@ Given nums = [2, 7, 11, 15], target = 9,
 return [0, 1].&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;假定只有&lt;strong&gt;唯一&lt;/strong&gt;解的情况下在数组中找出和为&lt;code&gt;target&lt;/code&gt;的两个数&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;假定只有&lt;strong&gt;唯一&lt;/strong&gt;解的情况下在数组中找出和为&lt;code&gt;target&lt;/code&gt;的两个数&lt;/p&gt;</description>
     </item>
     
   </channel>

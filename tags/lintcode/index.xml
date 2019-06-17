@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Lintcode on Orz the way</title>
+    <title>LintCode on Orz the way</title>
     <link>https://www.orztu.com/tags/lintcode/</link>
-    <description>Recent content in Lintcode on Orz the way</description>
+    <description>Recent content in LintCode on Orz the way</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Tue, 20 Nov 2018 09:53:28 +0800</lastBuildDate>
@@ -34,9 +34,7 @@
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;&lt;code&gt;s = &amp;quot;31ba2a&amp;quot; ,return &amp;quot;no&amp;quot;&lt;/code&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;/blockquote&gt;</description>
     </item>
     
   </channel>

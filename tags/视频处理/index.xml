@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>视频处理 on Orz the way</title>
+    <link>https://www.orztu.com/tags/%E8%A7%86%E9%A2%91%E5%A4%84%E7%90%86/</link>
+    <description>Recent content in 视频处理 on Orz the way</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 15 Jun 2019 14:45:05 +0800</lastBuildDate>
+    
+	<atom:link href="https://www.orztu.com/tags/%E8%A7%86%E9%A2%91%E5%A4%84%E7%90%86/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>ffmpeg 命令行</title>
+      <link>https://www.orztu.com/post/ffmpeg-commands/</link>
+      <pubDate>Sat, 15 Jun 2019 14:45:05 +0800</pubDate>
+      
+      <guid>https://www.orztu.com/post/ffmpeg-commands/</guid>
+      <description>&lt;p&gt;首先，并非专业视频处理人员；以下命令都是我从网上搜索后修改以为己所用。&lt;/p&gt;
+
+&lt;h2 id=&#34;图片转视频&#34;&gt;图片转视频&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;# gif 转视频（DURATION：时长，gif会循环播放）
+ffmpeg -ignore_loop 0 -t DURATION -f gif -i &amp;quot;INPUT.gif&amp;quot; -vcodec libx264 -crf 5 &amp;quot;OUTPUT.mp4&amp;quot;
+
+# png、jpg 转视频
+ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &amp;quot;INPUT.jpg&amp;quot; -vcodec libx264 -crf 5 &amp;quot;OUTPUT.mp4&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

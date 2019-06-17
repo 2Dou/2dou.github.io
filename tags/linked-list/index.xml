@@ -33,9 +33,7 @@ Output: 1-&amp;gt;4-&amp;gt;3-&amp;gt;2-&amp;gt;5-&amp;gt;NULL
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;遍历一次将链表的第&lt;code&gt;m&lt;/code&gt;至&lt;code&gt;n&lt;/code&gt;个结点翻转。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;遍历一次将链表的第&lt;code&gt;m&lt;/code&gt;至&lt;code&gt;n&lt;/code&gt;个结点翻转。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -58,9 +56,7 @@ Output: 1-&amp;gt;4-&amp;gt;3-&amp;gt;2-&amp;gt;5-&amp;gt;NULL
 &lt;pre&gt;&lt;code&gt;Input: head = 1-&amp;gt;4-&amp;gt;3-&amp;gt;2-&amp;gt;5-&amp;gt;2, x = 3
 Output: 1-&amp;gt;2-&amp;gt;2-&amp;gt;4-&amp;gt;3-&amp;gt;5
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;/blockquote&gt;</description>
     </item>
     
     <item>
@@ -89,9 +85,7 @@ Output: 2-&amp;gt;3
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;删除链表中有重复的结点&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;删除链表中有重复的结点&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -126,9 +120,7 @@ rotate 2 steps to the right: 1-&amp;gt;2-&amp;gt;0-&amp;gt;NULL
 rotate 3 steps to the right: 0-&amp;gt;1-&amp;gt;2-&amp;gt;NULL
 rotate 4 steps to the right: 2-&amp;gt;0-&amp;gt;1-&amp;gt;NULL
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;/blockquote&gt;</description>
     </item>
     
     <item>
@@ -159,9 +151,7 @@ For example,&lt;/p&gt;
 &lt;p&gt;For k = 3, you should return: &lt;code&gt;3-&amp;gt;2-&amp;gt;1-&amp;gt;4-&amp;gt;5&lt;/code&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;将链表按长度&lt;code&gt;k&lt;/code&gt;分组并反转&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;将链表按长度&lt;code&gt;k&lt;/code&gt;分组并反转&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -178,9 +168,7 @@ For example,&lt;/p&gt;
 &lt;p&gt;Merge k sorted linked lists and return it as one sorted list. Analyze and describe its complexity.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;将&lt;code&gt;k&lt;/code&gt;个有序链表合并为一个链表&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;将&lt;code&gt;k&lt;/code&gt;个有序链表合并为一个链表&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -197,9 +185,7 @@ For example,&lt;/p&gt;
 &lt;p&gt;Merge two sorted linked lists and return it as a new list. The new list should be made by splicing together the nodes of the first two lists.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;将两个有序链表合二为一&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;将两个有序链表合二为一&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -225,9 +211,7 @@ Given n will always be valid.
 Try to do this in one pass.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;从链表中删除倒数第n个结点（n必定有效）&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;从链表中删除倒数第n个结点（n必定有效）&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -250,9 +234,7 @@ Output: 7 -&amp;gt; 0 -&amp;gt; 8
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;给定两个非空链表表示的非负整数。实现加法，向后进位。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;给定两个非空链表表示的非负整数。实现加法，向后进位。&lt;/p&gt;</description>
     </item>
     
   </channel>

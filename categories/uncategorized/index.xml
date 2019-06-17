@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Uncategorized on Orz the way</title>
+    <title>uncategorized on Orz the way</title>
     <link>https://www.orztu.com/categories/uncategorized/</link>
-    <description>Recent content in Uncategorized on Orz the way</description>
+    <description>Recent content in uncategorized on Orz the way</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Wed, 09 Aug 2017 08:44:10 +0800</lastBuildDate>
@@ -25,9 +25,7 @@
 &lt;img src=&#34;https://www.orztu.com/images/post/gv-0.jpg&#34; alt=&#34;palindromic&#34; title=&#34;错误&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;听说在这里反复提交直到申请成功即可。找了网上的自动提交方法（复制出来CURL提交），发现不好使，curl一直没响应。
-但是网页上确实可以反复点击提交的。于是改用自动点击的方式，一夜醒来发现已经申请成功。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+但是网页上确实可以反复点击提交的。于是改用自动点击的方式，一夜醒来发现已经申请成功。&lt;/p&gt;</description>
     </item>
     
   </channel>

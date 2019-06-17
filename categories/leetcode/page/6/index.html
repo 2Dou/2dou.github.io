@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.39 with theme Tranquilpeak 0.4.3-SNAPSHOT">
+<meta name="generator" content="Hugo 0.55.6 with theme Tranquilpeak 0.4.3-SNAPSHOT">
 <meta name="author" content="SelFree">
 <meta name="keywords" content=", program develop, leetcode, Golang, leetcode解答, 程序">
 <meta name="description" content="城市永远年轻，而我们终将老去">
@@ -13,8 +13,8 @@
 
 <meta property="og:description" content="城市永远年轻，而我们终将老去">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Leetcode">
-<meta name="twitter:title" content="Leetcode">
+<meta property="og:title" content="LeetCode">
+<meta name="twitter:title" content="LeetCode">
 <meta property="og:url" content="https://www.orztu.com/categories/leetcode/">
 <meta property="twitter:url" content="https://www.orztu.com/categories/leetcode/">
 <meta property="og:site_name" content="Orz the way">
@@ -39,7 +39,7 @@
   <meta property="twitter:image" content="https://www.gravatar.com/avatar/f47b51d6d6b82fd9048e3eaf64bf7e69?s=640">
 
 
-    <title>Leetcode | 
+    <title>LeetCode | 
         Orz the way
       
     </title>
@@ -327,8 +327,6 @@ A partially filled sudoku which is valid.</p>
 </blockquote>
 
 <p>验证数独</p>
-
-<p></p>
       
       <p>
         <a href="https://www.orztu.com/leetcode/036-valid-sudoku/" class="postShorten-excerpt_link link">Read More</a>
@@ -408,8 +406,6 @@ A partially filled sudoku which is valid.</p>
 
 <p>Your algorithm&rsquo;s runtime complexity must be in the order of <code>O(log n)</code>.</p>
 </blockquote>
-
-<p></p>
       
       <p>
         <a href="https://www.orztu.com/leetcode/033-search-in-rotated-sorted-array/" class="postShorten-excerpt_link link">Read More</a>
@@ -499,8 +495,6 @@ Explanation: The longest valid parentheses substring is &quot;()()&quot;
 </blockquote>
 
 <p>输出最长的左右括号匹配的子串长度</p>
-
-<p></p>
       
       <p>
         <a href="https://www.orztu.com/leetcode/032-longest-valid-parentheses/" class="postShorten-excerpt_link link">Read More</a>
@@ -584,8 +578,6 @@ Explanation: The longest valid parentheses substring is &quot;()()&quot;
 </blockquote>
 
 <p>实现字典序排列的 nextPermutation 方法，假如已经是最大排列，则输出最小排列。</p>
-
-<p></p>
       
       <p>
         <a href="https://www.orztu.com/leetcode/031-next-permutation/" class="postShorten-excerpt_link link">Read More</a>
@@ -661,8 +653,6 @@ Explanation: The longest valid parentheses substring is &quot;()()&quot;
 </blockquote>
 
 <p>不使用乘法、除法、取余实现两个整数相除。</p>
-
-<p></p>
       
       <p>
         <a href="https://www.orztu.com/leetcode/029-divide-two-integers/" class="postShorten-excerpt_link link">Read More</a>
@@ -750,8 +740,6 @@ For example,</p>
 </blockquote>
 
 <p>将链表按长度<code>k</code>分组并反转</p>
-
-<p></p>
       
       <p>
         <a href="https://www.orztu.com/leetcode/025-reverse-nodes-in-k-group/" class="postShorten-excerpt_link link">Read More</a>
@@ -825,8 +813,6 @@ For example,</p>
 </blockquote>
 
 <p>将<code>k</code>个有序链表合并为一个链表</p>
-
-<p></p>
       
       <p>
         <a href="https://www.orztu.com/leetcode/023-merge-k-sorted-lists/" class="postShorten-excerpt_link link">Read More</a>
@@ -911,8 +897,6 @@ For example,</p>
 </blockquote>
 
 <p>给出n组括号，生成所有正确的匹配组合</p>
-
-<p></p>
       
       <p>
         <a href="https://www.orztu.com/leetcode/022-generate-parentheses/" class="postShorten-excerpt_link link">Read More</a>
@@ -1134,6 +1118,32 @@ For example,</p>
           <div class="media">
             
             <div class="media-body">
+              <a class="link-unstyled" href="https://www.orztu.com/post/ffmpeg-commands/">
+                <h3 class="media-heading">ffmpeg 命令行</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jun 6, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>首先，并非专业视频处理人员；以下命令都是我从网上搜索后修改以为己所用。</p>
+
+<h2 id="图片转视频">图片转视频</h2>
+
+<pre><code># gif 转视频（DURATION：时长，gif会循环播放）
+ffmpeg -ignore_loop 0 -t DURATION -f gif -i &quot;INPUT.gif&quot; -vcodec libx264 -crf 5 &quot;OUTPUT.mp4&quot;
+
+# png、jpg 转视频
+ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &quot;INPUT.jpg&quot; -vcodec libx264 -crf 5 &quot;OUTPUT.mp4&quot;
+</code></pre></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
               <a class="link-unstyled" href="https://www.orztu.com/post/little-problem-while-using-cocos2dx-lua/">
                 <h3 class="media-heading">记一次 Cocos2dx-Lua 闪退</h3>
               </a>
@@ -1149,9 +1159,7 @@ For example,</p>
 <p>在某个页面修改后，出现闪退。查看修改记录没有特别的地方，均为修改图片或者条件判断。</p>
 
 <p>启动 XCode 发现闪退位置出现在<code>void Node::onEnterTransitionDidFinish()</code>中，
-在其调用子节点的<code>child-&gt;onEnterTransitionDidFinish()</code>时，<code>child</code>指针无效。</p>
-
-<p></p></div>
+在其调用子节点的<code>child-&gt;onEnterTransitionDidFinish()</code>时，<code>child</code>指针无效。</p></div>
             </div>
             <div style="clear:both;"></div>
             <hr>
@@ -1193,23 +1201,21 @@ For example,</p>
 </span><span class="lnt">20
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">func</span> <span class="nx">foo</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&#34;--- BEGIN ---&#34;</span><span class="p">)</span>
-    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nb">string</span><span class="p">(</span><span class="nx">debug</span><span class="p">.</span><span class="nx">Stack</span><span class="p">()))</span>
-    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&#34;--- END ---&#34;</span><span class="p">)</span>
+<pre class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">func</span> <span class="nf">foo</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;--- BEGIN ---&#34;</span><span class="p">)</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nb">string</span><span class="p">(</span><span class="nx">debug</span><span class="p">.</span><span class="nf">Stack</span><span class="p">()))</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;--- END ---&#34;</span><span class="p">)</span>
 <span class="p">}</span>
 
-<span class="kd">func</span> <span class="nx">boom</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nx">foo</span><span class="p">()</span>
+<span class="kd">func</span> <span class="nf">boom</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nf">foo</span><span class="p">()</span>
 <span class="p">}</span>
 
-<span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nx">boom</span><span class="p">()</span>
+<span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nf">boom</span><span class="p">()</span>
 <span class="p">}</span></code></pre></td></tr></table>
 </div>
-</div>
-
-<p></p></div>
+</div></div>
             </div>
             <div style="clear:both;"></div>
             <hr>
@@ -1228,9 +1234,7 @@ For example,</p>
               </span>
               <div class="media-content hide-xs font-merryweather"><p>上回提到<a href="https://www.orztu.com/post/lua-table-minify/" target="_blank">元表优化 Lua 配置文件</a>，以减少重复字段，节省内存开销。</p>
 
-<p>除了这种直接地减少内存开销的方法，使用元表还能实现数据的延迟加载，从另一个角度节约内存。</p>
-
-<p></p></div>
+<p>除了这种直接地减少内存开销的方法，使用元表还能实现数据的延迟加载，从另一个角度节约内存。</p></div>
             </div>
             <div style="clear:both;"></div>
             <hr>
@@ -1253,9 +1257,7 @@ For example,</p>
 
 <p>在我参与的<code>Cocos2dx-Lua</code>工程中，策划通常在<code>Excel</code>中配置，再通过脚本转换为<code>Lua-Table</code>的文件。</p>
 
-<p>比如常见的道具表转换后：</p>
-
-<p></p></div>
+<p>比如常见的道具表转换后：</p></div>
             </div>
             <div style="clear:both;"></div>
             <hr>
@@ -1274,9 +1276,7 @@ For example,</p>
               </span>
               <div class="media-content hide-xs font-merryweather"><p>C 语言与 Golang 相互调用的简单例子。</p>
 
-<p>在此使用一段简单的代码展示 CGO 的基本用法 —— 在 Go 程序中使用 C 语言编程。</p>
-
-<p></p></div>
+<p>在此使用一段简单的代码展示 CGO 的基本用法 —— 在 Go 程序中使用 C 语言编程。</p></div>
             </div>
             <div style="clear:both;"></div>
             <hr>
@@ -1297,9 +1297,7 @@ For example,</p>
 
 <p>go vendor 是 go 1.6 官方正式引入的包管理方式。</p>
 
-<p>其基本思路是，将引用的外部包的源代码放在当前工程的<code>vendor</code>目录下面，go 编译时会优先从<code>vendor</code>目录寻找依赖关系。</p>
-
-<p></p></div>
+<p>其基本思路是，将引用的外部包的源代码放在当前工程的<code>vendor</code>目录下面，go 编译时会优先从<code>vendor</code>目录寻找依赖关系。</p></div>
             </div>
             <div style="clear:both;"></div>
             <hr>
@@ -1318,9 +1316,7 @@ For example,</p>
               </span>
               <div class="media-content hide-xs font-merryweather"><p>由于众所不知的原因，在国内访问<code>golang.org</code>需要爬梯子。</p>
 
-<p>所以使用<code>go get</code>安装某些包的时候，也要用梯子。</p>
-
-<p></p></div>
+<p>所以使用<code>go get</code>安装某些包的时候，也要用梯子。</p></div>
             </div>
             <div style="clear:both;"></div>
             <hr>
@@ -1345,9 +1341,7 @@ For example,</p>
 
 <p>数组赋值时会拷贝整个数组，所以作为参数传递时也会完整拷贝，要考虑性能合理使用，必要时可以使用指针。</p>
 
-<p>以下代码便于理解数组和切片：</p>
-
-<p></p></div>
+<p>以下代码便于理解数组和切片：</p></div>
             </div>
             <div style="clear:both;"></div>
             <hr>
@@ -1366,28 +1360,7 @@ For example,</p>
               </span>
               <div class="media-content hide-xs font-merryweather"><h2 id="功能">功能</h2>
 
-<p>使用知名python图片处理库PIL，为图片添加文字水印。</p>
-
-<p></p></div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://www.orztu.com/post/wechat-jump/">
-                <h3 class="media-heading">python实现微信跳一跳外挂</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Jan 1, 2018
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather"><p>使用python+adb实现微信跳一跳外挂</p>
-
-<p></p></div>
+<p>使用知名python图片处理库PIL，为图片添加文字水印。</p></div>
             </div>
             <div style="clear:both;"></div>
             <hr>
@@ -1400,7 +1373,7 @@ For example,</p>
          data-message-zero="no post found"
          data-message-one="1 post found"
          data-message-other="{n} posts found">
-         15 posts found
+         16 posts found
       </p>
     </div>
   </div>

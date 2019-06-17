@@ -38,9 +38,7 @@
 
 &lt;p&gt;这时候如果直接将SD卡插入树莓派，会发现“无法启动”。显示屏没信号，在路由器里找到树莓派的IP也无法用ssh登录。&lt;/p&gt;
 
-&lt;p&gt;我安装的时候就是踩到这个坑。以为安装失败，反复装了好几次，就差把SD卡写穿了。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;我安装的时候就是踩到这个坑。以为安装失败，反复装了好几次，就差把SD卡写穿了。&lt;/p&gt;</description>
     </item>
     
   </channel>

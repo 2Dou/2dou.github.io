@@ -6,10 +6,28 @@
     <description>Recent content in Posts on Orz the way</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 22 Dec 2018 09:22:48 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 15 Jun 2019 14:45:05 +0800</lastBuildDate>
     
 	<atom:link href="https://www.orztu.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>ffmpeg 命令行</title>
+      <link>https://www.orztu.com/post/ffmpeg-commands/</link>
+      <pubDate>Sat, 15 Jun 2019 14:45:05 +0800</pubDate>
+      
+      <guid>https://www.orztu.com/post/ffmpeg-commands/</guid>
+      <description>&lt;p&gt;首先，并非专业视频处理人员；以下命令都是我从网上搜索后修改以为己所用。&lt;/p&gt;
+
+&lt;h2 id=&#34;图片转视频&#34;&gt;图片转视频&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;# gif 转视频（DURATION：时长，gif会循环播放）
+ffmpeg -ignore_loop 0 -t DURATION -f gif -i &amp;quot;INPUT.gif&amp;quot; -vcodec libx264 -crf 5 &amp;quot;OUTPUT.mp4&amp;quot;
+
+# png、jpg 转视频
+ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &amp;quot;INPUT.jpg&amp;quot; -vcodec libx264 -crf 5 &amp;quot;OUTPUT.mp4&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
     
     <item>
       <title>记一次 Cocos2dx-Lua 闪退</title>
@@ -24,9 +42,7 @@
 &lt;p&gt;在某个页面修改后，出现闪退。查看修改记录没有特别的地方，均为修改图片或者条件判断。&lt;/p&gt;
 
 &lt;p&gt;启动 XCode 发现闪退位置出现在&lt;code&gt;void Node::onEnterTransitionDidFinish()&lt;/code&gt;中，
-在其调用子节点的&lt;code&gt;child-&amp;gt;onEnterTransitionDidFinish()&lt;/code&gt;时，&lt;code&gt;child&lt;/code&gt;指针无效。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+在其调用子节点的&lt;code&gt;child-&amp;gt;onEnterTransitionDidFinish()&lt;/code&gt;时，&lt;code&gt;child&lt;/code&gt;指针无效。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -60,23 +76,21 @@
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
-&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-golang&#34; data-lang=&#34;golang&#34;&gt;&lt;span class=&#34;kd&#34;&gt;func&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;foo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-    &lt;span class=&#34;nx&#34;&gt;fmt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Println&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;--- BEGIN ---&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-    &lt;span class=&#34;nx&#34;&gt;fmt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Println&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;string&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;debug&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Stack&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()))&lt;/span&gt;
-    &lt;span class=&#34;nx&#34;&gt;fmt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Println&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;--- END ---&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-golang&#34; data-lang=&#34;golang&#34;&gt;&lt;span class=&#34;kd&#34;&gt;func&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;foo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;nx&#34;&gt;fmt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Println&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;--- BEGIN ---&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;nx&#34;&gt;fmt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Println&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;string&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;debug&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Stack&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()))&lt;/span&gt;
+    &lt;span class=&#34;nx&#34;&gt;fmt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Println&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;--- END ---&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 
-&lt;span class=&#34;kd&#34;&gt;func&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;boom&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-    &lt;span class=&#34;nx&#34;&gt;foo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;span class=&#34;kd&#34;&gt;func&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;boom&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;nf&#34;&gt;foo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
 &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 
-&lt;span class=&#34;kd&#34;&gt;func&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-    &lt;span class=&#34;nx&#34;&gt;boom&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;span class=&#34;kd&#34;&gt;func&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;nf&#34;&gt;boom&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
 &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -87,9 +101,7 @@
       <guid>https://www.orztu.com/post/lua-table-minify-ii/</guid>
       <description>&lt;p&gt;上回提到&lt;a href=&#34;https://www.orztu.com/post/lua-table-minify/&#34; target=&#34;_blank&#34;&gt;元表优化 Lua 配置文件&lt;/a&gt;，以减少重复字段，节省内存开销。&lt;/p&gt;
 
-&lt;p&gt;除了这种直接地减少内存开销的方法，使用元表还能实现数据的延迟加载，从另一个角度节约内存。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;除了这种直接地减少内存开销的方法，使用元表还能实现数据的延迟加载，从另一个角度节约内存。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -104,9 +116,7 @@
 
 &lt;p&gt;在我参与的&lt;code&gt;Cocos2dx-Lua&lt;/code&gt;工程中，策划通常在&lt;code&gt;Excel&lt;/code&gt;中配置，再通过脚本转换为&lt;code&gt;Lua-Table&lt;/code&gt;的文件。&lt;/p&gt;
 
-&lt;p&gt;比如常见的道具表转换后：&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;比如常见的道具表转换后：&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -117,9 +127,7 @@
       <guid>https://www.orztu.com/post/cgo-introduce/</guid>
       <description>&lt;p&gt;C 语言与 Golang 相互调用的简单例子。&lt;/p&gt;
 
-&lt;p&gt;在此使用一段简单的代码展示 CGO 的基本用法 —— 在 Go 程序中使用 C 语言编程。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;在此使用一段简单的代码展示 CGO 的基本用法 —— 在 Go 程序中使用 C 语言编程。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -132,9 +140,7 @@
 
 &lt;p&gt;go vendor 是 go 1.6 官方正式引入的包管理方式。&lt;/p&gt;
 
-&lt;p&gt;其基本思路是，将引用的外部包的源代码放在当前工程的&lt;code&gt;vendor&lt;/code&gt;目录下面，go 编译时会优先从&lt;code&gt;vendor&lt;/code&gt;目录寻找依赖关系。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;其基本思路是，将引用的外部包的源代码放在当前工程的&lt;code&gt;vendor&lt;/code&gt;目录下面，go 编译时会优先从&lt;code&gt;vendor&lt;/code&gt;目录寻找依赖关系。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -145,9 +151,7 @@
       <guid>https://www.orztu.com/post/go-get-through-a-proxy/</guid>
       <description>&lt;p&gt;由于众所不知的原因，在国内访问&lt;code&gt;golang.org&lt;/code&gt;需要爬梯子。&lt;/p&gt;
 
-&lt;p&gt;所以使用&lt;code&gt;go get&lt;/code&gt;安装某些包的时候，也要用梯子。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;所以使用&lt;code&gt;go get&lt;/code&gt;安装某些包的时候，也要用梯子。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -164,9 +168,7 @@
 
 &lt;p&gt;数组赋值时会拷贝整个数组，所以作为参数传递时也会完整拷贝，要考虑性能合理使用，必要时可以使用指针。&lt;/p&gt;
 
-&lt;p&gt;以下代码便于理解数组和切片：&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;以下代码便于理解数组和切片：&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -177,9 +179,7 @@
       <guid>https://www.orztu.com/post/text-watermark/</guid>
       <description>&lt;h2 id=&#34;功能&#34;&gt;功能&lt;/h2&gt;
 
-&lt;p&gt;使用知名python图片处理库PIL，为图片添加文字水印。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;使用知名python图片处理库PIL，为图片添加文字水印。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -188,9 +188,7 @@
       <pubDate>Mon, 08 Jan 2018 10:00:41 +0800</pubDate>
       
       <guid>https://www.orztu.com/post/wechat-jump/</guid>
-      <description>&lt;p&gt;使用python+adb实现微信跳一跳外挂&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;使用python+adb实现微信跳一跳外挂&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -199,7 +197,7 @@
       <pubDate>Tue, 28 Nov 2017 09:14:03 +0800</pubDate>
       
       <guid>https://www.orztu.com/post/poors-in-peking/</guid>
-      <description>&lt;p&gt;&lt;/p&gt;</description>
+      <description></description>
     </item>
     
     <item>
@@ -229,9 +227,7 @@
 
 &lt;p&gt;这时候如果直接将SD卡插入树莓派，会发现“无法启动”。显示屏没信号，在路由器里找到树莓派的IP也无法用ssh登录。&lt;/p&gt;
 
-&lt;p&gt;我安装的时候就是踩到这个坑。以为安装失败，反复装了好几次，就差把SD卡写穿了。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;我安装的时候就是踩到这个坑。以为安装失败，反复装了好几次，就差把SD卡写穿了。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -248,9 +244,7 @@
 &lt;img src=&#34;https://www.orztu.com/images/post/gv-0.jpg&#34; alt=&#34;palindromic&#34; title=&#34;错误&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;听说在这里反复提交直到申请成功即可。找了网上的自动提交方法（复制出来CURL提交），发现不好使，curl一直没响应。
-但是网页上确实可以反复点击提交的。于是改用自动点击的方式，一夜醒来发现已经申请成功。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+但是网页上确实可以反复点击提交的。于是改用自动点击的方式，一夜醒来发现已经申请成功。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -259,7 +253,7 @@
       <pubDate>Wed, 31 May 2017 17:54:35 +0800</pubDate>
       
       <guid>https://www.orztu.com/post/tianlongbabu/</guid>
-      <description>&lt;p&gt;&lt;/p&gt;</description>
+      <description></description>
     </item>
     
     <item>

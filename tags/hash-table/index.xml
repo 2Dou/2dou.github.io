@@ -37,9 +37,7 @@ Output: 6
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;在给出的矩阵中，&lt;code&gt;1&lt;/code&gt;表示元素，&lt;code&gt;0&lt;/code&gt;表示空，找出最大矩形的面积。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;在给出的矩阵中，&lt;code&gt;1&lt;/code&gt;表示元素，&lt;code&gt;0&lt;/code&gt;表示空，找出最大矩形的面积。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -69,9 +67,7 @@ Output: &amp;quot;BANC&amp;quot;
 &lt;/ul&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;给出两个字符串&lt;code&gt;S&lt;/code&gt;和&lt;code&gt;T&lt;/code&gt;，在&lt;code&gt;S&lt;/code&gt;中找到一个最短的子串，它包含&lt;code&gt;T&lt;/code&gt;中所有的字符。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;给出两个字符串&lt;code&gt;S&lt;/code&gt;和&lt;code&gt;T&lt;/code&gt;，在&lt;code&gt;S&lt;/code&gt;中找到一个最短的子串，它包含&lt;code&gt;T&lt;/code&gt;中所有的字符。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -99,9 +95,7 @@ A partially filled sudoku which is valid.&lt;/p&gt;
 &lt;p&gt;The Sudoku board could be partially filled, where empty cells are filled with the character &lt;code&gt;&#39;.&#39;&lt;/code&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;验证数独&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;验证数独&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -130,9 +124,7 @@ A solution set is:
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;在给定数组中找出“和为 target 的四个数”的所有解。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;在给定数组中找出“和为 target 的四个数”的所有解。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -155,9 +147,7 @@ Empty cells are indicated by the character &amp;lsquo;.&amp;rsquo;.
 &lt;br&gt;
 &lt;br&gt;
 You may assume that there will be only one unique solution.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;/blockquote&gt;</description>
     </item>
     
     <item>
@@ -180,9 +170,7 @@ You may assume that there will be only one unique solution.&lt;/p&gt;
 &lt;p&gt;Given &amp;ldquo;pwwkew&amp;rdquo;, the answer is &amp;ldquo;wke&amp;rdquo;, with the length of 3. Note that the answer must be a substring, &amp;ldquo;pwke&amp;rdquo; is a subsequence and not a substring.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;在给定字符串中找出无重复字符的最长子串。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;在给定字符串中找出无重复字符的最长子串。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -208,9 +196,7 @@ Given nums = [2, 7, 11, 15], target = 9,
 return [0, 1].&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;假定只有&lt;strong&gt;唯一&lt;/strong&gt;解的情况下在数组中找出和为&lt;code&gt;target&lt;/code&gt;的两个数&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;假定只有&lt;strong&gt;唯一&lt;/strong&gt;解的情况下在数组中找出和为&lt;code&gt;target&lt;/code&gt;的两个数&lt;/p&gt;</description>
     </item>
     
   </channel>

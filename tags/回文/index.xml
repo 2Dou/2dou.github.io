@@ -25,9 +25,7 @@
 &lt;p&gt;Determine whether an integer is a palindrome. Do this without extra space.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;在不使用额外空间的条件下判断一个整型是否为回文&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;在不使用额外空间的条件下判断一个整型是否为回文&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -60,9 +58,7 @@ Output: &amp;quot;bb&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;从给定字符串中找出最长的回文子串&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;从给定字符串中找出最长的回文子串&lt;/p&gt;</description>
     </item>
     
   </channel>

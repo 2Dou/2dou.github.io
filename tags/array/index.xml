@@ -39,9 +39,7 @@ Output:
  []
 ]
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;/blockquote&gt;</description>
     </item>
     
     <item>
@@ -75,9 +73,7 @@ Output: [1,2,2,3,5,6]
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;将&lt;code&gt;nums1&lt;/code&gt;、&lt;code&gt;nums2&lt;/code&gt;两个有序数组合并到&lt;code&gt;nums1&lt;/code&gt;一个中，&lt;code&gt;nums1&lt;/code&gt;已分配足够空间存放元素。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;将&lt;code&gt;nums1&lt;/code&gt;、&lt;code&gt;nums2&lt;/code&gt;两个有序数组合并到&lt;code&gt;nums1&lt;/code&gt;一个中，&lt;code&gt;nums1&lt;/code&gt;已分配足够空间存放元素。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -106,9 +102,7 @@ Output: 6
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;在给出的矩阵中，&lt;code&gt;1&lt;/code&gt;表示元素，&lt;code&gt;0&lt;/code&gt;表示空，找出最大矩形的面积。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;在给出的矩阵中，&lt;code&gt;1&lt;/code&gt;表示元素，&lt;code&gt;0&lt;/code&gt;表示空，找出最大矩形的面积。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -131,9 +125,7 @@ Above is a histogram where width of each bar is &lt;code&gt;1&lt;/code&gt;, give
 The largest rectangle is shown in the shaded area, which has area = &lt;code&gt;10&lt;/code&gt; unit.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;给出一个直方图，求最大矩形面积。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;给出一个直方图，求最大矩形面积。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -171,9 +163,7 @@ Output: false
 &lt;li&gt;This is a follow up problem to Search in Rotated Sorted Array, where nums may contain duplicates.&lt;/li&gt;
 &lt;li&gt;Would this affect the run-time complexity? How and why?&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;/blockquote&gt;</description>
     </item>
     
     <item>
@@ -212,9 +202,7 @@ It doesn&#39;t matter what values are set beyond the returned length.
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;在有序数组中删除重复的元素，每个元素允许重复一次（出现两次）。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;在有序数组中删除重复的元素，每个元素允许重复一次（出现两次）。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -249,9 +237,7 @@ Given word = &amp;quot;ABCB&amp;quot;, return false.
 
 &lt;p&gt;在&lt;code&gt;board&lt;/code&gt;中查找是否存在相连（相邻）的字符与给定的单词对应。&lt;/p&gt;
 
-&lt;p&gt;很像一个走迷宫的题目，搜索下一步是否与单词的字母匹配，是则走到该位置。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;很像一个走迷宫的题目，搜索下一步是否与单词的字母匹配，是则走到该位置。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -286,9 +272,7 @@ Output:
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;求所有子集（幂集），包含一个空集。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;求所有子集（幂集），包含一个空集。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -323,9 +307,7 @@ First, iterate the array counting number of 0&amp;rsquo;s, 1&amp;rsquo;s, and 2&
 &lt;/ul&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;对一个只包含&lt;code&gt;0&lt;/code&gt;、&lt;code&gt;1&lt;/code&gt;、&lt;code&gt;2&lt;/code&gt;三个数字的数组进行排序，要求时间复杂度&lt;code&gt;O(n)&lt;/code&gt;，空间复杂度&lt;code&gt;O(1)&lt;/code&gt;。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;对一个只包含&lt;code&gt;0&lt;/code&gt;、&lt;code&gt;1&lt;/code&gt;、&lt;code&gt;2&lt;/code&gt;三个数字的数组进行排序，要求时间复杂度&lt;code&gt;O(n)&lt;/code&gt;，空间复杂度&lt;code&gt;O(1)&lt;/code&gt;。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -363,9 +345,7 @@ Output: false
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;矩阵中有序存地放着一些数字，查找是否存在某个数字。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;矩阵中有序存地放着一些数字，查找是否存在某个数字。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -421,9 +401,7 @@ Output:
 &lt;/ul&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;在&lt;code&gt;m x n&lt;/code&gt;的矩阵中，如果一个元素为&lt;code&gt;0&lt;/code&gt;，则将它所在的行和列都置为&lt;code&gt;0&lt;/code&gt;。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;在&lt;code&gt;m x n&lt;/code&gt;的矩阵中，如果一个元素为&lt;code&gt;0&lt;/code&gt;，则将它所在的行和列都置为&lt;code&gt;0&lt;/code&gt;。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -454,9 +432,7 @@ Explanation: The array represents the integer 123.
 Output: [4,3,2,2]
 Explanation: The array represents the integer 4321.
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;/blockquote&gt;</description>
     </item>
     
     <item>
@@ -487,9 +463,7 @@ Explanation: Because the path 1→3→1→1→1 minimizes the sum.
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;每个格子的数字表示经过它所需的消耗大小。寻找从左上到右下的最少路径消耗。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;每个格子的数字表示经过它所需的消耗大小。寻找从左上到右下的最少路径消耗。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -532,9 +506,7 @@ There are two ways to reach the bottom-right corner:
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;给出地图，求左上角到右下角的路径数量（只能向下或向右移动）。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;给出地图，求左上角到右下角的路径数量（只能向下或向右移动）。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -560,9 +532,7 @@ Output:
  [ 7, 6, 5 ]
 ]
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;/blockquote&gt;</description>
     </item>
     
     <item>
@@ -594,9 +564,7 @@ Explanation: Because the new interval [4,8] overlaps with [3,5],[6,7],[8,10].
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;在给出的有序区间中插入新的区间，需要合并相邻的区间。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;在给出的有序区间中插入新的区间，需要合并相邻的区间。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -627,9 +595,7 @@ Explanation: Intervals [1,4] and [4,5] are considerred overlapping.
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;合并区间重叠/相邻的区间。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;合并区间重叠/相邻的区间。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -667,9 +633,7 @@ Explanation: You will always arrive at index 3 no matter what. Its maximum
 
 &lt;p&gt;给定一个非负整型数组，每个数字表示可以从该位置向后跳跃的最大步数。&lt;/p&gt;
 
-&lt;p&gt;判断是否能从第一个数字开始跳跃到最后一个数字。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;判断是否能从第一个数字开始跳跃到最后一个数字。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -708,9 +672,7 @@ Output: [1,2,3,4,8,12,11,10,9,5,6,7]
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;从外向内螺旋形遍历矩阵。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;从外向内螺旋形遍历矩阵。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -730,9 +692,7 @@ Output: [1,2,3,4,8,12,11,10,9,5,6,7]
 
 &lt;p&gt;How many possible unique paths are there?
 &lt;img src=&#34;https://www.orztu.com/images/leetcode/062-unique-paths-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;/blockquote&gt;</description>
     </item>
     
     <item>
@@ -773,9 +733,7 @@ Output: 1
 &lt;/ul&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;使用&lt;code&gt;O(n)&lt;/code&gt;的时间复杂度和&lt;code&gt;O(1)&lt;/code&gt;的空间在无序数组中查找第一个缺失的正数。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;使用&lt;code&gt;O(n)&lt;/code&gt;的时间复杂度和&lt;code&gt;O(1)&lt;/code&gt;的空间在无序数组中查找第一个缺失的正数。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -797,9 +755,7 @@ Output: 1
 
 &lt;p&gt;All numbers (including &lt;code&gt;target&lt;/code&gt;) will be positive integers.
 The solution set must not contain duplicate combinations.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;/blockquote&gt;</description>
     </item>
     
     <item>
@@ -823,9 +779,7 @@ The solution set must not contain duplicate combinations.&lt;/p&gt;
 &lt;li&gt;All numbers (including &lt;code&gt;target&lt;/code&gt;) will be positive integers.&lt;/li&gt;
 &lt;li&gt;The solution set must not contain duplicate combinations.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;/blockquote&gt;</description>
     </item>
     
     <item>
@@ -848,9 +802,7 @@ The solution set must not contain duplicate combinations.&lt;/p&gt;
 &lt;p&gt;You may assume no duplicate exists in the array.&lt;/p&gt;
 
 &lt;p&gt;Your algorithm&amp;rsquo;s runtime complexity must be in the order of &lt;code&gt;O(log n)&lt;/code&gt;.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;/blockquote&gt;</description>
     </item>
     
     <item>
@@ -877,9 +829,7 @@ The solution set must not contain duplicate combinations.&lt;/p&gt;
 &lt;code&gt;1,1,5&lt;/code&gt; → &lt;code&gt;1,5,1&lt;/code&gt;&lt;br&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;实现字典序排列的 nextPermutation 方法，假如已经是最大排列，则输出最小排列。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;实现字典序排列的 nextPermutation 方法，假如已经是最大排列，则输出最小排列。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -908,9 +858,7 @@ A solution set is:
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;在给定数组中找出“和为 target 的四个数”的所有解。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;在给定数组中找出“和为 target 的四个数”的所有解。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -938,9 +886,7 @@ A solution set is:
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;在给定数组中找出“和为0的三个数”的所有解。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;在给定数组中找出“和为0的三个数”的所有解。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -959,9 +905,7 @@ A solution set is:
 Note: You may not slant the container and n is at least 2.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;给出n个点，它们与X轴有n条垂线，每两条垂线与X轴形成的U型容器，找出最大“容积”(面积）&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;给出n个点，它们与X轴有n条垂线，每两条垂线与X轴形成的U型容器，找出最大“容积”(面积）&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -982,9 +926,7 @@ Given &lt;code&gt;[0,1,0,2,1,0,1,3,2,1,2,1]&lt;/code&gt;, return &lt;code&gt;6&l
 
 &lt;p&gt;&lt;img src=&#34;https://www.orztu.com/images/leetcode/rainwatertrap-1.png&#34; alt=&#34;palindromic&#34; /&gt;
 The above elevation map is represented by array [0,1,0,2,1,0,1,3,2,1,2,1]. In this case, 6 units of rain water (blue section) are being trapped. Thanks Marcos for contributing this image!&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;/blockquote&gt;</description>
     </item>
     
     <item>
@@ -1018,9 +960,7 @@ nums2 = [3, 4]
 &lt;p&gt;The median is (2 + 3)/2 = 2.5&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;从两个有序数组中求中位数&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;从两个有序数组中求中位数&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -1046,9 +986,7 @@ Given nums = [2, 7, 11, 15], target = 9,
 return [0, 1].&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;假定只有&lt;strong&gt;唯一&lt;/strong&gt;解的情况下在数组中找出和为&lt;code&gt;target&lt;/code&gt;的两个数&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;假定只有&lt;strong&gt;唯一&lt;/strong&gt;解的情况下在数组中找出和为&lt;code&gt;target&lt;/code&gt;的两个数&lt;/p&gt;</description>
     </item>
     
   </channel>

@@ -27,9 +27,7 @@
 The brackets must close in the correct order, &lt;code&gt;&amp;quot;()&amp;quot;&lt;/code&gt; and &lt;code&gt;&amp;quot;()[]{}&amp;quot;&lt;/code&gt; are all valid but &lt;code&gt;&amp;quot;(]&amp;quot;&lt;/code&gt; and &lt;code&gt;&amp;quot;([)]&amp;quot;&lt;/code&gt; are not.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;给出包含三种括号的字符串，验证括号是否左右匹配&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;给出包含三种括号的字符串，验证括号是否左右匹配&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -62,9 +60,7 @@ isMatch(&amp;quot;aa&amp;quot;, &amp;quot;.*&amp;quot;) → true
 isMatch(&amp;quot;ab&amp;quot;, &amp;quot;.*&amp;quot;) → true
 isMatch(&amp;quot;aab&amp;quot;, &amp;quot;c*a*b&amp;quot;) → true
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;/blockquote&gt;</description>
     </item>
     
   </channel>

@@ -19,9 +19,7 @@
       <guid>https://www.orztu.com/post/cgo-introduce/</guid>
       <description>&lt;p&gt;C 语言与 Golang 相互调用的简单例子。&lt;/p&gt;
 
-&lt;p&gt;在此使用一段简单的代码展示 CGO 的基本用法 —— 在 Go 程序中使用 C 语言编程。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;在此使用一段简单的代码展示 CGO 的基本用法 —— 在 Go 程序中使用 C 语言编程。&lt;/p&gt;</description>
     </item>
     
   </channel>

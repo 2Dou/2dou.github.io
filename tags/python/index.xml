@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Python on Orz the way</title>
+    <title>python on Orz the way</title>
     <link>https://www.orztu.com/tags/python/</link>
-    <description>Recent content in Python on Orz the way</description>
+    <description>Recent content in python on Orz the way</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Thu, 10 May 2018 10:54:06 +0800</lastBuildDate>
@@ -19,9 +19,7 @@
       <guid>https://www.orztu.com/post/text-watermark/</guid>
       <description>&lt;h2 id=&#34;功能&#34;&gt;功能&lt;/h2&gt;
 
-&lt;p&gt;使用知名python图片处理库PIL，为图片添加文字水印。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;使用知名python图片处理库PIL，为图片添加文字水印。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -30,9 +28,7 @@
       <pubDate>Mon, 08 Jan 2018 10:00:41 +0800</pubDate>
       
       <guid>https://www.orztu.com/post/wechat-jump/</guid>
-      <description>&lt;p&gt;使用python+adb实现微信跳一跳外挂&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;使用python+adb实现微信跳一跳外挂&lt;/p&gt;</description>
     </item>
     
   </channel>

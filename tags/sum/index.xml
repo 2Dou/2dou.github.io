@@ -32,9 +32,7 @@
 &lt;li&gt;All numbers (including &lt;code&gt;target&lt;/code&gt;) will be positive integers.&lt;/li&gt;
 &lt;li&gt;The solution set must not contain duplicate combinations.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;/blockquote&gt;</description>
     </item>
     
     <item>
@@ -63,9 +61,7 @@ A solution set is:
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;在给定数组中找出“和为 target 的四个数”的所有解。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;在给定数组中找出“和为 target 的四个数”的所有解。&lt;/p&gt;</description>
     </item>
     
   </channel>

@@ -39,9 +39,7 @@ Output:
  []
 ]
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;/blockquote&gt;</description>
     </item>
     
     <item>
@@ -76,9 +74,7 @@ Given word = &amp;quot;ABCB&amp;quot;, return false.
 
 &lt;p&gt;在&lt;code&gt;board&lt;/code&gt;中查找是否存在相连（相邻）的字符与给定的单词对应。&lt;/p&gt;
 
-&lt;p&gt;很像一个走迷宫的题目，搜索下一步是否与单词的字母匹配，是则走到该位置。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;很像一个走迷宫的题目，搜索下一步是否与单词的字母匹配，是则走到该位置。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -113,9 +109,7 @@ Output:
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;求所有子集（幂集），包含一个空集。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;求所有子集（幂集），包含一个空集。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -146,9 +140,7 @@ Output:
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;给出两个整数&lt;code&gt;n&lt;/code&gt;和&lt;code&gt;k&lt;/code&gt;，输出所有包含&lt;code&gt;k&lt;/code&gt;个数字的组合，数字范围&lt;code&gt;1..n&lt;/code&gt;。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;给出两个整数&lt;code&gt;n&lt;/code&gt;和&lt;code&gt;k&lt;/code&gt;，输出所有包含&lt;code&gt;k&lt;/code&gt;个数字的组合，数字范围&lt;code&gt;1..n&lt;/code&gt;。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -197,9 +189,7 @@ Output: &amp;quot;2314&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;假设存在长度为&lt;code&gt;n&lt;/code&gt;的数组：&lt;code&gt;[1,2,3,...,n]&lt;/code&gt;，输出第&lt;code&gt;k&lt;/code&gt;个排列。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;假设存在长度为&lt;code&gt;n&lt;/code&gt;的数组：&lt;code&gt;[1,2,3,...,n]&lt;/code&gt;，输出第&lt;code&gt;k&lt;/code&gt;个排列。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -221,9 +211,7 @@ Output: &amp;quot;2314&amp;quot;
 
 &lt;p&gt;All numbers (including &lt;code&gt;target&lt;/code&gt;) will be positive integers.
 The solution set must not contain duplicate combinations.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;/blockquote&gt;</description>
     </item>
     
     <item>
@@ -247,9 +235,7 @@ The solution set must not contain duplicate combinations.&lt;/p&gt;
 &lt;li&gt;All numbers (including &lt;code&gt;target&lt;/code&gt;) will be positive integers.&lt;/li&gt;
 &lt;li&gt;The solution set must not contain duplicate combinations.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;/blockquote&gt;</description>
     </item>
     
     <item>
@@ -277,9 +263,7 @@ The solution set must not contain duplicate combinations.&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;给出n组括号，生成所有正确的匹配组合&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;给出n组括号，生成所有正确的匹配组合&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -304,9 +288,7 @@ Output: [&amp;quot;ad&amp;quot;, &amp;quot;ae&amp;quot;, &amp;quot;af&amp;quot;,
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;输入九宫格输入法数字，输出对应的所有字母组合&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;输入九宫格输入法数字，输出对应的所有字母组合&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -326,9 +308,7 @@ Output: [&amp;quot;ad&amp;quot;, &amp;quot;ae&amp;quot;, &amp;quot;af&amp;quot;,
 &lt;p&gt;Given an integer n, return all distinct solutions to the n-queens puzzle.&lt;/p&gt;
 
 &lt;p&gt;Each solution contains a distinct board configuration of the &lt;em&gt;n-queens&lt;/em&gt;&amp;rsquo; placement, where &lt;code&gt;&#39;Q&#39;&lt;/code&gt; and &lt;code&gt;&#39;.&#39;&lt;/code&gt; both indicate a queen and an empty space respectively.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;/blockquote&gt;</description>
     </item>
     
     <item>
@@ -351,9 +331,7 @@ Empty cells are indicated by the character &amp;lsquo;.&amp;rsquo;.
 &lt;br&gt;
 &lt;br&gt;
 You may assume that there will be only one unique solution.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;/blockquote&gt;</description>
     </item>
     
     <item>
@@ -386,9 +364,7 @@ isMatch(&amp;quot;aa&amp;quot;, &amp;quot;.*&amp;quot;) → true
 isMatch(&amp;quot;ab&amp;quot;, &amp;quot;.*&amp;quot;) → true
 isMatch(&amp;quot;aab&amp;quot;, &amp;quot;c*a*b&amp;quot;) → true
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;/blockquote&gt;</description>
     </item>
     
   </channel>
