@@ -4,26 +4,43 @@
   
   <url>
     <loc>https://www.orztu.com/categories/</loc>
-    <lastmod>2019-06-15T14:45:05+08:00</lastmod>
+    <lastmod>2019-07-11T17:52:17+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.orztu.com/</loc>
-    <lastmod>2019-06-17T08:35:32+00:00</lastmod>
+    <lastmod>2019-07-11T17:52:17+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.orztu.com/post/</loc>
-    <lastmod>2019-06-15T14:45:05+08:00</lastmod>
+    <lastmod>2019-07-11T17:52:17+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.orztu.com/tags/</loc>
-    <lastmod>2019-06-17T08:35:32+00:00</lastmod>
+    <lastmod>2019-07-11T17:52:17+08:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.orztu.com/categories/have-fun/</loc>
+    <lastmod>2019-07-11T17:52:17+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.orztu.com/tags/%E8%B7%91%E8%B7%91%E5%8D%A1%E4%B8%81%E8%BD%A6/</loc>
+    <lastmod>2019-07-11T17:52:17+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.orztu.com/post/popkart-l1-4/</loc>
+    <lastmod>2019-07-11T17:52:17+08:00</lastmod>
   </url>
   
   <url>
@@ -38,25 +55,19 @@
   </url>
   
   <url>
-    <loc>https://www.orztu.com/categories/have-fun/</loc>
-    <lastmod>2019-06-15T14:45:05+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://www.orztu.com/tags/%E8%A7%86%E9%A2%91%E5%A4%84%E7%90%86/</loc>
     <lastmod>2019-06-15T14:45:05+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.orztu.com/tags/leetcode/</loc>
+    <loc>https://www.orztu.com/categories/leetcode/</loc>
     <lastmod>2019-03-20T14:59:04+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.orztu.com/categories/leetcode/</loc>
+    <loc>https://www.orztu.com/tags/leetcode/</loc>
     <lastmod>2019-03-20T14:59:04+08:00</lastmod>
     <priority>0</priority>
   </url>
