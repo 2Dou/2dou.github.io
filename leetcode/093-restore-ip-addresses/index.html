@@ -8,19 +8,41 @@
 <meta name="generator" content="Hugo 0.55.6 with theme Tranquilpeak 0.4.3-SNAPSHOT">
 <meta name="author" content="SelFree">
 <meta name="keywords" content=", program develop, leetcode, Golang, leetcode解答, 程序">
-<meta name="description" content="城市永远年轻，而我们终将老去">
+<meta name="description" content="LeetCode 93. Restore IP Addresses - Answer LeetCode编程练习解答">
 
 
-<meta property="og:description" content="城市永远年轻，而我们终将老去">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Backtracking">
-<meta name="twitter:title" content="Backtracking">
-<meta property="og:url" content="https://www.orztu.com/tags/backtracking/">
-<meta property="twitter:url" content="https://www.orztu.com/tags/backtracking/">
+<meta property="og:description" content="LeetCode 93. Restore IP Addresses - Answer LeetCode编程练习解答">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LeetCode 93. Restore IP Addresses">
+<meta name="twitter:title" content="LeetCode 93. Restore IP Addresses">
+<meta property="og:url" content="https://www.orztu.com/leetcode/093-restore-ip-addresses/">
+<meta property="twitter:url" content="https://www.orztu.com/leetcode/093-restore-ip-addresses/">
 <meta property="og:site_name" content="Orz the way">
-<meta property="og:description" content="城市永远年轻，而我们终将老去">
-<meta name="twitter:description" content="城市永远年轻，而我们终将老去">
+<meta property="og:description" content="LeetCode 93. Restore IP Addresses - Answer LeetCode编程练习解答">
+<meta name="twitter:description" content="LeetCode 93. Restore IP Addresses - Answer LeetCode编程练习解答">
 <meta property="og:locale" content="en-us">
+
+  
+    <meta property="article:published_time" content="2019-11-25T15:23:55">
+  
+  
+    <meta property="article:modified_time" content="2019-11-25T15:23:55">
+  
+  
+  
+    
+      <meta property="article:section" content="LeetCode">
+    
+  
+  
+    
+      <meta property="article:tag" content="LeetCode">
+    
+      <meta property="article:tag" content="String">
+    
+      <meta property="article:tag" content="Backtracking">
+    
+  
 
 
 <meta name="twitter:card" content="summary">
@@ -39,7 +61,7 @@
   <meta property="twitter:image" content="https://www.gravatar.com/avatar/f47b51d6d6b82fd9048e3eaf64bf7e69?s=640">
 
 
-    <title>Backtracking | 
+    <title>LeetCode 93. Restore IP Addresses | 
         Orz the way
       
     </title>
@@ -49,12 +71,10 @@
 
     <link rel="icon" href="https://www.orztu.com/images/favicon.ico">
     
-      <link rel="alternate" type="application/rss+xml" title="RSS" href="https://www.orztu.com/tags/backtracking/index.xml">
-    
 
     
 
-    <link rel="canonical" href="https://www.orztu.com/tags/backtracking/">
+    <link rel="canonical" href="https://www.orztu.com/leetcode/093-restore-ip-addresses/">
 
     
     <link rel="stylesheet" href="//cdnjs.cat.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
@@ -94,7 +114,7 @@
 
   <body>
     <div id="blog">
-      <header id="header" data-behavior="1">
+      <header id="header" data-behavior="4">
   <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
   <div class="header-title">
     <a class="header-title-link" href="https://www.orztu.com/">Orz the way</a>
@@ -114,7 +134,7 @@
   
 </header>
 
-      <nav id="sidebar" data-behavior="1">
+      <nav id="sidebar" data-behavior="4">
   <div class="sidebar-container">
     
       <div class="sidebar-profile">
@@ -247,50 +267,31 @@
 </nav>
 
       
-        
 
-      
-      <div id="main" data-behavior="1"
+      <div id="main" data-behavior="4"
         class="
                hasCoverMetaIn
                ">
-        
-          <section class="postShorten-group main-content-wrap">
-            
-            
-            
-              
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-left">
   
-    
-      
-        
-      
-    
+    <h1 class="post-title" itemprop="headline">
+      LeetCode 93. Restore IP Addresses
+    </h1>
   
-
-
   
-
-<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.orztu.com/leetcode/022-generate-parentheses/">
-          LeetCode 22. Generate Parentheses
-        </a>
-      </h1>
-      
   <div class="postShorten-meta-bg">
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2017-11-22T11:32:00&#43;08:00">
+      <time itemprop="datePublished" datetime="2019-11-25T15:23:55&#43;08:00">
         
   
   
   
   
-    2017-11-22
+    2019-11-25
   
 
       </time>
@@ -308,416 +309,213 @@
   </div>
 
 
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      
-        <p><a href="https://leetcode.com/problems/generate-parentheses/" target="_blank">Generate Parentheses</a></p>
+</div>
 
-<h2 id="description">Description</h2>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <h2 id="description">Description</h2>
+
+<p><a href="https://leetcode.com/problems/restore-ip-addresses/" target="_blank">Restore IP Addresses</a></p>
 
 <blockquote>
-<p>Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.</p>
+<p>Given a string containing only digits, restore it by returning all possible valid IP address combinations.</p>
 
-<p>For example, given n = 3, a solution set is:</p>
+<p><strong>Example:</strong></p>
 
-<pre><code>[
-  &quot;((()))&quot;,
-  &quot;(()())&quot;,
-  &quot;(())()&quot;,
-  &quot;()(())&quot;,
-  &quot;()()()&quot;
-]
+<pre><code>Input: &quot;25525511135&quot;
+Output: [&quot;255.255.11.135&quot;, &quot;255.255.111.35&quot;]
 </code></pre>
 </blockquote>
 
-<p>给出n组括号，生成所有正确的匹配组合</p>
-      
-      <p>
-        <a href="https://www.orztu.com/leetcode/022-generate-parentheses/" class="postShorten-excerpt_link link">Read More</a>
+<h2 id="solution">Solution</h2>
 
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="k">class</span><span class="err"> </span><span class="nc">Solution</span> <span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="n">Solution</span><span class="p">()</span> <span class="o">:</span> <span class="n">_empty</span><span class="p">(</span><span class="s">&#34;&#34;</span><span class="p">),</span> <span class="n">_dot</span><span class="p">(</span><span class="s">&#34;.&#34;</span><span class="p">)</span> <span class="p">{</span>
+    <span class="p">}</span>
 
+    <span class="n">vector</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">restoreIpAddresses</span><span class="p">(</span><span class="n">string</span> <span class="n">s</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">vector</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">result</span><span class="p">;</span>
+
+        <span class="n">solve</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="s">&#34;&#34;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">s</span><span class="p">);</span>
+
+        <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kt">void</span> <span class="n">solve</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">result</span><span class="p">,</span> <span class="n">string</span> <span class="n">ip</span><span class="p">,</span> <span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="n">string</span> <span class="n">s</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">size_t</span> <span class="n">len</span> <span class="o">=</span> <span class="n">s</span><span class="p">.</span><span class="n">length</span><span class="p">();</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">==</span> <span class="mi">4</span> <span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">len</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">result</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">ip</span><span class="p">);</span>
+            <span class="p">}</span>
+            <span class="k">return</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="n">string</span> <span class="o">&amp;</span><span class="n">mid</span> <span class="o">=</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="o">?</span> <span class="nl">_dot</span> <span class="p">:</span> <span class="n">_empty</span><span class="p">;</span>
+
+        <span class="kt">int</span> <span class="n">cur</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="k">for</span> <span class="p">(</span><span class="n">size_t</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">len</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">cur</span> <span class="o">=</span> <span class="n">cur</span><span class="o">*</span><span class="mi">10</span> <span class="o">+</span> <span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">-</span> <span class="sc">&#39;0&#39;</span><span class="p">);</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">cur</span> <span class="o">&gt;</span> <span class="mi">255</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">return</span><span class="p">;</span>
+            <span class="p">}</span>
+
+            <span class="n">solve</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">ip</span> <span class="o">+</span> <span class="n">mid</span> <span class="o">+</span> <span class="n">s</span><span class="p">.</span><span class="n">substr</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">),</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">s</span><span class="p">.</span><span class="n">substr</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">));</span>
+
+            <span class="k">if</span> <span class="p">(</span><span class="n">cur</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">return</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+<span class="k">private</span><span class="o">:</span>
+    <span class="n">string</span> <span class="n">_empty</span><span class="p">;</span>
+    <span class="n">string</span> <span class="n">_dot</span><span class="p">;</span>
+<span class="p">};</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+              
+              
+
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
             
               
-  
-    
-      
-        
-      
-    
-  
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://www.orztu.com/tags/leetcode/">LeetCode</a>
+
+  <a class="tag tag--primary tag--small" href="https://www.orztu.com/tags/string/">String</a>
+
+  <a class="tag tag--primary tag--small" href="https://www.orztu.com/tags/backtracking/">Backtracking</a>
 
 
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.orztu.com/leetcode/017-letter-combinations-of-a-phone-number/">
-          LeetCode 17. Letter Combinations of a Phone Number
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta-bg">
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2017-10-17T14:39:40&#43;08:00">
-        
-  
-  
-  
-  
-    2017-10-17
-  
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://www.orztu.com/categories/leetcode">LeetCode</a>
-    
-  
-
-  </div>
-  </div>
-
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      
-        <p><a href="https://leetcode.com/problems/letter-combinations-of-a-phone-number/" target="_blank">Letter Combinations of a Phone Number</a></p>
-
-<h2 id="description">Description</h2>
-
-<blockquote>
-<p>Given a digit string, return all possible letter combinations that the number could represent.</p>
-
-<p>A mapping of digit to letters (just like on the telephone buttons) is given below.</p>
-
-<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Telephone-keypad2.svg/200px-Telephone-keypad2.svg.png" alt="" /></p>
-
-<pre><code>Input: Digit string &quot;23&quot;
-Output: [&quot;ad&quot;, &quot;ae&quot;, &quot;af&quot;, &quot;bd&quot;, &quot;be&quot;, &quot;bf&quot;, &quot;cd&quot;, &quot;ce&quot;, &quot;cf&quot;].
-</code></pre>
-</blockquote>
-
-<p>输入九宫格输入法数字，输出对应的所有字母组合</p>
-      
-      <p>
-        <a href="https://www.orztu.com/leetcode/017-letter-combinations-of-a-phone-number/" class="postShorten-excerpt_link link">Read More</a>
-
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-            
+                  </div>
+                
               
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.orztu.com/leetcode/051-n-queens/">
-          LeetCode 51. N-Queens
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta-bg">
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2017-05-04T16:23:01&#43;08:00">
-        
-  
-  
-  
-  
-    2017-05-04
-  
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://www.orztu.com/categories/leetcode">LeetCode</a>
-    
-  
-
-  </div>
-  </div>
-
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      
-        <p><a href="https://leetcode.com/problems/n-queens/" target="_blank">N-Queens</a></p>
-
-<h2 id="description">Description</h2>
-
-<blockquote>
-<p>The <em>n-queens</em> puzzle is the problem of placing n queens on an n×n chessboard such that no two queens attack each other.
-<img src="https://www.orztu.com/images/leetcode/8-queens.png" alt="palindromic" title="数独" /></p>
-
-<p>Given an integer n, return all distinct solutions to the n-queens puzzle.</p>
-
-<p>Each solution contains a distinct board configuration of the <em>n-queens</em>&rsquo; placement, where <code>'Q'</code> and <code>'.'</code> both indicate a queen and an empty space respectively.</p>
-</blockquote>
-      
-      <p>
-        <a href="https://www.orztu.com/leetcode/051-n-queens/" class="postShorten-excerpt_link link">Read More</a>
-
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
             
+            <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
               
-  
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-right" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.orztu.com/leetcode/037-sudoku-solver/">
-          LeetCode 37. Sudoku Solver
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta-bg">
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2017-04-22T11:35:12&#43;08:00">
-        
-  
-  
-  
-  
-    2017-04-22
-  
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://www.orztu.com/categories/leetcode">LeetCode</a>
-    
-  
-
-  </div>
-  </div>
-
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      
-        <p><a href="https://leetcode.com/problems/sudoku-solver/" target="_blank">Sudoku Solver</a></p>
-
-<!-- ![palindromic](/images/leetcode/Sudoku-Solver-1.png "数独") -->
-
-<h2 id="description">Description</h2>
-
-<blockquote>
-<p>Write a program to solve a Sudoku puzzle by filling the empty cells.
-<br>
-<br>
-Empty cells are indicated by the character &lsquo;.&rsquo;.
-<br>
-<br>
-You may assume that there will be only one unique solution.</p>
-</blockquote>
-      
-      <p>
-        <a href="https://www.orztu.com/leetcode/037-sudoku-solver/" class="postShorten-excerpt_link link">Read More</a>
-
-        
-      </p>
-    </div>
-  </div>
-  
-    <a href="https://www.orztu.com/leetcode/037-sudoku-solver/">
-      <div class="postShorten-thumbnailimg">
-        <img alt="" itemprop="image" src="https://www.orztu.com/images/leetcode/Sudoku-Solver-1.png"/>
-      </div>
-    </a>
-  
-</article>
-
-            
               
-  
-    
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+              
+                
+              
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/092-reverse-linked-list-ii/" data-tooltip="LeetCode 92. Reverse Linked List II">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
       
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.orztu.com/leetcode/010-regular-expression-matching/">
-          LeetCode 10. Regular Expression Matching
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta-bg">
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2017-03-24T15:00:47&#43;08:00">
-        
-  
-  
-  
-  
-    2017-03-24
-  
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://www.orztu.com/categories/leetcode">LeetCode</a>
-    
-  
-
-  </div>
-  </div>
-
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      
-        <p><a href="https://leetcode.com/problems/regular-expression-matching" target="_blank">Regular Expression Matching</a></p>
-
-<h2 id="description">Description</h2>
-
-<blockquote>
-<p>Implement regular expression matching with support for &lsquo;.&rsquo; and &lsquo;*&lsquo;.</p>
-
-<pre><code>'.' Matches any single character.
-'*' Matches zero or more of the preceding element.
-
-The matching should cover the entire input string (not partial).
-
-The function prototype should be:
-bool isMatch(const char *s, const char *p)
-
-Some examples:
-isMatch(&quot;aa&quot;,&quot;a&quot;) → false
-isMatch(&quot;aa&quot;,&quot;aa&quot;) → true
-isMatch(&quot;aaa&quot;,&quot;aa&quot;) → false
-isMatch(&quot;aa&quot;, &quot;a*&quot;) → true
-isMatch(&quot;aa&quot;, &quot;.*&quot;) → true
-isMatch(&quot;ab&quot;, &quot;.*&quot;) → true
-isMatch(&quot;aab&quot;, &quot;c*a*b&quot;) → true
-</code></pre>
-</blockquote>
-      
-      <p>
-        <a href="https://www.orztu.com/leetcode/010-regular-expression-matching/" class="postShorten-excerpt_link link">Read More</a>
-
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-            
-            
-
-<nav class="blog-pagination">
-    <ul class="pagination-b justify-content-center">
-        
-        
-        <li class="page-item">
-            <a class="page-link" href="https://www.orztu.com/tags/backtracking/" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
         </li>
         
-        <li class="page-item ">
-            <a class="page-link" href="https://www.orztu.com/tags/backtracking/" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
         </li>
+      
+      <li class="post-action">
         
+          <a class="post-action-btn btn btn--default" href="#">
         
-        
-            
-            
-            
-            
-                
-                
-            
-            
-                <li class="page-item ">
-                    <a class="page-link" href="https://www.orztu.com/tags/backtracking/">1</a>
-                </li>
-            
-        
-            
-            
-            
-            
-                
-                
-            
-            
-                <li class="page-item active disabled">
-                    <a class="page-link" href="https://www.orztu.com/tags/backtracking/page/2/">2</a>
-                </li>
-            
-        
-        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
     </ul>
-</nav>
+  
+</div>
 
-          </section>
-        
+            
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the comments</noscript>
+</div>
+
+              
+            
+          </div>
+        </article>
         <footer id="footer" class="main-content-wrap">
   <span class="copyrights">
     &copy; 2019 SelFree. All Rights Reserved
@@ -725,6 +523,72 @@ isMatch(&quot;aab&quot;, &quot;c*a*b&quot;) → true
 </footer>
 
       </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+              
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+              
+                
+              
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/092-reverse-linked-list-ii/" data-tooltip="LeetCode 92. Reverse Linked List II">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
     </div>
     
     <div id="about">
@@ -1099,6 +963,32 @@ $(document).ready(function() {
 });
 </script>
 
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'https:\/\/www.orztu.com\/leetcode\/093-restore-ip-addresses\/';
+          
+            this.page.identifier = '\/leetcode\/093-restore-ip-addresses\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'orztu';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
 
 
 
