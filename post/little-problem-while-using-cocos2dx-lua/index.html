@@ -381,6 +381,16 @@ HomeScene:onEnterTransitionDidFinish() 闪退
 <p>在新增结点往<code>std::vector</code>插入的时候，恰好超过容量大小，导致扩容。而<code>std::vector</code>是分配的连续内存，
 所以扩容时候会重新分配内存，导致遍历的时候出现<code>child</code>指针无效。</p>
 
+<pre><code>scene::onEnterTransitionDidFinish() {
+    for (child: scene-&gt;children) {       
+        // onEnterTransitionDidFinish里面往scene中addChild
+        // 导致children容器扩容，for循环的child指针失效
+        // 然后下一轮循环再到这里，child(无效指针)-&gt;onEnterTransitionDidFinish()就会闪退
+        child-&gt;onEnterTransitionDidFinish();  
+    }  
+}
+</code></pre>
+
 <h2 id="else">else</h2>
 
 <p>那么是不是就不能在<code>onEnterTransitionDidFinish</code>中添加结点呢？</p>
