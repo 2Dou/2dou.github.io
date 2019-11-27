@@ -57,25 +57,8 @@
   
   <url>
     <loc>https://www.orztu.com/post/</loc>
-    <lastmod>2019-07-11T17:52:17+08:00</lastmod>
+    <lastmod>2019-06-15T14:45:05+08:00</lastmod>
     <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.orztu.com/categories/have-fun/</loc>
-    <lastmod>2019-07-11T17:52:17+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.orztu.com/tags/%E8%B7%91%E8%B7%91%E5%8D%A1%E4%B8%81%E8%BD%A6/</loc>
-    <lastmod>2019-07-11T17:52:17+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.orztu.com/post/popkart-l1-4/</loc>
-    <lastmod>2019-07-11T17:52:17+08:00</lastmod>
   </url>
   
   <url>
@@ -87,6 +70,12 @@
   <url>
     <loc>https://www.orztu.com/post/ffmpeg-commands/</loc>
     <lastmod>2019-06-15T14:45:05+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.orztu.com/categories/have-fun/</loc>
+    <lastmod>2019-06-15T14:45:05+08:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
