@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.62.1 with theme Tranquilpeak 0.4.3-SNAPSHOT">
+<meta name="generator" content="Hugo 0.62.1 with theme Tranquilpeak 0.4.7-BETA">
 <meta name="author" content="SelFree">
 <meta name="keywords" content=", program develop, leetcode, Golang, leetcode解答, 程序">
 <meta name="description" content="城市永远年轻，而我们终将老去">
@@ -253,8 +253,6 @@
                hasCoverMetaIn
                ">
 
-        
-
         <section class="postShorten-group main-content-wrap">
           <div id="site-search" class="header-search">
             <div class="header-search-form">
@@ -277,7 +275,6 @@
           </div>
           
           
-          
             
   
     
@@ -295,8 +292,8 @@
     
     <div class="postShorten-header">
       <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.orztu.com/post/">
-          Posts
+        <a class="link-unstyled" href="https://www.orztu.com/post/ffmpeg-commands/">
+          ffmpeg 命令行
         </a>
       </h1>
       
@@ -315,6 +312,14 @@
       </time>
     
     
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://www.orztu.com/categories/have-fun">have fun</a>
+    
+  
+
   </div>
   </div>
 
@@ -322,10 +327,511 @@
     </div>
     <div class="postShorten-excerpt" itemprop="articleBody">
       
-        
+        <p>首先，并非专业视频处理人员；以下命令都是我从网上搜索后修改以为己所用。</p>
+<h2 id="heading">图片转视频</h2>
+<pre><code># gif 转视频（DURATION：时长，gif会循环播放）
+ffmpeg -ignore_loop 0 -t DURATION -f gif -i &quot;INPUT.gif&quot; -vcodec libx264 -crf 5 &quot;OUTPUT.mp4&quot;
+
+# png、jpg 转视频
+ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &quot;INPUT.jpg&quot; -vcodec libx264 -crf 5 &quot;OUTPUT.mp4&quot;
+</code></pre>
       
       <p>
-        <a href="https://www.orztu.com/post/" class="postShorten-excerpt_link link">Read More</a>
+        <a href="https://www.orztu.com/post/ffmpeg-commands/" class="postShorten-excerpt_link link">Read More</a>
+
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+          
+            
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title" itemprop="headline">
+        <a class="link-unstyled" href="https://www.orztu.com/post/little-problem-while-using-cocos2dx-lua/">
+          记一次 Cocos2dx-Lua 闪退
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta-bg">
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2018-12-22T09:22:48&#43;08:00">
+        
+  
+  
+  
+  
+    2018-12-22
+  
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://www.orztu.com/categories/coding-life">coding life</a>
+    
+  
+
+  </div>
+  </div>
+
+
+    </div>
+    <div class="postShorten-excerpt" itemprop="articleBody">
+      
+        <h2 id="heading">闪退点</h2>
+<p>Version: Cocos2dx-Lua 3.16</p>
+<p>在某个页面修改后，出现闪退。查看修改记录没有特别的地方，均为修改图片或者条件判断。</p>
+<p>启动 XCode 发现闪退位置出现在<code>void Node::onEnterTransitionDidFinish()</code>中，
+在其调用子节点的<code>child-&gt;onEnterTransitionDidFinish()</code>时，<code>child</code>指针无效。</p>
+      
+      <p>
+        <a href="https://www.orztu.com/post/little-problem-while-using-cocos2dx-lua/" class="postShorten-excerpt_link link">Read More</a>
+
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+          
+            
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title" itemprop="headline">
+        <a class="link-unstyled" href="https://www.orztu.com/post/golang-trace/">
+          在 Golang 中打印调用栈信息
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta-bg">
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2018-12-12T15:38:49&#43;08:00">
+        
+  
+  
+  
+  
+    2018-12-12
+  
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://www.orztu.com/categories/coding-life">coding life</a>
+    
+  
+
+  </div>
+  </div>
+
+
+    </div>
+    <div class="postShorten-excerpt" itemprop="articleBody">
+      
+        <p>在日志信息中，有时需要获取当前函数的调用信息，比如打印调用栈：</p>
+<h2 id="heading">调用栈</h2>
+<h3 id="debugstack-byte">debug.Stack() []byte</h3>
+<p><code>debug.Stack()</code>函数可以获取当前 goroutine 的调用栈信息，需要<code>import &quot;runtime/debug&quot;</code>。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">func</span> <span class="nf">foo</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;--- BEGIN ---&#34;</span><span class="p">)</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nb">string</span><span class="p">(</span><span class="nx">debug</span><span class="p">.</span><span class="nf">Stack</span><span class="p">(</span><span class="p">)</span><span class="p">)</span><span class="p">)</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;--- END ---&#34;</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nf">boom</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nf">foo</span><span class="p">(</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nf">main</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nf">boom</span><span class="p">(</span><span class="p">)</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+      
+      <p>
+        <a href="https://www.orztu.com/post/golang-trace/" class="postShorten-excerpt_link link">Read More</a>
+
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+          
+            
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title" itemprop="headline">
+        <a class="link-unstyled" href="https://www.orztu.com/post/lua-table-minify-ii/">
+          使用元表优化 Lua 配置文件 II
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta-bg">
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2018-11-16T11:38:00&#43;08:00">
+        
+  
+  
+  
+  
+    2018-11-16
+  
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://www.orztu.com/categories/coding-life">coding life</a>
+    
+  
+
+  </div>
+  </div>
+
+
+    </div>
+    <div class="postShorten-excerpt" itemprop="articleBody">
+      
+        <p>上回提到<a href="https://www.orztu.com/post/lua-table-minify/">元表优化 Lua 配置文件</a>，以减少重复字段，节省内存开销。</p>
+<p>除了这种直接地减少内存开销的方法，使用元表还能实现数据的延迟加载，从另一个角度节约内存。</p>
+      
+      <p>
+        <a href="https://www.orztu.com/post/lua-table-minify-ii/" class="postShorten-excerpt_link link">Read More</a>
+
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+          
+            
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title" itemprop="headline">
+        <a class="link-unstyled" href="https://www.orztu.com/post/lua-table-minify/">
+          使用元表优化 Lua 配置文件
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta-bg">
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2018-11-06T15:14:38&#43;08:00">
+        
+  
+  
+  
+  
+    2018-11-06
+  
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://www.orztu.com/categories/coding-life">coding life</a>
+    
+  
+
+  </div>
+  </div>
+
+
+    </div>
+    <div class="postShorten-excerpt" itemprop="articleBody">
+      
+        <h2 id="heading">配置文件</h2>
+<p>在游戏工程中，通常有大量配置是由策划提供，再转换成程序方便读取的格式添加到工程中。</p>
+<p>在我参与的<code>Cocos2dx-Lua</code>工程中，策划通常在<code>Excel</code>中配置，再通过脚本转换为<code>Lua-Table</code>的文件。</p>
+<p>比如常见的道具表转换后：</p>
+      
+      <p>
+        <a href="https://www.orztu.com/post/lua-table-minify/" class="postShorten-excerpt_link link">Read More</a>
+
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+          
+            
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title" itemprop="headline">
+        <a class="link-unstyled" href="https://www.orztu.com/post/cgo-introduce/">
+          CGO —— Golang 与 C 语言混合编程
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta-bg">
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2018-09-03T15:56:08&#43;08:00">
+        
+  
+  
+  
+  
+    2018-09-03
+  
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://www.orztu.com/categories/coding-life">coding life</a>
+    
+  
+
+  </div>
+  </div>
+
+
+    </div>
+    <div class="postShorten-excerpt" itemprop="articleBody">
+      
+        <p>C 语言与 Golang 相互调用的简单例子。</p>
+<p>在此使用一段简单的代码展示 CGO 的基本用法 —— 在 Go 程序中使用 C 语言编程。</p>
+      
+      <p>
+        <a href="https://www.orztu.com/post/cgo-introduce/" class="postShorten-excerpt_link link">Read More</a>
+
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+          
+            
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title" itemprop="headline">
+        <a class="link-unstyled" href="https://www.orztu.com/post/using-govendor/">
+          govendor 使用
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta-bg">
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2018-08-02T14:43:33&#43;08:00">
+        
+  
+  
+  
+  
+    2018-08-02
+  
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://www.orztu.com/categories/coding-life">coding-life</a>
+    
+  
+
+  </div>
+  </div>
+
+
+    </div>
+    <div class="postShorten-excerpt" itemprop="articleBody">
+      
+        <h2 id="govendor">govendor</h2>
+<p>go vendor 是 go 1.6 官方正式引入的包管理方式。</p>
+<p>其基本思路是，将引用的外部包的源代码放在当前工程的<code>vendor</code>目录下面，go 编译时会优先从<code>vendor</code>目录寻找依赖关系。</p>
+      
+      <p>
+        <a href="https://www.orztu.com/post/using-govendor/" class="postShorten-excerpt_link link">Read More</a>
+
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+          
+            
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title" itemprop="headline">
+        <a class="link-unstyled" href="https://www.orztu.com/post/go-get-through-a-proxy/">
+          go get through a proxy
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta-bg">
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2018-08-02T09:47:52&#43;08:00">
+        
+  
+  
+  
+  
+    2018-08-02
+  
+
+      </time>
+    
+    
+  </div>
+  </div>
+
+
+    </div>
+    <div class="postShorten-excerpt" itemprop="articleBody">
+      
+        <p>由于众所不知的原因，在国内访问<code>golang.org</code>需要爬梯子。</p>
+<p>所以使用<code>go get</code>安装某些包的时候，也要用梯子。</p>
+      
+      <p>
+        <a href="https://www.orztu.com/post/go-get-through-a-proxy/" class="postShorten-excerpt_link link">Read More</a>
 
         
       </p>
@@ -336,6 +842,50 @@
 
           
           
+
+<nav class="blog-pagination">
+    <ul class="pagination-b justify-content-center">
+        
+        
+        
+            
+            
+            
+            
+                
+                
+            
+            
+                <li class="page-item active disabled">
+                    <a class="page-link" href="https://www.orztu.com/">1</a>
+                </li>
+            
+        
+            
+            
+            
+            
+                
+                
+            
+            
+                <li class="page-item ">
+                    <a class="page-link" href="https://www.orztu.com/page/2/">2</a>
+                </li>
+            
+        
+        
+        <li class="page-item ">
+            <a class="page-link" href="https://www.orztu.com/page/2/" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+        </li>
+        
+        <li class="page-item">
+            <a class="page-link" href="https://www.orztu.com/page/2/" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+        </li>
+        
+        
+    </ul>
+</nav>
 
         </section>
         <footer id="footer" class="main-content-wrap">
@@ -641,7 +1191,9 @@ ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &quot;INPUT.jpg&quot; -vco
     
   
     
-    <div id="cover" style="background-image:url('https://www.orztu.com/images/cover/city.jpg');"></div>
+      
+      <div id="cover" style="background-image:url('https://www.orztu.com/images/cover/city.jpg');"></div>
+    
   
 
 
