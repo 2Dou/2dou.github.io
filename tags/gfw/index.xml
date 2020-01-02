@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>GFW on Orz the way</title>
@@ -18,7 +18,6 @@
       
       <guid>https://www.orztu.com/post/go-get-through-a-proxy/</guid>
       <description>&lt;p&gt;由于众所不知的原因，在国内访问&lt;code&gt;golang.org&lt;/code&gt;需要爬梯子。&lt;/p&gt;
-
 &lt;p&gt;所以使用&lt;code&gt;go get&lt;/code&gt;安装某些包的时候，也要用梯子。&lt;/p&gt;</description>
     </item>
     

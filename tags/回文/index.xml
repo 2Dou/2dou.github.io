@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>回文 on Orz the way</title>
@@ -17,14 +17,11 @@
       <pubDate>Fri, 24 Mar 2017 15:00:46 +0800</pubDate>
       
       <guid>https://www.orztu.com/leetcode/009-palindrome-number/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/palindrome-number&#34; target=&#34;_blank&#34;&gt;Palindrome Number&lt;/a&gt;&lt;/p&gt;
-
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/palindrome-number&#34;&gt;Palindrome Number&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;Determine whether an integer is a palindrome. Do this without extra space.&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;p&gt;在不使用额外空间的条件下判断一个整型是否为回文&lt;/p&gt;</description>
     </item>
     
@@ -34,31 +31,22 @@
       <pubDate>Thu, 16 Mar 2017 14:47:07 +0800</pubDate>
       
       <guid>https://www.orztu.com/leetcode/005-longest-palindromic-substring/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/longest-palindromic-substring&#34; target=&#34;_blank&#34;&gt;Longest Palindromic Substring&lt;/a&gt;&lt;/p&gt;
-
-&lt;!-- ![palindromic](/images/leetcode/Longest-Palindromic-Substring-1.png &#34;回文&#34;) --&gt;
-
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/longest-palindromic-substring&#34;&gt;Longest Palindromic Substring&lt;/a&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000.&lt;/p&gt;
-
 &lt;p&gt;Example:&lt;/p&gt;
-
+&lt;/blockquote&gt;
 &lt;pre&gt;&lt;code&gt;Input: &amp;quot;babad&amp;quot;
 Output: &amp;quot;bab&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;
 &lt;p&gt;Note: &amp;ldquo;aba&amp;rdquo; is also a valid answer.&lt;/p&gt;
-
 &lt;p&gt;Example:&lt;/p&gt;
-
+&lt;/blockquote&gt;
 &lt;pre&gt;&lt;code&gt;Input: &amp;quot;cbbd&amp;quot;
 Output: &amp;quot;bb&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;从给定字符串中找出最长的回文子串&lt;/p&gt;</description>
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;从给定字符串中找出最长的回文子串&lt;/p&gt;</description>
     </item>
     
   </channel>

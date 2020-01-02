@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.55.6 with theme Tranquilpeak 0.4.3-SNAPSHOT">
+<meta name="generator" content="Hugo 0.62.1 with theme Tranquilpeak 0.4.3-SNAPSHOT">
 <meta name="author" content="SelFree">
 <meta name="keywords" content=", program develop, leetcode, Golang, leetcode解答, 程序">
 <meta name="description" content="城市永远年轻，而我们终将老去">
@@ -311,24 +311,21 @@
     </div>
     <div class="postShorten-excerpt" itemprop="articleBody">
       
-        <p><a href="https://leetcode.com/problems/zigzag-conversion" target="_blank">ZigZag Conversion</a></p>
-
+        <p><a href="https://leetcode.com/problems/zigzag-conversion">ZigZag Conversion</a></p>
 <h2 id="description">Description</h2>
-
 <blockquote>
 <p>The string <code>&quot;PAYPALISHIRING&quot;</code> is written in a zigzag pattern on a given number of rows like this: (you may want to display this &gt; pattern in a fixed font for better legibility)</p>
-
+</blockquote>
 <pre><code>P   A   H   N
 A P L S I I G
 Y   I   R
-</code></pre>
-
+</code></pre><blockquote>
 <p>And then read line by line: <code>&quot;PAHNAPLSIIGYIR&quot;</code></p>
-
 <p>Write the code that will take a string and make this conversion given a number of rows:</p>
-
-<p><div class="highlight"><pre class="chroma"><code class="language-golang" data-lang="golang"><span class="kt">string</span> <span class="nf">convert</span><span class="p">(</span><span class="kt">string</span> <span class="nx">text</span><span class="p">,</span> <span class="kt">int</span> <span class="nx">nRows</span><span class="p">);</span></code></pre></div>
-<code>convert(&quot;PAYPALISHIRING&quot;, 3)</code> should return <code>&quot;PAHNAPLSIIGYIR&quot;</code>.</p>
+</blockquote>
+<div class="highlight"><pre class="chroma"><code class="language-golang" data-lang="golang"><span class="kt">string</span> <span class="nf">convert</span><span class="p">(</span><span class="kt">string</span> <span class="nx">text</span><span class="p">,</span> <span class="kt">int</span> <span class="nx">nRows</span><span class="p">)</span><span class="p">;</span></code></pre></div>
+<blockquote>
+<p><code>convert(&quot;PAYPALISHIRING&quot;, 3)</code> should return <code>&quot;PAHNAPLSIIGYIR&quot;</code>.</p>
 </blockquote>
       
       <p>
@@ -390,31 +387,22 @@ Y   I   R
     </div>
     <div class="postShorten-excerpt" itemprop="articleBody">
       
-        <p><a href="https://leetcode.com/problems/longest-palindromic-substring" target="_blank">Longest Palindromic Substring</a></p>
-
-<!-- ![palindromic](/images/leetcode/Longest-Palindromic-Substring-1.png "回文") -->
-
+        <p><a href="https://leetcode.com/problems/longest-palindromic-substring">Longest Palindromic Substring</a></p>
+<!-- raw HTML omitted -->
 <h2 id="description">Description</h2>
-
 <blockquote>
 <p>Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000.</p>
-
 <p>Example:</p>
-
+</blockquote>
 <pre><code>Input: &quot;babad&quot;
 Output: &quot;bab&quot;
-</code></pre>
-
+</code></pre><blockquote>
 <p>Note: &ldquo;aba&rdquo; is also a valid answer.</p>
-
 <p>Example:</p>
-
+</blockquote>
 <pre><code>Input: &quot;cbbd&quot;
 Output: &quot;bb&quot;
-</code></pre>
-</blockquote>
-
-<p>从给定字符串中找出最长的回文子串</p>
+</code></pre><p>从给定字符串中找出最长的回文子串</p>
       
       <p>
         <a href="https://www.orztu.com/leetcode/005-longest-palindromic-substring/" class="postShorten-excerpt_link link">Read More</a>
@@ -485,31 +473,24 @@ Output: &quot;bb&quot;
     </div>
     <div class="postShorten-excerpt" itemprop="articleBody">
       
-        <p><a href="https://leetcode.com/problems/median-of-two-sorted-arrays" target="_blank">Median of Two Sorted Arrays</a></p>
-
+        <p><a href="https://leetcode.com/problems/median-of-two-sorted-arrays">Median of Two Sorted Arrays</a></p>
 <h2 id="description">Description</h2>
-
 <blockquote>
 <p>There are two sorted arrays nums1 and nums2 of size m and n respectively.</p>
-
 <p>Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).</p>
-
 <p>Example 1:</p>
-
+</blockquote>
 <pre><code>nums1 = [1, 3]
 nums2 = [2]
-</code></pre>
-
+</code></pre><blockquote>
 <p>The median is 2.0
 Example 2:</p>
-
+</blockquote>
 <pre><code>nums1 = [1, 2]
 nums2 = [3, 4]
-</code></pre>
-
+</code></pre><blockquote>
 <p>The median is (2 + 3)/2 = 2.5</p>
 </blockquote>
-
 <p>从两个有序数组中求中位数</p>
       
       <p>
@@ -575,20 +556,14 @@ nums2 = [3, 4]
     </div>
     <div class="postShorten-excerpt" itemprop="articleBody">
       
-        <p><a href="https://leetcode.com/problems/longest-substring-without-repeating-characters" target="_blank">Longest Substring Without Repeating Characters</a></p>
-
+        <p><a href="https://leetcode.com/problems/longest-substring-without-repeating-characters">Longest Substring Without Repeating Characters</a></p>
 <h2 id="description">Description</h2>
-
 <blockquote>
 <p>Given a string, find the length of the longest substring without repeating characters.</p>
-
 <p>Given &ldquo;abcabcbb&rdquo;, the answer is &ldquo;abc&rdquo;, which the length is 3.</p>
-
 <p>Given &ldquo;bbbbb&rdquo;, the answer is &ldquo;b&rdquo;, with the length of 1.</p>
-
 <p>Given &ldquo;pwwkew&rdquo;, the answer is &ldquo;wke&rdquo;, with the length of 3. Note that the answer must be a substring, &ldquo;pwke&rdquo; is a subsequence and not a substring.</p>
 </blockquote>
-
 <p>在给定字符串中找出无重复字符的最长子串。</p>
       
       <p>
@@ -654,21 +629,15 @@ nums2 = [3, 4]
     </div>
     <div class="postShorten-excerpt" itemprop="articleBody">
       
-        <p><a href="https://leetcode.com/problems/add-two-numbers" target="_blank">Add Two Numbers</a></p>
-
+        <p><a href="https://leetcode.com/problems/add-two-numbers">Add Two Numbers</a></p>
 <h2 id="description">Description</h2>
-
 <blockquote>
 <p>You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.</p>
-
 <p>You may assume the two numbers do not contain any leading zero, except the number 0 itself.</p>
-
+</blockquote>
 <pre><code>Input: (2 -&gt; 4 -&gt; 3) + (5 -&gt; 6 -&gt; 4)
 Output: 7 -&gt; 0 -&gt; 8
-</code></pre>
-</blockquote>
-
-<p>给定两个非空链表表示的非负整数。实现加法，向后进位。</p>
+</code></pre><p>给定两个非空链表表示的非负整数。实现加法，向后进位。</p>
       
       <p>
         <a href="https://www.orztu.com/leetcode/002-add-two-numbers/" class="postShorten-excerpt_link link">Read More</a>
@@ -733,23 +702,18 @@ Output: 7 -&gt; 0 -&gt; 8
     </div>
     <div class="postShorten-excerpt" itemprop="articleBody">
       
-        <p><a href="https://leetcode.com/problems/two-sum" target="_blank">Two Sum</a></p>
-
+        <p><a href="https://leetcode.com/problems/two-sum">Two Sum</a></p>
 <h2 id="description">Description</h2>
-
 <blockquote>
 <p>Given an array of integers, return indices of the two numbers such that they add up to a specific target.</p>
-
 <p>You may assume that each input would have exactly one solution, and you may not use the same element twice.</p>
-
+</blockquote>
 <pre><code>Example:
 Given nums = [2, 7, 11, 15], target = 9,
-</code></pre>
-
+</code></pre><blockquote>
 <p>Because nums[0] + nums[1] = 2 + 7 = 9,
 return [0, 1].</p>
 </blockquote>
-
 <p>假定只有<strong>唯一</strong>解的情况下在数组中找出和为<code>target</code>的两个数</p>
       
       <p>
@@ -892,7 +856,7 @@ return [0, 1].</p>
         
         <footer id="footer" class="main-content-wrap">
   <span class="copyrights">
-    &copy; 2019 SelFree. All Rights Reserved
+    &copy; 2020 SelFree. All Rights Reserved
   </span>
 </footer>
 
@@ -960,9 +924,7 @@ return [0, 1].</p>
                 </span>
               </span>
               <div class="media-content hide-xs font-merryweather"><p>首先，并非专业视频处理人员；以下命令都是我从网上搜索后修改以为己所用。</p>
-
-<h2 id="图片转视频">图片转视频</h2>
-
+<h2 id="heading">图片转视频</h2>
 <pre><code># gif 转视频（DURATION：时长，gif会循环播放）
 ffmpeg -ignore_loop 0 -t DURATION -f gif -i &quot;INPUT.gif&quot; -vcodec libx264 -crf 5 &quot;OUTPUT.mp4&quot;
 
@@ -985,12 +947,9 @@ ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &quot;INPUT.jpg&quot; -vco
                   Dec 12, 2018
                 </span>
               </span>
-              <div class="media-content hide-xs font-merryweather"><h2 id="闪退点">闪退点</h2>
-
+              <div class="media-content hide-xs font-merryweather"><h2 id="heading">闪退点</h2>
 <p>Version: Cocos2dx-Lua 3.16</p>
-
 <p>在某个页面修改后，出现闪退。查看修改记录没有特别的地方，均为修改图片或者条件判断。</p>
-
 <p>启动 XCode 发现闪退位置出现在<code>void Node::onEnterTransitionDidFinish()</code>中，
 在其调用子节点的<code>child-&gt;onEnterTransitionDidFinish()</code>时，<code>child</code>指针无效。</p></div>
             </div>
@@ -1010,16 +969,12 @@ ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &quot;INPUT.jpg&quot; -vco
                 </span>
               </span>
               <div class="media-content hide-xs font-merryweather"><p>在日志信息中，有时需要获取当前函数的调用信息，比如打印调用栈：</p>
-
-<h2 id="调用栈">调用栈</h2>
-
-<h3 id="debug-stack-byte">debug.Stack() []byte</h3>
-
+<h2 id="heading">调用栈</h2>
+<h3 id="debugstack-byte">debug.Stack() []byte</h3>
 <p><code>debug.Stack()</code>函数可以获取当前 goroutine 的调用栈信息，需要<code>import &quot;runtime/debug&quot;</code>。</p>
-
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-golang" data-lang="golang"><span class="lnt"> 8
+<pre class="chroma"><code><span class="lnt"> 8
 </span><span class="lnt"> 9
 </span><span class="lnt">10
 </span><span class="lnt">11
@@ -1034,18 +989,18 @@ ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &quot;INPUT.jpg&quot; -vco
 </span><span class="lnt">20
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">func</span> <span class="nf">foo</span><span class="p">()</span> <span class="p">{</span>
+<pre class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">func</span> <span class="nf">foo</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;--- BEGIN ---&#34;</span><span class="p">)</span>
-    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nb">string</span><span class="p">(</span><span class="nx">debug</span><span class="p">.</span><span class="nf">Stack</span><span class="p">()))</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nb">string</span><span class="p">(</span><span class="nx">debug</span><span class="p">.</span><span class="nf">Stack</span><span class="p">(</span><span class="p">)</span><span class="p">)</span><span class="p">)</span>
     <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;--- END ---&#34;</span><span class="p">)</span>
 <span class="p">}</span>
 
-<span class="kd">func</span> <span class="nf">boom</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nf">foo</span><span class="p">()</span>
+<span class="kd">func</span> <span class="nf">boom</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nf">foo</span><span class="p">(</span><span class="p">)</span>
 <span class="p">}</span>
 
-<span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nf">boom</span><span class="p">()</span>
+<span class="kd">func</span> <span class="nf">main</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nf">boom</span><span class="p">(</span><span class="p">)</span>
 <span class="p">}</span></code></pre></td></tr></table>
 </div>
 </div></div>
@@ -1065,8 +1020,7 @@ ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &quot;INPUT.jpg&quot; -vco
                   Nov 11, 2018
                 </span>
               </span>
-              <div class="media-content hide-xs font-merryweather"><p>上回提到<a href="https://www.orztu.com/post/lua-table-minify/" target="_blank">元表优化 Lua 配置文件</a>，以减少重复字段，节省内存开销。</p>
-
+              <div class="media-content hide-xs font-merryweather"><p>上回提到<a href="https://www.orztu.com/post/lua-table-minify/">元表优化 Lua 配置文件</a>，以减少重复字段，节省内存开销。</p>
 <p>除了这种直接地减少内存开销的方法，使用元表还能实现数据的延迟加载，从另一个角度节约内存。</p></div>
             </div>
             <div style="clear:both;"></div>
@@ -1084,12 +1038,9 @@ ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &quot;INPUT.jpg&quot; -vco
                   Nov 11, 2018
                 </span>
               </span>
-              <div class="media-content hide-xs font-merryweather"><h2 id="配置文件">配置文件</h2>
-
+              <div class="media-content hide-xs font-merryweather"><h2 id="heading">配置文件</h2>
 <p>在游戏工程中，通常有大量配置是由策划提供，再转换成程序方便读取的格式添加到工程中。</p>
-
 <p>在我参与的<code>Cocos2dx-Lua</code>工程中，策划通常在<code>Excel</code>中配置，再通过脚本转换为<code>Lua-Table</code>的文件。</p>
-
 <p>比如常见的道具表转换后：</p></div>
             </div>
             <div style="clear:both;"></div>
@@ -1108,7 +1059,6 @@ ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &quot;INPUT.jpg&quot; -vco
                 </span>
               </span>
               <div class="media-content hide-xs font-merryweather"><p>C 语言与 Golang 相互调用的简单例子。</p>
-
 <p>在此使用一段简单的代码展示 CGO 的基本用法 —— 在 Go 程序中使用 C 语言编程。</p></div>
             </div>
             <div style="clear:both;"></div>
@@ -1127,9 +1077,7 @@ ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &quot;INPUT.jpg&quot; -vco
                 </span>
               </span>
               <div class="media-content hide-xs font-merryweather"><h2 id="govendor">govendor</h2>
-
 <p>go vendor 是 go 1.6 官方正式引入的包管理方式。</p>
-
 <p>其基本思路是，将引用的外部包的源代码放在当前工程的<code>vendor</code>目录下面，go 编译时会优先从<code>vendor</code>目录寻找依赖关系。</p></div>
             </div>
             <div style="clear:both;"></div>
@@ -1148,7 +1096,6 @@ ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &quot;INPUT.jpg&quot; -vco
                 </span>
               </span>
               <div class="media-content hide-xs font-merryweather"><p>由于众所不知的原因，在国内访问<code>golang.org</code>需要爬梯子。</p>
-
 <p>所以使用<code>go get</code>安装某些包的时候，也要用梯子。</p></div>
             </div>
             <div style="clear:both;"></div>
@@ -1166,14 +1113,10 @@ ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &quot;INPUT.jpg&quot; -vco
                   Jun 6, 2018
                 </span>
               </span>
-              <div class="media-content hide-xs font-merryweather"><h2 id="数组与切片">数组与切片</h2>
-
+              <div class="media-content hide-xs font-merryweather"><h2 id="heading">数组与切片</h2>
 <p>以前粗学时并没有留意 Golang 的数组，一直以为只有切片。</p>
-
-<p>今天看<a href="https://book.douban.com/subject/27015617/" target="_blank">《Go语言实践》</a>时才发现 Golang 也有数组。与切片的区别是定义时指定长度（例如长度为4的 int 型数组<code>var array [4]int</code>）。</p>
-
+<p>今天看<a href="https://book.douban.com/subject/27015617/">《Go语言实践》</a>时才发现 Golang 也有数组。与切片的区别是定义时指定长度（例如长度为4的 int 型数组<code>var array [4]int</code>）。</p>
 <p>数组赋值时会拷贝整个数组，所以作为参数传递时也会完整拷贝，要考虑性能合理使用，必要时可以使用指针。</p>
-
 <p>以下代码便于理解数组和切片：</p></div>
             </div>
             <div style="clear:both;"></div>
@@ -1191,8 +1134,7 @@ ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &quot;INPUT.jpg&quot; -vco
                   May 5, 2018
                 </span>
               </span>
-              <div class="media-content hide-xs font-merryweather"><h2 id="功能">功能</h2>
-
+              <div class="media-content hide-xs font-merryweather"><h2 id="heading">功能</h2>
 <p>使用知名python图片处理库PIL，为图片添加文字水印。</p></div>
             </div>
             <div style="clear:both;"></div>

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.55.6 with theme Tranquilpeak 0.4.3-SNAPSHOT">
+<meta name="generator" content="Hugo 0.62.1 with theme Tranquilpeak 0.4.3-SNAPSHOT">
 <meta name="author" content="SelFree">
 <meta name="keywords" content="python, 图片水印, 文字水印, watermark, program develop, leetcode, Golang, leetcode解答, 程序">
 <meta name="description" content="使用python PIL库为图片添加文字水印，可设置文字大小、颜色、旋转、间隔、透明度">
@@ -317,37 +317,32 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <h2 id="功能">功能</h2>
-
+              <h2 id="heading">功能</h2>
 <p>使用知名python图片处理库PIL，为图片添加文字水印。</p>
-
 <p>步骤：根据文字生成水印图片；将水印图半透明并覆盖在原图上。</p>
-
-<h2 id="实现">实现</h2>
-
-<h3 id="1-将文字转换成水印图片">1. 将文字转换成水印图片</h3>
-
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">gen_mark</span><span class="p">(</span><span class="n">args</span><span class="p">):</span>
+<h2 id="heading-1">实现</h2>
+<h3 id="1-">1. 将文字转换成水印图片</h3>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">gen_mark</span><span class="p">(</span><span class="n">args</span><span class="p">)</span><span class="p">:</span>
     <span class="c1"># 字体宽度</span>
     <span class="n">length</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">mark</span><span class="p">)</span> <span class="o">*</span> <span class="n">args</span><span class="o">.</span><span class="n">size</span>
 
     <span class="c1"># 创建水印图片(宽度、高度)</span>
-    <span class="n">mark</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s1">&#39;RGBA&#39;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="n">length</span><span class="p">,</span> <span class="n">args</span><span class="o">.</span><span class="n">size</span><span class="p">))</span>
+    <span class="n">mark</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">RGBA</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="n">length</span><span class="p">,</span> <span class="n">args</span><span class="o">.</span><span class="n">size</span><span class="p">)</span><span class="p">)</span>
 
     <span class="c1"># 生成文字</span>
     <span class="n">draw</span> <span class="o">=</span> <span class="n">ImageDraw</span><span class="o">.</span><span class="n">Draw</span><span class="p">(</span><span class="n">im</span><span class="o">=</span><span class="n">mark</span><span class="p">)</span>
-    <span class="n">draw</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+    <span class="n">draw</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span><span class="p">,</span>
         <span class="n">text</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">mark</span><span class="p">,</span> <span class="c1"># 水印文字</span>
         <span class="n">fill</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">color</span><span class="p">,</span> <span class="c1"># 文字颜色 &#39;#008B8B&#39;</span>
         <span class="n">font</span><span class="o">=</span><span class="n">ImageFont</span><span class="o">.</span><span class="n">truetype</span><span class="p">(</span><span class="n">TTF_FONT</span><span class="p">,</span> <span class="c1"># 文字字体</span>
-        <span class="n">size</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">size</span><span class="p">))</span> <span class="c1"># font_size 文字大小</span>
+        <span class="n">size</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">size</span><span class="p">)</span><span class="p">)</span> <span class="c1"># font_size 文字大小</span>
     <span class="k">del</span> <span class="n">draw</span>
 
     <span class="c1"># 裁剪图片边缘空白区域</span>
-    <span class="n">bg</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s1">&#39;RGBA&#39;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">mark</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
+    <span class="n">bg</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">RGBA</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">mark</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
     <span class="n">diff</span> <span class="o">=</span> <span class="n">ImageChops</span><span class="o">.</span><span class="n">difference</span><span class="p">(</span><span class="n">mark</span><span class="p">,</span> <span class="n">bg</span><span class="p">)</span>
     <span class="k">del</span> <span class="n">bg</span>
-    <span class="n">bbox</span> <span class="o">=</span> <span class="n">diff</span><span class="o">.</span><span class="n">getbbox</span><span class="p">()</span>
+    <span class="n">bbox</span> <span class="o">=</span> <span class="n">diff</span><span class="o">.</span><span class="n">getbbox</span><span class="p">(</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">bbox</span><span class="p">:</span>
         <span class="n">mark</span> <span class="o">=</span> <span class="n">mark</span><span class="o">.</span><span class="n">crop</span><span class="p">(</span><span class="n">bbox</span><span class="p">)</span>
 
@@ -356,29 +351,27 @@
 
     <span class="c1"># 得到水印文字大小</span>
     <span class="k">print</span><span class="p">(</span><span class="n">mark</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
-    <span class="err">此处省略</span><span class="o">...</span></code></pre></div>
-
-<h3 id="2-将水印图片覆盖在原图上">2. 将水印图片覆盖在原图上</h3>
-
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">mark_im</span><span class="p">(</span><span class="n">im</span><span class="p">):</span>
-    <span class="s1">&#39;&#39;&#39; 在im图片上添加水印 im为打开的原图&#39;&#39;&#39;</span>
+    <span class="err">此</span><span class="err">处</span><span class="err">省</span><span class="err">略</span><span class="o">.</span><span class="o">.</span><span class="o">.</span></code></pre></div>
+<h3 id="2-">2. 将水印图片覆盖在原图上</h3>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">mark_im</span><span class="p">(</span><span class="n">im</span><span class="p">)</span><span class="p">:</span>
+    <span class="sa"></span><span class="s1">&#39;&#39;&#39;</span><span class="s1"> 在im图片上添加水印 im为打开的原图</span><span class="s1">&#39;&#39;&#39;</span>
 
     <span class="c1"># 计算斜边长度</span>
-    <span class="n">c</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">im</span><span class="o">.</span><span class="n">size</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">im</span><span class="o">.</span><span class="n">size</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">im</span><span class="o">.</span><span class="n">size</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">im</span><span class="o">.</span><span class="n">size</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">im</span><span class="o">.</span><span class="n">size</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">im</span><span class="o">.</span><span class="n">size</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">im</span><span class="o">.</span><span class="n">size</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">im</span><span class="o">.</span><span class="n">size</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="p">)</span><span class="p">)</span>
 
     <span class="c1"># 以斜边长度为宽高创建大图（旋转后大图才足以覆盖原图）</span>
-    <span class="n">mark2</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s1">&#39;RGBA&#39;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">c</span><span class="p">))</span>
+    <span class="n">mark2</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">RGBA</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span><span class="p">)</span>
 
     <span class="c1"># 在大图上生成水印文字，此处mark为上面生成的水印图片</span>
     <span class="n">y</span><span class="p">,</span> <span class="n">idx</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span>
     <span class="k">while</span> <span class="n">y</span> <span class="o">&lt;</span> <span class="n">c</span><span class="p">:</span>
         <span class="c1"># 制造x坐标错位</span>
-        <span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="nb">int</span><span class="p">((</span><span class="n">mark</span><span class="o">.</span><span class="n">size</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">args</span><span class="o">.</span><span class="n">space</span><span class="p">)</span><span class="o">*</span><span class="mf">0.5</span><span class="o">*</span><span class="n">idx</span><span class="p">)</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="nb">int</span><span class="p">(</span><span class="p">(</span><span class="n">mark</span><span class="o">.</span><span class="n">size</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">args</span><span class="o">.</span><span class="n">space</span><span class="p">)</span><span class="o">*</span><span class="mf">0.5</span><span class="o">*</span><span class="n">idx</span><span class="p">)</span>
         <span class="n">idx</span> <span class="o">=</span> <span class="p">(</span><span class="n">idx</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="mi">2</span>
 
         <span class="k">while</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">c</span><span class="p">:</span>
             <span class="c1"># 在该位置粘贴mark水印图片</span>
-            <span class="n">mark2</span><span class="o">.</span><span class="n">paste</span><span class="p">(</span><span class="n">mark</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span>
+            <span class="n">mark2</span><span class="o">.</span><span class="n">paste</span><span class="p">(</span><span class="n">mark</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span><span class="p">)</span>
             <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">mark</span><span class="o">.</span><span class="n">size</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">args</span><span class="o">.</span><span class="n">space</span>
         <span class="n">y</span> <span class="o">=</span> <span class="n">y</span> <span class="o">+</span> <span class="n">mark</span><span class="o">.</span><span class="n">size</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">args</span><span class="o">.</span><span class="n">space</span>
 
@@ -386,17 +379,15 @@
     <span class="n">mark2</span> <span class="o">=</span> <span class="n">mark2</span><span class="o">.</span><span class="n">rotate</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">angle</span><span class="p">)</span>
 
     <span class="c1"># 在原图上添加大图水印</span>
-    <span class="k">if</span> <span class="n">im</span><span class="o">.</span><span class="n">mode</span> <span class="o">!=</span> <span class="s1">&#39;RGBA&#39;</span><span class="p">:</span>
-        <span class="n">im</span> <span class="o">=</span> <span class="n">im</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="s1">&#39;RGBA&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">im</span><span class="o">.</span><span class="n">mode</span> <span class="o">!=</span> <span class="sa"></span><span class="s1">&#39;</span><span class="s1">RGBA</span><span class="s1">&#39;</span><span class="p">:</span>
+        <span class="n">im</span> <span class="o">=</span> <span class="n">im</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">RGBA</span><span class="s1">&#39;</span><span class="p">)</span>
     <span class="n">im</span><span class="o">.</span><span class="n">paste</span><span class="p">(</span><span class="n">mark2</span><span class="p">,</span> <span class="c1"># 大图</span>
-        <span class="p">(</span><span class="nb">int</span><span class="p">((</span><span class="n">im</span><span class="o">.</span><span class="n">size</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">-</span><span class="n">c</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">),</span> <span class="nb">int</span><span class="p">((</span><span class="n">im</span><span class="o">.</span><span class="n">size</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">c</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)),</span> <span class="c1"># 坐标</span>
-        <span class="n">mask</span><span class="o">=</span><span class="n">mark2</span><span class="o">.</span><span class="n">split</span><span class="p">()[</span><span class="mi">3</span><span class="p">])</span>
+        <span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="p">(</span><span class="n">im</span><span class="o">.</span><span class="n">size</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">-</span><span class="n">c</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="p">(</span><span class="n">im</span><span class="o">.</span><span class="n">size</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">c</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="p">)</span><span class="p">,</span> <span class="c1"># 坐标</span>
+        <span class="n">mask</span><span class="o">=</span><span class="n">mark2</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="p">)</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="p">)</span>
     <span class="k">del</span> <span class="n">mark2</span>
     <span class="k">return</span> <span class="n">im</span></code></pre></div>
-
-<h2 id="代码">代码</h2>
-
-<p>github: <a href="https://github.com/2Dou/watermarker" target="_blank">2Dou/watermarker</a></p>
+<h2 id="heading-2">代码</h2>
+<p>github: <a href="https://github.com/2Dou/watermarker">2Dou/watermarker</a></p>
               
   
   
@@ -512,7 +503,7 @@
         </article>
         <footer id="footer" class="main-content-wrap">
   <span class="copyrights">
-    &copy; 2019 SelFree. All Rights Reserved
+    &copy; 2020 SelFree. All Rights Reserved
   </span>
 </footer>
 
@@ -648,9 +639,7 @@
                 </span>
               </span>
               <div class="media-content hide-xs font-merryweather"><p>首先，并非专业视频处理人员；以下命令都是我从网上搜索后修改以为己所用。</p>
-
-<h2 id="图片转视频">图片转视频</h2>
-
+<h2 id="heading">图片转视频</h2>
 <pre><code># gif 转视频（DURATION：时长，gif会循环播放）
 ffmpeg -ignore_loop 0 -t DURATION -f gif -i &quot;INPUT.gif&quot; -vcodec libx264 -crf 5 &quot;OUTPUT.mp4&quot;
 
@@ -673,12 +662,9 @@ ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &quot;INPUT.jpg&quot; -vco
                   Dec 12, 2018
                 </span>
               </span>
-              <div class="media-content hide-xs font-merryweather"><h2 id="闪退点">闪退点</h2>
-
+              <div class="media-content hide-xs font-merryweather"><h2 id="heading">闪退点</h2>
 <p>Version: Cocos2dx-Lua 3.16</p>
-
 <p>在某个页面修改后，出现闪退。查看修改记录没有特别的地方，均为修改图片或者条件判断。</p>
-
 <p>启动 XCode 发现闪退位置出现在<code>void Node::onEnterTransitionDidFinish()</code>中，
 在其调用子节点的<code>child-&gt;onEnterTransitionDidFinish()</code>时，<code>child</code>指针无效。</p></div>
             </div>
@@ -698,16 +684,12 @@ ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &quot;INPUT.jpg&quot; -vco
                 </span>
               </span>
               <div class="media-content hide-xs font-merryweather"><p>在日志信息中，有时需要获取当前函数的调用信息，比如打印调用栈：</p>
-
-<h2 id="调用栈">调用栈</h2>
-
-<h3 id="debug-stack-byte">debug.Stack() []byte</h3>
-
+<h2 id="heading">调用栈</h2>
+<h3 id="debugstack-byte">debug.Stack() []byte</h3>
 <p><code>debug.Stack()</code>函数可以获取当前 goroutine 的调用栈信息，需要<code>import &quot;runtime/debug&quot;</code>。</p>
-
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-golang" data-lang="golang"><span class="lnt"> 8
+<pre class="chroma"><code><span class="lnt"> 8
 </span><span class="lnt"> 9
 </span><span class="lnt">10
 </span><span class="lnt">11
@@ -722,18 +704,18 @@ ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &quot;INPUT.jpg&quot; -vco
 </span><span class="lnt">20
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">func</span> <span class="nf">foo</span><span class="p">()</span> <span class="p">{</span>
+<pre class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">func</span> <span class="nf">foo</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;--- BEGIN ---&#34;</span><span class="p">)</span>
-    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nb">string</span><span class="p">(</span><span class="nx">debug</span><span class="p">.</span><span class="nf">Stack</span><span class="p">()))</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nb">string</span><span class="p">(</span><span class="nx">debug</span><span class="p">.</span><span class="nf">Stack</span><span class="p">(</span><span class="p">)</span><span class="p">)</span><span class="p">)</span>
     <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;--- END ---&#34;</span><span class="p">)</span>
 <span class="p">}</span>
 
-<span class="kd">func</span> <span class="nf">boom</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nf">foo</span><span class="p">()</span>
+<span class="kd">func</span> <span class="nf">boom</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nf">foo</span><span class="p">(</span><span class="p">)</span>
 <span class="p">}</span>
 
-<span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nf">boom</span><span class="p">()</span>
+<span class="kd">func</span> <span class="nf">main</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nf">boom</span><span class="p">(</span><span class="p">)</span>
 <span class="p">}</span></code></pre></td></tr></table>
 </div>
 </div></div>
@@ -753,8 +735,7 @@ ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &quot;INPUT.jpg&quot; -vco
                   Nov 11, 2018
                 </span>
               </span>
-              <div class="media-content hide-xs font-merryweather"><p>上回提到<a href="https://www.orztu.com/post/lua-table-minify/" target="_blank">元表优化 Lua 配置文件</a>，以减少重复字段，节省内存开销。</p>
-
+              <div class="media-content hide-xs font-merryweather"><p>上回提到<a href="https://www.orztu.com/post/lua-table-minify/">元表优化 Lua 配置文件</a>，以减少重复字段，节省内存开销。</p>
 <p>除了这种直接地减少内存开销的方法，使用元表还能实现数据的延迟加载，从另一个角度节约内存。</p></div>
             </div>
             <div style="clear:both;"></div>
@@ -772,12 +753,9 @@ ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &quot;INPUT.jpg&quot; -vco
                   Nov 11, 2018
                 </span>
               </span>
-              <div class="media-content hide-xs font-merryweather"><h2 id="配置文件">配置文件</h2>
-
+              <div class="media-content hide-xs font-merryweather"><h2 id="heading">配置文件</h2>
 <p>在游戏工程中，通常有大量配置是由策划提供，再转换成程序方便读取的格式添加到工程中。</p>
-
 <p>在我参与的<code>Cocos2dx-Lua</code>工程中，策划通常在<code>Excel</code>中配置，再通过脚本转换为<code>Lua-Table</code>的文件。</p>
-
 <p>比如常见的道具表转换后：</p></div>
             </div>
             <div style="clear:both;"></div>
@@ -796,7 +774,6 @@ ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &quot;INPUT.jpg&quot; -vco
                 </span>
               </span>
               <div class="media-content hide-xs font-merryweather"><p>C 语言与 Golang 相互调用的简单例子。</p>
-
 <p>在此使用一段简单的代码展示 CGO 的基本用法 —— 在 Go 程序中使用 C 语言编程。</p></div>
             </div>
             <div style="clear:both;"></div>
@@ -815,9 +792,7 @@ ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &quot;INPUT.jpg&quot; -vco
                 </span>
               </span>
               <div class="media-content hide-xs font-merryweather"><h2 id="govendor">govendor</h2>
-
 <p>go vendor 是 go 1.6 官方正式引入的包管理方式。</p>
-
 <p>其基本思路是，将引用的外部包的源代码放在当前工程的<code>vendor</code>目录下面，go 编译时会优先从<code>vendor</code>目录寻找依赖关系。</p></div>
             </div>
             <div style="clear:both;"></div>
@@ -836,7 +811,6 @@ ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &quot;INPUT.jpg&quot; -vco
                 </span>
               </span>
               <div class="media-content hide-xs font-merryweather"><p>由于众所不知的原因，在国内访问<code>golang.org</code>需要爬梯子。</p>
-
 <p>所以使用<code>go get</code>安装某些包的时候，也要用梯子。</p></div>
             </div>
             <div style="clear:both;"></div>
@@ -854,14 +828,10 @@ ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &quot;INPUT.jpg&quot; -vco
                   Jun 6, 2018
                 </span>
               </span>
-              <div class="media-content hide-xs font-merryweather"><h2 id="数组与切片">数组与切片</h2>
-
+              <div class="media-content hide-xs font-merryweather"><h2 id="heading">数组与切片</h2>
 <p>以前粗学时并没有留意 Golang 的数组，一直以为只有切片。</p>
-
-<p>今天看<a href="https://book.douban.com/subject/27015617/" target="_blank">《Go语言实践》</a>时才发现 Golang 也有数组。与切片的区别是定义时指定长度（例如长度为4的 int 型数组<code>var array [4]int</code>）。</p>
-
+<p>今天看<a href="https://book.douban.com/subject/27015617/">《Go语言实践》</a>时才发现 Golang 也有数组。与切片的区别是定义时指定长度（例如长度为4的 int 型数组<code>var array [4]int</code>）。</p>
 <p>数组赋值时会拷贝整个数组，所以作为参数传递时也会完整拷贝，要考虑性能合理使用，必要时可以使用指针。</p>
-
 <p>以下代码便于理解数组和切片：</p></div>
             </div>
             <div style="clear:both;"></div>
@@ -879,8 +849,7 @@ ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &quot;INPUT.jpg&quot; -vco
                   May 5, 2018
                 </span>
               </span>
-              <div class="media-content hide-xs font-merryweather"><h2 id="功能">功能</h2>
-
+              <div class="media-content hide-xs font-merryweather"><h2 id="heading">功能</h2>
 <p>使用知名python图片处理库PIL，为图片添加文字水印。</p></div>
             </div>
             <div style="clear:both;"></div>

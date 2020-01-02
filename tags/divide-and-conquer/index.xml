@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Divide and Conquer on Orz the way</title>
@@ -18,14 +18,11 @@
       
       <guid>https://www.orztu.com/leetcode/087-scramble-string/</guid>
       <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/scramble-string/&#34; target=&#34;_blank&#34;&gt;Scramble String&lt;/a&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/scramble-string/&#34;&gt;Scramble String&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Given a string s1, we may represent it as a binary tree by partitioning it to two non-empty substrings recursively.&lt;/p&gt;
-
 &lt;p&gt;Below is one possible representation of s1 = &lt;code&gt;&amp;quot;great&amp;quot;&lt;/code&gt;:&lt;/p&gt;
-
+&lt;/blockquote&gt;
 &lt;pre&gt;&lt;code&gt;    great
    /    \
   gr    eat
@@ -33,8 +30,7 @@
 g   r  e   at
            / \
           a   t
-&lt;/code&gt;&lt;/pre&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;
 &lt;p&gt;To scramble the string, we may choose any non-leaf node and swap its two children.&lt;/p&gt;
 &lt;/blockquote&gt;</description>
     </item>
@@ -45,14 +41,11 @@ g   r  e   at
       <pubDate>Fri, 24 Nov 2017 14:55:46 +0800</pubDate>
       
       <guid>https://www.orztu.com/leetcode/023-merge-k-sorted-lists/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/merge-k-sorted-lists/description/&#34; target=&#34;_blank&#34;&gt;Merge k Sorted Lists&lt;/a&gt;&lt;/p&gt;
-
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/merge-k-sorted-lists/description/&#34;&gt;Merge k Sorted Lists&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;Merge k sorted linked lists and return it as one sorted list. Analyze and describe its complexity.&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;p&gt;将&lt;code&gt;k&lt;/code&gt;个有序链表合并为一个链表&lt;/p&gt;</description>
     </item>
     
@@ -62,31 +55,24 @@ g   r  e   at
       <pubDate>Thu, 16 Mar 2017 10:53:58 +0800</pubDate>
       
       <guid>https://www.orztu.com/leetcode/004-median-of-two-sorted-arrays/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/median-of-two-sorted-arrays&#34; target=&#34;_blank&#34;&gt;Median of Two Sorted Arrays&lt;/a&gt;&lt;/p&gt;
-
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/median-of-two-sorted-arrays&#34;&gt;Median of Two Sorted Arrays&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;There are two sorted arrays nums1 and nums2 of size m and n respectively.&lt;/p&gt;
-
 &lt;p&gt;Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).&lt;/p&gt;
-
 &lt;p&gt;Example 1:&lt;/p&gt;
-
+&lt;/blockquote&gt;
 &lt;pre&gt;&lt;code&gt;nums1 = [1, 3]
 nums2 = [2]
-&lt;/code&gt;&lt;/pre&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;
 &lt;p&gt;The median is 2.0
 Example 2:&lt;/p&gt;
-
+&lt;/blockquote&gt;
 &lt;pre&gt;&lt;code&gt;nums1 = [1, 2]
 nums2 = [3, 4]
-&lt;/code&gt;&lt;/pre&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;
 &lt;p&gt;The median is (2 + 3)/2 = 2.5&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;p&gt;从两个有序数组中求中位数&lt;/p&gt;</description>
     </item>
     

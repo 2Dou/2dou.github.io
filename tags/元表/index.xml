@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>元表 on Orz the way</title>
@@ -17,8 +17,7 @@
       <pubDate>Fri, 16 Nov 2018 11:38:00 +0800</pubDate>
       
       <guid>https://www.orztu.com/post/lua-table-minify-ii/</guid>
-      <description>&lt;p&gt;上回提到&lt;a href=&#34;https://www.orztu.com/post/lua-table-minify/&#34; target=&#34;_blank&#34;&gt;元表优化 Lua 配置文件&lt;/a&gt;，以减少重复字段，节省内存开销。&lt;/p&gt;
-
+      <description>&lt;p&gt;上回提到&lt;a href=&#34;https://www.orztu.com/post/lua-table-minify/&#34;&gt;元表优化 Lua 配置文件&lt;/a&gt;，以减少重复字段，节省内存开销。&lt;/p&gt;
 &lt;p&gt;除了这种直接地减少内存开销的方法，使用元表还能实现数据的延迟加载，从另一个角度节约内存。&lt;/p&gt;</description>
     </item>
     
@@ -28,12 +27,9 @@
       <pubDate>Tue, 06 Nov 2018 15:14:38 +0800</pubDate>
       
       <guid>https://www.orztu.com/post/lua-table-minify/</guid>
-      <description>&lt;h2 id=&#34;配置文件&#34;&gt;配置文件&lt;/h2&gt;
-
+      <description>&lt;h2 id=&#34;heading&#34;&gt;配置文件&lt;/h2&gt;
 &lt;p&gt;在游戏工程中，通常有大量配置是由策划提供，再转换成程序方便读取的格式添加到工程中。&lt;/p&gt;
-
 &lt;p&gt;在我参与的&lt;code&gt;Cocos2dx-Lua&lt;/code&gt;工程中，策划通常在&lt;code&gt;Excel&lt;/code&gt;中配置，再通过脚本转换为&lt;code&gt;Lua-Table&lt;/code&gt;的文件。&lt;/p&gt;
-
 &lt;p&gt;比如常见的道具表转换后：&lt;/p&gt;</description>
     </item>
     

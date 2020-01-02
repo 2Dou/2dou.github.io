@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Leetcodes on Orz the way</title>
@@ -18,18 +18,13 @@
       
       <guid>https://www.orztu.com/leetcode/093-restore-ip-addresses/</guid>
       <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/restore-ip-addresses/&#34; target=&#34;_blank&#34;&gt;Restore IP Addresses&lt;/a&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/restore-ip-addresses/&#34;&gt;Restore IP Addresses&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Given a string containing only digits, restore it by returning all possible valid IP address combinations.&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;Example:&lt;/strong&gt;&lt;/p&gt;
-
 &lt;pre&gt;&lt;code&gt;Input: &amp;quot;25525511135&amp;quot;
 Output: [&amp;quot;255.255.11.135&amp;quot;, &amp;quot;255.255.111.35&amp;quot;]
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;</description>
+&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;</description>
     </item>
     
     <item>
@@ -39,21 +34,14 @@ Output: [&amp;quot;255.255.11.135&amp;quot;, &amp;quot;255.255.111.35&amp;quot;]
       
       <guid>https://www.orztu.com/leetcode/092-reverse-linked-list-ii/</guid>
       <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/reverse-linked-list-ii/&#34; target=&#34;_blank&#34;&gt;Reverse Linked List II&lt;/a&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/reverse-linked-list-ii/&#34;&gt;Reverse Linked List II&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Reverse a linked list from position m to n. Do it in one-pass.&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; 1 ≤ m ≤ n ≤ length of list.&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;Example:&lt;/strong&gt;&lt;/p&gt;
-
 &lt;pre&gt;&lt;code&gt;Input: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL, m = 2, n = 4
 Output: 1-&amp;gt;4-&amp;gt;3-&amp;gt;2-&amp;gt;5-&amp;gt;NULL
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
 &lt;p&gt;遍历一次将链表的第&lt;code&gt;m&lt;/code&gt;至&lt;code&gt;n&lt;/code&gt;个结点翻转。&lt;/p&gt;</description>
     </item>
     
@@ -64,34 +52,28 @@ Output: 1-&amp;gt;4-&amp;gt;3-&amp;gt;2-&amp;gt;5-&amp;gt;NULL
       
       <guid>https://www.orztu.com/leetcode/091-decode-ways/</guid>
       <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/decode-ways/&#34; target=&#34;_blank&#34;&gt;Decode Ways&lt;/a&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/decode-ways/&#34;&gt;Decode Ways&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;A message containing letters from A-Z is being encoded to numbers using the following mapping:&lt;/p&gt;
-
+&lt;/blockquote&gt;
 &lt;pre&gt;&lt;code&gt;&#39;A&#39; -&amp;gt; 1
 &#39;B&#39; -&amp;gt; 2
 ...
 &#39;Z&#39; -&amp;gt; 26
-&lt;/code&gt;&lt;/pre&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;
 &lt;p&gt;Given a &lt;strong&gt;non-empty&lt;/strong&gt; string containing only digits, determine the total number of ways to decode it.&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;Example 1:&lt;/strong&gt;&lt;/p&gt;
-
+&lt;/blockquote&gt;
 &lt;pre&gt;&lt;code&gt;Input: &amp;quot;12&amp;quot;
 Output: 2
 Explanation: It could be decoded as &amp;quot;AB&amp;quot; (1 2) or &amp;quot;L&amp;quot; (12).
-&lt;/code&gt;&lt;/pre&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Example 2:&lt;/strong&gt;&lt;/p&gt;
-
+&lt;/blockquote&gt;
 &lt;pre&gt;&lt;code&gt;Input: &amp;quot;226&amp;quot;
 Output: 3
 Explanation: It could be decoded as &amp;quot;BZ&amp;quot; (2 26), &amp;quot;VF&amp;quot; (22 6), or &amp;quot;BBF&amp;quot; (2 2 6).
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;</description>
+&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
     
     <item>
@@ -101,16 +83,11 @@ Explanation: It could be decoded as &amp;quot;BZ&amp;quot; (2 26), &amp;quot;VF&
       
       <guid>https://www.orztu.com/leetcode/090-subsets-ii/</guid>
       <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/subsets-ii/&#34; target=&#34;_blank&#34;&gt;Subsets II&lt;/a&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/subsets-ii/&#34;&gt;Subsets II&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Given a collection of integers that might contain duplicates, nums, return all possible subsets (the power set).&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; The solution set must not contain duplicate subsets.&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;Example:&lt;/strong&gt;&lt;/p&gt;
-
 &lt;pre&gt;&lt;code&gt;Input: [1,2,2]
 Output:
 [
@@ -121,8 +98,7 @@ Output:
  [1,2],
  []
 ]
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;</description>
+&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;</description>
     </item>
     
     <item>
@@ -132,30 +108,25 @@ Output:
       
       <guid>https://www.orztu.com/leetcode/088-merge-sorted-array/</guid>
       <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/merge-sorted-array/&#34; target=&#34;_blank&#34;&gt;Merge Sorted Array&lt;/a&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/merge-sorted-array/&#34;&gt;Merge Sorted Array&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Given two sorted integer arrays nums1 and nums2, merge nums2 into nums1 as one sorted array.&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt;&lt;/p&gt;
-
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;The number of elements initialized in nums1 and nums2 are m and n respectively.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;You may assume that nums1 has enough space (size that is greater or equal to m + n) to hold additional elements from nums2.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The number of elements initialized in nums1 and nums2 are m and n respectively.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;You may assume that nums1 has enough space (size that is greater or equal to m + n) to hold additional elements from nums2.&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;&lt;strong&gt;Example:&lt;/strong&gt;&lt;/p&gt;
-
 &lt;pre&gt;&lt;code&gt;Input:
 nums1 = [1,2,3,0,0,0], m = 3
 nums2 = [2,5,6],       n = 3
 
 Output: [1,2,2,3,5,6]
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
 &lt;p&gt;将&lt;code&gt;nums1&lt;/code&gt;、&lt;code&gt;nums2&lt;/code&gt;两个有序数组合并到&lt;code&gt;nums1&lt;/code&gt;一个中，&lt;code&gt;nums1&lt;/code&gt;已分配足够空间存放元素。&lt;/p&gt;</description>
     </item>
     
@@ -166,14 +137,11 @@ Output: [1,2,2,3,5,6]
       
       <guid>https://www.orztu.com/leetcode/087-scramble-string/</guid>
       <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/scramble-string/&#34; target=&#34;_blank&#34;&gt;Scramble String&lt;/a&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/scramble-string/&#34;&gt;Scramble String&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Given a string s1, we may represent it as a binary tree by partitioning it to two non-empty substrings recursively.&lt;/p&gt;
-
 &lt;p&gt;Below is one possible representation of s1 = &lt;code&gt;&amp;quot;great&amp;quot;&lt;/code&gt;:&lt;/p&gt;
-
+&lt;/blockquote&gt;
 &lt;pre&gt;&lt;code&gt;    great
    /    \
   gr    eat
@@ -181,8 +149,7 @@ Output: [1,2,2,3,5,6]
 g   r  e   at
            / \
           a   t
-&lt;/code&gt;&lt;/pre&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;
 &lt;p&gt;To scramble the string, we may choose any non-leaf node and swap its two children.&lt;/p&gt;
 &lt;/blockquote&gt;</description>
     </item>
@@ -194,20 +161,14 @@ g   r  e   at
       
       <guid>https://www.orztu.com/leetcode/086-partition-list/</guid>
       <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/partition-list/&#34; target=&#34;_blank&#34;&gt;Partition List&lt;/a&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/partition-list/&#34;&gt;Partition List&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Given a linked list and a value x, partition it such that all nodes less than x come before nodes greater than or equal to x.&lt;/p&gt;
-
 &lt;p&gt;You should preserve the original relative order of the nodes in each of the two partitions.&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;Example:&lt;/strong&gt;&lt;/p&gt;
-
 &lt;pre&gt;&lt;code&gt;Input: head = 1-&amp;gt;4-&amp;gt;3-&amp;gt;2-&amp;gt;5-&amp;gt;2, x = 3
 Output: 1-&amp;gt;2-&amp;gt;2-&amp;gt;4-&amp;gt;3-&amp;gt;5
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;</description>
+&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;</description>
     </item>
     
     <item>
@@ -217,14 +178,11 @@ Output: 1-&amp;gt;2-&amp;gt;2-&amp;gt;4-&amp;gt;3-&amp;gt;5
       
       <guid>https://www.orztu.com/leetcode/085-maximal-rectangle/</guid>
       <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/maximal-rectangle/&#34; target=&#34;_blank&#34;&gt;Maximal Rectangle&lt;/a&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/maximal-rectangle/&#34;&gt;Maximal Rectangle&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Given a 2D binary matrix filled with 0&amp;rsquo;s and 1&amp;rsquo;s, find the largest rectangle containing only 1&amp;rsquo;s and return its area.&lt;/p&gt;
-
+&lt;p&gt;Given a 2D binary matrix filled with 0&#39;s and 1&#39;s, find the largest rectangle containing only 1&#39;s and return its area.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Example:&lt;/strong&gt;&lt;/p&gt;
-
+&lt;/blockquote&gt;
 &lt;pre&gt;&lt;code&gt;Input:
 [
   [&amp;quot;1&amp;quot;,&amp;quot;0&amp;quot;,&amp;quot;1&amp;quot;,&amp;quot;0&amp;quot;,&amp;quot;0&amp;quot;],
@@ -233,10 +191,7 @@ Output: 1-&amp;gt;2-&amp;gt;2-&amp;gt;4-&amp;gt;3-&amp;gt;5
   [&amp;quot;1&amp;quot;,&amp;quot;0&amp;quot;,&amp;quot;0&amp;quot;,&amp;quot;1&amp;quot;,&amp;quot;0&amp;quot;]
 ]
 Output: 6
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;在给出的矩阵中，&lt;code&gt;1&lt;/code&gt;表示元素，&lt;code&gt;0&lt;/code&gt;表示空，找出最大矩形的面积。&lt;/p&gt;</description>
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;在给出的矩阵中，&lt;code&gt;1&lt;/code&gt;表示元素，&lt;code&gt;0&lt;/code&gt;表示空，找出最大矩形的面积。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -246,19 +201,14 @@ Output: 6
       
       <guid>https://www.orztu.com/leetcode/084-largest-rectangle-in-histogram/</guid>
       <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/largest-rectangle-in-histogram/&#34; target=&#34;_blank&#34;&gt;Largest Rectangle in Histogram&lt;/a&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/largest-rectangle-in-histogram/&#34;&gt;Largest Rectangle in Histogram&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Given n non-negative integers representing the histogram&amp;rsquo;s bar height where the width of each bar is 1, find the area of largest rectangle in the histogram.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.orztu.com/images/leetcode/084_Largest_Rectangle_in_Histogram_1.png&#34; alt=&#34;&#34; /&gt;
+&lt;p&gt;Given n non-negative integers representing the histogram&#39;s bar height where the width of each bar is 1, find the area of largest rectangle in the histogram.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.orztu.com/images/leetcode/084_Largest_Rectangle_in_Histogram_1.png&#34; alt=&#34;&#34;&gt;
 Above is a histogram where width of each bar is &lt;code&gt;1&lt;/code&gt;, given height = &lt;code&gt;[2,1,5,6,2,3]&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.orztu.com/images/leetcode/084_Largest_Rectangle_in_Histogram_2.png&#34; alt=&#34;&#34; /&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.orztu.com/images/leetcode/084_Largest_Rectangle_in_Histogram_2.png&#34; alt=&#34;&#34;&gt;
 The largest rectangle is shown in the shaded area, which has area = &lt;code&gt;10&lt;/code&gt; unit.&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;p&gt;给出一个直方图，求最大矩形面积。&lt;/p&gt;</description>
     </item>
     
@@ -269,25 +219,16 @@ The largest rectangle is shown in the shaded area, which has area = &lt;code&gt;
       
       <guid>https://www.orztu.com/leetcode/082-remove-duplicates-from-sorted-list-ii/</guid>
       <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/&#34; target=&#34;_blank&#34;&gt;Remove Duplicates from Sorted List II&lt;/a&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/&#34;&gt;Remove Duplicates from Sorted List II&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Given a sorted linked list, delete all nodes that have duplicate numbers, leaving only distinct numbers from the original list.&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;Example 1:&lt;/strong&gt;&lt;/p&gt;
-
 &lt;pre&gt;&lt;code&gt;Input: 1-&amp;gt;2-&amp;gt;3-&amp;gt;3-&amp;gt;4-&amp;gt;4-&amp;gt;5
 Output: 1-&amp;gt;2-&amp;gt;5
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;Example 2:&lt;/strong&gt;&lt;/p&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Example 2:&lt;/strong&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;Input: 1-&amp;gt;1-&amp;gt;1-&amp;gt;2-&amp;gt;3
 Output: 2-&amp;gt;3
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
 &lt;p&gt;删除链表中有重复的结点&lt;/p&gt;</description>
     </item>
     
@@ -298,30 +239,18 @@ Output: 2-&amp;gt;3
       
       <guid>https://www.orztu.com/leetcode/081-search-in-rotated-sorted-array-ii/</guid>
       <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/search-in-rotated-sorted-array-ii/&#34; target=&#34;_blank&#34;&gt;Search in Rotated Sorted Array II&lt;/a&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/search-in-rotated-sorted-array-ii/&#34;&gt;Search in Rotated Sorted Array II&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.&lt;/p&gt;
-
 &lt;p&gt;(i.e., &lt;code&gt;[0,0,1,2,2,5,6]&lt;/code&gt; might become &lt;code&gt;[2,5,6,0,0,1,2]&lt;/code&gt;).&lt;/p&gt;
-
 &lt;p&gt;You are given a target value to search. If found in the array return &lt;code&gt;true&lt;/code&gt;, otherwise return &lt;code&gt;false&lt;/code&gt;.&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;Example 1:&lt;/strong&gt;&lt;/p&gt;
-
 &lt;pre&gt;&lt;code&gt;Input: nums = [2,5,6,0,0,1,2], target = 0
 Output: true
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;Example 2:&lt;/strong&gt;&lt;/p&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Example 2:&lt;/strong&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;Input: nums = [2,5,6,0,0,1,2], target = 3
 Output: false
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;Follow up:&lt;/strong&gt;&lt;/p&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Follow up:&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;This is a follow up problem to Search in Rotated Sorted Array, where nums may contain duplicates.&lt;/li&gt;
 &lt;li&gt;Would this affect the run-time complexity? How and why?&lt;/li&gt;
@@ -336,35 +265,25 @@ Output: false
       
       <guid>https://www.orztu.com/leetcode/080-remove-duplicates-from-sorted-array-ii/</guid>
       <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/&#34; target=&#34;_blank&#34;&gt;Remove Duplicates from Sorted Array II&lt;/a&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/&#34;&gt;Remove Duplicates from Sorted Array II&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Given a sorted array nums, remove the duplicates in-place such that duplicates appeared at most twice and return the new length.&lt;/p&gt;
-
 &lt;p&gt;Do not allocate extra space for another array, you must do this by &lt;strong&gt;modifying the input array in-place&lt;/strong&gt; with O(1) extra memory.&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;Example 1:&lt;/strong&gt;&lt;/p&gt;
-
 &lt;pre&gt;&lt;code&gt;Given nums = [1,1,1,2,2,3],
 
 Your function should return length = 5, with the first five elements
 of nums being 1, 1, 2, 2 and 3 respectively.
 
 It doesn&#39;t matter what you leave beyond the returned length.
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;Example 2:&lt;/strong&gt;&lt;/p&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Example 2:&lt;/strong&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;Given nums = [0,0,1,1,1,1,2,3,3],
 
 Your function should return length = 7, with the first seven elements
 of nums being modified to 0, 0, 1, 1, 2, 3 and 3 respectively.
 
 It doesn&#39;t matter what values are set beyond the returned length.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
 &lt;p&gt;在有序数组中删除重复的元素，每个元素允许重复一次（出现两次）。&lt;/p&gt;</description>
     </item>
     
@@ -375,16 +294,12 @@ It doesn&#39;t matter what values are set beyond the returned length.
       
       <guid>https://www.orztu.com/leetcode/079-word-search/</guid>
       <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/word-search/&#34; target=&#34;_blank&#34;&gt;Word Search&lt;/a&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/word-search/&#34;&gt;Word Search&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Given a 2D board and a word, find if the word exists in the grid.&lt;/p&gt;
-
 &lt;p&gt;The word can be constructed from letters of sequentially adjacent cell, where &amp;ldquo;adjacent&amp;rdquo; cells are those horizontally or vertically neighboring. The same letter cell may not be used more than once.&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;Example:&lt;/strong&gt;&lt;/p&gt;
-
+&lt;/blockquote&gt;
 &lt;pre&gt;&lt;code&gt;board =
 [
   [&#39;A&#39;,&#39;B&#39;,&#39;C&#39;,&#39;E&#39;],
@@ -395,11 +310,7 @@ It doesn&#39;t matter what values are set beyond the returned length.
 Given word = &amp;quot;ABCCED&amp;quot;, return true.
 Given word = &amp;quot;SEE&amp;quot;, return true.
 Given word = &amp;quot;ABCB&amp;quot;, return false.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;在&lt;code&gt;board&lt;/code&gt;中查找是否存在相连（相邻）的字符与给定的单词对应。&lt;/p&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;在&lt;code&gt;board&lt;/code&gt;中查找是否存在相连（相邻）的字符与给定的单词对应。&lt;/p&gt;
 &lt;p&gt;很像一个走迷宫的题目，搜索下一步是否与单词的字母匹配，是则走到该位置。&lt;/p&gt;</description>
     </item>
     
@@ -410,32 +321,24 @@ Given word = &amp;quot;ABCB&amp;quot;, return false.
       
       <guid>https://www.orztu.com/leetcode/078-subsets/</guid>
       <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/subsets/&#34; target=&#34;_blank&#34;&gt;Subsets&lt;/a&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/subsets/&#34;&gt;Subsets&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Given a set of distinct integers, nums, return all possible subsets (the power set).&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; The solution set must not contain duplicate subsets.&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;Example:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;Input: nums = [1,2,3]
+&lt;pre&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
+&lt;p&gt;Input: nums = [1,2,3]
 Output:
 [
-  [3],
-  [1],
-  [2],
-  [1,2,3],
-  [1,3],
-  [2,3],
-  [1,2],
-  []
-]
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;求所有子集（幂集），包含一个空集。&lt;/p&gt;</description>
+[3],
+[1],
+[2],
+[1,2,3],
+[1,3],
+[2,3],
+[1,2],
+[]
+]&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -445,14 +348,10 @@ Output:
       
       <guid>https://www.orztu.com/leetcode/077-combinations/</guid>
       <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/combinations/&#34; target=&#34;_blank&#34;&gt;Combinations&lt;/a&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/combinations/&#34;&gt;Combinations&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Given two integers n and k, return all possible combinations of k numbers out of 1 &amp;hellip; n.&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;Example:&lt;/strong&gt;&lt;/p&gt;
-
 &lt;pre&gt;&lt;code&gt;Input: n = 4, k = 2
 Output:
 [
@@ -463,9 +362,7 @@ Output:
   [1,3],
   [1,4],
 ]
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
 &lt;p&gt;给出两个整数&lt;code&gt;n&lt;/code&gt;和&lt;code&gt;k&lt;/code&gt;，输出所有包含&lt;code&gt;k&lt;/code&gt;个数字的组合，数字范围&lt;code&gt;1..n&lt;/code&gt;。&lt;/p&gt;</description>
     </item>
     
@@ -476,26 +373,18 @@ Output:
       
       <guid>https://www.orztu.com/leetcode/076-minimum-window-substring/</guid>
       <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/minimum-window-substring/&#34; target=&#34;_blank&#34;&gt;Minimum Window Substring&lt;/a&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/minimum-window-substring/&#34;&gt;Minimum Window Substring&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Given a string S and a string T, find the minimum window in S which will contain all the characters in T in complexity O(n).&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;Example:&lt;/strong&gt;&lt;/p&gt;
-
 &lt;pre&gt;&lt;code&gt;Input: S = &amp;quot;ADOBECODEBANC&amp;quot;, T = &amp;quot;ABC&amp;quot;
 Output: &amp;quot;BANC&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt;&lt;/p&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;If there is no such window in S that covers all characters in T, return the empty string &amp;ldquo;&amp;rdquo;.&lt;/li&gt;
+&lt;li&gt;If there is no such window in S that covers all characters in T, return the empty string &amp;ldquo;&amp;quot;.&lt;/li&gt;
 &lt;li&gt;If there is such window, you are guaranteed that there will always be only one unique minimum window in S.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/blockquote&gt;
-
 &lt;p&gt;给出两个字符串&lt;code&gt;S&lt;/code&gt;和&lt;code&gt;T&lt;/code&gt;，在&lt;code&gt;S&lt;/code&gt;中找到一个最短的子串，它包含&lt;code&gt;T&lt;/code&gt;中所有的字符。&lt;/p&gt;</description>
     </item>
     
@@ -506,31 +395,25 @@ Output: &amp;quot;BANC&amp;quot;
       
       <guid>https://www.orztu.com/leetcode/075-sort-colors/</guid>
       <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/sort-colors/&#34; target=&#34;_blank&#34;&gt;Sort Colors&lt;/a&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/sort-colors/&#34;&gt;Sort Colors&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Given an array with n objects colored red, white or blue, sort them in-place so that objects of the same color are adjacent, with the colors in the order red, white and blue.&lt;/p&gt;
-
 &lt;p&gt;Here, we will use the integers &lt;code&gt;0&lt;/code&gt;, &lt;code&gt;1&lt;/code&gt;, and &lt;code&gt;2&lt;/code&gt; to represent the color &lt;code&gt;red&lt;/code&gt;, &lt;code&gt;white&lt;/code&gt;, and &lt;code&gt;blue&lt;/code&gt; respectively.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; You are not suppose to use the library&amp;rsquo;s sort function for this problem.&lt;/p&gt;
-
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; You are not suppose to use the library&#39;s sort function for this problem.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Example:&lt;/strong&gt;&lt;/p&gt;
-
 &lt;pre&gt;&lt;code&gt;Input: [2,0,2,1,1,0]
 Output: [0,0,1,1,2,2]
 Follow up:
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;A rather straight forward solution is a two-pass algorithm using counting sort.&lt;br&gt;
-First, iterate the array counting number of 0&amp;rsquo;s, 1&amp;rsquo;s, and 2&amp;rsquo;s, then overwrite array with total number of 0&amp;rsquo;s, then 1&amp;rsquo;s and followed by 2&amp;rsquo;s.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Could you come up with a one-pass algorithm using only constant space?&lt;/p&gt;&lt;/li&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;A rather straight forward solution is a two-pass algorithm using counting sort.&lt;!-- raw HTML omitted --&gt;
+First, iterate the array counting number of 0&#39;s, 1&#39;s, and 2&#39;s, then overwrite array with total number of 0&#39;s, then 1&#39;s and followed by 2&#39;s.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Could you come up with a one-pass algorithm using only constant space?&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/blockquote&gt;
-
 &lt;p&gt;对一个只包含&lt;code&gt;0&lt;/code&gt;、&lt;code&gt;1&lt;/code&gt;、&lt;code&gt;2&lt;/code&gt;三个数字的数组进行排序，要求时间复杂度&lt;code&gt;O(n)&lt;/code&gt;，空间复杂度&lt;code&gt;O(1)&lt;/code&gt;。&lt;/p&gt;</description>
     </item>
     
@@ -541,19 +424,14 @@ First, iterate the array counting number of 0&amp;rsquo;s, 1&amp;rsquo;s, and 2&
       
       <guid>https://www.orztu.com/leetcode/074-search-a-2d-matrix/</guid>
       <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/search-a-2d-matrix/&#34; target=&#34;_blank&#34;&gt;Search a 2D Matrix&lt;/a&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/search-a-2d-matrix/&#34;&gt;Search a 2D Matrix&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Write an efficient algorithm that searches for a value in an m x n matrix. This matrix has the following properties:&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;Integers in each row are sorted from left to right.&lt;/li&gt;
 &lt;li&gt;The first integer of each row is greater than the last integer of the previous row.&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;&lt;strong&gt;Example 1:&lt;/strong&gt;&lt;/p&gt;
-
 &lt;pre&gt;&lt;code&gt;Input:
 matrix = [
   [1,   3,  5,  7],
@@ -566,9 +444,7 @@ Output: true
 
 target = 13
 Output: false
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
 &lt;p&gt;矩阵中有序存地放着一些数字，查找是否存在某个数字。&lt;/p&gt;</description>
     </item>
     
@@ -579,13 +455,10 @@ Output: false
       
       <guid>https://www.orztu.com/leetcode/073-set-matrix-zeroes/</guid>
       <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/set-matrix-zeroes/&#34; target=&#34;_blank&#34;&gt;Set Matrix Zeroes&lt;/a&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/set-matrix-zeroes/&#34;&gt;Set Matrix Zeroes&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Given a m x n matrix, if an element is &lt;code&gt;0&lt;/code&gt;, set its entire row and column to 0. Do it in-place.
 &lt;strong&gt;Example 1:&lt;/strong&gt;&lt;/p&gt;
-
 &lt;pre&gt;&lt;code&gt;Input:
 [
   [1,1,1],
@@ -598,10 +471,7 @@ Output:
   [0,0,0],
   [1,0,1]
 ]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;Example 2:&lt;/strong&gt;&lt;/p&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Example 2:&lt;/strong&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;Input:
 [
   [0,1,2,0],
@@ -614,17 +484,13 @@ Output:
   [0,4,5,0],
   [0,3,1,0]
 ]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;Follow up:&lt;/strong&gt;&lt;/p&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Follow up:&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;A straight forward solution using O(mn) space is probably a bad idea.&lt;/li&gt;
 &lt;li&gt;A simple improvement uses O(m + n) space, but still not the best solution.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Could you devise a constant space solution?&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/blockquote&gt;
-
 &lt;p&gt;在&lt;code&gt;m x n&lt;/code&gt;的矩阵中，如果一个元素为&lt;code&gt;0&lt;/code&gt;，则将它所在的行和列都置为&lt;code&gt;0&lt;/code&gt;。&lt;/p&gt;</description>
     </item>
     
@@ -635,33 +501,28 @@ Output:
       
       <guid>https://www.orztu.com/leetcode/072-edit-distance/</guid>
       <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/edit-distance/&#34; target=&#34;_blank&#34;&gt;Edit Distance&lt;/a&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/edit-distance/&#34;&gt;Edit Distance&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Given two words word1 and word2, find the minimum number of operations required to convert word1 to word2.&lt;/p&gt;
-
 &lt;p&gt;You have the following 3 operations permitted on a word:&lt;/p&gt;
-
 &lt;ol&gt;
 &lt;li&gt;Insert a character&lt;/li&gt;
 &lt;li&gt;Delete a character&lt;/li&gt;
 &lt;li&gt;Replace a character&lt;/li&gt;
 &lt;/ol&gt;
-
 &lt;p&gt;&lt;strong&gt;Example 1:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;Input: word1 = &amp;quot;horse&amp;quot;, word2 = &amp;quot;ros&amp;quot;
+&lt;pre&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
+&lt;p&gt;Input: word1 = &amp;ldquo;horse&amp;rdquo;, word2 = &amp;ldquo;ros&amp;rdquo;
 Output: 3
 Explanation:
-horse -&amp;gt; rorse (replace &#39;h&#39; with &#39;r&#39;)
-rorse -&amp;gt; rose (remove &#39;r&#39;)
-rose -&amp;gt; ros (remove &#39;e&#39;)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;Example 2:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;Input: word1 = &amp;quot;intention&amp;quot;, word2 = &amp;quot;execution&amp;quot;
+horse -&amp;gt; rorse (replace &amp;lsquo;h&amp;rsquo; with &amp;lsquo;r&amp;rsquo;)
+rorse -&amp;gt; rose (remove &amp;lsquo;r&amp;rsquo;)
+rose -&amp;gt; ros (remove &amp;lsquo;e&amp;rsquo;)&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt;
+&amp;gt; **Example 2:**
+&amp;gt;
+&amp;gt; ```
+Input: word1 = &amp;quot;intention&amp;quot;, word2 = &amp;quot;execution&amp;quot;
 Output: 5
 Explanation:
 intention -&amp;gt; inention (remove &#39;t&#39;)
@@ -669,8 +530,7 @@ inention -&amp;gt; enention (replace &#39;i&#39; with &#39;e&#39;)
 enention -&amp;gt; exention (replace &#39;n&#39; with &#39;x&#39;)
 exention -&amp;gt; exection (replace &#39;n&#39; with &#39;c&#39;)
 exection -&amp;gt; execution (insert &#39;u&#39;)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;</description>
+&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
     
     <item>
@@ -680,38 +540,26 @@ exection -&amp;gt; execution (insert &#39;u&#39;)
       
       <guid>https://www.orztu.com/leetcode/070-climbing-stairs/</guid>
       <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/climbing-stairs/&#34; target=&#34;_blank&#34;&gt;Climbing Stairs&lt;/a&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/climbing-stairs/&#34;&gt;Climbing Stairs&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;You are climbing a stair case. It takes n steps to reach to the top.&lt;/p&gt;
-
 &lt;p&gt;Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; Given n will be a positive integer.&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;Example 1:&lt;/strong&gt;&lt;/p&gt;
-
 &lt;pre&gt;&lt;code&gt;Input: 2
 Output: 2
 Explanation: There are two ways to climb to the top.
 1. 1 step + 1 step
 2. 2 steps
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;Example 2:&lt;/strong&gt;&lt;/p&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Example 2:&lt;/strong&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;Input: 3
 Output: 3
 Explanation: There are three ways to climb to the top.
 1. 1 step + 1 step + 1 step
 2. 1 step + 2 steps
 3. 2 steps + 1 step
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
 &lt;p&gt;好像网上讲动态规划经常举例的题目。&lt;/p&gt;
-
 &lt;p&gt;爬楼梯，可以一次爬一格或者两格，问有多少种不同的方式爬到顶。&lt;/p&gt;</description>
     </item>
     
@@ -722,31 +570,20 @@ Explanation: There are three ways to climb to the top.
       
       <guid>https://www.orztu.com/leetcode/069-sqrt-x/</guid>
       <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/sqrtx/&#34; target=&#34;_blank&#34;&gt;Sqrt(x)&lt;/a&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/sqrtx/&#34;&gt;Sqrt(x)&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Implement &lt;code&gt;int sqrt(int x)&lt;/code&gt;.&lt;/p&gt;
-
 &lt;p&gt;Compute and return the square root of x, where x is guaranteed to be a non-negative integer.&lt;/p&gt;
-
 &lt;p&gt;Since the return type is an integer, the decimal digits are truncated and only the integer part of the result is returned.&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;Example 1:&lt;/strong&gt;&lt;/p&gt;
-
 &lt;pre&gt;&lt;code&gt;Input: 4
 Output: 2
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;Example 2:&lt;/strong&gt;&lt;/p&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Example 2:&lt;/strong&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;Input: 8
 Output: 2
 Explanation: The square root of 8 is 2.82842..., and since
               the decimal part is truncated, 2 is returned.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
 &lt;p&gt;整型“开方”&lt;/p&gt;</description>
     </item>
     
@@ -757,23 +594,16 @@ Explanation: The square root of 8 is 2.82842..., and since
       
       <guid>https://www.orztu.com/leetcode/068-text-justification/</guid>
       <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/text-justification/&#34; target=&#34;_blank&#34;&gt;Text Justification&lt;/a&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/text-justification/&#34;&gt;Text Justification&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Given an array of words and a width maxWidth, format the text such that each line has exactly maxWidth characters and is fully (left and right) justified.&lt;/p&gt;
-
 &lt;p&gt;You should pack your words in a greedy approach; that is, pack as many words as you can in each line. Pad extra spaces &lt;code&gt;&#39; &#39;&lt;/code&gt; when necessary so that each line has exactly maxWidth characters.&lt;/p&gt;
-
 &lt;p&gt;Extra spaces between words should be distributed as evenly as possible. If the number of spaces on a line do not divide evenly between words, the empty slots on the left will be assigned more spaces than the slots on the right.&lt;/p&gt;
-
 &lt;p&gt;For the last line of text, it should be left justified and no &lt;strong&gt;extra&lt;/strong&gt; space is inserted between words.&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt;&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;A word is defined as a character sequence consisting of non-space characters only.&lt;/li&gt;
-&lt;li&gt;Each word&amp;rsquo;s length is guaranteed to be greater than 0 and not exceed maxWidth.&lt;/li&gt;
+&lt;li&gt;Each word&#39;s length is guaranteed to be greater than 0 and not exceed maxWidth.&lt;/li&gt;
 &lt;li&gt;The input array words contains at least one word.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/blockquote&gt;</description>
@@ -786,28 +616,19 @@ Explanation: The square root of 8 is 2.82842..., and since
       
       <guid>https://www.orztu.com/leetcode/066-and-067/</guid>
       <description>&lt;h2 id=&#34;plus-one&#34;&gt;Plus One&lt;/h2&gt;
-
 &lt;h3 id=&#34;description&#34;&gt;Description&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/plus-one/&#34; target=&#34;_blank&#34;&gt;Plus One&lt;/a&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/plus-one/&#34;&gt;Plus One&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;给定一个用数组表示的十进制数，将数字加一。&lt;/p&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Example 1:&lt;/strong&gt;&lt;/p&gt;
-
 &lt;pre&gt;&lt;code&gt;Input: [1,2,3]
 Output: [1,2,4]
 Explanation: The array represents the integer 123.
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;Example 2:&lt;/strong&gt;&lt;/p&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Example 2:&lt;/strong&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;Input: [4,3,2,1]
 Output: [4,3,2,2]
 Explanation: The array represents the integer 4321.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;</description>
+&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;</description>
     </item>
     
     <item>
@@ -817,16 +638,11 @@ Explanation: The array represents the integer 4321.
       
       <guid>https://www.orztu.com/leetcode/064-minimum-path-sum/</guid>
       <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/minimum-path-sum/&#34; target=&#34;_blank&#34;&gt;Minimum Path Sum&lt;/a&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/minimum-path-sum/&#34;&gt;Minimum Path Sum&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Given a m x n grid filled with non-negative numbers, find a path from top left to bottom right which minimizes the sum of all numbers along its path.&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; You can only move either down or right at any point in time.&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;Example:&lt;/strong&gt;&lt;/p&gt;
-
 &lt;pre&gt;&lt;code&gt;Input:
 [
   [1,3,1],
@@ -835,9 +651,7 @@ Explanation: The array represents the integer 4321.
 ]
 Output: 7
 Explanation: Because the path 1→3→1→1→1 minimizes the sum.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
 &lt;p&gt;每个格子的数字表示经过它所需的消耗大小。寻找从左上到右下的最少路径消耗。&lt;/p&gt;</description>
     </item>
     
@@ -848,24 +662,16 @@ Explanation: Because the path 1→3→1→1→1 minimizes the sum.
       
       <guid>https://www.orztu.com/leetcode/063-unique-paths-ii/</guid>
       <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/unique-paths-ii/&#34; target=&#34;_blank&#34;&gt;Unique Paths II&lt;/a&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/unique-paths-ii/&#34;&gt;Unique Paths II&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;A robot is located at the top-left corner of a m x n grid (marked &amp;lsquo;Start&amp;rsquo; in the diagram below).&lt;/p&gt;
-
 &lt;p&gt;The robot can only move either down or right at any point in time. The robot is trying to reach the bottom-right corner of the grid (marked &amp;lsquo;Finish&amp;rsquo; in the diagram below).&lt;/p&gt;
-
 &lt;p&gt;Now consider if some obstacles are added to the grids. How many unique paths would there be?&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.orztu.com/images/leetcode/062-unique-paths-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;img src=&#34;https://www.orztu.com/images/leetcode/062-unique-paths-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;An obstacle and empty space is marked as 1 and 0 respectively in the grid.&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; m and n will be at most 100.&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;Example 1:&lt;/strong&gt;&lt;/p&gt;
-
+&lt;/blockquote&gt;
 &lt;pre&gt;&lt;code&gt;Input:
 [
   [0,0,0],
@@ -878,9 +684,8 @@ There is one obstacle in the middle of the 3x3 grid above.
 There are two ways to reach the bottom-right corner:
 1. Right -&amp;gt; Right -&amp;gt; Down -&amp;gt; Down
 2. Down -&amp;gt; Down -&amp;gt; Right -&amp;gt; Right
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;
 &lt;/blockquote&gt;
-
 &lt;p&gt;给出地图，求左上角到右下角的路径数量（只能向下或向右移动）。&lt;/p&gt;</description>
     </item>
     
@@ -891,39 +696,25 @@ There are two ways to reach the bottom-right corner:
       
       <guid>https://www.orztu.com/leetcode/050-pow/</guid>
       <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/powx-n/&#34; target=&#34;_blank&#34;&gt;Pow(x, n)&lt;/a&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/powx-n/&#34;&gt;Pow(x, n)&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Implement pow(x, n), which calculates x raised to the power n (x^n).&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;Example 1:&lt;/strong&gt;&lt;/p&gt;
-
 &lt;pre&gt;&lt;code&gt;Input: 2.00000, 10
 Output: 1024.00000
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;Example 2:&lt;/strong&gt;&lt;/p&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Example 2:&lt;/strong&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;Input: 2.10000, 3
 Output: 9.26100
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;Example 3:&lt;/strong&gt;&lt;/p&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Example 3:&lt;/strong&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;Input: 2.00000, -2
 Output: 0.25000
 Explanation: 2^{-2} = {1/2}^2 = 1/4 = 0.25
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt;&lt;/p&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;-100.0 &amp;lt; x &amp;lt; 100.0&lt;/li&gt;
 &lt;li&gt;n is a 32-bit signed integer, within the range [−2^31, 2^31 − 1]&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/blockquote&gt;
-
 &lt;p&gt;求&lt;code&gt;x&lt;/code&gt;的&lt;code&gt;n&lt;/code&gt;次方。&lt;/p&gt;</description>
     </item>
     
@@ -934,23 +725,16 @@ Explanation: 2^{-2} = {1/2}^2 = 1/4 = 0.25
       
       <guid>https://www.orztu.com/leetcode/061-rotate-list/</guid>
       <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/rotate-list/&#34; target=&#34;_blank&#34;&gt;Rotate List&lt;/a&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/rotate-list/&#34;&gt;Rotate List&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Given a linked list, rotate the list to the right by &lt;code&gt;k&lt;/code&gt; places, where &lt;code&gt;k&lt;/code&gt; is non-negative.&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;Example 1:&lt;/strong&gt;&lt;/p&gt;
-
 &lt;pre&gt;&lt;code&gt;Input: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;NULL, k = 2
 Output: 4-&amp;gt;5-&amp;gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;NULL
 Explanation:
 rotate 1 steps to the right: 5-&amp;gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;NULL
 rotate 2 steps to the right: 4-&amp;gt;5-&amp;gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;NULL
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;Example 2:&lt;/strong&gt;&lt;/p&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Example 2:&lt;/strong&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;Input: 0-&amp;gt;1-&amp;gt;2-&amp;gt;NULL, k = 4
 Output: 2-&amp;gt;0-&amp;gt;1-&amp;gt;NULL
 Explanation:
@@ -958,8 +742,7 @@ rotate 1 steps to the right: 2-&amp;gt;0-&amp;gt;1-&amp;gt;NULL
 rotate 2 steps to the right: 1-&amp;gt;2-&amp;gt;0-&amp;gt;NULL
 rotate 3 steps to the right: 0-&amp;gt;1-&amp;gt;2-&amp;gt;NULL
 rotate 4 steps to the right: 2-&amp;gt;0-&amp;gt;1-&amp;gt;NULL
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;</description>
+&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;</description>
     </item>
     
     <item>
@@ -969,14 +752,10 @@ rotate 4 steps to the right: 2-&amp;gt;0-&amp;gt;1-&amp;gt;NULL
       
       <guid>https://www.orztu.com/leetcode/060-permutation-sequence/</guid>
       <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/permutation-sequence&#34; target=&#34;_blank&#34;&gt;Permutation Sequence&lt;/a&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/permutation-sequence&#34;&gt;Permutation Sequence&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;The set &lt;code&gt;[1,2,3,...,n]&lt;/code&gt; contains a total of n! unique permutations.&lt;/p&gt;
-
 &lt;p&gt;By listing and labeling all of the permutations in order, we get the following sequence for n = 3:&lt;/p&gt;
-
 &lt;ol&gt;
 &lt;li&gt;&lt;code&gt;&amp;quot;123&amp;quot;&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;&amp;quot;132&amp;quot;&lt;/code&gt;&lt;/li&gt;
@@ -985,29 +764,19 @@ rotate 4 steps to the right: 2-&amp;gt;0-&amp;gt;1-&amp;gt;NULL
 &lt;li&gt;&lt;code&gt;&amp;quot;312&amp;quot;&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;&amp;quot;321&amp;quot;&lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;
-
 &lt;p&gt;Given &lt;code&gt;n&lt;/code&gt; and &lt;code&gt;k&lt;/code&gt;, return the &lt;code&gt;k-th&lt;/code&gt; permutation sequence.&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt;&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;Given n will be between 1 and 9 inclusive.&lt;/li&gt;
 &lt;li&gt;Given k will be between 1 and n! inclusive.&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;&lt;strong&gt;Example 1:&lt;/strong&gt;&lt;/p&gt;
-
 &lt;pre&gt;&lt;code&gt;Input: n = 3, k = 3
 Output: &amp;quot;213&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;Example 2:&lt;/strong&gt;&lt;/p&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Example 2:&lt;/strong&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;Input: n = 4, k = 9
 Output: &amp;quot;2314&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
 &lt;p&gt;假设存在长度为&lt;code&gt;n&lt;/code&gt;的数组：&lt;code&gt;[1,2,3,...,n]&lt;/code&gt;，输出第&lt;code&gt;k&lt;/code&gt;个排列。&lt;/p&gt;</description>
     </item>
     
@@ -1018,14 +787,10 @@ Output: &amp;quot;2314&amp;quot;
       
       <guid>https://www.orztu.com/leetcode/059-spiral-matrix-ii/</guid>
       <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/spiral-matrix-ii/&#34; target=&#34;_blank&#34;&gt;Spiral Matrix II&lt;/a&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/spiral-matrix-ii/&#34;&gt;Spiral Matrix II&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Given a positive integer n, generate a square matrix filled with elements from 1 to n^2 in spiral order.&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;Example:&lt;/strong&gt;&lt;/p&gt;
-
 &lt;pre&gt;&lt;code&gt;Input: 3
 Output:
 [
@@ -1033,8 +798,7 @@ Output:
  [ 8, 9, 4 ],
  [ 7, 6, 5 ]
 ]
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;</description>
+&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;</description>
     </item>
     
     <item>
@@ -1044,23 +808,15 @@ Output:
       
       <guid>https://www.orztu.com/leetcode/058-length-of-last-word/</guid>
       <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/length-of-last-word/&#34; target=&#34;_blank&#34;&gt;Length of Last Word&lt;/a&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/length-of-last-word/&#34;&gt;Length of Last Word&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Given a string s consists of upper/lower-case alphabets and empty space characters &amp;lsquo; &amp;lsquo;, return the length of last word in the string.&lt;/p&gt;
-
+&lt;p&gt;Given a string s consists of upper/lower-case alphabets and empty space characters &#39; &amp;lsquo;, return the length of last word in the string.&lt;/p&gt;
 &lt;p&gt;If the last word does not exist, return 0.&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; A word is defined as a character sequence consists of non-space characters only.&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;Example:&lt;/strong&gt;&lt;/p&gt;
-
 &lt;pre&gt;&lt;code&gt;Input: &amp;quot;Hello World&amp;quot;
 Output: 5
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
 &lt;p&gt;求给出的字符串中最后一个单词的长度。&lt;/p&gt;</description>
     </item>
     
@@ -1071,28 +827,18 @@ Output: 5
       
       <guid>https://www.orztu.com/leetcode/057-insert-interval/</guid>
       <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/insert-interval&#34; target=&#34;_blank&#34;&gt;Insert Interval&lt;/a&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/insert-interval&#34;&gt;Insert Interval&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Given a set of non-overlapping intervals, insert a new interval into the intervals (merge if necessary).&lt;/p&gt;
-
 &lt;p&gt;You may assume that the intervals were initially sorted according to their start times.&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;Example 1:&lt;/strong&gt;&lt;/p&gt;
-
 &lt;pre&gt;&lt;code&gt;Input: intervals = [[1,3],[6,9]], newInterval = [2,5]
 Output: [[1,5],[6,9]]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;Example 2:&lt;/strong&gt;&lt;/p&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Example 2:&lt;/strong&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;Input: intervals = [[1,2],[3,5],[6,7],[8,10],[12,16]], newInterval = [4,8]
 Output: [[1,2],[3,10],[12,16]]
 Explanation: Because the new interval [4,8] overlaps with [3,5],[6,7],[8,10].
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
 &lt;p&gt;在给出的有序区间中插入新的区间，需要合并相邻的区间。&lt;/p&gt;</description>
     </item>
     
@@ -1103,27 +849,18 @@ Explanation: Because the new interval [4,8] overlaps with [3,5],[6,7],[8,10].
       
       <guid>https://www.orztu.com/leetcode/056-merge-intervals/</guid>
       <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/merge-intervals&#34; target=&#34;_blank&#34;&gt;Merge Intervals&lt;/a&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/merge-intervals&#34;&gt;Merge Intervals&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Given a collection of intervals, merge all overlapping intervals.&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;Example 1:&lt;/strong&gt;&lt;/p&gt;
-
 &lt;pre&gt;&lt;code&gt;Input: [[1,3],[2,6],[8,10],[15,18]]
 Output: [[1,6],[8,10],[15,18]]
 Explanation: Since intervals [1,3] and [2,6] overlaps, merge them into [1,6].
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;Example 2:&lt;/strong&gt;&lt;/p&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Example 2:&lt;/strong&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;Input: [[1,4],[4,5]]
 Output: [[1,5]]
 Explanation: Intervals [1,4] and [4,5] are considerred overlapping.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
 &lt;p&gt;合并区间重叠/相邻的区间。&lt;/p&gt;</description>
     </item>
     
@@ -1134,34 +871,22 @@ Explanation: Intervals [1,4] and [4,5] are considerred overlapping.
       
       <guid>https://www.orztu.com/leetcode/055-jump-game/</guid>
       <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/jump-game/&#34; target=&#34;_blank&#34;&gt;Jump Game&lt;/a&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/jump-game/&#34;&gt;Jump Game&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Given an array of non-negative integers, you are initially positioned at the first index of the array.&lt;/p&gt;
-
 &lt;p&gt;Each element in the array represents your maximum jump length at that position.&lt;/p&gt;
-
 &lt;p&gt;Determine if you are able to reach the last index.&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;Example 1:&lt;/strong&gt;&lt;/p&gt;
-
 &lt;pre&gt;&lt;code&gt;Input: [2,3,1,1,4]
 Output: true
 Explanation: Jump 1 step from index 0 to 1, then 3 steps to the last index.
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;Example 2:&lt;/strong&gt;&lt;/p&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Example 2:&lt;/strong&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;Input: [3,2,1,0,4]
 Output: false
 Explanation: You will always arrive at index 3 no matter what. Its maximum
              jump length is 0, which makes it impossible to reach the last index.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
 &lt;p&gt;给定一个非负整型数组，每个数字表示可以从该位置向后跳跃的最大步数。&lt;/p&gt;
-
 &lt;p&gt;判断是否能从第一个数字开始跳跃到最后一个数字。&lt;/p&gt;</description>
     </item>
     
@@ -1172,14 +897,10 @@ Explanation: You will always arrive at index 3 no matter what. Its maximum
       
       <guid>https://www.orztu.com/leetcode/054-spiral-matrix/</guid>
       <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/spiral-matrix/&#34; target=&#34;_blank&#34;&gt;Spiral Matrix&lt;/a&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/spiral-matrix/&#34;&gt;Spiral Matrix&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Given a matrix of m x n elements (m rows, n columns), return all elements of the matrix in spiral order.&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;Example 1:&lt;/strong&gt;&lt;/p&gt;
-
 &lt;pre&gt;&lt;code&gt;Input:
 [
  [ 1, 2, 3 ],
@@ -1187,10 +908,7 @@ Explanation: You will always arrive at index 3 no matter what. Its maximum
  [ 7, 8, 9 ]
 ]
 Output: [1,2,3,6,9,8,7,4,5]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;Example 2:&lt;/strong&gt;&lt;/p&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Example 2:&lt;/strong&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;Input:
 [
   [1, 2, 3, 4],
@@ -1198,9 +916,7 @@ Output: [1,2,3,6,9,8,7,4,5]
   [9,10,11,12]
 ]
 Output: [1,2,3,4,8,12,11,10,9,5,6,7]
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
 &lt;p&gt;从外向内螺旋形遍历矩阵。&lt;/p&gt;</description>
     </item>
     
@@ -1211,16 +927,12 @@ Output: [1,2,3,4,8,12,11,10,9,5,6,7]
       
       <guid>https://www.orztu.com/leetcode/062-unique-paths/</guid>
       <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/unique-paths/&#34; target=&#34;_blank&#34;&gt;Unique Paths&lt;/a&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/unique-paths/&#34;&gt;Unique Paths&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;A robot is located at the top-left corner of a m x n grid (marked &amp;lsquo;Start&amp;rsquo; in the diagram below).&lt;/p&gt;
-
 &lt;p&gt;The robot can only move either down or right at any point in time. The robot is trying to reach the bottom-right corner of the grid (marked &amp;lsquo;Finish&amp;rsquo; in the diagram below).&lt;/p&gt;
-
 &lt;p&gt;How many possible unique paths are there?
-&lt;img src=&#34;https://www.orztu.com/images/leetcode/062-unique-paths-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;https://www.orztu.com/images/leetcode/062-unique-paths-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;/blockquote&gt;</description>
     </item>
     
@@ -1230,38 +942,24 @@ Output: [1,2,3,4,8,12,11,10,9,5,6,7]
       <pubDate>Fri, 27 Jul 2018 08:59:07 +0800</pubDate>
       
       <guid>https://www.orztu.com/leetcode/041-first-missing-positive/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/first-missing-positive/&#34; target=&#34;_blank&#34;&gt;First Missing Positive&lt;/a&gt;&lt;/p&gt;
-
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/first-missing-positive/&#34;&gt;First Missing Positive&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;Given an unsorted integer array, find the smallest missing positive integer.&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;Example 1:&lt;/strong&gt;&lt;/p&gt;
-
 &lt;pre&gt;&lt;code&gt;Input: [1,2,0]
 Output: 3
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;Example 2:&lt;/strong&gt;&lt;/p&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Example 2:&lt;/strong&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;Input: [3,4,-1,1]
 Output: 2
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;Example 3:&lt;/strong&gt;&lt;/p&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Example 3:&lt;/strong&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;Input: [7,8,9,11,12]
 Output: 1
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt;&lt;/p&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Your algorithm should run in O(n) time and uses constant extra space.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/blockquote&gt;
-
 &lt;p&gt;使用&lt;code&gt;O(n)&lt;/code&gt;的时间复杂度和&lt;code&gt;O(1)&lt;/code&gt;的空间在无序数组中查找第一个缺失的正数。&lt;/p&gt;</description>
     </item>
     
@@ -1271,24 +969,17 @@ Output: 1
       <pubDate>Thu, 26 Jul 2018 15:35:19 +0800</pubDate>
       
       <guid>https://www.orztu.com/leetcode/043-multiply-strings/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/multiply-strings/&#34; target=&#34;_blank&#34;&gt;Multiply Strings&lt;/a&gt;&lt;/p&gt;
-
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/multiply-strings/&#34;&gt;Multiply Strings&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;Given two non-negative integers &lt;code&gt;num1&lt;/code&gt; and &lt;code&gt;num2&lt;/code&gt; represented as strings, return the product of &lt;code&gt;num1&lt;/code&gt; and &lt;code&gt;num2&lt;/code&gt;, also represented as a string.&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;Example 1:&lt;/strong&gt;&lt;/p&gt;
-
 &lt;p&gt;Input: num1 = &amp;ldquo;2&amp;rdquo;, num2 = &amp;ldquo;3&amp;rdquo;
 Output: &amp;ldquo;6&amp;rdquo;&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;Example 2:&lt;/strong&gt;&lt;/p&gt;
-
 &lt;p&gt;Input: num1 = &amp;ldquo;123&amp;rdquo;, num2 = &amp;ldquo;456&amp;rdquo;
 Output: &amp;ldquo;56088&amp;rdquo;&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;p&gt;将两个字符串表示的数字相乘（大数相乘）。&lt;/p&gt;</description>
     </item>
     
@@ -1298,17 +989,12 @@ Output: &amp;ldquo;56088&amp;rdquo;&lt;/p&gt;
       <pubDate>Thu, 26 Jul 2018 10:39:33 +0800</pubDate>
       
       <guid>https://www.orztu.com/leetcode/040-combination-sum-ii/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/combination-sum-ii/&#34; target=&#34;_blank&#34;&gt;Combination Sum II&lt;/a&gt;&lt;/p&gt;
-
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/combination-sum-ii/&#34;&gt;Combination Sum II&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;Given a collection of candidate numbers (&lt;code&gt;candidates&lt;/code&gt;) and a target number (&lt;code&gt;target&lt;/code&gt;), find all unique combinations in candidates where the &lt;code&gt;candidate&lt;/code&gt; numbers sums to &lt;code&gt;target&lt;/code&gt;.&lt;/p&gt;
-
 &lt;p&gt;Each number in &lt;code&gt;candidates&lt;/code&gt; may only be used once in the combination.&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt;&lt;/p&gt;
-
 &lt;p&gt;All numbers (including &lt;code&gt;target&lt;/code&gt;) will be positive integers.
 The solution set must not contain duplicate combinations.&lt;/p&gt;
 &lt;/blockquote&gt;</description>
@@ -1320,17 +1006,12 @@ The solution set must not contain duplicate combinations.&lt;/p&gt;
       <pubDate>Thu, 26 Jul 2018 10:16:53 +0800</pubDate>
       
       <guid>https://www.orztu.com/leetcode/039-combination-sum/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/combination-sum/&#34; target=&#34;_blank&#34;&gt;Combination Sum&lt;/a&gt;&lt;/p&gt;
-
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/combination-sum/&#34;&gt;Combination Sum&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;Given a set of candidate numbers (&lt;code&gt;candidates&lt;/code&gt;) (without duplicates) and a target number (&lt;code&gt;target&lt;/code&gt;), find all unique combinations in &lt;code&gt;candidates&lt;/code&gt; where the candidate numbers sums to &lt;code&gt;target&lt;/code&gt;.&lt;/p&gt;
-
 &lt;p&gt;The &lt;strong&gt;same&lt;/strong&gt; repeated number may be chosen from candidates unlimited number of times.&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt;&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;All numbers (including &lt;code&gt;target&lt;/code&gt;) will be positive integers.&lt;/li&gt;
 &lt;li&gt;The solution set must not contain duplicate combinations.&lt;/li&gt;
@@ -1344,25 +1025,19 @@ The solution set must not contain duplicate combinations.&lt;/p&gt;
       <pubDate>Thu, 26 Jul 2018 09:22:05 +0800</pubDate>
       
       <guid>https://www.orztu.com/leetcode/036-valid-sudoku/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/valid-sudoku/&#34; target=&#34;_blank&#34;&gt;Valid Sudoku&lt;/a&gt;&lt;/p&gt;
-
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/valid-sudoku/&#34;&gt;Valid Sudoku&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;Determine if a 9x9 Sudoku board is valid. Only the filled cells need to be validated according to the following rules:&lt;/p&gt;
-
 &lt;ol&gt;
 &lt;li&gt;Each row must contain the digits &lt;code&gt;1-9&lt;/code&gt; without repetition.&lt;/li&gt;
 &lt;li&gt;Each column must contain the digits &lt;code&gt;1-9&lt;/code&gt; without repetition.&lt;/li&gt;
 &lt;li&gt;Each of the 9 &lt;code&gt;3x3&lt;/code&gt; sub-boxes of the grid must contain the digits &lt;code&gt;1-9&lt;/code&gt; without repetition.&lt;/li&gt;
 &lt;/ol&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.orztu.com/images/leetcode/Sudoku-Solver-1.png&#34; alt=&#34;&#34; title=&#34;数独&#34; /&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.orztu.com/images/leetcode/Sudoku-Solver-1.png&#34; alt=&#34;&#34; title=&#34;数独&#34;&gt;
 A partially filled sudoku which is valid.&lt;/p&gt;
-
 &lt;p&gt;The Sudoku board could be partially filled, where empty cells are filled with the character &lt;code&gt;&#39;.&#39;&lt;/code&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;p&gt;验证数独&lt;/p&gt;</description>
     </item>
     
@@ -1372,20 +1047,14 @@ A partially filled sudoku which is valid.&lt;/p&gt;
       <pubDate>Wed, 25 Jul 2018 14:28:45 +0800</pubDate>
       
       <guid>https://www.orztu.com/leetcode/033-search-in-rotated-sorted-array/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/search-in-rotated-sorted-array/&#34; target=&#34;_blank&#34;&gt;Search in Rotated Sorted Array&lt;/a&gt;&lt;/p&gt;
-
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/search-in-rotated-sorted-array/&#34;&gt;Search in Rotated Sorted Array&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.&lt;/p&gt;
-
 &lt;p&gt;(i.e., &lt;code&gt;[0,1,2,4,5,6,7]&lt;/code&gt; might become &lt;code&gt;[4,5,6,7,0,1,2]&lt;/code&gt;).&lt;/p&gt;
-
 &lt;p&gt;You are given a target value to search. If found in the array return its index, otherwise return &lt;code&gt;-1&lt;/code&gt;.&lt;/p&gt;
-
 &lt;p&gt;You may assume no duplicate exists in the array.&lt;/p&gt;
-
-&lt;p&gt;Your algorithm&amp;rsquo;s runtime complexity must be in the order of &lt;code&gt;O(log n)&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Your algorithm&#39;s runtime complexity must be in the order of &lt;code&gt;O(log n)&lt;/code&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;</description>
     </item>
     
@@ -1395,30 +1064,17 @@ A partially filled sudoku which is valid.&lt;/p&gt;
       <pubDate>Wed, 25 Jul 2018 09:56:49 +0800</pubDate>
       
       <guid>https://www.orztu.com/leetcode/032-longest-valid-parentheses/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/longest-valid-parentheses/&#34; target=&#34;_blank&#34;&gt;Longest Valid Parentheses&lt;/a&gt;&lt;/p&gt;
-
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/longest-valid-parentheses/&#34;&gt;Longest Valid Parentheses&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;Given a string containing just the characters &lt;code&gt;&#39;(&#39;&lt;/code&gt; and &lt;code&gt;&#39;)&#39;&lt;/code&gt;, find the length of the longest valid (well-formed) parentheses substring.
-&lt;br&gt;&lt;br&gt;
+&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;
 &lt;strong&gt;Example 1:&lt;/strong&gt;&lt;/p&gt;
-
 &lt;pre&gt;&lt;code&gt;Input: &amp;quot;(()&amp;quot;
 Output: 2
 Explanation: The longest valid parentheses substring is &amp;quot;()&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;br&gt;
-&lt;strong&gt;Example 2:&lt;/strong&gt;
-&lt;br&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;Input: &amp;quot;)()())&amp;quot;
-Output: 4
-Explanation: The longest valid parentheses substring is &amp;quot;()()&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;!-- raw HTML omitted --&gt;
 &lt;/blockquote&gt;
-
 &lt;p&gt;输出最长的左右括号匹配的子串长度&lt;/p&gt;</description>
     </item>
     
@@ -1428,24 +1084,17 @@ Explanation: The longest valid parentheses substring is &amp;quot;()()&amp;quot;
       <pubDate>Thu, 19 Jul 2018 10:17:07 +0800</pubDate>
       
       <guid>https://www.orztu.com/leetcode/031-next-permutation/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/next-permutation/&#34; target=&#34;_blank&#34;&gt;Next Permutation&lt;/a&gt;&lt;/p&gt;
-
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/next-permutation/&#34;&gt;Next Permutation&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;Implement next permutation, which rearranges numbers into the lexicographically next greater permutation of numbers.&lt;/p&gt;
-
 &lt;p&gt;If such arrangement is not possible, it must rearrange it as the lowest possible order (ie, sorted in ascending order).&lt;/p&gt;
-
 &lt;p&gt;The replacement must be in-place and use only constant extra memory.&lt;/p&gt;
-
 &lt;p&gt;Here are some examples. Inputs are in the left-hand column and its corresponding outputs are in the right-hand column.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;1,2,3&lt;/code&gt; → &lt;code&gt;1,3,2&lt;/code&gt;&lt;br&gt;
-&lt;code&gt;3,2,1&lt;/code&gt; → &lt;code&gt;1,2,3&lt;/code&gt;&lt;br&gt;
-&lt;code&gt;1,1,5&lt;/code&gt; → &lt;code&gt;1,5,1&lt;/code&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;1,2,3&lt;/code&gt; → &lt;code&gt;1,3,2&lt;/code&gt;&lt;!-- raw HTML omitted --&gt;
+&lt;code&gt;3,2,1&lt;/code&gt; → &lt;code&gt;1,2,3&lt;/code&gt;&lt;!-- raw HTML omitted --&gt;
+&lt;code&gt;1,1,5&lt;/code&gt; → &lt;code&gt;1,5,1&lt;/code&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;p&gt;实现字典序排列的 nextPermutation 方法，假如已经是最大排列，则输出最小排列。&lt;/p&gt;</description>
     </item>
     
@@ -1455,16 +1104,12 @@ Explanation: The longest valid parentheses substring is &amp;quot;()()&amp;quot;
       <pubDate>Fri, 30 Mar 2018 16:59:00 +0800</pubDate>
       
       <guid>https://www.orztu.com/leetcode/029-divide-two-integers/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/divide-two-integers/&#34; target=&#34;_blank&#34;&gt;Divide Two Integers&lt;/a&gt;&lt;/p&gt;
-
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/divide-two-integers/&#34;&gt;Divide Two Integers&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;Divide two integers without using multiplication, division and mod operator.&lt;/p&gt;
-
 &lt;p&gt;If it is overflow, return MAX_INT.&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;p&gt;不使用乘法、除法、取余实现两个整数相除。&lt;/p&gt;</description>
     </item>
     
@@ -1474,28 +1119,21 @@ Explanation: The longest valid parentheses substring is &amp;quot;()()&amp;quot;
       <pubDate>Fri, 29 Dec 2017 14:23:13 +0800</pubDate>
       
       <guid>https://www.orztu.com/leetcode/025-reverse-nodes-in-k-group/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/reverse-nodes-in-k-group/&#34; target=&#34;_blank&#34;&gt;Reverse Nodes in k-Group&lt;/a&gt;&lt;/p&gt;
-
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/reverse-nodes-in-k-group/&#34;&gt;Reverse Nodes in k-Group&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
 &lt;blockquote&gt;
-&lt;p&gt;Given a linked list, reverse the nodes of a linked list k at a time and return its modified list.&lt;br&gt;
-&lt;br&gt;
-k is a positive integer and is less than or equal to the length of the linked list. If the number of nodes is not a multiple of k then left-out nodes in the end should remain as it is.&lt;br&gt;
-&lt;br&gt;
+&lt;p&gt;Given a linked list, reverse the nodes of a linked list k at a time and return its modified list.&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+k is a positive integer and is less than or equal to the length of the linked list. If the number of nodes is not a multiple of k then left-out nodes in the end should remain as it is.&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
 You may not alter the values in the nodes, only nodes itself may be changed.&lt;/p&gt;
-
-&lt;p&gt;Only constant memory is allowed.&lt;br&gt;
-&lt;br&gt;
+&lt;p&gt;Only constant memory is allowed.&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
 For example,&lt;/p&gt;
-
 &lt;p&gt;Given this linked list: &lt;code&gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5&lt;/code&gt;&lt;/p&gt;
-
 &lt;p&gt;For k = 2, you should return: &lt;code&gt;2-&amp;gt;1-&amp;gt;4-&amp;gt;3-&amp;gt;5&lt;/code&gt;&lt;/p&gt;
-
 &lt;p&gt;For k = 3, you should return: &lt;code&gt;3-&amp;gt;2-&amp;gt;1-&amp;gt;4-&amp;gt;5&lt;/code&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;p&gt;将链表按长度&lt;code&gt;k&lt;/code&gt;分组并反转&lt;/p&gt;</description>
     </item>
     
@@ -1505,14 +1143,11 @@ For example,&lt;/p&gt;
       <pubDate>Fri, 24 Nov 2017 14:55:46 +0800</pubDate>
       
       <guid>https://www.orztu.com/leetcode/023-merge-k-sorted-lists/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/merge-k-sorted-lists/description/&#34; target=&#34;_blank&#34;&gt;Merge k Sorted Lists&lt;/a&gt;&lt;/p&gt;
-
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/merge-k-sorted-lists/description/&#34;&gt;Merge k Sorted Lists&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;Merge k sorted linked lists and return it as one sorted list. Analyze and describe its complexity.&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;p&gt;将&lt;code&gt;k&lt;/code&gt;个有序链表合并为一个链表&lt;/p&gt;</description>
     </item>
     
@@ -1522,15 +1157,13 @@ For example,&lt;/p&gt;
       <pubDate>Wed, 22 Nov 2017 11:32:00 +0800</pubDate>
       
       <guid>https://www.orztu.com/leetcode/022-generate-parentheses/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/generate-parentheses/&#34; target=&#34;_blank&#34;&gt;Generate Parentheses&lt;/a&gt;&lt;/p&gt;
-
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/generate-parentheses/&#34;&gt;Generate Parentheses&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.&lt;/p&gt;
-
+&lt;/blockquote&gt;
 &lt;p&gt;For example, given n = 3, a solution set is:&lt;/p&gt;
-
+&lt;blockquote&gt;
 &lt;pre&gt;&lt;code&gt;[
   &amp;quot;((()))&amp;quot;,
   &amp;quot;(()())&amp;quot;,
@@ -1538,9 +1171,7 @@ For example,&lt;/p&gt;
   &amp;quot;()(())&amp;quot;,
   &amp;quot;()()()&amp;quot;
 ]
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
 &lt;p&gt;给出n组括号，生成所有正确的匹配组合&lt;/p&gt;</description>
     </item>
     
@@ -1550,14 +1181,11 @@ For example,&lt;/p&gt;
       <pubDate>Wed, 22 Nov 2017 09:15:44 +0800</pubDate>
       
       <guid>https://www.orztu.com/leetcode/021-merge-two-sorted-lists/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/merge-two-sorted-lists/&#34; target=&#34;_blank&#34;&gt;Merge Two Sorted Lists&lt;/a&gt;&lt;/p&gt;
-
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/merge-two-sorted-lists/&#34;&gt;Merge Two Sorted Lists&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;Merge two sorted linked lists and return it as a new list. The new list should be made by splicing together the nodes of the first two lists.&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;p&gt;将两个有序链表合二为一&lt;/p&gt;</description>
     </item>
     
@@ -1567,16 +1195,13 @@ For example,&lt;/p&gt;
       <pubDate>Mon, 30 Oct 2017 19:25:35 +0800</pubDate>
       
       <guid>https://www.orztu.com/leetcode/020-valid-parentheses/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/valid-parentheses/&#34; target=&#34;_blank&#34;&gt;Valid Parentheses&lt;/a&gt;&lt;/p&gt;
-
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/valid-parentheses/&#34;&gt;Valid Parentheses&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;Given a string containing just the characters &lt;code&gt;&#39;(&#39;&lt;/code&gt;, &lt;code&gt;&#39;)&#39;&lt;/code&gt;, &lt;code&gt;&#39;{&#39;&lt;/code&gt;, &lt;code&gt;&#39;}&#39;&lt;/code&gt;, &lt;code&gt;&#39;[&#39;&lt;/code&gt; and &lt;code&gt;&#39;]&#39;&lt;/code&gt;, determine if the input string is valid.
-&lt;/br&gt; &lt;/br&gt;
+&lt;!-- raw HTML omitted --&gt; &lt;!-- raw HTML omitted --&gt;
 The brackets must close in the correct order, &lt;code&gt;&amp;quot;()&amp;quot;&lt;/code&gt; and &lt;code&gt;&amp;quot;()[]{}&amp;quot;&lt;/code&gt; are all valid but &lt;code&gt;&amp;quot;(]&amp;quot;&lt;/code&gt; and &lt;code&gt;&amp;quot;([)]&amp;quot;&lt;/code&gt; are not.&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;p&gt;给出包含三种括号的字符串，验证括号是否左右匹配&lt;/p&gt;</description>
     </item>
     
@@ -1586,23 +1211,17 @@ The brackets must close in the correct order, &lt;code&gt;&amp;quot;()&amp;quot;
       <pubDate>Thu, 19 Oct 2017 21:03:59 +0800</pubDate>
       
       <guid>https://www.orztu.com/leetcode/019-remove-nth-node-from-end-of-list/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/remove-nth-node-from-end-of-list/&#34; target=&#34;_blank&#34;&gt;Remove Nth Node From End of List&lt;/a&gt;&lt;/p&gt;
-
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/remove-nth-node-from-end-of-list/&#34;&gt;Remove Nth Node From End of List&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;Given a linked list, remove the nth node from the end of list and return its head.&lt;/p&gt;
-
 &lt;pre&gt;&lt;code&gt;For example,
    Given linked list: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5, and n = 2.
    After removing the second node from the end, the linked list becomes 1-&amp;gt;2-&amp;gt;3-&amp;gt;5.
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;:
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;:
 Given n will always be valid.
 Try to do this in one pass.&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;p&gt;从链表中删除倒数第n个结点（n必定有效）&lt;/p&gt;</description>
     </item>
     
@@ -1612,15 +1231,11 @@ Try to do this in one pass.&lt;/p&gt;
       <pubDate>Tue, 17 Oct 2017 16:27:33 +0800</pubDate>
       
       <guid>https://www.orztu.com/leetcode/018-4sum/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/4sum/&#34; target=&#34;_blank&#34;&gt;4Sum&lt;/a&gt;&lt;/p&gt;
-
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/4sum/&#34;&gt;4Sum&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;Given an array S of n integers, are there elements a, b, c, and d in S such that a + b + c + d = target? Find all unique quadruplets in the array which gives the sum of target.&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: The solution set must not contain duplicate quadruplets.&lt;/p&gt;
-
 &lt;pre&gt;&lt;code&gt;For example, given array S = [1, 0, -1, 0, -2, 2], and target = 0.
 
 A solution set is:
@@ -1629,9 +1244,7 @@ A solution set is:
   [-2, -1, 1, 2],
   [-2,  0, 0, 2]
 ]
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
 &lt;p&gt;在给定数组中找出“和为 target 的四个数”的所有解。&lt;/p&gt;</description>
     </item>
     
@@ -1641,22 +1254,17 @@ A solution set is:
       <pubDate>Tue, 17 Oct 2017 14:39:40 +0800</pubDate>
       
       <guid>https://www.orztu.com/leetcode/017-letter-combinations-of-a-phone-number/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/letter-combinations-of-a-phone-number/&#34; target=&#34;_blank&#34;&gt;Letter Combinations of a Phone Number&lt;/a&gt;&lt;/p&gt;
-
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/letter-combinations-of-a-phone-number/&#34;&gt;Letter Combinations of a Phone Number&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;Given a digit string, return all possible letter combinations that the number could represent.&lt;/p&gt;
-
 &lt;p&gt;A mapping of digit to letters (just like on the telephone buttons) is given below.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Telephone-keypad2.svg/200px-Telephone-keypad2.svg.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Telephone-keypad2.svg/200px-Telephone-keypad2.svg.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
 &lt;pre&gt;&lt;code&gt;Input: Digit string &amp;quot;23&amp;quot;
 Output: [&amp;quot;ad&amp;quot;, &amp;quot;ae&amp;quot;, &amp;quot;af&amp;quot;, &amp;quot;bd&amp;quot;, &amp;quot;be&amp;quot;, &amp;quot;bf&amp;quot;, &amp;quot;cd&amp;quot;, &amp;quot;ce&amp;quot;, &amp;quot;cf&amp;quot;].
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
 &lt;p&gt;输入九宫格输入法数字，输出对应的所有字母组合&lt;/p&gt;</description>
     </item>
     
@@ -1666,15 +1274,11 @@ Output: [&amp;quot;ad&amp;quot;, &amp;quot;ae&amp;quot;, &amp;quot;af&amp;quot;,
       <pubDate>Fri, 28 Jul 2017 08:54:12 +0800</pubDate>
       
       <guid>https://www.orztu.com/leetcode/015-3sum/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/3sum/&#34; target=&#34;_blank&#34;&gt;3Sum&lt;/a&gt;&lt;/p&gt;
-
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/3sum/&#34;&gt;3Sum&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;Given an array S of n integers, are there elements a, b, c in S such that a + b + c = 0? Find all unique triplets in the array which gives the sum of zero.&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; The solution set must not contain duplicate triplets.&lt;/p&gt;
-
 &lt;pre&gt;&lt;code&gt;For example, given array S = [-1, 0, 1, 2, -1, -4],
 
 A solution set is:
@@ -1682,9 +1286,7 @@ A solution set is:
   [-1, 0, 1],
   [-1, -1, 2]
 ]
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
 &lt;p&gt;在给定数组中找出“和为0的三个数”的所有解。&lt;/p&gt;</description>
     </item>
     
@@ -1694,16 +1296,13 @@ A solution set is:
       <pubDate>Fri, 07 Jul 2017 14:43:41 +0800</pubDate>
       
       <guid>https://www.orztu.com/leetcode/013-roman-to-integer/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/roman-to-integer/&#34; target=&#34;_blank&#34;&gt;Roman to Integer&lt;/a&gt;&lt;/p&gt;
-
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/roman-to-integer/&#34;&gt;Roman to Integer&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
 &lt;blockquote&gt;
-&lt;p&gt;Given a roman numeral, convert it to an integer.&lt;br&gt;
-&lt;br&gt;
+&lt;p&gt;Given a roman numeral, convert it to an integer.&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
 Input is guaranteed to be within the range from 1 to 3999.&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;p&gt;将罗马数字转换成整型。&lt;/p&gt;</description>
     </item>
     
@@ -1713,16 +1312,13 @@ Input is guaranteed to be within the range from 1 to 3999.&lt;/p&gt;
       <pubDate>Fri, 07 Jul 2017 09:18:49 +0800</pubDate>
       
       <guid>https://www.orztu.com/leetcode/012-integer-to-roman/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/integer-to-roman/&#34; target=&#34;_blank&#34;&gt;Integer to Roman&lt;/a&gt;&lt;/p&gt;
-
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/integer-to-roman/&#34;&gt;Integer to Roman&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
 &lt;blockquote&gt;
-&lt;p&gt;Given an integer, convert it to a roman numeral. &lt;br&gt;
-&lt;br&gt;
+&lt;p&gt;Given an integer, convert it to a roman numeral. &lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
 Input is guaranteed to be within the range from 1 to 3999.&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;p&gt;将整型转换成罗马数字形式:&lt;/p&gt;</description>
     </item>
     
@@ -1732,16 +1328,13 @@ Input is guaranteed to be within the range from 1 to 3999.&lt;/p&gt;
       <pubDate>Thu, 06 Jul 2017 14:09:43 +0800</pubDate>
       
       <guid>https://www.orztu.com/leetcode/011-container-with-most-water/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/container-with-most-water/&#34; target=&#34;_blank&#34;&gt;Container With Most Water&lt;/a&gt;&lt;/p&gt;
-
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/container-with-most-water/&#34;&gt;Container With Most Water&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
 &lt;blockquote&gt;
-&lt;p&gt;Given n non-negative integers a1, a2, &amp;hellip;, an, where each represents a point at coordinate (i, ai). n vertical lines are drawn such that the two endpoints of line i is at (i, ai) and (i, 0). Find two lines, which together with x-axis forms a container, such that the container contains the most water.&lt;br&gt;
-&lt;br&gt;
+&lt;p&gt;Given n non-negative integers a1, a2, &amp;hellip;, an, where each represents a point at coordinate (i, ai). n vertical lines are drawn such that the two endpoints of line i is at (i, ai) and (i, 0). Find two lines, which together with x-axis forms a container, such that the container contains the most water.&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
 Note: You may not slant the container and n is at least 2.&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;p&gt;给出n个点，它们与X轴有n条垂线，每两条垂线与X轴形成的U型容器，找出最大“容积”(面积）&lt;/p&gt;</description>
     </item>
     
@@ -1751,16 +1344,12 @@ Note: You may not slant the container and n is at least 2.&lt;/p&gt;
       <pubDate>Thu, 04 May 2017 16:23:01 +0800</pubDate>
       
       <guid>https://www.orztu.com/leetcode/051-n-queens/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/n-queens/&#34; target=&#34;_blank&#34;&gt;N-Queens&lt;/a&gt;&lt;/p&gt;
-
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/n-queens/&#34;&gt;N-Queens&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;The &lt;em&gt;n-queens&lt;/em&gt; puzzle is the problem of placing n queens on an n×n chessboard such that no two queens attack each other.
-&lt;img src=&#34;https://www.orztu.com/images/leetcode/8-queens.png&#34; alt=&#34;palindromic&#34; title=&#34;数独&#34; /&gt;&lt;/p&gt;
-
+&lt;img src=&#34;https://www.orztu.com/images/leetcode/8-queens.png&#34; alt=&#34;palindromic&#34; title=&#34;数独&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Given an integer n, return all distinct solutions to the n-queens puzzle.&lt;/p&gt;
-
 &lt;p&gt;Each solution contains a distinct board configuration of the &lt;em&gt;n-queens&lt;/em&gt;&amp;rsquo; placement, where &lt;code&gt;&#39;Q&#39;&lt;/code&gt; and &lt;code&gt;&#39;.&#39;&lt;/code&gt; both indicate a queen and an empty space respectively.&lt;/p&gt;
 &lt;/blockquote&gt;</description>
     </item>
@@ -1771,17 +1360,13 @@ Note: You may not slant the container and n is at least 2.&lt;/p&gt;
       <pubDate>Fri, 28 Apr 2017 10:01:32 +0800</pubDate>
       
       <guid>https://www.orztu.com/leetcode/042-trapping-rain-water/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/trapping-rain-water/&#34; target=&#34;_blank&#34;&gt;Trapping Rain Water&lt;/a&gt;&lt;/p&gt;
-
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/trapping-rain-water/&#34;&gt;Trapping Rain Water&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how &amp;gt;much water it is able to trap after raining.&lt;/p&gt;
-
 &lt;p&gt;For example,
 Given &lt;code&gt;[0,1,0,2,1,0,1,3,2,1,2,1]&lt;/code&gt;, return &lt;code&gt;6&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.orztu.com/images/leetcode/rainwatertrap-1.png&#34; alt=&#34;palindromic&#34; /&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.orztu.com/images/leetcode/rainwatertrap-1.png&#34; alt=&#34;palindromic&#34;&gt;
 The above elevation map is represented by array [0,1,0,2,1,0,1,3,2,1,2,1]. In this case, 6 units of rain water (blue section) are being trapped. Thanks Marcos for contributing this image!&lt;/p&gt;
 &lt;/blockquote&gt;</description>
     </item>
@@ -1792,19 +1377,16 @@ The above elevation map is represented by array [0,1,0,2,1,0,1,3,2,1,2,1]. In th
       <pubDate>Sat, 22 Apr 2017 11:35:12 +0800</pubDate>
       
       <guid>https://www.orztu.com/leetcode/037-sudoku-solver/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/sudoku-solver/&#34; target=&#34;_blank&#34;&gt;Sudoku Solver&lt;/a&gt;&lt;/p&gt;
-
-&lt;!-- ![palindromic](/images/leetcode/Sudoku-Solver-1.png &#34;数独&#34;) --&gt;
-
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/sudoku-solver/&#34;&gt;Sudoku Solver&lt;/a&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;Write a program to solve a Sudoku puzzle by filling the empty cells.
-&lt;br&gt;
-&lt;br&gt;
-Empty cells are indicated by the character &amp;lsquo;.&amp;rsquo;.
-&lt;br&gt;
-&lt;br&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+Empty cells are indicated by the character &amp;lsquo;.&#39;.
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
 You may assume that there will be only one unique solution.&lt;/p&gt;
 &lt;/blockquote&gt;</description>
     </item>
@@ -1815,13 +1397,10 @@ You may assume that there will be only one unique solution.&lt;/p&gt;
       <pubDate>Fri, 24 Mar 2017 15:00:47 +0800</pubDate>
       
       <guid>https://www.orztu.com/leetcode/010-regular-expression-matching/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/regular-expression-matching&#34; target=&#34;_blank&#34;&gt;Regular Expression Matching&lt;/a&gt;&lt;/p&gt;
-
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/regular-expression-matching&#34;&gt;Regular Expression Matching&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
 &lt;blockquote&gt;
-&lt;p&gt;Implement regular expression matching with support for &amp;lsquo;.&amp;rsquo; and &amp;lsquo;*&amp;lsquo;.&lt;/p&gt;
-
+&lt;p&gt;Implement regular expression matching with support for &amp;lsquo;.&amp;rsquo; and &amp;lsquo;*&#39;.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;&#39;.&#39; Matches any single character.
 &#39;*&#39; Matches zero or more of the preceding element.
 
@@ -1838,8 +1417,7 @@ isMatch(&amp;quot;aa&amp;quot;, &amp;quot;a*&amp;quot;) → true
 isMatch(&amp;quot;aa&amp;quot;, &amp;quot;.*&amp;quot;) → true
 isMatch(&amp;quot;ab&amp;quot;, &amp;quot;.*&amp;quot;) → true
 isMatch(&amp;quot;aab&amp;quot;, &amp;quot;c*a*b&amp;quot;) → true
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;</description>
+&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;</description>
     </item>
     
     <item>
@@ -1848,14 +1426,11 @@ isMatch(&amp;quot;aab&amp;quot;, &amp;quot;c*a*b&amp;quot;) → true
       <pubDate>Fri, 24 Mar 2017 15:00:46 +0800</pubDate>
       
       <guid>https://www.orztu.com/leetcode/009-palindrome-number/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/palindrome-number&#34; target=&#34;_blank&#34;&gt;Palindrome Number&lt;/a&gt;&lt;/p&gt;
-
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/palindrome-number&#34;&gt;Palindrome Number&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;Determine whether an integer is a palindrome. Do this without extra space.&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;p&gt;在不使用额外空间的条件下判断一个整型是否为回文&lt;/p&gt;</description>
     </item>
     
@@ -1865,20 +1440,17 @@ isMatch(&amp;quot;aab&amp;quot;, &amp;quot;c*a*b&amp;quot;) → true
       <pubDate>Wed, 22 Mar 2017 09:05:12 +0800</pubDate>
       
       <guid>https://www.orztu.com/leetcode/008-string-to-integer-atoi/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/string-to-integer-atoi&#34; target=&#34;_blank&#34;&gt;String to Integer (atoi)&lt;/a&gt;&lt;/p&gt;
-
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/string-to-integer-atoi&#34;&gt;String to Integer (atoi)&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;Implement atoi to convert a string to an integer.
-&lt;br&gt;
-&lt;br&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;strong&gt;Hint&lt;/strong&gt;: Carefully consider all possible input cases. If you want a challenge, please do not see below and ask yourself what are the &amp;gt; possible input cases.
-&lt;br&gt;
-&lt;br&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;strong&gt;Notes:&lt;/strong&gt; It is intended for this problem to be specified vaguely (ie, no given input specs). You are responsible to gather all the &amp;gt; input requirements up front.&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;p&gt;实现&lt;code&gt;atoi&lt;/code&gt;功能&lt;/p&gt;</description>
     </item>
     
@@ -1888,21 +1460,18 @@ isMatch(&amp;quot;aab&amp;quot;, &amp;quot;c*a*b&amp;quot;) → true
       <pubDate>Tue, 21 Mar 2017 16:04:44 +0800</pubDate>
       
       <guid>https://www.orztu.com/leetcode/007-reverse-integer/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/reverse-integer&#34; target=&#34;_blank&#34;&gt;Reverse Integer&lt;/a&gt;&lt;/p&gt;
-
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/reverse-integer&#34;&gt;Reverse Integer&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;Reverse digits of an integer.
-&lt;br&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;code&gt;Example1: x = 123, return 321&lt;/code&gt;
-&lt;br&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;code&gt;Example2: x = -123, return -321&lt;/code&gt;
-&lt;br&gt;
-&lt;br&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
 The input is assumed to be a 32-bit signed integer. Your function should &lt;strong&gt;return 0 when the reversed integer overflows&lt;/strong&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;p&gt;将输入的十进制数倒序输出&lt;/p&gt;</description>
     </item>
     
@@ -1912,24 +1481,21 @@ The input is assumed to be a 32-bit signed integer. Your function should &lt;str
       <pubDate>Fri, 17 Mar 2017 17:52:46 +0800</pubDate>
       
       <guid>https://www.orztu.com/leetcode/006-zigzag-conversion/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/zigzag-conversion&#34; target=&#34;_blank&#34;&gt;ZigZag Conversion&lt;/a&gt;&lt;/p&gt;
-
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/zigzag-conversion&#34;&gt;ZigZag Conversion&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;The string &lt;code&gt;&amp;quot;PAYPALISHIRING&amp;quot;&lt;/code&gt; is written in a zigzag pattern on a given number of rows like this: (you may want to display this &amp;gt; pattern in a fixed font for better legibility)&lt;/p&gt;
-
+&lt;/blockquote&gt;
 &lt;pre&gt;&lt;code&gt;P   A   H   N
 A P L S I I G
 Y   I   R
-&lt;/code&gt;&lt;/pre&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;
 &lt;p&gt;And then read line by line: &lt;code&gt;&amp;quot;PAHNAPLSIIGYIR&amp;quot;&lt;/code&gt;&lt;/p&gt;
-
 &lt;p&gt;Write the code that will take a string and make this conversion given a number of rows:&lt;/p&gt;
-
-&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-golang&#34; data-lang=&#34;golang&#34;&gt;&lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;convert&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;nRows&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;code&gt;convert(&amp;quot;PAYPALISHIRING&amp;quot;, 3)&lt;/code&gt; should return &lt;code&gt;&amp;quot;PAHNAPLSIIGYIR&amp;quot;&lt;/code&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-golang&#34; data-lang=&#34;golang&#34;&gt;&lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;convert&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;nRows&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;convert(&amp;quot;PAYPALISHIRING&amp;quot;, 3)&lt;/code&gt; should return &lt;code&gt;&amp;quot;PAHNAPLSIIGYIR&amp;quot;&lt;/code&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;</description>
     </item>
     
@@ -1939,31 +1505,22 @@ Y   I   R
       <pubDate>Thu, 16 Mar 2017 14:47:07 +0800</pubDate>
       
       <guid>https://www.orztu.com/leetcode/005-longest-palindromic-substring/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/longest-palindromic-substring&#34; target=&#34;_blank&#34;&gt;Longest Palindromic Substring&lt;/a&gt;&lt;/p&gt;
-
-&lt;!-- ![palindromic](/images/leetcode/Longest-Palindromic-Substring-1.png &#34;回文&#34;) --&gt;
-
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/longest-palindromic-substring&#34;&gt;Longest Palindromic Substring&lt;/a&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000.&lt;/p&gt;
-
 &lt;p&gt;Example:&lt;/p&gt;
-
+&lt;/blockquote&gt;
 &lt;pre&gt;&lt;code&gt;Input: &amp;quot;babad&amp;quot;
 Output: &amp;quot;bab&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;
 &lt;p&gt;Note: &amp;ldquo;aba&amp;rdquo; is also a valid answer.&lt;/p&gt;
-
 &lt;p&gt;Example:&lt;/p&gt;
-
+&lt;/blockquote&gt;
 &lt;pre&gt;&lt;code&gt;Input: &amp;quot;cbbd&amp;quot;
 Output: &amp;quot;bb&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;从给定字符串中找出最长的回文子串&lt;/p&gt;</description>
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;从给定字符串中找出最长的回文子串&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -1972,31 +1529,24 @@ Output: &amp;quot;bb&amp;quot;
       <pubDate>Thu, 16 Mar 2017 10:53:58 +0800</pubDate>
       
       <guid>https://www.orztu.com/leetcode/004-median-of-two-sorted-arrays/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/median-of-two-sorted-arrays&#34; target=&#34;_blank&#34;&gt;Median of Two Sorted Arrays&lt;/a&gt;&lt;/p&gt;
-
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/median-of-two-sorted-arrays&#34;&gt;Median of Two Sorted Arrays&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;There are two sorted arrays nums1 and nums2 of size m and n respectively.&lt;/p&gt;
-
 &lt;p&gt;Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).&lt;/p&gt;
-
 &lt;p&gt;Example 1:&lt;/p&gt;
-
+&lt;/blockquote&gt;
 &lt;pre&gt;&lt;code&gt;nums1 = [1, 3]
 nums2 = [2]
-&lt;/code&gt;&lt;/pre&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;
 &lt;p&gt;The median is 2.0
 Example 2:&lt;/p&gt;
-
+&lt;/blockquote&gt;
 &lt;pre&gt;&lt;code&gt;nums1 = [1, 2]
 nums2 = [3, 4]
-&lt;/code&gt;&lt;/pre&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;
 &lt;p&gt;The median is (2 + 3)/2 = 2.5&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;p&gt;从两个有序数组中求中位数&lt;/p&gt;</description>
     </item>
     
@@ -2006,20 +1556,14 @@ nums2 = [3, 4]
       <pubDate>Wed, 15 Mar 2017 19:38:58 +0800</pubDate>
       
       <guid>https://www.orztu.com/leetcode/003-longest-substring-without-repeating-characters/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/longest-substring-without-repeating-characters&#34; target=&#34;_blank&#34;&gt;Longest Substring Without Repeating Characters&lt;/a&gt;&lt;/p&gt;
-
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/longest-substring-without-repeating-characters&#34;&gt;Longest Substring Without Repeating Characters&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;Given a string, find the length of the longest substring without repeating characters.&lt;/p&gt;
-
 &lt;p&gt;Given &amp;ldquo;abcabcbb&amp;rdquo;, the answer is &amp;ldquo;abc&amp;rdquo;, which the length is 3.&lt;/p&gt;
-
 &lt;p&gt;Given &amp;ldquo;bbbbb&amp;rdquo;, the answer is &amp;ldquo;b&amp;rdquo;, with the length of 1.&lt;/p&gt;
-
 &lt;p&gt;Given &amp;ldquo;pwwkew&amp;rdquo;, the answer is &amp;ldquo;wke&amp;rdquo;, with the length of 3. Note that the answer must be a substring, &amp;ldquo;pwke&amp;rdquo; is a subsequence and not a substring.&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;p&gt;在给定字符串中找出无重复字符的最长子串。&lt;/p&gt;</description>
     </item>
     
@@ -2029,21 +1573,15 @@ nums2 = [3, 4]
       <pubDate>Wed, 15 Mar 2017 16:55:54 +0800</pubDate>
       
       <guid>https://www.orztu.com/leetcode/002-add-two-numbers/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/add-two-numbers&#34; target=&#34;_blank&#34;&gt;Add Two Numbers&lt;/a&gt;&lt;/p&gt;
-
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/add-two-numbers&#34;&gt;Add Two Numbers&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.&lt;/p&gt;
-
 &lt;p&gt;You may assume the two numbers do not contain any leading zero, except the number 0 itself.&lt;/p&gt;
-
+&lt;/blockquote&gt;
 &lt;pre&gt;&lt;code&gt;Input: (2 -&amp;gt; 4 -&amp;gt; 3) + (5 -&amp;gt; 6 -&amp;gt; 4)
 Output: 7 -&amp;gt; 0 -&amp;gt; 8
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;给定两个非空链表表示的非负整数。实现加法，向后进位。&lt;/p&gt;</description>
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;给定两个非空链表表示的非负整数。实现加法，向后进位。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -2052,23 +1590,18 @@ Output: 7 -&amp;gt; 0 -&amp;gt; 8
       <pubDate>Wed, 15 Mar 2017 16:36:59 +0800</pubDate>
       
       <guid>https://www.orztu.com/leetcode/001-two-sum/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/two-sum&#34; target=&#34;_blank&#34;&gt;Two Sum&lt;/a&gt;&lt;/p&gt;
-
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/two-sum&#34;&gt;Two Sum&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;Given an array of integers, return indices of the two numbers such that they add up to a specific target.&lt;/p&gt;
-
 &lt;p&gt;You may assume that each input would have exactly one solution, and you may not use the same element twice.&lt;/p&gt;
-
+&lt;/blockquote&gt;
 &lt;pre&gt;&lt;code&gt;Example:
 Given nums = [2, 7, 11, 15], target = 9,
-&lt;/code&gt;&lt;/pre&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;
 &lt;p&gt;Because nums[0] + nums[1] = 2 + 7 = 9,
 return [0, 1].&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;p&gt;假定只有&lt;strong&gt;唯一&lt;/strong&gt;解的情况下在数组中找出和为&lt;code&gt;target&lt;/code&gt;的两个数&lt;/p&gt;</description>
     </item>
     

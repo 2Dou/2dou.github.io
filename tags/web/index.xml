@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Web on Orz the way</title>
@@ -18,12 +18,9 @@
       
       <guid>https://www.orztu.com/post/gvoice-number/</guid>
       <description>&lt;p&gt;最近V2上很多卖GV号码的，心想这玩意也能值钱。所以想着自己试试动手申请一个。&lt;/p&gt;
-
-&lt;p&gt;首先参照这篇“&lt;a href=&#34;https://kn007.net/topics/free-application-for-google-voice-phone-number/&#34; target=&#34;_blank&#34;&gt;免费申请Google Voice美国电话号码&lt;/a&gt;”申请号码。&lt;/p&gt;
-
+&lt;p&gt;首先参照这篇“&lt;a href=&#34;https://kn007.net/topics/free-application-for-google-voice-phone-number/&#34;&gt;免费申请Google Voice美国电话号码&lt;/a&gt;”申请号码。&lt;/p&gt;
 &lt;p&gt;到了这一步：提示“There was an error with your request. Please try again.”
-&lt;img src=&#34;https://www.orztu.com/images/post/gv-0.jpg&#34; alt=&#34;palindromic&#34; title=&#34;错误&#34; /&gt;&lt;/p&gt;
-
+&lt;img src=&#34;https://www.orztu.com/images/post/gv-0.jpg&#34; alt=&#34;palindromic&#34; title=&#34;错误&#34;&gt;&lt;/p&gt;
 &lt;p&gt;听说在这里反复提交直到申请成功即可。找了网上的自动提交方法（复制出来CURL提交），发现不好使，curl一直没响应。
 但是网页上确实可以反复点击提交的。于是改用自动点击的方式，一夜醒来发现已经申请成功。&lt;/p&gt;</description>
     </item>

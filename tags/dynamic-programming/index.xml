@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Dynamic Programming on Orz the way</title>
@@ -18,34 +18,28 @@
       
       <guid>https://www.orztu.com/leetcode/091-decode-ways/</guid>
       <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/decode-ways/&#34; target=&#34;_blank&#34;&gt;Decode Ways&lt;/a&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/decode-ways/&#34;&gt;Decode Ways&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;A message containing letters from A-Z is being encoded to numbers using the following mapping:&lt;/p&gt;
-
+&lt;/blockquote&gt;
 &lt;pre&gt;&lt;code&gt;&#39;A&#39; -&amp;gt; 1
 &#39;B&#39; -&amp;gt; 2
 ...
 &#39;Z&#39; -&amp;gt; 26
-&lt;/code&gt;&lt;/pre&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;
 &lt;p&gt;Given a &lt;strong&gt;non-empty&lt;/strong&gt; string containing only digits, determine the total number of ways to decode it.&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;Example 1:&lt;/strong&gt;&lt;/p&gt;
-
+&lt;/blockquote&gt;
 &lt;pre&gt;&lt;code&gt;Input: &amp;quot;12&amp;quot;
 Output: 2
 Explanation: It could be decoded as &amp;quot;AB&amp;quot; (1 2) or &amp;quot;L&amp;quot; (12).
-&lt;/code&gt;&lt;/pre&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Example 2:&lt;/strong&gt;&lt;/p&gt;
-
+&lt;/blockquote&gt;
 &lt;pre&gt;&lt;code&gt;Input: &amp;quot;226&amp;quot;
 Output: 3
 Explanation: It could be decoded as &amp;quot;BZ&amp;quot; (2 26), &amp;quot;VF&amp;quot; (22 6), or &amp;quot;BBF&amp;quot; (2 2 6).
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;</description>
+&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
     
     <item>
@@ -55,14 +49,11 @@ Explanation: It could be decoded as &amp;quot;BZ&amp;quot; (2 26), &amp;quot;VF&
       
       <guid>https://www.orztu.com/leetcode/087-scramble-string/</guid>
       <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/scramble-string/&#34; target=&#34;_blank&#34;&gt;Scramble String&lt;/a&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/scramble-string/&#34;&gt;Scramble String&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Given a string s1, we may represent it as a binary tree by partitioning it to two non-empty substrings recursively.&lt;/p&gt;
-
 &lt;p&gt;Below is one possible representation of s1 = &lt;code&gt;&amp;quot;great&amp;quot;&lt;/code&gt;:&lt;/p&gt;
-
+&lt;/blockquote&gt;
 &lt;pre&gt;&lt;code&gt;    great
    /    \
   gr    eat
@@ -70,8 +61,7 @@ Explanation: It could be decoded as &amp;quot;BZ&amp;quot; (2 26), &amp;quot;VF&
 g   r  e   at
            / \
           a   t
-&lt;/code&gt;&lt;/pre&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;
 &lt;p&gt;To scramble the string, we may choose any non-leaf node and swap its two children.&lt;/p&gt;
 &lt;/blockquote&gt;</description>
     </item>
@@ -83,14 +73,11 @@ g   r  e   at
       
       <guid>https://www.orztu.com/leetcode/085-maximal-rectangle/</guid>
       <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/maximal-rectangle/&#34; target=&#34;_blank&#34;&gt;Maximal Rectangle&lt;/a&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/maximal-rectangle/&#34;&gt;Maximal Rectangle&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Given a 2D binary matrix filled with 0&amp;rsquo;s and 1&amp;rsquo;s, find the largest rectangle containing only 1&amp;rsquo;s and return its area.&lt;/p&gt;
-
+&lt;p&gt;Given a 2D binary matrix filled with 0&#39;s and 1&#39;s, find the largest rectangle containing only 1&#39;s and return its area.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Example:&lt;/strong&gt;&lt;/p&gt;
-
+&lt;/blockquote&gt;
 &lt;pre&gt;&lt;code&gt;Input:
 [
   [&amp;quot;1&amp;quot;,&amp;quot;0&amp;quot;,&amp;quot;1&amp;quot;,&amp;quot;0&amp;quot;,&amp;quot;0&amp;quot;],
@@ -99,10 +86,7 @@ g   r  e   at
   [&amp;quot;1&amp;quot;,&amp;quot;0&amp;quot;,&amp;quot;0&amp;quot;,&amp;quot;1&amp;quot;,&amp;quot;0&amp;quot;]
 ]
 Output: 6
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;在给出的矩阵中，&lt;code&gt;1&lt;/code&gt;表示元素，&lt;code&gt;0&lt;/code&gt;表示空，找出最大矩形的面积。&lt;/p&gt;</description>
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;在给出的矩阵中，&lt;code&gt;1&lt;/code&gt;表示元素，&lt;code&gt;0&lt;/code&gt;表示空，找出最大矩形的面积。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -112,33 +96,28 @@ Output: 6
       
       <guid>https://www.orztu.com/leetcode/072-edit-distance/</guid>
       <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/edit-distance/&#34; target=&#34;_blank&#34;&gt;Edit Distance&lt;/a&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/edit-distance/&#34;&gt;Edit Distance&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Given two words word1 and word2, find the minimum number of operations required to convert word1 to word2.&lt;/p&gt;
-
 &lt;p&gt;You have the following 3 operations permitted on a word:&lt;/p&gt;
-
 &lt;ol&gt;
 &lt;li&gt;Insert a character&lt;/li&gt;
 &lt;li&gt;Delete a character&lt;/li&gt;
 &lt;li&gt;Replace a character&lt;/li&gt;
 &lt;/ol&gt;
-
 &lt;p&gt;&lt;strong&gt;Example 1:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;Input: word1 = &amp;quot;horse&amp;quot;, word2 = &amp;quot;ros&amp;quot;
+&lt;pre&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
+&lt;p&gt;Input: word1 = &amp;ldquo;horse&amp;rdquo;, word2 = &amp;ldquo;ros&amp;rdquo;
 Output: 3
 Explanation:
-horse -&amp;gt; rorse (replace &#39;h&#39; with &#39;r&#39;)
-rorse -&amp;gt; rose (remove &#39;r&#39;)
-rose -&amp;gt; ros (remove &#39;e&#39;)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;Example 2:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;Input: word1 = &amp;quot;intention&amp;quot;, word2 = &amp;quot;execution&amp;quot;
+horse -&amp;gt; rorse (replace &amp;lsquo;h&amp;rsquo; with &amp;lsquo;r&amp;rsquo;)
+rorse -&amp;gt; rose (remove &amp;lsquo;r&amp;rsquo;)
+rose -&amp;gt; ros (remove &amp;lsquo;e&amp;rsquo;)&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt;
+&amp;gt; **Example 2:**
+&amp;gt;
+&amp;gt; ```
+Input: word1 = &amp;quot;intention&amp;quot;, word2 = &amp;quot;execution&amp;quot;
 Output: 5
 Explanation:
 intention -&amp;gt; inention (remove &#39;t&#39;)
@@ -146,8 +125,7 @@ inention -&amp;gt; enention (replace &#39;i&#39; with &#39;e&#39;)
 enention -&amp;gt; exention (replace &#39;n&#39; with &#39;x&#39;)
 exention -&amp;gt; exection (replace &#39;n&#39; with &#39;c&#39;)
 exection -&amp;gt; execution (insert &#39;u&#39;)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;</description>
+&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
     
     <item>
@@ -157,38 +135,26 @@ exection -&amp;gt; execution (insert &#39;u&#39;)
       
       <guid>https://www.orztu.com/leetcode/070-climbing-stairs/</guid>
       <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/climbing-stairs/&#34; target=&#34;_blank&#34;&gt;Climbing Stairs&lt;/a&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/climbing-stairs/&#34;&gt;Climbing Stairs&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;You are climbing a stair case. It takes n steps to reach to the top.&lt;/p&gt;
-
 &lt;p&gt;Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; Given n will be a positive integer.&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;Example 1:&lt;/strong&gt;&lt;/p&gt;
-
 &lt;pre&gt;&lt;code&gt;Input: 2
 Output: 2
 Explanation: There are two ways to climb to the top.
 1. 1 step + 1 step
 2. 2 steps
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;Example 2:&lt;/strong&gt;&lt;/p&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Example 2:&lt;/strong&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;Input: 3
 Output: 3
 Explanation: There are three ways to climb to the top.
 1. 1 step + 1 step + 1 step
 2. 1 step + 2 steps
 3. 2 steps + 1 step
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
 &lt;p&gt;好像网上讲动态规划经常举例的题目。&lt;/p&gt;
-
 &lt;p&gt;爬楼梯，可以一次爬一格或者两格，问有多少种不同的方式爬到顶。&lt;/p&gt;</description>
     </item>
     
@@ -199,16 +165,11 @@ Explanation: There are three ways to climb to the top.
       
       <guid>https://www.orztu.com/leetcode/064-minimum-path-sum/</guid>
       <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/minimum-path-sum/&#34; target=&#34;_blank&#34;&gt;Minimum Path Sum&lt;/a&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/minimum-path-sum/&#34;&gt;Minimum Path Sum&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Given a m x n grid filled with non-negative numbers, find a path from top left to bottom right which minimizes the sum of all numbers along its path.&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; You can only move either down or right at any point in time.&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;Example:&lt;/strong&gt;&lt;/p&gt;
-
 &lt;pre&gt;&lt;code&gt;Input:
 [
   [1,3,1],
@@ -217,9 +178,7 @@ Explanation: There are three ways to climb to the top.
 ]
 Output: 7
 Explanation: Because the path 1→3→1→1→1 minimizes the sum.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
 &lt;p&gt;每个格子的数字表示经过它所需的消耗大小。寻找从左上到右下的最少路径消耗。&lt;/p&gt;</description>
     </item>
     
@@ -230,24 +189,16 @@ Explanation: Because the path 1→3→1→1→1 minimizes the sum.
       
       <guid>https://www.orztu.com/leetcode/063-unique-paths-ii/</guid>
       <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/unique-paths-ii/&#34; target=&#34;_blank&#34;&gt;Unique Paths II&lt;/a&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/unique-paths-ii/&#34;&gt;Unique Paths II&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;A robot is located at the top-left corner of a m x n grid (marked &amp;lsquo;Start&amp;rsquo; in the diagram below).&lt;/p&gt;
-
 &lt;p&gt;The robot can only move either down or right at any point in time. The robot is trying to reach the bottom-right corner of the grid (marked &amp;lsquo;Finish&amp;rsquo; in the diagram below).&lt;/p&gt;
-
 &lt;p&gt;Now consider if some obstacles are added to the grids. How many unique paths would there be?&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://www.orztu.com/images/leetcode/062-unique-paths-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;img src=&#34;https://www.orztu.com/images/leetcode/062-unique-paths-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;An obstacle and empty space is marked as 1 and 0 respectively in the grid.&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; m and n will be at most 100.&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;Example 1:&lt;/strong&gt;&lt;/p&gt;
-
+&lt;/blockquote&gt;
 &lt;pre&gt;&lt;code&gt;Input:
 [
   [0,0,0],
@@ -260,9 +211,8 @@ There is one obstacle in the middle of the 3x3 grid above.
 There are two ways to reach the bottom-right corner:
 1. Right -&amp;gt; Right -&amp;gt; Down -&amp;gt; Down
 2. Down -&amp;gt; Down -&amp;gt; Right -&amp;gt; Right
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;
 &lt;/blockquote&gt;
-
 &lt;p&gt;给出地图，求左上角到右下角的路径数量（只能向下或向右移动）。&lt;/p&gt;</description>
     </item>
     
@@ -273,16 +223,12 @@ There are two ways to reach the bottom-right corner:
       
       <guid>https://www.orztu.com/leetcode/062-unique-paths/</guid>
       <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/unique-paths/&#34; target=&#34;_blank&#34;&gt;Unique Paths&lt;/a&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/unique-paths/&#34;&gt;Unique Paths&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;A robot is located at the top-left corner of a m x n grid (marked &amp;lsquo;Start&amp;rsquo; in the diagram below).&lt;/p&gt;
-
 &lt;p&gt;The robot can only move either down or right at any point in time. The robot is trying to reach the bottom-right corner of the grid (marked &amp;lsquo;Finish&amp;rsquo; in the diagram below).&lt;/p&gt;
-
 &lt;p&gt;How many possible unique paths are there?
-&lt;img src=&#34;https://www.orztu.com/images/leetcode/062-unique-paths-1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;https://www.orztu.com/images/leetcode/062-unique-paths-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;/blockquote&gt;</description>
     </item>
     
@@ -292,30 +238,17 @@ There are two ways to reach the bottom-right corner:
       <pubDate>Wed, 25 Jul 2018 09:56:49 +0800</pubDate>
       
       <guid>https://www.orztu.com/leetcode/032-longest-valid-parentheses/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/longest-valid-parentheses/&#34; target=&#34;_blank&#34;&gt;Longest Valid Parentheses&lt;/a&gt;&lt;/p&gt;
-
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/longest-valid-parentheses/&#34;&gt;Longest Valid Parentheses&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;Given a string containing just the characters &lt;code&gt;&#39;(&#39;&lt;/code&gt; and &lt;code&gt;&#39;)&#39;&lt;/code&gt;, find the length of the longest valid (well-formed) parentheses substring.
-&lt;br&gt;&lt;br&gt;
+&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;
 &lt;strong&gt;Example 1:&lt;/strong&gt;&lt;/p&gt;
-
 &lt;pre&gt;&lt;code&gt;Input: &amp;quot;(()&amp;quot;
 Output: 2
 Explanation: The longest valid parentheses substring is &amp;quot;()&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;br&gt;
-&lt;strong&gt;Example 2:&lt;/strong&gt;
-&lt;br&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;Input: &amp;quot;)()())&amp;quot;
-Output: 4
-Explanation: The longest valid parentheses substring is &amp;quot;()()&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;!-- raw HTML omitted --&gt;
 &lt;/blockquote&gt;
-
 &lt;p&gt;输出最长的左右括号匹配的子串长度&lt;/p&gt;</description>
     </item>
     
@@ -325,13 +258,10 @@ Explanation: The longest valid parentheses substring is &amp;quot;()()&amp;quot;
       <pubDate>Fri, 24 Mar 2017 15:00:47 +0800</pubDate>
       
       <guid>https://www.orztu.com/leetcode/010-regular-expression-matching/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/regular-expression-matching&#34; target=&#34;_blank&#34;&gt;Regular Expression Matching&lt;/a&gt;&lt;/p&gt;
-
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/regular-expression-matching&#34;&gt;Regular Expression Matching&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
 &lt;blockquote&gt;
-&lt;p&gt;Implement regular expression matching with support for &amp;lsquo;.&amp;rsquo; and &amp;lsquo;*&amp;lsquo;.&lt;/p&gt;
-
+&lt;p&gt;Implement regular expression matching with support for &amp;lsquo;.&amp;rsquo; and &amp;lsquo;*&#39;.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;&#39;.&#39; Matches any single character.
 &#39;*&#39; Matches zero or more of the preceding element.
 
@@ -348,8 +278,7 @@ isMatch(&amp;quot;aa&amp;quot;, &amp;quot;a*&amp;quot;) → true
 isMatch(&amp;quot;aa&amp;quot;, &amp;quot;.*&amp;quot;) → true
 isMatch(&amp;quot;ab&amp;quot;, &amp;quot;.*&amp;quot;) → true
 isMatch(&amp;quot;aab&amp;quot;, &amp;quot;c*a*b&amp;quot;) → true
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;</description>
+&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;</description>
     </item>
     
     <item>
@@ -358,31 +287,22 @@ isMatch(&amp;quot;aab&amp;quot;, &amp;quot;c*a*b&amp;quot;) → true
       <pubDate>Thu, 16 Mar 2017 14:47:07 +0800</pubDate>
       
       <guid>https://www.orztu.com/leetcode/005-longest-palindromic-substring/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/longest-palindromic-substring&#34; target=&#34;_blank&#34;&gt;Longest Palindromic Substring&lt;/a&gt;&lt;/p&gt;
-
-&lt;!-- ![palindromic](/images/leetcode/Longest-Palindromic-Substring-1.png &#34;回文&#34;) --&gt;
-
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/longest-palindromic-substring&#34;&gt;Longest Palindromic Substring&lt;/a&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000.&lt;/p&gt;
-
 &lt;p&gt;Example:&lt;/p&gt;
-
+&lt;/blockquote&gt;
 &lt;pre&gt;&lt;code&gt;Input: &amp;quot;babad&amp;quot;
 Output: &amp;quot;bab&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;
 &lt;p&gt;Note: &amp;ldquo;aba&amp;rdquo; is also a valid answer.&lt;/p&gt;
-
 &lt;p&gt;Example:&lt;/p&gt;
-
+&lt;/blockquote&gt;
 &lt;pre&gt;&lt;code&gt;Input: &amp;quot;cbbd&amp;quot;
 Output: &amp;quot;bb&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;从给定字符串中找出最长的回文子串&lt;/p&gt;</description>
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;从给定字符串中找出最长的回文子串&lt;/p&gt;</description>
     </item>
     
   </channel>

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.55.6 with theme Tranquilpeak 0.4.3-SNAPSHOT">
+<meta name="generator" content="Hugo 0.62.1 with theme Tranquilpeak 0.4.3-SNAPSHOT">
 <meta name="author" content="SelFree">
 <meta name="keywords" content=", program develop, leetcode, Golang, leetcode解答, 程序">
 <meta name="description" content="城市永远年轻，而我们终将老去">
@@ -312,30 +312,25 @@
     <div class="postShorten-excerpt" itemprop="articleBody">
       
         <h2 id="description">Description</h2>
-
-<p><a href="https://leetcode.com/problems/merge-sorted-array/" target="_blank">Merge Sorted Array</a></p>
-
+<p><a href="https://leetcode.com/problems/merge-sorted-array/">Merge Sorted Array</a></p>
 <blockquote>
 <p>Given two sorted integer arrays nums1 and nums2, merge nums2 into nums1 as one sorted array.</p>
-
 <p><strong>Note:</strong></p>
-
 <ul>
-<li><p>The number of elements initialized in nums1 and nums2 are m and n respectively.</p></li>
-
-<li><p>You may assume that nums1 has enough space (size that is greater or equal to m + n) to hold additional elements from nums2.</p></li>
+<li>
+<p>The number of elements initialized in nums1 and nums2 are m and n respectively.</p>
+</li>
+<li>
+<p>You may assume that nums1 has enough space (size that is greater or equal to m + n) to hold additional elements from nums2.</p>
+</li>
 </ul>
-
 <p><strong>Example:</strong></p>
-
 <pre><code>Input:
 nums1 = [1,2,3,0,0,0], m = 3
 nums2 = [2,5,6],       n = 3
 
 Output: [1,2,2,3,5,6]
-</code></pre>
-</blockquote>
-
+</code></pre></blockquote>
 <p>将<code>nums1</code>、<code>nums2</code>两个有序数组合并到<code>nums1</code>一个中，<code>nums1</code>已分配足够空间存放元素。</p>
       
       <p>
@@ -402,20 +397,14 @@ Output: [1,2,2,3,5,6]
     <div class="postShorten-excerpt" itemprop="articleBody">
       
         <h2 id="description">Description</h2>
-
-<p><a href="https://leetcode.com/problems/partition-list/" target="_blank">Partition List</a></p>
-
+<p><a href="https://leetcode.com/problems/partition-list/">Partition List</a></p>
 <blockquote>
 <p>Given a linked list and a value x, partition it such that all nodes less than x come before nodes greater than or equal to x.</p>
-
 <p>You should preserve the original relative order of the nodes in each of the two partitions.</p>
-
 <p><strong>Example:</strong></p>
-
 <pre><code>Input: head = 1-&gt;4-&gt;3-&gt;2-&gt;5-&gt;2, x = 3
 Output: 1-&gt;2-&gt;2-&gt;4-&gt;3-&gt;5
-</code></pre>
-</blockquote>
+</code></pre></blockquote>
       
       <p>
         <a href="https://www.orztu.com/leetcode/086-partition-list/" class="postShorten-excerpt_link link">Read More</a>
@@ -481,35 +470,25 @@ Output: 1-&gt;2-&gt;2-&gt;4-&gt;3-&gt;5
     <div class="postShorten-excerpt" itemprop="articleBody">
       
         <h2 id="description">Description</h2>
-
-<p><a href="https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/" target="_blank">Remove Duplicates from Sorted Array II</a></p>
-
+<p><a href="https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/">Remove Duplicates from Sorted Array II</a></p>
 <blockquote>
 <p>Given a sorted array nums, remove the duplicates in-place such that duplicates appeared at most twice and return the new length.</p>
-
 <p>Do not allocate extra space for another array, you must do this by <strong>modifying the input array in-place</strong> with O(1) extra memory.</p>
-
 <p><strong>Example 1:</strong></p>
-
 <pre><code>Given nums = [1,1,1,2,2,3],
 
 Your function should return length = 5, with the first five elements
 of nums being 1, 1, 2, 2 and 3 respectively.
 
 It doesn't matter what you leave beyond the returned length.
-</code></pre>
-
-<p><strong>Example 2:</strong></p>
-
+</code></pre><p><strong>Example 2:</strong></p>
 <pre><code>Given nums = [0,0,1,1,1,1,2,3,3],
 
 Your function should return length = 7, with the first seven elements
 of nums being modified to 0, 0, 1, 1, 2, 3 and 3 respectively.
 
 It doesn't matter what values are set beyond the returned length.
-</code></pre>
-</blockquote>
-
+</code></pre></blockquote>
 <p>在有序数组中删除重复的元素，每个元素允许重复一次（出现两次）。</p>
       
       <p>
@@ -576,31 +555,25 @@ It doesn't matter what values are set beyond the returned length.
     <div class="postShorten-excerpt" itemprop="articleBody">
       
         <h2 id="description">Description</h2>
-
-<p><a href="https://leetcode.com/problems/sort-colors/" target="_blank">Sort Colors</a></p>
-
+<p><a href="https://leetcode.com/problems/sort-colors/">Sort Colors</a></p>
 <blockquote>
 <p>Given an array with n objects colored red, white or blue, sort them in-place so that objects of the same color are adjacent, with the colors in the order red, white and blue.</p>
-
 <p>Here, we will use the integers <code>0</code>, <code>1</code>, and <code>2</code> to represent the color <code>red</code>, <code>white</code>, and <code>blue</code> respectively.</p>
-
-<p><strong>Note:</strong> You are not suppose to use the library&rsquo;s sort function for this problem.</p>
-
+<p><strong>Note:</strong> You are not suppose to use the library's sort function for this problem.</p>
 <p><strong>Example:</strong></p>
-
 <pre><code>Input: [2,0,2,1,1,0]
 Output: [0,0,1,1,2,2]
 Follow up:
-</code></pre>
-
-<ul>
-<li><p>A rather straight forward solution is a two-pass algorithm using counting sort.<br>
-First, iterate the array counting number of 0&rsquo;s, 1&rsquo;s, and 2&rsquo;s, then overwrite array with total number of 0&rsquo;s, then 1&rsquo;s and followed by 2&rsquo;s.</p></li>
-
-<li><p>Could you come up with a one-pass algorithm using only constant space?</p></li>
+</code></pre><ul>
+<li>
+<p>A rather straight forward solution is a two-pass algorithm using counting sort.<!-- raw HTML omitted -->
+First, iterate the array counting number of 0's, 1's, and 2's, then overwrite array with total number of 0's, then 1's and followed by 2's.</p>
+</li>
+<li>
+<p>Could you come up with a one-pass algorithm using only constant space?</p>
+</li>
 </ul>
 </blockquote>
-
 <p>对一个只包含<code>0</code>、<code>1</code>、<code>2</code>三个数字的数组进行排序，要求时间复杂度<code>O(n)</code>，空间复杂度<code>O(1)</code>。</p>
       
       <p>
@@ -667,23 +640,16 @@ First, iterate the array counting number of 0&rsquo;s, 1&rsquo;s, and 2&rsquo;s,
     <div class="postShorten-excerpt" itemprop="articleBody">
       
         <h2 id="description">Description</h2>
-
-<p><a href="https://leetcode.com/problems/rotate-list/" target="_blank">Rotate List</a></p>
-
+<p><a href="https://leetcode.com/problems/rotate-list/">Rotate List</a></p>
 <blockquote>
 <p>Given a linked list, rotate the list to the right by <code>k</code> places, where <code>k</code> is non-negative.</p>
-
 <p><strong>Example 1:</strong></p>
-
 <pre><code>Input: 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL, k = 2
 Output: 4-&gt;5-&gt;1-&gt;2-&gt;3-&gt;NULL
 Explanation:
 rotate 1 steps to the right: 5-&gt;1-&gt;2-&gt;3-&gt;4-&gt;NULL
 rotate 2 steps to the right: 4-&gt;5-&gt;1-&gt;2-&gt;3-&gt;NULL
-</code></pre>
-
-<p><strong>Example 2:</strong></p>
-
+</code></pre><p><strong>Example 2:</strong></p>
 <pre><code>Input: 0-&gt;1-&gt;2-&gt;NULL, k = 4
 Output: 2-&gt;0-&gt;1-&gt;NULL
 Explanation:
@@ -691,8 +657,7 @@ rotate 1 steps to the right: 2-&gt;0-&gt;1-&gt;NULL
 rotate 2 steps to the right: 1-&gt;2-&gt;0-&gt;NULL
 rotate 3 steps to the right: 0-&gt;1-&gt;2-&gt;NULL
 rotate 4 steps to the right: 2-&gt;0-&gt;1-&gt;NULL
-</code></pre>
-</blockquote>
+</code></pre></blockquote>
       
       <p>
         <a href="https://www.orztu.com/leetcode/061-rotate-list/" class="postShorten-excerpt_link link">Read More</a>
@@ -757,23 +722,17 @@ rotate 4 steps to the right: 2-&gt;0-&gt;1-&gt;NULL
     </div>
     <div class="postShorten-excerpt" itemprop="articleBody">
       
-        <p><a href="https://leetcode.com/problems/remove-nth-node-from-end-of-list/" target="_blank">Remove Nth Node From End of List</a></p>
-
+        <p><a href="https://leetcode.com/problems/remove-nth-node-from-end-of-list/">Remove Nth Node From End of List</a></p>
 <h2 id="description">Description</h2>
-
 <blockquote>
 <p>Given a linked list, remove the nth node from the end of list and return its head.</p>
-
 <pre><code>For example,
    Given linked list: 1-&gt;2-&gt;3-&gt;4-&gt;5, and n = 2.
    After removing the second node from the end, the linked list becomes 1-&gt;2-&gt;3-&gt;5.
-</code></pre>
-
-<p><strong>Note</strong>:
+</code></pre><p><strong>Note</strong>:
 Given n will always be valid.
 Try to do this in one pass.</p>
 </blockquote>
-
 <p>从链表中删除倒数第n个结点（n必定有效）</p>
       
       <p>
@@ -839,15 +798,11 @@ Try to do this in one pass.</p>
     </div>
     <div class="postShorten-excerpt" itemprop="articleBody">
       
-        <p><a href="https://leetcode.com/problems/4sum/" target="_blank">4Sum</a></p>
-
+        <p><a href="https://leetcode.com/problems/4sum/">4Sum</a></p>
 <h2 id="description">Description</h2>
-
 <blockquote>
 <p>Given an array S of n integers, are there elements a, b, c, and d in S such that a + b + c + d = target? Find all unique quadruplets in the array which gives the sum of target.</p>
-
 <p><strong>Note</strong>: The solution set must not contain duplicate quadruplets.</p>
-
 <pre><code>For example, given array S = [1, 0, -1, 0, -2, 2], and target = 0.
 
 A solution set is:
@@ -856,9 +811,7 @@ A solution set is:
   [-2, -1, 1, 2],
   [-2,  0, 0, 2]
 ]
-</code></pre>
-</blockquote>
-
+</code></pre></blockquote>
 <p>在给定数组中找出“和为 target 的四个数”的所有解。</p>
       
       <p>
@@ -924,15 +877,11 @@ A solution set is:
     </div>
     <div class="postShorten-excerpt" itemprop="articleBody">
       
-        <p><a href="https://leetcode.com/problems/3sum/" target="_blank">3Sum</a></p>
-
+        <p><a href="https://leetcode.com/problems/3sum/">3Sum</a></p>
 <h2 id="description">Description</h2>
-
 <blockquote>
 <p>Given an array S of n integers, are there elements a, b, c in S such that a + b + c = 0? Find all unique triplets in the array which gives the sum of zero.</p>
-
 <p><strong>Note:</strong> The solution set must not contain duplicate triplets.</p>
-
 <pre><code>For example, given array S = [-1, 0, 1, 2, -1, -4],
 
 A solution set is:
@@ -940,9 +889,7 @@ A solution set is:
   [-1, 0, 1],
   [-1, -1, 2]
 ]
-</code></pre>
-</blockquote>
-
+</code></pre></blockquote>
 <p>在给定数组中找出“和为0的三个数”的所有解。</p>
       
       <p>
@@ -1006,7 +953,7 @@ A solution set is:
         
         <footer id="footer" class="main-content-wrap">
   <span class="copyrights">
-    &copy; 2019 SelFree. All Rights Reserved
+    &copy; 2020 SelFree. All Rights Reserved
   </span>
 </footer>
 
@@ -1074,9 +1021,7 @@ A solution set is:
                 </span>
               </span>
               <div class="media-content hide-xs font-merryweather"><p>首先，并非专业视频处理人员；以下命令都是我从网上搜索后修改以为己所用。</p>
-
-<h2 id="图片转视频">图片转视频</h2>
-
+<h2 id="heading">图片转视频</h2>
 <pre><code># gif 转视频（DURATION：时长，gif会循环播放）
 ffmpeg -ignore_loop 0 -t DURATION -f gif -i &quot;INPUT.gif&quot; -vcodec libx264 -crf 5 &quot;OUTPUT.mp4&quot;
 
@@ -1099,12 +1044,9 @@ ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &quot;INPUT.jpg&quot; -vco
                   Dec 12, 2018
                 </span>
               </span>
-              <div class="media-content hide-xs font-merryweather"><h2 id="闪退点">闪退点</h2>
-
+              <div class="media-content hide-xs font-merryweather"><h2 id="heading">闪退点</h2>
 <p>Version: Cocos2dx-Lua 3.16</p>
-
 <p>在某个页面修改后，出现闪退。查看修改记录没有特别的地方，均为修改图片或者条件判断。</p>
-
 <p>启动 XCode 发现闪退位置出现在<code>void Node::onEnterTransitionDidFinish()</code>中，
 在其调用子节点的<code>child-&gt;onEnterTransitionDidFinish()</code>时，<code>child</code>指针无效。</p></div>
             </div>
@@ -1124,16 +1066,12 @@ ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &quot;INPUT.jpg&quot; -vco
                 </span>
               </span>
               <div class="media-content hide-xs font-merryweather"><p>在日志信息中，有时需要获取当前函数的调用信息，比如打印调用栈：</p>
-
-<h2 id="调用栈">调用栈</h2>
-
-<h3 id="debug-stack-byte">debug.Stack() []byte</h3>
-
+<h2 id="heading">调用栈</h2>
+<h3 id="debugstack-byte">debug.Stack() []byte</h3>
 <p><code>debug.Stack()</code>函数可以获取当前 goroutine 的调用栈信息，需要<code>import &quot;runtime/debug&quot;</code>。</p>
-
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-golang" data-lang="golang"><span class="lnt"> 8
+<pre class="chroma"><code><span class="lnt"> 8
 </span><span class="lnt"> 9
 </span><span class="lnt">10
 </span><span class="lnt">11
@@ -1148,18 +1086,18 @@ ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &quot;INPUT.jpg&quot; -vco
 </span><span class="lnt">20
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">func</span> <span class="nf">foo</span><span class="p">()</span> <span class="p">{</span>
+<pre class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">func</span> <span class="nf">foo</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;--- BEGIN ---&#34;</span><span class="p">)</span>
-    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nb">string</span><span class="p">(</span><span class="nx">debug</span><span class="p">.</span><span class="nf">Stack</span><span class="p">()))</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nb">string</span><span class="p">(</span><span class="nx">debug</span><span class="p">.</span><span class="nf">Stack</span><span class="p">(</span><span class="p">)</span><span class="p">)</span><span class="p">)</span>
     <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;--- END ---&#34;</span><span class="p">)</span>
 <span class="p">}</span>
 
-<span class="kd">func</span> <span class="nf">boom</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nf">foo</span><span class="p">()</span>
+<span class="kd">func</span> <span class="nf">boom</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nf">foo</span><span class="p">(</span><span class="p">)</span>
 <span class="p">}</span>
 
-<span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nf">boom</span><span class="p">()</span>
+<span class="kd">func</span> <span class="nf">main</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nf">boom</span><span class="p">(</span><span class="p">)</span>
 <span class="p">}</span></code></pre></td></tr></table>
 </div>
 </div></div>
@@ -1179,8 +1117,7 @@ ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &quot;INPUT.jpg&quot; -vco
                   Nov 11, 2018
                 </span>
               </span>
-              <div class="media-content hide-xs font-merryweather"><p>上回提到<a href="https://www.orztu.com/post/lua-table-minify/" target="_blank">元表优化 Lua 配置文件</a>，以减少重复字段，节省内存开销。</p>
-
+              <div class="media-content hide-xs font-merryweather"><p>上回提到<a href="https://www.orztu.com/post/lua-table-minify/">元表优化 Lua 配置文件</a>，以减少重复字段，节省内存开销。</p>
 <p>除了这种直接地减少内存开销的方法，使用元表还能实现数据的延迟加载，从另一个角度节约内存。</p></div>
             </div>
             <div style="clear:both;"></div>
@@ -1198,12 +1135,9 @@ ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &quot;INPUT.jpg&quot; -vco
                   Nov 11, 2018
                 </span>
               </span>
-              <div class="media-content hide-xs font-merryweather"><h2 id="配置文件">配置文件</h2>
-
+              <div class="media-content hide-xs font-merryweather"><h2 id="heading">配置文件</h2>
 <p>在游戏工程中，通常有大量配置是由策划提供，再转换成程序方便读取的格式添加到工程中。</p>
-
 <p>在我参与的<code>Cocos2dx-Lua</code>工程中，策划通常在<code>Excel</code>中配置，再通过脚本转换为<code>Lua-Table</code>的文件。</p>
-
 <p>比如常见的道具表转换后：</p></div>
             </div>
             <div style="clear:both;"></div>
@@ -1222,7 +1156,6 @@ ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &quot;INPUT.jpg&quot; -vco
                 </span>
               </span>
               <div class="media-content hide-xs font-merryweather"><p>C 语言与 Golang 相互调用的简单例子。</p>
-
 <p>在此使用一段简单的代码展示 CGO 的基本用法 —— 在 Go 程序中使用 C 语言编程。</p></div>
             </div>
             <div style="clear:both;"></div>
@@ -1241,9 +1174,7 @@ ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &quot;INPUT.jpg&quot; -vco
                 </span>
               </span>
               <div class="media-content hide-xs font-merryweather"><h2 id="govendor">govendor</h2>
-
 <p>go vendor 是 go 1.6 官方正式引入的包管理方式。</p>
-
 <p>其基本思路是，将引用的外部包的源代码放在当前工程的<code>vendor</code>目录下面，go 编译时会优先从<code>vendor</code>目录寻找依赖关系。</p></div>
             </div>
             <div style="clear:both;"></div>
@@ -1262,7 +1193,6 @@ ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &quot;INPUT.jpg&quot; -vco
                 </span>
               </span>
               <div class="media-content hide-xs font-merryweather"><p>由于众所不知的原因，在国内访问<code>golang.org</code>需要爬梯子。</p>
-
 <p>所以使用<code>go get</code>安装某些包的时候，也要用梯子。</p></div>
             </div>
             <div style="clear:both;"></div>
@@ -1280,14 +1210,10 @@ ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &quot;INPUT.jpg&quot; -vco
                   Jun 6, 2018
                 </span>
               </span>
-              <div class="media-content hide-xs font-merryweather"><h2 id="数组与切片">数组与切片</h2>
-
+              <div class="media-content hide-xs font-merryweather"><h2 id="heading">数组与切片</h2>
 <p>以前粗学时并没有留意 Golang 的数组，一直以为只有切片。</p>
-
-<p>今天看<a href="https://book.douban.com/subject/27015617/" target="_blank">《Go语言实践》</a>时才发现 Golang 也有数组。与切片的区别是定义时指定长度（例如长度为4的 int 型数组<code>var array [4]int</code>）。</p>
-
+<p>今天看<a href="https://book.douban.com/subject/27015617/">《Go语言实践》</a>时才发现 Golang 也有数组。与切片的区别是定义时指定长度（例如长度为4的 int 型数组<code>var array [4]int</code>）。</p>
 <p>数组赋值时会拷贝整个数组，所以作为参数传递时也会完整拷贝，要考虑性能合理使用，必要时可以使用指针。</p>
-
 <p>以下代码便于理解数组和切片：</p></div>
             </div>
             <div style="clear:both;"></div>
@@ -1305,8 +1231,7 @@ ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &quot;INPUT.jpg&quot; -vco
                   May 5, 2018
                 </span>
               </span>
-              <div class="media-content hide-xs font-merryweather"><h2 id="功能">功能</h2>
-
+              <div class="media-content hide-xs font-merryweather"><h2 id="heading">功能</h2>
 <p>使用知名python图片处理库PIL，为图片添加文字水印。</p></div>
             </div>
             <div style="clear:both;"></div>

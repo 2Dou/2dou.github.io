@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Greedy on Orz the way</title>
@@ -18,34 +18,22 @@
       
       <guid>https://www.orztu.com/leetcode/055-jump-game/</guid>
       <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/jump-game/&#34; target=&#34;_blank&#34;&gt;Jump Game&lt;/a&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/jump-game/&#34;&gt;Jump Game&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Given an array of non-negative integers, you are initially positioned at the first index of the array.&lt;/p&gt;
-
 &lt;p&gt;Each element in the array represents your maximum jump length at that position.&lt;/p&gt;
-
 &lt;p&gt;Determine if you are able to reach the last index.&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;Example 1:&lt;/strong&gt;&lt;/p&gt;
-
 &lt;pre&gt;&lt;code&gt;Input: [2,3,1,1,4]
 Output: true
 Explanation: Jump 1 step from index 0 to 1, then 3 steps to the last index.
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;Example 2:&lt;/strong&gt;&lt;/p&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Example 2:&lt;/strong&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;Input: [3,2,1,0,4]
 Output: false
 Explanation: You will always arrive at index 3 no matter what. Its maximum
              jump length is 0, which makes it impossible to reach the last index.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
 &lt;p&gt;给定一个非负整型数组，每个数字表示可以从该位置向后跳跃的最大步数。&lt;/p&gt;
-
 &lt;p&gt;判断是否能从第一个数字开始跳跃到最后一个数字。&lt;/p&gt;</description>
     </item>
     

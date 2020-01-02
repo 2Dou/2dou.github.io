@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.55.6 with theme Tranquilpeak 0.4.3-SNAPSHOT">
+<meta name="generator" content="Hugo 0.62.1 with theme Tranquilpeak 0.4.3-SNAPSHOT">
 <meta name="author" content="SelFree">
 <meta name="keywords" content="英文格式化, 字符串对齐, program develop, leetcode, Golang, leetcode解答, 程序">
 <meta name="description" content="LeetCode 68. Text Justification - Answer LeetCode编程练习解答">
@@ -313,30 +313,21 @@
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
               <h2 id="description">Description</h2>
-
-<p><a href="https://leetcode.com/problems/text-justification/" target="_blank">Text Justification</a></p>
-
+<p><a href="https://leetcode.com/problems/text-justification/">Text Justification</a></p>
 <blockquote>
 <p>Given an array of words and a width maxWidth, format the text such that each line has exactly maxWidth characters and is fully (left and right) justified.</p>
-
 <p>You should pack your words in a greedy approach; that is, pack as many words as you can in each line. Pad extra spaces <code>' '</code> when necessary so that each line has exactly maxWidth characters.</p>
-
 <p>Extra spaces between words should be distributed as evenly as possible. If the number of spaces on a line do not divide evenly between words, the empty slots on the left will be assigned more spaces than the slots on the right.</p>
-
 <p>For the last line of text, it should be left justified and no <strong>extra</strong> space is inserted between words.</p>
-
 <p><strong>Note:</strong></p>
-
 <ul>
 <li>A word is defined as a character sequence consisting of non-space characters only.</li>
-<li>Each word&rsquo;s length is guaranteed to be greater than 0 and not exceed maxWidth.</li>
+<li>Each word's length is guaranteed to be greater than 0 and not exceed maxWidth.</li>
 <li>The input array words contains at least one word.</li>
 </ul>
 </blockquote>
-
 <blockquote>
 <p><strong>Example 1:</strong></p>
-
 <pre><code>Input:
 words = [&quot;This&quot;, &quot;is&quot;, &quot;an&quot;, &quot;example&quot;, &quot;of&quot;, &quot;text&quot;, &quot;justification.&quot;]
 maxWidth = 16
@@ -346,10 +337,7 @@ Output:
    &quot;example  of text&quot;,
    &quot;justification.  &quot;
 ]
-</code></pre>
-
-<p><strong>Example 2:</strong></p>
-
+</code></pre><p><strong>Example 2:</strong></p>
 <pre><code>Input:
 words = [&quot;What&quot;,&quot;must&quot;,&quot;be&quot;,&quot;acknowledgment&quot;,&quot;shall&quot;,&quot;be&quot;]
 maxWidth = 16
@@ -362,10 +350,7 @@ Output:
 Explanation: Note that the last line is &quot;shall be    &quot; instead of &quot;shall     be&quot;,
              because the last line must be left-justified instead of fully-justified.
              Note that the second line is also left-justified becase it contains only one word.
-</code></pre>
-
-<p><strong>Example 3:</strong></p>
-
+</code></pre><p><strong>Example 3:</strong></p>
 <pre><code>Input:
 words = [&quot;Science&quot;,&quot;is&quot;,&quot;what&quot;,&quot;we&quot;,&quot;understand&quot;,&quot;well&quot;,&quot;enough&quot;,&quot;to&quot;,&quot;explain&quot;,
          &quot;to&quot;,&quot;a&quot;,&quot;computer.&quot;,&quot;Art&quot;,&quot;is&quot;,&quot;everything&quot;,&quot;else&quot;,&quot;we&quot;,&quot;do&quot;]
@@ -379,14 +364,11 @@ Output:
   &quot;everything  else  we&quot;,
   &quot;do                  &quot;
 ]
-</code></pre>
-</blockquote>
-
+</code></pre></blockquote>
 <h2 id="solution">Solution</h2>
-
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-golang" data-lang="golang"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -428,7 +410,7 @@ Output:
 </span><span class="lnt">40
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">func</span> <span class="nf">fullJustify</span><span class="p">(</span><span class="nx">words</span> <span class="p">[]</span><span class="kt">string</span><span class="p">,</span> <span class="nx">maxWidth</span> <span class="kt">int</span><span class="p">)</span> <span class="p">[]</span><span class="kt">string</span> <span class="p">{</span>
+<pre class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">func</span> <span class="nf">fullJustify</span><span class="p">(</span><span class="nx">words</span> <span class="p">[</span><span class="p">]</span><span class="kt">string</span><span class="p">,</span> <span class="nx">maxWidth</span> <span class="kt">int</span><span class="p">)</span> <span class="p">[</span><span class="p">]</span><span class="kt">string</span> <span class="p">{</span>
     <span class="nx">buildLine</span> <span class="o">:=</span> <span class="kd">func</span><span class="p">(</span><span class="nx">end</span><span class="p">,</span> <span class="nx">lineLen</span> <span class="kt">int</span><span class="p">)</span> <span class="kt">string</span> <span class="p">{</span>
         <span class="c1">// 只有一个单词
 </span><span class="c1"></span>        <span class="k">if</span> <span class="nx">end</span> <span class="o">==</span> <span class="mi">1</span> <span class="p">{</span>
@@ -437,22 +419,22 @@ Output:
 
         <span class="nx">space</span> <span class="o">:=</span> <span class="nx">maxWidth</span> <span class="o">-</span> <span class="nx">lineLen</span>
         <span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">space</span> <span class="p">&gt;</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">space</span><span class="o">--</span> <span class="p">{</span>
-            <span class="nx">words</span><span class="p">[</span><span class="nx">i</span><span class="o">%</span><span class="p">(</span><span class="nx">end</span><span class="o">-</span><span class="mi">1</span><span class="p">)]</span> <span class="o">+=</span> <span class="s">&#34; &#34;</span>
+            <span class="nx">words</span><span class="p">[</span><span class="nx">i</span><span class="o">%</span><span class="p">(</span><span class="nx">end</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="p">]</span> <span class="o">+=</span> <span class="s">&#34; &#34;</span>
             <span class="nx">i</span><span class="o">++</span>
         <span class="p">}</span>
 
-        <span class="k">return</span> <span class="nx">strings</span><span class="p">.</span><span class="nf">Join</span><span class="p">(</span><span class="nx">words</span><span class="p">[:</span><span class="nx">end</span><span class="p">],</span> <span class="s">&#34;&#34;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="nx">strings</span><span class="p">.</span><span class="nf">Join</span><span class="p">(</span><span class="nx">words</span><span class="p">[</span><span class="p">:</span><span class="nx">end</span><span class="p">]</span><span class="p">,</span> <span class="s">&#34;&#34;</span><span class="p">)</span>
     <span class="p">}</span>
 
-    <span class="nx">result</span> <span class="o">:=</span> <span class="p">[]</span><span class="kt">string</span><span class="p">{}</span>
+    <span class="nx">result</span> <span class="o">:=</span> <span class="p">[</span><span class="p">]</span><span class="kt">string</span><span class="p">{</span><span class="p">}</span>
     <span class="nx">curLen</span><span class="p">,</span> <span class="nx">wordLen</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span>
-    <span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="nx">words</span><span class="p">);</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
-        <span class="nx">wordLen</span> <span class="p">=</span> <span class="nb">len</span><span class="p">(</span><span class="nx">words</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span>
+    <span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="nx">words</span><span class="p">)</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
+        <span class="nx">wordLen</span> <span class="p">=</span> <span class="nb">len</span><span class="p">(</span><span class="nx">words</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span><span class="p">)</span>
 
         <span class="c1">// i 表示单词个数减一，等于单词之间单个空格数量
 </span><span class="c1"></span>        <span class="k">if</span> <span class="nx">i</span><span class="o">+</span><span class="nx">curLen</span><span class="o">+</span><span class="nx">wordLen</span> <span class="p">&gt;</span> <span class="nx">maxWidth</span> <span class="p">{</span>
-            <span class="nx">result</span> <span class="p">=</span> <span class="nb">append</span><span class="p">(</span><span class="nx">result</span><span class="p">,</span> <span class="nf">buildLine</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span> <span class="nx">curLen</span><span class="p">))</span>
-            <span class="nx">i</span><span class="p">,</span> <span class="nx">curLen</span><span class="p">,</span> <span class="nx">words</span> <span class="p">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">wordLen</span><span class="p">,</span> <span class="nx">words</span><span class="p">[</span><span class="nx">i</span><span class="p">:]</span>
+            <span class="nx">result</span> <span class="p">=</span> <span class="nb">append</span><span class="p">(</span><span class="nx">result</span><span class="p">,</span> <span class="nf">buildLine</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span> <span class="nx">curLen</span><span class="p">)</span><span class="p">)</span>
+            <span class="nx">i</span><span class="p">,</span> <span class="nx">curLen</span><span class="p">,</span> <span class="nx">words</span> <span class="p">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">wordLen</span><span class="p">,</span> <span class="nx">words</span><span class="p">[</span><span class="nx">i</span><span class="p">:</span><span class="p">]</span>
         <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
             <span class="nx">curLen</span> <span class="o">+=</span> <span class="nx">wordLen</span>
         <span class="p">}</span>
@@ -461,7 +443,7 @@ Output:
     <span class="c1">// build last line
 </span><span class="c1"></span>    <span class="nx">lastLine</span> <span class="o">:=</span> <span class="nx">strings</span><span class="p">.</span><span class="nf">Join</span><span class="p">(</span><span class="nx">words</span><span class="p">,</span> <span class="s">&#34; &#34;</span><span class="p">)</span>
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="nx">lastLine</span><span class="p">)</span> <span class="p">&lt;</span> <span class="nx">maxWidth</span> <span class="p">{</span>
-        <span class="nx">lastLine</span> <span class="o">+=</span> <span class="nx">strings</span><span class="p">.</span><span class="nf">Repeat</span><span class="p">(</span><span class="s">&#34; &#34;</span><span class="p">,</span> <span class="nx">maxWidth</span><span class="o">-</span><span class="nb">len</span><span class="p">(</span><span class="nx">lastLine</span><span class="p">))</span>
+        <span class="nx">lastLine</span> <span class="o">+=</span> <span class="nx">strings</span><span class="p">.</span><span class="nf">Repeat</span><span class="p">(</span><span class="s">&#34; &#34;</span><span class="p">,</span> <span class="nx">maxWidth</span><span class="o">-</span><span class="nb">len</span><span class="p">(</span><span class="nx">lastLine</span><span class="p">)</span><span class="p">)</span>
     <span class="p">}</span>
 
     <span class="nx">result</span> <span class="p">=</span> <span class="nb">append</span><span class="p">(</span><span class="nx">result</span><span class="p">,</span> <span class="nx">lastLine</span><span class="p">)</span>
@@ -563,7 +545,7 @@ Output:
         </article>
         <footer id="footer" class="main-content-wrap">
   <span class="copyrights">
-    &copy; 2019 SelFree. All Rights Reserved
+    &copy; 2020 SelFree. All Rights Reserved
   </span>
 </footer>
 
@@ -699,9 +681,7 @@ Output:
                 </span>
               </span>
               <div class="media-content hide-xs font-merryweather"><p>首先，并非专业视频处理人员；以下命令都是我从网上搜索后修改以为己所用。</p>
-
-<h2 id="图片转视频">图片转视频</h2>
-
+<h2 id="heading">图片转视频</h2>
 <pre><code># gif 转视频（DURATION：时长，gif会循环播放）
 ffmpeg -ignore_loop 0 -t DURATION -f gif -i &quot;INPUT.gif&quot; -vcodec libx264 -crf 5 &quot;OUTPUT.mp4&quot;
 
@@ -724,12 +704,9 @@ ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &quot;INPUT.jpg&quot; -vco
                   Dec 12, 2018
                 </span>
               </span>
-              <div class="media-content hide-xs font-merryweather"><h2 id="闪退点">闪退点</h2>
-
+              <div class="media-content hide-xs font-merryweather"><h2 id="heading">闪退点</h2>
 <p>Version: Cocos2dx-Lua 3.16</p>
-
 <p>在某个页面修改后，出现闪退。查看修改记录没有特别的地方，均为修改图片或者条件判断。</p>
-
 <p>启动 XCode 发现闪退位置出现在<code>void Node::onEnterTransitionDidFinish()</code>中，
 在其调用子节点的<code>child-&gt;onEnterTransitionDidFinish()</code>时，<code>child</code>指针无效。</p></div>
             </div>
@@ -749,16 +726,12 @@ ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &quot;INPUT.jpg&quot; -vco
                 </span>
               </span>
               <div class="media-content hide-xs font-merryweather"><p>在日志信息中，有时需要获取当前函数的调用信息，比如打印调用栈：</p>
-
-<h2 id="调用栈">调用栈</h2>
-
-<h3 id="debug-stack-byte">debug.Stack() []byte</h3>
-
+<h2 id="heading">调用栈</h2>
+<h3 id="debugstack-byte">debug.Stack() []byte</h3>
 <p><code>debug.Stack()</code>函数可以获取当前 goroutine 的调用栈信息，需要<code>import &quot;runtime/debug&quot;</code>。</p>
-
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-golang" data-lang="golang"><span class="lnt"> 8
+<pre class="chroma"><code><span class="lnt"> 8
 </span><span class="lnt"> 9
 </span><span class="lnt">10
 </span><span class="lnt">11
@@ -773,18 +746,18 @@ ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &quot;INPUT.jpg&quot; -vco
 </span><span class="lnt">20
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">func</span> <span class="nf">foo</span><span class="p">()</span> <span class="p">{</span>
+<pre class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">func</span> <span class="nf">foo</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;--- BEGIN ---&#34;</span><span class="p">)</span>
-    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nb">string</span><span class="p">(</span><span class="nx">debug</span><span class="p">.</span><span class="nf">Stack</span><span class="p">()))</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nb">string</span><span class="p">(</span><span class="nx">debug</span><span class="p">.</span><span class="nf">Stack</span><span class="p">(</span><span class="p">)</span><span class="p">)</span><span class="p">)</span>
     <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;--- END ---&#34;</span><span class="p">)</span>
 <span class="p">}</span>
 
-<span class="kd">func</span> <span class="nf">boom</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nf">foo</span><span class="p">()</span>
+<span class="kd">func</span> <span class="nf">boom</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nf">foo</span><span class="p">(</span><span class="p">)</span>
 <span class="p">}</span>
 
-<span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nf">boom</span><span class="p">()</span>
+<span class="kd">func</span> <span class="nf">main</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nf">boom</span><span class="p">(</span><span class="p">)</span>
 <span class="p">}</span></code></pre></td></tr></table>
 </div>
 </div></div>
@@ -804,8 +777,7 @@ ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &quot;INPUT.jpg&quot; -vco
                   Nov 11, 2018
                 </span>
               </span>
-              <div class="media-content hide-xs font-merryweather"><p>上回提到<a href="https://www.orztu.com/post/lua-table-minify/" target="_blank">元表优化 Lua 配置文件</a>，以减少重复字段，节省内存开销。</p>
-
+              <div class="media-content hide-xs font-merryweather"><p>上回提到<a href="https://www.orztu.com/post/lua-table-minify/">元表优化 Lua 配置文件</a>，以减少重复字段，节省内存开销。</p>
 <p>除了这种直接地减少内存开销的方法，使用元表还能实现数据的延迟加载，从另一个角度节约内存。</p></div>
             </div>
             <div style="clear:both;"></div>
@@ -823,12 +795,9 @@ ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &quot;INPUT.jpg&quot; -vco
                   Nov 11, 2018
                 </span>
               </span>
-              <div class="media-content hide-xs font-merryweather"><h2 id="配置文件">配置文件</h2>
-
+              <div class="media-content hide-xs font-merryweather"><h2 id="heading">配置文件</h2>
 <p>在游戏工程中，通常有大量配置是由策划提供，再转换成程序方便读取的格式添加到工程中。</p>
-
 <p>在我参与的<code>Cocos2dx-Lua</code>工程中，策划通常在<code>Excel</code>中配置，再通过脚本转换为<code>Lua-Table</code>的文件。</p>
-
 <p>比如常见的道具表转换后：</p></div>
             </div>
             <div style="clear:both;"></div>
@@ -847,7 +816,6 @@ ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &quot;INPUT.jpg&quot; -vco
                 </span>
               </span>
               <div class="media-content hide-xs font-merryweather"><p>C 语言与 Golang 相互调用的简单例子。</p>
-
 <p>在此使用一段简单的代码展示 CGO 的基本用法 —— 在 Go 程序中使用 C 语言编程。</p></div>
             </div>
             <div style="clear:both;"></div>
@@ -866,9 +834,7 @@ ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &quot;INPUT.jpg&quot; -vco
                 </span>
               </span>
               <div class="media-content hide-xs font-merryweather"><h2 id="govendor">govendor</h2>
-
 <p>go vendor 是 go 1.6 官方正式引入的包管理方式。</p>
-
 <p>其基本思路是，将引用的外部包的源代码放在当前工程的<code>vendor</code>目录下面，go 编译时会优先从<code>vendor</code>目录寻找依赖关系。</p></div>
             </div>
             <div style="clear:both;"></div>
@@ -887,7 +853,6 @@ ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &quot;INPUT.jpg&quot; -vco
                 </span>
               </span>
               <div class="media-content hide-xs font-merryweather"><p>由于众所不知的原因，在国内访问<code>golang.org</code>需要爬梯子。</p>
-
 <p>所以使用<code>go get</code>安装某些包的时候，也要用梯子。</p></div>
             </div>
             <div style="clear:both;"></div>
@@ -905,14 +870,10 @@ ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &quot;INPUT.jpg&quot; -vco
                   Jun 6, 2018
                 </span>
               </span>
-              <div class="media-content hide-xs font-merryweather"><h2 id="数组与切片">数组与切片</h2>
-
+              <div class="media-content hide-xs font-merryweather"><h2 id="heading">数组与切片</h2>
 <p>以前粗学时并没有留意 Golang 的数组，一直以为只有切片。</p>
-
-<p>今天看<a href="https://book.douban.com/subject/27015617/" target="_blank">《Go语言实践》</a>时才发现 Golang 也有数组。与切片的区别是定义时指定长度（例如长度为4的 int 型数组<code>var array [4]int</code>）。</p>
-
+<p>今天看<a href="https://book.douban.com/subject/27015617/">《Go语言实践》</a>时才发现 Golang 也有数组。与切片的区别是定义时指定长度（例如长度为4的 int 型数组<code>var array [4]int</code>）。</p>
 <p>数组赋值时会拷贝整个数组，所以作为参数传递时也会完整拷贝，要考虑性能合理使用，必要时可以使用指针。</p>
-
 <p>以下代码便于理解数组和切片：</p></div>
             </div>
             <div style="clear:both;"></div>
@@ -930,8 +891,7 @@ ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &quot;INPUT.jpg&quot; -vco
                   May 5, 2018
                 </span>
               </span>
-              <div class="media-content hide-xs font-merryweather"><h2 id="功能">功能</h2>
-
+              <div class="media-content hide-xs font-merryweather"><h2 id="heading">功能</h2>
 <p>使用知名python图片处理库PIL，为图片添加文字水印。</p></div>
             </div>
             <div style="clear:both;"></div>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>工具 on Orz the way</title>
@@ -18,9 +18,7 @@
       
       <guid>https://www.orztu.com/post/using-govendor/</guid>
       <description>&lt;h2 id=&#34;govendor&#34;&gt;govendor&lt;/h2&gt;
-
 &lt;p&gt;go vendor 是 go 1.6 官方正式引入的包管理方式。&lt;/p&gt;
-
 &lt;p&gt;其基本思路是，将引用的外部包的源代码放在当前工程的&lt;code&gt;vendor&lt;/code&gt;目录下面，go 编译时会优先从&lt;code&gt;vendor&lt;/code&gt;目录寻找依赖关系。&lt;/p&gt;</description>
     </item>
     

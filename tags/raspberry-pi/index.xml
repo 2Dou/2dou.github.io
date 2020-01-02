@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Raspberry Pi on Orz the way</title>
@@ -17,27 +17,20 @@
       <pubDate>Wed, 18 Oct 2017 16:44:36 +0800</pubDate>
       
       <guid>https://www.orztu.com/post/raspbian-install-and-configure/</guid>
-      <description>&lt;!-- toc --&gt;
-
-&lt;h2 id=&#34;系统安装-https-www-raspberrypi-org-documentation-installation-installing-images-readme-md&#34;&gt;&lt;a href=&#34;https://www.raspberrypi.org/documentation/installation/installing-images/README.md&#34; target=&#34;_blank&#34;&gt;系统安装&lt;/a&gt;&lt;/h2&gt;
-
-&lt;p&gt;系统: &lt;a href=&#34;https://www.raspberrypi.org/downloads/raspbian/&#34; target=&#34;_blank&#34;&gt;raspbian&lt;/a&gt; &lt;br/&gt;
+      <description>&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;httpswwwraspberrypiorgdocumentationinstallationinstalling-imagesreadmemd&#34;&gt;&lt;a href=&#34;https://www.raspberrypi.org/documentation/installation/installing-images/README.md&#34;&gt;系统安装&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;系统: &lt;a href=&#34;https://www.raspberrypi.org/downloads/raspbian/&#34;&gt;raspbian&lt;/a&gt; &lt;!-- raw HTML omitted --&gt;
 工具（二选一）：&lt;/p&gt;
-
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://etcher.io/&#34; target=&#34;_blank&#34;&gt;Etcher&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://sourceforge.net/projects/win32diskimager/&#34; target=&#34;_blank&#34;&gt;Win32DiskImager&lt;/a&gt;（windows only）&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://etcher.io/&#34;&gt;Etcher&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://sourceforge.net/projects/win32diskimager/&#34;&gt;Win32DiskImager&lt;/a&gt;（windows only）&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;ol&gt;
 &lt;li&gt;将SD卡格式化成exFat格式&lt;/li&gt;
 &lt;li&gt;使用Etcher或者Win32DiskImager将下载的raspbian系统镜像(img文件)写入SD卡&lt;/li&gt;
 &lt;/ol&gt;
-
 &lt;p&gt;写入完成之后就相当于系统安装完成了。这时候SD卡被分成两个区，有一个区是在windows下无法识别，不用理会。&lt;/p&gt;
-
 &lt;p&gt;这时候如果直接将SD卡插入树莓派，会发现“无法启动”。显示屏没信号，在路由器里找到树莓派的IP也无法用ssh登录。&lt;/p&gt;
-
 &lt;p&gt;我安装的时候就是踩到这个坑。以为安装失败，反复装了好几次，就差把SD卡写穿了。&lt;/p&gt;</description>
     </item>
     

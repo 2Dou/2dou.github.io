@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>混合编程 on Orz the way</title>
@@ -18,7 +18,6 @@
       
       <guid>https://www.orztu.com/post/cgo-introduce/</guid>
       <description>&lt;p&gt;C 语言与 Golang 相互调用的简单例子。&lt;/p&gt;
-
 &lt;p&gt;在此使用一段简单的代码展示 CGO 的基本用法 —— 在 Go 程序中使用 C 语言编程。&lt;/p&gt;</description>
     </item>
     

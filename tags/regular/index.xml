@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Regular on Orz the way</title>
@@ -17,16 +17,13 @@
       <pubDate>Mon, 30 Oct 2017 19:25:35 +0800</pubDate>
       
       <guid>https://www.orztu.com/leetcode/020-valid-parentheses/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/valid-parentheses/&#34; target=&#34;_blank&#34;&gt;Valid Parentheses&lt;/a&gt;&lt;/p&gt;
-
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/valid-parentheses/&#34;&gt;Valid Parentheses&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;Given a string containing just the characters &lt;code&gt;&#39;(&#39;&lt;/code&gt;, &lt;code&gt;&#39;)&#39;&lt;/code&gt;, &lt;code&gt;&#39;{&#39;&lt;/code&gt;, &lt;code&gt;&#39;}&#39;&lt;/code&gt;, &lt;code&gt;&#39;[&#39;&lt;/code&gt; and &lt;code&gt;&#39;]&#39;&lt;/code&gt;, determine if the input string is valid.
-&lt;/br&gt; &lt;/br&gt;
+&lt;!-- raw HTML omitted --&gt; &lt;!-- raw HTML omitted --&gt;
 The brackets must close in the correct order, &lt;code&gt;&amp;quot;()&amp;quot;&lt;/code&gt; and &lt;code&gt;&amp;quot;()[]{}&amp;quot;&lt;/code&gt; are all valid but &lt;code&gt;&amp;quot;(]&amp;quot;&lt;/code&gt; and &lt;code&gt;&amp;quot;([)]&amp;quot;&lt;/code&gt; are not.&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;p&gt;给出包含三种括号的字符串，验证括号是否左右匹配&lt;/p&gt;</description>
     </item>
     
@@ -36,13 +33,10 @@ The brackets must close in the correct order, &lt;code&gt;&amp;quot;()&amp;quot;
       <pubDate>Fri, 24 Mar 2017 15:00:47 +0800</pubDate>
       
       <guid>https://www.orztu.com/leetcode/010-regular-expression-matching/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/regular-expression-matching&#34; target=&#34;_blank&#34;&gt;Regular Expression Matching&lt;/a&gt;&lt;/p&gt;
-
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/regular-expression-matching&#34;&gt;Regular Expression Matching&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
 &lt;blockquote&gt;
-&lt;p&gt;Implement regular expression matching with support for &amp;lsquo;.&amp;rsquo; and &amp;lsquo;*&amp;lsquo;.&lt;/p&gt;
-
+&lt;p&gt;Implement regular expression matching with support for &amp;lsquo;.&amp;rsquo; and &amp;lsquo;*&#39;.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;&#39;.&#39; Matches any single character.
 &#39;*&#39; Matches zero or more of the preceding element.
 
@@ -59,8 +53,7 @@ isMatch(&amp;quot;aa&amp;quot;, &amp;quot;a*&amp;quot;) → true
 isMatch(&amp;quot;aa&amp;quot;, &amp;quot;.*&amp;quot;) → true
 isMatch(&amp;quot;ab&amp;quot;, &amp;quot;.*&amp;quot;) → true
 isMatch(&amp;quot;aab&amp;quot;, &amp;quot;c*a*b&amp;quot;) → true
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;</description>
+&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;</description>
     </item>
     
   </channel>

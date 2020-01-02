@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.55.6 with theme Tranquilpeak 0.4.3-SNAPSHOT">
+<meta name="generator" content="Hugo 0.62.1 with theme Tranquilpeak 0.4.3-SNAPSHOT">
 <meta name="author" content="SelFree">
 <meta name="keywords" content="Raspberry Pi, raspbian configure, 树莓派配置, 树莓派系统配置, iptables, 树莓派静态IP, program develop, leetcode, Golang, leetcode解答, 程序">
 <meta name="description" content="Raspberry Pi 树莓派 Raspbian系统安装与基本配置">
@@ -315,97 +315,57 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <h1 id="table-of-contents">Table of Contents</h1><nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#系统安装-https-www-raspberrypi-org-documentation-installation-installing-images-readme-md"><a href="https://www.raspberrypi.org/documentation/installation/installing-images/README.md" target="_blank">系统安装</a></a></li>
-<li><a href="#基本配置">基本配置</a>
-<ul>
-<li><a href="#1-静态ip-固定ip">1. 静态IP/固定IP</a></li>
-<li><a href="#2-iptables">2. iptables</a></li>
-<li><a href="#3-修改主机名">3. 修改主机名</a></li>
-<li><a href="#4-修改用户名">4. 修改用户名</a></li>
-</ul></li>
-</ul></li>
-</ul>
-</nav>
-
-<h2 id="系统安装-https-www-raspberrypi-org-documentation-installation-installing-images-readme-md"><a href="https://www.raspberrypi.org/documentation/installation/installing-images/README.md" target="_blank">系统安装</a></h2>
-
-<p>系统: <a href="https://www.raspberrypi.org/downloads/raspbian/" target="_blank">raspbian</a> <br/>
+              <!-- raw HTML omitted -->
+<h2 id="httpswwwraspberrypiorgdocumentationinstallationinstalling-imagesreadmemd"><a href="https://www.raspberrypi.org/documentation/installation/installing-images/README.md">系统安装</a></h2>
+<p>系统: <a href="https://www.raspberrypi.org/downloads/raspbian/">raspbian</a> <!-- raw HTML omitted -->
 工具（二选一）：</p>
-
 <ul>
-<li><a href="https://etcher.io/" target="_blank">Etcher</a></li>
-<li><a href="http://sourceforge.net/projects/win32diskimager/" target="_blank">Win32DiskImager</a>（windows only）</li>
+<li><a href="https://etcher.io/">Etcher</a></li>
+<li><a href="http://sourceforge.net/projects/win32diskimager/">Win32DiskImager</a>（windows only）</li>
 </ul>
-
 <ol>
 <li>将SD卡格式化成exFat格式</li>
 <li>使用Etcher或者Win32DiskImager将下载的raspbian系统镜像(img文件)写入SD卡</li>
 </ol>
-
 <p>写入完成之后就相当于系统安装完成了。这时候SD卡被分成两个区，有一个区是在windows下无法识别，不用理会。</p>
-
 <p>这时候如果直接将SD卡插入树莓派，会发现“无法启动”。显示屏没信号，在路由器里找到树莓派的IP也无法用ssh登录。</p>
-
 <p>我安装的时候就是踩到这个坑。以为安装失败，反复装了好几次，就差把SD卡写穿了。</p>
-
 <p>实际系统安装已经成功了。只需要在电脑上打开SD卡，找到<code>config.txt</code>文件里<code>#hdmi_safe=1</code>这一行，将前面的<code>#</code>号去掉；
 再新建一个文件命名为<code>ssh</code>（不能有扩展名）。</p>
-
 <p>再次把SD卡装进树莓派启动，显示屏就可以正常显示了，ssh也能登录了。</p>
-
-<h2 id="基本配置">基本配置</h2>
-
-<h3 id="1-静态ip-固定ip">1. 静态IP/固定IP</h3>
-
+<h2 id="heading">基本配置</h2>
+<h3 id="1-ipip">1. 静态IP/固定IP</h3>
 <p>打开<code>/etc/dhcpcd.conf</code>文件，找到网口（一般为<code>eth0</code>）</p>
-
 <p>指定IP:
 <div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">interface eth0
-static <span class="nv">ip_address</span><span class="o">=</span><span class="m">192</span>.168.1.20/24
-static <span class="nv">routers</span><span class="o">=</span><span class="m">192</span>.168.1.1</code></pre></div></p>
-
+static <span class="nv">ip_address</span><span class="o">=</span>192.168.1.20/24
+static <span class="nv">routers</span><span class="o">=</span>192.168.1.1</code></pre></div></p>
 <h3 id="2-iptables">2. iptables</h3>
-
 <p>刚开始配置<code>iptables</code>的时候，以为创建好规则后，使用<code>iptables-save</code>就可以保存了，结果重启后又失效。</p>
-
 <p>为了持久化规则，可以使用<code>iptables-persistent</code>。</p>
-
 <p>运行<code>apt-get</code>安装：<code>sudo apt-get install iptables-persistent</code>安装。</p>
-
 <p>然后在<code>/etc/iptables/rules.v4</code>里面编辑规则</p>
-
-<h3 id="3-修改主机名">3. 修改主机名</h3>
-
+<h3 id="3-">3. 修改主机名</h3>
 <p>需要修改两个文件：</p>
-
 <ul>
 <li>替换<code>/etc/hostname</code>里的主机名</li>
 <li>替换<code>/etc/hosts</code>里的主机名</li>
 </ul>
-
-<h3 id="4-修改用户名">4. 修改用户名</h3>
-
+<h3 id="4-">4. 修改用户名</h3>
 <p>为了修改默认用户名pi，需要临时使用root帐号登录。</p>
-
 <ol>
-<li><p>启用root帐号</p>
-
+<li>
+<p>启用root帐号</p>
 <div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># 为root帐号设置密码</span>
 sudo passwd root
 <span class="c1"># 启用root帐号</span>
 sudo passwd --unlock root</code></pre></div>
-
 <p>ssh默认是禁止root登录的，所以还需要修改ssh配置：编辑文件<code>/etc/ssh/sshd_config</code>，添加一行<code>PermitRootLogin yes</code>即可。</p>
-
 <div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># 重启</span>
-sudo reboot</code></pre></div></li>
-
-<li><p>重启系统并登录root后修改pi账户</p>
-
+sudo reboot</code></pre></div>
+</li>
+<li>
+<p>重启系统并登录root后修改pi账户</p>
 <div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># 修改用户名为NEWNAME</span>
 usermod -l NEWNAME pi
 <span class="c1"># 修改用户group</span>
@@ -413,18 +373,18 @@ groupmod -n NEWNAME pi
 <span class="c1"># 修改账户主目录</span>
 mv /home/pi /home/NEWNAME
 <span class="c1"># 设置主目录</span>
-usermod -d /home/NEWNAME NEWNAME</code></pre></div></li>
-
-<li><p>重启登录NEWNAME</p>
-
-<p>登录后检查新用户是否能正常使用sudo，如果不能则再次使用root登录，往<code>/etc/sudoers</code>中添加一行：<code>NEWNAME ALL=(ALL) ALL</code>。</p></li>
-
-<li><p>新账户正常后禁用root</p>
-
+usermod -d /home/NEWNAME NEWNAME</code></pre></div>
+</li>
+<li>
+<p>重启登录NEWNAME</p>
+<p>登录后检查新用户是否能正常使用sudo，如果不能则再次使用root登录，往<code>/etc/sudoers</code>中添加一行：<code>NEWNAME ALL=(ALL) ALL</code>。</p>
+</li>
+<li>
+<p>新账户正常后禁用root</p>
 <div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># 禁用root</span>
 sudo passwd -l root</code></pre></div>
-
-<p>别忘了还有ssh配置文件也要修改。</p></li>
+<p>别忘了还有ssh配置文件也要修改。</p>
+</li>
 </ol>
               
               
@@ -500,7 +460,7 @@ sudo passwd -l root</code></pre></div>
       
       <li class="post-action">
         
-          <a class="post-action-btn btn btn--default" href="#table-of-contents">
+          <a class="post-action-btn btn btn--default" href="#">
         
           <i class="fa fa-list"></i>
         </a>
@@ -521,7 +481,7 @@ sudo passwd -l root</code></pre></div>
         </article>
         <footer id="footer" class="main-content-wrap">
   <span class="copyrights">
-    &copy; 2019 SelFree. All Rights Reserved
+    &copy; 2020 SelFree. All Rights Reserved
   </span>
 </footer>
 
@@ -579,7 +539,7 @@ sudo passwd -l root</code></pre></div>
       
       <li class="post-action">
         
-          <a class="post-action-btn btn btn--default" href="#table-of-contents">
+          <a class="post-action-btn btn btn--default" href="#">
         
           <i class="fa fa-list"></i>
         </a>
@@ -659,9 +619,7 @@ sudo passwd -l root</code></pre></div>
                 </span>
               </span>
               <div class="media-content hide-xs font-merryweather"><p>首先，并非专业视频处理人员；以下命令都是我从网上搜索后修改以为己所用。</p>
-
-<h2 id="图片转视频">图片转视频</h2>
-
+<h2 id="heading">图片转视频</h2>
 <pre><code># gif 转视频（DURATION：时长，gif会循环播放）
 ffmpeg -ignore_loop 0 -t DURATION -f gif -i &quot;INPUT.gif&quot; -vcodec libx264 -crf 5 &quot;OUTPUT.mp4&quot;
 
@@ -684,12 +642,9 @@ ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &quot;INPUT.jpg&quot; -vco
                   Dec 12, 2018
                 </span>
               </span>
-              <div class="media-content hide-xs font-merryweather"><h2 id="闪退点">闪退点</h2>
-
+              <div class="media-content hide-xs font-merryweather"><h2 id="heading">闪退点</h2>
 <p>Version: Cocos2dx-Lua 3.16</p>
-
 <p>在某个页面修改后，出现闪退。查看修改记录没有特别的地方，均为修改图片或者条件判断。</p>
-
 <p>启动 XCode 发现闪退位置出现在<code>void Node::onEnterTransitionDidFinish()</code>中，
 在其调用子节点的<code>child-&gt;onEnterTransitionDidFinish()</code>时，<code>child</code>指针无效。</p></div>
             </div>
@@ -709,16 +664,12 @@ ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &quot;INPUT.jpg&quot; -vco
                 </span>
               </span>
               <div class="media-content hide-xs font-merryweather"><p>在日志信息中，有时需要获取当前函数的调用信息，比如打印调用栈：</p>
-
-<h2 id="调用栈">调用栈</h2>
-
-<h3 id="debug-stack-byte">debug.Stack() []byte</h3>
-
+<h2 id="heading">调用栈</h2>
+<h3 id="debugstack-byte">debug.Stack() []byte</h3>
 <p><code>debug.Stack()</code>函数可以获取当前 goroutine 的调用栈信息，需要<code>import &quot;runtime/debug&quot;</code>。</p>
-
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-golang" data-lang="golang"><span class="lnt"> 8
+<pre class="chroma"><code><span class="lnt"> 8
 </span><span class="lnt"> 9
 </span><span class="lnt">10
 </span><span class="lnt">11
@@ -733,18 +684,18 @@ ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &quot;INPUT.jpg&quot; -vco
 </span><span class="lnt">20
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">func</span> <span class="nf">foo</span><span class="p">()</span> <span class="p">{</span>
+<pre class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">func</span> <span class="nf">foo</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;--- BEGIN ---&#34;</span><span class="p">)</span>
-    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nb">string</span><span class="p">(</span><span class="nx">debug</span><span class="p">.</span><span class="nf">Stack</span><span class="p">()))</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nb">string</span><span class="p">(</span><span class="nx">debug</span><span class="p">.</span><span class="nf">Stack</span><span class="p">(</span><span class="p">)</span><span class="p">)</span><span class="p">)</span>
     <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;--- END ---&#34;</span><span class="p">)</span>
 <span class="p">}</span>
 
-<span class="kd">func</span> <span class="nf">boom</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nf">foo</span><span class="p">()</span>
+<span class="kd">func</span> <span class="nf">boom</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nf">foo</span><span class="p">(</span><span class="p">)</span>
 <span class="p">}</span>
 
-<span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nf">boom</span><span class="p">()</span>
+<span class="kd">func</span> <span class="nf">main</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nf">boom</span><span class="p">(</span><span class="p">)</span>
 <span class="p">}</span></code></pre></td></tr></table>
 </div>
 </div></div>
@@ -764,8 +715,7 @@ ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &quot;INPUT.jpg&quot; -vco
                   Nov 11, 2018
                 </span>
               </span>
-              <div class="media-content hide-xs font-merryweather"><p>上回提到<a href="https://www.orztu.com/post/lua-table-minify/" target="_blank">元表优化 Lua 配置文件</a>，以减少重复字段，节省内存开销。</p>
-
+              <div class="media-content hide-xs font-merryweather"><p>上回提到<a href="https://www.orztu.com/post/lua-table-minify/">元表优化 Lua 配置文件</a>，以减少重复字段，节省内存开销。</p>
 <p>除了这种直接地减少内存开销的方法，使用元表还能实现数据的延迟加载，从另一个角度节约内存。</p></div>
             </div>
             <div style="clear:both;"></div>
@@ -783,12 +733,9 @@ ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &quot;INPUT.jpg&quot; -vco
                   Nov 11, 2018
                 </span>
               </span>
-              <div class="media-content hide-xs font-merryweather"><h2 id="配置文件">配置文件</h2>
-
+              <div class="media-content hide-xs font-merryweather"><h2 id="heading">配置文件</h2>
 <p>在游戏工程中，通常有大量配置是由策划提供，再转换成程序方便读取的格式添加到工程中。</p>
-
 <p>在我参与的<code>Cocos2dx-Lua</code>工程中，策划通常在<code>Excel</code>中配置，再通过脚本转换为<code>Lua-Table</code>的文件。</p>
-
 <p>比如常见的道具表转换后：</p></div>
             </div>
             <div style="clear:both;"></div>
@@ -807,7 +754,6 @@ ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &quot;INPUT.jpg&quot; -vco
                 </span>
               </span>
               <div class="media-content hide-xs font-merryweather"><p>C 语言与 Golang 相互调用的简单例子。</p>
-
 <p>在此使用一段简单的代码展示 CGO 的基本用法 —— 在 Go 程序中使用 C 语言编程。</p></div>
             </div>
             <div style="clear:both;"></div>
@@ -826,9 +772,7 @@ ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &quot;INPUT.jpg&quot; -vco
                 </span>
               </span>
               <div class="media-content hide-xs font-merryweather"><h2 id="govendor">govendor</h2>
-
 <p>go vendor 是 go 1.6 官方正式引入的包管理方式。</p>
-
 <p>其基本思路是，将引用的外部包的源代码放在当前工程的<code>vendor</code>目录下面，go 编译时会优先从<code>vendor</code>目录寻找依赖关系。</p></div>
             </div>
             <div style="clear:both;"></div>
@@ -847,7 +791,6 @@ ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &quot;INPUT.jpg&quot; -vco
                 </span>
               </span>
               <div class="media-content hide-xs font-merryweather"><p>由于众所不知的原因，在国内访问<code>golang.org</code>需要爬梯子。</p>
-
 <p>所以使用<code>go get</code>安装某些包的时候，也要用梯子。</p></div>
             </div>
             <div style="clear:both;"></div>
@@ -865,14 +808,10 @@ ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &quot;INPUT.jpg&quot; -vco
                   Jun 6, 2018
                 </span>
               </span>
-              <div class="media-content hide-xs font-merryweather"><h2 id="数组与切片">数组与切片</h2>
-
+              <div class="media-content hide-xs font-merryweather"><h2 id="heading">数组与切片</h2>
 <p>以前粗学时并没有留意 Golang 的数组，一直以为只有切片。</p>
-
-<p>今天看<a href="https://book.douban.com/subject/27015617/" target="_blank">《Go语言实践》</a>时才发现 Golang 也有数组。与切片的区别是定义时指定长度（例如长度为4的 int 型数组<code>var array [4]int</code>）。</p>
-
+<p>今天看<a href="https://book.douban.com/subject/27015617/">《Go语言实践》</a>时才发现 Golang 也有数组。与切片的区别是定义时指定长度（例如长度为4的 int 型数组<code>var array [4]int</code>）。</p>
 <p>数组赋值时会拷贝整个数组，所以作为参数传递时也会完整拷贝，要考虑性能合理使用，必要时可以使用指针。</p>
-
 <p>以下代码便于理解数组和切片：</p></div>
             </div>
             <div style="clear:both;"></div>
@@ -890,8 +829,7 @@ ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &quot;INPUT.jpg&quot; -vco
                   May 5, 2018
                 </span>
               </span>
-              <div class="media-content hide-xs font-merryweather"><h2 id="功能">功能</h2>
-
+              <div class="media-content hide-xs font-merryweather"><h2 id="heading">功能</h2>
 <p>使用知名python图片处理库PIL，为图片添加文字水印。</p></div>
             </div>
             <div style="clear:both;"></div>
