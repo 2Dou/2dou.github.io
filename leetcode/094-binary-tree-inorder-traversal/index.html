@@ -8,19 +8,41 @@
 <meta name="generator" content="Hugo 0.62.1 with theme Tranquilpeak 0.4.7-BETA">
 <meta name="author" content="SelFree">
 <meta name="keywords" content=", program develop, leetcode, Golang, leetcode解答, 程序">
-<meta name="description" content="城市永远年轻，而我们终将老去">
+<meta name="description" content="LeetCode 94. Binary Tree Inorder Traversal - Answer LeetCode编程练习解答">
 
 
-<meta property="og:description" content="城市永远年轻，而我们终将老去">
-<meta property="og:type" content="website">
-<meta property="og:title" content="LeetCode">
-<meta name="twitter:title" content="LeetCode">
-<meta property="og:url" content="https://www.orztu.com/tags/leetcode/">
-<meta property="twitter:url" content="https://www.orztu.com/tags/leetcode/">
+<meta property="og:description" content="LeetCode 94. Binary Tree Inorder Traversal - Answer LeetCode编程练习解答">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LeetCode 94. Binary Tree Inorder Traversal">
+<meta name="twitter:title" content="LeetCode 94. Binary Tree Inorder Traversal">
+<meta property="og:url" content="https://www.orztu.com/leetcode/094-binary-tree-inorder-traversal/">
+<meta property="twitter:url" content="https://www.orztu.com/leetcode/094-binary-tree-inorder-traversal/">
 <meta property="og:site_name" content="Orz the way">
-<meta property="og:description" content="城市永远年轻，而我们终将老去">
-<meta name="twitter:description" content="城市永远年轻，而我们终将老去">
+<meta property="og:description" content="LeetCode 94. Binary Tree Inorder Traversal - Answer LeetCode编程练习解答">
+<meta name="twitter:description" content="LeetCode 94. Binary Tree Inorder Traversal - Answer LeetCode编程练习解答">
 <meta property="og:locale" content="en-us">
+
+  
+    <meta property="article:published_time" content="2020-03-26T11:18:43">
+  
+  
+    <meta property="article:modified_time" content="2020-03-26T11:18:43">
+  
+  
+  
+    
+      <meta property="article:section" content="LeetCode">
+    
+  
+  
+    
+      <meta property="article:tag" content="LeetCode">
+    
+      <meta property="article:tag" content="Stack">
+    
+      <meta property="article:tag" content="Tree">
+    
+  
 
 
 <meta name="twitter:card" content="summary">
@@ -39,7 +61,7 @@
   <meta property="twitter:image" content="https://www.gravatar.com/avatar/f47b51d6d6b82fd9048e3eaf64bf7e69?s=640">
 
 
-    <title>LeetCode | 
+    <title>LeetCode 94. Binary Tree Inorder Traversal | 
         Orz the way
       
     </title>
@@ -49,12 +71,10 @@
 
     <link rel="icon" href="https://www.orztu.com/images/favicon.ico">
     
-      <link rel="alternate" type="application/rss+xml" title="RSS" href="https://www.orztu.com/tags/leetcode/index.xml">
-    
 
     
 
-    <link rel="canonical" href="https://www.orztu.com/tags/leetcode/">
+    <link rel="canonical" href="https://www.orztu.com/leetcode/094-binary-tree-inorder-traversal/">
 
     
     <link rel="stylesheet" href="//cdnjs.cat.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
@@ -94,7 +114,7 @@
 
   <body>
     <div id="blog">
-      <header id="header" data-behavior="1">
+      <header id="header" data-behavior="4">
   <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
   <div class="header-title">
     <a class="header-title-link" href="https://www.orztu.com/">Orz the way</a>
@@ -114,7 +134,7 @@
   
 </header>
 
-      <nav id="sidebar" data-behavior="1">
+      <nav id="sidebar" data-behavior="4">
   <div class="sidebar-container">
     
       <div class="sidebar-profile">
@@ -247,50 +267,31 @@
 </nav>
 
       
-        
 
-      
-      <div id="main" data-behavior="1"
+      <div id="main" data-behavior="4"
         class="
                hasCoverMetaIn
                ">
-        
-          <section class="postShorten-group main-content-wrap">
-            
-            
-            
-              
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-left">
   
-    
-      
-        
-      
-    
+    <h1 class="post-title" itemprop="headline">
+      LeetCode 94. Binary Tree Inorder Traversal
+    </h1>
   
-
-
   
-
-<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.orztu.com/leetcode/007-reverse-integer/">
-          LeetCode 7. Reverse Integer
-        </a>
-      </h1>
-      
   <div class="postShorten-meta-bg">
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2017-03-21T16:04:44&#43;08:00">
+      <time itemprop="datePublished" datetime="2020-03-26T11:18:43&#43;08:00">
         
   
   
   
   
-    2017-03-21
+    2020-03-26
   
 
       </time>
@@ -308,629 +309,202 @@
   </div>
 
 
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      
-        <p><a href="https://leetcode.com/problems/reverse-integer">Reverse Integer</a></p>
-<h2 id="description">Description</h2>
+</div>
+
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <h2 id="description">Description</h2>
+<p><a href="https://leetcode.com/problems/binary-tree-inorder-traversal/">Binary Tree Inorder Traversal</a></p>
 <blockquote>
-<p>Reverse digits of an integer.
-<!-- raw HTML omitted -->
-<code>Example1: x = 123, return 321</code>
-<!-- raw HTML omitted -->
-<code>Example2: x = -123, return -321</code>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-The input is assumed to be a 32-bit signed integer. Your function should <strong>return 0 when the reversed integer overflows</strong>.</p>
+<p>Given a binary tree, return the inorder traversal of its nodes&rsquo; values.</p>
+<p><strong>Example:</strong></p>
+<pre><code>Input: [1,null,2,3]
+   1
+    \
+     2
+    /
+   3
+
+Output: [1,3,2]
+</code></pre><p><strong>Follow up:</strong> Recursive solution is trivial, could you do it iteratively?</p>
 </blockquote>
-<p>将输入的十进制数倒序输出</p>
-      
-      <p>
-        <a href="https://www.orztu.com/leetcode/007-reverse-integer/" class="postShorten-excerpt_link link">Read More</a>
+<h2 id="solution">Solution</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-golang" data-lang="golang"><span class="nx">class</span> <span class="nx">Solution</span> <span class="p">{</span>
+<span class="nx">public</span><span class="p">:</span>
+    <span class="nx">vector</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span> <span class="nf">inorderTraversal</span><span class="p">(</span><span class="nx">TreeNode</span><span class="o">*</span> <span class="nx">root</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">vector</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span> <span class="nx">r</span><span class="p">;</span>
+        <span class="nf">inorderVisit</span><span class="p">(</span><span class="nx">r</span><span class="p">,</span> <span class="nx">root</span><span class="p">)</span><span class="p">;</span>
+        <span class="k">return</span> <span class="nx">r</span><span class="p">;</span>
+    <span class="p">}</span>
 
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
+<span class="nx">private</span><span class="p">:</span>
+    <span class="nx">void</span> <span class="nf">inorderVisit</span><span class="p">(</span><span class="nx">vector</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span> <span class="o">&amp;</span><span class="nx">r</span><span class="p">,</span> <span class="nx">TreeNode</span> <span class="o">*</span><span class="nx">node</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">std</span><span class="p">:</span><span class="p">:</span><span class="nx">stack</span><span class="p">&lt;</span><span class="nx">TreeNode</span> <span class="o">*</span><span class="p">&gt;</span> <span class="nx">s</span><span class="p">;</span>
+        <span class="nx">auto</span> <span class="o">*</span><span class="nx">cur</span> <span class="p">=</span> <span class="nx">node</span><span class="p">;</span>
+        <span class="nf">while</span><span class="p">(</span><span class="nx">cur</span> <span class="o">||</span> <span class="p">!</span><span class="nx">s</span><span class="p">.</span><span class="nf">empty</span><span class="p">(</span><span class="p">)</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nf">while</span><span class="p">(</span><span class="nx">cur</span><span class="p">)</span> <span class="p">{</span>
+                <span class="nx">s</span><span class="p">.</span><span class="nf">push</span><span class="p">(</span><span class="nx">cur</span><span class="p">)</span><span class="p">;</span>
+                <span class="nx">cur</span> <span class="p">=</span> <span class="nx">cur</span><span class="o">-</span><span class="p">&gt;</span><span class="nx">left</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="nx">cur</span> <span class="p">=</span> <span class="nx">s</span><span class="p">.</span><span class="nf">top</span><span class="p">(</span><span class="p">)</span><span class="p">;</span>
+            <span class="nx">s</span><span class="p">.</span><span class="nf">pop</span><span class="p">(</span><span class="p">)</span><span class="p">;</span>
+            <span class="nx">r</span><span class="p">.</span><span class="nf">push_back</span><span class="p">(</span><span class="nx">cur</span><span class="o">-</span><span class="p">&gt;</span><span class="nx">val</span><span class="p">)</span><span class="p">;</span>
+            <span class="nx">cur</span> <span class="p">=</span> <span class="nx">cur</span><span class="o">-</span><span class="p">&gt;</span><span class="nx">right</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
 
+    <span class="cm">/* 递归
+</span><span class="cm">    void inorderVisit(vector&lt;int&gt; &amp;r, TreeNode *node) {
+</span><span class="cm">        if (!node) {
+</span><span class="cm">            return;
+</span><span class="cm">        }
+</span><span class="cm">        if (node-&gt;left) {
+</span><span class="cm">            inorderVisit(r, node-&gt;left);
+</span><span class="cm">        }
+</span><span class="cm">        r.push_back(node-&gt;val);
+</span><span class="cm">        if (node-&gt;right) {
+</span><span class="cm">            inorderVisit(r, node-&gt;right);
+</span><span class="cm">        }
+</span><span class="cm">    }
+</span><span class="cm">    */</span>
+<span class="p">}</span><span class="p">;</span></code></pre></td></tr></table>
+</div>
+</div>
+              
+              
+
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
             
               
-  
-    
-      
-        
-      
-    
-  
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://www.orztu.com/tags/leetcode/">LeetCode</a>
+
+  <a class="tag tag--primary tag--small" href="https://www.orztu.com/tags/stack/">Stack</a>
+
+  <a class="tag tag--primary tag--small" href="https://www.orztu.com/tags/tree/">Tree</a>
 
 
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.orztu.com/leetcode/006-zigzag-conversion/">
-          LeetCode 6. ZigZag Conversion
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta-bg">
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2017-03-17T17:52:46&#43;08:00">
-        
-  
-  
-  
-  
-    2017-03-17
-  
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://www.orztu.com/categories/leetcode">LeetCode</a>
-    
-  
-
-  </div>
-  </div>
-
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      
-        <p><a href="https://leetcode.com/problems/zigzag-conversion">ZigZag Conversion</a></p>
-<h2 id="description">Description</h2>
-<blockquote>
-<p>The string <code>&quot;PAYPALISHIRING&quot;</code> is written in a zigzag pattern on a given number of rows like this: (you may want to display this &gt; pattern in a fixed font for better legibility)</p>
-</blockquote>
-<pre><code>P   A   H   N
-A P L S I I G
-Y   I   R
-</code></pre><blockquote>
-<p>And then read line by line: <code>&quot;PAHNAPLSIIGYIR&quot;</code></p>
-<p>Write the code that will take a string and make this conversion given a number of rows:</p>
-</blockquote>
-<div class="highlight"><pre class="chroma"><code class="language-golang" data-lang="golang"><span class="kt">string</span> <span class="nf">convert</span><span class="p">(</span><span class="kt">string</span> <span class="nx">text</span><span class="p">,</span> <span class="kt">int</span> <span class="nx">nRows</span><span class="p">)</span><span class="p">;</span></code></pre></div>
-<blockquote>
-<p><code>convert(&quot;PAYPALISHIRING&quot;, 3)</code> should return <code>&quot;PAHNAPLSIIGYIR&quot;</code>.</p>
-</blockquote>
-      
-      <p>
-        <a href="https://www.orztu.com/leetcode/006-zigzag-conversion/" class="postShorten-excerpt_link link">Read More</a>
-
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-            
+                  </div>
+                
               
-  
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-right" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.orztu.com/leetcode/005-longest-palindromic-substring/">
-          LeetCode 5. Longest Palindromic Substring
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta-bg">
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2017-03-16T14:47:07&#43;08:00">
-        
-  
-  
-  
-  
-    2017-03-16
-  
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://www.orztu.com/categories/leetcode">LeetCode</a>
-    
-  
-
-  </div>
-  </div>
-
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      
-        <p><a href="https://leetcode.com/problems/longest-palindromic-substring">Longest Palindromic Substring</a></p>
-<!-- raw HTML omitted -->
-<h2 id="description">Description</h2>
-<blockquote>
-<p>Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000.</p>
-<p>Example:</p>
-</blockquote>
-<pre><code>Input: &quot;babad&quot;
-Output: &quot;bab&quot;
-</code></pre><blockquote>
-<p>Note: &ldquo;aba&rdquo; is also a valid answer.</p>
-<p>Example:</p>
-</blockquote>
-<pre><code>Input: &quot;cbbd&quot;
-Output: &quot;bb&quot;
-</code></pre><p>从给定字符串中找出最长的回文子串</p>
-      
-      <p>
-        <a href="https://www.orztu.com/leetcode/005-longest-palindromic-substring/" class="postShorten-excerpt_link link">Read More</a>
-
-        
-      </p>
-    </div>
-  </div>
-  
-    <a href="https://www.orztu.com/leetcode/005-longest-palindromic-substring/">
-      <div class="postShorten-thumbnailimg">
-        <img alt="" itemprop="image" src="https://www.orztu.com/images/leetcode/Longest-Palindromic-Substring-1.png"/>
-      </div>
-    </a>
-  
-</article>
-
             
+            <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
               
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.orztu.com/leetcode/004-median-of-two-sorted-arrays/">
-          LeetCode 4. Median of Two Sorted Arrays
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta-bg">
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2017-03-16T10:53:58&#43;08:00">
-        
-  
-  
-  
-  
-    2017-03-16
-  
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://www.orztu.com/categories/leetcode">LeetCode</a>
-    
-  
-
-  </div>
-  </div>
-
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      
-        <p><a href="https://leetcode.com/problems/median-of-two-sorted-arrays">Median of Two Sorted Arrays</a></p>
-<h2 id="description">Description</h2>
-<blockquote>
-<p>There are two sorted arrays nums1 and nums2 of size m and n respectively.</p>
-<p>Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).</p>
-<p>Example 1:</p>
-</blockquote>
-<pre><code>nums1 = [1, 3]
-nums2 = [2]
-</code></pre><blockquote>
-<p>The median is 2.0
-Example 2:</p>
-</blockquote>
-<pre><code>nums1 = [1, 2]
-nums2 = [3, 4]
-</code></pre><blockquote>
-<p>The median is (2 + 3)/2 = 2.5</p>
-</blockquote>
-<p>从两个有序数组中求中位数</p>
-      
-      <p>
-        <a href="https://www.orztu.com/leetcode/004-median-of-two-sorted-arrays/" class="postShorten-excerpt_link link">Read More</a>
-
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-            
               
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.orztu.com/leetcode/003-longest-substring-without-repeating-characters/">
-          LeetCode 3. Longest Substring Without Repeating Characters
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta-bg">
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2017-03-15T19:38:58&#43;08:00">
-        
-  
-  
-  
-  
-    2017-03-15
-  
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://www.orztu.com/categories/leetcode">LeetCode</a>
-    
-  
-
-  </div>
-  </div>
-
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      
-        <p><a href="https://leetcode.com/problems/longest-substring-without-repeating-characters">Longest Substring Without Repeating Characters</a></p>
-<h2 id="description">Description</h2>
-<blockquote>
-<p>Given a string, find the length of the longest substring without repeating characters.</p>
-<p>Given &ldquo;abcabcbb&rdquo;, the answer is &ldquo;abc&rdquo;, which the length is 3.</p>
-<p>Given &ldquo;bbbbb&rdquo;, the answer is &ldquo;b&rdquo;, with the length of 1.</p>
-<p>Given &ldquo;pwwkew&rdquo;, the answer is &ldquo;wke&rdquo;, with the length of 3. Note that the answer must be a substring, &ldquo;pwke&rdquo; is a subsequence and not a substring.</p>
-</blockquote>
-<p>在给定字符串中找出无重复字符的最长子串。</p>
-      
-      <p>
-        <a href="https://www.orztu.com/leetcode/003-longest-substring-without-repeating-characters/" class="postShorten-excerpt_link link">Read More</a>
-
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-            
               
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.orztu.com/leetcode/002-add-two-numbers/">
-          LeetCode 2. Add Two Numbers
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta-bg">
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2017-03-15T16:55:54&#43;08:00">
-        
-  
-  
-  
-  
-    2017-03-15
-  
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://www.orztu.com/categories/leetcode">LeetCode</a>
-    
-  
-
-  </div>
-  </div>
-
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      
-        <p><a href="https://leetcode.com/problems/add-two-numbers">Add Two Numbers</a></p>
-<h2 id="description">Description</h2>
-<blockquote>
-<p>You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.</p>
-<p>You may assume the two numbers do not contain any leading zero, except the number 0 itself.</p>
-</blockquote>
-<pre><code>Input: (2 -&gt; 4 -&gt; 3) + (5 -&gt; 6 -&gt; 4)
-Output: 7 -&gt; 0 -&gt; 8
-</code></pre><p>给定两个非空链表表示的非负整数。实现加法，向后进位。</p>
-      
-      <p>
-        <a href="https://www.orztu.com/leetcode/002-add-two-numbers/" class="postShorten-excerpt_link link">Read More</a>
-
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-            
+                <a class="post-action-btn btn btn--disabled">
               
-  
-    
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+              
+                
+              
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/093-restore-ip-addresses/" data-tooltip="LeetCode 93. Restore IP Addresses">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
       
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.orztu.com/leetcode/001-two-sum/">
-          LeetCode 1. Two Sum
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta-bg">
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2017-03-15T16:36:59&#43;08:00">
-        
-  
-  
-  
-  
-    2017-03-15
-  
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://www.orztu.com/categories/leetcode">LeetCode</a>
-    
-  
-
-  </div>
-  </div>
-
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      
-        <p><a href="https://leetcode.com/problems/two-sum">Two Sum</a></p>
-<h2 id="description">Description</h2>
-<blockquote>
-<p>Given an array of integers, return indices of the two numbers such that they add up to a specific target.</p>
-<p>You may assume that each input would have exactly one solution, and you may not use the same element twice.</p>
-</blockquote>
-<pre><code>Example:
-Given nums = [2, 7, 11, 15], target = 9,
-</code></pre><blockquote>
-<p>Because nums[0] + nums[1] = 2 + 7 = 9,
-return [0, 1].</p>
-</blockquote>
-<p>假定只有<strong>唯一</strong>解的情况下在数组中找出和为<code>target</code>的两个数</p>
-      
-      <p>
-        <a href="https://www.orztu.com/leetcode/001-two-sum/" class="postShorten-excerpt_link link">Read More</a>
-
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-            
-            
-
-<nav class="blog-pagination">
-    <ul class="pagination-b justify-content-center">
-        
-        
-        <li class="page-item">
-            <a class="page-link" href="https://www.orztu.com/tags/leetcode/" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
         </li>
         
-        <li class="page-item ">
-            <a class="page-link" href="https://www.orztu.com/tags/leetcode/page/8/" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
         </li>
+      
+      <li class="post-action">
         
+          <a class="post-action-btn btn btn--default" href="#">
         
-        
-            
-            
-            
-            
-                
-                
-            
-            
-                <li class="page-item ">
-                    <a class="page-link" href="https://www.orztu.com/tags/leetcode/">1</a>
-                </li>
-            
-        
-            
-            
-            
-            
-                
-                
-            
-            
-                <li class="page-item ">
-                    <a class="page-link" href="https://www.orztu.com/tags/leetcode/page/2/">2</a>
-                </li>
-            
-        
-            
-            
-            
-            
-                
-                
-            
-            
-                <li class="page-item ">
-                    <a class="page-link" href="https://www.orztu.com/tags/leetcode/page/3/">3</a>
-                </li>
-            
-        
-            
-            
-            
-            
-                
-                
-            
-            
-                <li class="page-item disabled">
-                    <span class="page-link" aria-hidden="true">&hellip;</span>
-                </li>
-            
-        
-            
-            
-            
-            
-                
-                
-            
-            
-        
-            
-            
-            
-            
-                
-                
-            
-            
-        
-            
-            
-            
-            
-                
-                
-            
-            
-        
-            
-            
-            
-            
-                
-                
-            
-            
-                <li class="page-item ">
-                    <a class="page-link" href="https://www.orztu.com/tags/leetcode/page/8/">8</a>
-                </li>
-            
-        
-            
-            
-            
-            
-                
-                
-            
-            
-                <li class="page-item active disabled">
-                    <a class="page-link" href="https://www.orztu.com/tags/leetcode/page/9/">9</a>
-                </li>
-            
-        
-        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
     </ul>
-</nav>
+  
+</div>
 
-          </section>
-        
+            
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the comments</noscript>
+</div>
+
+              
+            
+          </div>
+        </article>
         <footer id="footer" class="main-content-wrap">
   <span class="copyrights">
     &copy; 2020 SelFree. All Rights Reserved
@@ -938,6 +512,72 @@ return [0, 1].</p>
 </footer>
 
       </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+              
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+              
+                
+              
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/093-restore-ip-addresses/" data-tooltip="LeetCode 93. Restore IP Addresses">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
     </div>
     
     <div id="about">
@@ -1283,6 +923,32 @@ $(document).ready(function() {
 });
 </script>
 
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'https:\/\/www.orztu.com\/leetcode\/094-binary-tree-inorder-traversal\/';
+          
+            this.page.identifier = '\/leetcode\/094-binary-tree-inorder-traversal\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'orztu';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
 
 
 
