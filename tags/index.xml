@@ -6,10 +6,37 @@
     <description>Recent content in Tags on Orz the way</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 31 Mar 2020 09:02:58 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 01 Apr 2020 17:20:18 +0800</lastBuildDate>
     
 	<atom:link href="https://www.orztu.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>BST</title>
+      <link>https://www.orztu.com/tags/bst/</link>
+      <pubDate>Wed, 01 Apr 2020 17:20:18 +0800</pubDate>
+      
+      <guid>https://www.orztu.com/tags/bst/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>LeetCode</title>
+      <link>https://www.orztu.com/tags/leetcode/</link>
+      <pubDate>Wed, 01 Apr 2020 17:20:18 +0800</pubDate>
+      
+      <guid>https://www.orztu.com/tags/leetcode/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tree</title>
+      <link>https://www.orztu.com/tags/tree/</link>
+      <pubDate>Wed, 01 Apr 2020 17:20:18 +0800</pubDate>
+      
+      <guid>https://www.orztu.com/tags/tree/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Dynamic Programming</title>
@@ -21,29 +48,11 @@
     </item>
     
     <item>
-      <title>LeetCode</title>
-      <link>https://www.orztu.com/tags/leetcode/</link>
-      <pubDate>Tue, 31 Mar 2020 09:02:58 +0800</pubDate>
-      
-      <guid>https://www.orztu.com/tags/leetcode/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>String</title>
       <link>https://www.orztu.com/tags/string/</link>
       <pubDate>Tue, 31 Mar 2020 09:02:58 +0800</pubDate>
       
       <guid>https://www.orztu.com/tags/string/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Tree</title>
-      <link>https://www.orztu.com/tags/tree/</link>
-      <pubDate>Mon, 30 Mar 2020 11:32:28 +0800</pubDate>
-      
-      <guid>https://www.orztu.com/tags/tree/</guid>
       <description></description>
     </item>
     
