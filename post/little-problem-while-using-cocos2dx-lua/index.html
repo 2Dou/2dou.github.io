@@ -366,7 +366,7 @@ HomeScene:onEnterTransitionDidFinish() 闪退
 }
 </code></pre><h2 id="else">else</h2>
 <p>那么是不是就不能在<code>onEnterTransitionDidFinish</code>中添加结点呢？</p>
-<p>在这个项目，许多页面都在<code>onEnterTransitionDidFinish</code>往<code>HomeScene</code>添加<code>GuideLayer</code>；或者在往前页面添加结点，为啥运行了这么久都没发现问题？</p>
+<p>在这个项目，许多页面都在<code>onEnterTransitionDidFinish</code>往<code>HomeScene</code>添加<code>GuideLayer</code>；或者在当前页面添加结点，为啥运行了这么久都没发现问题？</p>
 <p>查看代码可以得到，<code>C++</code> 中<code>onEnterTransitionDidFinish</code>是在遍历完子节点后，
 再发送消息调用<code>Lua</code>中的<code>onEnterTransitionDidFinish</code>的：</p>
 <pre><code>for( const auto &amp;child: _children)
@@ -375,7 +375,7 @@ HomeScene:onEnterTransitionDidFinish() 闪退
 // 调用当前结点 Lua 的 onEnterTransitionDidFinish
 ScriptEngineManager::sendNodeEventToLua(this, kNodeOnEnterTransitionDidFinish);
 </code></pre><p>而项目中的页面管理是这样做的：进入游戏创建<code>HomeScene</code>，之后其他页面跳转均在<code>HomeScene</code>上删除和添加，几乎不会创建新 Scene 。</p>
-<p>所以后面不会再遇到<code>HomeScene::onEnterTransitionDidFinish</code>遍历时添加子结点的情况；而直接往当前页面添加结点，也是在当前页面的<code>_childre</code>遍历完后再添加的(Lua 中添加)。</p>
+<p>所以后面不会再遇到<code>HomeScene::onEnterTransitionDidFinish</code>遍历时添加子结点的情况；而直接往当前页面添加结点，也是在当前页面的<code>_children</code>遍历完后再添加的(Lua 中添加)。</p>
               
               
 
