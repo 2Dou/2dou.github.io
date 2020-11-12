@@ -74,7 +74,7 @@ Output: [1,2,2,3,5,6]
       <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/maximal-rectangle/&#34;&gt;Maximal Rectangle&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Given a 2D binary matrix filled with 0&#39;s and 1&#39;s, find the largest rectangle containing only 1&#39;s and return its area.&lt;/p&gt;
+&lt;p&gt;Given a 2D binary matrix filled with 0&amp;rsquo;s and 1&amp;rsquo;s, find the largest rectangle containing only 1&amp;rsquo;s and return its area.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Example:&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;pre&gt;&lt;code&gt;Input:
@@ -97,7 +97,7 @@ Output: 6
       <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/largest-rectangle-in-histogram/&#34;&gt;Largest Rectangle in Histogram&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Given n non-negative integers representing the histogram&#39;s bar height where the width of each bar is 1, find the area of largest rectangle in the histogram.&lt;/p&gt;
+&lt;p&gt;Given n non-negative integers representing the histogram&amp;rsquo;s bar height where the width of each bar is 1, find the area of largest rectangle in the histogram.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://www.orztu.com/images/leetcode/084_Largest_Rectangle_in_Histogram_1.png&#34; alt=&#34;&#34;&gt;
 Above is a histogram where width of each bar is &lt;code&gt;1&lt;/code&gt;, given height = &lt;code&gt;[2,1,5,6,2,3]&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://www.orztu.com/images/leetcode/084_Largest_Rectangle_in_Histogram_2.png&#34; alt=&#34;&#34;&gt;
@@ -226,7 +226,7 @@ Output:
 &lt;blockquote&gt;
 &lt;p&gt;Given an array with n objects colored red, white or blue, sort them in-place so that objects of the same color are adjacent, with the colors in the order red, white and blue.&lt;/p&gt;
 &lt;p&gt;Here, we will use the integers &lt;code&gt;0&lt;/code&gt;, &lt;code&gt;1&lt;/code&gt;, and &lt;code&gt;2&lt;/code&gt; to represent the color &lt;code&gt;red&lt;/code&gt;, &lt;code&gt;white&lt;/code&gt;, and &lt;code&gt;blue&lt;/code&gt; respectively.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; You are not suppose to use the library&#39;s sort function for this problem.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; You are not suppose to use the library&amp;rsquo;s sort function for this problem.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Example:&lt;/strong&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;Input: [2,0,2,1,1,0]
 Output: [0,0,1,1,2,2]
@@ -234,7 +234,7 @@ Follow up:
 &lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;A rather straight forward solution is a two-pass algorithm using counting sort.&lt;!-- raw HTML omitted --&gt;
-First, iterate the array counting number of 0&#39;s, 1&#39;s, and 2&#39;s, then overwrite array with total number of 0&#39;s, then 1&#39;s and followed by 2&#39;s.&lt;/p&gt;
+First, iterate the array counting number of 0&amp;rsquo;s, 1&amp;rsquo;s, and 2&amp;rsquo;s, then overwrite array with total number of 0&amp;rsquo;s, then 1&amp;rsquo;s and followed by 2&amp;rsquo;s.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Could you come up with a one-pass algorithm using only constant space?&lt;/p&gt;
@@ -614,7 +614,7 @@ The solution set must not contain duplicate combinations.&lt;/p&gt;
 &lt;p&gt;(i.e., &lt;code&gt;[0,1,2,4,5,6,7]&lt;/code&gt; might become &lt;code&gt;[4,5,6,7,0,1,2]&lt;/code&gt;).&lt;/p&gt;
 &lt;p&gt;You are given a target value to search. If found in the array return its index, otherwise return &lt;code&gt;-1&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;You may assume no duplicate exists in the array.&lt;/p&gt;
-&lt;p&gt;Your algorithm&#39;s runtime complexity must be in the order of &lt;code&gt;O(log n)&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Your algorithm&amp;rsquo;s runtime complexity must be in the order of &lt;code&gt;O(log n)&lt;/code&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;</description>
     </item>
     

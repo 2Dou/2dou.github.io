@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.62.1 with theme Tranquilpeak 0.4.7-BETA">
+<meta name="generator" content="Hugo 0.68.3 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="SelFree">
 <meta name="keywords" content="数独解题器, Sudoku Solver, program develop, leetcode, Golang, leetcode解答, 程序">
 <meta name="description" content="LeetCode 37. Sudoku Solver - Answer LeetCode编程练习解答">
@@ -80,9 +80,14 @@
     <link rel="canonical" href="https://www.orztu.com/leetcode/037-sudoku-solver/">
 
     
-    <link rel="stylesheet" href="//cdnjs.cat.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="//cdnjs.cat.net/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" />
-    <link rel="stylesheet" href="//cdnjs.cat.net/ajax/libs/fancybox/2.1.5/helpers/jquery.fancybox-thumbs.css" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css"
+      integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css"
+      integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+
     
     
     <link rel="stylesheet" href="https://www.orztu.com/css/style.min.css" />
@@ -451,11 +456,11 @@ You may assume that there will be only one unique solution.</p>
 </span><span class="lnt">110
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">func</span> <span class="nf">solveSudoku</span><span class="p">(</span><span class="nx">board</span> <span class="p">[</span><span class="p">]</span><span class="p">[</span><span class="p">]</span><span class="kt">byte</span><span class="p">)</span>  <span class="p">{</span>
+<pre class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">func</span> <span class="nf">solveSudoku</span><span class="p">(</span><span class="nx">board</span> <span class="p">[][]</span><span class="kt">byte</span><span class="p">)</span>  <span class="p">{</span>
     <span class="nf">setNumber</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">board</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 <span class="p">}</span>
 
-<span class="kd">func</span> <span class="nf">setNumber</span><span class="p">(</span><span class="nx">board</span> <span class="o">*</span><span class="p">[</span><span class="p">]</span><span class="p">[</span><span class="p">]</span><span class="kt">byte</span><span class="p">,</span> <span class="nx">index</span> <span class="kt">int</span><span class="p">)</span> <span class="kt">bool</span> <span class="p">{</span>
+<span class="kd">func</span> <span class="nf">setNumber</span><span class="p">(</span><span class="nx">board</span> <span class="o">*</span><span class="p">[][]</span><span class="kt">byte</span><span class="p">,</span> <span class="nx">index</span> <span class="kt">int</span><span class="p">)</span> <span class="kt">bool</span> <span class="p">{</span>
     <span class="nx">row</span> <span class="o">:=</span> <span class="nb">int</span><span class="p">(</span><span class="nx">index</span> <span class="o">/</span> <span class="mi">9</span><span class="p">)</span>
     <span class="nx">col</span> <span class="o">:=</span> <span class="nx">index</span> <span class="o">%</span> <span class="mi">9</span>
 
@@ -468,10 +473,10 @@ You may assume that there will be only one unique solution.</p>
         <span class="k">return</span> <span class="kc">false</span>
     <span class="p">}</span>
 
-    <span class="nx">reset</span> <span class="o">:=</span> <span class="p">(</span><span class="o">*</span><span class="nx">board</span><span class="p">)</span><span class="p">[</span><span class="nx">row</span><span class="p">]</span><span class="p">[</span><span class="nx">col</span><span class="p">]</span>
+    <span class="nx">reset</span> <span class="o">:=</span> <span class="p">(</span><span class="o">*</span><span class="nx">board</span><span class="p">)[</span><span class="nx">row</span><span class="p">][</span><span class="nx">col</span><span class="p">]</span>
     <span class="nx">ok</span> <span class="o">:=</span> <span class="kc">true</span>
     <span class="k">for</span> <span class="nx">_</span><span class="p">,</span> <span class="nx">num</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">canbe</span> <span class="p">{</span>
-        <span class="p">(</span><span class="o">*</span><span class="nx">board</span><span class="p">)</span><span class="p">[</span><span class="nx">row</span><span class="p">]</span><span class="p">[</span><span class="nx">col</span><span class="p">]</span> <span class="p">=</span> <span class="nx">num</span>
+        <span class="p">(</span><span class="o">*</span><span class="nx">board</span><span class="p">)[</span><span class="nx">row</span><span class="p">][</span><span class="nx">col</span><span class="p">]</span> <span class="p">=</span> <span class="nx">num</span>
         <span class="nx">ok</span> <span class="p">=</span> <span class="nf">setNumber</span><span class="p">(</span><span class="nx">board</span><span class="p">,</span> <span class="nx">index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
         <span class="k">if</span> <span class="nx">ok</span> <span class="p">{</span>
             <span class="k">break</span>
@@ -479,29 +484,29 @@ You may assume that there will be only one unique solution.</p>
     <span class="p">}</span>
 
     <span class="k">if</span> <span class="p">!</span><span class="nx">ok</span> <span class="p">{</span>
-        <span class="p">(</span><span class="o">*</span><span class="nx">board</span><span class="p">)</span><span class="p">[</span><span class="nx">row</span><span class="p">]</span><span class="p">[</span><span class="nx">col</span><span class="p">]</span> <span class="p">=</span> <span class="nx">reset</span>
+        <span class="p">(</span><span class="o">*</span><span class="nx">board</span><span class="p">)[</span><span class="nx">row</span><span class="p">][</span><span class="nx">col</span><span class="p">]</span> <span class="p">=</span> <span class="nx">reset</span>
     <span class="p">}</span>
 
     <span class="k">return</span> <span class="nx">ok</span>
 <span class="p">}</span>
 
-<span class="kd">func</span> <span class="nf">getPossibleNumbers</span><span class="p">(</span><span class="nx">board</span> <span class="p">[</span><span class="p">]</span><span class="p">[</span><span class="p">]</span><span class="kt">byte</span><span class="p">,</span> <span class="nx">i</span><span class="p">,</span> <span class="nx">j</span> <span class="kt">int</span><span class="p">)</span> <span class="p">[</span><span class="p">]</span><span class="kt">byte</span> <span class="p">{</span>
-    <span class="nx">num</span> <span class="o">:=</span> <span class="nx">board</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span><span class="p">[</span><span class="nx">j</span><span class="p">]</span>
+<span class="kd">func</span> <span class="nf">getPossibleNumbers</span><span class="p">(</span><span class="nx">board</span> <span class="p">[][]</span><span class="kt">byte</span><span class="p">,</span> <span class="nx">i</span><span class="p">,</span> <span class="nx">j</span> <span class="kt">int</span><span class="p">)</span> <span class="p">[]</span><span class="kt">byte</span> <span class="p">{</span>
+    <span class="nx">num</span> <span class="o">:=</span> <span class="nx">board</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="nx">j</span><span class="p">]</span>
     <span class="k">if</span> <span class="nx">num</span> <span class="o">!=</span> <span class="sc">&#39;.&#39;</span> <span class="p">{</span>
         <span class="c1">// skip this position
-</span><span class="c1"></span>        <span class="k">return</span> <span class="p">[</span><span class="p">]</span><span class="kt">byte</span><span class="p">{</span><span class="nx">num</span><span class="p">}</span>
+</span><span class="c1"></span>        <span class="k">return</span> <span class="p">[]</span><span class="kt">byte</span><span class="p">{</span><span class="nx">num</span><span class="p">}</span>
     <span class="p">}</span>
 
-    <span class="nx">canbe</span> <span class="o">:=</span> <span class="kd">map</span><span class="p">[</span><span class="kt">byte</span><span class="p">]</span><span class="kd">struct</span><span class="p">{</span><span class="p">}</span><span class="p">{</span>
-        <span class="sc">&#39;1&#39;</span><span class="p">:</span> <span class="kd">struct</span><span class="p">{</span><span class="p">}</span><span class="p">{</span><span class="p">}</span><span class="p">,</span>
-        <span class="sc">&#39;2&#39;</span><span class="p">:</span> <span class="kd">struct</span><span class="p">{</span><span class="p">}</span><span class="p">{</span><span class="p">}</span><span class="p">,</span>
-        <span class="sc">&#39;3&#39;</span><span class="p">:</span> <span class="kd">struct</span><span class="p">{</span><span class="p">}</span><span class="p">{</span><span class="p">}</span><span class="p">,</span>
-        <span class="sc">&#39;4&#39;</span><span class="p">:</span> <span class="kd">struct</span><span class="p">{</span><span class="p">}</span><span class="p">{</span><span class="p">}</span><span class="p">,</span>
-        <span class="sc">&#39;5&#39;</span><span class="p">:</span> <span class="kd">struct</span><span class="p">{</span><span class="p">}</span><span class="p">{</span><span class="p">}</span><span class="p">,</span>
-        <span class="sc">&#39;6&#39;</span><span class="p">:</span> <span class="kd">struct</span><span class="p">{</span><span class="p">}</span><span class="p">{</span><span class="p">}</span><span class="p">,</span>
-        <span class="sc">&#39;7&#39;</span><span class="p">:</span> <span class="kd">struct</span><span class="p">{</span><span class="p">}</span><span class="p">{</span><span class="p">}</span><span class="p">,</span>
-        <span class="sc">&#39;8&#39;</span><span class="p">:</span> <span class="kd">struct</span><span class="p">{</span><span class="p">}</span><span class="p">{</span><span class="p">}</span><span class="p">,</span>
-        <span class="sc">&#39;9&#39;</span><span class="p">:</span> <span class="kd">struct</span><span class="p">{</span><span class="p">}</span><span class="p">{</span><span class="p">}</span><span class="p">,</span>
+    <span class="nx">canbe</span> <span class="o">:=</span> <span class="kd">map</span><span class="p">[</span><span class="kt">byte</span><span class="p">]</span><span class="kd">struct</span><span class="p">{}{</span>
+        <span class="sc">&#39;1&#39;</span><span class="p">:</span> <span class="kd">struct</span><span class="p">{}{},</span>
+        <span class="sc">&#39;2&#39;</span><span class="p">:</span> <span class="kd">struct</span><span class="p">{}{},</span>
+        <span class="sc">&#39;3&#39;</span><span class="p">:</span> <span class="kd">struct</span><span class="p">{}{},</span>
+        <span class="sc">&#39;4&#39;</span><span class="p">:</span> <span class="kd">struct</span><span class="p">{}{},</span>
+        <span class="sc">&#39;5&#39;</span><span class="p">:</span> <span class="kd">struct</span><span class="p">{}{},</span>
+        <span class="sc">&#39;6&#39;</span><span class="p">:</span> <span class="kd">struct</span><span class="p">{}{},</span>
+        <span class="sc">&#39;7&#39;</span><span class="p">:</span> <span class="kd">struct</span><span class="p">{}{},</span>
+        <span class="sc">&#39;8&#39;</span><span class="p">:</span> <span class="kd">struct</span><span class="p">{}{},</span>
+        <span class="sc">&#39;9&#39;</span><span class="p">:</span> <span class="kd">struct</span><span class="p">{}{},</span>
     <span class="p">}</span>
 
     <span class="c1">// check row-i, remove number from &#39;canbe&#39; which have been set to other postion
@@ -510,8 +515,8 @@ You may assume that there will be only one unique solution.</p>
             <span class="k">continue</span>
         <span class="p">}</span>
 
-        <span class="k">if</span> <span class="nf">removeFromPossibleNumber</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">canbe</span><span class="p">,</span> <span class="nx">board</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span><span class="p">[</span><span class="nx">col</span><span class="p">]</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">{</span>
-            <span class="k">return</span> <span class="p">[</span><span class="p">]</span><span class="kt">byte</span><span class="p">{</span><span class="p">}</span>
+        <span class="k">if</span> <span class="nf">removeFromPossibleNumber</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">canbe</span><span class="p">,</span> <span class="nx">board</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="nx">col</span><span class="p">])</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="p">[]</span><span class="kt">byte</span><span class="p">{}</span>
         <span class="p">}</span>
     <span class="p">}</span>
 
@@ -520,8 +525,8 @@ You may assume that there will be only one unique solution.</p>
         <span class="k">if</span> <span class="nx">row</span> <span class="o">==</span> <span class="nx">i</span> <span class="p">{</span>
             <span class="k">continue</span>
         <span class="p">}</span>
-        <span class="k">if</span> <span class="nf">removeFromPossibleNumber</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">canbe</span><span class="p">,</span> <span class="nx">board</span><span class="p">[</span><span class="nx">row</span><span class="p">]</span><span class="p">[</span><span class="nx">j</span><span class="p">]</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">{</span>
-            <span class="k">return</span> <span class="p">[</span><span class="p">]</span><span class="kt">byte</span><span class="p">{</span><span class="p">}</span>
+        <span class="k">if</span> <span class="nf">removeFromPossibleNumber</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">canbe</span><span class="p">,</span> <span class="nx">board</span><span class="p">[</span><span class="nx">row</span><span class="p">][</span><span class="nx">j</span><span class="p">])</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="p">[]</span><span class="kt">byte</span><span class="p">{}</span>
         <span class="p">}</span>
     <span class="p">}</span>
 
@@ -537,16 +542,16 @@ You may assume that there will be only one unique solution.</p>
                 <span class="k">continue</span>
             <span class="p">}</span>
 
-            <span class="k">if</span> <span class="nf">removeFromPossibleNumber</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">canbe</span><span class="p">,</span> <span class="nx">board</span><span class="p">[</span><span class="nx">index_i</span><span class="p">]</span><span class="p">[</span><span class="nx">index_j</span><span class="p">]</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">{</span>
-                <span class="k">return</span> <span class="p">[</span><span class="p">]</span><span class="kt">byte</span><span class="p">{</span><span class="p">}</span>
+            <span class="k">if</span> <span class="nf">removeFromPossibleNumber</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">canbe</span><span class="p">,</span> <span class="nx">board</span><span class="p">[</span><span class="nx">index_i</span><span class="p">][</span><span class="nx">index_j</span><span class="p">])</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">{</span>
+                <span class="k">return</span> <span class="p">[]</span><span class="kt">byte</span><span class="p">{}</span>
             <span class="p">}</span>
         <span class="p">}</span>
     <span class="p">}</span>
 
     <span class="kd">var</span> <span class="nx">n</span> <span class="kt">byte</span>
-    <span class="kd">var</span> <span class="nx">result</span> <span class="p">[</span><span class="p">]</span><span class="kt">byte</span>
+    <span class="kd">var</span> <span class="nx">result</span> <span class="p">[]</span><span class="kt">byte</span>
     <span class="k">for</span> <span class="nx">n</span> <span class="p">=</span> <span class="sc">&#39;1&#39;</span><span class="p">;</span> <span class="nx">n</span> <span class="o">&lt;=</span> <span class="sc">&#39;9&#39;</span><span class="p">;</span> <span class="nx">n</span><span class="o">++</span> <span class="p">{</span>
-        <span class="k">if</span> <span class="nx">_</span><span class="p">,</span> <span class="nx">ok</span> <span class="o">:=</span> <span class="nx">canbe</span><span class="p">[</span><span class="nx">n</span><span class="p">]</span><span class="p">;</span> <span class="nx">ok</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="nx">_</span><span class="p">,</span> <span class="nx">ok</span> <span class="o">:=</span> <span class="nx">canbe</span><span class="p">[</span><span class="nx">n</span><span class="p">];</span> <span class="nx">ok</span> <span class="p">{</span>
             <span class="nx">result</span> <span class="p">=</span> <span class="nb">append</span><span class="p">(</span><span class="nx">result</span><span class="p">,</span> <span class="nx">n</span><span class="p">)</span>
         <span class="p">}</span>
     <span class="p">}</span>
@@ -554,8 +559,8 @@ You may assume that there will be only one unique solution.</p>
     <span class="k">return</span> <span class="nx">result</span>
 <span class="p">}</span>
 
-<span class="kd">func</span> <span class="nf">removeFromPossibleNumber</span><span class="p">(</span><span class="nx">canbe</span> <span class="o">*</span><span class="kd">map</span><span class="p">[</span><span class="kt">byte</span><span class="p">]</span><span class="kd">struct</span><span class="p">{</span><span class="p">}</span><span class="p">,</span> <span class="nx">key</span> <span class="kt">byte</span><span class="p">)</span> <span class="kt">int</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="nx">_</span><span class="p">,</span> <span class="nx">ok</span> <span class="o">:=</span> <span class="p">(</span><span class="o">*</span><span class="nx">canbe</span><span class="p">)</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span><span class="p">;</span> <span class="nx">ok</span> <span class="p">{</span>
+<span class="kd">func</span> <span class="nf">removeFromPossibleNumber</span><span class="p">(</span><span class="nx">canbe</span> <span class="o">*</span><span class="kd">map</span><span class="p">[</span><span class="kt">byte</span><span class="p">]</span><span class="kd">struct</span><span class="p">{},</span> <span class="nx">key</span> <span class="kt">byte</span><span class="p">)</span> <span class="kt">int</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="nx">_</span><span class="p">,</span> <span class="nx">ok</span> <span class="o">:=</span> <span class="p">(</span><span class="o">*</span><span class="nx">canbe</span><span class="p">)[</span><span class="nx">key</span><span class="p">];</span> <span class="nx">ok</span> <span class="p">{</span>
         <span class="nb">delete</span><span class="p">(</span><span class="o">*</span><span class="nx">canbe</span><span class="p">,</span> <span class="nx">key</span><span class="p">)</span>
     <span class="p">}</span>
 
@@ -635,11 +640,11 @@ You may assume that there will be only one unique solution.</p>
 </span><span class="lnt">67
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">func</span> <span class="nf">solveSudoku</span><span class="p">(</span><span class="nx">board</span> <span class="p">[</span><span class="p">]</span><span class="p">[</span><span class="p">]</span><span class="kt">byte</span><span class="p">)</span>  <span class="p">{</span>
+<pre class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">func</span> <span class="nf">solveSudoku</span><span class="p">(</span><span class="nx">board</span> <span class="p">[][]</span><span class="kt">byte</span><span class="p">)</span>  <span class="p">{</span>
     <span class="nf">setNumber</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">board</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 <span class="p">}</span>
 
-<span class="kd">func</span> <span class="nf">setNumber</span><span class="p">(</span><span class="nx">board</span> <span class="o">*</span><span class="p">[</span><span class="p">]</span><span class="p">[</span><span class="p">]</span><span class="kt">byte</span><span class="p">,</span> <span class="nx">index</span> <span class="kt">int</span><span class="p">)</span> <span class="kt">bool</span> <span class="p">{</span>
+<span class="kd">func</span> <span class="nf">setNumber</span><span class="p">(</span><span class="nx">board</span> <span class="o">*</span><span class="p">[][]</span><span class="kt">byte</span><span class="p">,</span> <span class="nx">index</span> <span class="kt">int</span><span class="p">)</span> <span class="kt">bool</span> <span class="p">{</span>
     <span class="nx">row</span> <span class="o">:=</span> <span class="nb">int</span><span class="p">(</span><span class="nx">index</span> <span class="o">/</span> <span class="mi">9</span><span class="p">)</span>
     <span class="nx">col</span> <span class="o">:=</span> <span class="nx">index</span> <span class="o">%</span> <span class="mi">9</span>
 
@@ -647,14 +652,14 @@ You may assume that there will be only one unique solution.</p>
         <span class="k">return</span> <span class="kc">true</span>
     <span class="p">}</span>
 
-    <span class="k">if</span> <span class="p">(</span><span class="o">*</span><span class="nx">board</span><span class="p">)</span><span class="p">[</span><span class="nx">row</span><span class="p">]</span><span class="p">[</span><span class="nx">col</span><span class="p">]</span> <span class="o">==</span> <span class="sc">&#39;.&#39;</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">*</span><span class="nx">board</span><span class="p">)[</span><span class="nx">row</span><span class="p">][</span><span class="nx">col</span><span class="p">]</span> <span class="o">==</span> <span class="sc">&#39;.&#39;</span> <span class="p">{</span>
         <span class="kd">var</span> <span class="nx">c</span> <span class="kt">byte</span>
         <span class="k">for</span> <span class="nx">c</span> <span class="p">=</span> <span class="sc">&#39;1&#39;</span><span class="p">;</span> <span class="nx">c</span> <span class="o">&lt;=</span> <span class="sc">&#39;9&#39;</span><span class="p">;</span> <span class="nx">c</span><span class="o">++</span> <span class="p">{</span>
-            <span class="p">(</span><span class="o">*</span><span class="nx">board</span><span class="p">)</span><span class="p">[</span><span class="nx">row</span><span class="p">]</span><span class="p">[</span><span class="nx">col</span><span class="p">]</span> <span class="p">=</span> <span class="nx">c</span>
+            <span class="p">(</span><span class="o">*</span><span class="nx">board</span><span class="p">)[</span><span class="nx">row</span><span class="p">][</span><span class="nx">col</span><span class="p">]</span> <span class="p">=</span> <span class="nx">c</span>
             <span class="k">if</span> <span class="nf">valid</span><span class="p">(</span><span class="nx">board</span><span class="p">,</span> <span class="nx">row</span><span class="p">,</span> <span class="nx">col</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="nf">setNumber</span><span class="p">(</span><span class="nx">board</span><span class="p">,</span> <span class="nx">index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
                 <span class="k">return</span> <span class="kc">true</span>
             <span class="p">}</span>
-            <span class="p">(</span><span class="o">*</span><span class="nx">board</span><span class="p">)</span><span class="p">[</span><span class="nx">row</span><span class="p">]</span><span class="p">[</span><span class="nx">col</span><span class="p">]</span> <span class="p">=</span> <span class="sc">&#39;.&#39;</span>
+            <span class="p">(</span><span class="o">*</span><span class="nx">board</span><span class="p">)[</span><span class="nx">row</span><span class="p">][</span><span class="nx">col</span><span class="p">]</span> <span class="p">=</span> <span class="sc">&#39;.&#39;</span>
         <span class="p">}</span>
         <span class="k">return</span> <span class="kc">false</span>
     <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
@@ -662,15 +667,15 @@ You may assume that there will be only one unique solution.</p>
     <span class="p">}</span>
 <span class="p">}</span>
 
-<span class="kd">func</span> <span class="nf">valid</span><span class="p">(</span><span class="nx">board</span> <span class="o">*</span><span class="p">[</span><span class="p">]</span><span class="p">[</span><span class="p">]</span><span class="kt">byte</span><span class="p">,</span> <span class="nx">row</span><span class="p">,</span> <span class="nx">col</span> <span class="kt">int</span><span class="p">)</span> <span class="kt">bool</span> <span class="p">{</span>
-    <span class="nx">num</span> <span class="o">:=</span> <span class="p">(</span><span class="o">*</span><span class="nx">board</span><span class="p">)</span><span class="p">[</span><span class="nx">row</span><span class="p">]</span><span class="p">[</span><span class="nx">col</span><span class="p">]</span>
+<span class="kd">func</span> <span class="nf">valid</span><span class="p">(</span><span class="nx">board</span> <span class="o">*</span><span class="p">[][]</span><span class="kt">byte</span><span class="p">,</span> <span class="nx">row</span><span class="p">,</span> <span class="nx">col</span> <span class="kt">int</span><span class="p">)</span> <span class="kt">bool</span> <span class="p">{</span>
+    <span class="nx">num</span> <span class="o">:=</span> <span class="p">(</span><span class="o">*</span><span class="nx">board</span><span class="p">)[</span><span class="nx">row</span><span class="p">][</span><span class="nx">col</span><span class="p">]</span>
 
     <span class="c1">// check row
 </span><span class="c1"></span>    <span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="mi">9</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
         <span class="k">if</span> <span class="nx">i</span> <span class="o">==</span> <span class="nx">row</span> <span class="p">{</span>
             <span class="k">continue</span>
         <span class="p">}</span>
-        <span class="k">if</span> <span class="p">(</span><span class="o">*</span><span class="nx">board</span><span class="p">)</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span><span class="p">[</span><span class="nx">col</span><span class="p">]</span> <span class="o">==</span> <span class="nx">num</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="o">*</span><span class="nx">board</span><span class="p">)[</span><span class="nx">i</span><span class="p">][</span><span class="nx">col</span><span class="p">]</span> <span class="o">==</span> <span class="nx">num</span> <span class="p">{</span>
             <span class="k">return</span> <span class="kc">false</span>
         <span class="p">}</span>
     <span class="p">}</span>
@@ -680,7 +685,7 @@ You may assume that there will be only one unique solution.</p>
         <span class="k">if</span> <span class="nx">j</span> <span class="o">==</span> <span class="nx">col</span> <span class="p">{</span>
             <span class="k">continue</span>
         <span class="p">}</span>
-        <span class="k">if</span> <span class="p">(</span><span class="o">*</span><span class="nx">board</span><span class="p">)</span><span class="p">[</span><span class="nx">row</span><span class="p">]</span><span class="p">[</span><span class="nx">j</span><span class="p">]</span> <span class="o">==</span> <span class="nx">num</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="o">*</span><span class="nx">board</span><span class="p">)[</span><span class="nx">row</span><span class="p">][</span><span class="nx">j</span><span class="p">]</span> <span class="o">==</span> <span class="nx">num</span> <span class="p">{</span>
             <span class="k">return</span> <span class="kc">false</span>
         <span class="p">}</span>
     <span class="p">}</span>
@@ -694,7 +699,7 @@ You may assume that there will be only one unique solution.</p>
                 <span class="k">continue</span>
             <span class="p">}</span>
 
-            <span class="k">if</span> <span class="p">(</span><span class="o">*</span><span class="nx">board</span><span class="p">)</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span><span class="p">[</span><span class="nx">j</span><span class="p">]</span> <span class="o">==</span> <span class="nx">num</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="o">*</span><span class="nx">board</span><span class="p">)[</span><span class="nx">i</span><span class="p">][</span><span class="nx">j</span><span class="p">]</span> <span class="o">==</span> <span class="nx">num</span> <span class="p">{</span>
                 <span class="k">return</span> <span class="kc">false</span>
             <span class="p">}</span>
         <span class="p">}</span>
@@ -911,7 +916,7 @@ You may assume that there will be only one unique solution.</p>
       <span class="close-button"><i class="fa fa-close"></i></span>
       <a href="https://algolia.com" target="_blank" rel="noopener" class="searchby-algolia text-color-light link-unstyled">
         <span class="searchby-algolia-text text-color-light text-small">by</span>
-        <img class="searchby-algolia-logo" src="https://www.algolia.com/static_assets/images/press/downloads/algolia-light.svg">
+        <img class="searchby-algolia-logo" src="//www.algolia.com/static_assets/images/press/downloads/algolia-light.svg">
       </a>
       <i class="search-icon fa fa-search"></i>
       <form id="algolia-search-form">
@@ -937,7 +942,7 @@ You may assume that there will be only one unique solution.</p>
                 </span>
               </span>
               <div class="media-content hide-xs font-merryweather"><p>首先，并非专业视频处理人员；以下命令都是我从网上搜索后修改以为己所用。</p>
-<h2 id="heading">图片转视频</h2>
+<h2 id="图片转视频">图片转视频</h2>
 <pre><code># gif 转视频（DURATION：时长，gif会循环播放）
 ffmpeg -ignore_loop 0 -t DURATION -f gif -i &quot;INPUT.gif&quot; -vcodec libx264 -crf 5 &quot;OUTPUT.mp4&quot;
 
@@ -960,7 +965,7 @@ ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &quot;INPUT.jpg&quot; -vco
                   Dec 12, 2018
                 </span>
               </span>
-              <div class="media-content hide-xs font-merryweather"><h2 id="heading">闪退点</h2>
+              <div class="media-content hide-xs font-merryweather"><h2 id="闪退点">闪退点</h2>
 <p>Version: Cocos2dx-Lua 3.16</p>
 <p>在某个页面修改后，出现闪退。查看修改记录没有特别的地方，均为修改图片或者条件判断。</p>
 <p>启动 XCode 发现闪退位置出现在<code>void Node::onEnterTransitionDidFinish()</code>中，
@@ -982,7 +987,7 @@ ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &quot;INPUT.jpg&quot; -vco
                 </span>
               </span>
               <div class="media-content hide-xs font-merryweather"><p>在日志信息中，有时需要获取当前函数的调用信息，比如打印调用栈：</p>
-<h2 id="heading">调用栈</h2>
+<h2 id="调用栈">调用栈</h2>
 <h3 id="debugstack-byte">debug.Stack() []byte</h3>
 <p><code>debug.Stack()</code>函数可以获取当前 goroutine 的调用栈信息，需要<code>import &quot;runtime/debug&quot;</code>。</p>
 <div class="highlight"><div class="chroma">
@@ -1002,18 +1007,18 @@ ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &quot;INPUT.jpg&quot; -vco
 </span><span class="lnt">20
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">func</span> <span class="nf">foo</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
+<pre class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">func</span> <span class="nf">foo</span><span class="p">()</span> <span class="p">{</span>
     <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;--- BEGIN ---&#34;</span><span class="p">)</span>
-    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nb">string</span><span class="p">(</span><span class="nx">debug</span><span class="p">.</span><span class="nf">Stack</span><span class="p">(</span><span class="p">)</span><span class="p">)</span><span class="p">)</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nb">string</span><span class="p">(</span><span class="nx">debug</span><span class="p">.</span><span class="nf">Stack</span><span class="p">()))</span>
     <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;--- END ---&#34;</span><span class="p">)</span>
 <span class="p">}</span>
 
-<span class="kd">func</span> <span class="nf">boom</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nf">foo</span><span class="p">(</span><span class="p">)</span>
+<span class="kd">func</span> <span class="nf">boom</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nf">foo</span><span class="p">()</span>
 <span class="p">}</span>
 
-<span class="kd">func</span> <span class="nf">main</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nf">boom</span><span class="p">(</span><span class="p">)</span>
+<span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nf">boom</span><span class="p">()</span>
 <span class="p">}</span></code></pre></td></tr></table>
 </div>
 </div></div>
@@ -1051,7 +1056,7 @@ ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &quot;INPUT.jpg&quot; -vco
                   Nov 11, 2018
                 </span>
               </span>
-              <div class="media-content hide-xs font-merryweather"><h2 id="heading">配置文件</h2>
+              <div class="media-content hide-xs font-merryweather"><h2 id="配置文件">配置文件</h2>
 <p>在游戏工程中，通常有大量配置是由策划提供，再转换成程序方便读取的格式添加到工程中。</p>
 <p>在我参与的<code>Cocos2dx-Lua</code>工程中，策划通常在<code>Excel</code>中配置，再通过脚本转换为<code>Lua-Table</code>的文件。</p>
 <p>比如常见的道具表转换后：</p></div>
@@ -1126,9 +1131,9 @@ ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &quot;INPUT.jpg&quot; -vco
                   Jun 6, 2018
                 </span>
               </span>
-              <div class="media-content hide-xs font-merryweather"><h2 id="heading">数组与切片</h2>
+              <div class="media-content hide-xs font-merryweather"><h2 id="数组与切片">数组与切片</h2>
 <p>以前粗学时并没有留意 Golang 的数组，一直以为只有切片。</p>
-<p>今天看<a href="https://book.douban.com/subject/27015617/">《Go语言实践》</a>时才发现 Golang 也有数组。与切片的区别是定义时指定长度（例如长度为4的 int 型数组<code>var array [4]int</code>）。</p>
+<p>今天看<a href="https://book.douban.com/subject/27015617/">《Go 语言实践》</a>时才发现 Golang 也有数组。与切片的区别是定义时指定长度（例如长度为 4 的 int 型数组<code>var array [4]int</code>）。</p>
 <p>数组赋值时会拷贝整个数组，所以作为参数传递时也会完整拷贝，要考虑性能合理使用，必要时可以使用指针。</p>
 <p>以下代码便于理解数组和切片：</p></div>
             </div>
@@ -1147,7 +1152,7 @@ ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &quot;INPUT.jpg&quot; -vco
                   May 5, 2018
                 </span>
               </span>
-              <div class="media-content hide-xs font-merryweather"><h2 id="heading">功能</h2>
+              <div class="media-content hide-xs font-merryweather"><h2 id="功能">功能</h2>
 <p>使用知名python图片处理库PIL，为图片添加文字水印。</p></div>
             </div>
             <div style="clear:both;"></div>
@@ -1177,16 +1182,16 @@ ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &quot;INPUT.jpg&quot; -vco
 
 
     
-<script src="//cdnjs.cat.net/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
 
 
 
-<script src="//cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>
 
-
-
-<script src="//cdnjs.cat.net/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
-<script src="//cdnjs.cat.net/ajax/libs/fancybox/2.1.5/helpers/jquery.fancybox-thumbs.js"></script>
+-<script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/helpers/jquery.fancybox-thumbs.js"></script>
 
 
 <script src="https://www.orztu.com/js/script.min.js"></script>

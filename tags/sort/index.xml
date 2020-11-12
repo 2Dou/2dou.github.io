@@ -22,7 +22,7 @@
 &lt;blockquote&gt;
 &lt;p&gt;Given an array with n objects colored red, white or blue, sort them in-place so that objects of the same color are adjacent, with the colors in the order red, white and blue.&lt;/p&gt;
 &lt;p&gt;Here, we will use the integers &lt;code&gt;0&lt;/code&gt;, &lt;code&gt;1&lt;/code&gt;, and &lt;code&gt;2&lt;/code&gt; to represent the color &lt;code&gt;red&lt;/code&gt;, &lt;code&gt;white&lt;/code&gt;, and &lt;code&gt;blue&lt;/code&gt; respectively.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; You are not suppose to use the library&#39;s sort function for this problem.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; You are not suppose to use the library&amp;rsquo;s sort function for this problem.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Example:&lt;/strong&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;Input: [2,0,2,1,1,0]
 Output: [0,0,1,1,2,2]
@@ -30,7 +30,7 @@ Follow up:
 &lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;A rather straight forward solution is a two-pass algorithm using counting sort.&lt;!-- raw HTML omitted --&gt;
-First, iterate the array counting number of 0&#39;s, 1&#39;s, and 2&#39;s, then overwrite array with total number of 0&#39;s, then 1&#39;s and followed by 2&#39;s.&lt;/p&gt;
+First, iterate the array counting number of 0&amp;rsquo;s, 1&amp;rsquo;s, and 2&amp;rsquo;s, then overwrite array with total number of 0&amp;rsquo;s, then 1&amp;rsquo;s and followed by 2&amp;rsquo;s.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Could you come up with a one-pass algorithm using only constant space?&lt;/p&gt;

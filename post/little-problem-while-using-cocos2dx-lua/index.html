@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.62.1 with theme Tranquilpeak 0.4.7-BETA">
+<meta name="generator" content="Hugo 0.68.3 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="SelFree">
 <meta name="keywords" content="Cocos2dx-Lua, 闪退, Node::onEnterTransitionDidFinish(), program develop, leetcode, Golang, leetcode解答, 程序">
 <meta name="description" content="在 Cocos2dx-Lua 的 onEnterTransitionDidFinish 中闪退">
@@ -69,9 +69,14 @@
     <link rel="canonical" href="https://www.orztu.com/post/little-problem-while-using-cocos2dx-lua/">
 
     
-    <link rel="stylesheet" href="//cdnjs.cat.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="//cdnjs.cat.net/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" />
-    <link rel="stylesheet" href="//cdnjs.cat.net/ajax/libs/fancybox/2.1.5/helpers/jquery.fancybox-thumbs.css" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css"
+      integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css"
+      integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+
     
     
     <link rel="stylesheet" href="https://www.orztu.com/css/style.min.css" />
@@ -306,7 +311,7 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <h2 id="heading">闪退点</h2>
+              <h2 id="闪退点">闪退点</h2>
 <p>Version: Cocos2dx-Lua 3.16</p>
 <p>在某个页面修改后，出现闪退。查看修改记录没有特别的地方，均为修改图片或者条件判断。</p>
 <p>启动 XCode 发现闪退位置出现在<code>void Node::onEnterTransitionDidFinish()</code>中，
@@ -318,9 +323,9 @@
 </span><span class="lnt">1354
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="p">.</span><span class="p">.</span><span class="p">.</span>
-<span class="k">for</span><span class="p">(</span> <span class="k">const</span> <span class="k">auto</span> <span class="o">&amp;</span><span class="nl">child</span><span class="p">:</span> <span class="n">_children</span><span class="p">)</span>
-    <span class="n">child</span><span class="o">-</span><span class="o">&gt;</span><span class="n">onEnterTransitionDidFinish</span><span class="p">(</span><span class="p">)</span><span class="p">;</span>
+<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="p">...</span>
+<span class="k">for</span><span class="p">(</span> <span class="k">const</span> <span class="k">auto</span> <span class="o">&amp;</span><span class="nl">child</span><span class="p">:</span> <span class="err">\</span><span class="n">_children</span><span class="p">)</span>
+<span class="n">child</span><span class="o">-&gt;</span><span class="n">onEnterTransitionDidFinish</span><span class="p">();</span>
 </code></pre></td></tr></table>
 </div>
 </div>
@@ -334,7 +339,7 @@
 HomeScene:ctor() {
     self:addChild(HomeLayer)
 }
-</code></pre><h2 id="heading-1">怀疑</h2>
+</code></pre><h2 id="怀疑">怀疑</h2>
 <p>因为是在调用<code>Scene::onEnterTransitionDidFinish()</code>时指针无效，所以猜测是遍历过程中字节点被删除。</p>
 <p>查看相关代码：</p>
 <pre><code>HomeScene: 没有 onEnterTransitionDidFinish()
@@ -343,7 +348,7 @@ HomeLayer: 有 onEnterTransitionDidFinish()，
            而是往 Scene 上新增结点 addChild(GuideLayer)
 </code></pre><p>因为游戏逻辑是只创建一个<code>GuideLayer</code>，重复创建时会删除上次创建的页面。又怀疑是否创建了两次<code>GuideLayer</code>。
 通过屏蔽代码发现不添加<code>GuideLayer</code>就不会闪退，但是<code>GuideLayer</code>的确只创建了一次，不存在删除问题。</p>
-<h2 id="heading-2">真相</h2>
+<h2 id="真相">真相</h2>
 <p>再次分析流程</p>
 <pre><code>HomeScene:onEnterTransitionDidFinish():
     HomeLayer:onEnterTransitionDidFinish(
@@ -353,7 +358,7 @@ HomeLayer: 有 onEnterTransitionDidFinish()，
 HomeScene:onEnterTransitionDidFinish() 闪退
 </code></pre><p>总归问题是出现在<code>HomeScene</code>的<code>_children</code>容器上，那么既然不是删除，增加结点会导致容器出问题吗？</p>
 <p>查找代码得到<code>_children</code>类型为<code>CCVector</code>，而<code>CCVector</code>通过<code>std::vector</code>实现。</p>
-<p>所以出现了常见的<em><strong>问题：在容器迭代过程中删除或插入</strong></em>。</p>
+<p>所以出现了常见的**_问题：在容器迭代过程中删除或插入_**。</p>
 <p>在新增结点往<code>std::vector</code>插入的时候，恰好超过容量大小，导致扩容。而<code>std::vector</code>是分配的连续内存，
 所以扩容时候会重新分配内存，导致遍历的时候出现<code>child</code>指针无效。</p>
 <pre><code>scene::onEnterTransitionDidFinish() {
@@ -366,7 +371,7 @@ HomeScene:onEnterTransitionDidFinish() 闪退
 }
 </code></pre><h2 id="else">else</h2>
 <p>那么是不是就不能在<code>onEnterTransitionDidFinish</code>中添加结点呢？</p>
-<p>在这个项目，许多页面都在<code>onEnterTransitionDidFinish</code>往<code>HomeScene</code>添加<code>GuideLayer</code>；或者在往前页面添加结点，为啥运行了这么久都没发现问题？</p>
+<p>在这个项目，许多页面都在<code>onEnterTransitionDidFinish</code>往<code>HomeScene</code>添加<code>GuideLayer</code>；或者在当前页面添加结点，为啥运行了这么久都没发现问题？</p>
 <p>查看代码可以得到，<code>C++</code> 中<code>onEnterTransitionDidFinish</code>是在遍历完子节点后，
 再发送消息调用<code>Lua</code>中的<code>onEnterTransitionDidFinish</code>的：</p>
 <pre><code>for( const auto &amp;child: _children)
@@ -375,7 +380,7 @@ HomeScene:onEnterTransitionDidFinish() 闪退
 // 调用当前结点 Lua 的 onEnterTransitionDidFinish
 ScriptEngineManager::sendNodeEventToLua(this, kNodeOnEnterTransitionDidFinish);
 </code></pre><p>而项目中的页面管理是这样做的：进入游戏创建<code>HomeScene</code>，之后其他页面跳转均在<code>HomeScene</code>上删除和添加，几乎不会创建新 Scene 。</p>
-<p>所以后面不会再遇到<code>HomeScene::onEnterTransitionDidFinish</code>遍历时添加子结点的情况；而直接往当前页面添加结点，也是在当前页面的<code>_childre</code>遍历完后再添加的(Lua 中添加)。</p>
+<p>所以后面不会再遇到<code>HomeScene::onEnterTransitionDidFinish</code>遍历时添加子结点的情况；而直接往当前页面添加结点，也是在当前页面的<code>_children</code>遍历完后再添加的(Lua 中添加)。</p>
               
               
 
@@ -566,7 +571,7 @@ ScriptEngineManager::sendNodeEventToLua(this, kNodeOnEnterTransitionDidFinish);
       <span class="close-button"><i class="fa fa-close"></i></span>
       <a href="https://algolia.com" target="_blank" rel="noopener" class="searchby-algolia text-color-light link-unstyled">
         <span class="searchby-algolia-text text-color-light text-small">by</span>
-        <img class="searchby-algolia-logo" src="https://www.algolia.com/static_assets/images/press/downloads/algolia-light.svg">
+        <img class="searchby-algolia-logo" src="//www.algolia.com/static_assets/images/press/downloads/algolia-light.svg">
       </a>
       <i class="search-icon fa fa-search"></i>
       <form id="algolia-search-form">
@@ -592,7 +597,7 @@ ScriptEngineManager::sendNodeEventToLua(this, kNodeOnEnterTransitionDidFinish);
                 </span>
               </span>
               <div class="media-content hide-xs font-merryweather"><p>首先，并非专业视频处理人员；以下命令都是我从网上搜索后修改以为己所用。</p>
-<h2 id="heading">图片转视频</h2>
+<h2 id="图片转视频">图片转视频</h2>
 <pre><code># gif 转视频（DURATION：时长，gif会循环播放）
 ffmpeg -ignore_loop 0 -t DURATION -f gif -i &quot;INPUT.gif&quot; -vcodec libx264 -crf 5 &quot;OUTPUT.mp4&quot;
 
@@ -615,7 +620,7 @@ ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &quot;INPUT.jpg&quot; -vco
                   Dec 12, 2018
                 </span>
               </span>
-              <div class="media-content hide-xs font-merryweather"><h2 id="heading">闪退点</h2>
+              <div class="media-content hide-xs font-merryweather"><h2 id="闪退点">闪退点</h2>
 <p>Version: Cocos2dx-Lua 3.16</p>
 <p>在某个页面修改后，出现闪退。查看修改记录没有特别的地方，均为修改图片或者条件判断。</p>
 <p>启动 XCode 发现闪退位置出现在<code>void Node::onEnterTransitionDidFinish()</code>中，
@@ -637,7 +642,7 @@ ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &quot;INPUT.jpg&quot; -vco
                 </span>
               </span>
               <div class="media-content hide-xs font-merryweather"><p>在日志信息中，有时需要获取当前函数的调用信息，比如打印调用栈：</p>
-<h2 id="heading">调用栈</h2>
+<h2 id="调用栈">调用栈</h2>
 <h3 id="debugstack-byte">debug.Stack() []byte</h3>
 <p><code>debug.Stack()</code>函数可以获取当前 goroutine 的调用栈信息，需要<code>import &quot;runtime/debug&quot;</code>。</p>
 <div class="highlight"><div class="chroma">
@@ -657,18 +662,18 @@ ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &quot;INPUT.jpg&quot; -vco
 </span><span class="lnt">20
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">func</span> <span class="nf">foo</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
+<pre class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">func</span> <span class="nf">foo</span><span class="p">()</span> <span class="p">{</span>
     <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;--- BEGIN ---&#34;</span><span class="p">)</span>
-    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nb">string</span><span class="p">(</span><span class="nx">debug</span><span class="p">.</span><span class="nf">Stack</span><span class="p">(</span><span class="p">)</span><span class="p">)</span><span class="p">)</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nb">string</span><span class="p">(</span><span class="nx">debug</span><span class="p">.</span><span class="nf">Stack</span><span class="p">()))</span>
     <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;--- END ---&#34;</span><span class="p">)</span>
 <span class="p">}</span>
 
-<span class="kd">func</span> <span class="nf">boom</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nf">foo</span><span class="p">(</span><span class="p">)</span>
+<span class="kd">func</span> <span class="nf">boom</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nf">foo</span><span class="p">()</span>
 <span class="p">}</span>
 
-<span class="kd">func</span> <span class="nf">main</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nf">boom</span><span class="p">(</span><span class="p">)</span>
+<span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nf">boom</span><span class="p">()</span>
 <span class="p">}</span></code></pre></td></tr></table>
 </div>
 </div></div>
@@ -706,7 +711,7 @@ ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &quot;INPUT.jpg&quot; -vco
                   Nov 11, 2018
                 </span>
               </span>
-              <div class="media-content hide-xs font-merryweather"><h2 id="heading">配置文件</h2>
+              <div class="media-content hide-xs font-merryweather"><h2 id="配置文件">配置文件</h2>
 <p>在游戏工程中，通常有大量配置是由策划提供，再转换成程序方便读取的格式添加到工程中。</p>
 <p>在我参与的<code>Cocos2dx-Lua</code>工程中，策划通常在<code>Excel</code>中配置，再通过脚本转换为<code>Lua-Table</code>的文件。</p>
 <p>比如常见的道具表转换后：</p></div>
@@ -781,9 +786,9 @@ ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &quot;INPUT.jpg&quot; -vco
                   Jun 6, 2018
                 </span>
               </span>
-              <div class="media-content hide-xs font-merryweather"><h2 id="heading">数组与切片</h2>
+              <div class="media-content hide-xs font-merryweather"><h2 id="数组与切片">数组与切片</h2>
 <p>以前粗学时并没有留意 Golang 的数组，一直以为只有切片。</p>
-<p>今天看<a href="https://book.douban.com/subject/27015617/">《Go语言实践》</a>时才发现 Golang 也有数组。与切片的区别是定义时指定长度（例如长度为4的 int 型数组<code>var array [4]int</code>）。</p>
+<p>今天看<a href="https://book.douban.com/subject/27015617/">《Go 语言实践》</a>时才发现 Golang 也有数组。与切片的区别是定义时指定长度（例如长度为 4 的 int 型数组<code>var array [4]int</code>）。</p>
 <p>数组赋值时会拷贝整个数组，所以作为参数传递时也会完整拷贝，要考虑性能合理使用，必要时可以使用指针。</p>
 <p>以下代码便于理解数组和切片：</p></div>
             </div>
@@ -802,7 +807,7 @@ ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &quot;INPUT.jpg&quot; -vco
                   May 5, 2018
                 </span>
               </span>
-              <div class="media-content hide-xs font-merryweather"><h2 id="heading">功能</h2>
+              <div class="media-content hide-xs font-merryweather"><h2 id="功能">功能</h2>
 <p>使用知名python图片处理库PIL，为图片添加文字水印。</p></div>
             </div>
             <div style="clear:both;"></div>
@@ -832,16 +837,16 @@ ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &quot;INPUT.jpg&quot; -vco
 
 
     
-<script src="//cdnjs.cat.net/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
 
 
 
-<script src="//cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>
 
-
-
-<script src="//cdnjs.cat.net/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
-<script src="//cdnjs.cat.net/ajax/libs/fancybox/2.1.5/helpers/jquery.fancybox-thumbs.js"></script>
+-<script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/helpers/jquery.fancybox-thumbs.js"></script>
 
 
 <script src="https://www.orztu.com/js/script.min.js"></script>

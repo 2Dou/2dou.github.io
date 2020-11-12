@@ -18,7 +18,7 @@
       
       <guid>https://www.orztu.com/post/ffmpeg-commands/</guid>
       <description>&lt;p&gt;首先，并非专业视频处理人员；以下命令都是我从网上搜索后修改以为己所用。&lt;/p&gt;
-&lt;h2 id=&#34;heading&#34;&gt;图片转视频&lt;/h2&gt;
+&lt;h2 id=&#34;图片转视频&#34;&gt;图片转视频&lt;/h2&gt;
 &lt;pre&gt;&lt;code&gt;# gif 转视频（DURATION：时长，gif会循环播放）
 ffmpeg -ignore_loop 0 -t DURATION -f gif -i &amp;quot;INPUT.gif&amp;quot; -vcodec libx264 -crf 5 &amp;quot;OUTPUT.mp4&amp;quot;
 
@@ -34,7 +34,7 @@ ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &amp;quot;INPUT.jpg&amp;qu
       
       <guid>https://www.orztu.com/post/raspbian-install-and-configure/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
-&lt;h2 id=&#34;httpswwwraspberrypiorgdocumentationinstallationinstalling-imagesreadmemd&#34;&gt;&lt;a href=&#34;https://www.raspberrypi.org/documentation/installation/installing-images/README.md&#34;&gt;系统安装&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;系统安装httpswwwraspberrypiorgdocumentationinstallationinstalling-imagesreadmemd&#34;&gt;&lt;a href=&#34;https://www.raspberrypi.org/documentation/installation/installing-images/README.md&#34;&gt;系统安装&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;系统: &lt;a href=&#34;https://www.raspberrypi.org/downloads/raspbian/&#34;&gt;raspbian&lt;/a&gt; &lt;!-- raw HTML omitted --&gt;
 工具（二选一）：&lt;/p&gt;
 &lt;ul&gt;

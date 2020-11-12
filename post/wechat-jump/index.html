@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.62.1 with theme Tranquilpeak 0.4.7-BETA">
+<meta name="generator" content="Hugo 0.68.3 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="SelFree">
 <meta name="keywords" content="跳一跳外挂, 微信跳一跳, python, program develop, leetcode, Golang, leetcode解答, 程序">
 <meta name="description" content="python实现adb截图模拟点击方式的微信跳一跳外挂">
@@ -75,9 +75,14 @@
     <link rel="canonical" href="https://www.orztu.com/post/wechat-jump/">
 
     
-    <link rel="stylesheet" href="//cdnjs.cat.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="//cdnjs.cat.net/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" />
-    <link rel="stylesheet" href="//cdnjs.cat.net/ajax/libs/fancybox/2.1.5/helpers/jquery.fancybox-thumbs.css" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css"
+      integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css"
+      integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+
     
     
     <link rel="stylesheet" href="https://www.orztu.com/css/style.min.css" />
@@ -314,7 +319,7 @@
             <div class="main-content-wrap">
               <p>使用python+adb实现微信跳一跳外挂</p>
 <p><a href="https://github.com/2Dou/JumpJump">源码地址</a></p>
-<h2 id="heading">使用方法</h2>
+<h2 id="使用方法">使用方法</h2>
 <ol>
 <li>
 <p>安卓手机打开USB调试
@@ -325,7 +330,7 @@
 <p>进入微信跳一跳并点<code>开始游戏</code>，运行<code>python helper.py</code></p>
 </li>
 </ol>
-<h2 id="heading-1">实现原理</h2>
+<h2 id="实现原理">实现原理</h2>
 <ol>
 <li>
 <p>使用adb命令截图保存到本地
@@ -371,31 +376,31 @@ adb pull /sdcard/screen.png .</code></pre></div></p>
 </li>
 </ol>
 <div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">adb shell input swipe x y x y <span class="nb">time</span> <span class="c1">#其中x和y是屏幕坐标，time是触摸时间，单位ms</span></code></pre></div>
-<h2 id="heading-2">详解</h2>
-<h3 id="heading-3">寻找棋子</h3>
+<h2 id="详解">详解</h2>
+<h3 id="寻找棋子">寻找棋子</h3>
 <p><img src="https://www.orztu.com/images/post/coding-life/jumpjump-2.png" alt="寻找棋子" title="寻找棋子"></p>
 <p>直接通过棋子特征颜色查找其“最左点”和“最右点”，计算中点</p>
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">find_cur_pos</span><span class="p">(</span><span class="n">img</span><span class="p">)</span><span class="p">:</span>
-    <span class="sa"></span><span class="s1">&#39;&#39;&#39;</span><span class="s1">
-</span><span class="s1"></span><span class="s1">    查找棋子当前位置</span><span class="s1">
-</span><span class="s1"></span><span class="s1">    通过棋子底部颜色范围，搜索棋子左右点，以中点作为棋子当前位置</span><span class="s1">
-</span><span class="s1"></span><span class="s1">    </span><span class="s1">&#39;&#39;&#39;</span>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">find_cur_pos</span><span class="p">(</span><span class="n">img</span><span class="p">):</span>
+    <span class="s1">&#39;&#39;&#39;
+</span><span class="s1">    查找棋子当前位置
+</span><span class="s1">    通过棋子底部颜色范围，搜索棋子左右点，以中点作为棋子当前位置
+</span><span class="s1">    &#39;&#39;&#39;</span>
     <span class="n">width</span><span class="p">,</span> <span class="n">height</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">width</span><span class="p">,</span> <span class="n">img</span><span class="o">.</span><span class="n">height</span>
 
-    <span class="n">local</span> <span class="o">=</span> <span class="p">[</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span><span class="p">]</span>
-    <span class="k">def</span> <span class="nf">put_in</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span><span class="p">:</span>
-        <span class="n">left</span><span class="p">,</span> <span class="n">right</span> <span class="o">=</span> <span class="n">local</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="p">,</span> <span class="n">local</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-        <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">left</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="p">:</span>
+    <span class="n">local</span> <span class="o">=</span> <span class="p">[(</span><span class="n">width</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)]</span>
+    <span class="k">def</span> <span class="nf">put_in</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+        <span class="n">left</span><span class="p">,</span> <span class="n">right</span> <span class="o">=</span> <span class="n">local</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">local</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">left</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
             <span class="n">left</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
             <span class="n">local</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">left</span>
-        <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span><span class="o">=</span> <span class="n">right</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;=</span> <span class="n">right</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
             <span class="n">right</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
             <span class="n">local</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">right</span>
 
-    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">width</span> <span class="o">*</span> <span class="mf">0.1</span><span class="p">)</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">width</span> <span class="o">*</span> <span class="mf">0.9</span><span class="p">)</span><span class="p">)</span><span class="p">:</span>
-        <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">height</span> <span class="o">*</span> <span class="mf">0.52</span><span class="p">)</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">height</span> <span class="o">*</span> <span class="mf">0.62</span><span class="p">)</span><span class="p">)</span><span class="p">:</span>
-            <span class="n">pixel</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">getpixel</span><span class="p">(</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span><span class="p">)</span>
-            <span class="n">r</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">pixel</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="p">,</span> <span class="n">pixel</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="p">,</span> <span class="n">pixel</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">width</span> <span class="o">*</span> <span class="mf">0.1</span><span class="p">),</span> <span class="nb">int</span><span class="p">(</span><span class="n">width</span> <span class="o">*</span> <span class="mf">0.9</span><span class="p">)):</span>
+        <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">height</span> <span class="o">*</span> <span class="mf">0.52</span><span class="p">),</span> <span class="nb">int</span><span class="p">(</span><span class="n">height</span> <span class="o">*</span> <span class="mf">0.62</span><span class="p">)):</span>
+            <span class="n">pixel</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">getpixel</span><span class="p">((</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span>
+            <span class="n">r</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">pixel</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">pixel</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">pixel</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
             <span class="k">if</span> <span class="n">r</span> <span class="o">&lt;</span> <span class="mi">45</span> <span class="ow">and</span> <span class="n">r</span> <span class="o">&gt;</span> <span class="mi">40</span> <span class="ow">and</span> \
                 <span class="n">g</span> <span class="o">&lt;</span> <span class="mi">45</span> <span class="ow">and</span> <span class="n">g</span> <span class="o">&gt;</span> <span class="mi">40</span> <span class="ow">and</span> \
                 <span class="n">b</span> <span class="o">&lt;</span> <span class="mi">75</span> <span class="ow">and</span> <span class="n">b</span> <span class="o">&gt;</span> <span class="mi">70</span><span class="p">:</span>
@@ -406,14 +411,14 @@ adb pull /sdcard/screen.png .</code></pre></div></p>
                 <span class="n">b</span> <span class="o">&lt;</span> <span class="mi">90</span> <span class="ow">and</span> <span class="n">b</span> <span class="o">&gt;</span> <span class="mi">80</span><span class="p">:</span>
                 <span class="n">put_in</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
 
-    <span class="n">left</span><span class="p">,</span> <span class="n">right</span> <span class="o">=</span> <span class="n">local</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="p">,</span> <span class="n">local</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">left</span><span class="p">,</span> <span class="n">right</span> <span class="o">=</span> <span class="n">local</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">local</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
     <span class="k">if</span> <span class="n">left</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">width</span><span class="p">:</span>
         <span class="k">return</span> <span class="bp">None</span>
 
-    <span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="p">(</span><span class="n">left</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">right</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
-    <span class="n">y</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="p">(</span><span class="n">left</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">right</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">((</span><span class="n">left</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">right</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="nb">int</span><span class="p">((</span><span class="n">left</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">right</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
     <span class="k">return</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span></code></pre></div>
-<h3 id="heading-4">寻找小圆点</h3>
+<h3 id="寻找小圆点">寻找小圆点</h3>
 <p>通过圆点颜色RGB(245, 245, 245)寻找落点</p>
 <p>以落点在左边为例：
 <img src="https://www.orztu.com/images/post/coding-life/jumpjump-3.png" alt="寻找小圆点" title="寻找小圆点"></p>
@@ -423,16 +428,16 @@ adb pull /sdcard/screen.png .</code></pre></div></p>
 <p>查找点A的代码：
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 查找点A</span>
 <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">ite</span><span class="p">:</span>
-    <span class="sa"></span><span class="s1">&#39;&#39;&#39;</span><span class="s1">
-</span><span class="s1"></span><span class="s1">    通过斜率计算斜线上的位置，并判断是否和圆点颜色一样</span><span class="s1">
-</span><span class="s1"></span><span class="s1">    </span><span class="s1">&#39;&#39;&#39;</span>
-    <span class="n">y</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">cur</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="mf">0.58</span> <span class="o">*</span> <span class="nb">abs</span><span class="p">(</span><span class="n">cur</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">x</span><span class="p">)</span><span class="p">)</span>
-    <span class="n">pixel</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">getpixel</span><span class="p">(</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span><span class="p">)</span>
-    <span class="n">r</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">pixel</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="p">,</span> <span class="n">pixel</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="p">,</span> <span class="n">pixel</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+    <span class="s1">&#39;&#39;&#39;
+</span><span class="s1">    通过斜率计算斜线上的位置，并判断是否和圆点颜色一样
+</span><span class="s1">    &#39;&#39;&#39;</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">cur</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="mf">0.58</span> <span class="o">*</span> <span class="nb">abs</span><span class="p">(</span><span class="n">cur</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">x</span><span class="p">))</span>
+    <span class="n">pixel</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">getpixel</span><span class="p">((</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span>
+    <span class="n">r</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">pixel</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">pixel</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">pixel</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
     <span class="k">if</span> <span class="n">r</span> <span class="o">==</span> <span class="mi">245</span> <span class="ow">and</span> <span class="n">g</span> <span class="o">==</span> <span class="mi">245</span> <span class="ow">and</span> <span class="n">b</span> <span class="o">==</span> <span class="mi">245</span><span class="p">:</span>
         <span class="n">one_of_circle</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
         <span class="k">break</span></code></pre></div></p>
-<h3 id="heading-5">寻找平台中心点</h3>
+<h3 id="寻找平台中心点">寻找平台中心点</h3>
 <p><img src="https://www.orztu.com/images/post/coding-life/jumpjump-4.png" alt="寻找平台中心点" title="寻找平台中心点"></p>
 <p>首先寻找平台顶点，然后寻找左右顶点，计算平台中心点</p>
 <ol>
@@ -441,17 +446,17 @@ adb pull /sdcard/screen.png .</code></pre></div></p>
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">next_top</span><span class="p">,</span> <span class="n">top_pixel</span> <span class="o">=</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span> <span class="c1"># 顶点坐标和颜色</span>
 
 <span class="c1"># 从上往下查找第一个与背景色不同的点，作为平台顶点</span>
-<span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">height</span> <span class="o">*</span> <span class="mf">0.3</span><span class="p">)</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">height</span> <span class="o">*</span> <span class="mf">0.52</span><span class="p">)</span><span class="p">)</span><span class="p">:</span>
+<span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">height</span> <span class="o">*</span> <span class="mf">0.3</span><span class="p">),</span> <span class="nb">int</span><span class="p">(</span><span class="n">height</span> <span class="o">*</span> <span class="mf">0.52</span><span class="p">)):</span>
     <span class="c1"># 背景色，因为有渐变，所以每行重新获取背景色</span>
-    <span class="n">bg_pixel</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">getpixel</span><span class="p">(</span><span class="p">(</span><span class="n">width</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span><span class="p">)</span>
+    <span class="n">bg_pixel</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">getpixel</span><span class="p">((</span><span class="n">width</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span>
 
     <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">ite</span><span class="p">:</span>
-        <span class="n">pixel</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">getpixel</span><span class="p">(</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span><span class="p">)</span>
+        <span class="n">pixel</span> <span class="o">=</span> <span class="n">img</span><span class="o">.</span><span class="n">getpixel</span><span class="p">((</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span>
 
         <span class="c1"># 渐变问题，允许差值</span>
-        <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="n">pixel</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">bg_pixel</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">8</span> \
-            <span class="ow">or</span> <span class="nb">abs</span><span class="p">(</span><span class="n">pixel</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">bg_pixel</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">8</span> \
-            <span class="ow">or</span> <span class="nb">abs</span><span class="p">(</span><span class="n">pixel</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">-</span> <span class="n">bg_pixel</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">8</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="n">pixel</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">bg_pixel</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">&gt;</span> <span class="mi">8</span> \
+            <span class="ow">or</span> <span class="nb">abs</span><span class="p">(</span><span class="n">pixel</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">bg_pixel</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">&gt;</span> <span class="mi">8</span> \
+            <span class="ow">or</span> <span class="nb">abs</span><span class="p">(</span><span class="n">pixel</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">-</span> <span class="n">bg_pixel</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> <span class="o">&gt;</span> <span class="mi">8</span><span class="p">:</span>
             <span class="n">next_top</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
             <span class="n">top_pixel</span> <span class="o">=</span> <span class="n">pixel</span>
             <span class="k">break</span>
@@ -466,39 +471,39 @@ adb pull /sdcard/screen.png .</code></pre></div></p>
 <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
     <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
         <span class="c1"># 向左查找相同颜色点</span>
-        <span class="k">if</span> <span class="ow">not</span> <span class="n">same_color</span><span class="p">(</span><span class="n">img</span><span class="o">.</span><span class="n">getpixel</span><span class="p">(</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span><span class="p">)</span><span class="p">,</span> <span class="n">top_pixel</span><span class="p">)</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">same_color</span><span class="p">(</span><span class="n">img</span><span class="o">.</span><span class="n">getpixel</span><span class="p">((</span><span class="n">x</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">y</span><span class="p">)),</span> <span class="n">top_pixel</span><span class="p">):</span>
             <span class="k">break</span>
-        <span class="n">x</span> <span class="o">-</span><span class="o">=</span> <span class="mi">1</span>
+        <span class="n">x</span> <span class="o">-=</span> <span class="mi">1</span>
 
     <span class="c1"># 向下一个像素</span>
-    <span class="k">if</span> <span class="ow">not</span> <span class="n">same_color</span><span class="p">(</span><span class="n">img</span><span class="o">.</span><span class="n">getpixel</span><span class="p">(</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span><span class="p">)</span><span class="p">,</span> <span class="n">top_pixel</span><span class="p">)</span><span class="p">:</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">same_color</span><span class="p">(</span><span class="n">img</span><span class="o">.</span><span class="n">getpixel</span><span class="p">((</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)),</span> <span class="n">top_pixel</span><span class="p">):</span>
         <span class="k">break</span>
-    <span class="n">y</span> <span class="o">+</span><span class="o">=</span> <span class="mi">1</span>
-<span class="k">if</span> <span class="n">x</span> <span class="o">!=</span> <span class="n">next_top</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">and</span> <span class="n">y</span> <span class="o">!=</span> <span class="n">next_top</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="p">:</span>
+    <span class="n">y</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="k">if</span> <span class="n">x</span> <span class="o">!=</span> <span class="n">next_top</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">and</span> <span class="n">y</span> <span class="o">!=</span> <span class="n">next_top</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span>
     <span class="n">left</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span></code></pre></div>
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">next_top</span>
 <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
     <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
         <span class="c1"># 向右查找相同颜色点</span>
-        <span class="k">if</span> <span class="ow">not</span> <span class="n">same_color</span><span class="p">(</span><span class="n">img</span><span class="o">.</span><span class="n">getpixel</span><span class="p">(</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span><span class="p">)</span><span class="p">,</span> <span class="n">top_pixel</span><span class="p">)</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">same_color</span><span class="p">(</span><span class="n">img</span><span class="o">.</span><span class="n">getpixel</span><span class="p">((</span><span class="n">x</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">y</span><span class="p">)),</span> <span class="n">top_pixel</span><span class="p">):</span>
             <span class="k">break</span>
-        <span class="n">x</span> <span class="o">+</span><span class="o">=</span> <span class="mi">1</span>
+        <span class="n">x</span> <span class="o">+=</span> <span class="mi">1</span>
 
     <span class="c1"># 向下查找相同颜色点</span>
-    <span class="k">if</span> <span class="ow">not</span> <span class="n">same_color</span><span class="p">(</span><span class="n">img</span><span class="o">.</span><span class="n">getpixel</span><span class="p">(</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span><span class="p">)</span><span class="p">,</span> <span class="n">top_pixel</span><span class="p">)</span><span class="p">:</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">same_color</span><span class="p">(</span><span class="n">img</span><span class="o">.</span><span class="n">getpixel</span><span class="p">((</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)),</span> <span class="n">top_pixel</span><span class="p">):</span>
         <span class="k">break</span>
-    <span class="n">y</span> <span class="o">+</span><span class="o">=</span> <span class="mi">1</span>
-<span class="k">if</span> <span class="n">x</span> <span class="o">!=</span> <span class="n">next_top</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">and</span> <span class="n">y</span> <span class="o">!=</span> <span class="n">next_top</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="p">:</span>
+    <span class="n">y</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="k">if</span> <span class="n">x</span> <span class="o">!=</span> <span class="n">next_top</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">and</span> <span class="n">y</span> <span class="o">!=</span> <span class="n">next_top</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span>
     <span class="n">right</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span></code></pre></div></p>
 </li>
 </ol>
-<h3 id="heading-6">其他情况计算落点</h3>
+<h3 id="其他情况计算落点">其他情况计算落点</h3>
 <p><img src="https://www.orztu.com/images/post/coding-life/jumpjump-5.png" alt="其他情况计算落点" title="其他情况计算落点"></p>
 <p>如果当前棋子位置有偏差，这种方式结果会出现偏差</p>
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># x, y 为平台顶点坐标</span>
 <span class="n">k</span> <span class="o">=</span> <span class="mf">0.58</span> <span class="c1"># 斜率</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">cur</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">k</span> <span class="o">*</span> <span class="nb">float</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">cur</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="p">)</span></code></pre></div>
-<h2 id="heading-7">模拟触摸</h2>
+<span class="n">y</span> <span class="o">=</span> <span class="n">cur</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">k</span> <span class="o">*</span> <span class="nb">float</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">cur</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span></code></pre></div>
+<h2 id="模拟触摸">模拟触摸</h2>
 <p>通过当前位置和落点位置计算出距离<code>distance</code>，然后触摸时长<code>T = distance * P</code></p>
 <blockquote>
 <p>不同分辨率下，系数P不同，需要查找</p>
@@ -507,7 +512,7 @@ adb pull /sdcard/screen.png .</code></pre></div></p>
 <p><code>1080x1920</code>机型推荐<code>1.392</code></p>
 <p><code>720x1280</code>机型推荐<code>2.078</code></p>
 </blockquote>
-<h2 id="heading-8">参考</h2>
+<h2 id="参考">参考</h2>
 <p>思路来自<a href="https://github.com/xushanmeng/WechatJumpHelper">WechatJumpHelper</a></p>
               
               
@@ -716,7 +721,7 @@ adb pull /sdcard/screen.png .</code></pre></div></p>
       <span class="close-button"><i class="fa fa-close"></i></span>
       <a href="https://algolia.com" target="_blank" rel="noopener" class="searchby-algolia text-color-light link-unstyled">
         <span class="searchby-algolia-text text-color-light text-small">by</span>
-        <img class="searchby-algolia-logo" src="https://www.algolia.com/static_assets/images/press/downloads/algolia-light.svg">
+        <img class="searchby-algolia-logo" src="//www.algolia.com/static_assets/images/press/downloads/algolia-light.svg">
       </a>
       <i class="search-icon fa fa-search"></i>
       <form id="algolia-search-form">
@@ -742,7 +747,7 @@ adb pull /sdcard/screen.png .</code></pre></div></p>
                 </span>
               </span>
               <div class="media-content hide-xs font-merryweather"><p>首先，并非专业视频处理人员；以下命令都是我从网上搜索后修改以为己所用。</p>
-<h2 id="heading">图片转视频</h2>
+<h2 id="图片转视频">图片转视频</h2>
 <pre><code># gif 转视频（DURATION：时长，gif会循环播放）
 ffmpeg -ignore_loop 0 -t DURATION -f gif -i &quot;INPUT.gif&quot; -vcodec libx264 -crf 5 &quot;OUTPUT.mp4&quot;
 
@@ -765,7 +770,7 @@ ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &quot;INPUT.jpg&quot; -vco
                   Dec 12, 2018
                 </span>
               </span>
-              <div class="media-content hide-xs font-merryweather"><h2 id="heading">闪退点</h2>
+              <div class="media-content hide-xs font-merryweather"><h2 id="闪退点">闪退点</h2>
 <p>Version: Cocos2dx-Lua 3.16</p>
 <p>在某个页面修改后，出现闪退。查看修改记录没有特别的地方，均为修改图片或者条件判断。</p>
 <p>启动 XCode 发现闪退位置出现在<code>void Node::onEnterTransitionDidFinish()</code>中，
@@ -787,7 +792,7 @@ ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &quot;INPUT.jpg&quot; -vco
                 </span>
               </span>
               <div class="media-content hide-xs font-merryweather"><p>在日志信息中，有时需要获取当前函数的调用信息，比如打印调用栈：</p>
-<h2 id="heading">调用栈</h2>
+<h2 id="调用栈">调用栈</h2>
 <h3 id="debugstack-byte">debug.Stack() []byte</h3>
 <p><code>debug.Stack()</code>函数可以获取当前 goroutine 的调用栈信息，需要<code>import &quot;runtime/debug&quot;</code>。</p>
 <div class="highlight"><div class="chroma">
@@ -807,18 +812,18 @@ ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &quot;INPUT.jpg&quot; -vco
 </span><span class="lnt">20
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">func</span> <span class="nf">foo</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
+<pre class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">func</span> <span class="nf">foo</span><span class="p">()</span> <span class="p">{</span>
     <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;--- BEGIN ---&#34;</span><span class="p">)</span>
-    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nb">string</span><span class="p">(</span><span class="nx">debug</span><span class="p">.</span><span class="nf">Stack</span><span class="p">(</span><span class="p">)</span><span class="p">)</span><span class="p">)</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nb">string</span><span class="p">(</span><span class="nx">debug</span><span class="p">.</span><span class="nf">Stack</span><span class="p">()))</span>
     <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;--- END ---&#34;</span><span class="p">)</span>
 <span class="p">}</span>
 
-<span class="kd">func</span> <span class="nf">boom</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nf">foo</span><span class="p">(</span><span class="p">)</span>
+<span class="kd">func</span> <span class="nf">boom</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nf">foo</span><span class="p">()</span>
 <span class="p">}</span>
 
-<span class="kd">func</span> <span class="nf">main</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nf">boom</span><span class="p">(</span><span class="p">)</span>
+<span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nf">boom</span><span class="p">()</span>
 <span class="p">}</span></code></pre></td></tr></table>
 </div>
 </div></div>
@@ -856,7 +861,7 @@ ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &quot;INPUT.jpg&quot; -vco
                   Nov 11, 2018
                 </span>
               </span>
-              <div class="media-content hide-xs font-merryweather"><h2 id="heading">配置文件</h2>
+              <div class="media-content hide-xs font-merryweather"><h2 id="配置文件">配置文件</h2>
 <p>在游戏工程中，通常有大量配置是由策划提供，再转换成程序方便读取的格式添加到工程中。</p>
 <p>在我参与的<code>Cocos2dx-Lua</code>工程中，策划通常在<code>Excel</code>中配置，再通过脚本转换为<code>Lua-Table</code>的文件。</p>
 <p>比如常见的道具表转换后：</p></div>
@@ -931,9 +936,9 @@ ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &quot;INPUT.jpg&quot; -vco
                   Jun 6, 2018
                 </span>
               </span>
-              <div class="media-content hide-xs font-merryweather"><h2 id="heading">数组与切片</h2>
+              <div class="media-content hide-xs font-merryweather"><h2 id="数组与切片">数组与切片</h2>
 <p>以前粗学时并没有留意 Golang 的数组，一直以为只有切片。</p>
-<p>今天看<a href="https://book.douban.com/subject/27015617/">《Go语言实践》</a>时才发现 Golang 也有数组。与切片的区别是定义时指定长度（例如长度为4的 int 型数组<code>var array [4]int</code>）。</p>
+<p>今天看<a href="https://book.douban.com/subject/27015617/">《Go 语言实践》</a>时才发现 Golang 也有数组。与切片的区别是定义时指定长度（例如长度为 4 的 int 型数组<code>var array [4]int</code>）。</p>
 <p>数组赋值时会拷贝整个数组，所以作为参数传递时也会完整拷贝，要考虑性能合理使用，必要时可以使用指针。</p>
 <p>以下代码便于理解数组和切片：</p></div>
             </div>
@@ -952,7 +957,7 @@ ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &quot;INPUT.jpg&quot; -vco
                   May 5, 2018
                 </span>
               </span>
-              <div class="media-content hide-xs font-merryweather"><h2 id="heading">功能</h2>
+              <div class="media-content hide-xs font-merryweather"><h2 id="功能">功能</h2>
 <p>使用知名python图片处理库PIL，为图片添加文字水印。</p></div>
             </div>
             <div style="clear:both;"></div>
@@ -982,16 +987,16 @@ ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &quot;INPUT.jpg&quot; -vco
 
 
     
-<script src="//cdnjs.cat.net/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
 
 
 
-<script src="//cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>
 
-
-
-<script src="//cdnjs.cat.net/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
-<script src="//cdnjs.cat.net/ajax/libs/fancybox/2.1.5/helpers/jquery.fancybox-thumbs.js"></script>
+-<script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/helpers/jquery.fancybox-thumbs.js"></script>
 
 
 <script src="https://www.orztu.com/js/script.min.js"></script>
