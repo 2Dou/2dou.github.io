@@ -6,10 +6,28 @@
     <description>Recent content in Tags on Orz the way</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 01 Apr 2020 17:20:18 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 25 Dec 2020 10:37:10 +0800</lastBuildDate>
     
 	<atom:link href="https://www.orztu.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Git</title>
+      <link>https://www.orztu.com/tags/git/</link>
+      <pubDate>Fri, 25 Dec 2020 10:37:10 +0800</pubDate>
+      
+      <guid>https://www.orztu.com/tags/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>WSL</title>
+      <link>https://www.orztu.com/tags/wsl/</link>
+      <pubDate>Fri, 25 Dec 2020 10:37:10 +0800</pubDate>
+      
+      <guid>https://www.orztu.com/tags/wsl/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>BST</title>

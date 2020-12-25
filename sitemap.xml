@@ -3,12 +3,42 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://www.orztu.com/tags/bst/</loc>
-    <lastmod>2020-04-01T17:20:18+08:00</lastmod>
+    <loc>https://www.orztu.com/categories/</loc>
+    <lastmod>2020-12-25T10:37:10+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.orztu.com/categories/</loc>
+    <loc>https://www.orztu.com/categories/coding-life/</loc>
+    <lastmod>2020-12-25T10:37:10+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.orztu.com/tags/git/</loc>
+    <lastmod>2020-12-25T10:37:10+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.orztu.com/post/wsl-command/</loc>
+    <lastmod>2020-12-25T10:37:10+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.orztu.com/post/</loc>
+    <lastmod>2020-12-25T10:37:10+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.orztu.com/tags/</loc>
+    <lastmod>2020-12-25T10:37:10+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.orztu.com/tags/wsl/</loc>
+    <lastmod>2020-12-25T10:37:10+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.orztu.com/tags/bst/</loc>
     <lastmod>2020-04-01T17:20:18+08:00</lastmod>
   </url>
   
@@ -29,11 +59,6 @@
   
   <url>
     <loc>https://www.orztu.com/leetcode/</loc>
-    <lastmod>2020-04-01T17:20:18+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.orztu.com/tags/</loc>
     <lastmod>2020-04-01T17:20:18+08:00</lastmod>
   </url>
   
@@ -98,11 +123,6 @@
   </url>
   
   <url>
-    <loc>https://www.orztu.com/post/</loc>
-    <lastmod>2019-06-15T14:45:05+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://www.orztu.com/tags/%E8%A7%86%E9%A2%91%E5%A4%84%E7%90%86/</loc>
     <lastmod>2019-06-15T14:45:05+08:00</lastmod>
   </url>
@@ -150,11 +170,6 @@
   <url>
     <loc>https://www.orztu.com/leetcode/087-scramble-string/</loc>
     <lastmod>2019-01-03T09:14:13+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.orztu.com/categories/coding-life/</loc>
-    <lastmod>2018-12-22T09:22:48+08:00</lastmod>
   </url>
   
   <url>

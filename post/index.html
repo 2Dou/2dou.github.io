@@ -279,6 +279,75 @@
     
     <div class="postShorten-header">
       <h1 class="postShorten-title" itemprop="headline">
+        <a class="link-unstyled" href="https://www.orztu.com/post/wsl-command/">
+          Git is very slow in WSL
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta-bg">
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2020-12-25T10:37:10&#43;08:00">
+        
+  
+  
+  
+  
+    2020-12-25
+  
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://www.orztu.com/categories/coding-life">coding life</a>
+    
+  
+
+  </div>
+  </div>
+
+
+    </div>
+    <div class="postShorten-excerpt" itemprop="articleBody">
+      
+        Git 最近切换到 Windows 工作，使用 WSL 作为命令行方案。但在 WSL 里面安装 git 后，在工程里面执行命令时，总感觉非常缓慢。 执行一下 git status 都要卡好一会儿。
+经过一番搜索，原因大概是 Windows 的路径索引到 WSL 之间有一个转换导致的？具体没有细看。
+但找到一个解决方案：
+ 先在 Windows 中安装 Git，然后在 WSL 里面用 git.exe 替代 Linux 版本的 git。
+ 因为我使用的oh-my-zsh，所以通过在.zshrc中定义git函数针对 WSL 路径和 Windows 路径区别处理（这个代码是抄的）：
+function git() { if $(pwd -P | grep -q &#34;^\/mnt\/.\/*&#34;); then git.exe &#34;$@&#34; else command git &#34;$@&#34; fi } 但这样做需要注意两个环境的.gitconfig不是共用的。 可以配置includeIf，通过匹配 gitdir， 在 WSL 里面引用 Windows 的 .gitconfig；又在 Windows 里面引用 WSL 的 .
+      
+      <p>
+        <a href="https://www.orztu.com/post/wsl-command/" class="postShorten-excerpt_link link">Read More</a>
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+          
+            
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title" itemprop="headline">
         <a class="link-unstyled" href="https://www.orztu.com/post/ffmpeg-commands/">
           ffmpeg 命令行
         </a>
@@ -763,63 +832,6 @@ ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &quot;INPUT.jpg&quot; -vco
 </article>
 
           
-            
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.orztu.com/post/go-get-through-a-proxy/">
-          go get through a proxy
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta-bg">
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2018-08-02T09:47:52&#43;08:00">
-        
-  
-  
-  
-  
-    2018-08-02
-  
-
-      </time>
-    
-    
-  </div>
-  </div>
-
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      
-        <p>由于众所不知的原因，在国内访问<code>golang.org</code>需要爬梯子。</p>
-<p>所以使用<code>go get</code>安装某些包的时候，也要用梯子。</p>
-      
-      <p>
-        <a href="https://www.orztu.com/post/go-get-through-a-proxy/" class="postShorten-excerpt_link link">Read More</a>
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-          
           
 
 <nav class="blog-pagination">
@@ -853,13 +865,26 @@ ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &quot;INPUT.jpg&quot; -vco
                 </li>
             
         
+            
+            
+            
+            
+                
+                
+            
+            
+                <li class="page-item ">
+                    <a class="page-link" href="https://www.orztu.com/post/page/3/">3</a>
+                </li>
+            
+        
         
         <li class="page-item ">
             <a class="page-link" href="https://www.orztu.com/post/page/2/" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
         </li>
         
         <li class="page-item">
-            <a class="page-link" href="https://www.orztu.com/post/page/2/" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+            <a class="page-link" href="https://www.orztu.com/post/page/3/" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
         </li>
         
         
@@ -924,6 +949,28 @@ ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &quot;INPUT.jpg&quot; -vco
       <div class="results">
         
         
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://www.orztu.com/post/wsl-command/">
+                <h3 class="media-heading">Git is very slow in WSL</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Dec 12, 2020
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">Git 最近切换到 Windows 工作，使用 WSL 作为命令行方案。但在 WSL 里面安装 git 后，在工程里面执行命令时，总感觉非常缓慢。 执行一下 git status 都要卡好一会儿。
+经过一番搜索，原因大概是 Windows 的路径索引到 WSL 之间有一个转换导致的？具体没有细看。
+但找到一个解决方案：
+ 先在 Windows 中安装 Git，然后在 WSL 里面用 git.exe 替代 Linux 版本的 git。
+ 因为我使用的oh-my-zsh，所以通过在.zshrc中定义git函数针对 WSL 路径和 Windows 路径区别处理（这个代码是抄的）：
+function git() { if $(pwd -P | grep -q &#34;^\/mnt\/.\/*&#34;); then git.exe &#34;$@&#34; else command git &#34;$@&#34; fi } 但这样做需要注意两个环境的.gitconfig不是共用的。 可以配置includeIf，通过匹配 gitdir， 在 WSL 里面引用 Windows 的 .gitconfig；又在 Windows 里面引用 WSL 的 .</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
         
           <div class="media">
             
@@ -1136,24 +1183,6 @@ ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &quot;INPUT.jpg&quot; -vco
             <hr>
           </div>
         
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://www.orztu.com/post/text-watermark/">
-                <h3 class="media-heading">python为图片添加文字水印</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  May 5, 2018
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather"><h2 id="功能">功能</h2>
-<p>使用知名python图片处理库PIL，为图片添加文字水印。</p></div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
       </div>
     </div>
     <div class="modal-footer">
@@ -1161,7 +1190,7 @@ ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &quot;INPUT.jpg&quot; -vco
          data-message-zero="no post found"
          data-message-one="1 post found"
          data-message-other="{n} posts found">
-         16 posts found
+         17 posts found
       </p>
     </div>
   </div>

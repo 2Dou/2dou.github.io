@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>WSL on Orz the way</title>
+    <link>https://www.orztu.com/tags/wsl/</link>
+    <description>Recent content in WSL on Orz the way</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 25 Dec 2020 10:37:10 +0800</lastBuildDate>
+    
+	<atom:link href="https://www.orztu.com/tags/wsl/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Git is very slow in WSL</title>
+      <link>https://www.orztu.com/post/wsl-command/</link>
+      <pubDate>Fri, 25 Dec 2020 10:37:10 +0800</pubDate>
+      
+      <guid>https://www.orztu.com/post/wsl-command/</guid>
+      <description>Git 最近切换到 Windows 工作，使用 WSL 作为命令行方案。但在 WSL 里面安装 git 后，在工程里面执行命令时，总感觉非常缓慢。 执行一下 git status 都要卡好一会儿。
+经过一番搜索，原因大概是 Windows 的路径索引到 WSL 之间有一个转换导致的？具体没有细看。
+但找到一个解决方案：
+ 先在 Windows 中安装 Git，然后在 WSL 里面用 git.exe 替代 Linux 版本的 git。
+ 因为我使用的oh-my-zsh，所以通过在.zshrc中定义git函数针对 WSL 路径和 Windows 路径区别处理（这个代码是抄的）：
+function git() { if $(pwd -P | grep -q &amp;#34;^\/mnt\/.\/*&amp;#34;); then git.exe &amp;#34;$@&amp;#34; else command git &amp;#34;$@&amp;#34; fi } 但这样做需要注意两个环境的.gitconfig不是共用的。 可以配置includeIf，通过匹配 gitdir， 在 WSL 里面引用 Windows 的 .gitconfig；又在 Windows 里面引用 WSL 的 .</description>
+    </item>
+    
+  </channel>
+</rss>
