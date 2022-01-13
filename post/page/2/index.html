@@ -279,6 +279,72 @@
     
     <div class="postShorten-header">
       <h1 class="postShorten-title" itemprop="headline">
+        <a class="link-unstyled" href="https://www.orztu.com/post/using-govendor/">
+          govendor 使用
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta-bg">
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2018-08-02T14:43:33&#43;08:00">
+        
+  
+  
+  
+  
+    2018-08-02
+  
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://www.orztu.com/categories/coding-life">coding-life</a>
+    
+  
+
+  </div>
+  </div>
+
+
+    </div>
+    <div class="postShorten-excerpt" itemprop="articleBody">
+      
+        <h2 id="govendor">govendor</h2>
+<p>go vendor 是 go 1.6 官方正式引入的包管理方式。</p>
+<p>其基本思路是，将引用的外部包的源代码放在当前工程的<code>vendor</code>目录下面，go 编译时会优先从<code>vendor</code>目录寻找依赖关系。</p>
+      
+      <p>
+        <a href="https://www.orztu.com/post/using-govendor/" class="postShorten-excerpt_link link">Read More</a>
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+          
+            
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title" itemprop="headline">
         <a class="link-unstyled" href="https://www.orztu.com/post/go-get-through-a-proxy/">
           go get through a proxy
         </a>
@@ -727,72 +793,6 @@
 </article>
 
           
-            
-  
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-right" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://www.orztu.com/post/tianlongbabu/">
-          天龙八部
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta-bg">
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2017-05-31T17:54:35&#43;08:00">
-        
-  
-  
-  
-  
-    2017-05-31
-  
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://www.orztu.com/categories/reading">reading</a>
-    
-  
-
-  </div>
-  </div>
-
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      
-        
-      
-      <p>
-        <a href="https://www.orztu.com/post/tianlongbabu/" class="postShorten-excerpt_link link">Read More</a>
-        
-      </p>
-    </div>
-  </div>
-  
-    <a href="https://www.orztu.com/post/tianlongbabu/">
-      <div class="postShorten-thumbnailimg">
-        <img alt="" itemprop="image" src="https://www.orztu.com/images/post/tian-long-ba-bu.jpg"/>
-      </div>
-    </a>
-  
-</article>
-
-          
           
 
 <nav class="blog-pagination">
@@ -864,7 +864,7 @@
         </section>
         <footer id="footer" class="main-content-wrap">
   <span class="copyrights">
-    &copy; 2020 SelFree. All Rights Reserved
+    &copy; 2022 SelFree. All Rights Reserved
   </span>
 </footer>
 
@@ -919,6 +919,23 @@
       <div class="results">
         
         
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://www.orztu.com/post/fucking-egg-society/">
+                <h3 class="media-heading">Fucking-Egg</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Nov 11, 2021
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
         
           <div class="media">
             
@@ -1132,27 +1149,6 @@ ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &quot;INPUT.jpg&quot; -vco
             <hr>
           </div>
         
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://www.orztu.com/post/golang-slice-and-array/">
-                <h3 class="media-heading">Golang Slice and Array</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Jun 6, 2018
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather"><h2 id="数组与切片">数组与切片</h2>
-<p>以前粗学时并没有留意 Golang 的数组，一直以为只有切片。</p>
-<p>今天看<a href="https://book.douban.com/subject/27015617/">《Go 语言实践》</a>时才发现 Golang 也有数组。与切片的区别是定义时指定长度（例如长度为 4 的 int 型数组<code>var array [4]int</code>）。</p>
-<p>数组赋值时会拷贝整个数组，所以作为参数传递时也会完整拷贝，要考虑性能合理使用，必要时可以使用指针。</p>
-<p>以下代码便于理解数组和切片：</p></div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
       </div>
     </div>
     <div class="modal-footer">
@@ -1160,7 +1156,7 @@ ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &quot;INPUT.jpg&quot; -vco
          data-message-zero="no post found"
          data-message-one="1 post found"
          data-message-other="{n} posts found">
-         17 posts found
+         18 posts found
       </p>
     </div>
   </div>
