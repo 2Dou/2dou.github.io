@@ -6,11 +6,7 @@
     <description>Recent content in String on Orz the way</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 31 Mar 2020 09:02:58 +0800</lastBuildDate>
-    
-	<atom:link href="https://www.orztu.com/tags/string/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 31 Mar 2020 09:02:58 +0800</lastBuildDate><atom:link href="https://www.orztu.com/tags/string/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>LeetCode 97. Interleaving String</title>
       <link>https://www.orztu.com/leetcode/097-interleaving-string/</link>
@@ -120,7 +116,7 @@ g   r  e   at
 Output: &amp;quot;BANC&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;If there is no such window in S that covers all characters in T, return the empty string &amp;ldquo;&amp;quot;.&lt;/li&gt;
+&lt;li&gt;If there is no such window in S that covers all characters in T, return the empty string &amp;ldquo;&amp;rdquo;.&lt;/li&gt;
 &lt;li&gt;If there is such window, you are guaranteed that there will always be only one unique minimum window in S.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/blockquote&gt;
@@ -370,7 +366,7 @@ Input is guaranteed to be within the range from 1 to 3999.&lt;/p&gt;
       <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/regular-expression-matching&#34;&gt;Regular Expression Matching&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Implement regular expression matching with support for &amp;lsquo;.&amp;rsquo; and &amp;lsquo;*&#39;.&lt;/p&gt;
+&lt;p&gt;Implement regular expression matching with support for &amp;lsquo;.&amp;rsquo; and &amp;lsquo;*&amp;rsquo;.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;&#39;.&#39; Matches any single character.
 &#39;*&#39; Matches zero or more of the preceding element.
 
@@ -428,7 +424,8 @@ Y   I   R
 &lt;p&gt;And then read line by line: &lt;code&gt;&amp;quot;PAHNAPLSIIGYIR&amp;quot;&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Write the code that will take a string and make this conversion given a number of rows:&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-golang&#34; data-lang=&#34;golang&#34;&gt;&lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;convert&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;nRows&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-golang&#34; data-lang=&#34;golang&#34;&gt;&lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;convert&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;nRows&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;code&gt;convert(&amp;quot;PAYPALISHIRING&amp;quot;, 3)&lt;/code&gt; should return &lt;code&gt;&amp;quot;PAHNAPLSIIGYIR&amp;quot;&lt;/code&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;</description>

@@ -6,11 +6,7 @@
     <description>Recent content in Array on Orz the way</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 30 Jan 2019 15:59:41 +0800</lastBuildDate>
-    
-	<atom:link href="https://www.orztu.com/tags/array/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 30 Jan 2019 15:59:41 +0800</lastBuildDate><atom:link href="https://www.orztu.com/tags/array/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>LeetCode 90. Subsets II</title>
       <link>https://www.orztu.com/leetcode/090-subsets-ii/</link>

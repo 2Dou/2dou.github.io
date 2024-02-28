@@ -6,11 +6,7 @@
     <description>Recent content in Two Pointers on Orz the way</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 03 Jan 2019 11:46:11 +0800</lastBuildDate>
-    
-	<atom:link href="https://www.orztu.com/tags/two-pointers/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 03 Jan 2019 11:46:11 +0800</lastBuildDate><atom:link href="https://www.orztu.com/tags/two-pointers/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>LeetCode 88. Merge Sorted Array</title>
       <link>https://www.orztu.com/leetcode/088-merge-sorted-array/</link>

@@ -5,10 +5,6 @@
     <link>https://www.orztu.com/archives/</link>
     <description>Recent content in Archives on Orz the way</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
-    
-	<atom:link href="https://www.orztu.com/archives/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>zh-cn</language><atom:link href="https://www.orztu.com/archives/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

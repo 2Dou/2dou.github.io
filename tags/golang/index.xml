@@ -6,11 +6,7 @@
     <description>Recent content in Golang on Orz the way</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 12 Dec 2018 15:38:49 +0800</lastBuildDate>
-    
-	<atom:link href="https://www.orztu.com/tags/golang/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 12 Dec 2018 15:38:49 +0800</lastBuildDate><atom:link href="https://www.orztu.com/tags/golang/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>在 Golang 中打印调用栈信息</title>
       <link>https://www.orztu.com/post/golang-trace/</link>
@@ -50,7 +46,8 @@
 
 &lt;span class=&#34;kd&#34;&gt;func&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
     &lt;span class=&#34;nf&#34;&gt;boom&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
-&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;</description>
     </item>

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.68.3 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="generator" content="Hugo 0.76.4 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="SelFree">
 <meta name="keywords" content="Golang, C, 混合编程, program develop, leetcode, Golang, leetcode解答, 程序">
 <meta name="description" content="简单介绍 CGO 的用法：C 语言和 Golang 相互调用">
@@ -366,7 +366,8 @@
 
 <span class="kd">func</span> <span class="nf">Mul</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span> <span class="kt">int</span><span class="p">)</span> <span class="kt">int</span> <span class="p">{</span>
     <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="nx">C</span><span class="p">.</span><span class="nf">mul</span><span class="p">(</span><span class="nx">C</span><span class="p">.</span><span class="nb">int</span><span class="p">(</span><span class="nx">a</span><span class="p">),</span> <span class="nx">C</span><span class="p">.</span><span class="nb">int</span><span class="p">(</span><span class="nx">b</span><span class="p">)))</span>
-<span class="p">}</span></code></pre></div>
+<span class="p">}</span>
+</code></pre></div>
 <p>其中的 <code>import &quot;C&quot;</code> 表示使用了 CGO 。在这条语句前面的注释是一段 C 语言代码。
 这里就定义了哪些 C 语言函数被引用。也可以在这里直接编写函数并实现。
 <del>因为这个特殊的语法，import &ldquo;C&rdquo; 必须单独一行，不可与其他包一起引用。</del>
@@ -390,7 +391,8 @@
     <span class="nx">add</span><span class="p">.</span><span class="nf">HelloWorld</span><span class="p">()</span>
     <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">add</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
     <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">add</span><span class="p">.</span><span class="nf">Mul</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
-<span class="p">}</span></code></pre></div>
+<span class="p">}</span>
+</code></pre></div>
 <p>编译运行后可以看到输出：</p>
 <pre><code>Hello World!
 15
@@ -498,7 +500,7 @@
         </article>
         <footer id="footer" class="main-content-wrap">
   <span class="copyrights">
-    &copy; 2022 SelFree. All Rights Reserved
+    &copy; 2024 SelFree. All Rights Reserved
   </span>
 </footer>
 
@@ -733,7 +735,8 @@ ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &quot;INPUT.jpg&quot; -vco
 
 <span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
     <span class="nf">boom</span><span class="p">()</span>
-<span class="p">}</span></code></pre></td></tr></table>
+<span class="p">}</span>
+</code></pre></td></tr></table>
 </div>
 </div></div>
             </div>

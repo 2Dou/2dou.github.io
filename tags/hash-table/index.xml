@@ -6,11 +6,7 @@
     <description>Recent content in Hash Table on Orz the way</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 12 Dec 2018 11:42:17 +0800</lastBuildDate>
-    
-	<atom:link href="https://www.orztu.com/tags/hash-table/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 12 Dec 2018 11:42:17 +0800</lastBuildDate><atom:link href="https://www.orztu.com/tags/hash-table/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>LeetCode 85. Maximal Rectangle</title>
       <link>https://www.orztu.com/leetcode/085-maximal-rectangle/</link>
@@ -49,7 +45,7 @@ Output: 6
 Output: &amp;quot;BANC&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;If there is no such window in S that covers all characters in T, return the empty string &amp;ldquo;&amp;quot;.&lt;/li&gt;
+&lt;li&gt;If there is no such window in S that covers all characters in T, return the empty string &amp;ldquo;&amp;rdquo;.&lt;/li&gt;
 &lt;li&gt;If there is such window, you are guaranteed that there will always be only one unique minimum window in S.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/blockquote&gt;
@@ -114,7 +110,7 @@ A solution set is:
 &lt;p&gt;Write a program to solve a Sudoku puzzle by filling the empty cells.
 &lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
-Empty cells are indicated by the character &amp;lsquo;.&#39;.
+Empty cells are indicated by the character &amp;lsquo;.&amp;rsquo;.
 &lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
 You may assume that there will be only one unique solution.&lt;/p&gt;

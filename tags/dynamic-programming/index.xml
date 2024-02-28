@@ -6,11 +6,7 @@
     <description>Recent content in Dynamic Programming on Orz the way</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 31 Mar 2020 09:02:58 +0800</lastBuildDate>
-    
-	<atom:link href="https://www.orztu.com/tags/dynamic-programming/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 31 Mar 2020 09:02:58 +0800</lastBuildDate><atom:link href="https://www.orztu.com/tags/dynamic-programming/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>LeetCode 97. Interleaving String</title>
       <link>https://www.orztu.com/leetcode/097-interleaving-string/</link>
@@ -309,7 +305,7 @@ Explanation: The longest valid parentheses substring is &amp;quot;()&amp;quot;
       <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/regular-expression-matching&#34;&gt;Regular Expression Matching&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Implement regular expression matching with support for &amp;lsquo;.&amp;rsquo; and &amp;lsquo;*&#39;.&lt;/p&gt;
+&lt;p&gt;Implement regular expression matching with support for &amp;lsquo;.&amp;rsquo; and &amp;lsquo;*&amp;rsquo;.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;&#39;.&#39; Matches any single character.
 &#39;*&#39; Matches zero or more of the preceding element.
 

@@ -6,11 +6,7 @@
     <description>Recent content in Stack on Orz the way</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 26 Mar 2020 11:18:43 +0800</lastBuildDate>
-    
-	<atom:link href="https://www.orztu.com/tags/stack/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 26 Mar 2020 11:18:43 +0800</lastBuildDate><atom:link href="https://www.orztu.com/tags/stack/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>LeetCode 94. Binary Tree Inorder Traversal</title>
       <link>https://www.orztu.com/leetcode/094-binary-tree-inorder-traversal/</link>
@@ -20,7 +16,7 @@
       <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/binary-tree-inorder-traversal/&#34;&gt;Binary Tree Inorder Traversal&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Given a binary tree, return the inorder traversal of its nodes&amp;rsquo; values.&lt;/p&gt;
+&lt;p&gt;Given a binary tree, return the inorder traversal of its nodes&#39; values.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Example:&lt;/strong&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;Input: [1,null,2,3]
    1
