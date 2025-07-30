@@ -1,21 +1,51 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>GFW on Orz the way</title>
-    <link>https://www.orztu.com/tags/gfw/</link>
-    <description>Recent content in GFW on Orz the way</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
-    <lastBuildDate>Thu, 02 Aug 2018 09:47:52 +0800</lastBuildDate><atom:link href="https://www.orztu.com/tags/gfw/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>go get through a proxy</title>
-      <link>https://www.orztu.com/post/go-get-through-a-proxy/</link>
-      <pubDate>Thu, 02 Aug 2018 09:47:52 +0800</pubDate>
-      
-      <guid>https://www.orztu.com/post/go-get-through-a-proxy/</guid>
-      <description>&lt;p&gt;由于众所不知的原因，在国内访问&lt;code&gt;golang.org&lt;/code&gt;需要爬梯子。&lt;/p&gt;
-&lt;p&gt;所以使用&lt;code&gt;go get&lt;/code&gt;安装某些包的时候，也要用梯子。&lt;/p&gt;</description>
-    </item>
-    
-  </channel>
+    <channel>
+        <title>GFW on Orztu The Way | Orz途</title>
+        <link>https://www.orztu.com/tags/gfw/</link>
+        <description>Recent content in GFW on Orztu The Way | Orz途</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Thu, 02 Aug 2018 09:47:52 +0800</lastBuildDate><atom:link href="https://www.orztu.com/tags/gfw/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>go get through a proxy</title>
+        <link>https://www.orztu.com/post/go-get-through-a-proxy/</link>
+        <pubDate>Thu, 02 Aug 2018 09:47:52 +0800</pubDate>
+        
+        <guid>https://www.orztu.com/post/go-get-through-a-proxy/</guid>
+        <description>&lt;p&gt;由于众所不知的原因，在国内访问&lt;code&gt;golang.org&lt;/code&gt;需要爬梯子。&lt;/p&gt;
+&lt;p&gt;所以使用&lt;code&gt;go get&lt;/code&gt;安装某些包的时候，也要用梯子。&lt;/p&gt;
+&lt;h2 id=&#34;方法&#34;&gt;方法
+&lt;/h2&gt;&lt;h3 id=&#34;1-设置-git-代理&#34;&gt;1. 设置 git 代理
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git config --global http.proxy socks5://127.0.0.1:9527
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;2-通过代理-go-get&#34;&gt;2. 通过代理 go get
+&lt;/h3&gt;&lt;p&gt;socks5 代理：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-gdscript3&#34; data-lang=&#34;gdscript3&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;http_proxy&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;socks5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;//&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;127.0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;0.1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;9527&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;go&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;get&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;golang&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;org&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tools&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cmd&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;goimports&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;3-取消-git-代理&#34;&gt;3. 取消 git 代理
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git config --global --unset http.proxy
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;http-代理&#34;&gt;http 代理
+&lt;/h2&gt;&lt;p&gt;如果是 http 代理，将&lt;code&gt;socks5://&lt;/code&gt;改为&lt;code&gt;http://&lt;/code&gt;&lt;/p&gt;</description>
+        </item>
+        
+    </channel>
 </rss>

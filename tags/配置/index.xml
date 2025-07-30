@@ -1,25 +1,28 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>配置 on Orz the way</title>
-    <link>https://www.orztu.com/tags/%E9%85%8D%E7%BD%AE/</link>
-    <description>Recent content in 配置 on Orz the way</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
-    <lastBuildDate>Wed, 18 Oct 2017 16:44:36 +0800</lastBuildDate><atom:link href="https://www.orztu.com/tags/%E9%85%8D%E7%BD%AE/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>树莓派 Raspbian系统安装与基本配置</title>
-      <link>https://www.orztu.com/post/raspbian-install-and-configure/</link>
-      <pubDate>Wed, 18 Oct 2017 16:44:36 +0800</pubDate>
-      
-      <guid>https://www.orztu.com/post/raspbian-install-and-configure/</guid>
-      <description>&lt;!-- raw HTML omitted --&gt;
-&lt;h2 id=&#34;系统安装httpswwwraspberrypiorgdocumentationinstallationinstalling-imagesreadmemd&#34;&gt;&lt;a href=&#34;https://www.raspberrypi.org/documentation/installation/installing-images/README.md&#34;&gt;系统安装&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;系统: &lt;a href=&#34;https://www.raspberrypi.org/downloads/raspbian/&#34;&gt;raspbian&lt;/a&gt; &lt;!-- raw HTML omitted --&gt;
+    <channel>
+        <title>配置 on Orztu The Way | Orz途</title>
+        <link>https://www.orztu.com/tags/%E9%85%8D%E7%BD%AE/</link>
+        <description>Recent content in 配置 on Orztu The Way | Orz途</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Wed, 18 Oct 2017 16:44:36 +0800</lastBuildDate><atom:link href="https://www.orztu.com/tags/%E9%85%8D%E7%BD%AE/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>树莓派 Raspbian系统安装与基本配置</title>
+        <link>https://www.orztu.com/post/raspbian-install-and-configure/</link>
+        <pubDate>Wed, 18 Oct 2017 16:44:36 +0800</pubDate>
+        
+        <guid>https://www.orztu.com/post/raspbian-install-and-configure/</guid>
+        <description>&lt;!-- toc --&gt;
+&lt;h2 id=&#34;系统安装&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.raspberrypi.org/documentation/installation/installing-images/README.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;系统安装&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;系统: &lt;a class=&#34;link&#34; href=&#34;https://www.raspberrypi.org/downloads/raspbian/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;raspbian&lt;/a&gt; &lt;br/&gt;
 工具（二选一）：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://etcher.io/&#34;&gt;Etcher&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://sourceforge.net/projects/win32diskimager/&#34;&gt;Win32DiskImager&lt;/a&gt;（windows only）&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://etcher.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Etcher&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;http://sourceforge.net/projects/win32diskimager/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Win32DiskImager&lt;/a&gt;（windows only）&lt;/li&gt;
 &lt;/ul&gt;
 &lt;ol&gt;
 &lt;li&gt;将SD卡格式化成exFat格式&lt;/li&gt;
@@ -27,8 +30,113 @@
 &lt;/ol&gt;
 &lt;p&gt;写入完成之后就相当于系统安装完成了。这时候SD卡被分成两个区，有一个区是在windows下无法识别，不用理会。&lt;/p&gt;
 &lt;p&gt;这时候如果直接将SD卡插入树莓派，会发现“无法启动”。显示屏没信号，在路由器里找到树莓派的IP也无法用ssh登录。&lt;/p&gt;
-&lt;p&gt;我安装的时候就是踩到这个坑。以为安装失败，反复装了好几次，就差把SD卡写穿了。&lt;/p&gt;</description>
-    </item>
-    
-  </channel>
+&lt;p&gt;我安装的时候就是踩到这个坑。以为安装失败，反复装了好几次，就差把SD卡写穿了。&lt;/p&gt;
+&lt;p&gt;实际系统安装已经成功了。只需要在电脑上打开SD卡，找到&lt;code&gt;config.txt&lt;/code&gt;文件里&lt;code&gt;#hdmi_safe=1&lt;/code&gt;这一行，将前面的&lt;code&gt;#&lt;/code&gt;号去掉；
+再新建一个文件命名为&lt;code&gt;ssh&lt;/code&gt;（不能有扩展名）。&lt;/p&gt;
+&lt;p&gt;再次把SD卡装进树莓派启动，显示屏就可以正常显示了，ssh也能登录了。&lt;/p&gt;
+&lt;h2 id=&#34;基本配置&#34;&gt;基本配置
+&lt;/h2&gt;&lt;h3 id=&#34;1-静态ip固定ip&#34;&gt;1. 静态IP/固定IP
+&lt;/h3&gt;&lt;p&gt;打开&lt;code&gt;/etc/dhcpcd.conf&lt;/code&gt;文件，找到网口（一般为&lt;code&gt;eth0&lt;/code&gt;）&lt;/p&gt;
+&lt;p&gt;指定IP:
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;interface eth0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;static &lt;span class=&#34;nv&#34;&gt;ip_address&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;192.168.1.20/24
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;static &lt;span class=&#34;nv&#34;&gt;routers&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;192.168.1.1&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/p&gt;
+&lt;h3 id=&#34;2-iptables&#34;&gt;2. iptables
+&lt;/h3&gt;&lt;p&gt;刚开始配置&lt;code&gt;iptables&lt;/code&gt;的时候，以为创建好规则后，使用&lt;code&gt;iptables-save&lt;/code&gt;就可以保存了，结果重启后又失效。&lt;/p&gt;
+&lt;p&gt;为了持久化规则，可以使用&lt;code&gt;iptables-persistent&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;运行&lt;code&gt;apt-get&lt;/code&gt;安装：&lt;code&gt;sudo apt-get install iptables-persistent&lt;/code&gt;安装。&lt;/p&gt;
+&lt;p&gt;然后在&lt;code&gt;/etc/iptables/rules.v4&lt;/code&gt;里面编辑规则&lt;/p&gt;
+&lt;h3 id=&#34;3-修改主机名&#34;&gt;3. 修改主机名
+&lt;/h3&gt;&lt;p&gt;需要修改两个文件：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;替换&lt;code&gt;/etc/hostname&lt;/code&gt;里的主机名&lt;/li&gt;
+&lt;li&gt;替换&lt;code&gt;/etc/hosts&lt;/code&gt;里的主机名&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;4-修改用户名&#34;&gt;4. 修改用户名
+&lt;/h3&gt;&lt;p&gt;为了修改默认用户名pi，需要临时使用root帐号登录。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;启用root帐号&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 为root帐号设置密码&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo passwd root
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 启用root帐号&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo passwd --unlock root&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;ssh默认是禁止root登录的，所以还需要修改ssh配置：编辑文件&lt;code&gt;/etc/ssh/sshd_config&lt;/code&gt;，添加一行&lt;code&gt;PermitRootLogin yes&lt;/code&gt;即可。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 重启&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo reboot&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;重启系统并登录root后修改pi账户&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 修改用户名为NEWNAME&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;usermod -l NEWNAME pi
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 修改用户group&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;groupmod -n NEWNAME pi
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 修改账户主目录&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mv /home/pi /home/NEWNAME
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 设置主目录&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;usermod -d /home/NEWNAME NEWNAME&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;重启登录NEWNAME&lt;/p&gt;
+&lt;p&gt;登录后检查新用户是否能正常使用sudo，如果不能则再次使用root登录，往&lt;code&gt;/etc/sudoers&lt;/code&gt;中添加一行：&lt;code&gt;NEWNAME ALL=(ALL) ALL&lt;/code&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;新账户正常后禁用root&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 禁用root&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo passwd -l root&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;别忘了还有ssh配置文件也要修改。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</description>
+        </item>
+        
+    </channel>
 </rss>

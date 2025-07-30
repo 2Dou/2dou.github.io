@@ -1,347 +1,510 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
-  <head>
-    
-    <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.76.4 with theme Tranquilpeak 0.4.8-BETA">
-<meta name="author" content="SelFree">
-<meta name="keywords" content="回溯, 迷宫, program develop, leetcode, Golang, leetcode解答, 程序">
-<meta name="description" content="LeetCode 79. Word Search - Answer LeetCode编程练习解答">
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="LeetCode 79. Word Search - Answer LeetCode编程练习解答">
+<meta name="keywords" content="回溯, 迷宫"><title>LeetCode 79. Word Search</title>
 
+<link rel='canonical' href='https://www.orztu.com/leetcode/079-word-search/'>
 
-<meta property="og:description" content="LeetCode 79. Word Search - Answer LeetCode编程练习解答">
-<meta property="og:type" content="article">
-<meta property="og:title" content="LeetCode 79. Word Search">
+<link rel="stylesheet" href="/scss/style.min.946cca6c6259ef94ac55abfae7c7bf3291ea3ed5eea17ef77500b257217c6710.css"><meta property='og:title' content="LeetCode 79. Word Search">
+<meta property='og:description' content="LeetCode 79. Word Search - Answer LeetCode编程练习解答">
+<meta property='og:url' content='https://www.orztu.com/leetcode/079-word-search/'>
+<meta property='og:site_name' content='Orztu The Way | Orz途'>
+<meta property='og:type' content='article'><meta property='article:section' content='Leetcode' /><meta property='article:tag' content='LeetCode' /><meta property='article:tag' content='Array' /><meta property='article:tag' content='Backtracking' /><meta property='article:published_time' content='2018-12-05T14:29:27&#43;08:00'/><meta property='article:modified_time' content='2018-12-05T14:29:27&#43;08:00'/>
 <meta name="twitter:title" content="LeetCode 79. Word Search">
-<meta property="og:url" content="https://www.orztu.com/leetcode/079-word-search/">
-<meta property="twitter:url" content="https://www.orztu.com/leetcode/079-word-search/">
-<meta property="og:site_name" content="Orz the way">
-<meta property="og:description" content="LeetCode 79. Word Search - Answer LeetCode编程练习解答">
 <meta name="twitter:description" content="LeetCode 79. Word Search - Answer LeetCode编程练习解答">
-<meta property="og:locale" content="en-us">
+    <link rel="shortcut icon" href="/favicon.ico" />
 
-  
-    <meta property="article:published_time" content="2018-12-05T14:29:27">
-  
-  
-    <meta property="article:modified_time" content="2018-12-05T14:29:27">
-  
-  
-  
-    
-      <meta property="article:section" content="LeetCode">
-    
-  
-  
-    
-      <meta property="article:tag" content="LeetCode">
-    
-      <meta property="article:tag" content="Array">
-    
-      <meta property="article:tag" content="Backtracking">
-    
-  
-
-
-<meta name="twitter:card" content="summary">
-
-
-
-
-
-
-
-
-
-
-
-  <meta property="og:image" content="https://www.gravatar.com/avatar/f47b51d6d6b82fd9048e3eaf64bf7e69?s=640">
-  <meta property="twitter:image" content="https://www.gravatar.com/avatar/f47b51d6d6b82fd9048e3eaf64bf7e69?s=640">
-
-
-    <title>LeetCode 79. Word Search | 
-        Orz the way
-      
-    </title>
-    <meta name="author" content="SelFree">
-    <meta name="keywords" content="回溯, 迷宫, program develop, leetcode, Golang, leetcode解答, 程序">
-    
-
-    <link rel="icon" href="https://www.orztu.com/images/favicon.ico">
-    
-
-    
-
-    <link rel="canonical" href="https://www.orztu.com/leetcode/079-word-search/">
-
-    
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-      integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css"
-      integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
-    <link rel="stylesheet"
-      href="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css"
-      integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
-
-    
-    
-    <link rel="stylesheet" href="https://www.orztu.com/css/style.min.css" />
-    <link rel="stylesheet" href="https://www.orztu.com/css/syntax.min.css" />
-    
-    
-
-    <script async data-cfasync="false" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    </head>
+    <body class="
+    article-page
+    ">
     <script>
-      (adsbygoogle = window.adsbygoogle || []).push({
-        google_ad_client: "ca-pub-7873997855793576",
-        enable_page_level_ads: true
-      });
-    </script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
 
-    <script async custom-element="amp-auto-ads"
-        src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
-    </script>
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
 
-    
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131448352-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
 
-      gtag('config', 'UA-131448352-1');
-    </script>
-
-    
-  </head>
-
-  <body>
-    <div id="blog">
-      <header id="header" data-behavior="4">
-  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
-  <div class="header-title">
-    <a class="header-title-link" href="https://www.orztu.com/">Orz the way</a>
-  </div>
-  
-    
-      <a class="header-right-picture "
-         href="https://www.orztu.com/#about">
-    
-    
-    
-      
-        <img class="header-picture" src="https://www.gravatar.com/avatar/f47b51d6d6b82fd9048e3eaf64bf7e69?s=90" alt="Author&#39;s picture" />
-      
-    
-    </a>
-  
-</header>
-
-      <nav id="sidebar" data-behavior="4">
-  <div class="sidebar-container">
-    
-      <div class="sidebar-profile">
-        <a href="https://www.orztu.com/#about">
-          <img class="sidebar-profile-picture" src="https://www.gravatar.com/avatar/f47b51d6d6b82fd9048e3eaf64bf7e69?s=110" alt="Author&#39;s picture" />
-        </a>
-        <h4 class="sidebar-profile-name">SelFree</h4>
+    <header>
         
-          <h5 class="sidebar-profile-bio"><strong>城市永远年轻，而我们终将老去</strong></h5>
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu_2ba09b40b9a57220.jpeg" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
         
-      </div>
-    
-    <ul class="sidebar-buttons">
-      
-  <li class="sidebar-button">
-    
-      <a class="sidebar-button-link " href="https://www.orztu.com/">
-    
-      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
-      
-      <span class="sidebar-button-desc">Home</span>
-    </a>
-  </li>
-
-  <li class="sidebar-button">
-    
-      <a class="sidebar-button-link " href="https://www.orztu.com/leetcode/">
-    
-      <i class="sidebar-button-icon fa fa-lg fa-file-code-o"></i>
-      
-      <span class="sidebar-button-desc">LeetCode</span>
-    </a>
-  </li>
-
-  <li class="sidebar-button">
-    
-      <a class="sidebar-button-link " href="https://www.orztu.com/books/">
-    
-      <i class="sidebar-button-icon fa fa-lg fa-book"></i>
-      
-      <span class="sidebar-button-desc">Books</span>
-    </a>
-  </li>
-
-  <li class="sidebar-button">
-    
-      <a class="sidebar-button-link " href="https://www.orztu.com/categories/">
-    
-      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
-      
-      <span class="sidebar-button-desc">Categories</span>
-    </a>
-  </li>
-
-  <li class="sidebar-button">
-    
-      <a class="sidebar-button-link " href="https://www.orztu.com/tags/">
-    
-      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
-      
-      <span class="sidebar-button-desc">Tags</span>
-    </a>
-  </li>
-
-  <li class="sidebar-button">
-    
-      <a class="sidebar-button-link " href="https://www.orztu.com/archives/">
-    
-      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
-      
-      <span class="sidebar-button-desc">Archives</span>
-    </a>
-  </li>
-
-  <li class="sidebar-button">
-    
-      <a class="sidebar-button-link " href="https://www.orztu.com/about/">
-    
-      <i class="sidebar-button-icon fa fa-lg fa-question"></i>
-      
-      <span class="sidebar-button-desc">About</span>
-    </a>
-  </li>
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Orztu The Way | Orz途</a></h1>
+            <h2 class="site-description">城市永远年轻，而我们终将老去</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/2dou'
+                        target="_blank"
+                        title="2dou@GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
 
 
-    </ul>
-    <ul class="sidebar-buttons">
-      
 
-    </ul>
-    <ul class="sidebar-buttons">
-      
-  <li class="sidebar-button">
-    
-      <a class="sidebar-button-link " href="https://www.orztu.com/index.xml">
-    
-      <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
-      
-      <span class="sidebar-button-desc">RSS</span>
-    </a>
-  </li>
-
-
-    </ul>
-    <ul class="sidebar-buttons">
-      
-  <li class="sidebar-button">
-    
-      <a class="sidebar-button-link " href="http://www.5inb4d.com" target="_blank" rel="noopener">
-    
-      <i class="sidebar-button-icon fa fa-lg fa-link"></i>
-      
-      <span class="sidebar-button-desc">无名小小站</span>
-    </a>
-  </li>
-
-  <li class="sidebar-button">
-    
-      <a class="sidebar-button-link " href="http://32.5inb4d.com" target="_blank" rel="noopener">
-    
-      <i class="sidebar-button-icon fa fa-lg fa-link"></i>
-      
-      <span class="sidebar-button-desc">32无名小小站</span>
-    </a>
-  </li>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='/index.xml'
+                        target="_blank"
+                        title="RSS"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-rss" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="5" cy="19" r="1" />
+  <path d="M4 4a16 16 0 0 1 16 16" />
+  <path d="M4 11a9 9 0 0 1 9 9" />
+</svg>
 
 
-    </ul>
-  </div>
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/categories/leetcode/' >
+                
+                
+                
+                    <!--
+category: Text
+tags: [brackets, source, programming, command]
+version: "1.0"
+unicode: "ea77"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="32"
+  height="32"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="#000000"
+  stroke-width="1"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M7 8l-4 4l4 4" />
+  <path d="M17 8l4 4l-4 4" />
+  <path d="M14 4l-4 16" />
+</svg>
+
+                
+                <span>LeetCode</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/books/' >
+                
+                
+                
+                    <!--
+category: Document
+tags: [read, dictionary, magazine, library, booklet, novel]
+version: "1.0"
+unicode: "ea39"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="32"
+  height="32"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="#000000"
+  stroke-width="1"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0" />
+  <path d="M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0" />
+  <path d="M3 6l0 13" />
+  <path d="M12 6l0 13" />
+  <path d="M21 6l0 13" />
+</svg>
+
+                
+                <span>Books</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/running/' >
+                
+                
+                
+                    <!--
+tags: [jog, dislocating, movement, motion, sprint]
+category: Sport
+version: "1.14"
+unicode: "ec82"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="32"
+  height="32"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="#000000"
+  stroke-width="1.25"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M13 4m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+  <path d="M4 17l5 1l.75 -1.5" />
+  <path d="M15 21l0 -4l-4 -3l1 -6" />
+  <path d="M7 12l0 -3l5 -1l3 3l3 1" />
+</svg>
+
+                
+                <span>Running</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                    <!--
+tags: [sign, symbol, ask, sentence, word, letters, "?"]
+version: "1.16"
+unicode: "ec9d"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="32"
+  height="32"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="#000000"
+  stroke-width="1.25"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M8 8a3.5 3 0 0 1 3.5 -3h1a3.5 3 0 0 1 3.5 3a3 3 0 0 1 -2 3a3 4 0 0 0 -2 4" />
+  <path d="M12 19l0 .01" />
+</svg>
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#description">Description</a></li>
+    <li><a href="#solution">Solution</a></li>
+  </ol>
 </nav>
+        </div>
+    </section>
 
-      
-
-      <div id="main" data-behavior="4"
-        class="
-               hasCoverMetaIn
-               ">
-        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
-          
-          
-            <div class="post-header main-content-wrap text-left">
-  
-    <h1 class="post-title" itemprop="headline">
-      LeetCode 79. Word Search
-    </h1>
-  
-  
-  <div class="postShorten-meta-bg">
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2018-12-05T14:29:27&#43;08:00">
+            
         
-  
-  
-  
-  
-    2018-12-05
-  
-
-      </time>
-    
-    
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://www.orztu.com/categories/leetcode">LeetCode</a>
-    
-  
-
-  </div>
-  </div>
+    </aside>
 
 
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/leetcode/" style="background-color: #2a9d8f; color: #fff;">
+                LeetCode
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/leetcode/079-word-search/">LeetCode 79. Word Search</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            LeetCode 79. Word Search - Answer LeetCode编程练习解答
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2018-12-05</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 2 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
 </div>
 
-          
-          <div class="post-content markdown" itemprop="articleBody">
-            <div class="main-content-wrap">
-              <h2 id="description">Description</h2>
-<p><a href="https://leetcode.com/problems/word-search/">Word Search</a></p>
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="description">Description
+</h2><p><a class="link" href="https://leetcode.com/problems/word-search/"  target="_blank" rel="noopener"
+    >Word Search</a></p>
 <blockquote>
 <p>Given a 2D board and a word, find if the word exists in the grid.</p>
 <p>The word can be constructed from letters of sequentially adjacent cell, where &ldquo;adjacent&rdquo; cells are those horizontally or vertically neighboring. The same letter cell may not be used more than once.</p>
-<p><strong>Example:</strong></p>
-</blockquote>
-<pre><code>board =
-[
-  ['A','B','C','E'],
-  ['S','F','C','S'],
-  ['A','D','E','E']
-]
-
-Given word = &quot;ABCCED&quot;, return true.
-Given word = &quot;SEE&quot;, return true.
-Given word = &quot;ABCB&quot;, return false.
-</code></pre><p>在<code>board</code>中查找是否存在相连（相邻）的字符与给定的单词对应。</p>
-<p>很像一个走迷宫的题目，搜索下一步是否与单词的字母匹配，是则走到该位置。</p>
-<h2 id="solution">Solution</h2>
+<p><strong>Example:</strong></p></blockquote>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">board =
+</span></span><span class="line"><span class="cl">[
+</span></span><span class="line"><span class="cl">  [&#39;A&#39;,&#39;B&#39;,&#39;C&#39;,&#39;E&#39;],
+</span></span><span class="line"><span class="cl">  [&#39;S&#39;,&#39;F&#39;,&#39;C&#39;,&#39;S&#39;],
+</span></span><span class="line"><span class="cl">  [&#39;A&#39;,&#39;D&#39;,&#39;E&#39;,&#39;E&#39;]
+</span></span><span class="line"><span class="cl">]
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Given word = &#34;ABCCED&#34;, return true.
+</span></span><span class="line"><span class="cl">Given word = &#34;SEE&#34;, return true.
+</span></span><span class="line"><span class="cl">Given word = &#34;ABCB&#34;, return false.
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>在<code>board</code>中查找是否存在相连（相邻）的字符与给定的单词对应。</p>
+<p>很像一个走迷宫的题目，搜索下一步是否与单词的字母匹配，是则走到该位置。</p>
+<h2 id="solution">Solution
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -403,621 +566,341 @@ Given word = &quot;ABCB&quot;, return false.
 </span><span class="lnt">60
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">func</span> <span class="nf">exist</span><span class="p">(</span><span class="nx">board</span> <span class="p">[][]</span><span class="kt">byte</span><span class="p">,</span> <span class="nx">word</span> <span class="kt">string</span><span class="p">)</span> <span class="kt">bool</span> <span class="p">{</span>
-    <span class="nx">height</span> <span class="o">:=</span> <span class="nb">len</span><span class="p">(</span><span class="nx">board</span><span class="p">)</span>
-    <span class="k">if</span> <span class="nx">height</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="kc">false</span>
-    <span class="p">}</span>
-
-    <span class="nx">width</span> <span class="o">:=</span> <span class="nb">len</span><span class="p">(</span><span class="nx">board</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-    <span class="k">if</span> <span class="nx">width</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="kc">false</span>
-    <span class="p">}</span>
-
-    <span class="nx">w</span> <span class="o">:=</span> <span class="p">[]</span><span class="nb">byte</span><span class="p">(</span><span class="nx">word</span><span class="p">)</span>
-    <span class="nx">wLength</span> <span class="o">:=</span> <span class="nb">len</span><span class="p">(</span><span class="nx">w</span><span class="p">)</span>
-
-    <span class="kd">var</span> <span class="nx">solve</span> <span class="kd">func</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">,</span> <span class="nx">wordIndex</span> <span class="kt">int</span><span class="p">)</span> <span class="kt">bool</span>
-    <span class="nx">solve</span> <span class="p">=</span> <span class="kd">func</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">,</span> <span class="nx">wordIndex</span> <span class="kt">int</span><span class="p">)</span> <span class="kt">bool</span> <span class="p">{</span>
-        <span class="c1">// 单词搜索完毕
-</span><span class="c1"></span>        <span class="k">if</span> <span class="nx">wordIndex</span> <span class="o">&gt;=</span> <span class="nx">wLength</span> <span class="p">{</span>
-            <span class="k">return</span> <span class="kc">true</span>
-        <span class="p">}</span>
-
-        <span class="c1">// 边界检查
-</span><span class="c1"></span>        <span class="k">if</span> <span class="nx">x</span> <span class="o">&gt;=</span> <span class="nx">width</span> <span class="o">||</span> <span class="nx">x</span> <span class="p">&lt;</span> <span class="mi">0</span> <span class="p">{</span>
-            <span class="k">return</span> <span class="kc">false</span>
-        <span class="p">}</span>
-        <span class="k">if</span> <span class="nx">y</span> <span class="o">&gt;=</span> <span class="nx">height</span> <span class="o">||</span> <span class="nx">y</span> <span class="p">&lt;</span> <span class="mi">0</span> <span class="p">{</span>
-            <span class="k">return</span> <span class="kc">false</span>
-        <span class="p">}</span>
-
-        <span class="c1">// 检查当前格是否匹配
-</span><span class="c1"></span>        <span class="k">if</span> <span class="nx">board</span><span class="p">[</span><span class="nx">y</span><span class="p">][</span><span class="nx">x</span><span class="p">]</span> <span class="o">!=</span> <span class="nx">w</span><span class="p">[</span><span class="nx">wordIndex</span><span class="p">]</span> <span class="p">{</span>
-            <span class="k">return</span> <span class="kc">false</span>
-        <span class="p">}</span>
-
-        <span class="c1">// 修改当前格，避免重复搜索
-</span><span class="c1"></span>        <span class="nx">tmp</span> <span class="o">:=</span> <span class="nx">board</span><span class="p">[</span><span class="nx">y</span><span class="p">][</span><span class="nx">x</span><span class="p">]</span>
-        <span class="nx">board</span><span class="p">[</span><span class="nx">y</span><span class="p">][</span><span class="nx">x</span><span class="p">]</span> <span class="p">=</span> <span class="nb">byte</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-
-        <span class="c1">// 搜索下一格
-</span><span class="c1"></span>        <span class="nx">ok</span> <span class="o">:=</span> <span class="nf">solve</span><span class="p">(</span><span class="nx">x</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="nx">y</span><span class="p">,</span> <span class="nx">wordIndex</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">||</span>
-            <span class="nf">solve</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="nx">wordIndex</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">||</span>
-            <span class="nf">solve</span><span class="p">(</span><span class="nx">x</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="nx">y</span><span class="p">,</span> <span class="nx">wordIndex</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">||</span>
-            <span class="nf">solve</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="nx">wordIndex</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
-
-        <span class="c1">// 还原当前格
-</span><span class="c1"></span>        <span class="nx">board</span><span class="p">[</span><span class="nx">y</span><span class="p">][</span><span class="nx">x</span><span class="p">]</span> <span class="p">=</span> <span class="nx">tmp</span>
-
-        <span class="k">return</span> <span class="nx">ok</span>
-    <span class="p">}</span>
-
-    <span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="nx">height</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
-        <span class="k">for</span> <span class="nx">j</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">j</span> <span class="p">&lt;</span> <span class="nx">width</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span> <span class="p">{</span>
-            <span class="k">if</span> <span class="nf">solve</span><span class="p">(</span><span class="nx">j</span><span class="p">,</span> <span class="nx">i</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-                <span class="k">return</span> <span class="kc">true</span>
-            <span class="p">}</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-
-    <span class="k">return</span> <span class="kc">false</span>
-<span class="p">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-golang" data-lang="golang"><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">exist</span><span class="p">(</span><span class="nx">board</span> <span class="p">[][]</span><span class="kt">byte</span><span class="p">,</span> <span class="nx">word</span> <span class="kt">string</span><span class="p">)</span> <span class="kt">bool</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">height</span> <span class="o">:=</span> <span class="nb">len</span><span class="p">(</span><span class="nx">board</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="nx">height</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nx">width</span> <span class="o">:=</span> <span class="nb">len</span><span class="p">(</span><span class="nx">board</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="nx">width</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nx">w</span> <span class="o">:=</span> <span class="p">[]</span><span class="nb">byte</span><span class="p">(</span><span class="nx">word</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">wLength</span> <span class="o">:=</span> <span class="nb">len</span><span class="p">(</span><span class="nx">w</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nx">solve</span> <span class="kd">func</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">,</span> <span class="nx">wordIndex</span> <span class="kt">int</span><span class="p">)</span> <span class="kt">bool</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">solve</span> <span class="p">=</span> <span class="kd">func</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">,</span> <span class="nx">wordIndex</span> <span class="kt">int</span><span class="p">)</span> <span class="kt">bool</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// 单词搜索完毕</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="nx">wordIndex</span> <span class="o">&gt;=</span> <span class="nx">wLength</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// 边界检查</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="nx">x</span> <span class="o">&gt;=</span> <span class="nx">width</span> <span class="o">||</span> <span class="nx">x</span> <span class="p">&lt;</span> <span class="mi">0</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="nx">y</span> <span class="o">&gt;=</span> <span class="nx">height</span> <span class="o">||</span> <span class="nx">y</span> <span class="p">&lt;</span> <span class="mi">0</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// 检查当前格是否匹配</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="nx">board</span><span class="p">[</span><span class="nx">y</span><span class="p">][</span><span class="nx">x</span><span class="p">]</span> <span class="o">!=</span> <span class="nx">w</span><span class="p">[</span><span class="nx">wordIndex</span><span class="p">]</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// 修改当前格，避免重复搜索</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">tmp</span> <span class="o">:=</span> <span class="nx">board</span><span class="p">[</span><span class="nx">y</span><span class="p">][</span><span class="nx">x</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">board</span><span class="p">[</span><span class="nx">y</span><span class="p">][</span><span class="nx">x</span><span class="p">]</span> <span class="p">=</span> <span class="nb">byte</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// 搜索下一格</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">ok</span> <span class="o">:=</span> <span class="nf">solve</span><span class="p">(</span><span class="nx">x</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="nx">y</span><span class="p">,</span> <span class="nx">wordIndex</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">||</span>
+</span></span><span class="line"><span class="cl">            <span class="nf">solve</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="nx">wordIndex</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">||</span>
+</span></span><span class="line"><span class="cl">            <span class="nf">solve</span><span class="p">(</span><span class="nx">x</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="nx">y</span><span class="p">,</span> <span class="nx">wordIndex</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">||</span>
+</span></span><span class="line"><span class="cl">            <span class="nf">solve</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="nx">wordIndex</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// 还原当前格</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">board</span><span class="p">[</span><span class="nx">y</span><span class="p">][</span><span class="nx">x</span><span class="p">]</span> <span class="p">=</span> <span class="nx">tmp</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nx">ok</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="nx">height</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="nx">j</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">j</span> <span class="p">&lt;</span> <span class="nx">width</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="nf">solve</span><span class="p">(</span><span class="nx">j</span><span class="p">,</span> <span class="nx">i</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="k">return</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
 </div>
 </div>
-              
-              
-
-            </div>
-          </div>
-          <div id="post-footer" class="post-footer main-content-wrap">
-            
-              
-                
-                
-                  <div class="post-footer-tags">
-                    <span class="text-color-light text-small">TAGGED IN</span><br/>
-                    
-  <a class="tag tag--primary tag--small" href="https://www.orztu.com/tags/leetcode/">LeetCode</a>
-
-  <a class="tag tag--primary tag--small" href="https://www.orztu.com/tags/array/">Array</a>
-
-  <a class="tag tag--primary tag--small" href="https://www.orztu.com/tags/backtracking/">Backtracking</a>
-
-
-                  </div>
-                
-              
-            
-            <div class="post-actions-wrap">
-  
-      <nav >
-        <ul class="post-actions post-action-nav">
-          
-            <li class="post-action">
-              
-              
-                
-              
-              
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/080-remove-duplicates-from-sorted-array-ii/" data-tooltip="LeetCode 80. Remove Duplicates from Sorted Array II">
-              
-                  <i class="fa fa-angle-left"></i>
-                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
-                </a>
-            </li>
-            <li class="post-action">
-              
-              
-                
-              
-              
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/078-subsets/" data-tooltip="LeetCode 78. Subsets">
-              
-                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
-                  <i class="fa fa-angle-right"></i>
-                </a>
-            </li>
-          
-        </ul>
-      </nav>
-    <ul class="post-actions post-action-share" >
-      
-        <li class="post-action hide-lg hide-md hide-sm">
-          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
-            <i class="fa fa-share-alt"></i>
-          </a>
-        </li>
-        
-      
-      
-        <li class="post-action">
-          <a class="post-action-btn btn btn--default" href="#disqus_thread">
-            <i class="fa fa-comment-o"></i>
-          </a>
-        </li>
-      
-      <li class="post-action">
-        
-          <a class="post-action-btn btn btn--default" href="#">
-        
-          <i class="fa fa-list"></i>
-        </a>
-      </li>
-    </ul>
-  
-</div>
-
-            
-              
-                <div id="disqus_thread">
-  <noscript>Please enable JavaScript to view the comments</noscript>
-</div>
-
-              
-            
-          </div>
-        </article>
-        <footer id="footer" class="main-content-wrap">
-  <span class="copyrights">
-    &copy; 2025 SelFree. All Rights Reserved
-  </span>
-</footer>
-
-      </div>
-      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
-        <div class="post-actions-wrap">
-  
-      <nav >
-        <ul class="post-actions post-action-nav">
-          
-            <li class="post-action">
-              
-              
-                
-              
-              
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/080-remove-duplicates-from-sorted-array-ii/" data-tooltip="LeetCode 80. Remove Duplicates from Sorted Array II">
-              
-                  <i class="fa fa-angle-left"></i>
-                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
-                </a>
-            </li>
-            <li class="post-action">
-              
-              
-                
-              
-              
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://www.orztu.com/leetcode/078-subsets/" data-tooltip="LeetCode 78. Subsets">
-              
-                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
-                  <i class="fa fa-angle-right"></i>
-                </a>
-            </li>
-          
-        </ul>
-      </nav>
-    <ul class="post-actions post-action-share" >
-      
-        <li class="post-action hide-lg hide-md hide-sm">
-          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
-            <i class="fa fa-share-alt"></i>
-          </a>
-        </li>
-        
-      
-      
-        <li class="post-action">
-          <a class="post-action-btn btn btn--default" href="#disqus_thread">
-            <i class="fa fa-comment-o"></i>
-          </a>
-        </li>
-      
-      <li class="post-action">
-        
-          <a class="post-action-btn btn btn--default" href="#">
-        
-          <i class="fa fa-list"></i>
-        </a>
-      </li>
-    </ul>
-  
-</div>
-
-      </div>
-      <div id="share-options-bar" class="share-options-bar" data-behavior="4">
-  <i id="btn-close-shareoptions" class="fa fa-close"></i>
-  <ul class="share-options">
     
-  </ul>
-</div>
-<div id="share-options-mask" class="share-options-mask"></div>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/leetcode/">LeetCode</a>
+        
+            <a href="/tags/array/">Array</a>
+        
+            <a href="/tags/backtracking/">Backtracking</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/leetcode/090-subsets-ii/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">LeetCode 90. Subsets II</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/leetcode/078-subsets/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">LeetCode 78. Subsets</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/leetcode/040-combination-sum-ii/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">LeetCode 40. Combination Sum II</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/leetcode/039-combination-sum/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">LeetCode 39. Combination Sum</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/leetcode/093-restore-ip-addresses/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">LeetCode 93. Restore IP Addresses</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
     </div>
+</aside>
+
+     
     
-    <div id="about">
-  <div id="about-card">
-    <div id="about-btn-close">
-      <i class="fa fa-remove"></i>
-    </div>
-    
-      <img id="about-card-picture" src="https://www.gravatar.com/avatar/f47b51d6d6b82fd9048e3eaf64bf7e69?s=110" alt="Author&#39;s picture" />
-    
-    <h4 id="about-card-name">SelFree</h4>
-    
-      <div id="about-card-bio"><strong>城市永远年轻，而我们终将老去</strong></div>
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
     
     
-      <div id="about-card-job">
-        <i class="fa fa-briefcase"></i>
-        <br/>
-        Programer
-      </div>
     
-    
-      <div id="about-card-location">
-        <i class="fa fa-map-marker"></i>
-        <br/>
-        ChengDu·China
-      </div>
-    
-  </div>
-</div>
-
-    <div id="algolia-search-modal" class="modal-container">
-  <div class="modal">
-    <div class="modal-header">
-      <span class="close-button"><i class="fa fa-close"></i></span>
-      <a href="https://algolia.com" target="_blank" rel="noopener" class="searchby-algolia text-color-light link-unstyled">
-        <span class="searchby-algolia-text text-color-light text-small">by</span>
-        <img class="searchby-algolia-logo" src="//www.algolia.com/static_assets/images/press/downloads/algolia-light.svg">
-      </a>
-      <i class="search-icon fa fa-search"></i>
-      <form id="algolia-search-form">
-        <input type="text" id="algolia-search-input" name="search"
-          class="form-control input--large search-input" placeholder="Search" />
-      </form>
-    </div>
-    <div class="modal-body">
-      <div class="no-result text-color-light text-center">no post found</div>
-      <div class="results">
-        
-        
-        
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://www.orztu.com/post/wsl-command/">
-                <h3 class="media-heading">Git is very slow in WSL</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Dec 12, 2020
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather">Git 最近切换到 Windows 工作，使用 WSL 作为命令行方案。但在 WSL 里面安装 git 后，在工程里面执行命令时，总感觉非常缓慢。 执行一下 git status 都要卡好一会儿。
-经过一番搜索，原因大概是 Windows 的路径索引到 WSL 之间有一个转换导致的？具体没有细看。
-但找到一个解决方案：
- 先在 Windows 中安装 Git，然后在 WSL 里面用 git.exe 替代 Linux 版本的 git。
- 因为我使用的oh-my-zsh，所以通过在.zshrc中定义git函数针对 WSL 路径和 Windows 路径区别处理（这个代码是抄的）：
-function git() { if $(pwd -P | grep -q &#34;^\/mnt\/.\/*&#34;); then git.exe &#34;$@&#34; else command git &#34;$@&#34; fi } 但这样做需要注意两个环境的.gitconfig不是共用的。 可以配置includeIf，通过匹配 gitdir， 在 WSL 里面引用 Windows 的 .gitconfig；又在 Windows 里面引用 WSL 的 .</div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://www.orztu.com/post/ffmpeg-commands/">
-                <h3 class="media-heading">ffmpeg 命令行</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Jun 6, 2019
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather"><p>首先，并非专业视频处理人员；以下命令都是我从网上搜索后修改以为己所用。</p>
-<h2 id="图片转视频">图片转视频</h2>
-<pre><code># gif 转视频（DURATION：时长，gif会循环播放）
-ffmpeg -ignore_loop 0 -t DURATION -f gif -i &quot;INPUT.gif&quot; -vcodec libx264 -crf 5 &quot;OUTPUT.mp4&quot;
-
-# png、jpg 转视频
-ffmpeg -loop 1 -framerate 30 -f image2 -t DURATION -i &quot;INPUT.jpg&quot; -vcodec libx264 -crf 5 &quot;OUTPUT.mp4&quot;
-</code></pre></div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://www.orztu.com/post/little-problem-while-using-cocos2dx-lua/">
-                <h3 class="media-heading">记一次 Cocos2dx-Lua 闪退</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Dec 12, 2018
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather"><h2 id="闪退点">闪退点</h2>
-<p>Version: Cocos2dx-Lua 3.16</p>
-<p>在某个页面修改后，出现闪退。查看修改记录没有特别的地方，均为修改图片或者条件判断。</p>
-<p>启动 XCode 发现闪退位置出现在<code>void Node::onEnterTransitionDidFinish()</code>中，
-在其调用子节点的<code>child-&gt;onEnterTransitionDidFinish()</code>时，<code>child</code>指针无效。</p></div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://www.orztu.com/post/golang-trace/">
-                <h3 class="media-heading">在 Golang 中打印调用栈信息</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Dec 12, 2018
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather"><p>在日志信息中，有时需要获取当前函数的调用信息，比如打印调用栈：</p>
-<h2 id="调用栈">调用栈</h2>
-<h3 id="debugstack-byte">debug.Stack() []byte</h3>
-<p><code>debug.Stack()</code>函数可以获取当前 goroutine 的调用栈信息，需要<code>import &quot;runtime/debug&quot;</code>。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-golang" data-lang="golang"><span class="kd">func</span> <span class="nf">foo</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;--- BEGIN ---&#34;</span><span class="p">)</span>
-    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nb">string</span><span class="p">(</span><span class="nx">debug</span><span class="p">.</span><span class="nf">Stack</span><span class="p">()))</span>
-    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;--- END ---&#34;</span><span class="p">)</span>
-<span class="p">}</span>
-
-<span class="kd">func</span> <span class="nf">boom</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nf">foo</span><span class="p">()</span>
-<span class="p">}</span>
-
-<span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nf">boom</span><span class="p">()</span>
-<span class="p">}</span>
-</code></pre></td></tr></table>
-</div>
-</div></div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://www.orztu.com/post/lua-table-minify-ii/">
-                <h3 class="media-heading">使用元表优化 Lua 配置文件 II</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Nov 11, 2018
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather"><p>上回提到<a href="https://www.orztu.com/post/lua-table-minify/">元表优化 Lua 配置文件</a>，以减少重复字段，节省内存开销。</p>
-<p>除了这种直接地减少内存开销的方法，使用元表还能实现数据的延迟加载，从另一个角度节约内存。</p></div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://www.orztu.com/post/lua-table-minify/">
-                <h3 class="media-heading">使用元表优化 Lua 配置文件</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Nov 11, 2018
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather"><h2 id="配置文件">配置文件</h2>
-<p>在游戏工程中，通常有大量配置是由策划提供，再转换成程序方便读取的格式添加到工程中。</p>
-<p>在我参与的<code>Cocos2dx-Lua</code>工程中，策划通常在<code>Excel</code>中配置，再通过脚本转换为<code>Lua-Table</code>的文件。</p>
-<p>比如常见的道具表转换后：</p></div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://www.orztu.com/post/cgo-introduce/">
-                <h3 class="media-heading">CGO —— Golang 与 C 语言混合编程</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Sep 9, 2018
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather"><p>C 语言与 Golang 相互调用的简单例子。</p>
-<p>在此使用一段简单的代码展示 CGO 的基本用法 —— 在 Go 程序中使用 C 语言编程。</p></div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://www.orztu.com/post/using-govendor/">
-                <h3 class="media-heading">govendor 使用</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Aug 8, 2018
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather"><h2 id="govendor">govendor</h2>
-<p>go vendor 是 go 1.6 官方正式引入的包管理方式。</p>
-<p>其基本思路是，将引用的外部包的源代码放在当前工程的<code>vendor</code>目录下面，go 编译时会优先从<code>vendor</code>目录寻找依赖关系。</p></div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://www.orztu.com/post/go-get-through-a-proxy/">
-                <h3 class="media-heading">go get through a proxy</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Aug 8, 2018
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather"><p>由于众所不知的原因，在国内访问<code>golang.org</code>需要爬梯子。</p>
-<p>所以使用<code>go get</code>安装某些包的时候，也要用梯子。</p></div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
-          <div class="media">
-            
-            <div class="media-body">
-              <a class="link-unstyled" href="https://www.orztu.com/post/golang-slice-and-array/">
-                <h3 class="media-heading">Golang Slice and Array</h3>
-              </a>
-              <span class="media-meta">
-                <span class="media-date text-small">
-                  Jun 6, 2018
-                </span>
-              </span>
-              <div class="media-content hide-xs font-merryweather"><h2 id="数组与切片">数组与切片</h2>
-<p>以前粗学时并没有留意 Golang 的数组，一直以为只有切片。</p>
-<p>今天看<a href="https://book.douban.com/subject/27015617/">《Go 语言实践》</a>时才发现 Golang 也有数组。与切片的区别是定义时指定长度（例如长度为 4 的 int 型数组<code>var array [4]int</code>）。</p>
-<p>数组赋值时会拷贝整个数组，所以作为参数传递时也会完整拷贝，要考虑性能合理使用，必要时可以使用指针。</p>
-<p>以下代码便于理解数组和切片：</p></div>
-            </div>
-            <div style="clear:both;"></div>
-            <hr>
-          </div>
-        
-      </div>
-    </div>
-    <div class="modal-footer">
-      <p class="results-count text-medium"
-         data-message-zero="no post found"
-         data-message-one="1 post found"
-         data-message-other="{n} posts found">
-         17 posts found
-      </p>
-    </div>
-  </div>
-</div>
-
-    
-  
-    
-      
-      <div id="cover" style="background-image:url('https://www.orztu.com/images/cover/city.jpg');"></div>
-    
-  
-
-
-    
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-
-
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-
-
-
-
--<script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/helpers/jquery.fancybox-thumbs.js"></script>
-
-
-<script src="https://www.orztu.com/js/script.min.js"></script>
-
-
-<script lang="javascript">
-window.onload = updateMinWidth;
-window.onresize = updateMinWidth;
-document.getElementById("sidebar").addEventListener("transitionend", updateMinWidth);
-function updateMinWidth() {
-  var sidebar = document.getElementById("sidebar");
-  var main = document.getElementById("main");
-  main.style.minWidth = "";
-  var w1 = getComputedStyle(main).getPropertyValue("min-width");
-  var w2 = getComputedStyle(sidebar).getPropertyValue("width");
-  var w3 = getComputedStyle(sidebar).getPropertyValue("left");
-  main.style.minWidth = `calc(${w1} - ${w2} - ${w3})`;
-}
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "orztu" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
 </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
 
 <script>
-$(document).ready(function() {
-  hljs.configure({ classPrefix: '', tabReplace:'    ', useBR: false });
-  $('pre.code-highlight > code, pre:not(.chroma) > code').each(function(i, block) {
-    
-    
-    
-    hljs.highlightBlock(block);
-  });
-});
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
 </script>
 
-
-  
     
-      <script>
-        var disqus_config = function () {
-          this.page.url = 'https:\/\/www.orztu.com\/leetcode\/079-word-search\/';
-          
-            this.page.identifier = '\/leetcode\/079-word-search\/'
-          
-        };
-        (function() {
-          
-          
-          if (window.location.hostname == "localhost") {
-            return;
-          }
-          var d = document, s = d.createElement('script');
-          var disqus_shortname = 'orztu';
-          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
 
-          s.setAttribute('data-timestamp', +new Date());
-          (d.head || d.body).appendChild(s);
-        })();
-      </script>
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2025 Orztu The Way | Orz途
+    </section>
     
-  
+    <section class="powerby">
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
 
 
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
 
+    
+    <div class="pswp__bg"></div>
 
-    <amp-auto-ads type="adsense"
-    data-ad-client="ca-pub-7873997855793576">
-</amp-auto-ads>
+    
+    <div class="pswp__scroll-wrap">
 
-  </body>
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
 </html>
-

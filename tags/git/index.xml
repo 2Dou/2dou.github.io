@@ -1,25 +1,85 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Git on Orz the way</title>
-    <link>https://www.orztu.com/tags/git/</link>
-    <description>Recent content in Git on Orz the way</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
-    <lastBuildDate>Fri, 25 Dec 2020 10:37:10 +0800</lastBuildDate><atom:link href="https://www.orztu.com/tags/git/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Git is very slow in WSL</title>
-      <link>https://www.orztu.com/post/wsl-command/</link>
-      <pubDate>Fri, 25 Dec 2020 10:37:10 +0800</pubDate>
-      
-      <guid>https://www.orztu.com/post/wsl-command/</guid>
-      <description>Git 最近切换到 Windows 工作，使用 WSL 作为命令行方案。但在 WSL 里面安装 git 后，在工程里面执行命令时，总感觉非常缓慢。 执行一下 git status 都要卡好一会儿。
-经过一番搜索，原因大概是 Windows 的路径索引到 WSL 之间有一个转换导致的？具体没有细看。
-但找到一个解决方案：
- 先在 Windows 中安装 Git，然后在 WSL 里面用 git.exe 替代 Linux 版本的 git。
- 因为我使用的oh-my-zsh，所以通过在.zshrc中定义git函数针对 WSL 路径和 Windows 路径区别处理（这个代码是抄的）：
-function git() { if $(pwd -P | grep -q &amp;#34;^\/mnt\/.\/*&amp;#34;); then git.exe &amp;#34;$@&amp;#34; else command git &amp;#34;$@&amp;#34; fi } 但这样做需要注意两个环境的.gitconfig不是共用的。 可以配置includeIf，通过匹配 gitdir， 在 WSL 里面引用 Windows 的 .gitconfig；又在 Windows 里面引用 WSL 的 .</description>
-    </item>
-    
-  </channel>
+    <channel>
+        <title>Git on Orztu The Way | Orz途</title>
+        <link>https://www.orztu.com/tags/git/</link>
+        <description>Recent content in Git on Orztu The Way | Orz途</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Fri, 25 Dec 2020 10:37:10 +0800</lastBuildDate><atom:link href="https://www.orztu.com/tags/git/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Git is very slow in WSL</title>
+        <link>https://www.orztu.com/post/wsl-command/</link>
+        <pubDate>Fri, 25 Dec 2020 10:37:10 +0800</pubDate>
+        
+        <guid>https://www.orztu.com/post/wsl-command/</guid>
+        <description>&lt;h1 id=&#34;git&#34;&gt;Git
+&lt;/h1&gt;&lt;p&gt;最近切换到 Windows 工作，使用 WSL 作为命令行方案。但在 WSL 里面安装 git 后，在工程里面执行命令时，总感觉非常缓慢。
+执行一下 &lt;code&gt;git status&lt;/code&gt; 都要卡好一会儿。&lt;/p&gt;
+&lt;p&gt;经过一番搜索，原因大概是 Windows 的路径索引到 WSL 之间有一个转换导致的？具体没有细看。&lt;/p&gt;
+&lt;p&gt;但找到一个解决方案：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;先在 Windows 中安装 Git，然后在 WSL 里面用 git.exe 替代 Linux 版本的 git。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;因为我使用的&lt;code&gt;oh-my-zsh&lt;/code&gt;，所以通过在&lt;code&gt;.zshrc&lt;/code&gt;中定义&lt;code&gt;git&lt;/code&gt;函数针对 WSL 路径和 Windows 路径区别处理（这个代码是抄的）：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;function&lt;/span&gt; git&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;pwd&lt;/span&gt; -P &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; grep -q &lt;span class=&#34;s2&#34;&gt;&amp;#34;^\/mnt\/.\/*&amp;#34;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    git.exe &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$@&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nb&#34;&gt;command&lt;/span&gt; git &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$@&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;但这样做需要注意两个环境的&lt;code&gt;.gitconfig&lt;/code&gt;不是共用的。
+可以配置&lt;code&gt;includeIf&lt;/code&gt;，通过匹配 gitdir， 在 WSL 里面引用 Windows 的 .gitconfig；又在 Windows 里面引用 WSL 的 .gitconfig。&lt;/p&gt;
+&lt;h1 id=&#34;其它&#34;&gt;其它
+&lt;/h1&gt;&lt;p&gt;然后依葫芦画瓢:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;在 WSL 中以用 Windows 环境打开 VS Code (如果是用 code 命令，打开的是 WSL 环境下的)：
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;function&lt;/span&gt; code_win&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  cmd.exe /c code.cmd &lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;wslpath -w &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$@&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;用 open 打开资源管理器：
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;function&lt;/span&gt; open&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  explorer.exe &lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;wslpath -w &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$@&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        
+    </channel>
 </rss>

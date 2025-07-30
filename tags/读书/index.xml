@@ -1,36 +1,32 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>读书 on Orz the way</title>
-    <link>https://www.orztu.com/tags/%E8%AF%BB%E4%B9%A6/</link>
-    <description>Recent content in 读书 on Orz the way</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
-    <lastBuildDate>Thu, 04 Jan 2018 14:22:15 +0800</lastBuildDate><atom:link href="https://www.orztu.com/tags/%E8%AF%BB%E4%B9%A6/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>读书</title>
-      <link>https://www.orztu.com/books/</link>
-      <pubDate>Thu, 04 Jan 2018 14:22:15 +0800</pubDate>
-      
-      <guid>https://www.orztu.com/books/</guid>
-      <description>2024  Jan  余华  《河边的错误》      2019   Oct
- 南怀瑾  《老子他说》 这书在地铁上看了几个月了，还没看完。受益匪浅；亦有许多不明之处。      June
- [日] 东野圭吾  《幻夜》 看了《白夜行》又看到这个，我要把东野圭吾吹上天      2018   Dec
- 金庸  《碧血剑》      July
- 余华   《许三观卖血记》
-看完这本书的那天，正好看了电影《我不是药神》。 唉~ 这世上只有一种病！
-  《兄弟》
-      June</description>
-    </item>
-    
-    <item>
-      <title>天龙八部</title>
-      <link>https://www.orztu.com/post/tianlongbabu/</link>
-      <pubDate>Wed, 31 May 2017 17:54:35 +0800</pubDate>
-      
-      <guid>https://www.orztu.com/post/tianlongbabu/</guid>
-      <description></description>
-    </item>
-    
-  </channel>
+    <channel>
+        <title>读书 on Orztu The Way | Orz途</title>
+        <link>https://www.orztu.com/tags/%E8%AF%BB%E4%B9%A6/</link>
+        <description>Recent content in 读书 on Orztu The Way | Orz途</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Wed, 31 May 2017 17:54:35 +0800</lastBuildDate><atom:link href="https://www.orztu.com/tags/%E8%AF%BB%E4%B9%A6/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>天龙八部</title>
+        <link>https://www.orztu.com/post/tianlongbabu/</link>
+        <pubDate>Wed, 31 May 2017 17:54:35 +0800</pubDate>
+        
+        <guid>https://www.orztu.com/post/tianlongbabu/</guid>
+        <description>&lt;p&gt;&lt;img src=&#34;https://www.orztu.com/post/tianlongbabu/tianlongbabu.jpg&#34;
+	width=&#34;580&#34;
+	height=&#34;670&#34;
+	srcset=&#34;https://www.orztu.com/post/tianlongbabu/tianlongbabu_hu_9739c71407408d8e.jpg 480w, https://www.orztu.com/post/tianlongbabu/tianlongbabu_hu_2061e18de1512d7f.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;palindromic&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;86&#34;
+		data-flex-basis=&#34;207px&#34;
+	
+&gt;&lt;/p&gt;</description>
+        </item>
+        
+    </channel>
 </rss>
