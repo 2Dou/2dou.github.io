@@ -6,6 +6,7 @@
         <description>Recent content in Heap on Orztu The Way | Orz途</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
+        <copyright>Orztu The Way</copyright>
         <lastBuildDate>Fri, 24 Nov 2017 14:55:46 +0800</lastBuildDate><atom:link href="https://www.orztu.com/tags/heap/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>LeetCode 23. Merge K Sorted Lists</title>
         <link>https://www.orztu.com/leetcode/023-merge-k-sorted-lists/</link>

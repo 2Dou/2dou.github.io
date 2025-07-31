@@ -6,6 +6,7 @@
         <description>Recent content in CGO on Orztu The Way | Orz途</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
+        <copyright>Orztu The Way</copyright>
         <lastBuildDate>Mon, 10 Sep 2018 09:22:10 +0800</lastBuildDate><atom:link href="https://www.orztu.com/tags/cgo/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>CGO —— Golang 与 C 语言混合编程</title>
         <link>https://www.orztu.com/post/cgo-introduce/</link>

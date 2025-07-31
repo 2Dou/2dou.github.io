@@ -6,6 +6,7 @@
         <description>Recent content in Coding Life on Orztu The Way | Orz途</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
+        <copyright>Orztu The Way</copyright>
         <lastBuildDate>Fri, 25 Dec 2020 10:37:10 +0800</lastBuildDate><atom:link href="https://www.orztu.com/categories/coding-life/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Git is very slow in WSL</title>
         <link>https://www.orztu.com/post/wsl-command/</link>
