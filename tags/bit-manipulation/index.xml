@@ -26,17 +26,17 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;/blockquote&gt;
-&lt;p&gt;Input: nums = [1,2,3]
-Output:
-[
-[3],
-[1],
-[2],
-[1,2,3],
-[1,3],
-[2,3],
-[1,2],
-[]
+&lt;p&gt;Input: nums = [1,2,3]&lt;br&gt;
+Output:&lt;br&gt;
+[&lt;br&gt;
+[3],&lt;br&gt;
+[1],&lt;br&gt;
+[2],&lt;br&gt;
+[1,2,3],&lt;br&gt;
+[1,3],&lt;br&gt;
+[2,3],&lt;br&gt;
+[1,2],&lt;br&gt;
+[]&lt;br&gt;
 ]&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -98,13 +98,13 @@ Output:
 &lt;/div&gt;
 &lt;/div&gt;&lt;h1 id=&#34;比如题目中的例子&#34;&gt;比如题目中的例子：
 &lt;/h1&gt;&lt;p&gt;nums = [1, 2, 3]&lt;/p&gt;
-&lt;p&gt;when flag=0 b(000) =&amp;gt; []
-when flag=1 b(001) =&amp;gt; [ ,  , 3]
-when flag=2 b(010) =&amp;gt; [ , 2,  ]
-when flag=3 b(011) =&amp;gt; [ , 2, 3]
-when flag=4 b(100) =&amp;gt; [1,  ,  ]
-when flag=5 b(101) =&amp;gt; [1,  , 3]
-when flag=6 b(110) =&amp;gt; [1, 2,  ]
+&lt;p&gt;when flag=0 b(000) =&amp;gt; []&lt;br&gt;
+when flag=1 b(001) =&amp;gt; [ ,  , 3]&lt;br&gt;
+when flag=2 b(010) =&amp;gt; [ , 2,  ]&lt;br&gt;
+when flag=3 b(011) =&amp;gt; [ , 2, 3]&lt;br&gt;
+when flag=4 b(100) =&amp;gt; [1,  ,  ]&lt;br&gt;
+when flag=5 b(101) =&amp;gt; [1,  , 3]&lt;br&gt;
+when flag=6 b(110) =&amp;gt; [1, 2,  ]&lt;br&gt;
 when flag=7 b(111) =&amp;gt; [1, 2, 3]&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;

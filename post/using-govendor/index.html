@@ -2,15 +2,15 @@
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Golang 包管理工具 govendor 使用技巧">
-<meta name="keywords" content="Golang, govendor, govendor 使用"><title>govendor 使用</title>
+<meta name="keywords" content="Golang, govendor, package-management"><title>govendor 使用</title>
 
 <link rel='canonical' href='https://www.orztu.com/post/using-govendor/'>
 
-<link rel="stylesheet" href="/scss/style.min.946cca6c6259ef94ac55abfae7c7bf3291ea3ed5eea17ef77500b257217c6710.css"><meta property='og:title' content="govendor 使用">
+<link rel="stylesheet" href="/scss/style.min.53baf0c0f30218f1c3981785fd89dd9e38bb5e478f90ceebdd6405e78e8e5d58.css"><meta property='og:title' content="govendor 使用">
 <meta property='og:description' content="Golang 包管理工具 govendor 使用技巧">
 <meta property='og:url' content='https://www.orztu.com/post/using-govendor/'>
 <meta property='og:site_name' content='Orztu The Way | Orz途'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Golang' /><meta property='article:tag' content='工具' /><meta property='article:published_time' content='2018-08-02T14:43:33&#43;08:00'/><meta property='article:modified_time' content='2018-08-02T14:43:33&#43;08:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Golang' /><meta property='article:tag' content='package-management' /><meta property='article:published_time' content='2018-08-02T14:43:33&#43;08:00'/><meta property='article:modified_time' content='2018-08-02T14:43:33&#43;08:00'/>
 <meta name="twitter:title" content="govendor 使用">
 <meta name="twitter:description" content="Golang 包管理工具 govendor 使用技巧">
     <link rel="shortcut icon" href="/favicon.ico" />
@@ -595,9 +595,9 @@ unicode: "ec9d"
 <p><code>govendor list +e</code>: 查看当前项目的依赖但是未被添加到<code>vendor</code>中的包</p>
 <p><code>govendor add +e</code>: 添加依赖的包。如果<code>vendor.json</code>中存在，但是<code>vendor</code>目录下不存在（即<code>govendor status</code>显示缺失）的包也会被重新添加</p>
 <p><code>govendor remove +u</code>: 删除在<code>vendor</code>下但是未依赖的包</p>
-<p>在实际过程中，有部分包是团队的公共包。
+<p>在实际过程中，有部分包是团队的公共包。<br>
 这部分包通常有自己的单独项目，并且已经被我们添加到<code>$GOPATH</code>下，可能就不需要添加到当前项目的<code>vendor</code>下。</p>
-<p>这时候可以结合<code>list</code>和<code>add</code>来使用，
+<p>这时候可以结合<code>list</code>和<code>add</code>来使用，<br>
 先用<code>list -no-status +e</code>列出依赖包，然后使用<code>grep</code>过滤，再调用<code>add</code>命令添加：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -619,7 +619,7 @@ unicode: "ec9d"
         
             <a href="/tags/golang/">Golang</a>
         
-            <a href="/tags/%E5%B7%A5%E5%85%B7/">工具</a>
+            <a href="/tags/package-management/">Package-Management</a>
         
     </section>
 
@@ -636,7 +636,32 @@ unicode: "ec9d"
 
         <span>Licensed under CC BY-NC-SA 4.0</span>
     </section>
-    </footer>
+    
+    <div class="pre-next">
+        
+        
+            
+        
+        
+            <a class="pre-next-btn bg" href="https://www.orztu.com/post/go-get-through-a-proxy/" data-tooltip="go get through a proxy">
+                <i class="fa fa-angle-left"></i>
+                <span>上一篇</span>
+        
+        </a>
+    
+        
+        
+            
+        
+        
+            <a class="pre-next-btn bg" href="https://www.orztu.com/post/cgo-introduce/" data-tooltip="CGO —— Golang 与 C 语言混合编程">
+                <i class="fa fa-angle-left"></i>
+                <span>下一篇</span>
+        
+        </a>
+    </div>
+    
+</footer>
 
 
     
@@ -645,6 +670,80 @@ unicode: "ec9d"
     
 
     
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/post/golang-trace/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">在 Golang 中打印调用栈信息</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/post/cgo-introduce/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">CGO —— Golang 与 C 语言混合编程</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/post/golang-slice-and-array/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Golang Slice and Array</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/post/wsl-command/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Git is very slow in WSL</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/post/little-problem-while-using-cocos2dx-lua/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">记一次 Cocos2dx-Lua 闪退</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
 
      
     
@@ -793,7 +892,7 @@ unicode: "ec9d"
                 src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
                 
                 >
-            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script><script type="text/javascript" src="/ts/custom.6a8259597552f3291e36c8479b75c1a2bb04b275a9768380bf61340e16e02b71.js" defer></script>
 <script>
     (function () {
         const customFont = document.createElement('link');

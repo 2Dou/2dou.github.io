@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://www.orztu.com/post/raspbian-install-and-configure/'>
 
-<link rel="stylesheet" href="/scss/style.min.946cca6c6259ef94ac55abfae7c7bf3291ea3ed5eea17ef77500b257217c6710.css"><meta property='og:title' content="树莓派 Raspbian系统安装与基本配置">
+<link rel="stylesheet" href="/scss/style.min.53baf0c0f30218f1c3981785fd89dd9e38bb5e478f90ceebdd6405e78e8e5d58.css"><meta property='og:title' content="树莓派 Raspbian系统安装与基本配置">
 <meta property='og:description' content="Raspberry Pi 树莓派 Raspbian系统安装与基本配置">
 <meta property='og:url' content='https://www.orztu.com/post/raspbian-install-and-configure/'>
 <meta property='og:site_name' content='Orztu The Way | Orz途'>
@@ -477,7 +477,7 @@ unicode: "ec9d"
 <h2 id="系统安装"><a class="link" href="https://www.raspberrypi.org/documentation/installation/installing-images/README.md"  target="_blank" rel="noopener"
     >系统安装</a>
 </h2><p>系统: <a class="link" href="https://www.raspberrypi.org/downloads/raspbian/"  target="_blank" rel="noopener"
-    >raspbian</a> <br/>
+    >raspbian</a> <br/><br>
 工具（二选一）：</p>
 <ul>
 <li><a class="link" href="https://etcher.io/"  target="_blank" rel="noopener"
@@ -492,13 +492,13 @@ unicode: "ec9d"
 <p>写入完成之后就相当于系统安装完成了。这时候SD卡被分成两个区，有一个区是在windows下无法识别，不用理会。</p>
 <p>这时候如果直接将SD卡插入树莓派，会发现“无法启动”。显示屏没信号，在路由器里找到树莓派的IP也无法用ssh登录。</p>
 <p>我安装的时候就是踩到这个坑。以为安装失败，反复装了好几次，就差把SD卡写穿了。</p>
-<p>实际系统安装已经成功了。只需要在电脑上打开SD卡，找到<code>config.txt</code>文件里<code>#hdmi_safe=1</code>这一行，将前面的<code>#</code>号去掉；
+<p>实际系统安装已经成功了。只需要在电脑上打开SD卡，找到<code>config.txt</code>文件里<code>#hdmi_safe=1</code>这一行，将前面的<code>#</code>号去掉；<br>
 再新建一个文件命名为<code>ssh</code>（不能有扩展名）。</p>
 <p>再次把SD卡装进树莓派启动，显示屏就可以正常显示了，ssh也能登录了。</p>
 <h2 id="基本配置">基本配置
 </h2><h3 id="1-静态ip固定ip">1. 静态IP/固定IP
 </h3><p>打开<code>/etc/dhcpcd.conf</code>文件，找到网口（一般为<code>eth0</code>）</p>
-<p>指定IP:
+<p>指定IP:<br>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -625,7 +625,34 @@ unicode: "ec9d"
 
         <span>Licensed under CC BY-NC-SA 4.0</span>
     </section>
-    </footer>
+    
+    <div class="pre-next">
+        
+        
+            
+        
+        
+            <a class="pre-next-btn bg" href="https://www.orztu.com/post/gvoice-number/" data-tooltip="自动点击 - 申请Google Voice号码">
+                <i class="fa fa-angle-left"></i>
+                <span>上一篇</span>
+        
+        </a>
+    
+        
+        
+            
+                
+            
+        
+        
+            <a class="pre-next-btn bg" href="https://www.orztu.com/post/wechat-jump/" data-tooltip="Python 实现微信跳一跳外挂">
+                <i class="fa fa-angle-left"></i>
+                <span>下一篇</span>
+        
+        </a>
+    </div>
+    
+</footer>
 
 
     
@@ -641,19 +668,13 @@ unicode: "ec9d"
         <div class="flex article-list--tile">
             
                 
-<article class="has-image">
-    <a href="/running/">
+<article class="">
+    <a href="/post/popkart-l1-4/">
         
-        
-            <div class="article-image">
-                
-                    <img src="//cdn.shopify.com/s/files/1/0718/4269/files/Running-Banner.jpg?v=1677698734&amp;width=1100" loading="lazy" data-key="" data-hash="//cdn.shopify.com/s/files/1/0718/4269/files/Running-Banner.jpg?v=1677698734&amp;width=1100"/>
-                
-            </div>
         
 
         <div class="article-details">
-            <h2 class="article-title">Running</h2>
+            <h2 class="article-title">跑跑卡丁车手游 L1 驾照“下坡漂移”教程</h2>
         </div>
     </a>
 </article>
@@ -674,12 +695,12 @@ unicode: "ec9d"
             
                 
 <article class="">
-    <a href="/post/gvoice-number/">
+    <a href="/post/wechat-jump/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">自动点击 - 申请Google Voice号码</h2>
+            <h2 class="article-title">Python 实现微信跳一跳外挂</h2>
         </div>
     </a>
 </article>
@@ -836,7 +857,7 @@ unicode: "ec9d"
                 src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
                 
                 >
-            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script><script type="text/javascript" src="/ts/custom.6a8259597552f3291e36c8479b75c1a2bb04b275a9768380bf61340e16e02b71.js" defer></script>
 <script>
     (function () {
         const customFont = document.createElement('link');

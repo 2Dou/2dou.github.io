@@ -2,11 +2,11 @@
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="配置文件 在游戏工程中，通常有大量配置是由策划提供，再转换成程序方便读取的格式添加到工程中。\n在我参与的Cocos2dx-Lua工程中，策划通常在Excel中配置，再通过脚本转换为Lua-Table的文件。\n比如常见的道具表转换后：\n">
-<meta name="keywords" content="Lua, 元表, 配置文件优化, 优化"><title>使用元表优化 Lua 配置文件</title>
+<meta name="keywords" content="Lua, 元表, metatable, 配置文件优化, 优化"><title>使用元表优化 Lua 配置文件</title>
 
 <link rel='canonical' href='https://www.orztu.com/post/lua-table-minify/'>
 
-<link rel="stylesheet" href="/scss/style.min.946cca6c6259ef94ac55abfae7c7bf3291ea3ed5eea17ef77500b257217c6710.css"><meta property='og:title' content="使用元表优化 Lua 配置文件">
+<link rel="stylesheet" href="/scss/style.min.53baf0c0f30218f1c3981785fd89dd9e38bb5e478f90ceebdd6405e78e8e5d58.css"><meta property='og:title' content="使用元表优化 Lua 配置文件">
 <meta property='og:description' content="配置文件 在游戏工程中，通常有大量配置是由策划提供，再转换成程序方便读取的格式添加到工程中。\n在我参与的Cocos2dx-Lua工程中，策划通常在Excel中配置，再通过脚本转换为Lua-Table的文件。\n比如常见的道具表转换后：\n">
 <meta property='og:url' content='https://www.orztu.com/post/lua-table-minify/'>
 <meta property='og:site_name' content='Orztu The Way | Orz途'>
@@ -530,11 +530,11 @@ unicode: "ec9d"
 </div>
 </div>
 <p><code>Excel</code>配置中每一行数据经过转换后对应<code>Lua-Table</code>的一个<code>item</code>。</p>
-<p>通过观察可以发现其中有部分字段很容易重复，如：<code>colorLv</code>、<code>ifUse</code>、<code>useNeedNum</code>等，
+<p>通过观察可以发现其中有部分字段很容易重复，如：<code>colorLv</code>、<code>ifUse</code>、<code>useNeedNum</code>等，<br>
 这些字段通常为枚举或者有固定的分类，只有几个不同的值，然而配置表中每个<code>item</code>都需要为这些内容创建一个字段。</p>
 <h2 id="优化">优化
-</h2><p>有了这些重复的字段，就给了我们优化的空间。
-通过使用<code>Lua</code>的元表，可以让每个<code>item</code>拥有共同的字段而非每个<code>item</code>去创建一个字段。
+</h2><p>有了这些重复的字段，就给了我们优化的空间。<br>
+通过使用<code>Lua</code>的元表，可以让每个<code>item</code>拥有共同的字段而非每个<code>item</code>去创建一个字段。<br>
 从而节省内存开销。</p>
 <p>如优化之后：</p>
 <div class="highlight"><div class="chroma">
@@ -639,7 +639,32 @@ unicode: "ec9d"
 
         <span>Licensed under CC BY-NC-SA 4.0</span>
     </section>
-    </footer>
+    
+    <div class="pre-next">
+        
+        
+            
+        
+        
+            <a class="pre-next-btn bg" href="https://www.orztu.com/post/cgo-introduce/" data-tooltip="CGO —— Golang 与 C 语言混合编程">
+                <i class="fa fa-angle-left"></i>
+                <span>上一篇</span>
+        
+        </a>
+    
+        
+        
+            
+        
+        
+            <a class="pre-next-btn bg" href="https://www.orztu.com/post/lua-table-minify-ii/" data-tooltip="使用元表优化 Lua 配置文件 II">
+                <i class="fa fa-angle-left"></i>
+                <span>下一篇</span>
+        
+        </a>
+    </div>
+    
+</footer>
 
 
     
@@ -870,7 +895,7 @@ unicode: "ec9d"
                 src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
                 
                 >
-            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script><script type="text/javascript" src="/ts/custom.6a8259597552f3291e36c8479b75c1a2bb04b275a9768380bf61340e16e02b71.js" defer></script>
 <script>
     (function () {
         const customFont = document.createElement('link');

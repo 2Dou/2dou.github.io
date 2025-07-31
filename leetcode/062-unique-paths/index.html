@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://www.orztu.com/leetcode/062-unique-paths/'>
 
-<link rel="stylesheet" href="/scss/style.min.946cca6c6259ef94ac55abfae7c7bf3291ea3ed5eea17ef77500b257217c6710.css"><meta property='og:title' content="LeetCode 62. Unique Paths">
+<link rel="stylesheet" href="/scss/style.min.53baf0c0f30218f1c3981785fd89dd9e38bb5e478f90ceebdd6405e78e8e5d58.css"><meta property='og:title' content="LeetCode 62. Unique Paths">
 <meta property='og:description' content="LeetCode 62. Unique Paths - Answer LeetCode编程练习解答">
 <meta property='og:url' content='https://www.orztu.com/leetcode/062-unique-paths/'>
 <meta property='og:site_name' content='Orztu The Way | Orz途'>
@@ -473,7 +473,7 @@ unicode: "ec9d"
 <blockquote>
 <p>A robot is located at the top-left corner of a m x n grid (marked &lsquo;Start&rsquo; in the diagram below).</p>
 <p>The robot can only move either down or right at any point in time. The robot is trying to reach the bottom-right corner of the grid (marked &lsquo;Finish&rsquo; in the diagram below).</p>
-<p>How many possible unique paths are there?
+<p>How many possible unique paths are there?<br>
 <img src="/images/leetcode/062-unique-paths-1.png"
 	
 	
@@ -521,9 +521,9 @@ unicode: "ec9d"
 <p>在<code>m x n</code>的方格中，从左上角走到右下角的不同路径有几种？（只允许向右和向下走）</p>
 <h2 id="solution">Solution
 </h2><p>这道题目可以转换为数学题：</p>
-<p><code>m x n</code>的方格要从左上角走到右下角，需要经过<code>m - 1</code>次<code>Right</code>和<code>n - 1</code>次<code>Down</code>操作。
+<p><code>m x n</code>的方格要从左上角走到右下角，需要经过<code>m - 1</code>次<code>Right</code>和<code>n - 1</code>次<code>Down</code>操作。<br>
 所以总共是<code>m + n - 2</code>次操作，而操作顺序的不同，则对应路径不同。</p>
-<p>这就转换成了数学的排列问题：<code>C(m + n -2, n - 1)</code>。
+<p>这就转换成了数学的排列问题：<code>C(m + n -2, n - 1)</code>。<br>
 在<code>m + n - 2</code>操作中取<code>Down</code>操作的位置，其余位置就是<code>Right</code>操作。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -611,7 +611,32 @@ unicode: "ec9d"
 
         <span>Licensed under CC BY-NC-SA 4.0</span>
     </section>
-    </footer>
+    
+    <div class="pre-next">
+        
+        
+            
+        
+        
+            <a class="pre-next-btn bg" href="https://www.orztu.com/leetcode/041-first-missing-positive/" data-tooltip="LeetCode 41. First Missing Positive">
+                <i class="fa fa-angle-left"></i>
+                <span>上一篇</span>
+        
+        </a>
+    
+        
+        
+            
+        
+        
+            <a class="pre-next-btn bg" href="https://www.orztu.com/leetcode/054-spiral-matrix/" data-tooltip="LeetCode 54. Spiral Matrix">
+                <i class="fa fa-angle-left"></i>
+                <span>下一篇</span>
+        
+        </a>
+    </div>
+    
+</footer>
 
 
     
@@ -842,7 +867,7 @@ unicode: "ec9d"
                 src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
                 
                 >
-            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script><script type="text/javascript" src="/ts/custom.6a8259597552f3291e36c8479b75c1a2bb04b275a9768380bf61340e16e02b71.js" defer></script>
 <script>
     (function () {
         const customFont = document.createElement('link');

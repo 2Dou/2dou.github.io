@@ -359,7 +359,7 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;A rather straight forward solution is a two-pass algorithm using counting sort.&lt;br&gt;
+&lt;p&gt;A rather straight forward solution is a two-pass algorithm using counting sort.&lt;br&gt;&lt;br&gt;
 First, iterate the array counting number of 0&amp;rsquo;s, 1&amp;rsquo;s, and 2&amp;rsquo;s, then overwrite array with total number of 0&amp;rsquo;s, then 1&amp;rsquo;s and followed by 2&amp;rsquo;s.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -492,7 +492,7 @@ First, iterate the array counting number of 0&amp;rsquo;s, 1&amp;rsquo;s, and 2&
 &lt;p&gt;从倒数第&lt;code&gt;k&lt;/code&gt;个结点位置旋转链表：首尾相连，以倒数第&lt;code&gt;k&lt;/code&gt;个结点为新&lt;code&gt;head&lt;/code&gt;。&lt;/p&gt;
 &lt;h2 id=&#34;solution&#34;&gt;Solution
 &lt;/h2&gt;&lt;p&gt;这种寻找链表倒数第&lt;code&gt;k&lt;/code&gt;的方法，通常使用&lt;code&gt;快慢指针&lt;/code&gt;。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;快指针&lt;/code&gt;先前进&lt;code&gt;k&lt;/code&gt;个结点，然后两个指针同时前进，当到&lt;code&gt;快指针&lt;/code&gt;达链表尾部时，
+&lt;p&gt;&lt;code&gt;快指针&lt;/code&gt;先前进&lt;code&gt;k&lt;/code&gt;个结点，然后两个指针同时前进，当到&lt;code&gt;快指针&lt;/code&gt;达链表尾部时，&lt;br&gt;
 两个指针相差&lt;code&gt;k&lt;/code&gt;个结点，此时&lt;code&gt;慢指针&lt;/code&gt;指向倒数第&lt;code&gt;k&lt;/code&gt;个结点。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -598,8 +598,8 @@ First, iterate the array counting number of 0&amp;rsquo;s, 1&amp;rsquo;s, and 2&
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   After removing the second node from the end, the linked list becomes 1-&amp;gt;2-&amp;gt;3-&amp;gt;5.
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;:
-Given n will always be valid.
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;:&lt;br&gt;
+Given n will always be valid.&lt;br&gt;
 Try to do this in one pass.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;从链表中删除倒数第n个结点（n必定有效）&lt;/p&gt;
 &lt;h2 id=&#34;solution&#34;&gt;Solution
@@ -1100,8 +1100,8 @@ Try to do this in one pass.&lt;/p&gt;&lt;/blockquote&gt;
     &gt;Container With Most Water&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description
 &lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;Given n non-negative integers a1, a2, &amp;hellip;, an, where each represents a point at coordinate (i, ai). n vertical lines are drawn such that the two endpoints of line i is at (i, ai) and (i, 0). Find two lines, which together with x-axis forms a container, such that the container contains the most water.&lt;br&gt;
-&lt;br&gt;
+&lt;p&gt;Given n non-negative integers a1, a2, &amp;hellip;, an, where each represents a point at coordinate (i, ai). n vertical lines are drawn such that the two endpoints of line i is at (i, ai) and (i, 0). Find two lines, which together with x-axis forms a container, such that the container contains the most water.&lt;br&gt;&lt;br&gt;
+&lt;br&gt;&lt;br&gt;
 Note: You may not slant the container and n is at least 2.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;给出n个点，它们与X轴有n条垂线，每两条垂线与X轴形成的U型容器，找出最大“容积”(面积）&lt;/p&gt;
 &lt;h2 id=&#34;solution&#34;&gt;Solution
@@ -1190,7 +1190,7 @@ Note: You may not slant the container and n is at least 2.&lt;/p&gt;&lt;/blockqu
 &lt;h2 id=&#34;description&#34;&gt;Description
 &lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how &amp;gt;much water it is able to trap after raining.&lt;/p&gt;
-&lt;p&gt;For example,
+&lt;p&gt;For example,&lt;br&gt;
 Given &lt;code&gt;[0,1,0,2,1,0,1,3,2,1,2,1]&lt;/code&gt;, return &lt;code&gt;6&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://www.orztu.com/images/leetcode/rainwatertrap-1.png&#34;
 	
@@ -1201,12 +1201,12 @@ Given &lt;code&gt;[0,1,0,2,1,0,1,3,2,1,2,1]&lt;/code&gt;, return &lt;code&gt;6&l
 		alt=&#34;palindromic&#34;
 	
 	
-&gt;
+&gt;&lt;br&gt;
 The above elevation map is represented by array [0,1,0,2,1,0,1,3,2,1,2,1]. In this case, 6 units of rain water (blue section) are being trapped. Thanks Marcos for contributing this image!&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h2 id=&#34;solution&#34;&gt;Solution
-&lt;/h2&gt;&lt;p&gt;每个点容量决定于左右两边高度&lt;/br&gt;
-先从左往右，扫描出每个点左边最高的围栏&lt;/br&gt;
-再从右往左，扫描出每个点右边最高的围栏&lt;/br&gt;
+&lt;/h2&gt;&lt;p&gt;每个点容量决定于左右两边高度&lt;/br&gt;&lt;br&gt;
+先从左往右，扫描出每个点左边最高的围栏&lt;/br&gt;&lt;br&gt;
+再从右往左，扫描出每个点右边最高的围栏&lt;/br&gt;&lt;br&gt;
 在围栏比当前点高的情况下， 这个点的容量为围栏高度减底部高度: min(left_height, right_height) - bottom&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;

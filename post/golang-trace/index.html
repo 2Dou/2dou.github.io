@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://www.orztu.com/post/golang-trace/'>
 
-<link rel="stylesheet" href="/scss/style.min.946cca6c6259ef94ac55abfae7c7bf3291ea3ed5eea17ef77500b257217c6710.css"><meta property='og:title' content="在 Golang 中打印调用栈信息">
+<link rel="stylesheet" href="/scss/style.min.53baf0c0f30218f1c3981785fd89dd9e38bb5e478f90ceebdd6405e78e8e5d58.css"><meta property='og:title' content="在 Golang 中打印调用栈信息">
 <meta property='og:description' content="在 Go 语言中获取调用的函数名，调用栈">
 <meta property='og:url' content='https://www.orztu.com/post/golang-trace/'>
 <meta property='og:site_name' content='Orztu The Way | Orz途'>
@@ -573,7 +573,7 @@ unicode: "ec9d"
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>可以看到它是通过调用<code>runtime.Stack</code>获取的调用栈信息，
+</div><p>可以看到它是通过调用<code>runtime.Stack</code>获取的调用栈信息，<br>
 其中第二个参数<code>all</code>表示是否获取所有 goroutine 的调用栈。</p>
 <p>可以将第二个参数改为<code>true</code>然后创建多个 goroutine 查看输出效果。</p>
 <h2 id="更可控的调用信息">更可控的调用信息
@@ -623,7 +623,7 @@ unicode: "ec9d"
 </div>
 </div><h3 id="runtimecallersskip-int-pc-uintptr-int">runtime.Callers(skip int, pc []uintptr) int
 </h3><p><code>runtime.Callers</code>一次可以获取调用栈中多个<code>program counter</code>。</p>
-<p>但是第一个参数<code>skip</code>与上面的<code>runtime.Caller</code>稍有不同，如果传<code>0</code>会获取到<code>Callers</code>函数本身的信息。
+<p>但是第一个参数<code>skip</code>与上面的<code>runtime.Caller</code>稍有不同，如果传<code>0</code>会获取到<code>Callers</code>函数本身的信息。<br>
 传<code>1</code>时才与上面的<code>Caller</code>函数对应。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -732,7 +732,32 @@ unicode: "ec9d"
 
         <span>Licensed under CC BY-NC-SA 4.0</span>
     </section>
-    </footer>
+    
+    <div class="pre-next">
+        
+        
+            
+        
+        
+            <a class="pre-next-btn bg" href="https://www.orztu.com/post/lua-table-minify-ii/" data-tooltip="使用元表优化 Lua 配置文件 II">
+                <i class="fa fa-angle-left"></i>
+                <span>上一篇</span>
+        
+        </a>
+    
+        
+        
+            
+        
+        
+            <a class="pre-next-btn bg" href="https://www.orztu.com/post/little-problem-while-using-cocos2dx-lua/" data-tooltip="记一次 Cocos2dx-Lua 闪退">
+                <i class="fa fa-angle-left"></i>
+                <span>下一篇</span>
+        
+        </a>
+    </div>
+    
+</footer>
 
 
     
@@ -755,6 +780,19 @@ unicode: "ec9d"
 
         <div class="article-details">
             <h2 class="article-title">CGO —— Golang 与 C 语言混合编程</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/post/using-govendor/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">govendor 使用</h2>
         </div>
     </a>
 </article>
@@ -794,19 +832,6 @@ unicode: "ec9d"
 
         <div class="article-details">
             <h2 class="article-title">记一次 Cocos2dx-Lua 闪退</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/post/lua-table-minify-ii/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">使用元表优化 Lua 配置文件 II</h2>
         </div>
     </a>
 </article>
@@ -963,7 +988,7 @@ unicode: "ec9d"
                 src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
                 
                 >
-            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script><script type="text/javascript" src="/ts/custom.6a8259597552f3291e36c8479b75c1a2bb04b275a9768380bf61340e16e02b71.js" defer></script>
 <script>
     (function () {
         const customFont = document.createElement('link');

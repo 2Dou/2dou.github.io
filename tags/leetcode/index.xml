@@ -320,7 +320,7 @@
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Input:&lt;/strong&gt; 3&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Output:&lt;/strong&gt; 5&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Explanation:&lt;/strong&gt;
+&lt;p&gt;&lt;strong&gt;Explanation:&lt;/strong&gt;&lt;br&gt;
 Given n = 3, there are a total of 5 unique BST&amp;rsquo;s:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -889,7 +889,7 @@ $$ F(n) = \sum_{i=0}^{n}F(i) * F(n-i-1) ; F(0) = 1; $$&lt;div class=&#34;highlig
 &lt;/div&gt;
 &lt;/div&gt;&lt;/blockquote&gt;
 &lt;p&gt;假设没有重复元素，每个元素有&lt;code&gt;出现&lt;/code&gt;、&lt;code&gt;不出现&lt;/code&gt;两种情况。&lt;/p&gt;
-&lt;p&gt;当有重复元素后，假设重复元素：&lt;code&gt;[2, 2, 2]&lt;/code&gt;，对于元素&lt;code&gt;2&lt;/code&gt;有&lt;code&gt;不出现&lt;/code&gt;、出现一次&lt;code&gt;[2]&lt;/code&gt;、出现两次&lt;code&gt;[2, 2]&lt;/code&gt;、出现三次&lt;code&gt;[2, 2, 2]&lt;/code&gt;
+&lt;p&gt;当有重复元素后，假设重复元素：&lt;code&gt;[2, 2, 2]&lt;/code&gt;，对于元素&lt;code&gt;2&lt;/code&gt;有&lt;code&gt;不出现&lt;/code&gt;、出现一次&lt;code&gt;[2]&lt;/code&gt;、出现两次&lt;code&gt;[2, 2]&lt;/code&gt;、出现三次&lt;code&gt;[2, 2, 2]&lt;/code&gt;&lt;br&gt;
 四种情况。&lt;/p&gt;
 &lt;h2 id=&#34;solution&#34;&gt;Solution
 &lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -1519,7 +1519,7 @@ $$ F(n) = \sum_{i=0}^{n}F(i) * F(n-i-1) ; F(0) = 1; $$&lt;div class=&#34;highlig
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;在给出的矩阵中，&lt;code&gt;1&lt;/code&gt;表示元素，&lt;code&gt;0&lt;/code&gt;表示空，找出最大矩形的面积。&lt;/p&gt;
 &lt;h2 id=&#34;solution&#34;&gt;Solution
-&lt;/h2&gt;&lt;p&gt;本题可以利用&lt;a class=&#34;link&#34; href=&#34;https://www.orztu.com/leetcode/084-largest-rectangle-in-histogram/&#34; &gt;《84. Largest Rectangle in Histogram》&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;本题可以利用&lt;a class=&#34;link&#34; href=&#34;https://www.orztu.com/leetcode/084-largest-rectangle-in-histogram/&#34; &gt;《84. Largest Rectangle in Histogram》&lt;/a&gt;&lt;br&gt;
 的代码。&lt;/p&gt;
 &lt;p&gt;下面来看看如何转换成 84 题的直方图求解问题：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -1658,7 +1658,7 @@ $$ F(n) = \sum_{i=0}^{n}F(i) * F(n-i-1) ; F(0) = 1; $$&lt;div class=&#34;highlig
 	loading=&#34;lazy&#34;
 	
 	
-&gt;
+&gt;&lt;br&gt;
 Above is a histogram where width of each bar is &lt;code&gt;1&lt;/code&gt;, given height = &lt;code&gt;[2,1,5,6,2,3]&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://www.orztu.com/images/leetcode/084_Largest_Rectangle_in_Histogram_2.png&#34;
 	
@@ -1667,7 +1667,7 @@ Above is a histogram where width of each bar is &lt;code&gt;1&lt;/code&gt;, give
 	loading=&#34;lazy&#34;
 	
 	
-&gt;
+&gt;&lt;br&gt;
 The largest rectangle is shown in the shaded area, which has area = &lt;code&gt;10&lt;/code&gt; unit.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;给出一个直方图，求最大矩形面积。&lt;/p&gt;
 &lt;h2 id=&#34;solution&#34;&gt;Solution
@@ -2438,17 +2438,17 @@ The largest rectangle is shown in the shaded area, which has area = &lt;code&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;/blockquote&gt;
-&lt;p&gt;Input: nums = [1,2,3]
-Output:
-[
-[3],
-[1],
-[2],
-[1,2,3],
-[1,3],
-[2,3],
-[1,2],
-[]
+&lt;p&gt;Input: nums = [1,2,3]&lt;br&gt;
+Output:&lt;br&gt;
+[&lt;br&gt;
+[3],&lt;br&gt;
+[1],&lt;br&gt;
+[2],&lt;br&gt;
+[1,2,3],&lt;br&gt;
+[1,3],&lt;br&gt;
+[2,3],&lt;br&gt;
+[1,2],&lt;br&gt;
+[]&lt;br&gt;
 ]&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -2510,13 +2510,13 @@ Output:
 &lt;/div&gt;
 &lt;/div&gt;&lt;h1 id=&#34;比如题目中的例子&#34;&gt;比如题目中的例子：
 &lt;/h1&gt;&lt;p&gt;nums = [1, 2, 3]&lt;/p&gt;
-&lt;p&gt;when flag=0 b(000) =&amp;gt; []
-when flag=1 b(001) =&amp;gt; [ ,  , 3]
-when flag=2 b(010) =&amp;gt; [ , 2,  ]
-when flag=3 b(011) =&amp;gt; [ , 2, 3]
-when flag=4 b(100) =&amp;gt; [1,  ,  ]
-when flag=5 b(101) =&amp;gt; [1,  , 3]
-when flag=6 b(110) =&amp;gt; [1, 2,  ]
+&lt;p&gt;when flag=0 b(000) =&amp;gt; []&lt;br&gt;
+when flag=1 b(001) =&amp;gt; [ ,  , 3]&lt;br&gt;
+when flag=2 b(010) =&amp;gt; [ , 2,  ]&lt;br&gt;
+when flag=3 b(011) =&amp;gt; [ , 2, 3]&lt;br&gt;
+when flag=4 b(100) =&amp;gt; [1,  ,  ]&lt;br&gt;
+when flag=5 b(101) =&amp;gt; [1,  , 3]&lt;br&gt;
+when flag=6 b(110) =&amp;gt; [1, 2,  ]&lt;br&gt;
 when flag=7 b(111) =&amp;gt; [1, 2, 3]&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -2778,7 +2778,7 @@ when flag=7 b(111) =&amp;gt; [1, 2, 3]&lt;/p&gt;
 &lt;h2 id=&#34;solution&#34;&gt;Solution
 &lt;/h2&gt;&lt;ol&gt;
 &lt;li&gt;
-&lt;p&gt;设两个指针表示子串的首尾：&lt;code&gt;left&lt;/code&gt;，&lt;code&gt;right&lt;/code&gt;：
+&lt;p&gt;设两个指针表示子串的首尾：&lt;code&gt;left&lt;/code&gt;，&lt;code&gt;right&lt;/code&gt;：&lt;br&gt;
 &lt;img src=&#34;https://www.orztu.com/images/leetcode/076_Minimum_Window_Substring_1.png&#34;
 	
 	
@@ -2789,7 +2789,7 @@ when flag=7 b(111) =&amp;gt; [1, 2, 3]&lt;/p&gt;
 &gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;code&gt;right&lt;/code&gt;向右移动扩展子串，直到子串包含&lt;code&gt;T&lt;/code&gt;：
+&lt;p&gt;&lt;code&gt;right&lt;/code&gt;向右移动扩展子串，直到子串包含&lt;code&gt;T&lt;/code&gt;：&lt;br&gt;
 &lt;img src=&#34;https://www.orztu.com/images/leetcode/076_Minimum_Window_Substring_2.png&#34;
 	
 	
@@ -2800,7 +2800,7 @@ when flag=7 b(111) =&amp;gt; [1, 2, 3]&lt;/p&gt;
 &gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;code&gt;left&lt;/code&gt;向右移动收缩子串，直到最短满足&lt;code&gt;T&lt;/code&gt;，记录子串：
+&lt;p&gt;&lt;code&gt;left&lt;/code&gt;向右移动收缩子串，直到最短满足&lt;code&gt;T&lt;/code&gt;，记录子串：&lt;br&gt;
 &lt;img src=&#34;https://www.orztu.com/images/leetcode/076_Minimum_Window_Substring_3.png&#34;
 	
 	
@@ -2811,7 +2811,7 @@ when flag=7 b(111) =&amp;gt; [1, 2, 3]&lt;/p&gt;
 &gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;code&gt;left&lt;/code&gt;再次右移，这时子串不再满足包含&lt;code&gt;T&lt;/code&gt;：
+&lt;p&gt;&lt;code&gt;left&lt;/code&gt;再次右移，这时子串不再满足包含&lt;code&gt;T&lt;/code&gt;：&lt;br&gt;
 &lt;img src=&#34;https://www.orztu.com/images/leetcode/076_Minimum_Window_Substring_4.png&#34;
 	
 	
@@ -2822,7 +2822,7 @@ when flag=7 b(111) =&amp;gt; [1, 2, 3]&lt;/p&gt;
 &gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;code&gt;right&lt;/code&gt;从重复第二步骤，找到新的子串：
+&lt;p&gt;&lt;code&gt;right&lt;/code&gt;从重复第二步骤，找到新的子串：&lt;br&gt;
 &lt;img src=&#34;https://www.orztu.com/images/leetcode/076_Minimum_Window_Substring_5.png&#34;
 	
 	
@@ -2833,7 +2833,7 @@ when flag=7 b(111) =&amp;gt; [1, 2, 3]&lt;/p&gt;
 &gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;再次收缩子串，与之前的子串比较是否更短：
+&lt;p&gt;再次收缩子串，与之前的子串比较是否更短：&lt;br&gt;
 &lt;img src=&#34;https://www.orztu.com/images/leetcode/076_Minimum_Window_Substring_6.png&#34;
 	
 	
@@ -2998,7 +2998,7 @@ when flag=7 b(111) =&amp;gt; [1, 2, 3]&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;A rather straight forward solution is a two-pass algorithm using counting sort.&lt;br&gt;
+&lt;p&gt;A rather straight forward solution is a two-pass algorithm using counting sort.&lt;br&gt;&lt;br&gt;
 First, iterate the array counting number of 0&amp;rsquo;s, 1&amp;rsquo;s, and 2&amp;rsquo;s, then overwrite array with total number of 0&amp;rsquo;s, then 1&amp;rsquo;s and followed by 2&amp;rsquo;s.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -3129,7 +3129,7 @@ First, iterate the array counting number of 0&amp;rsquo;s, 1&amp;rsquo;s, and 2&
 &lt;h2 id=&#34;solution&#34;&gt;Solution
 &lt;/h2&gt;&lt;h3 id=&#34;二分法binary-search&#34;&gt;二分法（Binary Search）
 &lt;/h3&gt;&lt;p&gt;下面代码使用两次二分查找，先找出在哪一行，再对该行进行二分查找。&lt;/p&gt;
-&lt;p&gt;亦有先计算元素个数：&lt;code&gt;total = m x n&lt;/code&gt;，再对&lt;code&gt;total&lt;/code&gt;进行二分查找的解法。
+&lt;p&gt;亦有先计算元素个数：&lt;code&gt;total = m x n&lt;/code&gt;，再对&lt;code&gt;total&lt;/code&gt;进行二分查找的解法。&lt;br&gt;
 设二分时所以为&lt;code&gt;index&lt;/code&gt;，对应元素坐标为&lt;code&gt;(index/m, index%m)&lt;/code&gt;。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -3226,7 +3226,7 @@ First, iterate the array counting number of 0&amp;rsquo;s, 1&amp;rsquo;s, and 2&
 &lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.com/problems/set-matrix-zeroes/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Set Matrix Zeroes&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Given a m x n matrix, if an element is &lt;code&gt;0&lt;/code&gt;, set its entire row and column to 0. Do it in-place.
+&lt;p&gt;Given a m x n matrix, if an element is &lt;code&gt;0&lt;/code&gt;, set its entire row and column to 0. Do it in-place.&lt;br&gt;
 &lt;strong&gt;Example 1:&lt;/strong&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -3459,11 +3459,11 @@ First, iterate the array counting number of 0&amp;rsquo;s, 1&amp;rsquo;s, and 2&
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;/blockquote&gt;
-&lt;p&gt;Input: word1 = &amp;ldquo;horse&amp;rdquo;, word2 = &amp;ldquo;ros&amp;rdquo;
-Output: 3
-Explanation:
-horse -&amp;gt; rorse (replace &amp;lsquo;h&amp;rsquo; with &amp;lsquo;r&amp;rsquo;)
-rorse -&amp;gt; rose (remove &amp;lsquo;r&amp;rsquo;)
+&lt;p&gt;Input: word1 = &amp;ldquo;horse&amp;rdquo;, word2 = &amp;ldquo;ros&amp;rdquo;&lt;br&gt;
+Output: 3&lt;br&gt;
+Explanation:&lt;br&gt;
+horse -&amp;gt; rorse (replace &amp;lsquo;h&amp;rsquo; with &amp;lsquo;r&amp;rsquo;)&lt;br&gt;
+rorse -&amp;gt; rose (remove &amp;lsquo;r&amp;rsquo;)&lt;br&gt;
 rose -&amp;gt; ros (remove &amp;rsquo;e&amp;rsquo;)&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -4371,7 +4371,7 @@ $$ f(n) = f(n-1) + f(n-2) $$&lt;h3 id=&#34;动态规划dynamic-programming&#34;&
 &lt;p&gt;每个格子的数字表示经过它所需的消耗大小。寻找从左上到右下的最少路径消耗。&lt;/p&gt;
 &lt;h2 id=&#34;solution&#34;&gt;Solution
 &lt;/h2&gt;&lt;h3 id=&#34;似曾相识&#34;&gt;似曾相识
-&lt;/h3&gt;&lt;p&gt;本题与&lt;a class=&#34;link&#34; href=&#34;https://www.orztu.com/leetcode/063-unique-paths-ii/&#34; &gt;《63. Unique Paths II》&lt;/a&gt;
+&lt;/h3&gt;&lt;p&gt;本题与&lt;a class=&#34;link&#34; href=&#34;https://www.orztu.com/leetcode/063-unique-paths-ii/&#34; &gt;《63. Unique Paths II》&lt;/a&gt;&lt;br&gt;
 使用相同的方法：&lt;/p&gt;
 &lt;p&gt;要到达右下角，需要经过左边或者上边的格子，而最少消耗自然是从这两个格子中选择到达它们所需消耗（非它们自身消耗）较少的一个：&lt;/p&gt;
 $$ f(x, y) = cost_{(x,y)} + min(f(x-1, y), f(x, y-1)) $$&lt;p&gt;所以与之前一样，从左上开始往右下分别计算出每个格子的最少消耗，直到最终格子。&lt;/p&gt;
@@ -4535,7 +4535,7 @@ $$ f(x, y) = cost_{(x,y)} + min(f(x-1, y), f(x, y-1)) $$&lt;p&gt;所以与之前
 &lt;p&gt;其中地图中&lt;code&gt;1&lt;/code&gt;表示障碍，无法通过。&lt;/p&gt;
 &lt;h2 id=&#34;solution&#34;&gt;Solution
 &lt;/h2&gt;&lt;h3 id=&#34;动态规划dynamic-programming&#34;&gt;动态规划（Dynamic Programming）
-&lt;/h3&gt;&lt;p&gt;要到达最后一个格子，只能通过它左边和上边两个格子到达，
+&lt;/h3&gt;&lt;p&gt;要到达最后一个格子，只能通过它左边和上边两个格子到达，&lt;br&gt;
 那么达到它的路径数量等于到达左边和上边两个格子的路径数量相加。&lt;/p&gt;
 &lt;p&gt;依此类推，到达左边和上边两个格子的路径数量又分别等于它们的左边和上边两条路径之和。&lt;/p&gt;
 &lt;p&gt;最终我们将反推到第一个格子，它的路径数量只有一条。&lt;/p&gt;
@@ -4828,7 +4828,7 @@ $$ f(x, y) = f(x-1, y) + f(x, y-1) $$&lt;p&gt;通过这个公式可以写出对�
 &lt;p&gt;从倒数第&lt;code&gt;k&lt;/code&gt;个结点位置旋转链表：首尾相连，以倒数第&lt;code&gt;k&lt;/code&gt;个结点为新&lt;code&gt;head&lt;/code&gt;。&lt;/p&gt;
 &lt;h2 id=&#34;solution&#34;&gt;Solution
 &lt;/h2&gt;&lt;p&gt;这种寻找链表倒数第&lt;code&gt;k&lt;/code&gt;的方法，通常使用&lt;code&gt;快慢指针&lt;/code&gt;。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;快指针&lt;/code&gt;先前进&lt;code&gt;k&lt;/code&gt;个结点，然后两个指针同时前进，当到&lt;code&gt;快指针&lt;/code&gt;达链表尾部时，
+&lt;p&gt;&lt;code&gt;快指针&lt;/code&gt;先前进&lt;code&gt;k&lt;/code&gt;个结点，然后两个指针同时前进，当到&lt;code&gt;快指针&lt;/code&gt;达链表尾部时，&lt;br&gt;
 两个指针相差&lt;code&gt;k&lt;/code&gt;个结点，此时&lt;code&gt;慢指针&lt;/code&gt;指向倒数第&lt;code&gt;k&lt;/code&gt;个结点。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -4973,13 +4973,13 @@ $$ f(x, y) = f(x-1, y) + f(x, y-1) $$&lt;p&gt;通过这个公式可以写出对�
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;一个长度为&lt;code&gt;n&lt;/code&gt;的数组，总共有&lt;code&gt;n!&lt;/code&gt;种排列。假设第一个数字固定后，剩余&lt;code&gt;(n-1)!&lt;/code&gt;种排列。&lt;/p&gt;
-&lt;p&gt;上图中的字典序树可以更直观的看出，
-在&lt;code&gt;n=4:[1,2,3,4]&lt;/code&gt;中，
-“第零层”包含&lt;code&gt;4!=24&lt;/code&gt;个叶子，
-第一层包含&lt;code&gt;3!=6&lt;/code&gt;个叶子，
+&lt;p&gt;上图中的字典序树可以更直观的看出，&lt;br&gt;
+在&lt;code&gt;n=4:[1,2,3,4]&lt;/code&gt;中，&lt;br&gt;
+“第零层”包含&lt;code&gt;4!=24&lt;/code&gt;个叶子，&lt;br&gt;
+第一层包含&lt;code&gt;3!=6&lt;/code&gt;个叶子，&lt;br&gt;
 第二层包含&lt;code&gt;2!=2&lt;/code&gt;个叶子&amp;hellip;&lt;/p&gt;
 &lt;p&gt;假设现在要查找第&lt;code&gt;k=9&lt;/code&gt;个排列（第九个叶子），第一层应该经过第&lt;code&gt;⌈9/3!⌉&lt;/code&gt; 个分支，即&lt;code&gt;ceil(k/(n-1)!)&lt;/code&gt;。&lt;/p&gt;
-&lt;p&gt;由此公式，可以依次求每层分支序号。
+&lt;p&gt;由此公式，可以依次求每层分支序号。&lt;br&gt;
 比如&lt;code&gt;k=9&lt;/code&gt;，依次经过：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;code&gt;⌈9 / 3!⌉&lt;/code&gt;: &lt;code&gt;2&lt;/code&gt;&lt;/li&gt;
@@ -5629,7 +5629,7 @@ $$ f(x, y) = f(x-1, y) + f(x, y-1) $$&lt;p&gt;通过这个公式可以写出对�
 &lt;/div&gt;&lt;/blockquote&gt;
 &lt;p&gt;从外向内螺旋形遍历矩阵。&lt;/p&gt;
 &lt;h2 id=&#34;solution&#34;&gt;Solution
-&lt;/h2&gt;&lt;p&gt;列出遍历的四方边界：&lt;code&gt;left&lt;/code&gt;，&lt;code&gt;right&lt;/code&gt;，&lt;code&gt;top&lt;/code&gt;，&lt;code&gt;bottom&lt;/code&gt;；
+&lt;/h2&gt;&lt;p&gt;列出遍历的四方边界：&lt;code&gt;left&lt;/code&gt;，&lt;code&gt;right&lt;/code&gt;，&lt;code&gt;top&lt;/code&gt;，&lt;code&gt;bottom&lt;/code&gt;；&lt;br&gt;
 每次循环时，边界向中间收紧。&lt;/p&gt;
 &lt;p&gt;在循环中，分别遍历&lt;code&gt;上边&lt;/code&gt;，&lt;code&gt;右边&lt;/code&gt;，&lt;code&gt;底边&lt;/code&gt;，&lt;code&gt;左边&lt;/code&gt;。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -5769,7 +5769,7 @@ $$ f(x, y) = f(x-1, y) + f(x, y-1) $$&lt;p&gt;通过这个公式可以写出对�
 &lt;blockquote&gt;
 &lt;p&gt;A robot is located at the top-left corner of a m x n grid (marked &amp;lsquo;Start&amp;rsquo; in the diagram below).&lt;/p&gt;
 &lt;p&gt;The robot can only move either down or right at any point in time. The robot is trying to reach the bottom-right corner of the grid (marked &amp;lsquo;Finish&amp;rsquo; in the diagram below).&lt;/p&gt;
-&lt;p&gt;How many possible unique paths are there?
+&lt;p&gt;How many possible unique paths are there?&lt;br&gt;
 &lt;img src=&#34;https://www.orztu.com/images/leetcode/062-unique-paths-1.png&#34;
 	
 	
@@ -5817,9 +5817,9 @@ $$ f(x, y) = f(x-1, y) + f(x, y-1) $$&lt;p&gt;通过这个公式可以写出对�
 &lt;p&gt;在&lt;code&gt;m x n&lt;/code&gt;的方格中，从左上角走到右下角的不同路径有几种？（只允许向右和向下走）&lt;/p&gt;
 &lt;h2 id=&#34;solution&#34;&gt;Solution
 &lt;/h2&gt;&lt;p&gt;这道题目可以转换为数学题：&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;m x n&lt;/code&gt;的方格要从左上角走到右下角，需要经过&lt;code&gt;m - 1&lt;/code&gt;次&lt;code&gt;Right&lt;/code&gt;和&lt;code&gt;n - 1&lt;/code&gt;次&lt;code&gt;Down&lt;/code&gt;操作。
+&lt;p&gt;&lt;code&gt;m x n&lt;/code&gt;的方格要从左上角走到右下角，需要经过&lt;code&gt;m - 1&lt;/code&gt;次&lt;code&gt;Right&lt;/code&gt;和&lt;code&gt;n - 1&lt;/code&gt;次&lt;code&gt;Down&lt;/code&gt;操作。&lt;br&gt;
 所以总共是&lt;code&gt;m + n - 2&lt;/code&gt;次操作，而操作顺序的不同，则对应路径不同。&lt;/p&gt;
-&lt;p&gt;这就转换成了数学的排列问题：&lt;code&gt;C(m + n -2, n - 1)&lt;/code&gt;。
+&lt;p&gt;这就转换成了数学的排列问题：&lt;code&gt;C(m + n -2, n - 1)&lt;/code&gt;。&lt;br&gt;
 在&lt;code&gt;m + n - 2&lt;/code&gt;操作中取&lt;code&gt;Down&lt;/code&gt;操作的位置，其余位置就是&lt;code&gt;Right&lt;/code&gt;操作。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -6017,10 +6017,10 @@ $$ f(x, y) = f(x-1, y) + f(x, y-1) $$&lt;p&gt;通过这个公式可以写出对�
 &lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;Given two non-negative integers &lt;code&gt;num1&lt;/code&gt; and &lt;code&gt;num2&lt;/code&gt; represented as strings, return the product of &lt;code&gt;num1&lt;/code&gt; and &lt;code&gt;num2&lt;/code&gt;, also represented as a string.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Example 1:&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Input: num1 = &amp;ldquo;2&amp;rdquo;, num2 = &amp;ldquo;3&amp;rdquo;
+&lt;p&gt;Input: num1 = &amp;ldquo;2&amp;rdquo;, num2 = &amp;ldquo;3&amp;rdquo;&lt;br&gt;
 Output: &amp;ldquo;6&amp;rdquo;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Example 2:&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Input: num1 = &amp;ldquo;123&amp;rdquo;, num2 = &amp;ldquo;456&amp;rdquo;
+&lt;p&gt;Input: num1 = &amp;ldquo;123&amp;rdquo;, num2 = &amp;ldquo;456&amp;rdquo;&lt;br&gt;
 Output: &amp;ldquo;56088&amp;rdquo;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;将两个字符串表示的数字相乘（大数相乘）。&lt;/p&gt;
 &lt;blockquote&gt;
@@ -6033,8 +6033,8 @@ Output: &amp;ldquo;56088&amp;rdquo;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;/ol&gt;&lt;/blockquote&gt;
 &lt;p&gt;实现大数相乘：以&lt;code&gt;string&lt;/code&gt;的形式给出两个非负整数，求乘积。&lt;/p&gt;
 &lt;h2 id=&#34;solution&#34;&gt;Solution
-&lt;/h2&gt;&lt;p&gt;我在实现这个乘法时，按照手写计算的方式，每次按位相乘之后记录进位然后写下当前位。
-然后把当前位结果加上前一位的结果并存为&lt;code&gt;byte&lt;/code&gt;。每次外循环都会做一次大数加法，将乘积结果累加。
+&lt;/h2&gt;&lt;p&gt;我在实现这个乘法时，按照手写计算的方式，每次按位相乘之后记录进位然后写下当前位。&lt;br&gt;
+然后把当前位结果加上前一位的结果并存为&lt;code&gt;byte&lt;/code&gt;。每次外循环都会做一次大数加法，将乘积结果累加。&lt;br&gt;
 效率很不理想：40ms。&lt;/p&gt;
 &lt;p&gt;在看了别人的算法之后，重新实现了一遍。&lt;/p&gt;
 &lt;p&gt;先将每一位的乘法结果保存，最后再按位相加并处理进位。&lt;/p&gt;
@@ -6145,7 +6145,7 @@ Output: &amp;ldquo;56088&amp;rdquo;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;Given a collection of candidate numbers (&lt;code&gt;candidates&lt;/code&gt;) and a target number (&lt;code&gt;target&lt;/code&gt;), find all unique combinations in candidates where the &lt;code&gt;candidate&lt;/code&gt; numbers sums to &lt;code&gt;target&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Each number in &lt;code&gt;candidates&lt;/code&gt; may only be used once in the combination.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;All numbers (including &lt;code&gt;target&lt;/code&gt;) will be positive integers.
+&lt;p&gt;All numbers (including &lt;code&gt;target&lt;/code&gt;) will be positive integers.&lt;br&gt;
 The solution set must not contain duplicate combinations.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Example 1:&lt;/strong&gt;&lt;/p&gt;
@@ -6334,7 +6334,7 @@ The solution set must not contain duplicate combinations.&lt;/p&gt;&lt;/blockquo
 &lt;/div&gt;&lt;/blockquote&gt;
 &lt;p&gt;给出加数与和数，求出所有组合。&lt;/p&gt;
 &lt;h2 id=&#34;solution&#34;&gt;Solution
-&lt;/h2&gt;&lt;p&gt;思路是与之前做过的查找解的题目相似：
+&lt;/h2&gt;&lt;p&gt;思路是与之前做过的查找解的题目相似：&lt;br&gt;
 把&lt;code&gt;target&lt;/code&gt;减去候选数，得到剩余&lt;code&gt;target&lt;/code&gt;，继续查找，直到&lt;code&gt;target&lt;/code&gt;为&lt;code&gt;0&lt;/code&gt;。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -6433,7 +6433,7 @@ The solution set must not contain duplicate combinations.&lt;/p&gt;&lt;/blockquo
 	loading=&#34;lazy&#34;
 	
 	
-&gt;
+&gt;&lt;br&gt;
 A partially filled sudoku which is valid.&lt;/p&gt;
 &lt;p&gt;The Sudoku board could be partially filled, where empty cells are filled with the character &lt;code&gt;&#39;.&#39;&lt;/code&gt;.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;验证数独&lt;/p&gt;
@@ -6514,7 +6514,7 @@ A partially filled sudoku which is valid.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;A Sudoku board (partially filled) could be valid but is not necessarily solvable.&lt;/li&gt;
 &lt;li&gt;Only the filled cells need to be validated according to the mentioned rules.&lt;/li&gt;
-&lt;li&gt;The given board contain only digits 1-9 and the character &amp;lsquo;.&amp;rsquo;.
+&lt;li&gt;The given board contain only digits 1-9 and the character &amp;lsquo;.&amp;rsquo;.&lt;br&gt;
 The given board size is always 9x9.&lt;/li&gt;
 &lt;/ul&gt;&lt;/blockquote&gt;
 &lt;p&gt;判断数独板是否有效。&lt;/p&gt;
@@ -6634,7 +6634,7 @@ The given board size is always 9x9.&lt;/li&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;/blockquote&gt;
-&lt;p&gt;假设有一个升序的数组，但是从某处出现了旋转。
+&lt;p&gt;假设有一个升序的数组，但是从某处出现了旋转。&lt;br&gt;
 要在此数组中查找给定值，并且时间复杂度为&lt;code&gt;O(log n)&lt;/code&gt;。&lt;/p&gt;
 &lt;h2 id=&#34;solution&#34;&gt;Solution
 &lt;/h2&gt;&lt;p&gt;此题为二分查找法的一个变形：&lt;/p&gt;
@@ -6744,8 +6744,8 @@ The given board size is always 9x9.&lt;/li&gt;
     &gt;Longest Valid Parentheses&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description
 &lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;Given a string containing just the characters &lt;code&gt;&#39;(&#39;&lt;/code&gt; and &lt;code&gt;&#39;)&#39;&lt;/code&gt;, find the length of the longest valid (well-formed) parentheses substring.
-&lt;br&gt;&lt;br&gt;
+&lt;p&gt;Given a string containing just the characters &lt;code&gt;&#39;(&#39;&lt;/code&gt; and &lt;code&gt;&#39;)&#39;&lt;/code&gt;, find the length of the longest valid (well-formed) parentheses substring.&lt;br&gt;
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
 &lt;strong&gt;Example 1:&lt;/strong&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -6899,8 +6899,8 @@ Explanation: The longest valid parentheses substring is &#34;()()&#34;
 &lt;p&gt;If such arrangement is not possible, it must rearrange it as the lowest possible order (ie, sorted in ascending order).&lt;/p&gt;
 &lt;p&gt;The replacement must be in-place and use only constant extra memory.&lt;/p&gt;
 &lt;p&gt;Here are some examples. Inputs are in the left-hand column and its corresponding outputs are in the right-hand column.&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;1,2,3&lt;/code&gt; → &lt;code&gt;1,3,2&lt;/code&gt;&lt;br&gt;
-&lt;code&gt;3,2,1&lt;/code&gt; → &lt;code&gt;1,2,3&lt;/code&gt;&lt;br&gt;
+&lt;p&gt;&lt;code&gt;1,2,3&lt;/code&gt; → &lt;code&gt;1,3,2&lt;/code&gt;&lt;br&gt;&lt;br&gt;
+&lt;code&gt;3,2,1&lt;/code&gt; → &lt;code&gt;1,2,3&lt;/code&gt;&lt;br&gt;&lt;br&gt;
 &lt;code&gt;1,1,5&lt;/code&gt; → &lt;code&gt;1,5,1&lt;/code&gt;&lt;br&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;实现字典序排列的 nextPermutation 方法，假如已经是最大排列，则输出最小排列。&lt;/p&gt;
 &lt;h2 id=&#34;字典序排列&#34;&gt;字典序排列
@@ -6940,7 +6940,7 @@ Explanation: The longest valid parentheses substring is &#34;()()&#34;
 &lt;li&gt;交换&lt;code&gt;a[k]&lt;/code&gt;和&lt;code&gt;a[l]&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;将&lt;code&gt;a[k + 1], a[k + 2], ..., a[n]&lt;/code&gt;倒序&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;实现代码如下：
+&lt;p&gt;实现代码如下：&lt;br&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -7187,13 +7187,13 @@ Explanation: The longest valid parentheses substring is &#34;()()&#34;
     &gt;Reverse Nodes in k-Group&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description
 &lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;Given a linked list, reverse the nodes of a linked list k at a time and return its modified list.&lt;br&gt;
-&lt;br&gt;
-k is a positive integer and is less than or equal to the length of the linked list. If the number of nodes is not a multiple of k then left-out nodes in the end should remain as it is.&lt;br&gt;
-&lt;br&gt;
+&lt;p&gt;Given a linked list, reverse the nodes of a linked list k at a time and return its modified list.&lt;br&gt;&lt;br&gt;
+&lt;br&gt;&lt;br&gt;
+k is a positive integer and is less than or equal to the length of the linked list. If the number of nodes is not a multiple of k then left-out nodes in the end should remain as it is.&lt;br&gt;&lt;br&gt;
+&lt;br&gt;&lt;br&gt;
 You may not alter the values in the nodes, only nodes itself may be changed.&lt;/p&gt;
-&lt;p&gt;Only constant memory is allowed.&lt;br&gt;
-&lt;br&gt;
+&lt;p&gt;Only constant memory is allowed.&lt;br&gt;&lt;br&gt;
+&lt;br&gt;&lt;br&gt;
 For example,&lt;/p&gt;
 &lt;p&gt;Given this linked list: &lt;code&gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;For k = 2, you should return: &lt;code&gt;2-&amp;gt;1-&amp;gt;4-&amp;gt;3-&amp;gt;5&lt;/code&gt;&lt;/p&gt;
@@ -7520,8 +7520,8 @@ For example,&lt;/p&gt;
     &gt;Valid Parentheses&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description
 &lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;Given a string containing just the characters &lt;code&gt;&#39;(&#39;&lt;/code&gt;, &lt;code&gt;&#39;)&#39;&lt;/code&gt;, &lt;code&gt;&#39;{&#39;&lt;/code&gt;, &lt;code&gt;&#39;}&#39;&lt;/code&gt;, &lt;code&gt;&#39;[&#39;&lt;/code&gt; and &lt;code&gt;&#39;]&#39;&lt;/code&gt;, determine if the input string is valid.
-&lt;/br&gt; &lt;/br&gt;
+&lt;p&gt;Given a string containing just the characters &lt;code&gt;&#39;(&#39;&lt;/code&gt;, &lt;code&gt;&#39;)&#39;&lt;/code&gt;, &lt;code&gt;&#39;{&#39;&lt;/code&gt;, &lt;code&gt;&#39;}&#39;&lt;/code&gt;, &lt;code&gt;&#39;[&#39;&lt;/code&gt; and &lt;code&gt;&#39;]&#39;&lt;/code&gt;, determine if the input string is valid.&lt;br&gt;
+&lt;/br&gt; &lt;/br&gt;&lt;br&gt;
 The brackets must close in the correct order, &lt;code&gt;&amp;quot;()&amp;quot;&lt;/code&gt; and &lt;code&gt;&amp;quot;()[]{}&amp;quot;&lt;/code&gt; are all valid but &lt;code&gt;&amp;quot;(]&amp;quot;&lt;/code&gt; and &lt;code&gt;&amp;quot;([)]&amp;quot;&lt;/code&gt; are not.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;给出包含三种括号的字符串，验证括号是否左右匹配&lt;/p&gt;
 &lt;h2 id=&#34;solution&#34;&gt;Solution
@@ -7631,8 +7631,8 @@ The brackets must close in the correct order, &lt;code&gt;&amp;quot;()&amp;quot;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   After removing the second node from the end, the linked list becomes 1-&amp;gt;2-&amp;gt;3-&amp;gt;5.
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;:
-Given n will always be valid.
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;:&lt;br&gt;
+Given n will always be valid.&lt;br&gt;
 Try to do this in one pass.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;从链表中删除倒数第n个结点（n必定有效）&lt;/p&gt;
 &lt;h2 id=&#34;solution&#34;&gt;Solution
@@ -8254,8 +8254,8 @@ Try to do this in one pass.&lt;/p&gt;&lt;/blockquote&gt;
     &gt;Roman to Integer&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description
 &lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;Given a roman numeral, convert it to an integer.&lt;br&gt;
-&lt;br&gt;
+&lt;p&gt;Given a roman numeral, convert it to an integer.&lt;br&gt;&lt;br&gt;
+&lt;br&gt;&lt;br&gt;
 Input is guaranteed to be within the range from 1 to 3999.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;将罗马数字转换成整型。&lt;/p&gt;
 &lt;h2 id=&#34;solution&#34;&gt;Solution
@@ -8338,8 +8338,8 @@ Input is guaranteed to be within the range from 1 to 3999.&lt;/p&gt;&lt;/blockqu
     &gt;Integer to Roman&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description
 &lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;Given an integer, convert it to a roman numeral. &lt;br&gt;
-&lt;br&gt;
+&lt;p&gt;Given an integer, convert it to a roman numeral. &lt;br&gt;&lt;br&gt;
+&lt;br&gt;&lt;br&gt;
 Input is guaranteed to be within the range from 1 to 3999.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;将整型转换成罗马数字形式:&lt;/p&gt;
 &lt;table&gt;
@@ -8417,8 +8417,8 @@ Input is guaranteed to be within the range from 1 to 3999.&lt;/p&gt;&lt;/blockqu
     &gt;Container With Most Water&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description
 &lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;Given n non-negative integers a1, a2, &amp;hellip;, an, where each represents a point at coordinate (i, ai). n vertical lines are drawn such that the two endpoints of line i is at (i, ai) and (i, 0). Find two lines, which together with x-axis forms a container, such that the container contains the most water.&lt;br&gt;
-&lt;br&gt;
+&lt;p&gt;Given n non-negative integers a1, a2, &amp;hellip;, an, where each represents a point at coordinate (i, ai). n vertical lines are drawn such that the two endpoints of line i is at (i, ai) and (i, 0). Find two lines, which together with x-axis forms a container, such that the container contains the most water.&lt;br&gt;&lt;br&gt;
+&lt;br&gt;&lt;br&gt;
 Note: You may not slant the container and n is at least 2.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;给出n个点，它们与X轴有n条垂线，每两条垂线与X轴形成的U型容器，找出最大“容积”(面积）&lt;/p&gt;
 &lt;h2 id=&#34;solution&#34;&gt;Solution
@@ -8506,7 +8506,7 @@ Note: You may not slant the container and n is at least 2.&lt;/p&gt;&lt;/blockqu
     &gt;N-Queens&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description
 &lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;The &lt;em&gt;n-queens&lt;/em&gt; puzzle is the problem of placing n queens on an n×n chessboard such that no two queens attack each other.
+&lt;p&gt;The &lt;em&gt;n-queens&lt;/em&gt; puzzle is the problem of placing n queens on an n×n chessboard such that no two queens attack each other.&lt;br&gt;
 &lt;img src=&#34;https://www.orztu.com/images/leetcode/8-queens.png&#34;
 	
 	
@@ -8520,7 +8520,7 @@ Note: You may not slant the container and n is at least 2.&lt;/p&gt;&lt;/blockqu
 &lt;p&gt;Given an integer n, return all distinct solutions to the n-queens puzzle.&lt;/p&gt;
 &lt;p&gt;Each solution contains a distinct board configuration of the &lt;em&gt;n-queens&lt;/em&gt;&amp;rsquo; placement, where &lt;code&gt;&#39;Q&#39;&lt;/code&gt; and &lt;code&gt;&#39;.&#39;&lt;/code&gt; both indicate a queen and an empty space respectively.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;blockquote&gt;
-&lt;p&gt;For example,
+&lt;p&gt;For example,&lt;br&gt;
 There exist two distinct solutions to the 4-queens puzzle:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -8529,15 +8529,15 @@ There exist two distinct solutions to the 4-queens puzzle:&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;/blockquote&gt;
-&lt;p&gt;[
-[&amp;quot;.Q..&amp;quot;,  // Solution 1
-&amp;ldquo;&amp;hellip;Q&amp;rdquo;,
-&amp;ldquo;Q&amp;hellip;&amp;rdquo;,
+&lt;p&gt;[&lt;br&gt;
+[&amp;quot;.Q..&amp;quot;,  // Solution 1&lt;br&gt;
+&amp;ldquo;&amp;hellip;Q&amp;rdquo;,&lt;br&gt;
+&amp;ldquo;Q&amp;hellip;&amp;rdquo;,&lt;br&gt;
 &amp;ldquo;..Q.&amp;rdquo;],&lt;/p&gt;
-&lt;p&gt;[&amp;quot;..Q.&amp;quot;,  // Solution 2
-&amp;ldquo;Q&amp;hellip;&amp;rdquo;,
-&amp;ldquo;&amp;hellip;Q&amp;rdquo;,
-&amp;ldquo;.Q..&amp;rdquo;]
+&lt;p&gt;[&amp;quot;..Q.&amp;quot;,  // Solution 2&lt;br&gt;
+&amp;ldquo;Q&amp;hellip;&amp;rdquo;,&lt;br&gt;
+&amp;ldquo;&amp;hellip;Q&amp;rdquo;,&lt;br&gt;
+&amp;ldquo;.Q..&amp;rdquo;]&lt;br&gt;
 ]&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -8703,7 +8703,7 @@ There exist two distinct solutions to the 4-queens puzzle:&lt;/p&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description
 &lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how &amp;gt;much water it is able to trap after raining.&lt;/p&gt;
-&lt;p&gt;For example,
+&lt;p&gt;For example,&lt;br&gt;
 Given &lt;code&gt;[0,1,0,2,1,0,1,3,2,1,2,1]&lt;/code&gt;, return &lt;code&gt;6&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://www.orztu.com/images/leetcode/rainwatertrap-1.png&#34;
 	
@@ -8714,12 +8714,12 @@ Given &lt;code&gt;[0,1,0,2,1,0,1,3,2,1,2,1]&lt;/code&gt;, return &lt;code&gt;6&l
 		alt=&#34;palindromic&#34;
 	
 	
-&gt;
+&gt;&lt;br&gt;
 The above elevation map is represented by array [0,1,0,2,1,0,1,3,2,1,2,1]. In this case, 6 units of rain water (blue section) are being trapped. Thanks Marcos for contributing this image!&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h2 id=&#34;solution&#34;&gt;Solution
-&lt;/h2&gt;&lt;p&gt;每个点容量决定于左右两边高度&lt;/br&gt;
-先从左往右，扫描出每个点左边最高的围栏&lt;/br&gt;
-再从右往左，扫描出每个点右边最高的围栏&lt;/br&gt;
+&lt;/h2&gt;&lt;p&gt;每个点容量决定于左右两边高度&lt;/br&gt;&lt;br&gt;
+先从左往右，扫描出每个点左边最高的围栏&lt;/br&gt;&lt;br&gt;
+再从右往左，扫描出每个点右边最高的围栏&lt;/br&gt;&lt;br&gt;
 在围栏比当前点高的情况下， 这个点的容量为围栏高度减底部高度: min(left_height, right_height) - bottom&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -8835,19 +8835,19 @@ The above elevation map is represented by array [0,1,0,2,1,0,1,3,2,1,2,1]. In th
 &lt;!-- ![palindromic](/images/leetcode/Sudoku-Solver-1.png &#34;数独&#34;) --&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description
 &lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;Write a program to solve a Sudoku puzzle by filling the empty cells.
-&lt;br&gt;
-&lt;br&gt;
-Empty cells are indicated by the character &amp;lsquo;.&amp;rsquo;.
-&lt;br&gt;
-&lt;br&gt;
+&lt;p&gt;Write a program to solve a Sudoku puzzle by filling the empty cells.&lt;br&gt;
+&lt;br&gt;&lt;br&gt;
+&lt;br&gt;&lt;br&gt;
+Empty cells are indicated by the character &amp;lsquo;.&amp;rsquo;.&lt;br&gt;
+&lt;br&gt;&lt;br&gt;
+&lt;br&gt;&lt;br&gt;
 You may assume that there will be only one unique solution.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h2 id=&#34;solution&#34;&gt;Solution
 &lt;/h2&gt;&lt;p&gt;还是编程思维不行，在编程时按照解题思路在走。&lt;/p&gt;
-&lt;p&gt;我的答案：
-查找空格，找出该位置可能的数字组合，填入，递归进入下一个空格。
+&lt;p&gt;我的答案：&lt;br&gt;
+查找空格，找出该位置可能的数字组合，填入，递归进入下一个空格。&lt;br&gt;
 这样虽然能解出答案。但是在查找可能的数字上耗费时间较多。&lt;/p&gt;
-&lt;p&gt;后面的Pretty Solution：
+&lt;p&gt;后面的Pretty Solution：&lt;br&gt;
 找到空格后，直接把依次把1-9填入，验证是否重复。反而耗时更少，代码也更简洁。&lt;/p&gt;
 &lt;h3 id=&#34;my-solution&#34;&gt;My solution
 &lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -9516,12 +9516,12 @@ You may assume that there will be only one unique solution.&lt;/p&gt;&lt;/blockq
     &gt;String to Integer (atoi)&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description
 &lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;Implement atoi to convert a string to an integer.
-&lt;br&gt;
-&lt;br&gt;
-&lt;strong&gt;Hint&lt;/strong&gt;: Carefully consider all possible input cases. If you want a challenge, please do not see below and ask yourself what are the &amp;gt; possible input cases.
-&lt;br&gt;
-&lt;br&gt;
+&lt;p&gt;Implement atoi to convert a string to an integer.&lt;br&gt;
+&lt;br&gt;&lt;br&gt;
+&lt;br&gt;&lt;br&gt;
+&lt;strong&gt;Hint&lt;/strong&gt;: Carefully consider all possible input cases. If you want a challenge, please do not see below and ask yourself what are the &amp;gt; possible input cases.&lt;br&gt;
+&lt;br&gt;&lt;br&gt;
+&lt;br&gt;&lt;br&gt;
 &lt;strong&gt;Notes:&lt;/strong&gt; It is intended for this problem to be specified vaguely (ie, no given input specs). You are responsible to gather all the &amp;gt; input requirements up front.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;实现&lt;code&gt;atoi&lt;/code&gt;功能&lt;/p&gt;
 &lt;p&gt;需要注意边界检查&lt;/p&gt;
@@ -9611,13 +9611,13 @@ You may assume that there will be only one unique solution.&lt;/p&gt;&lt;/blockq
     &gt;Reverse Integer&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description
 &lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;Reverse digits of an integer.
-&lt;br&gt;
-&lt;code&gt;Example1: x = 123, return 321&lt;/code&gt;
-&lt;br&gt;
-&lt;code&gt;Example2: x = -123, return -321&lt;/code&gt;
-&lt;br&gt;
-&lt;br&gt;
+&lt;p&gt;Reverse digits of an integer.&lt;br&gt;
+&lt;br&gt;&lt;br&gt;
+&lt;code&gt;Example1: x = 123, return 321&lt;/code&gt;&lt;br&gt;
+&lt;br&gt;&lt;br&gt;
+&lt;code&gt;Example2: x = -123, return -321&lt;/code&gt;&lt;br&gt;
+&lt;br&gt;&lt;br&gt;
+&lt;br&gt;&lt;br&gt;
 The input is assumed to be a 32-bit signed integer. Your function should &lt;strong&gt;return 0 when the reversed integer overflows&lt;/strong&gt;.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;将输入的十进制数倒序输出&lt;/p&gt;
 &lt;h2 id=&#34;solution&#34;&gt;Solution
@@ -9930,7 +9930,7 @@ The input is assumed to be a 32-bit signed integer. Your function should &lt;str
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;blockquote&gt;
-&lt;p&gt;The median is 2.0
+&lt;p&gt;The median is 2.0&lt;br&gt;
 Example 2:&lt;/p&gt;&lt;/blockquote&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -10248,7 +10248,7 @@ Example 2:&lt;/p&gt;&lt;/blockquote&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;blockquote&gt;
-&lt;p&gt;Because nums[0] + nums[1] = 2 + 7 = 9,
+&lt;p&gt;Because nums[0] + nums[1] = 2 + 7 = 9,&lt;br&gt;
 return [0, 1].&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;假定只有&lt;strong&gt;唯一&lt;/strong&gt;解的情况下在数组中找出和为&lt;code&gt;target&lt;/code&gt;的两个数&lt;/p&gt;
 &lt;h2 id=&#34;solution&#34;&gt;Solution

@@ -16,8 +16,8 @@
     &gt;Valid Parentheses&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description
 &lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;Given a string containing just the characters &lt;code&gt;&#39;(&#39;&lt;/code&gt;, &lt;code&gt;&#39;)&#39;&lt;/code&gt;, &lt;code&gt;&#39;{&#39;&lt;/code&gt;, &lt;code&gt;&#39;}&#39;&lt;/code&gt;, &lt;code&gt;&#39;[&#39;&lt;/code&gt; and &lt;code&gt;&#39;]&#39;&lt;/code&gt;, determine if the input string is valid.
-&lt;/br&gt; &lt;/br&gt;
+&lt;p&gt;Given a string containing just the characters &lt;code&gt;&#39;(&#39;&lt;/code&gt;, &lt;code&gt;&#39;)&#39;&lt;/code&gt;, &lt;code&gt;&#39;{&#39;&lt;/code&gt;, &lt;code&gt;&#39;}&#39;&lt;/code&gt;, &lt;code&gt;&#39;[&#39;&lt;/code&gt; and &lt;code&gt;&#39;]&#39;&lt;/code&gt;, determine if the input string is valid.&lt;br&gt;
+&lt;/br&gt; &lt;/br&gt;&lt;br&gt;
 The brackets must close in the correct order, &lt;code&gt;&amp;quot;()&amp;quot;&lt;/code&gt; and &lt;code&gt;&amp;quot;()[]{}&amp;quot;&lt;/code&gt; are all valid but &lt;code&gt;&amp;quot;(]&amp;quot;&lt;/code&gt; and &lt;code&gt;&amp;quot;([)]&amp;quot;&lt;/code&gt; are not.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;给出包含三种括号的字符串，验证括号是否左右匹配&lt;/p&gt;
 &lt;h2 id=&#34;solution&#34;&gt;Solution

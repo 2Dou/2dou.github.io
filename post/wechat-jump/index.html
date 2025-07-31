@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="python实现adb截图模拟点击方式的微信跳一跳外挂">
-<meta name="keywords" content="跳一跳外挂, 微信跳一跳, python"><title>python实现微信跳一跳外挂</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="使用 Python + adb 通过截图、模拟点击方式实现微信跳一跳外挂">
+<meta name="keywords" content="跳一跳, 微信跳一跳, Python, 外挂"><title>Python 实现微信跳一跳外挂</title>
 
 <link rel='canonical' href='https://www.orztu.com/post/wechat-jump/'>
 
-<link rel="stylesheet" href="/scss/style.min.946cca6c6259ef94ac55abfae7c7bf3291ea3ed5eea17ef77500b257217c6710.css"><meta property='og:title' content="python实现微信跳一跳外挂">
-<meta property='og:description' content="python实现adb截图模拟点击方式的微信跳一跳外挂">
+<link rel="stylesheet" href="/scss/style.min.53baf0c0f30218f1c3981785fd89dd9e38bb5e478f90ceebdd6405e78e8e5d58.css"><meta property='og:title' content="Python 实现微信跳一跳外挂">
+<meta property='og:description' content="使用 Python + adb 通过截图、模拟点击方式实现微信跳一跳外挂">
 <meta property='og:url' content='https://www.orztu.com/post/wechat-jump/'>
 <meta property='og:site_name' content='Orztu The Way | Orz途'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='python' /><meta property='article:tag' content='外挂' /><meta property='article:published_time' content='2018-01-08T10:00:41&#43;08:00'/><meta property='article:modified_time' content='2018-01-08T10:00:41&#43;08:00'/>
-<meta name="twitter:title" content="python实现微信跳一跳外挂">
-<meta name="twitter:description" content="python实现adb截图模拟点击方式的微信跳一跳外挂">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Python' /><meta property='article:tag' content='外挂' /><meta property='article:published_time' content='2018-01-08T10:00:41&#43;08:00'/><meta property='article:modified_time' content='2018-01-08T10:00:41&#43;08:00'/>
+<meta name="twitter:title" content="Python 实现微信跳一跳外挂">
+<meta name="twitter:description" content="使用 Python + adb 通过截图、模拟点击方式实现微信跳一跳外挂">
     <link rel="shortcut icon" href="/favicon.ico" />
 
     </head>
@@ -411,8 +411,8 @@ unicode: "ec9d"
     
     <header class="article-category">
         
-            <a href="/categories/coding-life/" style="background-color: #2a6b9dff; color: #fff;">
-                Coding Life
+            <a href="/categories/have-fun/" style="background-color: #b33838ff; color: #fff;">
+                Have Fun
             </a>
         
     </header>
@@ -420,12 +420,12 @@ unicode: "ec9d"
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/post/wechat-jump/">python实现微信跳一跳外挂</a>
+            <a href="/post/wechat-jump/">Python 实现微信跳一跳外挂</a>
         </h2>
     
         
         <h3 class="article-subtitle">
-            python实现adb截图模拟点击方式的微信跳一跳外挂
+            使用 Python &#43; adb 通过截图、模拟点击方式实现微信跳一跳外挂
         </h3>
         
     </div>
@@ -476,14 +476,14 @@ unicode: "ec9d"
     <section class="article-content">
     
     
-    <p>使用python+adb实现微信跳一跳外挂</p>
+    <p>使用 Python + adb 实现微信跳一跳外挂</p>
 <p><a class="link" href="https://github.com/2Dou/JumpJump"  target="_blank" rel="noopener"
     >源码地址</a></p>
 <h2 id="使用方法">使用方法
 </h2><ol>
 <li>
-<p>安卓手机打开USB调试
-打开USB调试方法，进入<code>设置</code>，找到<code>开发者选项</code>，打开并勾选<code>USB调试</code>；
+<p>安卓手机打开USB调试<br>
+打开USB调试方法，进入<code>设置</code>，找到<code>开发者选项</code>，打开并勾选<code>USB调试</code>；<br>
 如果没有<code>开发者选项</code>，进入<code>关于手机</code>，连续点击<code>版本号</code>7次，即可开启<code>开发者选项</code></p>
 </li>
 <li>
@@ -493,7 +493,7 @@ unicode: "ec9d"
 <h2 id="实现原理">实现原理
 </h2><ol>
 <li>
-<p>使用adb命令截图保存到本地
+<p>使用adb命令截图保存到本地<br>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -505,7 +505,7 @@ unicode: "ec9d"
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">adb shell screencap -p <span class="p">|</span> perl -pe <span class="s1">&#39;s/\\x0D\\x0A/\\x0A/g&#39;</span> &gt; screen.png
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># 如果没有perl可以先保存再pull</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 如果没有 perl 可以先保存再pull</span>
 </span></span><span class="line"><span class="cl">adb shell screencap -p /sdcard/screen.png
 </span></span><span class="line"><span class="cl">adb pull /sdcard/screen.png .</span></span></code></pre></td></tr></table>
 </div>
@@ -526,7 +526,7 @@ unicode: "ec9d"
 <li>从上往下查找第一个与背景色不同的点，作为平台顶点</li>
 <li>从顶点开始向左下搜索与顶点相同颜色的点，找到平台左顶点</li>
 <li>从顶点开始向右下搜索与顶点相同颜色的点，找到平台右顶点</li>
-<li>以左右点中点为落点
+<li>以左右点中点为落点<br>
 <img src="/post/wechat-jump/jumpjump-0.png"
 	width="454"
 	height="331"
@@ -547,7 +547,7 @@ unicode: "ec9d"
 <p>其他情况</p>
 <ol>
 <li>同样从上往下查找第一个与背景色不同的点，作为平台顶点</li>
-<li>通过固定斜率0.58、棋子当前位置，计算落点（图中红线交点）
+<li>通过固定斜率0.58、棋子当前位置，计算落点（图中红线交点）<br>
 <img src="/post/wechat-jump/jumpjump-1.png"
 	width="454"
 	height="343"
@@ -681,7 +681,7 @@ unicode: "ec9d"
 </div>
 <h3 id="寻找小圆点">寻找小圆点
 </h3><p>通过圆点颜色RGB(245, 245, 245)寻找落点</p>
-<p>以落点在左边为例：
+<p>以落点在左边为例：<br>
 <img src="/post/wechat-jump/jumpjump-3.png"
 	width="384"
 	height="269"
@@ -699,7 +699,7 @@ unicode: "ec9d"
 <p>通过圆点颜色RGB(245, 245, 245)、斜率K、坐标x，计算斜线上的点并判断颜色</p>
 <p>通常先查找到A点，然后分别向右和向下查找B和C点，以BC线段中点作为落点。</p>
 <p>落点在右边时先搜索到的点A位置稍有不同，但算法相同</p>
-<p>查找点A的代码：
+<p>查找点A的代码：<br>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -746,7 +746,7 @@ unicode: "ec9d"
 <p>首先寻找平台顶点，然后寻找左右顶点，计算平台中心点</p>
 <ol>
 <li>
-<p>寻找平台顶点
+<p>寻找平台顶点<br>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -794,7 +794,7 @@ unicode: "ec9d"
 </li>
 <li>
 <p>搜索左右顶点</p>
-<p>这种方法在某些情形会出现错误，暂未处理。可以通过设定点与点之间的规则排除这些平台（距离、y差值范围等规则）
+<p>这种方法在某些情形会出现错误，暂未处理。可以通过设定点与点之间的规则排除这些平台（距离、y差值范围等规则）<br>
 <img src="/post/wechat-jump/jumpjump-6.png"
 	width="381"
 	height="229"
@@ -808,7 +808,7 @@ unicode: "ec9d"
 		data-flex-grow="166"
 		data-flex-basis="399px"
 	
->
+><br>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -842,7 +842,7 @@ unicode: "ec9d"
 </span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="n">x</span> <span class="o">!=</span> <span class="n">next_top</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">and</span> <span class="n">y</span> <span class="o">!=</span> <span class="n">next_top</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span>
 </span></span><span class="line"><span class="cl">    <span class="n">left</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span></span></span></code></pre></td></tr></table>
 </div>
-</div>
+</div><br>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -946,7 +946,34 @@ unicode: "ec9d"
 
         <span>Licensed under CC BY-NC-SA 4.0</span>
     </section>
-    </footer>
+    
+    <div class="pre-next">
+        
+        
+            
+                
+            
+        
+        
+            <a class="pre-next-btn bg" href="https://www.orztu.com/post/raspbian-install-and-configure/" data-tooltip="树莓派 Raspbian系统安装与基本配置">
+                <i class="fa fa-angle-left"></i>
+                <span>上一篇</span>
+        
+        </a>
+    
+        
+        
+            
+        
+        
+            <a class="pre-next-btn bg" href="https://www.orztu.com/post/text-watermark/" data-tooltip="Python 为图片添加文字水印">
+                <i class="fa fa-angle-left"></i>
+                <span>下一篇</span>
+        
+        </a>
+    </div>
+    
+</footer>
 
 
     
@@ -963,12 +990,12 @@ unicode: "ec9d"
             
                 
 <article class="">
-    <a href="/post/text-watermark/">
+    <a href="/post/popkart-l1-4/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">python为图片添加文字水印</h2>
+            <h2 class="article-title">跑跑卡丁车手游 L1 驾照“下坡漂移”教程</h2>
         </div>
     </a>
 </article>
@@ -976,12 +1003,12 @@ unicode: "ec9d"
             
                 
 <article class="">
-    <a href="/post/wsl-command/">
+    <a href="/post/ffmpeg-commands/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">Git is very slow in WSL</h2>
+            <h2 class="article-title">ffmpeg 命令行</h2>
         </div>
     </a>
 </article>
@@ -989,38 +1016,12 @@ unicode: "ec9d"
             
                 
 <article class="">
-    <a href="/post/little-problem-while-using-cocos2dx-lua/">
+    <a href="/post/raspbian-install-and-configure/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">记一次 Cocos2dx-Lua 闪退</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/post/golang-trace/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">在 Golang 中打印调用栈信息</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/post/lua-table-minify-ii/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">使用元表优化 Lua 配置文件 II</h2>
+            <h2 class="article-title">树莓派 Raspbian系统安装与基本配置</h2>
         </div>
     </a>
 </article>
@@ -1177,7 +1178,7 @@ unicode: "ec9d"
                 src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
                 
                 >
-            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script><script type="text/javascript" src="/ts/custom.6a8259597552f3291e36c8479b75c1a2bb04b275a9768380bf61340e16e02b71.js" defer></script>
 <script>
     (function () {
         const customFont = document.createElement('link');

@@ -7,12 +7,12 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <lastBuildDate>Thu, 10 May 2018 10:54:06 +0800</lastBuildDate><atom:link href="https://www.orztu.com/tags/%E6%B0%B4%E5%8D%B0/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>python为图片添加文字水印</title>
+        <title>Python 为图片添加文字水印</title>
         <link>https://www.orztu.com/post/text-watermark/</link>
         <pubDate>Thu, 10 May 2018 10:54:06 +0800</pubDate>
         
         <guid>https://www.orztu.com/post/text-watermark/</guid>
-        <description>&lt;h2 id=&#34;功能&#34;&gt;功能
+        <description>&lt;img src="https://www.orztu.com/post/text-watermark/text-watermark-test.png" alt="Featured image of post Python 为图片添加文字水印" /&gt;&lt;h2 id=&#34;功能&#34;&gt;功能
 &lt;/h2&gt;&lt;p&gt;使用知名python图片处理库PIL，为图片添加文字水印。&lt;/p&gt;
 &lt;p&gt;步骤：根据文字生成水印图片；将水印图半透明并覆盖在原图上。&lt;/p&gt;
 &lt;h2 id=&#34;实现&#34;&gt;实现

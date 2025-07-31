@@ -107,7 +107,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;可以看到它是通过调用&lt;code&gt;runtime.Stack&lt;/code&gt;获取的调用栈信息，
+&lt;/div&gt;&lt;p&gt;可以看到它是通过调用&lt;code&gt;runtime.Stack&lt;/code&gt;获取的调用栈信息，&lt;br&gt;
 其中第二个参数&lt;code&gt;all&lt;/code&gt;表示是否获取所有 goroutine 的调用栈。&lt;/p&gt;
 &lt;p&gt;可以将第二个参数改为&lt;code&gt;true&lt;/code&gt;然后创建多个 goroutine 查看输出效果。&lt;/p&gt;
 &lt;h2 id=&#34;更可控的调用信息&#34;&gt;更可控的调用信息
@@ -157,7 +157,7 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;h3 id=&#34;runtimecallersskip-int-pc-uintptr-int&#34;&gt;runtime.Callers(skip int, pc []uintptr) int
 &lt;/h3&gt;&lt;p&gt;&lt;code&gt;runtime.Callers&lt;/code&gt;一次可以获取调用栈中多个&lt;code&gt;program counter&lt;/code&gt;。&lt;/p&gt;
-&lt;p&gt;但是第一个参数&lt;code&gt;skip&lt;/code&gt;与上面的&lt;code&gt;runtime.Caller&lt;/code&gt;稍有不同，如果传&lt;code&gt;0&lt;/code&gt;会获取到&lt;code&gt;Callers&lt;/code&gt;函数本身的信息。
+&lt;p&gt;但是第一个参数&lt;code&gt;skip&lt;/code&gt;与上面的&lt;code&gt;runtime.Caller&lt;/code&gt;稍有不同，如果传&lt;code&gt;0&lt;/code&gt;会获取到&lt;code&gt;Callers&lt;/code&gt;函数本身的信息。&lt;br&gt;
 传&lt;code&gt;1&lt;/code&gt;时才与上面的&lt;code&gt;Caller&lt;/code&gt;函数对应。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -365,13 +365,13 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;其中的 &lt;code&gt;import &amp;quot;C&amp;quot;&lt;/code&gt; 表示使用了 CGO 。在这条语句前面的注释是一段 C 语言代码。
-这里就定义了哪些 C 语言函数被引用。也可以在这里直接编写函数并实现。
-&lt;del&gt;因为这个特殊的语法，import &amp;ldquo;C&amp;rdquo; 必须单独一行，不可与其他包一起引用。&lt;/del&gt;
+&lt;p&gt;其中的 &lt;code&gt;import &amp;quot;C&amp;quot;&lt;/code&gt; 表示使用了 CGO 。在这条语句前面的注释是一段 C 语言代码。&lt;br&gt;
+这里就定义了哪些 C 语言函数被引用。也可以在这里直接编写函数并实现。&lt;br&gt;
+&lt;del&gt;因为这个特殊的语法，import &amp;ldquo;C&amp;rdquo; 必须单独一行，不可与其他包一起引用。&lt;/del&gt;&lt;br&gt;
 可以看到在代码中引用了头文件 &lt;code&gt;add.h&lt;/code&gt; 以及 C 标准库的头文件，另外还实现了另一个两数相乘的函数 &lt;code&gt;mul&lt;/code&gt;。&lt;/p&gt;
 &lt;p&gt;在 Golang 中通过使用 &lt;code&gt;C.xxx&lt;/code&gt; 的方式调用 C 函数。&lt;code&gt;HelloWorld&lt;/code&gt; 展示了对库函数的调用。&lt;code&gt;Add&lt;/code&gt; 和 &lt;code&gt;Mul&lt;/code&gt; 展示了对自定义函数的调用。&lt;/p&gt;
 &lt;p&gt;因为Golang 和 C 有各自的变量类型。所以&lt;strong&gt;传参时候需要进行类型转换&lt;/strong&gt;。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;HelloWorld&lt;/code&gt; 在传参时使用 &lt;code&gt;C.CString&lt;/code&gt; 将 Golang 字符串类型转换为 C 语言类型。
+&lt;p&gt;&lt;code&gt;HelloWorld&lt;/code&gt; 在传参时使用 &lt;code&gt;C.CString&lt;/code&gt; 将 Golang 字符串类型转换为 C 语言类型。&lt;br&gt;
 因为 &lt;code&gt;C.CString&lt;/code&gt; 是在堆上分配空间存放字符串，需要调用者自己释放，所以最后调用 &lt;code&gt;C.free&lt;/code&gt; 释放该字符串。&lt;/p&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://chai2010.gitbooks.io/advanced-go-programming-book/content/ch2-cgo/ch2-03-cgo-types.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;点击这里&lt;/a&gt;获取更多类型转换的知识。&lt;/p&gt;
@@ -566,9 +566,9 @@
 &lt;p&gt;&lt;code&gt;govendor list +e&lt;/code&gt;: 查看当前项目的依赖但是未被添加到&lt;code&gt;vendor&lt;/code&gt;中的包&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;govendor add +e&lt;/code&gt;: 添加依赖的包。如果&lt;code&gt;vendor.json&lt;/code&gt;中存在，但是&lt;code&gt;vendor&lt;/code&gt;目录下不存在（即&lt;code&gt;govendor status&lt;/code&gt;显示缺失）的包也会被重新添加&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;govendor remove +u&lt;/code&gt;: 删除在&lt;code&gt;vendor&lt;/code&gt;下但是未依赖的包&lt;/p&gt;
-&lt;p&gt;在实际过程中，有部分包是团队的公共包。
+&lt;p&gt;在实际过程中，有部分包是团队的公共包。&lt;br&gt;
 这部分包通常有自己的单独项目，并且已经被我们添加到&lt;code&gt;$GOPATH&lt;/code&gt;下，可能就不需要添加到当前项目的&lt;code&gt;vendor&lt;/code&gt;下。&lt;/p&gt;
-&lt;p&gt;这时候可以结合&lt;code&gt;list&lt;/code&gt;和&lt;code&gt;add&lt;/code&gt;来使用，
+&lt;p&gt;这时候可以结合&lt;code&gt;list&lt;/code&gt;和&lt;code&gt;add&lt;/code&gt;来使用，&lt;br&gt;
 先用&lt;code&gt;list -no-status +e&lt;/code&gt;列出依赖包，然后使用&lt;code&gt;grep&lt;/code&gt;过滤，再调用&lt;code&gt;add&lt;/code&gt;命令添加：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -694,7 +694,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;输出：
+&lt;p&gt;输出：&lt;br&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -773,7 +773,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;输出：
+&lt;p&gt;输出：&lt;br&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1

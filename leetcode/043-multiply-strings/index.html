@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://www.orztu.com/leetcode/043-multiply-strings/'>
 
-<link rel="stylesheet" href="/scss/style.min.946cca6c6259ef94ac55abfae7c7bf3291ea3ed5eea17ef77500b257217c6710.css"><meta property='og:title' content="LeetCode 43. Multiply Strings">
+<link rel="stylesheet" href="/scss/style.min.53baf0c0f30218f1c3981785fd89dd9e38bb5e478f90ceebdd6405e78e8e5d58.css"><meta property='og:title' content="LeetCode 43. Multiply Strings">
 <meta property='og:description' content="LeetCode 练习 43. Multiply Strings - Answer LeetCode编程练习解答">
 <meta property='og:url' content='https://www.orztu.com/leetcode/043-multiply-strings/'>
 <meta property='og:site_name' content='Orztu The Way | Orz途'>
@@ -472,10 +472,10 @@ unicode: "ec9d"
 </h2><blockquote>
 <p>Given two non-negative integers <code>num1</code> and <code>num2</code> represented as strings, return the product of <code>num1</code> and <code>num2</code>, also represented as a string.</p>
 <p><strong>Example 1:</strong></p>
-<p>Input: num1 = &ldquo;2&rdquo;, num2 = &ldquo;3&rdquo;
+<p>Input: num1 = &ldquo;2&rdquo;, num2 = &ldquo;3&rdquo;<br>
 Output: &ldquo;6&rdquo;</p>
 <p><strong>Example 2:</strong></p>
-<p>Input: num1 = &ldquo;123&rdquo;, num2 = &ldquo;456&rdquo;
+<p>Input: num1 = &ldquo;123&rdquo;, num2 = &ldquo;456&rdquo;<br>
 Output: &ldquo;56088&rdquo;</p></blockquote>
 <p>将两个字符串表示的数字相乘（大数相乘）。</p>
 <blockquote>
@@ -488,8 +488,8 @@ Output: &ldquo;56088&rdquo;</p></blockquote>
 </ol></blockquote>
 <p>实现大数相乘：以<code>string</code>的形式给出两个非负整数，求乘积。</p>
 <h2 id="solution">Solution
-</h2><p>我在实现这个乘法时，按照手写计算的方式，每次按位相乘之后记录进位然后写下当前位。
-然后把当前位结果加上前一位的结果并存为<code>byte</code>。每次外循环都会做一次大数加法，将乘积结果累加。
+</h2><p>我在实现这个乘法时，按照手写计算的方式，每次按位相乘之后记录进位然后写下当前位。<br>
+然后把当前位结果加上前一位的结果并存为<code>byte</code>。每次外循环都会做一次大数加法，将乘积结果累加。<br>
 效率很不理想：40ms。</p>
 <p>在看了别人的算法之后，重新实现了一遍。</p>
 <p>先将每一位的乘法结果保存，最后再按位相加并处理进位。</p>
@@ -616,7 +616,32 @@ Output: &ldquo;56088&rdquo;</p></blockquote>
 
         <span>Licensed under CC BY-NC-SA 4.0</span>
     </section>
-    </footer>
+    
+    <div class="pre-next">
+        
+        
+            
+        
+        
+            <a class="pre-next-btn bg" href="https://www.orztu.com/leetcode/040-combination-sum-ii/" data-tooltip="LeetCode 40. Combination Sum II">
+                <i class="fa fa-angle-left"></i>
+                <span>上一篇</span>
+        
+        </a>
+    
+        
+        
+            
+        
+        
+            <a class="pre-next-btn bg" href="https://www.orztu.com/leetcode/041-first-missing-positive/" data-tooltip="LeetCode 41. First Missing Positive">
+                <i class="fa fa-angle-left"></i>
+                <span>下一篇</span>
+        
+        </a>
+    </div>
+    
+</footer>
 
 
     
@@ -847,7 +872,7 @@ Output: &ldquo;56088&rdquo;</p></blockquote>
                 src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
                 
                 >
-            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script><script type="text/javascript" src="/ts/custom.6a8259597552f3291e36c8479b75c1a2bb04b275a9768380bf61340e16e02b71.js" defer></script>
 <script>
     (function () {
         const customFont = document.createElement('link');

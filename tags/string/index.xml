@@ -770,7 +770,7 @@
 &lt;h2 id=&#34;solution&#34;&gt;Solution
 &lt;/h2&gt;&lt;ol&gt;
 &lt;li&gt;
-&lt;p&gt;设两个指针表示子串的首尾：&lt;code&gt;left&lt;/code&gt;，&lt;code&gt;right&lt;/code&gt;：
+&lt;p&gt;设两个指针表示子串的首尾：&lt;code&gt;left&lt;/code&gt;，&lt;code&gt;right&lt;/code&gt;：&lt;br&gt;
 &lt;img src=&#34;https://www.orztu.com/images/leetcode/076_Minimum_Window_Substring_1.png&#34;
 	
 	
@@ -781,7 +781,7 @@
 &gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;code&gt;right&lt;/code&gt;向右移动扩展子串，直到子串包含&lt;code&gt;T&lt;/code&gt;：
+&lt;p&gt;&lt;code&gt;right&lt;/code&gt;向右移动扩展子串，直到子串包含&lt;code&gt;T&lt;/code&gt;：&lt;br&gt;
 &lt;img src=&#34;https://www.orztu.com/images/leetcode/076_Minimum_Window_Substring_2.png&#34;
 	
 	
@@ -792,7 +792,7 @@
 &gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;code&gt;left&lt;/code&gt;向右移动收缩子串，直到最短满足&lt;code&gt;T&lt;/code&gt;，记录子串：
+&lt;p&gt;&lt;code&gt;left&lt;/code&gt;向右移动收缩子串，直到最短满足&lt;code&gt;T&lt;/code&gt;，记录子串：&lt;br&gt;
 &lt;img src=&#34;https://www.orztu.com/images/leetcode/076_Minimum_Window_Substring_3.png&#34;
 	
 	
@@ -803,7 +803,7 @@
 &gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;code&gt;left&lt;/code&gt;再次右移，这时子串不再满足包含&lt;code&gt;T&lt;/code&gt;：
+&lt;p&gt;&lt;code&gt;left&lt;/code&gt;再次右移，这时子串不再满足包含&lt;code&gt;T&lt;/code&gt;：&lt;br&gt;
 &lt;img src=&#34;https://www.orztu.com/images/leetcode/076_Minimum_Window_Substring_4.png&#34;
 	
 	
@@ -814,7 +814,7 @@
 &gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;code&gt;right&lt;/code&gt;从重复第二步骤，找到新的子串：
+&lt;p&gt;&lt;code&gt;right&lt;/code&gt;从重复第二步骤，找到新的子串：&lt;br&gt;
 &lt;img src=&#34;https://www.orztu.com/images/leetcode/076_Minimum_Window_Substring_5.png&#34;
 	
 	
@@ -825,7 +825,7 @@
 &gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;再次收缩子串，与之前的子串比较是否更短：
+&lt;p&gt;再次收缩子串，与之前的子串比较是否更短：&lt;br&gt;
 &lt;img src=&#34;https://www.orztu.com/images/leetcode/076_Minimum_Window_Substring_6.png&#34;
 	
 	
@@ -987,11 +987,11 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;/blockquote&gt;
-&lt;p&gt;Input: word1 = &amp;ldquo;horse&amp;rdquo;, word2 = &amp;ldquo;ros&amp;rdquo;
-Output: 3
-Explanation:
-horse -&amp;gt; rorse (replace &amp;lsquo;h&amp;rsquo; with &amp;lsquo;r&amp;rsquo;)
-rorse -&amp;gt; rose (remove &amp;lsquo;r&amp;rsquo;)
+&lt;p&gt;Input: word1 = &amp;ldquo;horse&amp;rdquo;, word2 = &amp;ldquo;ros&amp;rdquo;&lt;br&gt;
+Output: 3&lt;br&gt;
+Explanation:&lt;br&gt;
+horse -&amp;gt; rorse (replace &amp;lsquo;h&amp;rsquo; with &amp;lsquo;r&amp;rsquo;)&lt;br&gt;
+rorse -&amp;gt; rose (remove &amp;lsquo;r&amp;rsquo;)&lt;br&gt;
 rose -&amp;gt; ros (remove &amp;rsquo;e&amp;rsquo;)&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -1716,10 +1716,10 @@ rose -&amp;gt; ros (remove &amp;rsquo;e&amp;rsquo;)&lt;/p&gt;
 &lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;Given two non-negative integers &lt;code&gt;num1&lt;/code&gt; and &lt;code&gt;num2&lt;/code&gt; represented as strings, return the product of &lt;code&gt;num1&lt;/code&gt; and &lt;code&gt;num2&lt;/code&gt;, also represented as a string.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Example 1:&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Input: num1 = &amp;ldquo;2&amp;rdquo;, num2 = &amp;ldquo;3&amp;rdquo;
+&lt;p&gt;Input: num1 = &amp;ldquo;2&amp;rdquo;, num2 = &amp;ldquo;3&amp;rdquo;&lt;br&gt;
 Output: &amp;ldquo;6&amp;rdquo;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Example 2:&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Input: num1 = &amp;ldquo;123&amp;rdquo;, num2 = &amp;ldquo;456&amp;rdquo;
+&lt;p&gt;Input: num1 = &amp;ldquo;123&amp;rdquo;, num2 = &amp;ldquo;456&amp;rdquo;&lt;br&gt;
 Output: &amp;ldquo;56088&amp;rdquo;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;将两个字符串表示的数字相乘（大数相乘）。&lt;/p&gt;
 &lt;blockquote&gt;
@@ -1732,8 +1732,8 @@ Output: &amp;ldquo;56088&amp;rdquo;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;/ol&gt;&lt;/blockquote&gt;
 &lt;p&gt;实现大数相乘：以&lt;code&gt;string&lt;/code&gt;的形式给出两个非负整数，求乘积。&lt;/p&gt;
 &lt;h2 id=&#34;solution&#34;&gt;Solution
-&lt;/h2&gt;&lt;p&gt;我在实现这个乘法时，按照手写计算的方式，每次按位相乘之后记录进位然后写下当前位。
-然后把当前位结果加上前一位的结果并存为&lt;code&gt;byte&lt;/code&gt;。每次外循环都会做一次大数加法，将乘积结果累加。
+&lt;/h2&gt;&lt;p&gt;我在实现这个乘法时，按照手写计算的方式，每次按位相乘之后记录进位然后写下当前位。&lt;br&gt;
+然后把当前位结果加上前一位的结果并存为&lt;code&gt;byte&lt;/code&gt;。每次外循环都会做一次大数加法，将乘积结果累加。&lt;br&gt;
 效率很不理想：40ms。&lt;/p&gt;
 &lt;p&gt;在看了别人的算法之后，重新实现了一遍。&lt;/p&gt;
 &lt;p&gt;先将每一位的乘法结果保存，最后再按位相加并处理进位。&lt;/p&gt;
@@ -1841,8 +1841,8 @@ Output: &amp;ldquo;56088&amp;rdquo;&lt;/p&gt;&lt;/blockquote&gt;
     &gt;Longest Valid Parentheses&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description
 &lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;Given a string containing just the characters &lt;code&gt;&#39;(&#39;&lt;/code&gt; and &lt;code&gt;&#39;)&#39;&lt;/code&gt;, find the length of the longest valid (well-formed) parentheses substring.
-&lt;br&gt;&lt;br&gt;
+&lt;p&gt;Given a string containing just the characters &lt;code&gt;&#39;(&#39;&lt;/code&gt; and &lt;code&gt;&#39;)&#39;&lt;/code&gt;, find the length of the longest valid (well-formed) parentheses substring.&lt;br&gt;
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
 &lt;strong&gt;Example 1:&lt;/strong&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -2031,8 +2031,8 @@ Explanation: The longest valid parentheses substring is &#34;()()&#34;
     &gt;Valid Parentheses&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description
 &lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;Given a string containing just the characters &lt;code&gt;&#39;(&#39;&lt;/code&gt;, &lt;code&gt;&#39;)&#39;&lt;/code&gt;, &lt;code&gt;&#39;{&#39;&lt;/code&gt;, &lt;code&gt;&#39;}&#39;&lt;/code&gt;, &lt;code&gt;&#39;[&#39;&lt;/code&gt; and &lt;code&gt;&#39;]&#39;&lt;/code&gt;, determine if the input string is valid.
-&lt;/br&gt; &lt;/br&gt;
+&lt;p&gt;Given a string containing just the characters &lt;code&gt;&#39;(&#39;&lt;/code&gt;, &lt;code&gt;&#39;)&#39;&lt;/code&gt;, &lt;code&gt;&#39;{&#39;&lt;/code&gt;, &lt;code&gt;&#39;}&#39;&lt;/code&gt;, &lt;code&gt;&#39;[&#39;&lt;/code&gt; and &lt;code&gt;&#39;]&#39;&lt;/code&gt;, determine if the input string is valid.&lt;br&gt;
+&lt;/br&gt; &lt;/br&gt;&lt;br&gt;
 The brackets must close in the correct order, &lt;code&gt;&amp;quot;()&amp;quot;&lt;/code&gt; and &lt;code&gt;&amp;quot;()[]{}&amp;quot;&lt;/code&gt; are all valid but &lt;code&gt;&amp;quot;(]&amp;quot;&lt;/code&gt; and &lt;code&gt;&amp;quot;([)]&amp;quot;&lt;/code&gt; are not.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;给出包含三种括号的字符串，验证括号是否左右匹配&lt;/p&gt;
 &lt;h2 id=&#34;solution&#34;&gt;Solution
@@ -2250,8 +2250,8 @@ The brackets must close in the correct order, &lt;code&gt;&amp;quot;()&amp;quot;
     &gt;Roman to Integer&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description
 &lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;Given a roman numeral, convert it to an integer.&lt;br&gt;
-&lt;br&gt;
+&lt;p&gt;Given a roman numeral, convert it to an integer.&lt;br&gt;&lt;br&gt;
+&lt;br&gt;&lt;br&gt;
 Input is guaranteed to be within the range from 1 to 3999.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;将罗马数字转换成整型。&lt;/p&gt;
 &lt;h2 id=&#34;solution&#34;&gt;Solution
@@ -2334,8 +2334,8 @@ Input is guaranteed to be within the range from 1 to 3999.&lt;/p&gt;&lt;/blockqu
     &gt;Integer to Roman&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description
 &lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;Given an integer, convert it to a roman numeral. &lt;br&gt;
-&lt;br&gt;
+&lt;p&gt;Given an integer, convert it to a roman numeral. &lt;br&gt;&lt;br&gt;
+&lt;br&gt;&lt;br&gt;
 Input is guaranteed to be within the range from 1 to 3999.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;将整型转换成罗马数字形式:&lt;/p&gt;
 &lt;table&gt;
@@ -2566,12 +2566,12 @@ Input is guaranteed to be within the range from 1 to 3999.&lt;/p&gt;&lt;/blockqu
     &gt;String to Integer (atoi)&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description
 &lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;Implement atoi to convert a string to an integer.
-&lt;br&gt;
-&lt;br&gt;
-&lt;strong&gt;Hint&lt;/strong&gt;: Carefully consider all possible input cases. If you want a challenge, please do not see below and ask yourself what are the &amp;gt; possible input cases.
-&lt;br&gt;
-&lt;br&gt;
+&lt;p&gt;Implement atoi to convert a string to an integer.&lt;br&gt;
+&lt;br&gt;&lt;br&gt;
+&lt;br&gt;&lt;br&gt;
+&lt;strong&gt;Hint&lt;/strong&gt;: Carefully consider all possible input cases. If you want a challenge, please do not see below and ask yourself what are the &amp;gt; possible input cases.&lt;br&gt;
+&lt;br&gt;&lt;br&gt;
+&lt;br&gt;&lt;br&gt;
 &lt;strong&gt;Notes:&lt;/strong&gt; It is intended for this problem to be specified vaguely (ie, no given input specs). You are responsible to gather all the &amp;gt; input requirements up front.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;实现&lt;code&gt;atoi&lt;/code&gt;功能&lt;/p&gt;
 &lt;p&gt;需要注意边界检查&lt;/p&gt;

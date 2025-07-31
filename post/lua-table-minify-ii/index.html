@@ -2,11 +2,11 @@
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="上回提到元表优化 Lua 配置文件，以减少重复字段，节省内存开销。\n除了这种直接地减少内存开销的方法，使用元表还能实现数据的延迟加载，从另一个角度节约内存。\n">
-<meta name="keywords" content="Lua, 元表, 配置文件优化, 优化"><title>使用元表优化 Lua 配置文件 II</title>
+<meta name="keywords" content="Lua, 元表, metatable, 配置文件优化, 优化"><title>使用元表优化 Lua 配置文件 II</title>
 
 <link rel='canonical' href='https://www.orztu.com/post/lua-table-minify-ii/'>
 
-<link rel="stylesheet" href="/scss/style.min.946cca6c6259ef94ac55abfae7c7bf3291ea3ed5eea17ef77500b257217c6710.css"><meta property='og:title' content="使用元表优化 Lua 配置文件 II">
+<link rel="stylesheet" href="/scss/style.min.53baf0c0f30218f1c3981785fd89dd9e38bb5e478f90ceebdd6405e78e8e5d58.css"><meta property='og:title' content="使用元表优化 Lua 配置文件 II">
 <meta property='og:description' content="上回提到元表优化 Lua 配置文件，以减少重复字段，节省内存开销。\n除了这种直接地减少内存开销的方法，使用元表还能实现数据的延迟加载，从另一个角度节约内存。\n">
 <meta property='og:url' content='https://www.orztu.com/post/lua-table-minify-ii/'>
 <meta property='og:site_name' content='Orztu The Way | Orz途'>
@@ -503,12 +503,12 @@ unicode: "ec9d"
 </span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
 </div>
 </div>
-<p>上面依然是最常见的道具表，所有道具都配置在同一个表中，初始化时会全部加载进内存。
+<p>上面依然是最常见的道具表，所有道具都配置在同一个表中，初始化时会全部加载进内存。<br>
 然而大多数道具是玩家并不拥有的，在内存中长期停留浪费空间。</p>
 <p>通过使用元表，我们能做到每个道具按需（延迟）加载。</p>
 <ol>
 <li>
-<p>首先清空表数据，使用元表的<code>__index</code>方法实现延迟加载：
+<p>首先清空表数据，使用元表的<code>__index</code>方法实现延迟加载：<br>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -539,7 +539,7 @@ unicode: "ec9d"
 </div></p>
 </li>
 <li>
-<p>将各道具数据另外存放——将<code>道具1001</code>单独存放：
+<p>将各道具数据另外存放——将<code>道具1001</code>单独存放：<br>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -565,10 +565,10 @@ unicode: "ec9d"
 </li>
 </ol>
 <h2 id="最后">最后
-</h2><p>上面的代码是每个<code>item</code>单独拆分到一个文件中。
-如果有必要，也可以按照<code>ID</code>进行区间拆分，将多个<code>item</code>放在一个文件中。
+</h2><p>上面的代码是每个<code>item</code>单独拆分到一个文件中。<br>
+如果有必要，也可以按照<code>ID</code>进行区间拆分，将多个<code>item</code>放在一个文件中。<br>
 在<code>__index</code>方法中判断<code>ID</code>落在哪个区间，将该区间数据全部加载。</p>
-<p>同时，拆分后的数据依然可以结合<a class="link" href="/post/lua-table-minify/" >上一篇</a>
+<p>同时，拆分后的数据依然可以结合<a class="link" href="/post/lua-table-minify/" >上一篇</a><br>
 的“默认字段”的方法使用。</p>
     
 
@@ -598,7 +598,32 @@ unicode: "ec9d"
 
         <span>Licensed under CC BY-NC-SA 4.0</span>
     </section>
-    </footer>
+    
+    <div class="pre-next">
+        
+        
+            
+        
+        
+            <a class="pre-next-btn bg" href="https://www.orztu.com/post/lua-table-minify/" data-tooltip="使用元表优化 Lua 配置文件">
+                <i class="fa fa-angle-left"></i>
+                <span>上一篇</span>
+        
+        </a>
+    
+        
+        
+            
+        
+        
+            <a class="pre-next-btn bg" href="https://www.orztu.com/post/golang-trace/" data-tooltip="在 Golang 中打印调用栈信息">
+                <i class="fa fa-angle-left"></i>
+                <span>下一篇</span>
+        
+        </a>
+    </div>
+    
+</footer>
 
 
     
@@ -829,7 +854,7 @@ unicode: "ec9d"
                 src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
                 
                 >
-            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script><script type="text/javascript" src="/ts/custom.6a8259597552f3291e36c8479b75c1a2bb04b275a9768380bf61340e16e02b71.js" defer></script>
 <script>
     (function () {
         const customFont = document.createElement('link');

@@ -148,7 +148,7 @@
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Input:&lt;/strong&gt; 3&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Output:&lt;/strong&gt; 5&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Explanation:&lt;/strong&gt;
+&lt;p&gt;&lt;strong&gt;Explanation:&lt;/strong&gt;&lt;br&gt;
 Given n = 3, there are a total of 5 unique BST&amp;rsquo;s:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;

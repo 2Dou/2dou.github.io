@@ -31,7 +31,7 @@
 		data-flex-basis=&#34;348px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;听说在这里反复提交直到申请成功即可。找了网上的自动提交方法（复制出来CURL提交），发现不好使，curl一直没响应。
+&lt;p&gt;听说在这里反复提交直到申请成功即可。找了网上的自动提交方法（复制出来CURL提交），发现不好使，curl一直没响应。&lt;br&gt;
 但是网页上确实可以反复点击提交的。于是改用自动点击的方式，一夜醒来发现已经申请成功。&lt;/p&gt;
 &lt;p&gt;使用Chrome浏览器，&lt;code&gt;右键-&amp;gt;审查元素&lt;/code&gt;。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://www.orztu.com/post/gvoice-number/gv-1.png&#34;

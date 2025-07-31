@@ -67,7 +67,7 @@
 &lt;/div&gt;&lt;/blockquote&gt;
 &lt;p&gt;给出加数与和数，求出所有组合。&lt;/p&gt;
 &lt;h2 id=&#34;solution&#34;&gt;Solution
-&lt;/h2&gt;&lt;p&gt;思路是与之前做过的查找解的题目相似：
+&lt;/h2&gt;&lt;p&gt;思路是与之前做过的查找解的题目相似：&lt;br&gt;
 把&lt;code&gt;target&lt;/code&gt;减去候选数，得到剩余&lt;code&gt;target&lt;/code&gt;，继续查找，直到&lt;code&gt;target&lt;/code&gt;为&lt;code&gt;0&lt;/code&gt;。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;

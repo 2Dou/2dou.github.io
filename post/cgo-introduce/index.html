@@ -2,15 +2,15 @@
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="简单介绍 CGO 的用法：C 语言和 Golang 相互调用">
-<meta name="keywords" content="Golang, C, 混合编程"><title>CGO —— Golang 与 C 语言混合编程</title>
+<meta name="keywords" content="CGO, Golang, 混合编程"><title>CGO —— Golang 与 C 语言混合编程</title>
 
 <link rel='canonical' href='https://www.orztu.com/post/cgo-introduce/'>
 
-<link rel="stylesheet" href="/scss/style.min.946cca6c6259ef94ac55abfae7c7bf3291ea3ed5eea17ef77500b257217c6710.css"><meta property='og:title' content="CGO —— Golang 与 C 语言混合编程">
+<link rel="stylesheet" href="/scss/style.min.53baf0c0f30218f1c3981785fd89dd9e38bb5e478f90ceebdd6405e78e8e5d58.css"><meta property='og:title' content="CGO —— Golang 与 C 语言混合编程">
 <meta property='og:description' content="简单介绍 CGO 的用法：C 语言和 Golang 相互调用">
 <meta property='og:url' content='https://www.orztu.com/post/cgo-introduce/'>
 <meta property='og:site_name' content='Orztu The Way | Orz途'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Golang' /><meta property='article:tag' content='混合编程' /><meta property='article:published_time' content='2018-09-03T15:56:08&#43;08:00'/><meta property='article:modified_time' content='2018-09-10T09:22:10&#43;08:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Golang' /><meta property='article:tag' content='CGO' /><meta property='article:published_time' content='2018-09-03T15:56:08&#43;08:00'/><meta property='article:modified_time' content='2018-09-10T09:22:10&#43;08:00'/>
 <meta name="twitter:title" content="CGO —— Golang 与 C 语言混合编程">
 <meta name="twitter:description" content="简单介绍 CGO 的用法：C 语言和 Golang 相互调用">
     <link rel="shortcut icon" href="/favicon.ico" />
@@ -585,13 +585,13 @@ unicode: "ec9d"
 </span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
 </div>
 </div>
-<p>其中的 <code>import &quot;C&quot;</code> 表示使用了 CGO 。在这条语句前面的注释是一段 C 语言代码。
-这里就定义了哪些 C 语言函数被引用。也可以在这里直接编写函数并实现。
-<del>因为这个特殊的语法，import &ldquo;C&rdquo; 必须单独一行，不可与其他包一起引用。</del>
+<p>其中的 <code>import &quot;C&quot;</code> 表示使用了 CGO 。在这条语句前面的注释是一段 C 语言代码。<br>
+这里就定义了哪些 C 语言函数被引用。也可以在这里直接编写函数并实现。<br>
+<del>因为这个特殊的语法，import &ldquo;C&rdquo; 必须单独一行，不可与其他包一起引用。</del><br>
 可以看到在代码中引用了头文件 <code>add.h</code> 以及 C 标准库的头文件，另外还实现了另一个两数相乘的函数 <code>mul</code>。</p>
 <p>在 Golang 中通过使用 <code>C.xxx</code> 的方式调用 C 函数。<code>HelloWorld</code> 展示了对库函数的调用。<code>Add</code> 和 <code>Mul</code> 展示了对自定义函数的调用。</p>
 <p>因为Golang 和 C 有各自的变量类型。所以<strong>传参时候需要进行类型转换</strong>。</p>
-<p><code>HelloWorld</code> 在传参时使用 <code>C.CString</code> 将 Golang 字符串类型转换为 C 语言类型。
+<p><code>HelloWorld</code> 在传参时使用 <code>C.CString</code> 将 Golang 字符串类型转换为 C 语言类型。<br>
 因为 <code>C.CString</code> 是在堆上分配空间存放字符串，需要调用者自己释放，所以最后调用 <code>C.free</code> 释放该字符串。</p>
 <p><a class="link" href="https://chai2010.gitbooks.io/advanced-go-programming-book/content/ch2-cgo/ch2-03-cgo-types.html"  target="_blank" rel="noopener"
     >点击这里</a>获取更多类型转换的知识。</p>
@@ -666,7 +666,7 @@ unicode: "ec9d"
         
             <a href="/tags/golang/">Golang</a>
         
-            <a href="/tags/%E6%B7%B7%E5%90%88%E7%BC%96%E7%A8%8B/">混合编程</a>
+            <a href="/tags/cgo/">CGO</a>
         
     </section>
 
@@ -695,7 +695,32 @@ unicode: "ec9d"
         <span>
             最后更新于 2018-09-10 09:22 CST
         </span>
-    </section></footer>
+    </section>
+    <div class="pre-next">
+        
+        
+            
+        
+        
+            <a class="pre-next-btn bg" href="https://www.orztu.com/post/using-govendor/" data-tooltip="govendor 使用">
+                <i class="fa fa-angle-left"></i>
+                <span>上一篇</span>
+        
+        </a>
+    
+        
+        
+            
+        
+        
+            <a class="pre-next-btn bg" href="https://www.orztu.com/post/lua-table-minify/" data-tooltip="使用元表优化 Lua 配置文件">
+                <i class="fa fa-angle-left"></i>
+                <span>下一篇</span>
+        
+        </a>
+    </div>
+    
+</footer>
 
 
     
@@ -718,6 +743,19 @@ unicode: "ec9d"
 
         <div class="article-details">
             <h2 class="article-title">在 Golang 中打印调用栈信息</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/post/using-govendor/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">govendor 使用</h2>
         </div>
     </a>
 </article>
@@ -757,19 +795,6 @@ unicode: "ec9d"
 
         <div class="article-details">
             <h2 class="article-title">记一次 Cocos2dx-Lua 闪退</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/post/lua-table-minify-ii/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">使用元表优化 Lua 配置文件 II</h2>
         </div>
     </a>
 </article>
@@ -926,7 +951,7 @@ unicode: "ec9d"
                 src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
                 
                 >
-            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script><script type="text/javascript" src="/ts/custom.6a8259597552f3291e36c8479b75c1a2bb04b275a9768380bf61340e16e02b71.js" defer></script>
 <script>
     (function () {
         const customFont = document.createElement('link');

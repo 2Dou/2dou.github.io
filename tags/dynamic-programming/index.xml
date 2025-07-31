@@ -193,7 +193,7 @@
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Input:&lt;/strong&gt; 3&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Output:&lt;/strong&gt; 5&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Explanation:&lt;/strong&gt;
+&lt;p&gt;&lt;strong&gt;Explanation:&lt;/strong&gt;&lt;br&gt;
 Given n = 3, there are a total of 5 unique BST&amp;rsquo;s:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -741,7 +741,7 @@ $$ F(n) = \sum_{i=0}^{n}F(i) * F(n-i-1) ; F(0) = 1; $$&lt;div class=&#34;highlig
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;在给出的矩阵中，&lt;code&gt;1&lt;/code&gt;表示元素，&lt;code&gt;0&lt;/code&gt;表示空，找出最大矩形的面积。&lt;/p&gt;
 &lt;h2 id=&#34;solution&#34;&gt;Solution
-&lt;/h2&gt;&lt;p&gt;本题可以利用&lt;a class=&#34;link&#34; href=&#34;https://www.orztu.com/leetcode/084-largest-rectangle-in-histogram/&#34; &gt;《84. Largest Rectangle in Histogram》&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;本题可以利用&lt;a class=&#34;link&#34; href=&#34;https://www.orztu.com/leetcode/084-largest-rectangle-in-histogram/&#34; &gt;《84. Largest Rectangle in Histogram》&lt;/a&gt;&lt;br&gt;
 的代码。&lt;/p&gt;
 &lt;p&gt;下面来看看如何转换成 84 题的直方图求解问题：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -887,11 +887,11 @@ $$ F(n) = \sum_{i=0}^{n}F(i) * F(n-i-1) ; F(0) = 1; $$&lt;div class=&#34;highlig
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;/blockquote&gt;
-&lt;p&gt;Input: word1 = &amp;ldquo;horse&amp;rdquo;, word2 = &amp;ldquo;ros&amp;rdquo;
-Output: 3
-Explanation:
-horse -&amp;gt; rorse (replace &amp;lsquo;h&amp;rsquo; with &amp;lsquo;r&amp;rsquo;)
-rorse -&amp;gt; rose (remove &amp;lsquo;r&amp;rsquo;)
+&lt;p&gt;Input: word1 = &amp;ldquo;horse&amp;rdquo;, word2 = &amp;ldquo;ros&amp;rdquo;&lt;br&gt;
+Output: 3&lt;br&gt;
+Explanation:&lt;br&gt;
+horse -&amp;gt; rorse (replace &amp;lsquo;h&amp;rsquo; with &amp;lsquo;r&amp;rsquo;)&lt;br&gt;
+rorse -&amp;gt; rose (remove &amp;lsquo;r&amp;rsquo;)&lt;br&gt;
 rose -&amp;gt; ros (remove &amp;rsquo;e&amp;rsquo;)&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -1324,7 +1324,7 @@ $$ f(n) = f(n-1) + f(n-2) $$&lt;h3 id=&#34;动态规划dynamic-programming&#34;&
 &lt;p&gt;每个格子的数字表示经过它所需的消耗大小。寻找从左上到右下的最少路径消耗。&lt;/p&gt;
 &lt;h2 id=&#34;solution&#34;&gt;Solution
 &lt;/h2&gt;&lt;h3 id=&#34;似曾相识&#34;&gt;似曾相识
-&lt;/h3&gt;&lt;p&gt;本题与&lt;a class=&#34;link&#34; href=&#34;https://www.orztu.com/leetcode/063-unique-paths-ii/&#34; &gt;《63. Unique Paths II》&lt;/a&gt;
+&lt;/h3&gt;&lt;p&gt;本题与&lt;a class=&#34;link&#34; href=&#34;https://www.orztu.com/leetcode/063-unique-paths-ii/&#34; &gt;《63. Unique Paths II》&lt;/a&gt;&lt;br&gt;
 使用相同的方法：&lt;/p&gt;
 &lt;p&gt;要到达右下角，需要经过左边或者上边的格子，而最少消耗自然是从这两个格子中选择到达它们所需消耗（非它们自身消耗）较少的一个：&lt;/p&gt;
 $$ f(x, y) = cost_{(x,y)} + min(f(x-1, y), f(x, y-1)) $$&lt;p&gt;所以与之前一样，从左上开始往右下分别计算出每个格子的最少消耗，直到最终格子。&lt;/p&gt;
@@ -1488,7 +1488,7 @@ $$ f(x, y) = cost_{(x,y)} + min(f(x-1, y), f(x, y-1)) $$&lt;p&gt;所以与之前
 &lt;p&gt;其中地图中&lt;code&gt;1&lt;/code&gt;表示障碍，无法通过。&lt;/p&gt;
 &lt;h2 id=&#34;solution&#34;&gt;Solution
 &lt;/h2&gt;&lt;h3 id=&#34;动态规划dynamic-programming&#34;&gt;动态规划（Dynamic Programming）
-&lt;/h3&gt;&lt;p&gt;要到达最后一个格子，只能通过它左边和上边两个格子到达，
+&lt;/h3&gt;&lt;p&gt;要到达最后一个格子，只能通过它左边和上边两个格子到达，&lt;br&gt;
 那么达到它的路径数量等于到达左边和上边两个格子的路径数量相加。&lt;/p&gt;
 &lt;p&gt;依此类推，到达左边和上边两个格子的路径数量又分别等于它们的左边和上边两条路径之和。&lt;/p&gt;
 &lt;p&gt;最终我们将反推到第一个格子，它的路径数量只有一条。&lt;/p&gt;
@@ -1649,7 +1649,7 @@ $$ f(x, y) = f(x-1, y) + f(x, y-1) $$&lt;p&gt;通过这个公式可以写出对�
 &lt;blockquote&gt;
 &lt;p&gt;A robot is located at the top-left corner of a m x n grid (marked &amp;lsquo;Start&amp;rsquo; in the diagram below).&lt;/p&gt;
 &lt;p&gt;The robot can only move either down or right at any point in time. The robot is trying to reach the bottom-right corner of the grid (marked &amp;lsquo;Finish&amp;rsquo; in the diagram below).&lt;/p&gt;
-&lt;p&gt;How many possible unique paths are there?
+&lt;p&gt;How many possible unique paths are there?&lt;br&gt;
 &lt;img src=&#34;https://www.orztu.com/images/leetcode/062-unique-paths-1.png&#34;
 	
 	
@@ -1697,9 +1697,9 @@ $$ f(x, y) = f(x-1, y) + f(x, y-1) $$&lt;p&gt;通过这个公式可以写出对�
 &lt;p&gt;在&lt;code&gt;m x n&lt;/code&gt;的方格中，从左上角走到右下角的不同路径有几种？（只允许向右和向下走）&lt;/p&gt;
 &lt;h2 id=&#34;solution&#34;&gt;Solution
 &lt;/h2&gt;&lt;p&gt;这道题目可以转换为数学题：&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;m x n&lt;/code&gt;的方格要从左上角走到右下角，需要经过&lt;code&gt;m - 1&lt;/code&gt;次&lt;code&gt;Right&lt;/code&gt;和&lt;code&gt;n - 1&lt;/code&gt;次&lt;code&gt;Down&lt;/code&gt;操作。
+&lt;p&gt;&lt;code&gt;m x n&lt;/code&gt;的方格要从左上角走到右下角，需要经过&lt;code&gt;m - 1&lt;/code&gt;次&lt;code&gt;Right&lt;/code&gt;和&lt;code&gt;n - 1&lt;/code&gt;次&lt;code&gt;Down&lt;/code&gt;操作。&lt;br&gt;
 所以总共是&lt;code&gt;m + n - 2&lt;/code&gt;次操作，而操作顺序的不同，则对应路径不同。&lt;/p&gt;
-&lt;p&gt;这就转换成了数学的排列问题：&lt;code&gt;C(m + n -2, n - 1)&lt;/code&gt;。
+&lt;p&gt;这就转换成了数学的排列问题：&lt;code&gt;C(m + n -2, n - 1)&lt;/code&gt;。&lt;br&gt;
 在&lt;code&gt;m + n - 2&lt;/code&gt;操作中取&lt;code&gt;Down&lt;/code&gt;操作的位置，其余位置就是&lt;code&gt;Right&lt;/code&gt;操作。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -1768,8 +1768,8 @@ $$ f(x, y) = f(x-1, y) + f(x, y-1) $$&lt;p&gt;通过这个公式可以写出对�
     &gt;Longest Valid Parentheses&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description
 &lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;Given a string containing just the characters &lt;code&gt;&#39;(&#39;&lt;/code&gt; and &lt;code&gt;&#39;)&#39;&lt;/code&gt;, find the length of the longest valid (well-formed) parentheses substring.
-&lt;br&gt;&lt;br&gt;
+&lt;p&gt;Given a string containing just the characters &lt;code&gt;&#39;(&#39;&lt;/code&gt; and &lt;code&gt;&#39;)&#39;&lt;/code&gt;, find the length of the longest valid (well-formed) parentheses substring.&lt;br&gt;
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
 &lt;strong&gt;Example 1:&lt;/strong&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;

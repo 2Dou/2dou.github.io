@@ -379,7 +379,7 @@
 &lt;p&gt;从倒数第&lt;code&gt;k&lt;/code&gt;个结点位置旋转链表：首尾相连，以倒数第&lt;code&gt;k&lt;/code&gt;个结点为新&lt;code&gt;head&lt;/code&gt;。&lt;/p&gt;
 &lt;h2 id=&#34;solution&#34;&gt;Solution
 &lt;/h2&gt;&lt;p&gt;这种寻找链表倒数第&lt;code&gt;k&lt;/code&gt;的方法，通常使用&lt;code&gt;快慢指针&lt;/code&gt;。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;快指针&lt;/code&gt;先前进&lt;code&gt;k&lt;/code&gt;个结点，然后两个指针同时前进，当到&lt;code&gt;快指针&lt;/code&gt;达链表尾部时，
+&lt;p&gt;&lt;code&gt;快指针&lt;/code&gt;先前进&lt;code&gt;k&lt;/code&gt;个结点，然后两个指针同时前进，当到&lt;code&gt;快指针&lt;/code&gt;达链表尾部时，&lt;br&gt;
 两个指针相差&lt;code&gt;k&lt;/code&gt;个结点，此时&lt;code&gt;慢指针&lt;/code&gt;指向倒数第&lt;code&gt;k&lt;/code&gt;个结点。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -472,13 +472,13 @@
     &gt;Reverse Nodes in k-Group&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description
 &lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;Given a linked list, reverse the nodes of a linked list k at a time and return its modified list.&lt;br&gt;
-&lt;br&gt;
-k is a positive integer and is less than or equal to the length of the linked list. If the number of nodes is not a multiple of k then left-out nodes in the end should remain as it is.&lt;br&gt;
-&lt;br&gt;
+&lt;p&gt;Given a linked list, reverse the nodes of a linked list k at a time and return its modified list.&lt;br&gt;&lt;br&gt;
+&lt;br&gt;&lt;br&gt;
+k is a positive integer and is less than or equal to the length of the linked list. If the number of nodes is not a multiple of k then left-out nodes in the end should remain as it is.&lt;br&gt;&lt;br&gt;
+&lt;br&gt;&lt;br&gt;
 You may not alter the values in the nodes, only nodes itself may be changed.&lt;/p&gt;
-&lt;p&gt;Only constant memory is allowed.&lt;br&gt;
-&lt;br&gt;
+&lt;p&gt;Only constant memory is allowed.&lt;br&gt;&lt;br&gt;
+&lt;br&gt;&lt;br&gt;
 For example,&lt;/p&gt;
 &lt;p&gt;Given this linked list: &lt;code&gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;For k = 2, you should return: &lt;code&gt;2-&amp;gt;1-&amp;gt;4-&amp;gt;3-&amp;gt;5&lt;/code&gt;&lt;/p&gt;
@@ -779,8 +779,8 @@ For example,&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   After removing the second node from the end, the linked list becomes 1-&amp;gt;2-&amp;gt;3-&amp;gt;5.
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;:
-Given n will always be valid.
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;:&lt;br&gt;
+Given n will always be valid.&lt;br&gt;
 Try to do this in one pass.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;从链表中删除倒数第n个结点（n必定有效）&lt;/p&gt;
 &lt;h2 id=&#34;solution&#34;&gt;Solution

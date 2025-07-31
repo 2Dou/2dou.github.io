@@ -435,13 +435,13 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;一个长度为&lt;code&gt;n&lt;/code&gt;的数组，总共有&lt;code&gt;n!&lt;/code&gt;种排列。假设第一个数字固定后，剩余&lt;code&gt;(n-1)!&lt;/code&gt;种排列。&lt;/p&gt;
-&lt;p&gt;上图中的字典序树可以更直观的看出，
-在&lt;code&gt;n=4:[1,2,3,4]&lt;/code&gt;中，
-“第零层”包含&lt;code&gt;4!=24&lt;/code&gt;个叶子，
-第一层包含&lt;code&gt;3!=6&lt;/code&gt;个叶子，
+&lt;p&gt;上图中的字典序树可以更直观的看出，&lt;br&gt;
+在&lt;code&gt;n=4:[1,2,3,4]&lt;/code&gt;中，&lt;br&gt;
+“第零层”包含&lt;code&gt;4!=24&lt;/code&gt;个叶子，&lt;br&gt;
+第一层包含&lt;code&gt;3!=6&lt;/code&gt;个叶子，&lt;br&gt;
 第二层包含&lt;code&gt;2!=2&lt;/code&gt;个叶子&amp;hellip;&lt;/p&gt;
 &lt;p&gt;假设现在要查找第&lt;code&gt;k=9&lt;/code&gt;个排列（第九个叶子），第一层应该经过第&lt;code&gt;⌈9/3!⌉&lt;/code&gt; 个分支，即&lt;code&gt;ceil(k/(n-1)!)&lt;/code&gt;。&lt;/p&gt;
-&lt;p&gt;由此公式，可以依次求每层分支序号。
+&lt;p&gt;由此公式，可以依次求每层分支序号。&lt;br&gt;
 比如&lt;code&gt;k=9&lt;/code&gt;，依次经过：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;code&gt;⌈9 / 3!⌉&lt;/code&gt;: &lt;code&gt;2&lt;/code&gt;&lt;/li&gt;
@@ -535,10 +535,10 @@
 &lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;Given two non-negative integers &lt;code&gt;num1&lt;/code&gt; and &lt;code&gt;num2&lt;/code&gt; represented as strings, return the product of &lt;code&gt;num1&lt;/code&gt; and &lt;code&gt;num2&lt;/code&gt;, also represented as a string.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Example 1:&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Input: num1 = &amp;ldquo;2&amp;rdquo;, num2 = &amp;ldquo;3&amp;rdquo;
+&lt;p&gt;Input: num1 = &amp;ldquo;2&amp;rdquo;, num2 = &amp;ldquo;3&amp;rdquo;&lt;br&gt;
 Output: &amp;ldquo;6&amp;rdquo;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Example 2:&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Input: num1 = &amp;ldquo;123&amp;rdquo;, num2 = &amp;ldquo;456&amp;rdquo;
+&lt;p&gt;Input: num1 = &amp;ldquo;123&amp;rdquo;, num2 = &amp;ldquo;456&amp;rdquo;&lt;br&gt;
 Output: &amp;ldquo;56088&amp;rdquo;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;将两个字符串表示的数字相乘（大数相乘）。&lt;/p&gt;
 &lt;blockquote&gt;
@@ -551,8 +551,8 @@ Output: &amp;ldquo;56088&amp;rdquo;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;/ol&gt;&lt;/blockquote&gt;
 &lt;p&gt;实现大数相乘：以&lt;code&gt;string&lt;/code&gt;的形式给出两个非负整数，求乘积。&lt;/p&gt;
 &lt;h2 id=&#34;solution&#34;&gt;Solution
-&lt;/h2&gt;&lt;p&gt;我在实现这个乘法时，按照手写计算的方式，每次按位相乘之后记录进位然后写下当前位。
-然后把当前位结果加上前一位的结果并存为&lt;code&gt;byte&lt;/code&gt;。每次外循环都会做一次大数加法，将乘积结果累加。
+&lt;/h2&gt;&lt;p&gt;我在实现这个乘法时，按照手写计算的方式，每次按位相乘之后记录进位然后写下当前位。&lt;br&gt;
+然后把当前位结果加上前一位的结果并存为&lt;code&gt;byte&lt;/code&gt;。每次外循环都会做一次大数加法，将乘积结果累加。&lt;br&gt;
 效率很不理想：40ms。&lt;/p&gt;
 &lt;p&gt;在看了别人的算法之后，重新实现了一遍。&lt;/p&gt;
 &lt;p&gt;先将每一位的乘法结果保存，最后再按位相加并处理进位。&lt;/p&gt;
@@ -791,8 +791,8 @@ Output: &amp;ldquo;56088&amp;rdquo;&lt;/p&gt;&lt;/blockquote&gt;
     &gt;Roman to Integer&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description
 &lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;Given a roman numeral, convert it to an integer.&lt;br&gt;
-&lt;br&gt;
+&lt;p&gt;Given a roman numeral, convert it to an integer.&lt;br&gt;&lt;br&gt;
+&lt;br&gt;&lt;br&gt;
 Input is guaranteed to be within the range from 1 to 3999.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;将罗马数字转换成整型。&lt;/p&gt;
 &lt;h2 id=&#34;solution&#34;&gt;Solution
@@ -875,8 +875,8 @@ Input is guaranteed to be within the range from 1 to 3999.&lt;/p&gt;&lt;/blockqu
     &gt;Integer to Roman&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description
 &lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;Given an integer, convert it to a roman numeral. &lt;br&gt;
-&lt;br&gt;
+&lt;p&gt;Given an integer, convert it to a roman numeral. &lt;br&gt;&lt;br&gt;
+&lt;br&gt;&lt;br&gt;
 Input is guaranteed to be within the range from 1 to 3999.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;将整型转换成罗马数字形式:&lt;/p&gt;
 &lt;table&gt;
@@ -1087,12 +1087,12 @@ Input is guaranteed to be within the range from 1 to 3999.&lt;/p&gt;&lt;/blockqu
     &gt;String to Integer (atoi)&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description
 &lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;Implement atoi to convert a string to an integer.
-&lt;br&gt;
-&lt;br&gt;
-&lt;strong&gt;Hint&lt;/strong&gt;: Carefully consider all possible input cases. If you want a challenge, please do not see below and ask yourself what are the &amp;gt; possible input cases.
-&lt;br&gt;
-&lt;br&gt;
+&lt;p&gt;Implement atoi to convert a string to an integer.&lt;br&gt;
+&lt;br&gt;&lt;br&gt;
+&lt;br&gt;&lt;br&gt;
+&lt;strong&gt;Hint&lt;/strong&gt;: Carefully consider all possible input cases. If you want a challenge, please do not see below and ask yourself what are the &amp;gt; possible input cases.&lt;br&gt;
+&lt;br&gt;&lt;br&gt;
+&lt;br&gt;&lt;br&gt;
 &lt;strong&gt;Notes:&lt;/strong&gt; It is intended for this problem to be specified vaguely (ie, no given input specs). You are responsible to gather all the &amp;gt; input requirements up front.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;实现&lt;code&gt;atoi&lt;/code&gt;功能&lt;/p&gt;
 &lt;p&gt;需要注意边界检查&lt;/p&gt;
@@ -1182,13 +1182,13 @@ Input is guaranteed to be within the range from 1 to 3999.&lt;/p&gt;&lt;/blockqu
     &gt;Reverse Integer&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description
 &lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;Reverse digits of an integer.
-&lt;br&gt;
-&lt;code&gt;Example1: x = 123, return 321&lt;/code&gt;
-&lt;br&gt;
-&lt;code&gt;Example2: x = -123, return -321&lt;/code&gt;
-&lt;br&gt;
-&lt;br&gt;
+&lt;p&gt;Reverse digits of an integer.&lt;br&gt;
+&lt;br&gt;&lt;br&gt;
+&lt;code&gt;Example1: x = 123, return 321&lt;/code&gt;&lt;br&gt;
+&lt;br&gt;&lt;br&gt;
+&lt;code&gt;Example2: x = -123, return -321&lt;/code&gt;&lt;br&gt;
+&lt;br&gt;&lt;br&gt;
+&lt;br&gt;&lt;br&gt;
 The input is assumed to be a 32-bit signed integer. Your function should &lt;strong&gt;return 0 when the reversed integer overflows&lt;/strong&gt;.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;将输入的十进制数倒序输出&lt;/p&gt;
 &lt;h2 id=&#34;solution&#34;&gt;Solution

@@ -34,7 +34,7 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;A rather straight forward solution is a two-pass algorithm using counting sort.&lt;br&gt;
+&lt;p&gt;A rather straight forward solution is a two-pass algorithm using counting sort.&lt;br&gt;&lt;br&gt;
 First, iterate the array counting number of 0&amp;rsquo;s, 1&amp;rsquo;s, and 2&amp;rsquo;s, then overwrite array with total number of 0&amp;rsquo;s, then 1&amp;rsquo;s and followed by 2&amp;rsquo;s.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;

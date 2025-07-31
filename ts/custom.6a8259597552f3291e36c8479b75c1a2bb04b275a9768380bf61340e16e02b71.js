@@ -1,0 +1,1 @@
+(()=>{document.addEventListener("DOMContentLoaded",()=>{let n=t=>t.replace(/([\u4e00-\u9fa5])(\w)/g,"$1 $2").replace(/(\w)([\u4e00-\u9fa5])/g,"$1 $2"),e=document.getElementsByTagName("main").item(0);e&&(e.innerHTML=n(e.innerHTML))});})();

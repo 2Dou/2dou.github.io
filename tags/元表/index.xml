@@ -53,12 +53,12 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;上面依然是最常见的道具表，所有道具都配置在同一个表中，初始化时会全部加载进内存。
+&lt;p&gt;上面依然是最常见的道具表，所有道具都配置在同一个表中，初始化时会全部加载进内存。&lt;br&gt;
 然而大多数道具是玩家并不拥有的，在内存中长期停留浪费空间。&lt;/p&gt;
 &lt;p&gt;通过使用元表，我们能做到每个道具按需（延迟）加载。&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
-&lt;p&gt;首先清空表数据，使用元表的&lt;code&gt;__index&lt;/code&gt;方法实现延迟加载：
+&lt;p&gt;首先清空表数据，使用元表的&lt;code&gt;__index&lt;/code&gt;方法实现延迟加载：&lt;br&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -89,7 +89,7 @@
 &lt;/div&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;将各道具数据另外存放——将&lt;code&gt;道具1001&lt;/code&gt;单独存放：
+&lt;p&gt;将各道具数据另外存放——将&lt;code&gt;道具1001&lt;/code&gt;单独存放：&lt;br&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -115,10 +115,10 @@
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id=&#34;最后&#34;&gt;最后
-&lt;/h2&gt;&lt;p&gt;上面的代码是每个&lt;code&gt;item&lt;/code&gt;单独拆分到一个文件中。
-如果有必要，也可以按照&lt;code&gt;ID&lt;/code&gt;进行区间拆分，将多个&lt;code&gt;item&lt;/code&gt;放在一个文件中。
+&lt;/h2&gt;&lt;p&gt;上面的代码是每个&lt;code&gt;item&lt;/code&gt;单独拆分到一个文件中。&lt;br&gt;
+如果有必要，也可以按照&lt;code&gt;ID&lt;/code&gt;进行区间拆分，将多个&lt;code&gt;item&lt;/code&gt;放在一个文件中。&lt;br&gt;
 在&lt;code&gt;__index&lt;/code&gt;方法中判断&lt;code&gt;ID&lt;/code&gt;落在哪个区间，将该区间数据全部加载。&lt;/p&gt;
-&lt;p&gt;同时，拆分后的数据依然可以结合&lt;a class=&#34;link&#34; href=&#34;https://www.orztu.com/post/lua-table-minify/&#34; &gt;上一篇&lt;/a&gt;
+&lt;p&gt;同时，拆分后的数据依然可以结合&lt;a class=&#34;link&#34; href=&#34;https://www.orztu.com/post/lua-table-minify/&#34; &gt;上一篇&lt;/a&gt;&lt;br&gt;
 的“默认字段”的方法使用。&lt;/p&gt;</description>
         </item>
         <item>
@@ -194,11 +194,11 @@
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;&lt;code&gt;Excel&lt;/code&gt;配置中每一行数据经过转换后对应&lt;code&gt;Lua-Table&lt;/code&gt;的一个&lt;code&gt;item&lt;/code&gt;。&lt;/p&gt;
-&lt;p&gt;通过观察可以发现其中有部分字段很容易重复，如：&lt;code&gt;colorLv&lt;/code&gt;、&lt;code&gt;ifUse&lt;/code&gt;、&lt;code&gt;useNeedNum&lt;/code&gt;等，
+&lt;p&gt;通过观察可以发现其中有部分字段很容易重复，如：&lt;code&gt;colorLv&lt;/code&gt;、&lt;code&gt;ifUse&lt;/code&gt;、&lt;code&gt;useNeedNum&lt;/code&gt;等，&lt;br&gt;
 这些字段通常为枚举或者有固定的分类，只有几个不同的值，然而配置表中每个&lt;code&gt;item&lt;/code&gt;都需要为这些内容创建一个字段。&lt;/p&gt;
 &lt;h2 id=&#34;优化&#34;&gt;优化
-&lt;/h2&gt;&lt;p&gt;有了这些重复的字段，就给了我们优化的空间。
-通过使用&lt;code&gt;Lua&lt;/code&gt;的元表，可以让每个&lt;code&gt;item&lt;/code&gt;拥有共同的字段而非每个&lt;code&gt;item&lt;/code&gt;去创建一个字段。
+&lt;/h2&gt;&lt;p&gt;有了这些重复的字段，就给了我们优化的空间。&lt;br&gt;
+通过使用&lt;code&gt;Lua&lt;/code&gt;的元表，可以让每个&lt;code&gt;item&lt;/code&gt;拥有共同的字段而非每个&lt;code&gt;item&lt;/code&gt;去创建一个字段。&lt;br&gt;
 从而节省内存开销。&lt;/p&gt;
 &lt;p&gt;如优化之后：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;

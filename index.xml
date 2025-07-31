@@ -22,7 +22,7 @@
         
         <guid>https://www.orztu.com/post/wsl-command/</guid>
         <description>&lt;h1 id=&#34;git&#34;&gt;Git
-&lt;/h1&gt;&lt;p&gt;最近切换到 Windows 工作，使用 WSL 作为命令行方案。但在 WSL 里面安装 git 后，在工程里面执行命令时，总感觉非常缓慢。
+&lt;/h1&gt;&lt;p&gt;最近切换到 Windows 工作，使用 WSL 作为命令行方案。但在 WSL 里面安装 git 后，在工程里面执行命令时，总感觉非常缓慢。&lt;br&gt;
 执行一下 &lt;code&gt;git status&lt;/code&gt; 都要卡好一会儿。&lt;/p&gt;
 &lt;p&gt;经过一番搜索，原因大概是 Windows 的路径索引到 WSL 之间有一个转换导致的？具体没有细看。&lt;/p&gt;
 &lt;p&gt;但找到一个解决方案：&lt;/p&gt;
@@ -49,13 +49,13 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;但这样做需要注意两个环境的&lt;code&gt;.gitconfig&lt;/code&gt;不是共用的。
+&lt;p&gt;但这样做需要注意两个环境的&lt;code&gt;.gitconfig&lt;/code&gt;不是共用的。&lt;br&gt;
 可以配置&lt;code&gt;includeIf&lt;/code&gt;，通过匹配 gitdir， 在 WSL 里面引用 Windows 的 .gitconfig；又在 Windows 里面引用 WSL 的 .gitconfig。&lt;/p&gt;
 &lt;h1 id=&#34;其它&#34;&gt;其它
 &lt;/h1&gt;&lt;p&gt;然后依葫芦画瓢:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;在 WSL 中以用 Windows 环境打开 VS Code (如果是用 code 命令，打开的是 WSL 环境下的)：
+&lt;p&gt;在 WSL 中以用 Windows 环境打开 VS Code (如果是用 code 命令，打开的是 WSL 环境下的)：&lt;br&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -70,7 +70,7 @@
 &lt;/div&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;用 open 打开资源管理器：
+&lt;p&gt;用 open 打开资源管理器：&lt;br&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -403,7 +403,7 @@
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Input:&lt;/strong&gt; 3&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Output:&lt;/strong&gt; 5&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Explanation:&lt;/strong&gt;
+&lt;p&gt;&lt;strong&gt;Explanation:&lt;/strong&gt;&lt;br&gt;
 Given n = 3, there are a total of 5 unique BST&amp;rsquo;s:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -713,6 +713,367 @@ $$ F(n) = \sum_{i=0}^{n}F(i) * F(n-i-1) ; F(0) = 1; $$&lt;div class=&#34;highlig
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;};&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;</description>
+        </item>
+        <item>
+        <title>跑跑卡丁车手游 L1 驾照“下坡漂移”教程</title>
+        <link>https://www.orztu.com/post/popkart-l1-4/</link>
+        <pubDate>Thu, 11 Jul 2019 17:52:17 +0800</pubDate>
+        
+        <guid>https://www.orztu.com/post/popkart-l1-4/</guid>
+        <description>&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;popkart-l1-4-cut.mp4&#34; &gt;&amp;raquo;&amp;gt;视频地址&amp;laquo;&amp;lt;&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;首先我们要在前两个门集满第一管氮气。&lt;br&gt;
+1号门前向右轻打方向调整车头，然后向左拖漂。&lt;br&gt;
+&lt;img src=&#34;https://www.orztu.com/post/popkart-l1-4/popkart-l1-4-01.png&#34;
+	width=&#34;858&#34;
+	height=&#34;396&#34;
+	srcset=&#34;https://www.orztu.com/post/popkart-l1-4/popkart-l1-4-01_hu_c4b4207654cd8bb9.png 480w, https://www.orztu.com/post/popkart-l1-4/popkart-l1-4-01_hu_8532f219721d9cbc.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;216&#34;
+		data-flex-basis=&#34;520px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;右漂经过2号门然后向左拉正车头后使用第一个氮气。&lt;br&gt;
+&lt;img src=&#34;https://www.orztu.com/post/popkart-l1-4/popkart-l1-4-02.png&#34;
+	width=&#34;858&#34;
+	height=&#34;396&#34;
+	srcset=&#34;https://www.orztu.com/post/popkart-l1-4/popkart-l1-4-02_hu_92a3a7883545580.png 480w, https://www.orztu.com/post/popkart-l1-4/popkart-l1-4-02_hu_b4e01eda283fe370.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;216&#34;
+		data-flex-basis=&#34;520px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;立即向右拖漂经过3号门。&lt;br&gt;
+&lt;img src=&#34;https://www.orztu.com/post/popkart-l1-4/popkart-l1-4-03.png&#34;
+	width=&#34;858&#34;
+	height=&#34;396&#34;
+	srcset=&#34;https://www.orztu.com/post/popkart-l1-4/popkart-l1-4-03_hu_241914462688a894.png 480w, https://www.orztu.com/post/popkart-l1-4/popkart-l1-4-03_hu_2ae28575d6723d27.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;216&#34;
+		data-flex-basis=&#34;520px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;氮气满之后马上拉正车头。&lt;br&gt;
+&lt;img src=&#34;https://www.orztu.com/post/popkart-l1-4/popkart-l1-4-04.png&#34;
+	width=&#34;858&#34;
+	height=&#34;396&#34;
+	srcset=&#34;https://www.orztu.com/post/popkart-l1-4/popkart-l1-4-04_hu_7b25b729268816c8.png 480w, https://www.orztu.com/post/popkart-l1-4/popkart-l1-4-04_hu_655376fe84d7a1bd.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;216&#34;
+		data-flex-basis=&#34;520px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;继续使用氮气，然后拖漂经过4号门，同样气满之后回正。&lt;br&gt;
+&lt;img src=&#34;https://www.orztu.com/post/popkart-l1-4/popkart-l1-4-05.png&#34;
+	width=&#34;858&#34;
+	height=&#34;396&#34;
+	srcset=&#34;https://www.orztu.com/post/popkart-l1-4/popkart-l1-4-05_hu_aeb417a6b74e6e35.png 480w, https://www.orztu.com/post/popkart-l1-4/popkart-l1-4-05_hu_bb53bcd89dabd2ff.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;216&#34;
+		data-flex-basis=&#34;520px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;趁氮气未结束，再次拖漂经过5号门，然后马上使用氮气。&lt;br&gt;
+5号门相对前面两个门不用漂那么大。&lt;br&gt;
+&lt;img src=&#34;https://www.orztu.com/post/popkart-l1-4/popkart-l1-4-06.png&#34;
+	width=&#34;858&#34;
+	height=&#34;396&#34;
+	srcset=&#34;https://www.orztu.com/post/popkart-l1-4/popkart-l1-4-06_hu_48ff3597bc41ae9d.png 480w, https://www.orztu.com/post/popkart-l1-4/popkart-l1-4-06_hu_d1c550b2e7087ac9.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;216&#34;
+		data-flex-basis=&#34;520px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;过了5号门氮气满了断位拉头，然后接左漂继续集气并过6号门。&lt;br&gt;
+&lt;img src=&#34;https://www.orztu.com/post/popkart-l1-4/popkart-l1-4-07.png&#34;
+	width=&#34;858&#34;
+	height=&#34;396&#34;
+	srcset=&#34;https://www.orztu.com/post/popkart-l1-4/popkart-l1-4-07_hu_2c3094bbd88c4567.png 480w, https://www.orztu.com/post/popkart-l1-4/popkart-l1-4-07_hu_675aaa728a9642f6.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;216&#34;
+		data-flex-basis=&#34;520px&#34;
+	
+&gt;&lt;br&gt;
+&lt;img src=&#34;https://www.orztu.com/post/popkart-l1-4/popkart-l1-4-08.png&#34;
+	width=&#34;858&#34;
+	height=&#34;396&#34;
+	srcset=&#34;https://www.orztu.com/post/popkart-l1-4/popkart-l1-4-08_hu_a1c4231125b7039.png 480w, https://www.orztu.com/post/popkart-l1-4/popkart-l1-4-08_hu_bc70ef1a9c799deb.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;216&#34;
+		data-flex-basis=&#34;520px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;7号门前这个小坎需要小漂一下，不然落地容易弹起。&lt;br&gt;
+&lt;img src=&#34;https://www.orztu.com/post/popkart-l1-4/popkart-l1-4-09.png&#34;
+	width=&#34;858&#34;
+	height=&#34;396&#34;
+	srcset=&#34;https://www.orztu.com/post/popkart-l1-4/popkart-l1-4-09_hu_797daa4a140e1b4c.png 480w, https://www.orztu.com/post/popkart-l1-4/popkart-l1-4-09_hu_d3d42ae47a41722c.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;216&#34;
+		data-flex-basis=&#34;520px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;落地走一点点之后，向左轻漂，不要太大。&lt;br&gt;
+因为已经有两个氮气了，漂满了这一管就浪费了。&lt;br&gt;
+&lt;img src=&#34;https://www.orztu.com/post/popkart-l1-4/popkart-l1-4-10.png&#34;
+	width=&#34;858&#34;
+	height=&#34;396&#34;
+	srcset=&#34;https://www.orztu.com/post/popkart-l1-4/popkart-l1-4-10_hu_a055789a6c521eeb.png 480w, https://www.orztu.com/post/popkart-l1-4/popkart-l1-4-10_hu_f24fd5ebd193f6f3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;216&#34;
+		data-flex-basis=&#34;520px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;过这个坎向右轻漂，然后落地马上使用氮气。&lt;br&gt;
+&lt;img src=&#34;https://www.orztu.com/post/popkart-l1-4/popkart-l1-4-11.png&#34;
+	width=&#34;858&#34;
+	height=&#34;396&#34;
+	srcset=&#34;https://www.orztu.com/post/popkart-l1-4/popkart-l1-4-11_hu_9adb4d9697eaeca8.png 480w, https://www.orztu.com/post/popkart-l1-4/popkart-l1-4-11_hu_e9caf831296f333d.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;216&#34;
+		data-flex-basis=&#34;520px&#34;
+	
+&gt;&lt;br&gt;
+&lt;img src=&#34;https://www.orztu.com/post/popkart-l1-4/popkart-l1-4-12.png&#34;
+	width=&#34;858&#34;
+	height=&#34;396&#34;
+	srcset=&#34;https://www.orztu.com/post/popkart-l1-4/popkart-l1-4-12_hu_230a0268949fb7f0.png 480w, https://www.orztu.com/post/popkart-l1-4/popkart-l1-4-12_hu_4e1aeaf5696fe60f.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;216&#34;
+		data-flex-basis=&#34;520px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;然后把刚才没满的氮气漂满，这样又有两个氮气了。&lt;br&gt;
+&lt;img src=&#34;https://www.orztu.com/post/popkart-l1-4/popkart-l1-4-13.png&#34;
+	width=&#34;858&#34;
+	height=&#34;396&#34;
+	srcset=&#34;https://www.orztu.com/post/popkart-l1-4/popkart-l1-4-13_hu_b6d49122a1c94bcc.png 480w, https://www.orztu.com/post/popkart-l1-4/popkart-l1-4-13_hu_3b58bbc46435a5fb.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;216&#34;
+		data-flex-basis=&#34;520px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;紧接着再次把氮气漂到快满，以便下坡起跳之后集气。&lt;br&gt;
+&lt;img src=&#34;https://www.orztu.com/post/popkart-l1-4/popkart-l1-4-14.png&#34;
+	width=&#34;858&#34;
+	height=&#34;396&#34;
+	srcset=&#34;https://www.orztu.com/post/popkart-l1-4/popkart-l1-4-14_hu_66cf09c6aed57f24.png 480w, https://www.orztu.com/post/popkart-l1-4/popkart-l1-4-14_hu_85dd118bc821b5da.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;216&#34;
+		data-flex-basis=&#34;520px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;使用氮气加速下坡，起跳前向左轻漂，不要用力。&lt;br&gt;
+&lt;img src=&#34;https://www.orztu.com/post/popkart-l1-4/popkart-l1-4-15.png&#34;
+	width=&#34;858&#34;
+	height=&#34;396&#34;
+	srcset=&#34;https://www.orztu.com/post/popkart-l1-4/popkart-l1-4-15_hu_e57b8240f7c8c5d4.png 480w, https://www.orztu.com/post/popkart-l1-4/popkart-l1-4-15_hu_bf6ade6f930dad22.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;216&#34;
+		data-flex-basis=&#34;520px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;落地之后氮气满了马上使用氮气纠正车头，避免撞墙；&lt;br&gt;
+如果前面失误，这个时候没有氮气，可以再次向左漂避免撞墙。&lt;br&gt;
+&lt;img src=&#34;https://www.orztu.com/post/popkart-l1-4/popkart-l1-4-16.png&#34;
+	width=&#34;858&#34;
+	height=&#34;396&#34;
+	srcset=&#34;https://www.orztu.com/post/popkart-l1-4/popkart-l1-4-16_hu_205ed218fcf0d567.png 480w, https://www.orztu.com/post/popkart-l1-4/popkart-l1-4-16_hu_fa10b64333379593.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;216&#34;
+		data-flex-basis=&#34;520px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;这个坎前向右漂移过弯，同样满了就用氮气回正；&lt;br&gt;
+如果没有氮气可用，就向左拉车头集气，然后使用氮气。&lt;br&gt;
+&lt;img src=&#34;https://www.orztu.com/post/popkart-l1-4/popkart-l1-4-17.png&#34;
+	width=&#34;858&#34;
+	height=&#34;396&#34;
+	srcset=&#34;https://www.orztu.com/post/popkart-l1-4/popkart-l1-4-17_hu_34c101a9689ad241.png 480w, https://www.orztu.com/post/popkart-l1-4/popkart-l1-4-17_hu_a2ec7e5ee8a64b5e.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;216&#34;
+		data-flex-basis=&#34;520px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;下一个弯车速起来就向左拖漂过弯，并集满一管气。&lt;br&gt;
+&lt;img src=&#34;https://www.orztu.com/post/popkart-l1-4/popkart-l1-4-18.png&#34;
+	width=&#34;858&#34;
+	height=&#34;396&#34;
+	srcset=&#34;https://www.orztu.com/post/popkart-l1-4/popkart-l1-4-18_hu_7598551585699c7e.png 480w, https://www.orztu.com/post/popkart-l1-4/popkart-l1-4-18_hu_96d1680260067f49.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;216&#34;
+		data-flex-basis=&#34;520px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;出弯后使用氮气，调整位置，准备从外道插入下一个弯。&lt;br&gt;
+&lt;img src=&#34;https://www.orztu.com/post/popkart-l1-4/popkart-l1-4-19.png&#34;
+	width=&#34;858&#34;
+	height=&#34;396&#34;
+	srcset=&#34;https://www.orztu.com/post/popkart-l1-4/popkart-l1-4-19_hu_25c7f96e48eecd11.png 480w, https://www.orztu.com/post/popkart-l1-4/popkart-l1-4-19_hu_469e272a6be7d97e.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;216&#34;
+		data-flex-basis=&#34;520px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;这个弯向右打死，出弯使用氮气或者断位拉头。-&lt;br&gt;
+&lt;img src=&#34;https://www.orztu.com/post/popkart-l1-4/popkart-l1-4-20.png&#34;
+	width=&#34;858&#34;
+	height=&#34;396&#34;
+	srcset=&#34;https://www.orztu.com/post/popkart-l1-4/popkart-l1-4-20_hu_10d5dfd590bf0228.png 480w, https://www.orztu.com/post/popkart-l1-4/popkart-l1-4-20_hu_7c79de6eaf359216.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;216&#34;
+		data-flex-basis=&#34;520px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;出弯之后等速度起来拖漂过最后一个弯。&lt;br&gt;
+&lt;img src=&#34;https://www.orztu.com/post/popkart-l1-4/popkart-l1-4-21.png&#34;
+	width=&#34;858&#34;
+	height=&#34;396&#34;
+	srcset=&#34;https://www.orztu.com/post/popkart-l1-4/popkart-l1-4-21_hu_8f50ff00b0249430.png 480w, https://www.orztu.com/post/popkart-l1-4/popkart-l1-4-21_hu_75a8d866ec49d926.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;216&#34;
+		data-flex-basis=&#34;520px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;最后一下起跳前向左轻漂。&lt;br&gt;
+&lt;img src=&#34;https://www.orztu.com/post/popkart-l1-4/popkart-l1-4-22.png&#34;
+	width=&#34;858&#34;
+	height=&#34;396&#34;
+	srcset=&#34;https://www.orztu.com/post/popkart-l1-4/popkart-l1-4-22_hu_6c799cf29374d85f.png 480w, https://www.orztu.com/post/popkart-l1-4/popkart-l1-4-22_hu_d501a92b4437b2ab.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;216&#34;
+		data-flex-basis=&#34;520px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;剩余的直线就交给氮气了。&lt;br&gt;
+&lt;img src=&#34;https://www.orztu.com/post/popkart-l1-4/popkart-l1-4-23.png&#34;
+	width=&#34;858&#34;
+	height=&#34;396&#34;
+	srcset=&#34;https://www.orztu.com/post/popkart-l1-4/popkart-l1-4-23_hu_efa62a5c0cde9a4e.png 480w, https://www.orztu.com/post/popkart-l1-4/popkart-l1-4-23_hu_9eb41b6ba0d9933a.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;216&#34;
+		data-flex-basis=&#34;520px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;popkart-l1-4-cut.mp4&#34; &gt;&amp;raquo;&amp;gt;视频地址&amp;laquo;&amp;lt;&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;$ N_{2}O $ 本是笑气，但在跑跑里面被大家称为“氮气”&lt;/p&gt;&lt;/blockquote&gt;</description>
         </item>
         <item>
         <title>ffmpeg 命令行</title>
@@ -1095,7 +1456,7 @@ $$ F(n) = \sum_{i=0}^{n}F(i) * F(n-i-1) ; F(0) = 1; $$&lt;div class=&#34;highlig
 &lt;/div&gt;
 &lt;/div&gt;&lt;/blockquote&gt;
 &lt;p&gt;假设没有重复元素，每个元素有&lt;code&gt;出现&lt;/code&gt;、&lt;code&gt;不出现&lt;/code&gt;两种情况。&lt;/p&gt;
-&lt;p&gt;当有重复元素后，假设重复元素：&lt;code&gt;[2, 2, 2]&lt;/code&gt;，对于元素&lt;code&gt;2&lt;/code&gt;有&lt;code&gt;不出现&lt;/code&gt;、出现一次&lt;code&gt;[2]&lt;/code&gt;、出现两次&lt;code&gt;[2, 2]&lt;/code&gt;、出现三次&lt;code&gt;[2, 2, 2]&lt;/code&gt;
+&lt;p&gt;当有重复元素后，假设重复元素：&lt;code&gt;[2, 2, 2]&lt;/code&gt;，对于元素&lt;code&gt;2&lt;/code&gt;有&lt;code&gt;不出现&lt;/code&gt;、出现一次&lt;code&gt;[2]&lt;/code&gt;、出现两次&lt;code&gt;[2, 2]&lt;/code&gt;、出现三次&lt;code&gt;[2, 2, 2]&lt;/code&gt;&lt;br&gt;
 四种情况。&lt;/p&gt;
 &lt;h2 id=&#34;solution&#34;&gt;Solution
 &lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -1596,7 +1957,7 @@ $$ F(n) = \sum_{i=0}^{n}F(i) * F(n-i-1) ; F(0) = 1; $$&lt;div class=&#34;highlig
         <description>&lt;h2 id=&#34;闪退点&#34;&gt;闪退点
 &lt;/h2&gt;&lt;p&gt;Version: Cocos2dx-Lua 3.16&lt;/p&gt;
 &lt;p&gt;在某个页面修改后，出现闪退。查看修改记录没有特别的地方，均为修改图片或者条件判断。&lt;/p&gt;
-&lt;p&gt;启动 XCode 发现闪退位置出现在&lt;code&gt;void Node::onEnterTransitionDidFinish()&lt;/code&gt;中，
+&lt;p&gt;启动 XCode 发现闪退位置出现在&lt;code&gt;void Node::onEnterTransitionDidFinish()&lt;/code&gt;中，&lt;br&gt;
 在其调用子节点的&lt;code&gt;child-&amp;gt;onEnterTransitionDidFinish()&lt;/code&gt;时，&lt;code&gt;child&lt;/code&gt;指针无效。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -1657,7 +2018,7 @@ $$ F(n) = \sum_{i=0}^{n}F(i) * F(n-i-1) ; F(0) = 1; $$&lt;div class=&#34;highlig
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;           而是往 Scene 上新增结点 addChild(GuideLayer)
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;因为游戏逻辑是只创建一个&lt;code&gt;GuideLayer&lt;/code&gt;，重复创建时会删除上次创建的页面。又怀疑是否创建了两次&lt;code&gt;GuideLayer&lt;/code&gt;。
+&lt;/div&gt;&lt;p&gt;因为游戏逻辑是只创建一个&lt;code&gt;GuideLayer&lt;/code&gt;，重复创建时会删除上次创建的页面。又怀疑是否创建了两次&lt;code&gt;GuideLayer&lt;/code&gt;。&lt;br&gt;
 通过屏蔽代码发现不添加&lt;code&gt;GuideLayer&lt;/code&gt;就不会闪退，但是&lt;code&gt;GuideLayer&lt;/code&gt;的确只创建了一次，不存在删除问题。&lt;/p&gt;
 &lt;h2 id=&#34;真相&#34;&gt;真相
 &lt;/h2&gt;&lt;p&gt;再次分析流程&lt;/p&gt;
@@ -1682,7 +2043,7 @@ $$ F(n) = \sum_{i=0}^{n}F(i) * F(n-i-1) ; F(0) = 1; $$&lt;div class=&#34;highlig
 &lt;/div&gt;&lt;p&gt;总归问题是出现在&lt;code&gt;HomeScene&lt;/code&gt;的&lt;code&gt;_children&lt;/code&gt;容器上，那么既然不是删除，增加结点会导致容器出问题吗？&lt;/p&gt;
 &lt;p&gt;查找代码得到&lt;code&gt;_children&lt;/code&gt;类型为&lt;code&gt;CCVector&lt;/code&gt;，而&lt;code&gt;CCVector&lt;/code&gt;通过&lt;code&gt;std::vector&lt;/code&gt;实现。&lt;/p&gt;
 &lt;p&gt;所以出现了常见的**&lt;em&gt;问题：在容器迭代过程中删除或插入&lt;/em&gt;**。&lt;/p&gt;
-&lt;p&gt;在新增结点往&lt;code&gt;std::vector&lt;/code&gt;插入的时候，恰好超过容量大小，导致扩容。而&lt;code&gt;std::vector&lt;/code&gt;是分配的连续内存，
+&lt;p&gt;在新增结点往&lt;code&gt;std::vector&lt;/code&gt;插入的时候，恰好超过容量大小，导致扩容。而&lt;code&gt;std::vector&lt;/code&gt;是分配的连续内存，&lt;br&gt;
 所以扩容时候会重新分配内存，导致遍历的时候出现&lt;code&gt;child&lt;/code&gt;指针无效。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -1709,7 +2070,7 @@ $$ F(n) = \sum_{i=0}^{n}F(i) * F(n-i-1) ; F(0) = 1; $$&lt;div class=&#34;highlig
 &lt;/div&gt;&lt;h2 id=&#34;else&#34;&gt;else
 &lt;/h2&gt;&lt;p&gt;那么是不是就不能在&lt;code&gt;onEnterTransitionDidFinish&lt;/code&gt;中添加结点呢？&lt;/p&gt;
 &lt;p&gt;在这个项目，许多页面都在&lt;code&gt;onEnterTransitionDidFinish&lt;/code&gt;往&lt;code&gt;HomeScene&lt;/code&gt;添加&lt;code&gt;GuideLayer&lt;/code&gt;；或者在当前页面添加结点，为啥运行了这么久都没发现问题？&lt;/p&gt;
-&lt;p&gt;查看代码可以得到，&lt;code&gt;C++&lt;/code&gt; 中&lt;code&gt;onEnterTransitionDidFinish&lt;/code&gt;是在遍历完子节点后，
+&lt;p&gt;查看代码可以得到，&lt;code&gt;C++&lt;/code&gt; 中&lt;code&gt;onEnterTransitionDidFinish&lt;/code&gt;是在遍历完子节点后，&lt;br&gt;
 再发送消息调用&lt;code&gt;Lua&lt;/code&gt;中的&lt;code&gt;onEnterTransitionDidFinish&lt;/code&gt;的：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -1933,7 +2294,7 @@ $$ F(n) = \sum_{i=0}^{n}F(i) * F(n-i-1) ; F(0) = 1; $$&lt;div class=&#34;highlig
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;可以看到它是通过调用&lt;code&gt;runtime.Stack&lt;/code&gt;获取的调用栈信息，
+&lt;/div&gt;&lt;p&gt;可以看到它是通过调用&lt;code&gt;runtime.Stack&lt;/code&gt;获取的调用栈信息，&lt;br&gt;
 其中第二个参数&lt;code&gt;all&lt;/code&gt;表示是否获取所有 goroutine 的调用栈。&lt;/p&gt;
 &lt;p&gt;可以将第二个参数改为&lt;code&gt;true&lt;/code&gt;然后创建多个 goroutine 查看输出效果。&lt;/p&gt;
 &lt;h2 id=&#34;更可控的调用信息&#34;&gt;更可控的调用信息
@@ -1983,7 +2344,7 @@ $$ F(n) = \sum_{i=0}^{n}F(i) * F(n-i-1) ; F(0) = 1; $$&lt;div class=&#34;highlig
 &lt;/div&gt;
 &lt;/div&gt;&lt;h3 id=&#34;runtimecallersskip-int-pc-uintptr-int&#34;&gt;runtime.Callers(skip int, pc []uintptr) int
 &lt;/h3&gt;&lt;p&gt;&lt;code&gt;runtime.Callers&lt;/code&gt;一次可以获取调用栈中多个&lt;code&gt;program counter&lt;/code&gt;。&lt;/p&gt;
-&lt;p&gt;但是第一个参数&lt;code&gt;skip&lt;/code&gt;与上面的&lt;code&gt;runtime.Caller&lt;/code&gt;稍有不同，如果传&lt;code&gt;0&lt;/code&gt;会获取到&lt;code&gt;Callers&lt;/code&gt;函数本身的信息。
+&lt;p&gt;但是第一个参数&lt;code&gt;skip&lt;/code&gt;与上面的&lt;code&gt;runtime.Caller&lt;/code&gt;稍有不同，如果传&lt;code&gt;0&lt;/code&gt;会获取到&lt;code&gt;Callers&lt;/code&gt;函数本身的信息。&lt;br&gt;
 传&lt;code&gt;1&lt;/code&gt;时才与上面的&lt;code&gt;Caller&lt;/code&gt;函数对应。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -2103,7 +2464,7 @@ $$ F(n) = \sum_{i=0}^{n}F(i) * F(n-i-1) ; F(0) = 1; $$&lt;div class=&#34;highlig
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;在给出的矩阵中，&lt;code&gt;1&lt;/code&gt;表示元素，&lt;code&gt;0&lt;/code&gt;表示空，找出最大矩形的面积。&lt;/p&gt;
 &lt;h2 id=&#34;solution&#34;&gt;Solution
-&lt;/h2&gt;&lt;p&gt;本题可以利用&lt;a class=&#34;link&#34; href=&#34;https://www.orztu.com/leetcode/084-largest-rectangle-in-histogram/&#34; &gt;《84. Largest Rectangle in Histogram》&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;本题可以利用&lt;a class=&#34;link&#34; href=&#34;https://www.orztu.com/leetcode/084-largest-rectangle-in-histogram/&#34; &gt;《84. Largest Rectangle in Histogram》&lt;/a&gt;&lt;br&gt;
 的代码。&lt;/p&gt;
 &lt;p&gt;下面来看看如何转换成 84 题的直方图求解问题：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -2242,7 +2603,7 @@ $$ F(n) = \sum_{i=0}^{n}F(i) * F(n-i-1) ; F(0) = 1; $$&lt;div class=&#34;highlig
 	loading=&#34;lazy&#34;
 	
 	
-&gt;
+&gt;&lt;br&gt;
 Above is a histogram where width of each bar is &lt;code&gt;1&lt;/code&gt;, given height = &lt;code&gt;[2,1,5,6,2,3]&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://www.orztu.com/images/leetcode/084_Largest_Rectangle_in_Histogram_2.png&#34;
 	
@@ -2251,7 +2612,7 @@ Above is a histogram where width of each bar is &lt;code&gt;1&lt;/code&gt;, give
 	loading=&#34;lazy&#34;
 	
 	
-&gt;
+&gt;&lt;br&gt;
 The largest rectangle is shown in the shaded area, which has area = &lt;code&gt;10&lt;/code&gt; unit.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;给出一个直方图，求最大矩形面积。&lt;/p&gt;
 &lt;h2 id=&#34;solution&#34;&gt;Solution
@@ -3022,17 +3383,17 @@ The largest rectangle is shown in the shaded area, which has area = &lt;code&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;/blockquote&gt;
-&lt;p&gt;Input: nums = [1,2,3]
-Output:
-[
-[3],
-[1],
-[2],
-[1,2,3],
-[1,3],
-[2,3],
-[1,2],
-[]
+&lt;p&gt;Input: nums = [1,2,3]&lt;br&gt;
+Output:&lt;br&gt;
+[&lt;br&gt;
+[3],&lt;br&gt;
+[1],&lt;br&gt;
+[2],&lt;br&gt;
+[1,2,3],&lt;br&gt;
+[1,3],&lt;br&gt;
+[2,3],&lt;br&gt;
+[1,2],&lt;br&gt;
+[]&lt;br&gt;
 ]&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -3094,13 +3455,13 @@ Output:
 &lt;/div&gt;
 &lt;/div&gt;&lt;h1 id=&#34;比如题目中的例子&#34;&gt;比如题目中的例子：
 &lt;/h1&gt;&lt;p&gt;nums = [1, 2, 3]&lt;/p&gt;
-&lt;p&gt;when flag=0 b(000) =&amp;gt; []
-when flag=1 b(001) =&amp;gt; [ ,  , 3]
-when flag=2 b(010) =&amp;gt; [ , 2,  ]
-when flag=3 b(011) =&amp;gt; [ , 2, 3]
-when flag=4 b(100) =&amp;gt; [1,  ,  ]
-when flag=5 b(101) =&amp;gt; [1,  , 3]
-when flag=6 b(110) =&amp;gt; [1, 2,  ]
+&lt;p&gt;when flag=0 b(000) =&amp;gt; []&lt;br&gt;
+when flag=1 b(001) =&amp;gt; [ ,  , 3]&lt;br&gt;
+when flag=2 b(010) =&amp;gt; [ , 2,  ]&lt;br&gt;
+when flag=3 b(011) =&amp;gt; [ , 2, 3]&lt;br&gt;
+when flag=4 b(100) =&amp;gt; [1,  ,  ]&lt;br&gt;
+when flag=5 b(101) =&amp;gt; [1,  , 3]&lt;br&gt;
+when flag=6 b(110) =&amp;gt; [1, 2,  ]&lt;br&gt;
 when flag=7 b(111) =&amp;gt; [1, 2, 3]&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -3362,7 +3723,7 @@ when flag=7 b(111) =&amp;gt; [1, 2, 3]&lt;/p&gt;
 &lt;h2 id=&#34;solution&#34;&gt;Solution
 &lt;/h2&gt;&lt;ol&gt;
 &lt;li&gt;
-&lt;p&gt;设两个指针表示子串的首尾：&lt;code&gt;left&lt;/code&gt;，&lt;code&gt;right&lt;/code&gt;：
+&lt;p&gt;设两个指针表示子串的首尾：&lt;code&gt;left&lt;/code&gt;，&lt;code&gt;right&lt;/code&gt;：&lt;br&gt;
 &lt;img src=&#34;https://www.orztu.com/images/leetcode/076_Minimum_Window_Substring_1.png&#34;
 	
 	
@@ -3373,7 +3734,7 @@ when flag=7 b(111) =&amp;gt; [1, 2, 3]&lt;/p&gt;
 &gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;code&gt;right&lt;/code&gt;向右移动扩展子串，直到子串包含&lt;code&gt;T&lt;/code&gt;：
+&lt;p&gt;&lt;code&gt;right&lt;/code&gt;向右移动扩展子串，直到子串包含&lt;code&gt;T&lt;/code&gt;：&lt;br&gt;
 &lt;img src=&#34;https://www.orztu.com/images/leetcode/076_Minimum_Window_Substring_2.png&#34;
 	
 	
@@ -3384,7 +3745,7 @@ when flag=7 b(111) =&amp;gt; [1, 2, 3]&lt;/p&gt;
 &gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;code&gt;left&lt;/code&gt;向右移动收缩子串，直到最短满足&lt;code&gt;T&lt;/code&gt;，记录子串：
+&lt;p&gt;&lt;code&gt;left&lt;/code&gt;向右移动收缩子串，直到最短满足&lt;code&gt;T&lt;/code&gt;，记录子串：&lt;br&gt;
 &lt;img src=&#34;https://www.orztu.com/images/leetcode/076_Minimum_Window_Substring_3.png&#34;
 	
 	
@@ -3395,7 +3756,7 @@ when flag=7 b(111) =&amp;gt; [1, 2, 3]&lt;/p&gt;
 &gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;code&gt;left&lt;/code&gt;再次右移，这时子串不再满足包含&lt;code&gt;T&lt;/code&gt;：
+&lt;p&gt;&lt;code&gt;left&lt;/code&gt;再次右移，这时子串不再满足包含&lt;code&gt;T&lt;/code&gt;：&lt;br&gt;
 &lt;img src=&#34;https://www.orztu.com/images/leetcode/076_Minimum_Window_Substring_4.png&#34;
 	
 	
@@ -3406,7 +3767,7 @@ when flag=7 b(111) =&amp;gt; [1, 2, 3]&lt;/p&gt;
 &gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;code&gt;right&lt;/code&gt;从重复第二步骤，找到新的子串：
+&lt;p&gt;&lt;code&gt;right&lt;/code&gt;从重复第二步骤，找到新的子串：&lt;br&gt;
 &lt;img src=&#34;https://www.orztu.com/images/leetcode/076_Minimum_Window_Substring_5.png&#34;
 	
 	
@@ -3417,7 +3778,7 @@ when flag=7 b(111) =&amp;gt; [1, 2, 3]&lt;/p&gt;
 &gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;再次收缩子串，与之前的子串比较是否更短：
+&lt;p&gt;再次收缩子串，与之前的子串比较是否更短：&lt;br&gt;
 &lt;img src=&#34;https://www.orztu.com/images/leetcode/076_Minimum_Window_Substring_6.png&#34;
 	
 	
@@ -3582,7 +3943,7 @@ when flag=7 b(111) =&amp;gt; [1, 2, 3]&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;A rather straight forward solution is a two-pass algorithm using counting sort.&lt;br&gt;
+&lt;p&gt;A rather straight forward solution is a two-pass algorithm using counting sort.&lt;br&gt;&lt;br&gt;
 First, iterate the array counting number of 0&amp;rsquo;s, 1&amp;rsquo;s, and 2&amp;rsquo;s, then overwrite array with total number of 0&amp;rsquo;s, then 1&amp;rsquo;s and followed by 2&amp;rsquo;s.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -3713,7 +4074,7 @@ First, iterate the array counting number of 0&amp;rsquo;s, 1&amp;rsquo;s, and 2&
 &lt;h2 id=&#34;solution&#34;&gt;Solution
 &lt;/h2&gt;&lt;h3 id=&#34;二分法binary-search&#34;&gt;二分法（Binary Search）
 &lt;/h3&gt;&lt;p&gt;下面代码使用两次二分查找，先找出在哪一行，再对该行进行二分查找。&lt;/p&gt;
-&lt;p&gt;亦有先计算元素个数：&lt;code&gt;total = m x n&lt;/code&gt;，再对&lt;code&gt;total&lt;/code&gt;进行二分查找的解法。
+&lt;p&gt;亦有先计算元素个数：&lt;code&gt;total = m x n&lt;/code&gt;，再对&lt;code&gt;total&lt;/code&gt;进行二分查找的解法。&lt;br&gt;
 设二分时所以为&lt;code&gt;index&lt;/code&gt;，对应元素坐标为&lt;code&gt;(index/m, index%m)&lt;/code&gt;。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -3810,7 +4171,7 @@ First, iterate the array counting number of 0&amp;rsquo;s, 1&amp;rsquo;s, and 2&
 &lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.com/problems/set-matrix-zeroes/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Set Matrix Zeroes&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Given a m x n matrix, if an element is &lt;code&gt;0&lt;/code&gt;, set its entire row and column to 0. Do it in-place.
+&lt;p&gt;Given a m x n matrix, if an element is &lt;code&gt;0&lt;/code&gt;, set its entire row and column to 0. Do it in-place.&lt;br&gt;
 &lt;strong&gt;Example 1:&lt;/strong&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -4043,11 +4404,11 @@ First, iterate the array counting number of 0&amp;rsquo;s, 1&amp;rsquo;s, and 2&
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;/blockquote&gt;
-&lt;p&gt;Input: word1 = &amp;ldquo;horse&amp;rdquo;, word2 = &amp;ldquo;ros&amp;rdquo;
-Output: 3
-Explanation:
-horse -&amp;gt; rorse (replace &amp;lsquo;h&amp;rsquo; with &amp;lsquo;r&amp;rsquo;)
-rorse -&amp;gt; rose (remove &amp;lsquo;r&amp;rsquo;)
+&lt;p&gt;Input: word1 = &amp;ldquo;horse&amp;rdquo;, word2 = &amp;ldquo;ros&amp;rdquo;&lt;br&gt;
+Output: 3&lt;br&gt;
+Explanation:&lt;br&gt;
+horse -&amp;gt; rorse (replace &amp;lsquo;h&amp;rsquo; with &amp;lsquo;r&amp;rsquo;)&lt;br&gt;
+rorse -&amp;gt; rose (remove &amp;lsquo;r&amp;rsquo;)&lt;br&gt;
 rose -&amp;gt; ros (remove &amp;rsquo;e&amp;rsquo;)&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -4955,7 +5316,7 @@ $$ f(n) = f(n-1) + f(n-2) $$&lt;h3 id=&#34;动态规划dynamic-programming&#34;&
 &lt;p&gt;每个格子的数字表示经过它所需的消耗大小。寻找从左上到右下的最少路径消耗。&lt;/p&gt;
 &lt;h2 id=&#34;solution&#34;&gt;Solution
 &lt;/h2&gt;&lt;h3 id=&#34;似曾相识&#34;&gt;似曾相识
-&lt;/h3&gt;&lt;p&gt;本题与&lt;a class=&#34;link&#34; href=&#34;https://www.orztu.com/leetcode/063-unique-paths-ii/&#34; &gt;《63. Unique Paths II》&lt;/a&gt;
+&lt;/h3&gt;&lt;p&gt;本题与&lt;a class=&#34;link&#34; href=&#34;https://www.orztu.com/leetcode/063-unique-paths-ii/&#34; &gt;《63. Unique Paths II》&lt;/a&gt;&lt;br&gt;
 使用相同的方法：&lt;/p&gt;
 &lt;p&gt;要到达右下角，需要经过左边或者上边的格子，而最少消耗自然是从这两个格子中选择到达它们所需消耗（非它们自身消耗）较少的一个：&lt;/p&gt;
 $$ f(x, y) = cost_{(x,y)} + min(f(x-1, y), f(x, y-1)) $$&lt;p&gt;所以与之前一样，从左上开始往右下分别计算出每个格子的最少消耗，直到最终格子。&lt;/p&gt;
@@ -5119,7 +5480,7 @@ $$ f(x, y) = cost_{(x,y)} + min(f(x-1, y), f(x, y-1)) $$&lt;p&gt;所以与之前
 &lt;p&gt;其中地图中&lt;code&gt;1&lt;/code&gt;表示障碍，无法通过。&lt;/p&gt;
 &lt;h2 id=&#34;solution&#34;&gt;Solution
 &lt;/h2&gt;&lt;h3 id=&#34;动态规划dynamic-programming&#34;&gt;动态规划（Dynamic Programming）
-&lt;/h3&gt;&lt;p&gt;要到达最后一个格子，只能通过它左边和上边两个格子到达，
+&lt;/h3&gt;&lt;p&gt;要到达最后一个格子，只能通过它左边和上边两个格子到达，&lt;br&gt;
 那么达到它的路径数量等于到达左边和上边两个格子的路径数量相加。&lt;/p&gt;
 &lt;p&gt;依此类推，到达左边和上边两个格子的路径数量又分别等于它们的左边和上边两条路径之和。&lt;/p&gt;
 &lt;p&gt;最终我们将反推到第一个格子，它的路径数量只有一条。&lt;/p&gt;
@@ -5640,7 +6001,7 @@ $$ f(x, y) = f(x-1, y) + f(x, y-1) $$&lt;p&gt;通过这个公式可以写出对�
 &lt;p&gt;从倒数第&lt;code&gt;k&lt;/code&gt;个结点位置旋转链表：首尾相连，以倒数第&lt;code&gt;k&lt;/code&gt;个结点为新&lt;code&gt;head&lt;/code&gt;。&lt;/p&gt;
 &lt;h2 id=&#34;solution&#34;&gt;Solution
 &lt;/h2&gt;&lt;p&gt;这种寻找链表倒数第&lt;code&gt;k&lt;/code&gt;的方法，通常使用&lt;code&gt;快慢指针&lt;/code&gt;。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;快指针&lt;/code&gt;先前进&lt;code&gt;k&lt;/code&gt;个结点，然后两个指针同时前进，当到&lt;code&gt;快指针&lt;/code&gt;达链表尾部时，
+&lt;p&gt;&lt;code&gt;快指针&lt;/code&gt;先前进&lt;code&gt;k&lt;/code&gt;个结点，然后两个指针同时前进，当到&lt;code&gt;快指针&lt;/code&gt;达链表尾部时，&lt;br&gt;
 两个指针相差&lt;code&gt;k&lt;/code&gt;个结点，此时&lt;code&gt;慢指针&lt;/code&gt;指向倒数第&lt;code&gt;k&lt;/code&gt;个结点。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -5785,13 +6146,13 @@ $$ f(x, y) = f(x-1, y) + f(x, y-1) $$&lt;p&gt;通过这个公式可以写出对�
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;一个长度为&lt;code&gt;n&lt;/code&gt;的数组，总共有&lt;code&gt;n!&lt;/code&gt;种排列。假设第一个数字固定后，剩余&lt;code&gt;(n-1)!&lt;/code&gt;种排列。&lt;/p&gt;
-&lt;p&gt;上图中的字典序树可以更直观的看出，
-在&lt;code&gt;n=4:[1,2,3,4]&lt;/code&gt;中，
-“第零层”包含&lt;code&gt;4!=24&lt;/code&gt;个叶子，
-第一层包含&lt;code&gt;3!=6&lt;/code&gt;个叶子，
+&lt;p&gt;上图中的字典序树可以更直观的看出，&lt;br&gt;
+在&lt;code&gt;n=4:[1,2,3,4]&lt;/code&gt;中，&lt;br&gt;
+“第零层”包含&lt;code&gt;4!=24&lt;/code&gt;个叶子，&lt;br&gt;
+第一层包含&lt;code&gt;3!=6&lt;/code&gt;个叶子，&lt;br&gt;
 第二层包含&lt;code&gt;2!=2&lt;/code&gt;个叶子&amp;hellip;&lt;/p&gt;
 &lt;p&gt;假设现在要查找第&lt;code&gt;k=9&lt;/code&gt;个排列（第九个叶子），第一层应该经过第&lt;code&gt;⌈9/3!⌉&lt;/code&gt; 个分支，即&lt;code&gt;ceil(k/(n-1)!)&lt;/code&gt;。&lt;/p&gt;
-&lt;p&gt;由此公式，可以依次求每层分支序号。
+&lt;p&gt;由此公式，可以依次求每层分支序号。&lt;br&gt;
 比如&lt;code&gt;k=9&lt;/code&gt;，依次经过：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;code&gt;⌈9 / 3!⌉&lt;/code&gt;: &lt;code&gt;2&lt;/code&gt;&lt;/li&gt;
@@ -5920,12 +6281,12 @@ $$ f(x, y) = f(x-1, y) + f(x, y-1) $$&lt;p&gt;通过这个公式可以写出对�
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;上面依然是最常见的道具表，所有道具都配置在同一个表中，初始化时会全部加载进内存。
+&lt;p&gt;上面依然是最常见的道具表，所有道具都配置在同一个表中，初始化时会全部加载进内存。&lt;br&gt;
 然而大多数道具是玩家并不拥有的，在内存中长期停留浪费空间。&lt;/p&gt;
 &lt;p&gt;通过使用元表，我们能做到每个道具按需（延迟）加载。&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
-&lt;p&gt;首先清空表数据，使用元表的&lt;code&gt;__index&lt;/code&gt;方法实现延迟加载：
+&lt;p&gt;首先清空表数据，使用元表的&lt;code&gt;__index&lt;/code&gt;方法实现延迟加载：&lt;br&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -5956,7 +6317,7 @@ $$ f(x, y) = f(x-1, y) + f(x, y-1) $$&lt;p&gt;通过这个公式可以写出对�
 &lt;/div&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;将各道具数据另外存放——将&lt;code&gt;道具1001&lt;/code&gt;单独存放：
+&lt;p&gt;将各道具数据另外存放——将&lt;code&gt;道具1001&lt;/code&gt;单独存放：&lt;br&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -5982,10 +6343,10 @@ $$ f(x, y) = f(x-1, y) + f(x, y-1) $$&lt;p&gt;通过这个公式可以写出对�
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id=&#34;最后&#34;&gt;最后
-&lt;/h2&gt;&lt;p&gt;上面的代码是每个&lt;code&gt;item&lt;/code&gt;单独拆分到一个文件中。
-如果有必要，也可以按照&lt;code&gt;ID&lt;/code&gt;进行区间拆分，将多个&lt;code&gt;item&lt;/code&gt;放在一个文件中。
+&lt;/h2&gt;&lt;p&gt;上面的代码是每个&lt;code&gt;item&lt;/code&gt;单独拆分到一个文件中。&lt;br&gt;
+如果有必要，也可以按照&lt;code&gt;ID&lt;/code&gt;进行区间拆分，将多个&lt;code&gt;item&lt;/code&gt;放在一个文件中。&lt;br&gt;
 在&lt;code&gt;__index&lt;/code&gt;方法中判断&lt;code&gt;ID&lt;/code&gt;落在哪个区间，将该区间数据全部加载。&lt;/p&gt;
-&lt;p&gt;同时，拆分后的数据依然可以结合&lt;a class=&#34;link&#34; href=&#34;https://www.orztu.com/post/lua-table-minify/&#34; &gt;上一篇&lt;/a&gt;
+&lt;p&gt;同时，拆分后的数据依然可以结合&lt;a class=&#34;link&#34; href=&#34;https://www.orztu.com/post/lua-table-minify/&#34; &gt;上一篇&lt;/a&gt;&lt;br&gt;
 的“默认字段”的方法使用。&lt;/p&gt;</description>
         </item>
         <item>
@@ -6556,7 +6917,7 @@ $$ f(x, y) = f(x-1, y) + f(x, y-1) $$&lt;p&gt;通过这个公式可以写出对�
 &lt;/div&gt;&lt;/blockquote&gt;
 &lt;p&gt;从外向内螺旋形遍历矩阵。&lt;/p&gt;
 &lt;h2 id=&#34;solution&#34;&gt;Solution
-&lt;/h2&gt;&lt;p&gt;列出遍历的四方边界：&lt;code&gt;left&lt;/code&gt;，&lt;code&gt;right&lt;/code&gt;，&lt;code&gt;top&lt;/code&gt;，&lt;code&gt;bottom&lt;/code&gt;；
+&lt;/h2&gt;&lt;p&gt;列出遍历的四方边界：&lt;code&gt;left&lt;/code&gt;，&lt;code&gt;right&lt;/code&gt;，&lt;code&gt;top&lt;/code&gt;，&lt;code&gt;bottom&lt;/code&gt;；&lt;br&gt;
 每次循环时，边界向中间收紧。&lt;/p&gt;
 &lt;p&gt;在循环中，分别遍历&lt;code&gt;上边&lt;/code&gt;，&lt;code&gt;右边&lt;/code&gt;，&lt;code&gt;底边&lt;/code&gt;，&lt;code&gt;左边&lt;/code&gt;。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -6757,11 +7118,11 @@ $$ f(x, y) = f(x-1, y) + f(x, y-1) $$&lt;p&gt;通过这个公式可以写出对�
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;&lt;code&gt;Excel&lt;/code&gt;配置中每一行数据经过转换后对应&lt;code&gt;Lua-Table&lt;/code&gt;的一个&lt;code&gt;item&lt;/code&gt;。&lt;/p&gt;
-&lt;p&gt;通过观察可以发现其中有部分字段很容易重复，如：&lt;code&gt;colorLv&lt;/code&gt;、&lt;code&gt;ifUse&lt;/code&gt;、&lt;code&gt;useNeedNum&lt;/code&gt;等，
+&lt;p&gt;通过观察可以发现其中有部分字段很容易重复，如：&lt;code&gt;colorLv&lt;/code&gt;、&lt;code&gt;ifUse&lt;/code&gt;、&lt;code&gt;useNeedNum&lt;/code&gt;等，&lt;br&gt;
 这些字段通常为枚举或者有固定的分类，只有几个不同的值，然而配置表中每个&lt;code&gt;item&lt;/code&gt;都需要为这些内容创建一个字段。&lt;/p&gt;
 &lt;h2 id=&#34;优化&#34;&gt;优化
-&lt;/h2&gt;&lt;p&gt;有了这些重复的字段，就给了我们优化的空间。
-通过使用&lt;code&gt;Lua&lt;/code&gt;的元表，可以让每个&lt;code&gt;item&lt;/code&gt;拥有共同的字段而非每个&lt;code&gt;item&lt;/code&gt;去创建一个字段。
+&lt;/h2&gt;&lt;p&gt;有了这些重复的字段，就给了我们优化的空间。&lt;br&gt;
+通过使用&lt;code&gt;Lua&lt;/code&gt;的元表，可以让每个&lt;code&gt;item&lt;/code&gt;拥有共同的字段而非每个&lt;code&gt;item&lt;/code&gt;去创建一个字段。&lt;br&gt;
 从而节省内存开销。&lt;/p&gt;
 &lt;p&gt;如优化之后：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -6851,7 +7212,7 @@ $$ f(x, y) = f(x-1, y) + f(x, y-1) $$&lt;p&gt;通过这个公式可以写出对�
 &lt;blockquote&gt;
 &lt;p&gt;A robot is located at the top-left corner of a m x n grid (marked &amp;lsquo;Start&amp;rsquo; in the diagram below).&lt;/p&gt;
 &lt;p&gt;The robot can only move either down or right at any point in time. The robot is trying to reach the bottom-right corner of the grid (marked &amp;lsquo;Finish&amp;rsquo; in the diagram below).&lt;/p&gt;
-&lt;p&gt;How many possible unique paths are there?
+&lt;p&gt;How many possible unique paths are there?&lt;br&gt;
 &lt;img src=&#34;https://www.orztu.com/images/leetcode/062-unique-paths-1.png&#34;
 	
 	
@@ -6899,9 +7260,9 @@ $$ f(x, y) = f(x-1, y) + f(x, y-1) $$&lt;p&gt;通过这个公式可以写出对�
 &lt;p&gt;在&lt;code&gt;m x n&lt;/code&gt;的方格中，从左上角走到右下角的不同路径有几种？（只允许向右和向下走）&lt;/p&gt;
 &lt;h2 id=&#34;solution&#34;&gt;Solution
 &lt;/h2&gt;&lt;p&gt;这道题目可以转换为数学题：&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;m x n&lt;/code&gt;的方格要从左上角走到右下角，需要经过&lt;code&gt;m - 1&lt;/code&gt;次&lt;code&gt;Right&lt;/code&gt;和&lt;code&gt;n - 1&lt;/code&gt;次&lt;code&gt;Down&lt;/code&gt;操作。
+&lt;p&gt;&lt;code&gt;m x n&lt;/code&gt;的方格要从左上角走到右下角，需要经过&lt;code&gt;m - 1&lt;/code&gt;次&lt;code&gt;Right&lt;/code&gt;和&lt;code&gt;n - 1&lt;/code&gt;次&lt;code&gt;Down&lt;/code&gt;操作。&lt;br&gt;
 所以总共是&lt;code&gt;m + n - 2&lt;/code&gt;次操作，而操作顺序的不同，则对应路径不同。&lt;/p&gt;
-&lt;p&gt;这就转换成了数学的排列问题：&lt;code&gt;C(m + n -2, n - 1)&lt;/code&gt;。
+&lt;p&gt;这就转换成了数学的排列问题：&lt;code&gt;C(m + n -2, n - 1)&lt;/code&gt;。&lt;br&gt;
 在&lt;code&gt;m + n - 2&lt;/code&gt;操作中取&lt;code&gt;Down&lt;/code&gt;操作的位置，其余位置就是&lt;code&gt;Right&lt;/code&gt;操作。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -7084,13 +7445,13 @@ $$ f(x, y) = f(x-1, y) + f(x, y-1) $$&lt;p&gt;通过这个公式可以写出对�
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;其中的 &lt;code&gt;import &amp;quot;C&amp;quot;&lt;/code&gt; 表示使用了 CGO 。在这条语句前面的注释是一段 C 语言代码。
-这里就定义了哪些 C 语言函数被引用。也可以在这里直接编写函数并实现。
-&lt;del&gt;因为这个特殊的语法，import &amp;ldquo;C&amp;rdquo; 必须单独一行，不可与其他包一起引用。&lt;/del&gt;
+&lt;p&gt;其中的 &lt;code&gt;import &amp;quot;C&amp;quot;&lt;/code&gt; 表示使用了 CGO 。在这条语句前面的注释是一段 C 语言代码。&lt;br&gt;
+这里就定义了哪些 C 语言函数被引用。也可以在这里直接编写函数并实现。&lt;br&gt;
+&lt;del&gt;因为这个特殊的语法，import &amp;ldquo;C&amp;rdquo; 必须单独一行，不可与其他包一起引用。&lt;/del&gt;&lt;br&gt;
 可以看到在代码中引用了头文件 &lt;code&gt;add.h&lt;/code&gt; 以及 C 标准库的头文件，另外还实现了另一个两数相乘的函数 &lt;code&gt;mul&lt;/code&gt;。&lt;/p&gt;
 &lt;p&gt;在 Golang 中通过使用 &lt;code&gt;C.xxx&lt;/code&gt; 的方式调用 C 函数。&lt;code&gt;HelloWorld&lt;/code&gt; 展示了对库函数的调用。&lt;code&gt;Add&lt;/code&gt; 和 &lt;code&gt;Mul&lt;/code&gt; 展示了对自定义函数的调用。&lt;/p&gt;
 &lt;p&gt;因为Golang 和 C 有各自的变量类型。所以&lt;strong&gt;传参时候需要进行类型转换&lt;/strong&gt;。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;HelloWorld&lt;/code&gt; 在传参时使用 &lt;code&gt;C.CString&lt;/code&gt; 将 Golang 字符串类型转换为 C 语言类型。
+&lt;p&gt;&lt;code&gt;HelloWorld&lt;/code&gt; 在传参时使用 &lt;code&gt;C.CString&lt;/code&gt; 将 Golang 字符串类型转换为 C 语言类型。&lt;br&gt;
 因为 &lt;code&gt;C.CString&lt;/code&gt; 是在堆上分配空间存放字符串，需要调用者自己释放，所以最后调用 &lt;code&gt;C.free&lt;/code&gt; 释放该字符串。&lt;/p&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://chai2010.gitbooks.io/advanced-go-programming-book/content/ch2-cgo/ch2-03-cgo-types.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;点击这里&lt;/a&gt;获取更多类型转换的知识。&lt;/p&gt;
@@ -7285,9 +7646,9 @@ $$ f(x, y) = f(x-1, y) + f(x, y-1) $$&lt;p&gt;通过这个公式可以写出对�
 &lt;p&gt;&lt;code&gt;govendor list +e&lt;/code&gt;: 查看当前项目的依赖但是未被添加到&lt;code&gt;vendor&lt;/code&gt;中的包&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;govendor add +e&lt;/code&gt;: 添加依赖的包。如果&lt;code&gt;vendor.json&lt;/code&gt;中存在，但是&lt;code&gt;vendor&lt;/code&gt;目录下不存在（即&lt;code&gt;govendor status&lt;/code&gt;显示缺失）的包也会被重新添加&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;govendor remove +u&lt;/code&gt;: 删除在&lt;code&gt;vendor&lt;/code&gt;下但是未依赖的包&lt;/p&gt;
-&lt;p&gt;在实际过程中，有部分包是团队的公共包。
+&lt;p&gt;在实际过程中，有部分包是团队的公共包。&lt;br&gt;
 这部分包通常有自己的单独项目，并且已经被我们添加到&lt;code&gt;$GOPATH&lt;/code&gt;下，可能就不需要添加到当前项目的&lt;code&gt;vendor&lt;/code&gt;下。&lt;/p&gt;
-&lt;p&gt;这时候可以结合&lt;code&gt;list&lt;/code&gt;和&lt;code&gt;add&lt;/code&gt;来使用，
+&lt;p&gt;这时候可以结合&lt;code&gt;list&lt;/code&gt;和&lt;code&gt;add&lt;/code&gt;来使用，&lt;br&gt;
 先用&lt;code&gt;list -no-status +e&lt;/code&gt;列出依赖包，然后使用&lt;code&gt;grep&lt;/code&gt;过滤，再调用&lt;code&gt;add&lt;/code&gt;命令添加：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -7478,10 +7839,10 @@ $$ f(x, y) = f(x-1, y) + f(x, y-1) $$&lt;p&gt;通过这个公式可以写出对�
 &lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;Given two non-negative integers &lt;code&gt;num1&lt;/code&gt; and &lt;code&gt;num2&lt;/code&gt; represented as strings, return the product of &lt;code&gt;num1&lt;/code&gt; and &lt;code&gt;num2&lt;/code&gt;, also represented as a string.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Example 1:&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Input: num1 = &amp;ldquo;2&amp;rdquo;, num2 = &amp;ldquo;3&amp;rdquo;
+&lt;p&gt;Input: num1 = &amp;ldquo;2&amp;rdquo;, num2 = &amp;ldquo;3&amp;rdquo;&lt;br&gt;
 Output: &amp;ldquo;6&amp;rdquo;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Example 2:&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Input: num1 = &amp;ldquo;123&amp;rdquo;, num2 = &amp;ldquo;456&amp;rdquo;
+&lt;p&gt;Input: num1 = &amp;ldquo;123&amp;rdquo;, num2 = &amp;ldquo;456&amp;rdquo;&lt;br&gt;
 Output: &amp;ldquo;56088&amp;rdquo;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;将两个字符串表示的数字相乘（大数相乘）。&lt;/p&gt;
 &lt;blockquote&gt;
@@ -7494,8 +7855,8 @@ Output: &amp;ldquo;56088&amp;rdquo;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;/ol&gt;&lt;/blockquote&gt;
 &lt;p&gt;实现大数相乘：以&lt;code&gt;string&lt;/code&gt;的形式给出两个非负整数，求乘积。&lt;/p&gt;
 &lt;h2 id=&#34;solution&#34;&gt;Solution
-&lt;/h2&gt;&lt;p&gt;我在实现这个乘法时，按照手写计算的方式，每次按位相乘之后记录进位然后写下当前位。
-然后把当前位结果加上前一位的结果并存为&lt;code&gt;byte&lt;/code&gt;。每次外循环都会做一次大数加法，将乘积结果累加。
+&lt;/h2&gt;&lt;p&gt;我在实现这个乘法时，按照手写计算的方式，每次按位相乘之后记录进位然后写下当前位。&lt;br&gt;
+然后把当前位结果加上前一位的结果并存为&lt;code&gt;byte&lt;/code&gt;。每次外循环都会做一次大数加法，将乘积结果累加。&lt;br&gt;
 效率很不理想：40ms。&lt;/p&gt;
 &lt;p&gt;在看了别人的算法之后，重新实现了一遍。&lt;/p&gt;
 &lt;p&gt;先将每一位的乘法结果保存，最后再按位相加并处理进位。&lt;/p&gt;
@@ -7606,7 +7967,7 @@ Output: &amp;ldquo;56088&amp;rdquo;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;Given a collection of candidate numbers (&lt;code&gt;candidates&lt;/code&gt;) and a target number (&lt;code&gt;target&lt;/code&gt;), find all unique combinations in candidates where the &lt;code&gt;candidate&lt;/code&gt; numbers sums to &lt;code&gt;target&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Each number in &lt;code&gt;candidates&lt;/code&gt; may only be used once in the combination.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;All numbers (including &lt;code&gt;target&lt;/code&gt;) will be positive integers.
+&lt;p&gt;All numbers (including &lt;code&gt;target&lt;/code&gt;) will be positive integers.&lt;br&gt;
 The solution set must not contain duplicate combinations.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Example 1:&lt;/strong&gt;&lt;/p&gt;
@@ -7795,7 +8156,7 @@ The solution set must not contain duplicate combinations.&lt;/p&gt;&lt;/blockquo
 &lt;/div&gt;&lt;/blockquote&gt;
 &lt;p&gt;给出加数与和数，求出所有组合。&lt;/p&gt;
 &lt;h2 id=&#34;solution&#34;&gt;Solution
-&lt;/h2&gt;&lt;p&gt;思路是与之前做过的查找解的题目相似：
+&lt;/h2&gt;&lt;p&gt;思路是与之前做过的查找解的题目相似：&lt;br&gt;
 把&lt;code&gt;target&lt;/code&gt;减去候选数，得到剩余&lt;code&gt;target&lt;/code&gt;，继续查找，直到&lt;code&gt;target&lt;/code&gt;为&lt;code&gt;0&lt;/code&gt;。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -7894,7 +8255,7 @@ The solution set must not contain duplicate combinations.&lt;/p&gt;&lt;/blockquo
 	loading=&#34;lazy&#34;
 	
 	
-&gt;
+&gt;&lt;br&gt;
 A partially filled sudoku which is valid.&lt;/p&gt;
 &lt;p&gt;The Sudoku board could be partially filled, where empty cells are filled with the character &lt;code&gt;&#39;.&#39;&lt;/code&gt;.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;验证数独&lt;/p&gt;
@@ -7975,7 +8336,7 @@ A partially filled sudoku which is valid.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;A Sudoku board (partially filled) could be valid but is not necessarily solvable.&lt;/li&gt;
 &lt;li&gt;Only the filled cells need to be validated according to the mentioned rules.&lt;/li&gt;
-&lt;li&gt;The given board contain only digits 1-9 and the character &amp;lsquo;.&amp;rsquo;.
+&lt;li&gt;The given board contain only digits 1-9 and the character &amp;lsquo;.&amp;rsquo;.&lt;br&gt;
 The given board size is always 9x9.&lt;/li&gt;
 &lt;/ul&gt;&lt;/blockquote&gt;
 &lt;p&gt;判断数独板是否有效。&lt;/p&gt;
@@ -8095,7 +8456,7 @@ The given board size is always 9x9.&lt;/li&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;/blockquote&gt;
-&lt;p&gt;假设有一个升序的数组，但是从某处出现了旋转。
+&lt;p&gt;假设有一个升序的数组，但是从某处出现了旋转。&lt;br&gt;
 要在此数组中查找给定值，并且时间复杂度为&lt;code&gt;O(log n)&lt;/code&gt;。&lt;/p&gt;
 &lt;h2 id=&#34;solution&#34;&gt;Solution
 &lt;/h2&gt;&lt;p&gt;此题为二分查找法的一个变形：&lt;/p&gt;
@@ -8205,8 +8566,8 @@ The given board size is always 9x9.&lt;/li&gt;
     &gt;Longest Valid Parentheses&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description
 &lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;Given a string containing just the characters &lt;code&gt;&#39;(&#39;&lt;/code&gt; and &lt;code&gt;&#39;)&#39;&lt;/code&gt;, find the length of the longest valid (well-formed) parentheses substring.
-&lt;br&gt;&lt;br&gt;
+&lt;p&gt;Given a string containing just the characters &lt;code&gt;&#39;(&#39;&lt;/code&gt; and &lt;code&gt;&#39;)&#39;&lt;/code&gt;, find the length of the longest valid (well-formed) parentheses substring.&lt;br&gt;
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
 &lt;strong&gt;Example 1:&lt;/strong&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -8360,8 +8721,8 @@ Explanation: The longest valid parentheses substring is &#34;()()&#34;
 &lt;p&gt;If such arrangement is not possible, it must rearrange it as the lowest possible order (ie, sorted in ascending order).&lt;/p&gt;
 &lt;p&gt;The replacement must be in-place and use only constant extra memory.&lt;/p&gt;
 &lt;p&gt;Here are some examples. Inputs are in the left-hand column and its corresponding outputs are in the right-hand column.&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;1,2,3&lt;/code&gt; → &lt;code&gt;1,3,2&lt;/code&gt;&lt;br&gt;
-&lt;code&gt;3,2,1&lt;/code&gt; → &lt;code&gt;1,2,3&lt;/code&gt;&lt;br&gt;
+&lt;p&gt;&lt;code&gt;1,2,3&lt;/code&gt; → &lt;code&gt;1,3,2&lt;/code&gt;&lt;br&gt;&lt;br&gt;
+&lt;code&gt;3,2,1&lt;/code&gt; → &lt;code&gt;1,2,3&lt;/code&gt;&lt;br&gt;&lt;br&gt;
 &lt;code&gt;1,1,5&lt;/code&gt; → &lt;code&gt;1,5,1&lt;/code&gt;&lt;br&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;实现字典序排列的 nextPermutation 方法，假如已经是最大排列，则输出最小排列。&lt;/p&gt;
 &lt;h2 id=&#34;字典序排列&#34;&gt;字典序排列
@@ -8401,7 +8762,7 @@ Explanation: The longest valid parentheses substring is &#34;()()&#34;
 &lt;li&gt;交换&lt;code&gt;a[k]&lt;/code&gt;和&lt;code&gt;a[l]&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;将&lt;code&gt;a[k + 1], a[k + 2], ..., a[n]&lt;/code&gt;倒序&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;实现代码如下：
+&lt;p&gt;实现代码如下：&lt;br&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -8581,7 +8942,7 @@ Explanation: The longest valid parentheses substring is &#34;()()&#34;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;输出：
+&lt;p&gt;输出：&lt;br&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -8660,7 +9021,7 @@ Explanation: The longest valid parentheses substring is &#34;()()&#34;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;输出：
+&lt;p&gt;输出：&lt;br&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -8684,12 +9045,12 @@ Explanation: The longest valid parentheses substring is &#34;()()&#34;
 &lt;p&gt;使用&lt;code&gt;slice[i:j:k]&lt;/code&gt;创建切片的时候，同样没有立即创建新的底层数组，只会在&lt;code&gt;append&lt;/code&gt;导致&lt;code&gt;len &amp;gt; cap&lt;/code&gt;扩容时才创建新数组。&lt;/p&gt;</description>
         </item>
         <item>
-        <title>python为图片添加文字水印</title>
+        <title>Python 为图片添加文字水印</title>
         <link>https://www.orztu.com/post/text-watermark/</link>
         <pubDate>Thu, 10 May 2018 10:54:06 +0800</pubDate>
         
         <guid>https://www.orztu.com/post/text-watermark/</guid>
-        <description>&lt;h2 id=&#34;功能&#34;&gt;功能
+        <description>&lt;img src="https://www.orztu.com/post/text-watermark/text-watermark-test.png" alt="Featured image of post Python 为图片添加文字水印" /&gt;&lt;h2 id=&#34;功能&#34;&gt;功能
 &lt;/h2&gt;&lt;p&gt;使用知名python图片处理库PIL，为图片添加文字水印。&lt;/p&gt;
 &lt;p&gt;步骤：根据文字生成水印图片；将水印图半透明并覆盖在原图上。&lt;/p&gt;
 &lt;h2 id=&#34;实现&#34;&gt;实现
@@ -8969,19 +9330,19 @@ Explanation: The longest valid parentheses substring is &#34;()()&#34;
 &lt;/div&gt;</description>
         </item>
         <item>
-        <title>python实现微信跳一跳外挂</title>
+        <title>Python 实现微信跳一跳外挂</title>
         <link>https://www.orztu.com/post/wechat-jump/</link>
         <pubDate>Mon, 08 Jan 2018 10:00:41 +0800</pubDate>
         
         <guid>https://www.orztu.com/post/wechat-jump/</guid>
-        <description>&lt;p&gt;使用python+adb实现微信跳一跳外挂&lt;/p&gt;
+        <description>&lt;p&gt;使用 Python + adb 实现微信跳一跳外挂&lt;/p&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/2Dou/JumpJump&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;源码地址&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;使用方法&#34;&gt;使用方法
 &lt;/h2&gt;&lt;ol&gt;
 &lt;li&gt;
-&lt;p&gt;安卓手机打开USB调试
-打开USB调试方法，进入&lt;code&gt;设置&lt;/code&gt;，找到&lt;code&gt;开发者选项&lt;/code&gt;，打开并勾选&lt;code&gt;USB调试&lt;/code&gt;；
+&lt;p&gt;安卓手机打开USB调试&lt;br&gt;
+打开USB调试方法，进入&lt;code&gt;设置&lt;/code&gt;，找到&lt;code&gt;开发者选项&lt;/code&gt;，打开并勾选&lt;code&gt;USB调试&lt;/code&gt;；&lt;br&gt;
 如果没有&lt;code&gt;开发者选项&lt;/code&gt;，进入&lt;code&gt;关于手机&lt;/code&gt;，连续点击&lt;code&gt;版本号&lt;/code&gt;7次，即可开启&lt;code&gt;开发者选项&lt;/code&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -8991,7 +9352,7 @@ Explanation: The longest valid parentheses substring is &#34;()()&#34;
 &lt;h2 id=&#34;实现原理&#34;&gt;实现原理
 &lt;/h2&gt;&lt;ol&gt;
 &lt;li&gt;
-&lt;p&gt;使用adb命令截图保存到本地
+&lt;p&gt;使用adb命令截图保存到本地&lt;br&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -9003,7 +9364,7 @@ Explanation: The longest valid parentheses substring is &#34;()()&#34;
 &lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;adb shell screencap -p &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; perl -pe &lt;span class=&#34;s1&#34;&gt;&amp;#39;s/\\x0D\\x0A/\\x0A/g&amp;#39;&lt;/span&gt; &amp;gt; screen.png
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 如果没有perl可以先保存再pull&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 如果没有 perl 可以先保存再pull&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;adb shell screencap -p /sdcard/screen.png
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;adb pull /sdcard/screen.png .&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
@@ -9024,7 +9385,7 @@ Explanation: The longest valid parentheses substring is &#34;()()&#34;
 &lt;li&gt;从上往下查找第一个与背景色不同的点，作为平台顶点&lt;/li&gt;
 &lt;li&gt;从顶点开始向左下搜索与顶点相同颜色的点，找到平台左顶点&lt;/li&gt;
 &lt;li&gt;从顶点开始向右下搜索与顶点相同颜色的点，找到平台右顶点&lt;/li&gt;
-&lt;li&gt;以左右点中点为落点
+&lt;li&gt;以左右点中点为落点&lt;br&gt;
 &lt;img src=&#34;https://www.orztu.com/post/wechat-jump/jumpjump-0.png&#34;
 	width=&#34;454&#34;
 	height=&#34;331&#34;
@@ -9045,7 +9406,7 @@ Explanation: The longest valid parentheses substring is &#34;()()&#34;
 &lt;p&gt;其他情况&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;同样从上往下查找第一个与背景色不同的点，作为平台顶点&lt;/li&gt;
-&lt;li&gt;通过固定斜率0.58、棋子当前位置，计算落点（图中红线交点）
+&lt;li&gt;通过固定斜率0.58、棋子当前位置，计算落点（图中红线交点）&lt;br&gt;
 &lt;img src=&#34;https://www.orztu.com/post/wechat-jump/jumpjump-1.png&#34;
 	width=&#34;454&#34;
 	height=&#34;343&#34;
@@ -9179,7 +9540,7 @@ Explanation: The longest valid parentheses substring is &#34;()()&#34;
 &lt;/div&gt;
 &lt;h3 id=&#34;寻找小圆点&#34;&gt;寻找小圆点
 &lt;/h3&gt;&lt;p&gt;通过圆点颜色RGB(245, 245, 245)寻找落点&lt;/p&gt;
-&lt;p&gt;以落点在左边为例：
+&lt;p&gt;以落点在左边为例：&lt;br&gt;
 &lt;img src=&#34;https://www.orztu.com/post/wechat-jump/jumpjump-3.png&#34;
 	width=&#34;384&#34;
 	height=&#34;269&#34;
@@ -9197,7 +9558,7 @@ Explanation: The longest valid parentheses substring is &#34;()()&#34;
 &lt;p&gt;通过圆点颜色RGB(245, 245, 245)、斜率K、坐标x，计算斜线上的点并判断颜色&lt;/p&gt;
 &lt;p&gt;通常先查找到A点，然后分别向右和向下查找B和C点，以BC线段中点作为落点。&lt;/p&gt;
 &lt;p&gt;落点在右边时先搜索到的点A位置稍有不同，但算法相同&lt;/p&gt;
-&lt;p&gt;查找点A的代码：
+&lt;p&gt;查找点A的代码：&lt;br&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -9244,7 +9605,7 @@ Explanation: The longest valid parentheses substring is &#34;()()&#34;
 &lt;p&gt;首先寻找平台顶点，然后寻找左右顶点，计算平台中心点&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
-&lt;p&gt;寻找平台顶点
+&lt;p&gt;寻找平台顶点&lt;br&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -9292,7 +9653,7 @@ Explanation: The longest valid parentheses substring is &#34;()()&#34;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;搜索左右顶点&lt;/p&gt;
-&lt;p&gt;这种方法在某些情形会出现错误，暂未处理。可以通过设定点与点之间的规则排除这些平台（距离、y差值范围等规则）
+&lt;p&gt;这种方法在某些情形会出现错误，暂未处理。可以通过设定点与点之间的规则排除这些平台（距离、y差值范围等规则）&lt;br&gt;
 &lt;img src=&#34;https://www.orztu.com/post/wechat-jump/jumpjump-6.png&#34;
 	width=&#34;381&#34;
 	height=&#34;229&#34;
@@ -9306,7 +9667,7 @@ Explanation: The longest valid parentheses substring is &#34;()()&#34;
 		data-flex-grow=&#34;166&#34;
 		data-flex-basis=&#34;399px&#34;
 	
-&gt;
+&gt;&lt;br&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -9340,7 +9701,7 @@ Explanation: The longest valid parentheses substring is &#34;()()&#34;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;!=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;next_top&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;and&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;y&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;!=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;next_top&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]:&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;left&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;y&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;
+&lt;/div&gt;&lt;br&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -9427,13 +9788,13 @@ Explanation: The longest valid parentheses substring is &#34;()()&#34;
     &gt;Reverse Nodes in k-Group&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description
 &lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;Given a linked list, reverse the nodes of a linked list k at a time and return its modified list.&lt;br&gt;
-&lt;br&gt;
-k is a positive integer and is less than or equal to the length of the linked list. If the number of nodes is not a multiple of k then left-out nodes in the end should remain as it is.&lt;br&gt;
-&lt;br&gt;
+&lt;p&gt;Given a linked list, reverse the nodes of a linked list k at a time and return its modified list.&lt;br&gt;&lt;br&gt;
+&lt;br&gt;&lt;br&gt;
+k is a positive integer and is less than or equal to the length of the linked list. If the number of nodes is not a multiple of k then left-out nodes in the end should remain as it is.&lt;br&gt;&lt;br&gt;
+&lt;br&gt;&lt;br&gt;
 You may not alter the values in the nodes, only nodes itself may be changed.&lt;/p&gt;
-&lt;p&gt;Only constant memory is allowed.&lt;br&gt;
-&lt;br&gt;
+&lt;p&gt;Only constant memory is allowed.&lt;br&gt;&lt;br&gt;
+&lt;br&gt;&lt;br&gt;
 For example,&lt;/p&gt;
 &lt;p&gt;Given this linked list: &lt;code&gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;For k = 2, you should return: &lt;code&gt;2-&amp;gt;1-&amp;gt;4-&amp;gt;3-&amp;gt;5&lt;/code&gt;&lt;/p&gt;
@@ -9760,8 +10121,8 @@ For example,&lt;/p&gt;
     &gt;Valid Parentheses&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description
 &lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;Given a string containing just the characters &lt;code&gt;&#39;(&#39;&lt;/code&gt;, &lt;code&gt;&#39;)&#39;&lt;/code&gt;, &lt;code&gt;&#39;{&#39;&lt;/code&gt;, &lt;code&gt;&#39;}&#39;&lt;/code&gt;, &lt;code&gt;&#39;[&#39;&lt;/code&gt; and &lt;code&gt;&#39;]&#39;&lt;/code&gt;, determine if the input string is valid.
-&lt;/br&gt; &lt;/br&gt;
+&lt;p&gt;Given a string containing just the characters &lt;code&gt;&#39;(&#39;&lt;/code&gt;, &lt;code&gt;&#39;)&#39;&lt;/code&gt;, &lt;code&gt;&#39;{&#39;&lt;/code&gt;, &lt;code&gt;&#39;}&#39;&lt;/code&gt;, &lt;code&gt;&#39;[&#39;&lt;/code&gt; and &lt;code&gt;&#39;]&#39;&lt;/code&gt;, determine if the input string is valid.&lt;br&gt;
+&lt;/br&gt; &lt;/br&gt;&lt;br&gt;
 The brackets must close in the correct order, &lt;code&gt;&amp;quot;()&amp;quot;&lt;/code&gt; and &lt;code&gt;&amp;quot;()[]{}&amp;quot;&lt;/code&gt; are all valid but &lt;code&gt;&amp;quot;(]&amp;quot;&lt;/code&gt; and &lt;code&gt;&amp;quot;([)]&amp;quot;&lt;/code&gt; are not.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;给出包含三种括号的字符串，验证括号是否左右匹配&lt;/p&gt;
 &lt;h2 id=&#34;solution&#34;&gt;Solution
@@ -9871,8 +10232,8 @@ The brackets must close in the correct order, &lt;code&gt;&amp;quot;()&amp;quot;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   After removing the second node from the end, the linked list becomes 1-&amp;gt;2-&amp;gt;3-&amp;gt;5.
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;:
-Given n will always be valid.
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;:&lt;br&gt;
+Given n will always be valid.&lt;br&gt;
 Try to do this in one pass.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;从链表中删除倒数第n个结点（n必定有效）&lt;/p&gt;
 &lt;h2 id=&#34;solution&#34;&gt;Solution
@@ -10064,7 +10425,7 @@ Try to do this in one pass.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h2 id=&#34;系统安装&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.raspberrypi.org/documentation/installation/installing-images/README.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;系统安装&lt;/a&gt;
 &lt;/h2&gt;&lt;p&gt;系统: &lt;a class=&#34;link&#34; href=&#34;https://www.raspberrypi.org/downloads/raspbian/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;raspbian&lt;/a&gt; &lt;br/&gt;
+    &gt;raspbian&lt;/a&gt; &lt;br/&gt;&lt;br&gt;
 工具（二选一）：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://etcher.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -10079,13 +10440,13 @@ Try to do this in one pass.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;写入完成之后就相当于系统安装完成了。这时候SD卡被分成两个区，有一个区是在windows下无法识别，不用理会。&lt;/p&gt;
 &lt;p&gt;这时候如果直接将SD卡插入树莓派，会发现“无法启动”。显示屏没信号，在路由器里找到树莓派的IP也无法用ssh登录。&lt;/p&gt;
 &lt;p&gt;我安装的时候就是踩到这个坑。以为安装失败，反复装了好几次，就差把SD卡写穿了。&lt;/p&gt;
-&lt;p&gt;实际系统安装已经成功了。只需要在电脑上打开SD卡，找到&lt;code&gt;config.txt&lt;/code&gt;文件里&lt;code&gt;#hdmi_safe=1&lt;/code&gt;这一行，将前面的&lt;code&gt;#&lt;/code&gt;号去掉；
+&lt;p&gt;实际系统安装已经成功了。只需要在电脑上打开SD卡，找到&lt;code&gt;config.txt&lt;/code&gt;文件里&lt;code&gt;#hdmi_safe=1&lt;/code&gt;这一行，将前面的&lt;code&gt;#&lt;/code&gt;号去掉；&lt;br&gt;
 再新建一个文件命名为&lt;code&gt;ssh&lt;/code&gt;（不能有扩展名）。&lt;/p&gt;
 &lt;p&gt;再次把SD卡装进树莓派启动，显示屏就可以正常显示了，ssh也能登录了。&lt;/p&gt;
 &lt;h2 id=&#34;基本配置&#34;&gt;基本配置
 &lt;/h2&gt;&lt;h3 id=&#34;1-静态ip固定ip&#34;&gt;1. 静态IP/固定IP
 &lt;/h3&gt;&lt;p&gt;打开&lt;code&gt;/etc/dhcpcd.conf&lt;/code&gt;文件，找到网口（一般为&lt;code&gt;eth0&lt;/code&gt;）&lt;/p&gt;
-&lt;p&gt;指定IP:
+&lt;p&gt;指定IP:&lt;br&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -10478,7 +10839,7 @@ Try to do this in one pass.&lt;/p&gt;&lt;/blockquote&gt;
 		data-flex-basis=&#34;348px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;听说在这里反复提交直到申请成功即可。找了网上的自动提交方法（复制出来CURL提交），发现不好使，curl一直没响应。
+&lt;p&gt;听说在这里反复提交直到申请成功即可。找了网上的自动提交方法（复制出来CURL提交），发现不好使，curl一直没响应。&lt;br&gt;
 但是网页上确实可以反复点击提交的。于是改用自动点击的方式，一夜醒来发现已经申请成功。&lt;/p&gt;
 &lt;p&gt;使用Chrome浏览器，&lt;code&gt;右键-&amp;gt;审查元素&lt;/code&gt;。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://www.orztu.com/post/gvoice-number/gv-1.png&#34;
@@ -10713,8 +11074,8 @@ Try to do this in one pass.&lt;/p&gt;&lt;/blockquote&gt;
     &gt;Roman to Integer&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description
 &lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;Given a roman numeral, convert it to an integer.&lt;br&gt;
-&lt;br&gt;
+&lt;p&gt;Given a roman numeral, convert it to an integer.&lt;br&gt;&lt;br&gt;
+&lt;br&gt;&lt;br&gt;
 Input is guaranteed to be within the range from 1 to 3999.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;将罗马数字转换成整型。&lt;/p&gt;
 &lt;h2 id=&#34;solution&#34;&gt;Solution
@@ -10797,8 +11158,8 @@ Input is guaranteed to be within the range from 1 to 3999.&lt;/p&gt;&lt;/blockqu
     &gt;Integer to Roman&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description
 &lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;Given an integer, convert it to a roman numeral. &lt;br&gt;
-&lt;br&gt;
+&lt;p&gt;Given an integer, convert it to a roman numeral. &lt;br&gt;&lt;br&gt;
+&lt;br&gt;&lt;br&gt;
 Input is guaranteed to be within the range from 1 to 3999.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;将整型转换成罗马数字形式:&lt;/p&gt;
 &lt;table&gt;
@@ -10876,8 +11237,8 @@ Input is guaranteed to be within the range from 1 to 3999.&lt;/p&gt;&lt;/blockqu
     &gt;Container With Most Water&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description
 &lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;Given n non-negative integers a1, a2, &amp;hellip;, an, where each represents a point at coordinate (i, ai). n vertical lines are drawn such that the two endpoints of line i is at (i, ai) and (i, 0). Find two lines, which together with x-axis forms a container, such that the container contains the most water.&lt;br&gt;
-&lt;br&gt;
+&lt;p&gt;Given n non-negative integers a1, a2, &amp;hellip;, an, where each represents a point at coordinate (i, ai). n vertical lines are drawn such that the two endpoints of line i is at (i, ai) and (i, 0). Find two lines, which together with x-axis forms a container, such that the container contains the most water.&lt;br&gt;&lt;br&gt;
+&lt;br&gt;&lt;br&gt;
 Note: You may not slant the container and n is at least 2.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;给出n个点，它们与X轴有n条垂线，每两条垂线与X轴形成的U型容器，找出最大“容积”(面积）&lt;/p&gt;
 &lt;h2 id=&#34;solution&#34;&gt;Solution
@@ -10986,7 +11347,7 @@ Note: You may not slant the container and n is at least 2.&lt;/p&gt;&lt;/blockqu
     &gt;N-Queens&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description
 &lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;The &lt;em&gt;n-queens&lt;/em&gt; puzzle is the problem of placing n queens on an n×n chessboard such that no two queens attack each other.
+&lt;p&gt;The &lt;em&gt;n-queens&lt;/em&gt; puzzle is the problem of placing n queens on an n×n chessboard such that no two queens attack each other.&lt;br&gt;
 &lt;img src=&#34;https://www.orztu.com/images/leetcode/8-queens.png&#34;
 	
 	
@@ -11000,7 +11361,7 @@ Note: You may not slant the container and n is at least 2.&lt;/p&gt;&lt;/blockqu
 &lt;p&gt;Given an integer n, return all distinct solutions to the n-queens puzzle.&lt;/p&gt;
 &lt;p&gt;Each solution contains a distinct board configuration of the &lt;em&gt;n-queens&lt;/em&gt;&amp;rsquo; placement, where &lt;code&gt;&#39;Q&#39;&lt;/code&gt; and &lt;code&gt;&#39;.&#39;&lt;/code&gt; both indicate a queen and an empty space respectively.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;blockquote&gt;
-&lt;p&gt;For example,
+&lt;p&gt;For example,&lt;br&gt;
 There exist two distinct solutions to the 4-queens puzzle:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -11009,15 +11370,15 @@ There exist two distinct solutions to the 4-queens puzzle:&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;/blockquote&gt;
-&lt;p&gt;[
-[&amp;quot;.Q..&amp;quot;,  // Solution 1
-&amp;ldquo;&amp;hellip;Q&amp;rdquo;,
-&amp;ldquo;Q&amp;hellip;&amp;rdquo;,
+&lt;p&gt;[&lt;br&gt;
+[&amp;quot;.Q..&amp;quot;,  // Solution 1&lt;br&gt;
+&amp;ldquo;&amp;hellip;Q&amp;rdquo;,&lt;br&gt;
+&amp;ldquo;Q&amp;hellip;&amp;rdquo;,&lt;br&gt;
 &amp;ldquo;..Q.&amp;rdquo;],&lt;/p&gt;
-&lt;p&gt;[&amp;quot;..Q.&amp;quot;,  // Solution 2
-&amp;ldquo;Q&amp;hellip;&amp;rdquo;,
-&amp;ldquo;&amp;hellip;Q&amp;rdquo;,
-&amp;ldquo;.Q..&amp;rdquo;]
+&lt;p&gt;[&amp;quot;..Q.&amp;quot;,  // Solution 2&lt;br&gt;
+&amp;ldquo;Q&amp;hellip;&amp;rdquo;,&lt;br&gt;
+&amp;ldquo;&amp;hellip;Q&amp;rdquo;,&lt;br&gt;
+&amp;ldquo;.Q..&amp;rdquo;]&lt;br&gt;
 ]&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -11183,7 +11544,7 @@ There exist two distinct solutions to the 4-queens puzzle:&lt;/p&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description
 &lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how &amp;gt;much water it is able to trap after raining.&lt;/p&gt;
-&lt;p&gt;For example,
+&lt;p&gt;For example,&lt;br&gt;
 Given &lt;code&gt;[0,1,0,2,1,0,1,3,2,1,2,1]&lt;/code&gt;, return &lt;code&gt;6&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://www.orztu.com/images/leetcode/rainwatertrap-1.png&#34;
 	
@@ -11194,12 +11555,12 @@ Given &lt;code&gt;[0,1,0,2,1,0,1,3,2,1,2,1]&lt;/code&gt;, return &lt;code&gt;6&l
 		alt=&#34;palindromic&#34;
 	
 	
-&gt;
+&gt;&lt;br&gt;
 The above elevation map is represented by array [0,1,0,2,1,0,1,3,2,1,2,1]. In this case, 6 units of rain water (blue section) are being trapped. Thanks Marcos for contributing this image!&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h2 id=&#34;solution&#34;&gt;Solution
-&lt;/h2&gt;&lt;p&gt;每个点容量决定于左右两边高度&lt;/br&gt;
-先从左往右，扫描出每个点左边最高的围栏&lt;/br&gt;
-再从右往左，扫描出每个点右边最高的围栏&lt;/br&gt;
+&lt;/h2&gt;&lt;p&gt;每个点容量决定于左右两边高度&lt;/br&gt;&lt;br&gt;
+先从左往右，扫描出每个点左边最高的围栏&lt;/br&gt;&lt;br&gt;
+再从右往左，扫描出每个点右边最高的围栏&lt;/br&gt;&lt;br&gt;
 在围栏比当前点高的情况下， 这个点的容量为围栏高度减底部高度: min(left_height, right_height) - bottom&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -11315,19 +11676,19 @@ The above elevation map is represented by array [0,1,0,2,1,0,1,3,2,1,2,1]. In th
 &lt;!-- ![palindromic](/images/leetcode/Sudoku-Solver-1.png &#34;数独&#34;) --&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description
 &lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;Write a program to solve a Sudoku puzzle by filling the empty cells.
-&lt;br&gt;
-&lt;br&gt;
-Empty cells are indicated by the character &amp;lsquo;.&amp;rsquo;.
-&lt;br&gt;
-&lt;br&gt;
+&lt;p&gt;Write a program to solve a Sudoku puzzle by filling the empty cells.&lt;br&gt;
+&lt;br&gt;&lt;br&gt;
+&lt;br&gt;&lt;br&gt;
+Empty cells are indicated by the character &amp;lsquo;.&amp;rsquo;.&lt;br&gt;
+&lt;br&gt;&lt;br&gt;
+&lt;br&gt;&lt;br&gt;
 You may assume that there will be only one unique solution.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h2 id=&#34;solution&#34;&gt;Solution
 &lt;/h2&gt;&lt;p&gt;还是编程思维不行，在编程时按照解题思路在走。&lt;/p&gt;
-&lt;p&gt;我的答案：
-查找空格，找出该位置可能的数字组合，填入，递归进入下一个空格。
+&lt;p&gt;我的答案：&lt;br&gt;
+查找空格，找出该位置可能的数字组合，填入，递归进入下一个空格。&lt;br&gt;
 这样虽然能解出答案。但是在查找可能的数字上耗费时间较多。&lt;/p&gt;
-&lt;p&gt;后面的Pretty Solution：
+&lt;p&gt;后面的Pretty Solution：&lt;br&gt;
 找到空格后，直接把依次把1-9填入，验证是否重复。反而耗时更少，代码也更简洁。&lt;/p&gt;
 &lt;h3 id=&#34;my-solution&#34;&gt;My solution
 &lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -11996,12 +12357,12 @@ You may assume that there will be only one unique solution.&lt;/p&gt;&lt;/blockq
     &gt;String to Integer (atoi)&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description
 &lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;Implement atoi to convert a string to an integer.
-&lt;br&gt;
-&lt;br&gt;
-&lt;strong&gt;Hint&lt;/strong&gt;: Carefully consider all possible input cases. If you want a challenge, please do not see below and ask yourself what are the &amp;gt; possible input cases.
-&lt;br&gt;
-&lt;br&gt;
+&lt;p&gt;Implement atoi to convert a string to an integer.&lt;br&gt;
+&lt;br&gt;&lt;br&gt;
+&lt;br&gt;&lt;br&gt;
+&lt;strong&gt;Hint&lt;/strong&gt;: Carefully consider all possible input cases. If you want a challenge, please do not see below and ask yourself what are the &amp;gt; possible input cases.&lt;br&gt;
+&lt;br&gt;&lt;br&gt;
+&lt;br&gt;&lt;br&gt;
 &lt;strong&gt;Notes:&lt;/strong&gt; It is intended for this problem to be specified vaguely (ie, no given input specs). You are responsible to gather all the &amp;gt; input requirements up front.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;实现&lt;code&gt;atoi&lt;/code&gt;功能&lt;/p&gt;
 &lt;p&gt;需要注意边界检查&lt;/p&gt;
@@ -12091,13 +12452,13 @@ You may assume that there will be only one unique solution.&lt;/p&gt;&lt;/blockq
     &gt;Reverse Integer&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description
 &lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;Reverse digits of an integer.
-&lt;br&gt;
-&lt;code&gt;Example1: x = 123, return 321&lt;/code&gt;
-&lt;br&gt;
-&lt;code&gt;Example2: x = -123, return -321&lt;/code&gt;
-&lt;br&gt;
-&lt;br&gt;
+&lt;p&gt;Reverse digits of an integer.&lt;br&gt;
+&lt;br&gt;&lt;br&gt;
+&lt;code&gt;Example1: x = 123, return 321&lt;/code&gt;&lt;br&gt;
+&lt;br&gt;&lt;br&gt;
+&lt;code&gt;Example2: x = -123, return -321&lt;/code&gt;&lt;br&gt;
+&lt;br&gt;&lt;br&gt;
+&lt;br&gt;&lt;br&gt;
 The input is assumed to be a 32-bit signed integer. Your function should &lt;strong&gt;return 0 when the reversed integer overflows&lt;/strong&gt;.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;将输入的十进制数倒序输出&lt;/p&gt;
 &lt;h2 id=&#34;solution&#34;&gt;Solution
@@ -12410,7 +12771,7 @@ The input is assumed to be a 32-bit signed integer. Your function should &lt;str
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;blockquote&gt;
-&lt;p&gt;The median is 2.0
+&lt;p&gt;The median is 2.0&lt;br&gt;
 Example 2:&lt;/p&gt;&lt;/blockquote&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -12728,7 +13089,7 @@ Example 2:&lt;/p&gt;&lt;/blockquote&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;blockquote&gt;
-&lt;p&gt;Because nums[0] + nums[1] = 2 + 7 = 9,
+&lt;p&gt;Because nums[0] + nums[1] = 2 + 7 = 9,&lt;br&gt;
 return [0, 1].&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;假定只有&lt;strong&gt;唯一&lt;/strong&gt;解的情况下在数组中找出和为&lt;code&gt;target&lt;/code&gt;的两个数&lt;/p&gt;
 &lt;h2 id=&#34;solution&#34;&gt;Solution

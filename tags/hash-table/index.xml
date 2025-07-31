@@ -42,7 +42,7 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;在给出的矩阵中，&lt;code&gt;1&lt;/code&gt;表示元素，&lt;code&gt;0&lt;/code&gt;表示空，找出最大矩形的面积。&lt;/p&gt;
 &lt;h2 id=&#34;solution&#34;&gt;Solution
-&lt;/h2&gt;&lt;p&gt;本题可以利用&lt;a class=&#34;link&#34; href=&#34;https://www.orztu.com/leetcode/084-largest-rectangle-in-histogram/&#34; &gt;《84. Largest Rectangle in Histogram》&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;本题可以利用&lt;a class=&#34;link&#34; href=&#34;https://www.orztu.com/leetcode/084-largest-rectangle-in-histogram/&#34; &gt;《84. Largest Rectangle in Histogram》&lt;/a&gt;&lt;br&gt;
 的代码。&lt;/p&gt;
 &lt;p&gt;下面来看看如何转换成 84 题的直方图求解问题：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -195,7 +195,7 @@
 &lt;h2 id=&#34;solution&#34;&gt;Solution
 &lt;/h2&gt;&lt;ol&gt;
 &lt;li&gt;
-&lt;p&gt;设两个指针表示子串的首尾：&lt;code&gt;left&lt;/code&gt;，&lt;code&gt;right&lt;/code&gt;：
+&lt;p&gt;设两个指针表示子串的首尾：&lt;code&gt;left&lt;/code&gt;，&lt;code&gt;right&lt;/code&gt;：&lt;br&gt;
 &lt;img src=&#34;https://www.orztu.com/images/leetcode/076_Minimum_Window_Substring_1.png&#34;
 	
 	
@@ -206,7 +206,7 @@
 &gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;code&gt;right&lt;/code&gt;向右移动扩展子串，直到子串包含&lt;code&gt;T&lt;/code&gt;：
+&lt;p&gt;&lt;code&gt;right&lt;/code&gt;向右移动扩展子串，直到子串包含&lt;code&gt;T&lt;/code&gt;：&lt;br&gt;
 &lt;img src=&#34;https://www.orztu.com/images/leetcode/076_Minimum_Window_Substring_2.png&#34;
 	
 	
@@ -217,7 +217,7 @@
 &gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;code&gt;left&lt;/code&gt;向右移动收缩子串，直到最短满足&lt;code&gt;T&lt;/code&gt;，记录子串：
+&lt;p&gt;&lt;code&gt;left&lt;/code&gt;向右移动收缩子串，直到最短满足&lt;code&gt;T&lt;/code&gt;，记录子串：&lt;br&gt;
 &lt;img src=&#34;https://www.orztu.com/images/leetcode/076_Minimum_Window_Substring_3.png&#34;
 	
 	
@@ -228,7 +228,7 @@
 &gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;code&gt;left&lt;/code&gt;再次右移，这时子串不再满足包含&lt;code&gt;T&lt;/code&gt;：
+&lt;p&gt;&lt;code&gt;left&lt;/code&gt;再次右移，这时子串不再满足包含&lt;code&gt;T&lt;/code&gt;：&lt;br&gt;
 &lt;img src=&#34;https://www.orztu.com/images/leetcode/076_Minimum_Window_Substring_4.png&#34;
 	
 	
@@ -239,7 +239,7 @@
 &gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;code&gt;right&lt;/code&gt;从重复第二步骤，找到新的子串：
+&lt;p&gt;&lt;code&gt;right&lt;/code&gt;从重复第二步骤，找到新的子串：&lt;br&gt;
 &lt;img src=&#34;https://www.orztu.com/images/leetcode/076_Minimum_Window_Substring_5.png&#34;
 	
 	
@@ -250,7 +250,7 @@
 &gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;再次收缩子串，与之前的子串比较是否更短：
+&lt;p&gt;再次收缩子串，与之前的子串比较是否更短：&lt;br&gt;
 &lt;img src=&#34;https://www.orztu.com/images/leetcode/076_Minimum_Window_Substring_6.png&#34;
 	
 	
@@ -410,7 +410,7 @@
 	loading=&#34;lazy&#34;
 	
 	
-&gt;
+&gt;&lt;br&gt;
 A partially filled sudoku which is valid.&lt;/p&gt;
 &lt;p&gt;The Sudoku board could be partially filled, where empty cells are filled with the character &lt;code&gt;&#39;.&#39;&lt;/code&gt;.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;验证数独&lt;/p&gt;
@@ -491,7 +491,7 @@ A partially filled sudoku which is valid.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;A Sudoku board (partially filled) could be valid but is not necessarily solvable.&lt;/li&gt;
 &lt;li&gt;Only the filled cells need to be validated according to the mentioned rules.&lt;/li&gt;
-&lt;li&gt;The given board contain only digits 1-9 and the character &amp;lsquo;.&amp;rsquo;.
+&lt;li&gt;The given board contain only digits 1-9 and the character &amp;lsquo;.&amp;rsquo;.&lt;br&gt;
 The given board size is always 9x9.&lt;/li&gt;
 &lt;/ul&gt;&lt;/blockquote&gt;
 &lt;p&gt;判断数独板是否有效。&lt;/p&gt;
@@ -730,19 +730,19 @@ The given board size is always 9x9.&lt;/li&gt;
 &lt;!-- ![palindromic](/images/leetcode/Sudoku-Solver-1.png &#34;数独&#34;) --&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description
 &lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;Write a program to solve a Sudoku puzzle by filling the empty cells.
-&lt;br&gt;
-&lt;br&gt;
-Empty cells are indicated by the character &amp;lsquo;.&amp;rsquo;.
-&lt;br&gt;
-&lt;br&gt;
+&lt;p&gt;Write a program to solve a Sudoku puzzle by filling the empty cells.&lt;br&gt;
+&lt;br&gt;&lt;br&gt;
+&lt;br&gt;&lt;br&gt;
+Empty cells are indicated by the character &amp;lsquo;.&amp;rsquo;.&lt;br&gt;
+&lt;br&gt;&lt;br&gt;
+&lt;br&gt;&lt;br&gt;
 You may assume that there will be only one unique solution.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h2 id=&#34;solution&#34;&gt;Solution
 &lt;/h2&gt;&lt;p&gt;还是编程思维不行，在编程时按照解题思路在走。&lt;/p&gt;
-&lt;p&gt;我的答案：
-查找空格，找出该位置可能的数字组合，填入，递归进入下一个空格。
+&lt;p&gt;我的答案：&lt;br&gt;
+查找空格，找出该位置可能的数字组合，填入，递归进入下一个空格。&lt;br&gt;
 这样虽然能解出答案。但是在查找可能的数字上耗费时间较多。&lt;/p&gt;
-&lt;p&gt;后面的Pretty Solution：
+&lt;p&gt;后面的Pretty Solution：&lt;br&gt;
 找到空格后，直接把依次把1-9填入，验证是否重复。反而耗时更少，代码也更简洁。&lt;/p&gt;
 &lt;h3 id=&#34;my-solution&#34;&gt;My solution
 &lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -1213,7 +1213,7 @@ You may assume that there will be only one unique solution.&lt;/p&gt;&lt;/blockq
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;blockquote&gt;
-&lt;p&gt;Because nums[0] + nums[1] = 2 + 7 = 9,
+&lt;p&gt;Because nums[0] + nums[1] = 2 + 7 = 9,&lt;br&gt;
 return [0, 1].&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;假定只有&lt;strong&gt;唯一&lt;/strong&gt;解的情况下在数组中找出和为&lt;code&gt;target&lt;/code&gt;的两个数&lt;/p&gt;
 &lt;h2 id=&#34;solution&#34;&gt;Solution

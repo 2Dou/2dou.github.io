@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Package-Management on Orztu The Way | Orz途</title>
+        <link>https://www.orztu.com/tags/package-management/</link>
+        <description>Recent content in Package-Management on Orztu The Way | Orz途</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Thu, 02 Aug 2018 14:43:33 +0800</lastBuildDate><atom:link href="https://www.orztu.com/tags/package-management/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>govendor 使用</title>
+        <link>https://www.orztu.com/post/using-govendor/</link>
+        <pubDate>Thu, 02 Aug 2018 14:43:33 +0800</pubDate>
+        
+        <guid>https://www.orztu.com/post/using-govendor/</guid>
+        <description>&lt;h2 id=&#34;govendor&#34;&gt;govendor
+&lt;/h2&gt;&lt;p&gt;go vendor 是 go 1.6 官方正式引入的包管理方式。&lt;/p&gt;
+&lt;p&gt;其基本思路是，将引用的外部包的源代码放在当前工程的&lt;code&gt;vendor&lt;/code&gt;目录下面，go 编译时会优先从&lt;code&gt;vendor&lt;/code&gt;目录寻找依赖关系。&lt;/p&gt;
+&lt;h3 id=&#34;包状态类型&#34;&gt;包状态类型
+&lt;/h3&gt;&lt;p&gt;首先要知道&lt;code&gt;govendor&lt;/code&gt;对包状态的分类：&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;状态&lt;/th&gt;
+          &lt;th&gt;缩写&lt;/th&gt;
+          &lt;th&gt;含义&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;+local&lt;/td&gt;
+          &lt;td&gt;l&lt;/td&gt;
+          &lt;td&gt;packages in your project 本地包，即项目自身的包组织&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;+external&lt;/td&gt;
+          &lt;td&gt;e&lt;/td&gt;
+          &lt;td&gt;被引用、在$GOPATH下找得到、但当前项目不存在的包&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;+vendor&lt;/td&gt;
+          &lt;td&gt;v&lt;/td&gt;
+          &lt;td&gt;已被 govendor 管理，即在 vendor 目录下&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;+std&lt;/td&gt;
+          &lt;td&gt;s&lt;/td&gt;
+          &lt;td&gt;标准库中的包&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;+excluded&lt;/td&gt;
+          &lt;td&gt;x&lt;/td&gt;
+          &lt;td&gt;明确从vendoring中排除的外部包&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;+unused&lt;/td&gt;
+          &lt;td&gt;u&lt;/td&gt;
+          &lt;td&gt;未使用的包，即包在 vendor 目录下，但项目并没有用到&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;+missing&lt;/td&gt;
+          &lt;td&gt;m&lt;/td&gt;
+          &lt;td&gt;代码引用了依赖包，但该包并没有找到&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;+program&lt;/td&gt;
+          &lt;td&gt;p&lt;/td&gt;
+          &lt;td&gt;主程序包，意味着可以编译为执行文件&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;+outside&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;+external +missing&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;+all&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;所有的包&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;常用的三种为：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;external&lt;/code&gt;: 放在&lt;code&gt;$GOPATH&lt;/code&gt; 下被依赖的包（最常用）&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;local&lt;/code&gt;: 项目自身的包&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;vendor&lt;/code&gt;: 被&lt;code&gt;govendor&lt;/code&gt;管理的，放在&lt;code&gt;vendor&lt;/code&gt;目录下的包&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;命令&#34;&gt;命令
+&lt;/h3&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;命令&lt;/th&gt;
+          &lt;th&gt;功能&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;init&lt;/td&gt;
+          &lt;td&gt;初始化 vendor 目录&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;list&lt;/td&gt;
+          &lt;td&gt;列出所有的依赖包&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;add&lt;/td&gt;
+          &lt;td&gt;添加包到 vendor 目录，如 govendor add +external 添加所有外部包，也可以直接跟包名，如 govendor add golang.org/x/net/internal/socket&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;update&lt;/td&gt;
+          &lt;td&gt;从 $GOPATH 更新依赖包到 vendor 目录&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;remove&lt;/td&gt;
+          &lt;td&gt;从 vendor 管理中删除依赖（add 的反操作）&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;status&lt;/td&gt;
+          &lt;td&gt;列出所有缺失、过期和修改过的包&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;fetch&lt;/td&gt;
+          &lt;td&gt;添加或更新包到本地 vendor 目录&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;sync&lt;/td&gt;
+          &lt;td&gt;本地存在 vendor.json 时候拉去依赖包，匹配所记录的版本&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;get&lt;/td&gt;
+          &lt;td&gt;类似 go get 目录，拉取依赖包到 vendor 目录&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;基本操作&#34;&gt;基本操作
+&lt;/h2&gt;&lt;p&gt;&lt;code&gt;govendor status&lt;/code&gt;: 查看当前包状态&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;govendor list +e&lt;/code&gt;: 查看当前项目的依赖但是未被添加到&lt;code&gt;vendor&lt;/code&gt;中的包&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;govendor add +e&lt;/code&gt;: 添加依赖的包。如果&lt;code&gt;vendor.json&lt;/code&gt;中存在，但是&lt;code&gt;vendor&lt;/code&gt;目录下不存在（即&lt;code&gt;govendor status&lt;/code&gt;显示缺失）的包也会被重新添加&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;govendor remove +u&lt;/code&gt;: 删除在&lt;code&gt;vendor&lt;/code&gt;下但是未依赖的包&lt;/p&gt;
+&lt;p&gt;在实际过程中，有部分包是团队的公共包。&lt;br&gt;
+这部分包通常有自己的单独项目，并且已经被我们添加到&lt;code&gt;$GOPATH&lt;/code&gt;下，可能就不需要添加到当前项目的&lt;code&gt;vendor&lt;/code&gt;下。&lt;/p&gt;
+&lt;p&gt;这时候可以结合&lt;code&gt;list&lt;/code&gt;和&lt;code&gt;add&lt;/code&gt;来使用，&lt;br&gt;
+先用&lt;code&gt;list -no-status +e&lt;/code&gt;列出依赖包，然后使用&lt;code&gt;grep&lt;/code&gt;过滤，再调用&lt;code&gt;add&lt;/code&gt;命令添加：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;govendor list -no-status +e | grep -v &amp;#39;myteam/common&amp;#39; | xargs govendor add
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+        </item>
+        
+    </channel>
+</rss>
