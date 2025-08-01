@@ -754,7 +754,7 @@ when flag=7 b(111) =&amp;gt; [1, 2, 3]&lt;/p&gt;
         <pubDate>Mon, 19 Nov 2018 10:52:29 +0800</pubDate>
         
         <guid>https://www.orztu.com/leetcode/060-permutation-sequence/</guid>
-        <description>&lt;h2 id=&#34;description&#34;&gt;Description
+        <description>&lt;img src="https://www.orztu.com/images/leetcode/031-next-permutation.jpg" alt="Featured image of post LeetCode 60. Permutation Sequence" /&gt;&lt;h2 id=&#34;description&#34;&gt;Description
 &lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.com/problems/permutation-sequence&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Permutation Sequence&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
@@ -1538,7 +1538,7 @@ There exist two distinct solutions to the 4-queens puzzle:&lt;/p&gt;
         <pubDate>Sat, 22 Apr 2017 11:35:12 +0800</pubDate>
         
         <guid>https://www.orztu.com/leetcode/037-sudoku-solver/</guid>
-        <description>&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.com/problems/sudoku-solver/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <description>&lt;img src="https://www.orztu.com/images/leetcode/Sudoku-Solver-1.png" alt="Featured image of post LeetCode 37. Sudoku Solver" /&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.com/problems/sudoku-solver/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Sudoku Solver&lt;/a&gt;&lt;/p&gt;
 &lt;!-- ![palindromic](/images/leetcode/Sudoku-Solver-1.png &#34;数独&#34;) --&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description

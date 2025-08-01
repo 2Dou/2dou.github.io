@@ -726,7 +726,7 @@ The given board size is always 9x9.&lt;/li&gt;
         <pubDate>Sat, 22 Apr 2017 11:35:12 +0800</pubDate>
         
         <guid>https://www.orztu.com/leetcode/037-sudoku-solver/</guid>
-        <description>&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.com/problems/sudoku-solver/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <description>&lt;img src="https://www.orztu.com/images/leetcode/Sudoku-Solver-1.png" alt="Featured image of post LeetCode 37. Sudoku Solver" /&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.com/problems/sudoku-solver/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Sudoku Solver&lt;/a&gt;&lt;/p&gt;
 &lt;!-- ![palindromic](/images/leetcode/Sudoku-Solver-1.png &#34;数独&#34;) --&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description

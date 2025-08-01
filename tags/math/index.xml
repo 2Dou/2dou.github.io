@@ -380,7 +380,7 @@
         <pubDate>Mon, 19 Nov 2018 10:52:29 +0800</pubDate>
         
         <guid>https://www.orztu.com/leetcode/060-permutation-sequence/</guid>
-        <description>&lt;h2 id=&#34;description&#34;&gt;Description
+        <description>&lt;img src="https://www.orztu.com/images/leetcode/031-next-permutation.jpg" alt="Featured image of post LeetCode 60. Permutation Sequence" /&gt;&lt;h2 id=&#34;description&#34;&gt;Description
 &lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.com/problems/permutation-sequence&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Permutation Sequence&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
@@ -788,7 +788,7 @@ Output: &amp;ldquo;56088&amp;rdquo;&lt;/p&gt;&lt;/blockquote&gt;
         <pubDate>Fri, 07 Jul 2017 14:43:41 +0800</pubDate>
         
         <guid>https://www.orztu.com/leetcode/013-roman-to-integer/</guid>
-        <description>&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.com/problems/roman-to-integer/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <description>&lt;img src="https://www.orztu.com/images/leetcode/roman-numerals.jpg" alt="Featured image of post LeetCode 13. Roman to Integer" /&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.com/problems/roman-to-integer/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Roman to Integer&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description
 &lt;/h2&gt;&lt;blockquote&gt;
@@ -872,7 +872,7 @@ Input is guaranteed to be within the range from 1 to 3999.&lt;/p&gt;&lt;/blockqu
         <pubDate>Fri, 07 Jul 2017 09:18:49 +0800</pubDate>
         
         <guid>https://www.orztu.com/leetcode/012-integer-to-roman/</guid>
-        <description>&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.com/problems/integer-to-roman/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <description>&lt;img src="https://www.orztu.com/images/leetcode/roman-numerals.jpg" alt="Featured image of post LeetCode 12. Integer to Roman" /&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://leetcode.com/problems/integer-to-roman/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Integer to Roman&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;description&#34;&gt;Description
 &lt;/h2&gt;&lt;blockquote&gt;
