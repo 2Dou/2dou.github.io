@@ -1,0 +1,57 @@
+name: Update Running
+
+# Controls when the workflow will run
+on:
+  schedule:
+    # Update theme automatically everyday at 00:00 UTC
+    - cron: "30 4,19 * * *"
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+    push:
+      branches: [master]
+
+env:
+  SAVE_DATA_IN_GITHUB_CACHE: true
+
+jobs:
+  update-running:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+
+      - name: Cache Data Files
+        if: env.SAVE_DATA_IN_GITHUB_CACHE == 'true'
+        uses: actions/cache@v4
+        with:
+          path: |
+            .
+          key: ${{ env.DATA_CACHE_PREFIX }}-${{ github.sha }}-${{ github.run_id }}
+          restore-keys: |
+            ${{ env.DATA_CACHE_PREFIX }}-${{ github.sha }}-
+            ${{ env.DATA_CACHE_PREFIX }}-
+
+      - name: Pull
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git checkout .
+          git pull
+
+      - name: Get new runs
+        run: curl https://raw.githubusercontent.com/2Dou/running_page/master/assets/running.svg -o ./running.svg
+
+      - name: Push new runs
+        # if: env.SAVE_DATA_IN_GITHUB_CACHE != 'true'
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git pull
+          git add ./running.svg
+          git commit -m 'update new runs' || echo "nothing to commit"
+          git push || echo "nothing to push"
+
