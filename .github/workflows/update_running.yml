@@ -6,6 +6,8 @@ on:
   workflow_dispatch:
     push:
       branches: [master]
+      paths:
+        - running.svg
   repository_dispatch:
     types: [update-svg]
 
