@@ -1,64 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-    <channel>
-        <title>Pages on Orztu The Way | Orz途</title>
-        <link>https://www.orztu.com/page/</link>
-        <description>Recent content in Pages on Orztu The Way | Orz途</description>
-        <generator>Hugo -- gohugo.io</generator>
-        <language>zh-cn</language>
-        <copyright>Orztu The Way</copyright>
-        <lastBuildDate>Wed, 30 Jul 2025 10:22:57 +0800</lastBuildDate><atom:link href="https://www.orztu.com/page/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Running</title>
-        <link>https://www.orztu.com/running/</link>
-        <pubDate>Wed, 30 Jul 2025 10:22:57 +0800</pubDate>
-        
-        <guid>https://www.orztu.com/running/</guid>
-        <description>&lt;img src="//cdn.shopify.com/s/files/1/0718/4269/files/Running-Banner.jpg?v=1677698734&amp;width=1100" alt="Featured image of post Running" /&gt;&lt;p&gt;&lt;object data=&#34;/running.svg&#34; type=&#34;image/svg+xml&#34; style=&#34;width: 100%; height: auto;&#34;&gt;&lt;/object&gt;&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>About me</title>
-        <link>https://www.orztu.com/about/</link>
-        <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
-        
-        <guid>https://www.orztu.com/about/</guid>
-        <description>&lt;img src="https://www.orztu.com/images/cover/city.jpg" alt="Featured image of post About me" /&gt;&lt;h3 id=&#34;城市永远年轻而我们终将老去&#34;&gt;城市永远年轻，而我们终将老去
-&lt;/h3&gt;&lt;h4 id=&#34;info&#34;&gt;info
-&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;&lt;del&gt;cocos2dx-lua 程序猿&lt;/del&gt; 我可能是个假cocos2d-x &lt;!-- 因为工资 --&gt;&lt;/li&gt;
-&lt;li&gt;又变成 Unity 开发仔 + 半吊子 TA  + 工具人了&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;contact&#34;&gt;contact
-&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;h3rvgo&lt;/code&gt; AT &lt;a class=&#34;link&#34; href=&#34;https://gmail.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;&lt;code&gt;gmail.com&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        </item>
-        <item>
-        <title>Archives</title>
-        <link>https://www.orztu.com/archives/</link>
-        <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
-        
-        <guid>https://www.orztu.com/archives/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Links</title>
-        <link>https://www.orztu.com/links/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://www.orztu.com/links/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Search</title>
-        <link>https://www.orztu.com/search/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://www.orztu.com/search/</guid>
-        <description></description>
-        </item>
-        
-    </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pages on Orztu The Way | Orz途</title><link>https://www.orztu.com/page/</link><description>Recent content in Pages on Orztu The Way | Orz途</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Orztu The Way</copyright><lastBuildDate>Wed, 30 Jul 2025 10:22:57 +0800</lastBuildDate><atom:link href="https://www.orztu.com/page/index.xml" rel="self" type="application/rss+xml"/><item><title>Running</title><link>https://www.orztu.com/running/</link><pubDate>Wed, 30 Jul 2025 10:22:57 +0800</pubDate><guid>https://www.orztu.com/running/</guid><description>&lt;img src="//cdn.shopify.com/s/files/1/0718/4269/files/Running-Banner.jpg?v=1677698734&amp;width=1100" alt="Featured image of post Running" />&lt;p>&lt;object data="/running.svg" type="image/svg+xml" style="width: 100%; height: auto;">&lt;/object>&lt;/p></description></item><item><title>About me</title><link>https://www.orztu.com/about/</link><pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate><guid>https://www.orztu.com/about/</guid><description>&lt;img src="https://www.orztu.com/images/cover/city.jpg" alt="Featured image of post About me" />&lt;h3 id="城市永远年轻而我们终将老去">城市永远年轻，而我们终将老去
+&lt;/h3>&lt;h4 id="info">info
+&lt;/h4>&lt;ul>
+&lt;li>&lt;del>cocos2dx-lua 程序猿&lt;/del> 我可能是个假cocos2d-x &lt;!-- 因为工资 -->&lt;/li>
+&lt;li>又变成 Unity 开发仔 + 半吊子 TA + 工具人了&lt;/li>
+&lt;/ul>
+&lt;h4 id="contact">contact
+&lt;/h4>&lt;ul>
+&lt;li>&lt;code>h3rvgo&lt;/code> AT &lt;a class="link" href="https://gmail.com" target="_blank" rel="noopener"
+>&lt;code>gmail.com&lt;/code>&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>Archives</title><link>https://www.orztu.com/archives/</link><pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate><guid>https://www.orztu.com/archives/</guid><description/></item><item><title>Links</title><link>https://www.orztu.com/links/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.orztu.com/links/</guid><description/></item><item><title>Search</title><link>https://www.orztu.com/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.orztu.com/search/</guid><description/></item></channel></rss>

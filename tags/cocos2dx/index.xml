@@ -1,155 +1,136 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-    <channel>
-        <title>Cocos2dx on Orztu The Way | Orz途</title>
-        <link>https://www.orztu.com/tags/cocos2dx/</link>
-        <description>Recent content in Cocos2dx on Orztu The Way | Orz途</description>
-        <generator>Hugo -- gohugo.io</generator>
-        <language>zh-cn</language>
-        <copyright>Orztu The Way</copyright>
-        <lastBuildDate>Sat, 22 Dec 2018 09:22:48 +0800</lastBuildDate><atom:link href="https://www.orztu.com/tags/cocos2dx/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>记一次 Cocos2dx-Lua 闪退</title>
-        <link>https://www.orztu.com/post/little-problem-while-using-cocos2dx-lua/</link>
-        <pubDate>Sat, 22 Dec 2018 09:22:48 +0800</pubDate>
-        
-        <guid>https://www.orztu.com/post/little-problem-while-using-cocos2dx-lua/</guid>
-        <description>&lt;h2 id=&#34;闪退点&#34;&gt;闪退点
-&lt;/h2&gt;&lt;p&gt;Version: Cocos2dx-Lua 3.16&lt;/p&gt;
-&lt;p&gt;在某个页面修改后，出现闪退。查看修改记录没有特别的地方，均为修改图片或者条件判断。&lt;/p&gt;
-&lt;p&gt;启动 XCode 发现闪退位置出现在&lt;code&gt;void Node::onEnterTransitionDidFinish()&lt;/code&gt;中，&lt;br&gt;
-在其调用子节点的&lt;code&gt;child-&amp;gt;onEnterTransitionDidFinish()&lt;/code&gt;时，&lt;code&gt;child&lt;/code&gt;指针无效。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1352
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;1353
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;1354
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;...&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;auto&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;child&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;\&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;_children&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;child&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;onEnterTransitionDidFinish&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;此时的调用栈：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;0: void Node::onEnterTransitionDidFinish() -&amp;gt; child-&amp;gt;onEnterTransitionDidFinish();
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;1: void Director::setNextScene() -&amp;gt; _runningScene-&amp;gt;onEnterTransitionDidFinish();
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2: void Director::drawScene() -&amp;gt; setNextScene();
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;...
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;对应 Lua 代码流程：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;display.runScene(HomeScene)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;HomeScene:ctor() {
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    self:addChild(HomeLayer)
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;怀疑&#34;&gt;怀疑
-&lt;/h2&gt;&lt;p&gt;因为是在调用&lt;code&gt;Scene::onEnterTransitionDidFinish()&lt;/code&gt;时指针无效，所以猜测是遍历过程中字节点被删除。&lt;/p&gt;
-&lt;p&gt;查看相关代码：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;HomeScene: 没有 onEnterTransitionDidFinish()
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;HomeLayer: 有 onEnterTransitionDidFinish()，
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;           但在 onEnterTransitionDidFinish 中没有删除 HomeScene 上的结点。
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;           而是往 Scene 上新增结点 addChild(GuideLayer)
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;因为游戏逻辑是只创建一个&lt;code&gt;GuideLayer&lt;/code&gt;，重复创建时会删除上次创建的页面。又怀疑是否创建了两次&lt;code&gt;GuideLayer&lt;/code&gt;。&lt;br&gt;
-通过屏蔽代码发现不添加&lt;code&gt;GuideLayer&lt;/code&gt;就不会闪退，但是&lt;code&gt;GuideLayer&lt;/code&gt;的确只创建了一次，不存在删除问题。&lt;/p&gt;
-&lt;h2 id=&#34;真相&#34;&gt;真相
-&lt;/h2&gt;&lt;p&gt;再次分析流程&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;HomeScene:onEnterTransitionDidFinish():
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    HomeLayer:onEnterTransitionDidFinish(
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        addChild(GuideLayer)  // 添加到HomeScene上
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    )
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;HomeScene:onEnterTransitionDidFinish() 闪退
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;总归问题是出现在&lt;code&gt;HomeScene&lt;/code&gt;的&lt;code&gt;_children&lt;/code&gt;容器上，那么既然不是删除，增加结点会导致容器出问题吗？&lt;/p&gt;
-&lt;p&gt;查找代码得到&lt;code&gt;_children&lt;/code&gt;类型为&lt;code&gt;CCVector&lt;/code&gt;，而&lt;code&gt;CCVector&lt;/code&gt;通过&lt;code&gt;std::vector&lt;/code&gt;实现。&lt;/p&gt;
-&lt;p&gt;所以出现了常见的**&lt;em&gt;问题：在容器迭代过程中删除或插入&lt;/em&gt;**。&lt;/p&gt;
-&lt;p&gt;在新增结点往&lt;code&gt;std::vector&lt;/code&gt;插入的时候，恰好超过容量大小，导致扩容。而&lt;code&gt;std::vector&lt;/code&gt;是分配的连续内存，&lt;br&gt;
-所以扩容时候会重新分配内存，导致遍历的时候出现&lt;code&gt;child&lt;/code&gt;指针无效。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;scene::onEnterTransitionDidFinish() {
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    for (child: scene-&amp;gt;children) {       
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        // onEnterTransitionDidFinish里面往scene中addChild
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        // 导致children容器扩容，for循环的child指针失效
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        // 然后下一轮循环再到这里，child(无效指针)-&amp;gt;onEnterTransitionDidFinish()就会闪退
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        child-&amp;gt;onEnterTransitionDidFinish();  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    }  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;h2 id=&#34;else&#34;&gt;else
-&lt;/h2&gt;&lt;p&gt;那么是不是就不能在&lt;code&gt;onEnterTransitionDidFinish&lt;/code&gt;中添加结点呢？&lt;/p&gt;
-&lt;p&gt;在这个项目，许多页面都在&lt;code&gt;onEnterTransitionDidFinish&lt;/code&gt;往&lt;code&gt;HomeScene&lt;/code&gt;添加&lt;code&gt;GuideLayer&lt;/code&gt;；或者在当前页面添加结点，为啥运行了这么久都没发现问题？&lt;/p&gt;
-&lt;p&gt;查看代码可以得到，&lt;code&gt;C++&lt;/code&gt; 中&lt;code&gt;onEnterTransitionDidFinish&lt;/code&gt;是在遍历完子节点后，&lt;br&gt;
-再发送消息调用&lt;code&gt;Lua&lt;/code&gt;中的&lt;code&gt;onEnterTransitionDidFinish&lt;/code&gt;的：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-gdscript3&#34; data-lang=&#34;gdscript3&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;auto&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;child&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;_children&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;child&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;onEnterTransitionDidFinish&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;...&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;//&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;调用当前结点&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Lua&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;的&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;onEnterTransitionDidFinish&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;ScriptEngineManager&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sendNodeEventToLua&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;kNodeOnEnterTransitionDidFinish&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;而项目中的页面管理是这样做的：进入游戏创建&lt;code&gt;HomeScene&lt;/code&gt;，之后其他页面跳转均在&lt;code&gt;HomeScene&lt;/code&gt;上删除和添加，几乎不会创建新 Scene 。&lt;/p&gt;
-&lt;p&gt;所以后面不会再遇到&lt;code&gt;HomeScene::onEnterTransitionDidFinish&lt;/code&gt;遍历时添加子结点的情况；而直接往当前页面添加结点，也是在当前页面的&lt;code&gt;_children&lt;/code&gt;遍历完后再添加的(Lua 中添加)。&lt;/p&gt;</description>
-        </item>
-        
-    </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Cocos2dx on Orztu The Way | Orz途</title><link>https://www.orztu.com/tags/cocos2dx/</link><description>Recent content in Cocos2dx on Orztu The Way | Orz途</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Orztu The Way</copyright><lastBuildDate>Sat, 22 Dec 2018 09:22:48 +0800</lastBuildDate><atom:link href="https://www.orztu.com/tags/cocos2dx/index.xml" rel="self" type="application/rss+xml"/><item><title>记一次 Cocos2dx-Lua 闪退</title><link>https://www.orztu.com/post/little-problem-while-using-cocos2dx-lua/</link><pubDate>Sat, 22 Dec 2018 09:22:48 +0800</pubDate><guid>https://www.orztu.com/post/little-problem-while-using-cocos2dx-lua/</guid><description>&lt;h2 id="闪退点">闪退点
+&lt;/h2>&lt;p>Version: Cocos2dx-Lua 3.16&lt;/p>
+&lt;p>在某个页面修改后，出现闪退。查看修改记录没有特别的地方，均为修改图片或者条件判断。&lt;/p>
+&lt;p>启动 XCode 发现闪退位置出现在&lt;code>void Node::onEnterTransitionDidFinish()&lt;/code>中，&lt;br>
+在其调用子节点的&lt;code>child-&amp;gt;onEnterTransitionDidFinish()&lt;/code>时，&lt;code>child&lt;/code>指针无效。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1352
+&lt;/span>&lt;span class="lnt">1353
+&lt;/span>&lt;span class="lnt">1354
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="p">...&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">for&lt;/span>&lt;span class="p">(&lt;/span> &lt;span class="k">const&lt;/span> &lt;span class="k">auto&lt;/span> &lt;span class="o">&amp;amp;&lt;/span>&lt;span class="nl">child&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="err">\&lt;/span>&lt;span class="n">_children&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">child&lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="n">onEnterTransitionDidFinish&lt;/span>&lt;span class="p">();&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>
+&lt;p>此时的调用栈：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">0: void Node::onEnterTransitionDidFinish() -&amp;gt; child-&amp;gt;onEnterTransitionDidFinish();
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">1: void Director::setNextScene() -&amp;gt; _runningScene-&amp;gt;onEnterTransitionDidFinish();
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">2: void Director::drawScene() -&amp;gt; setNextScene();
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">...
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>对应 Lua 代码流程：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">display.runScene(HomeScene)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">HomeScene:ctor() {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> self:addChild(HomeLayer)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="怀疑">怀疑
+&lt;/h2>&lt;p>因为是在调用&lt;code>Scene::onEnterTransitionDidFinish()&lt;/code>时指针无效，所以猜测是遍历过程中字节点被删除。&lt;/p>
+&lt;p>查看相关代码：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">HomeScene: 没有 onEnterTransitionDidFinish()
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">HomeLayer: 有 onEnterTransitionDidFinish()，
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> 但在 onEnterTransitionDidFinish 中没有删除 HomeScene 上的结点。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> 而是往 Scene 上新增结点 addChild(GuideLayer)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>因为游戏逻辑是只创建一个&lt;code>GuideLayer&lt;/code>，重复创建时会删除上次创建的页面。又怀疑是否创建了两次&lt;code>GuideLayer&lt;/code>。&lt;br>
+通过屏蔽代码发现不添加&lt;code>GuideLayer&lt;/code>就不会闪退，但是&lt;code>GuideLayer&lt;/code>的确只创建了一次，不存在删除问题。&lt;/p>
+&lt;h2 id="真相">真相
+&lt;/h2>&lt;p>再次分析流程&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">HomeScene:onEnterTransitionDidFinish():
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> HomeLayer:onEnterTransitionDidFinish(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> addChild(GuideLayer) // 添加到HomeScene上
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> )
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">HomeScene:onEnterTransitionDidFinish() 闪退
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>总归问题是出现在&lt;code>HomeScene&lt;/code>的&lt;code>_children&lt;/code>容器上，那么既然不是删除，增加结点会导致容器出问题吗？&lt;/p>
+&lt;p>查找代码得到&lt;code>_children&lt;/code>类型为&lt;code>CCVector&lt;/code>，而&lt;code>CCVector&lt;/code>通过&lt;code>std::vector&lt;/code>实现。&lt;/p>
+&lt;p>所以出现了常见的**&lt;em>问题：在容器迭代过程中删除或插入&lt;/em>**。&lt;/p>
+&lt;p>在新增结点往&lt;code>std::vector&lt;/code>插入的时候，恰好超过容量大小，导致扩容。而&lt;code>std::vector&lt;/code>是分配的连续内存，&lt;br>
+所以扩容时候会重新分配内存，导致遍历的时候出现&lt;code>child&lt;/code>指针无效。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">scene::onEnterTransitionDidFinish() {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">    for (child: scene-&amp;gt;children) {       
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // onEnterTransitionDidFinish里面往scene中addChild
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">        // 导致children容器扩容，for循环的child指针失效
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">        // 然后下一轮循环再到这里，child(无效指针)-&amp;gt;onEnterTransitionDidFinish()就会闪退
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">        child-&amp;gt;onEnterTransitionDidFinish();  
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">    }  
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="else">else
+&lt;/h2>&lt;p>那么是不是就不能在&lt;code>onEnterTransitionDidFinish&lt;/code>中添加结点呢？&lt;/p>
+&lt;p>在这个项目，许多页面都在&lt;code>onEnterTransitionDidFinish&lt;/code>往&lt;code>HomeScene&lt;/code>添加&lt;code>GuideLayer&lt;/code>；或者在当前页面添加结点，为啥运行了这么久都没发现问题？&lt;/p>
+&lt;p>查看代码可以得到，&lt;code>C++&lt;/code> 中&lt;code>onEnterTransitionDidFinish&lt;/code>是在遍历完子节点后，&lt;br>
+再发送消息调用&lt;code>Lua&lt;/code>中的&lt;code>onEnterTransitionDidFinish&lt;/code>的：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-gdscript3" data-lang="gdscript3">&lt;span class="line">&lt;span class="cl">&lt;span class="k">for&lt;/span>&lt;span class="p">(&lt;/span> &lt;span class="k">const&lt;/span> &lt;span class="n">auto&lt;/span> &lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">child&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">_children&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">child&lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="n">onEnterTransitionDidFinish&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">...&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">//&lt;/span> &lt;span class="err">调用当前结点&lt;/span> &lt;span class="n">Lua&lt;/span> &lt;span class="err">的&lt;/span> &lt;span class="n">onEnterTransitionDidFinish&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">ScriptEngineManager&lt;/span>&lt;span class="p">::&lt;/span>&lt;span class="n">sendNodeEventToLua&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">this&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">kNodeOnEnterTransitionDidFinish&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>而项目中的页面管理是这样做的：进入游戏创建&lt;code>HomeScene&lt;/code>，之后其他页面跳转均在&lt;code>HomeScene&lt;/code>上删除和添加，几乎不会创建新 Scene 。&lt;/p>
+&lt;p>所以后面不会再遇到&lt;code>HomeScene::onEnterTransitionDidFinish&lt;/code>遍历时添加子结点的情况；而直接往当前页面添加结点，也是在当前页面的&lt;code>_children&lt;/code>遍历完后再添加的(Lua 中添加)。&lt;/p></description></item></channel></rss>

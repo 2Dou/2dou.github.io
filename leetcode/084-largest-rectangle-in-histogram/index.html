@@ -1,1008 +1,185 @@
-<!DOCTYPE html>
-<html lang="zh-cn" dir="ltr">
-    <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="LeetCode 84. Largest Rectangle in Histogram - Answer LeetCode编程练习解答">
-<meta name="keywords" content="栈, 直方图最大矩形"><title>LeetCode 84. Largest Rectangle in Histogram</title>
-
-<link rel='canonical' href='https://www.orztu.com/leetcode/084-largest-rectangle-in-histogram/'>
-
-<link rel="stylesheet" href="/scss/style.min.9ab44a42178ad69337e0a9f7aad077c2d9150eca7eaa7dca20e1c6e67e115cd9.css"><meta property='og:title' content="LeetCode 84. Largest Rectangle in Histogram">
-<meta property='og:description' content="LeetCode 84. Largest Rectangle in Histogram - Answer LeetCode编程练习解答">
-<meta property='og:url' content='https://www.orztu.com/leetcode/084-largest-rectangle-in-histogram/'>
-<meta property='og:site_name' content='Orztu The Way | Orz途'>
-<meta property='og:type' content='article'><meta property='article:section' content='Leetcode' /><meta property='article:tag' content='LeetCode' /><meta property='article:tag' content='Array' /><meta property='article:tag' content='Stack' /><meta property='article:published_time' content='2018-12-11T10:10:38&#43;08:00'/><meta property='article:modified_time' content='2018-12-11T10:10:38&#43;08:00'/>
-<meta name="twitter:title" content="LeetCode 84. Largest Rectangle in Histogram">
-<meta name="twitter:description" content="LeetCode 84. Largest Rectangle in Histogram - Answer LeetCode编程练习解答">
-    <link rel="shortcut icon" href="/favicon.ico" />
-
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-GQBLCC72QP"></script>
-      <script>
-        var doNotTrack = false;
-        if ( false ) {
-          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
-          var doNotTrack = (dnt == "1" || dnt == "yes");
-        }
-        if (!doNotTrack) {
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-GQBLCC72QP');
-        }
-      </script>
-    </head>
-    <body class="
-    article-page
-    ">
-    <script>
-        (function() {
-            const colorSchemeKey = 'StackColorScheme';
-            if(!localStorage.getItem(colorSchemeKey)){
-                localStorage.setItem(colorSchemeKey, "auto");
-            }
-        })();
-    </script><script>
-    (function() {
-        const colorSchemeKey = 'StackColorScheme';
-        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
-        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
-
-        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
-            
-
-            document.documentElement.dataset.scheme = 'dark';
-        } else {
-            document.documentElement.dataset.scheme = 'light';
-        }
-    })();
-</script>
-<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
-    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
-        <span class="hamburger-box">
-            <span class="hamburger-inner"></span>
-        </span>
-    </button>
-
-    <header>
-        
-            
-            <figure class="site-avatar">
-                <a href="/">
-                
-                    
-                    
-                    
-                        
-                        <img src="/img/avatar_hu_2ba09b40b9a57220.jpeg" width="300"
-                            height="300" class="site-logo" loading="lazy" alt="Avatar">
-                    
-                
-                </a>
-                
-            </figure>
-            
-        
-        
-        <div class="site-meta">
-            <h1 class="site-name"><a href="/">Orztu The Way | Orz途</a></h1>
-            <h2 class="site-description">城市永远年轻，而我们终将老去</h2>
-        </div>
-    </header><ol class="menu-social">
-            
-                <li>
-                    <a 
-                        href='https://github.com/2dou'
-                        target="_blank"
-                        title="2dou@GitHub"
-                        rel="me"
-                    >
-                        
-                        
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
-</svg>
-
-
-
-                        
-                    </a>
-                </li>
-            
-                <li>
-                    <a 
-                        href='/index.xml'
-                        target="_blank"
-                        title="RSS"
-                        rel="me"
-                    >
-                        
-                        
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-rss" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="5" cy="19" r="1" />
-  <path d="M4 4a16 16 0 0 1 16 16" />
-  <path d="M4 11a9 9 0 0 1 9 9" />
-</svg>
-
-
-
-                        
-                    </a>
-                </li>
-            
-        </ol><ol class="menu" id="main-menu">
-        
-        
-        
-        <li >
-            <a href='/' >
-                
-                
-                
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <polyline points="5 12 3 12 12 3 21 12 19 12" />
-  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
-  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
-</svg>
-
-
-
-                
-                <span>Home</span>
-            </a>
-        </li>
-        
-        
-        <li >
-            <a href='/categories/leetcode/' >
-                
-                
-                
-                    <!--
-category: Text
-tags: [brackets, source, programming, command]
-version: "1.0"
-unicode: "ea77"
--->
-<svg
-  xmlns="http://www.w3.org/2000/svg"
-  width="32"
-  height="32"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="#000000"
-  stroke-width="1"
-  stroke-linecap="round"
-  stroke-linejoin="round"
->
-  <path d="M7 8l-4 4l4 4" />
-  <path d="M17 8l4 4l-4 4" />
-  <path d="M14 4l-4 16" />
-</svg>
-
-                
-                <span>LeetCode</span>
-            </a>
-        </li>
-        
-        
-        <li >
-            <a href='/books/' >
-                
-                
-                
-                    <!--
-category: Document
-tags: [read, dictionary, magazine, library, booklet, novel]
-version: "1.0"
-unicode: "ea39"
--->
-<svg
-  xmlns="http://www.w3.org/2000/svg"
-  width="32"
-  height="32"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="#000000"
-  stroke-width="1"
-  stroke-linecap="round"
-  stroke-linejoin="round"
->
-  <path d="M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0" />
-  <path d="M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0" />
-  <path d="M3 6l0 13" />
-  <path d="M12 6l0 13" />
-  <path d="M21 6l0 13" />
-</svg>
-
-                
-                <span>Books</span>
-            </a>
-        </li>
-        
-        
-        <li >
-            <a href='/archives/' >
-                
-                
-                
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <rect x="3" y="4" width="18" height="4" rx="2" />
-  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
-  <line x1="10" y1="12" x2="14" y2="12" />
-</svg>
-
-
-
-                
-                <span>Archives</span>
-            </a>
-        </li>
-        
-        
-        <li >
-            <a href='/running/' >
-                
-                
-                
-                    <!--
-tags: [jog, dislocating, movement, motion, sprint]
-category: Sport
-version: "1.14"
-unicode: "ec82"
--->
-<svg
-  xmlns="http://www.w3.org/2000/svg"
-  width="32"
-  height="32"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="#000000"
-  stroke-width="1.25"
-  stroke-linecap="round"
-  stroke-linejoin="round"
->
-  <path d="M13 4m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
-  <path d="M4 17l5 1l.75 -1.5" />
-  <path d="M15 21l0 -4l-4 -3l1 -6" />
-  <path d="M7 12l0 -3l5 -1l3 3l3 1" />
-</svg>
-
-                
-                <span>Running</span>
-            </a>
-        </li>
-        
-        
-        <li >
-            <a href='/about/' >
-                
-                
-                
-                    <!--
-tags: [sign, symbol, ask, sentence, word, letters, "?"]
-version: "1.16"
-unicode: "ec9d"
--->
-<svg
-  xmlns="http://www.w3.org/2000/svg"
-  width="32"
-  height="32"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="#000000"
-  stroke-width="1.25"
-  stroke-linecap="round"
-  stroke-linejoin="round"
->
-  <path d="M8 8a3.5 3 0 0 1 3.5 -3h1a3.5 3 0 0 1 3.5 3a3 3 0 0 1 -2 3a3 4 0 0 0 -2 4" />
-  <path d="M12 19l0 .01" />
-</svg>
-
-                
-                <span>About</span>
-            </a>
-        </li>
-        
-        
-        <li >
-            <a href='/search/' >
-                
-                
-                
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="10" cy="10" r="7" />
-  <line x1="21" y1="21" x2="15" y2="15" />
-</svg>
-
-
-
-                
-                <span>Search</span>
-            </a>
-        </li>
-        
-        
-        <li >
-            <a href='/links/' >
-                
-                
-                
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
-  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
-</svg>
-
-
-
-                
-                <span>Links</span>
-            </a>
-        </li>
-        
-        <li class="menu-bottom-section">
-            <ol class="menu">
-
-                
-                    <li id="dark-mode-toggle">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="8" cy="12" r="2" />
-  <rect x="2" y="6" width="20" height="12" rx="6" />
-</svg>
-
-
-
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="16" cy="12" r="2" />
-  <rect x="2" y="6" width="20" height="12" rx="6" />
-</svg>
-
-
-
-                        <span>暗色模式</span>
-                    </li>
-                
-            </ol>
-        </li>
-    </ol>
-</aside>
-
-    <aside class="sidebar right-sidebar sticky">
-        
-            
-                
-    <section class="widget archives">
-        <div class="widget-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <line x1="5" y1="9" x2="19" y2="9" />
-  <line x1="5" y1="15" x2="19" y2="15" />
-  <line x1="11" y1="4" x2="7" y2="20" />
-  <line x1="17" y1="4" x2="13" y2="20" />
-</svg>
-
-
-
-        </div>
-        <h2 class="widget-title section-title">目录</h2>
-        
-        <div class="widget--toc">
-            <nav id="TableOfContents">
-  <ol>
-    <li><a href="#description">Description</a></li>
-    <li><a href="#solution">Solution</a></li>
-    <li><a href="#similar-problem">Similar Problem</a></li>
-  </ol>
-</nav>
-        </div>
-    </section>
-
-            
-        
-    </aside>
-
-
-            <main class="main full-width">
-    
-<article class="main-article">
-    <header class="article-header">
-    
-
-    <div class="article-details">
-    
-    <header class="article-category">
-        
-            <a href="/categories/leetcode/" style="background-color: #2a9d8f; color: #fff;">
-                LeetCode
-            </a>
-        
-    </header>
-    
-
-    <div class="article-title-wrapper">
-        <h2 class="article-title">
-            <a href="/leetcode/084-largest-rectangle-in-histogram/">LeetCode 84. Largest Rectangle in Histogram</a>
-        </h2>
-    
-        
-        <h3 class="article-subtitle">
-            LeetCode 84. Largest Rectangle in Histogram - Answer LeetCode编程练习解答
-        </h3>
-        
-    </div>
-
-    
-    
-    
-    
-    <footer class="article-time">
-        
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
-  <circle cx="18" cy="18" r="4" />
-  <path d="M15 3v4" />
-  <path d="M7 3v4" />
-  <path d="M3 11h16" />
-  <path d="M18 16.496v1.504l1 1" />
-</svg>
-                <time class="article-time--published">2018-12-11</time>
-            </div>
-        
-
-        
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <polyline points="12 7 12 12 15 15" />
-</svg>
-
-
-
-                <time class="article-time--reading">
-                    阅读时长: 2 分钟
-                </time>
-            </div>
-        
-    </footer>
-    
-
-    
-</div>
-
-
-    
-</header>
-
-    <section class="article-content">
-    
-    
-    <h2 id="description">Description
-</h2><p><a class="link" href="https://leetcode.com/problems/largest-rectangle-in-histogram/"  target="_blank" rel="noopener"
-    >Largest Rectangle in Histogram</a></p>
-<blockquote>
-<p>Given n non-negative integers representing the histogram&rsquo;s bar height where the width of each bar is 1, find the area of largest rectangle in the histogram.</p>
-<p><img src="/images/leetcode/084_Largest_Rectangle_in_Histogram_1.png"
-	
-	
-	
-	loading="lazy"
-	
-	
-><br>
-Above is a histogram where width of each bar is <code>1</code>, given height = <code>[2,1,5,6,2,3]</code>.</p>
-<p><img src="/images/leetcode/084_Largest_Rectangle_in_Histogram_2.png"
-	
-	
-	
-	loading="lazy"
-	
-	
-><br>
-The largest rectangle is shown in the shaded area, which has area = <code>10</code> unit.</p></blockquote>
-<p>给出一个直方图，求最大矩形面积。</p>
-<h2 id="solution">Solution
-</h2><p>首先假设直方图是升序的，比如：<code>1, 3, 5, 6, 7</code></p>
-<p>那么需要比较的面积有：<code>1*5</code>，<code>3 * 4</code>，<code>5*3</code>，<code>6*2</code>，<code>7*1</code>。</p>
-<p>计算公式为：$ S(i) = height[i] * (length-i) $</p>
-<p>所以最大面积：$ \max_{i=0}^n{S(i)} $</p>
-<p>那遇到无序的数组怎么办呢？</p>
-<p>根据提示可以是用栈，目的是用于构造升序数组：</p>
-<p>假设当前高度为<code>h</code>：</p>
-<ol>
-<li>如果升序则直接入栈</li>
-<li>遇到降序，将栈中所有比<code>h</code>高的都利用公式计算出面积，然后降低它们的高度至<code>h</code>，使数组重新有序</li>
-</ol>
-<p>例如数组<code>1, 3, 4, 2, 3</code>：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span><span class="lnt">32
-</span><span class="lnt">33
-</span><span class="lnt">34
-</span><span class="lnt">35
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">^
-</span></span><span class="line"><span class="cl">|   0
-</span></span><span class="line"><span class="cl">|  00 0
-</span></span><span class="line"><span class="cl">|  0000
-</span></span><span class="line"><span class="cl">| 00000
-</span></span><span class="line"><span class="cl">.-------&gt;
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">首先：1，3，4 都是升序，依次入栈（下标入栈）：
-</span></span><span class="line"><span class="cl">^
-</span></span><span class="line"><span class="cl">|   0       stack:
-</span></span><span class="line"><span class="cl">|  00           [2]
-</span></span><span class="line"><span class="cl">|  00           [1]
-</span></span><span class="line"><span class="cl">| 000           [0]
-</span></span><span class="line"><span class="cl">.-------&gt;
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">遇到：2，不符合升序，计算前面 3 和 4 的面积分别为：S(1)=3*2，S(2)=4*1
-</span></span><span class="line"><span class="cl">然后降低高度至 2
-</span></span><span class="line"><span class="cl">^
-</span></span><span class="line"><span class="cl">|           stack:  将 4 的下标出栈，保留 3 的下标（因为 3 所在位置是新高度的起点）
-</span></span><span class="line"><span class="cl">|
-</span></span><span class="line"><span class="cl">|  000          [1]
-</span></span><span class="line"><span class="cl">| 0000          [0]
-</span></span><span class="line"><span class="cl">.-------&gt;
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">遇到：3，符合升序，直接入栈
-</span></span><span class="line"><span class="cl">^
-</span></span><span class="line"><span class="cl">|           stack:
-</span></span><span class="line"><span class="cl">|     0         [4]
-</span></span><span class="line"><span class="cl">|  0000         [1]
-</span></span><span class="line"><span class="cl">| 00000         [0]
-</span></span><span class="line"><span class="cl">.-------&gt;
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">最后仍需要计算的面积有：S(0)=1*5，S(1)=2*4，S(4)=3*1
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">所以最大面积为 8
-</span></span></code></pre></td></tr></table>
-</div>
-</div><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span><span class="lnt">32
-</span><span class="lnt">33
-</span><span class="lnt">34
-</span><span class="lnt">35
-</span><span class="lnt">36
-</span><span class="lnt">37
-</span><span class="lnt">38
-</span><span class="lnt">39
-</span><span class="lnt">40
-</span><span class="lnt">41
-</span><span class="lnt">42
-</span><span class="lnt">43
-</span><span class="lnt">44
-</span><span class="lnt">45
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-golang" data-lang="golang"><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">maxInt</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span> <span class="kt">int</span><span class="p">)</span> <span class="kt">int</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="nx">a</span> <span class="p">&gt;</span> <span class="nx">b</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="nx">a</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nx">b</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">largestRectangleArea</span><span class="p">(</span><span class="nx">heights</span> <span class="p">[]</span><span class="kt">int</span><span class="p">)</span> <span class="kt">int</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">stack</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">([]</span><span class="kt">int</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">lenStack</span> <span class="o">:=</span> <span class="nb">len</span><span class="p">(</span><span class="nx">stack</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">max</span> <span class="o">:=</span> <span class="mi">0</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="c1">// 追加一个 -1，用于最后清空栈</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">heights</span> <span class="p">=</span> <span class="nb">append</span><span class="p">(</span><span class="nx">heights</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="nx">heights</span><span class="p">);</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="nx">h</span> <span class="o">:=</span> <span class="nx">heights</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="nx">lenStack</span> <span class="p">&gt;</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="nx">h</span> <span class="p">&lt;</span> <span class="nx">heights</span><span class="p">[</span><span class="nx">stack</span><span class="p">[</span><span class="nx">lenStack</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="c1">// 如果前面更高，将更高的都出栈</span>
-</span></span><span class="line"><span class="cl">            <span class="c1">// 同时计算面积，然后降低它们的高度（形成新的“有序”）</span>
-</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">                <span class="nx">idx</span> <span class="o">:=</span> <span class="nx">stack</span><span class="p">[</span><span class="nx">lenStack</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">                <span class="c1">// 计算面积</span>
-</span></span><span class="line"><span class="cl">                <span class="nx">max</span> <span class="p">=</span> <span class="nf">maxInt</span><span class="p">(</span><span class="nx">max</span><span class="p">,</span> <span class="nx">heights</span><span class="p">[</span><span class="nx">idx</span><span class="p">]</span><span class="o">*</span><span class="p">(</span><span class="nx">i</span><span class="o">-</span><span class="nx">idx</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">                <span class="c1">// 降低高度</span>
-</span></span><span class="line"><span class="cl">                <span class="nx">heights</span><span class="p">[</span><span class="nx">idx</span><span class="p">]</span> <span class="p">=</span> <span class="nx">h</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">                <span class="nx">lenStack</span><span class="o">--</span> <span class="c1">// 假出栈</span>
-</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="nx">lenStack</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">||</span> <span class="nx">h</span> <span class="p">&gt;</span> <span class="nx">heights</span><span class="p">[</span><span class="nx">stack</span><span class="p">[</span><span class="nx">lenStack</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">                    <span class="c1">// 最后一个，保留在栈中作为新高度的起点</span>
-</span></span><span class="line"><span class="cl">                    <span class="nx">lenStack</span><span class="o">++</span>
-</span></span><span class="line"><span class="cl">                    <span class="k">break</span>
-</span></span><span class="line"><span class="cl">                <span class="p">}</span>
-</span></span><span class="line"><span class="cl">                <span class="nx">stack</span> <span class="p">=</span> <span class="nx">stack</span><span class="p">[:</span><span class="nx">lenStack</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">            <span class="p">}</span>
-</span></span><span class="line"><span class="cl">        <span class="p">}</span> <span class="k">else</span> <span class="cm">/* 这个判断可有可无 if lenStack == 0 || h &gt; heights[stack[lenStack-1]] */</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="c1">// 将当前索引入栈</span>
-</span></span><span class="line"><span class="cl">            <span class="nx">stack</span> <span class="p">=</span> <span class="nb">append</span><span class="p">(</span><span class="nx">stack</span><span class="p">,</span> <span class="nx">i</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">            <span class="nx">lenStack</span><span class="o">++</span>
-</span></span><span class="line"><span class="cl">        <span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nx">max</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
-<h2 id="similar-problem">Similar Problem
-</h2><ul>
-<li><a class="link" href="/leetcode/085-maximal-rectangle/" >85. Maximal Rectangle</a></li>
-</ul>
-    
-
-</section>
-
-
-    <footer class="article-footer">
-    
-    <section class="article-tags">
-        
-            <a href="/tags/leetcode/">LeetCode</a>
-        
-            <a href="/tags/array/">Array</a>
-        
-            <a href="/tags/stack/">Stack</a>
-        
-    </section>
-
-
-    
-    
-    <div class="pre-next">
-        
-        
-            
-        
-        
-            <a class="pre-next-btn bg" href="https://www.orztu.com/leetcode/082-remove-duplicates-from-sorted-list-ii/" data-tooltip="LeetCode 82. Remove Duplicates From Sorted List II">
-                <i class="fa fa-angle-left"></i>
-                <span>上一篇</span>
-        
-        </a>
-    
-        
-        
-            
-        
-        
-            <a class="pre-next-btn bg" href="https://www.orztu.com/leetcode/085-maximal-rectangle/" data-tooltip="LeetCode 85. Maximal Rectangle">
-                <i class="fa fa-angle-left"></i>
-                <span>下一篇</span>
-        
-        </a>
-    </div>
-    
-
-</footer>
-
-
-    
-        <link 
-                rel="stylesheet" 
-                href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI&#43;WdtXRGWt2kTvGFasHpSy3SV"crossorigin="anonymous"
-            ><script 
-                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG&#43;vnGctmUb0ZY0l8"crossorigin="anonymous"
-                defer
-                >
-            </script><script 
-                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"integrity="sha384-&#43;VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4&#43;/RRE05"crossorigin="anonymous"
-                defer
-                >
-            </script><script>
-    window.addEventListener("DOMContentLoaded", () => {
-	const mainArticleElement = document.querySelector(".main-article");
-        renderMathInElement(mainArticleElement, {
-            delimiters: [
-                { left: "$$", right: "$$", display: true },
-                { left: "$", right: "$", display: false },
-                { left: "\\(", right: "\\)", display: false },
-                { left: "\\[", right: "\\]", display: true }
-            ],
-            ignoredClasses: ["gist"]
-        });})
-</script>
-
-    
-</article>
-
-    
-
-    
-
-<aside class="related-content--wrapper">
-    <h2 class="section-title">相关文章</h2>
-    <div class="related-content">
-        <div class="flex article-list--tile">
-            
-                
-<article class="">
-    <a href="/leetcode/085-maximal-rectangle/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">LeetCode 85. Maximal Rectangle</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/leetcode/042-trapping-rain-water/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">LeetCode 42. Trapping Rain Water</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/leetcode/094-binary-tree-inorder-traversal/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">LeetCode 94. Binary Tree Inorder Traversal</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/leetcode/090-subsets-ii/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">LeetCode 90. Subsets II</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/leetcode/088-merge-sorted-array/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">LeetCode 88. Merge Sorted Array</h2>
-        </div>
-    </a>
-</article>
-
-            
-        </div>
-    </div>
-</aside>
-
-     
-    
-        
-    <div id="gitalk-container"></div>
-<link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.css"
-/>
-<script src="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/blueimp-md5@2.18.0/js/md5.min.js"></script>
-<script>
-    const gitalk = new Gitalk({
-        clientID: "Ov23lim9GKnJPuuV3hHs",
-        clientSecret: "c04490c9b2931e57b609f7e8a080a861d8f4e8b6",
-        repo: "comments.2dou.github.io",
-        owner: "2dou",
-        admin: ["2dou"],
-        distractionFreeMode: false, 
-        id: md5(location.pathname), 
-        proxy: null ,
-    });
-    (function () {
-        const excludedHosts = ["localhost", "127.0.0.1"];
-        const hostname = window.location.hostname;
-
-        if (excludedHosts.includes(hostname)) {
-            document.getElementById("gitalk-container").innerHTML =
-                "Gitalk comments not available by default when the website is previewed locally.";
-            return;
-        }
-        gitalk.render("gitalk-container");
-    })();
-</script>
-
-
-
-    
-
-    <footer class="site-footer">
-    <section class="copyright">
-        &copy; 
-        
-            2017 - 
-        
-        2025 Orztu The Way
-    </section>
-    
-    <section class="powerby">
-        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
-        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
-    </section>
-</footer>
-
-
-    
-<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-
-    
-    <div class="pswp__bg"></div>
-
-    
-    <div class="pswp__scroll-wrap">
-
-        
-        <div class="pswp__container">
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-        </div>
-
-        
-        <div class="pswp__ui pswp__ui--hidden">
-
-            <div class="pswp__top-bar">
-
-                
-
-                <div class="pswp__counter"></div>
-
-                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-
-                <button class="pswp__button pswp__button--share" title="Share"></button>
-
-                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-
-                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-
-                
-                
-                <div class="pswp__preloader">
-                    <div class="pswp__preloader__icn">
-                        <div class="pswp__preloader__cut">
-                            <div class="pswp__preloader__donut"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                <div class="pswp__share-tooltip"></div>
-            </div>
-
-            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-            </button>
-
-            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-            </button>
-
-            <div class="pswp__caption">
-                <div class="pswp__caption__center"></div>
-            </div>
-
-        </div>
-
-    </div>
-
-</div><script 
-                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
-                defer
-                >
-            </script><script 
-                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
-                defer
-                >
-            </script><link 
-                rel="stylesheet" 
-                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
-            ><link 
-                rel="stylesheet" 
-                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
-            >
-
-            </main>
-        </div>
-        <script 
-                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
-                
-                >
-            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script><script type="text/javascript" src="/ts/custom.6a8259597552f3291e36c8479b75c1a2bb04b275a9768380bf61340e16e02b71.js" defer></script>
-<script>
-    (function () {
-        const customFont = document.createElement('link');
-        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
-
-        customFont.type = "text/css";
-        customFont.rel = "stylesheet";
-
-        document.head.appendChild(customFont);
-    }());
-</script>
-
-    </body>
-</html>
+<!doctype html><html lang=zh-cn dir=ltr><head><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><meta name=description content="LeetCode 84. Largest Rectangle in Histogram - Answer LeetCode编程练习解答"><meta name=keywords content="栈,直方图最大矩形"><title>LeetCode 84. Largest Rectangle in Histogram</title><link rel=canonical href=https://www.orztu.com/leetcode/084-largest-rectangle-in-histogram/><link rel=stylesheet href=/scss/style.min.9ab44a42178ad69337e0a9f7aad077c2d9150eca7eaa7dca20e1c6e67e115cd9.css><meta property='og:title' content="LeetCode 84. Largest Rectangle in Histogram"><meta property='og:description' content="LeetCode 84. Largest Rectangle in Histogram - Answer LeetCode编程练习解答"><meta property='og:url' content='https://www.orztu.com/leetcode/084-largest-rectangle-in-histogram/'><meta property='og:site_name' content='Orztu The Way | Orz途'><meta property='og:type' content='article'><meta property='article:section' content='Leetcode'><meta property='article:tag' content='LeetCode'><meta property='article:tag' content='Array'><meta property='article:tag' content='Stack'><meta property='article:published_time' content='2018-12-11T10:10:38+08:00'><meta property='article:modified_time' content='2018-12-11T10:10:38+08:00'><meta name=twitter:title content="LeetCode 84. Largest Rectangle in Histogram"><meta name=twitter:description content="LeetCode 84. Largest Rectangle in Histogram - Answer LeetCode编程练习解答"><link rel="shortcut icon" href=/favicon.ico><script async src="https://www.googletagmanager.com/gtag/js?id=G-GQBLCC72QP"></script><script>var dnt,doNotTrack=!1;if(!1&&(dnt=navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack,doNotTrack=dnt=="1"||dnt=="yes"),!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-GQBLCC72QP")}</script></head><body class=article-page><script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"auto")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script><div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky"><button class="hamburger hamburger--spin" type=button id=toggle-menu aria-label=切换菜单>
+<span class=hamburger-box><span class=hamburger-inner></span></span></button><header><figure class=site-avatar><a href=/><img src=/img/avatar_hu_2ba09b40b9a57220.jpeg width=300 height=300 class=site-logo loading=lazy alt=Avatar></a></figure><div class=site-meta><h1 class=site-name><a href=/>Orztu The Way | Orz途</a></h1><h2 class=site-description>城市永远年轻，而我们终将老去</h2></div></header><ol class=menu-social><li><a href=https://github.com/2dou target=_blank title=2dou@GitHub rel=me><svg class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6.0 00-1.3-3.2 4.2 4.2.0 00-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3.0 00-6.2.0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2.0 00-.1 3.2A4.6 4.6.0 004 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg></a></li><li><a href=/index.xml target=_blank title=RSS rel=me><svg class="icon icon-tabler icon-tabler-rss" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="5" cy="19" r="1"/><path d="M4 4a16 16 0 0116 16"/><path d="M4 11a9 9 0 019 9"/></svg></a></li></ol><ol class=menu id=main-menu><li><a href=/><svg class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="5 12 3 12 12 3 21 12 19 12"/><path d="M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/><path d="M9 21v-6a2 2 0 012-2h2a2 2 0 012 2v6"/></svg>
+<span>Home</span></a></li><li><a href=/categories/leetcode/><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M7 8l-4 4 4 4"/><path d="M17 8l4 4-4 4"/><path d="M14 4l-4 16"/></svg>
+<span>LeetCode</span></a></li><li><a href=/books/><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M3 19a9 9 0 019 0 9 9 0 019 0"/><path d="M3 6a9 9 0 019 0 9 9 0 019 0"/><path d="M3 6v13"/><path d="M12 6v13"/><path d="M21 6v13"/></svg>
+<span>Books</span></a></li><li><a href=/archives/><svg class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><rect x="3" y="4" width="18" height="4" rx="2"/><path d="M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8"/><line x1="10" y1="12" x2="14" y2="12"/></svg>
+<span>Archives</span></a></li><li><a href=/running/><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"><path d="M13 4m-1 0a1 1 0 102 0 1 1 0 10-2 0"/><path d="M4 17l5 1 .75-1.5"/><path d="M15 21v-4l-4-3 1-6"/><path d="M7 12V9l5-1 3 3 3 1"/></svg>
+<span>Running</span></a></li><li><a href=/about/><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"><path d="M8 8a3.5 3 0 013.5-3h1A3.5 3 0 0116 8a3 3 0 01-2 3 3 4 0 00-2 4"/><path d="M12 19v.01"/></svg>
+<span>About</span></a></li><li><a href=/search/><svg class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="10" cy="10" r="7"/><line x1="21" y1="21" x2="15" y2="15"/></svg>
+<span>Search</span></a></li><li><a href=/links/><svg class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M10 14a3.5 3.5.0 005 0l4-4a3.5 3.5.0 00-5-5l-.5.5"/><path d="M14 10a3.5 3.5.0 00-5 0l-4 4a3.5 3.5.0 005 5l.5-.5"/></svg>
+<span>Links</span></a></li><li class=menu-bottom-section><ol class=menu><li id=dark-mode-toggle><svg class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="8" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg>
+<svg class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="16" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg>
+<span>暗色模式</span></li></ol></li></ol></aside><aside class="sidebar right-sidebar sticky"><section class="widget archives"><div class=widget-icon><svg class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg></div><h2 class="widget-title section-title">目录</h2><div class=widget--toc><nav id=TableOfContents><ol><li><a href=#description>Description</a></li><li><a href=#solution>Solution</a></li><li><a href=#similar-problem>Similar Problem</a></li></ol></nav></div></section></aside><main class="main full-width"><article class=main-article><header class=article-header><div class=article-details><header class=article-category><a href=/categories/leetcode/ style=background-color:#2a9d8f;color:#fff>LeetCode</a></header><div class=article-title-wrapper><h2 class=article-title><a href=/leetcode/084-largest-rectangle-in-histogram/>LeetCode 84. Largest Rectangle in Histogram</a></h2><h3 class=article-subtitle>LeetCode 84. Largest Rectangle in Histogram - Answer LeetCode编程练习解答</h3></div><footer class=article-time><div><svg class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
+<time class=article-time--published>2018-12-11</time></div><div><svg class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<time class=article-time--reading>阅读时长: 2 分钟</time></div></footer></div></header><section class=article-content><h2 id=description>Description</h2><p><a class=link href=https://leetcode.com/problems/largest-rectangle-in-histogram/ target=_blank rel=noopener>Largest Rectangle in Histogram</a></p><blockquote><p>Given n non-negative integers representing the histogram&rsquo;s bar height where the width of each bar is 1, find the area of largest rectangle in the histogram.</p><p><img src=/images/leetcode/084_Largest_Rectangle_in_Histogram_1.png loading=lazy><br>Above is a histogram where width of each bar is <code>1</code>, given height = <code>[2,1,5,6,2,3]</code>.</p><p><img src=/images/leetcode/084_Largest_Rectangle_in_Histogram_2.png loading=lazy><br>The largest rectangle is shown in the shaded area, which has area = <code>10</code> unit.</p></blockquote><p>给出一个直方图，求最大矩形面积。</p><h2 id=solution>Solution</h2><p>首先假设直方图是升序的，比如：<code>1, 3, 5, 6, 7</code></p><p>那么需要比较的面积有：<code>1*5</code>，<code>3 * 4</code>，<code>5*3</code>，<code>6*2</code>，<code>7*1</code>。</p><p>计算公式为：$ S(i) = height[i] * (length-i) $</p><p>所以最大面积：$ \max_{i=0}^n{S(i)} $</p><p>那遇到无序的数组怎么办呢？</p><p>根据提示可以是用栈，目的是用于构造升序数组：</p><p>假设当前高度为<code>h</code>：</p><ol><li>如果升序则直接入栈</li><li>遇到降序，将栈中所有比<code>h</code>高的都利用公式计算出面积，然后降低它们的高度至<code>h</code>，使数组重新有序</li></ol><p>例如数组<code>1, 3, 4, 2, 3</code>：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span><span class=lnt>35
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>^
+</span></span><span class=line><span class=cl>|   0
+</span></span><span class=line><span class=cl>|  00 0
+</span></span><span class=line><span class=cl>|  0000
+</span></span><span class=line><span class=cl>| 00000
+</span></span><span class=line><span class=cl>.-------&gt;
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>首先：1，3，4 都是升序，依次入栈（下标入栈）：
+</span></span><span class=line><span class=cl>^
+</span></span><span class=line><span class=cl>|   0       stack:
+</span></span><span class=line><span class=cl>|  00           [2]
+</span></span><span class=line><span class=cl>|  00           [1]
+</span></span><span class=line><span class=cl>| 000           [0]
+</span></span><span class=line><span class=cl>.-------&gt;
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>遇到：2，不符合升序，计算前面 3 和 4 的面积分别为：S(1)=3*2，S(2)=4*1
+</span></span><span class=line><span class=cl>然后降低高度至 2
+</span></span><span class=line><span class=cl>^
+</span></span><span class=line><span class=cl>|           stack:  将 4 的下标出栈，保留 3 的下标（因为 3 所在位置是新高度的起点）
+</span></span><span class=line><span class=cl>|
+</span></span><span class=line><span class=cl>|  000          [1]
+</span></span><span class=line><span class=cl>| 0000          [0]
+</span></span><span class=line><span class=cl>.-------&gt;
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>遇到：3，符合升序，直接入栈
+</span></span><span class=line><span class=cl>^
+</span></span><span class=line><span class=cl>|           stack:
+</span></span><span class=line><span class=cl>|     0         [4]
+</span></span><span class=line><span class=cl>|  0000         [1]
+</span></span><span class=line><span class=cl>| 00000         [0]
+</span></span><span class=line><span class=cl>.-------&gt;
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>最后仍需要计算的面积有：S(0)=1*5，S(1)=2*4，S(4)=3*1
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>所以最大面积为 8
+</span></span></code></pre></td></tr></table></div></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span><span class=lnt>35
+</span><span class=lnt>36
+</span><span class=lnt>37
+</span><span class=lnt>38
+</span><span class=lnt>39
+</span><span class=lnt>40
+</span><span class=lnt>41
+</span><span class=lnt>42
+</span><span class=lnt>43
+</span><span class=lnt>44
+</span><span class=lnt>45
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-golang data-lang=golang><span class=line><span class=cl><span class=kd>func</span> <span class=nf>maxInt</span><span class=p>(</span><span class=nx>a</span><span class=p>,</span> <span class=nx>b</span> <span class=kt>int</span><span class=p>)</span> <span class=kt>int</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=nx>a</span> <span class=p>&gt;</span> <span class=nx>b</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=nx>a</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=nx>b</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kd>func</span> <span class=nf>largestRectangleArea</span><span class=p>(</span><span class=nx>heights</span> <span class=p>[]</span><span class=kt>int</span><span class=p>)</span> <span class=kt>int</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>stack</span> <span class=o>:=</span> <span class=nb>make</span><span class=p>([]</span><span class=kt>int</span><span class=p>,</span> <span class=mi>0</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=nx>lenStack</span> <span class=o>:=</span> <span class=nb>len</span><span class=p>(</span><span class=nx>stack</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=nx>max</span> <span class=o>:=</span> <span class=mi>0</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=c1>// 追加一个 -1，用于最后清空栈</span>
+</span></span><span class=line><span class=cl>    <span class=nx>heights</span> <span class=p>=</span> <span class=nb>append</span><span class=p>(</span><span class=nx>heights</span><span class=p>,</span> <span class=o>-</span><span class=mi>1</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=nx>i</span> <span class=o>:=</span> <span class=mi>0</span><span class=p>;</span> <span class=nx>i</span> <span class=p>&lt;</span> <span class=nb>len</span><span class=p>(</span><span class=nx>heights</span><span class=p>);</span> <span class=nx>i</span><span class=o>++</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=nx>h</span> <span class=o>:=</span> <span class=nx>heights</span><span class=p>[</span><span class=nx>i</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=nx>lenStack</span> <span class=p>&gt;</span> <span class=mi>0</span> <span class=o>&amp;&amp;</span> <span class=nx>h</span> <span class=p>&lt;</span> <span class=nx>heights</span><span class=p>[</span><span class=nx>stack</span><span class=p>[</span><span class=nx>lenStack</span><span class=o>-</span><span class=mi>1</span><span class=p>]]</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>            <span class=c1>// 如果前面更高，将更高的都出栈</span>
+</span></span><span class=line><span class=cl>            <span class=c1>// 同时计算面积，然后降低它们的高度（形成新的“有序”）</span>
+</span></span><span class=line><span class=cl>            <span class=k>for</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>                <span class=nx>idx</span> <span class=o>:=</span> <span class=nx>stack</span><span class=p>[</span><span class=nx>lenStack</span><span class=o>-</span><span class=mi>1</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>                <span class=c1>// 计算面积</span>
+</span></span><span class=line><span class=cl>                <span class=nx>max</span> <span class=p>=</span> <span class=nf>maxInt</span><span class=p>(</span><span class=nx>max</span><span class=p>,</span> <span class=nx>heights</span><span class=p>[</span><span class=nx>idx</span><span class=p>]</span><span class=o>*</span><span class=p>(</span><span class=nx>i</span><span class=o>-</span><span class=nx>idx</span><span class=p>))</span>
+</span></span><span class=line><span class=cl>                <span class=c1>// 降低高度</span>
+</span></span><span class=line><span class=cl>                <span class=nx>heights</span><span class=p>[</span><span class=nx>idx</span><span class=p>]</span> <span class=p>=</span> <span class=nx>h</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>                <span class=nx>lenStack</span><span class=o>--</span> <span class=c1>// 假出栈</span>
+</span></span><span class=line><span class=cl>                <span class=k>if</span> <span class=nx>lenStack</span> <span class=o>==</span> <span class=mi>0</span> <span class=o>||</span> <span class=nx>h</span> <span class=p>&gt;</span> <span class=nx>heights</span><span class=p>[</span><span class=nx>stack</span><span class=p>[</span><span class=nx>lenStack</span><span class=o>-</span><span class=mi>1</span><span class=p>]]</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>                    <span class=c1>// 最后一个，保留在栈中作为新高度的起点</span>
+</span></span><span class=line><span class=cl>                    <span class=nx>lenStack</span><span class=o>++</span>
+</span></span><span class=line><span class=cl>                    <span class=k>break</span>
+</span></span><span class=line><span class=cl>                <span class=p>}</span>
+</span></span><span class=line><span class=cl>                <span class=nx>stack</span> <span class=p>=</span> <span class=nx>stack</span><span class=p>[:</span><span class=nx>lenStack</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>            <span class=p>}</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span> <span class=k>else</span> <span class=cm>/* 这个判断可有可无 if lenStack == 0 || h &gt; heights[stack[lenStack-1]] */</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>            <span class=c1>// 将当前索引入栈</span>
+</span></span><span class=line><span class=cl>            <span class=nx>stack</span> <span class=p>=</span> <span class=nb>append</span><span class=p>(</span><span class=nx>stack</span><span class=p>,</span> <span class=nx>i</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>            <span class=nx>lenStack</span><span class=o>++</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=nx>max</span>
+</span></span><span class=line><span class=cl><span class=p>}</span></span></span></code></pre></td></tr></table></div></div><h2 id=similar-problem>Similar Problem</h2><ul><li><a class=link href=/leetcode/085-maximal-rectangle/>85. Maximal Rectangle</a></li></ul></section><footer class=article-footer><section class=article-tags><a href=/tags/leetcode/>LeetCode</a>
+<a href=/tags/array/>Array</a>
+<a href=/tags/stack/>Stack</a></section><div class=pre-next><a class="pre-next-btn bg" href=https://www.orztu.com/leetcode/082-remove-duplicates-from-sorted-list-ii/ data-tooltip="LeetCode 82. Remove Duplicates From Sorted List II"><i class="fa fa-angle-left"></i>
+<span>上一篇</span>
+</a><a class="pre-next-btn bg" href=https://www.orztu.com/leetcode/085-maximal-rectangle/ data-tooltip="LeetCode 85. Maximal Rectangle"><i class="fa fa-angle-left"></i>
+<span>下一篇</span></a></div></footer><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css integrity=sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV crossorigin=anonymous><script src=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js integrity=sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8 crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js integrity=sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05 crossorigin=anonymous defer></script><script>window.addEventListener("DOMContentLoaded",()=>{const e=document.querySelector(".main-article");renderMathInElement(e,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1},{left:"\\(",right:"\\)",display:!1},{left:"\\[",right:"\\]",display:!0}],ignoredClasses:["gist"]})})</script></article><aside class=related-content--wrapper><h2 class=section-title>相关文章</h2><div class=related-content><div class="flex article-list--tile"><article><a href=/leetcode/085-maximal-rectangle/><div class=article-details><h2 class=article-title>LeetCode 85. Maximal Rectangle</h2></div></a></article><article><a href=/leetcode/042-trapping-rain-water/><div class=article-details><h2 class=article-title>LeetCode 42. Trapping Rain Water</h2></div></a></article><article><a href=/leetcode/094-binary-tree-inorder-traversal/><div class=article-details><h2 class=article-title>LeetCode 94. Binary Tree Inorder Traversal</h2></div></a></article><article><a href=/leetcode/090-subsets-ii/><div class=article-details><h2 class=article-title>LeetCode 90. Subsets II</h2></div></a></article><article><a href=/leetcode/088-merge-sorted-array/><div class=article-details><h2 class=article-title>LeetCode 88. Merge Sorted Array</h2></div></a></article></div></div></aside><div id=gitalk-container></div><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.css><script src=https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js></script><script src=https://cdn.jsdelivr.net/npm/blueimp-md5@2.18.0/js/md5.min.js></script><script>const gitalk=new Gitalk({clientID:"GITALK_ID",clientSecret:"GITALK_SECRET",repo:"comments.2dou.github.io",owner:"2dou",admin:["2dou"],distractionFreeMode:!1,id:md5(location.pathname),proxy:null});(function(){const e=["localhost","127.0.0.1"],t=window.location.hostname;if(e.includes(t)){document.getElementById("gitalk-container").innerHTML="Gitalk comments not available by default when the website is previewed locally.";return}gitalk.render("gitalk-container")})()</script><footer class=site-footer><section class=copyright>&copy;
+2017 -
+2025 Orztu The Way</section><section class=powerby>使用 <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> 构建<br>主题 <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.30.0>Stack</a></b> 由 <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a> 设计</section></footer><div class=pswp tabindex=-1 role=dialog aria-hidden=true><div class=pswp__bg></div><div class=pswp__scroll-wrap><div class=pswp__container><div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden"><div class=pswp__top-bar><div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button><div class=pswp__preloader><div class=pswp__preloader__icn><div class=pswp__preloader__cut><div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+</button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button><div class=pswp__caption><div class=pswp__caption__center></div></div></div></div></div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css crossorigin=anonymous></main></div><script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z+KMkF24hUW8WePSA9HM=" crossorigin=anonymous></script><script type=text/javascript src=/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js defer></script><script type=text/javascript src=/ts/custom.6a8259597552f3291e36c8479b75c1a2bb04b275a9768380bf61340e16e02b71.js defer></script><script>(function(){const e=document.createElement("link");e.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e)})()</script></body></html>
