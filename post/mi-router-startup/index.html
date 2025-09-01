@@ -66,11 +66,11 @@
 </span></span><span class=line><span class=cl><span class=o>[</span> -e <span class=s2>&#34;/tmp/startup_delay.log&#34;</span> <span class=o>]</span> <span class=o>&amp;&amp;</span> <span class=k>return</span> <span class=m>0</span>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=c1># 给 eth0 添加光猫网段地址 192.168.1.2</span>
-</span></span><span class=line><span class=cl><span class=o>(</span> sleep 20<span class=p>;</span> ifconfig eth0:1 192.168.1.2 netmask 255.255.255.0 up <span class=o>)</span> <span class=p>&amp;</span>
+</span></span><span class=line><span class=cl>ifconfig eth0:1 192.168.1.2 netmask 255.255.255.0 up
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=c1>#　使用 iptables 转发内网流量</span>
-</span></span><span class=line><span class=cl><span class=o>(</span> sleep 21<span class=p>;</span> iptables -I FORWARD -i br-lan -d 192.168.1.0/24 -j ACCEPT <span class=o>)</span> <span class=p>&amp;</span>
-</span></span><span class=line><span class=cl><span class=o>(</span> sleep 22<span class=p>;</span> iptables -t nat -I POSTROUTING -o eth0 -d 192.168.1.0/24 -j MASQUERADE <span class=o>)</span> <span class=p>&amp;</span>
+</span></span><span class=line><span class=cl>iptables -I FORWARD -i br-lan -d 192.168.1.0/24 -j ACCEPT
+</span></span><span class=line><span class=cl>iptables -t nat -I POSTROUTING -o eth0 -d 192.168.1.0/24 -j MASQUERADE
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=nb>echo</span> <span class=s2>&#34;Done!&#34;</span> &gt; /tmp/startup_delay.log
 </span></span></code></pre></td></tr></table></div></div></section><footer class=article-footer><section class=article-tags><a href=/tags/%E5%B0%8F%E7%B1%B3%E8%B7%AF%E7%94%B1/>小米路由</a>
