@@ -57,34 +57,34 @@
 </span></span></span><span class=line><span class=cl><span class=cm> *     Val int
 </span></span></span><span class=line><span class=cl><span class=cm> *     Next *ListNode
 </span></span></span><span class=line><span class=cl><span class=cm> * }
-</span></span></span><span class=line><span class=cl><span class=cm> */</span>
-</span></span><span class=line><span class=cl><span class=kd>func</span> <span class=nf>removeNthFromEnd</span><span class=p>(</span><span class=nx>head</span> <span class=o>*</span><span class=nx>ListNode</span><span class=p>,</span> <span class=nx>n</span> <span class=kt>int</span><span class=p>)</span> <span class=o>*</span><span class=nx>ListNode</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>    <span class=nx>p1</span> <span class=o>:=</span> <span class=nx>head</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=c1>// point the next Nth node</span>
-</span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=nx>i</span> <span class=o>:=</span> <span class=mi>0</span><span class=p>;</span> <span class=nx>i</span> <span class=p>&lt;</span> <span class=nx>n</span><span class=p>;</span> <span class=nx>i</span><span class=o>++</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=nx>p1</span> <span class=p>=</span> <span class=nx>p1</span><span class=p>.</span><span class=nx>Next</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=nx>p1</span> <span class=o>==</span> <span class=kc>nil</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=c1>// It&#39;s removing the first node from begin</span>
-</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=nx>head</span><span class=p>.</span><span class=nx>Next</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=nx>p2</span> <span class=o>:=</span> <span class=nx>head</span> <span class=c1>// p2 is now n step behind p1</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=c1>// let p1 point to the 1st node from end</span>
-</span></span><span class=line><span class=cl>    <span class=c1>// so p2 is pointing to the (n+1)th node from end</span>
-</span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=nx>p1</span><span class=p>.</span><span class=nx>Next</span> <span class=o>!=</span> <span class=kc>nil</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=nx>p1</span> <span class=p>=</span> <span class=nx>p1</span><span class=p>.</span><span class=nx>Next</span>
-</span></span><span class=line><span class=cl>        <span class=nx>p2</span> <span class=p>=</span> <span class=nx>p2</span><span class=p>.</span><span class=nx>Next</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=c1>// now remove the Nth node from begin</span>
-</span></span><span class=line><span class=cl>    <span class=nx>p2</span><span class=p>.</span><span class=nx>Next</span> <span class=p>=</span> <span class=nx>p2</span><span class=p>.</span><span class=nx>Next</span><span class=p>.</span><span class=nx>Next</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=nx>head</span>
-</span></span><span class=line><span class=cl><span class=p>}</span></span></span></code></pre></td></tr></table></div></div><h3 id=2-使用递归>2. 使用递归</h3><ol><li><p>使用递归一直向后查找，直到最后一个结点(<code>head.Next == nil</code>)。此时递归结束，开始返回：当前结点指针和0。相当于将最后一个结点标记为0</p></li><li><p>判断递归返回的标记是否等于n，是则表示p为倒是第(n+1)个结点（因为标记从0开始），也是我们需要查找的结点。否则将标记加1，返回head（即p的父节点）。</p></li><li><p>递归完全返回后，函数<code>removeNthFromEnd</code>里的 index 如果为0，则表示parent指向第倒数n+1；不为0则没找到，原因是要删除结点的是正向第一个。</p></li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span></span></span><span class=line><span class=cl><span class=cm> */</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=kd>func</span><span class=w> </span><span class=nf>removeNthFromEnd</span><span class=p>(</span><span class=nx>head</span><span class=w> </span><span class=o>*</span><span class=nx>ListNode</span><span class=p>,</span><span class=w> </span><span class=nx>n</span><span class=w> </span><span class=kt>int</span><span class=p>)</span><span class=w> </span><span class=o>*</span><span class=nx>ListNode</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nx>p1</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=nx>head</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=c1>// point the next Nth node</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>for</span><span class=w> </span><span class=nx>i</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=mi>0</span><span class=p>;</span><span class=w> </span><span class=nx>i</span><span class=w> </span><span class=p>&lt;</span><span class=w> </span><span class=nx>n</span><span class=p>;</span><span class=w> </span><span class=nx>i</span><span class=o>++</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nx>p1</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nx>p1</span><span class=p>.</span><span class=nx>Next</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>if</span><span class=w> </span><span class=nx>p1</span><span class=w> </span><span class=o>==</span><span class=w> </span><span class=kc>nil</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=c1>// It&#39;s removing the first node from begin</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=k>return</span><span class=w> </span><span class=nx>head</span><span class=p>.</span><span class=nx>Next</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nx>p2</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=nx>head</span><span class=w> </span><span class=c1>// p2 is now n step behind p1</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=c1>// let p1 point to the 1st node from end</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=c1>// so p2 is pointing to the (n+1)th node from end</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>for</span><span class=w> </span><span class=nx>p1</span><span class=p>.</span><span class=nx>Next</span><span class=w> </span><span class=o>!=</span><span class=w> </span><span class=kc>nil</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nx>p1</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nx>p1</span><span class=p>.</span><span class=nx>Next</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nx>p2</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nx>p2</span><span class=p>.</span><span class=nx>Next</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=c1>// now remove the Nth node from begin</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nx>p2</span><span class=p>.</span><span class=nx>Next</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nx>p2</span><span class=p>.</span><span class=nx>Next</span><span class=p>.</span><span class=nx>Next</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>return</span><span class=w> </span><span class=nx>head</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=p>}</span></span></span></code></pre></td></tr></table></div></div><h3 id=2-使用递归>2. 使用递归</h3><ol><li><p>使用递归一直向后查找，直到最后一个结点(<code>head.Next == nil</code>)。此时递归结束，开始返回：当前结点指针和0。相当于将最后一个结点标记为0</p></li><li><p>判断递归返回的标记是否等于n，是则表示p为倒是第(n+1)个结点（因为标记从0开始），也是我们需要查找的结点。否则将标记加1，返回head（即p的父节点）。</p></li><li><p>递归完全返回后，函数<code>removeNthFromEnd</code>里的 index 如果为0，则表示parent指向第倒数n+1；不为0则没找到，原因是要删除结点的是正向第一个。</p></li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
 </span><span class=lnt> 2
 </span><span class=lnt> 3
 </span><span class=lnt> 4
@@ -125,35 +125,35 @@
 </span></span></span><span class=line><span class=cl><span class=cm> *     Val int
 </span></span></span><span class=line><span class=cl><span class=cm> *     Next *ListNode
 </span></span></span><span class=line><span class=cl><span class=cm> * }
-</span></span></span><span class=line><span class=cl><span class=cm> */</span>
-</span></span><span class=line><span class=cl><span class=kd>func</span> <span class=nf>removeNthFromEnd</span><span class=p>(</span><span class=nx>head</span> <span class=o>*</span><span class=nx>ListNode</span><span class=p>,</span> <span class=nx>n</span> <span class=kt>int</span><span class=p>)</span> <span class=o>*</span><span class=nx>ListNode</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>    <span class=nx>parent</span><span class=p>,</span> <span class=nx>index</span> <span class=o>:=</span> <span class=nf>search</span><span class=p>(</span><span class=nx>head</span><span class=p>,</span> <span class=nx>n</span><span class=p>)</span>
-</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=nx>index</span> <span class=o>!=</span> <span class=nx>n</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=c1>// It must be removing the first node from begin</span>
-</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=nx>head</span><span class=p>.</span><span class=nx>Next</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=c1>// remove the child node</span>
-</span></span><span class=line><span class=cl>    <span class=nx>parent</span><span class=p>.</span><span class=nx>Next</span> <span class=p>=</span> <span class=nx>parent</span><span class=p>.</span><span class=nx>Next</span><span class=p>.</span><span class=nx>Next</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=nx>head</span>
-</span></span><span class=line><span class=cl><span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl><span class=kd>func</span> <span class=nf>search</span><span class=p>(</span><span class=nx>head</span> <span class=o>*</span><span class=nx>ListNode</span><span class=p>,</span> <span class=nx>n</span> <span class=kt>int</span><span class=p>)</span> <span class=p>(</span><span class=o>*</span><span class=nx>ListNode</span><span class=p>,</span> <span class=kt>int</span><span class=p>)</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=nx>head</span><span class=p>.</span><span class=nx>Next</span> <span class=o>==</span> <span class=kc>nil</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=c1>// mark last node&#39;s index as 0</span>
-</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=nx>head</span><span class=p>,</span> <span class=mi>0</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=nx>p</span><span class=p>,</span> <span class=nx>index</span> <span class=o>:=</span> <span class=nf>search</span><span class=p>(</span><span class=nx>head</span><span class=p>.</span><span class=nx>Next</span><span class=p>,</span> <span class=nx>n</span><span class=p>)</span>
-</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=nx>index</span> <span class=o>==</span> <span class=nx>n</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=c1>// so index n is the (n+1)th node from the end</span>
-</span></span><span class=line><span class=cl>        <span class=c1>// it&#39;s the parent of the node which we want to remove</span>
-</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=nx>p</span><span class=p>,</span> <span class=nx>index</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=nx>head</span><span class=p>,</span> <span class=nx>index</span> <span class=o>+</span> <span class=mi>1</span>
-</span></span><span class=line><span class=cl><span class=p>}</span></span></span></code></pre></td></tr></table></div></div></section><footer class=article-footer><section class=article-tags><a href=/tags/leetcode/>LeetCode</a>
+</span></span></span><span class=line><span class=cl><span class=cm> */</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=kd>func</span><span class=w> </span><span class=nf>removeNthFromEnd</span><span class=p>(</span><span class=nx>head</span><span class=w> </span><span class=o>*</span><span class=nx>ListNode</span><span class=p>,</span><span class=w> </span><span class=nx>n</span><span class=w> </span><span class=kt>int</span><span class=p>)</span><span class=w> </span><span class=o>*</span><span class=nx>ListNode</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nx>parent</span><span class=p>,</span><span class=w> </span><span class=nx>index</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=nf>search</span><span class=p>(</span><span class=nx>head</span><span class=p>,</span><span class=w> </span><span class=nx>n</span><span class=p>)</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>if</span><span class=w> </span><span class=nx>index</span><span class=w> </span><span class=o>!=</span><span class=w> </span><span class=nx>n</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=c1>// It must be removing the first node from begin</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=k>return</span><span class=w> </span><span class=nx>head</span><span class=p>.</span><span class=nx>Next</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=c1>// remove the child node</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nx>parent</span><span class=p>.</span><span class=nx>Next</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nx>parent</span><span class=p>.</span><span class=nx>Next</span><span class=p>.</span><span class=nx>Next</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>return</span><span class=w> </span><span class=nx>head</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=kd>func</span><span class=w> </span><span class=nf>search</span><span class=p>(</span><span class=nx>head</span><span class=w> </span><span class=o>*</span><span class=nx>ListNode</span><span class=p>,</span><span class=w> </span><span class=nx>n</span><span class=w> </span><span class=kt>int</span><span class=p>)</span><span class=w> </span><span class=p>(</span><span class=o>*</span><span class=nx>ListNode</span><span class=p>,</span><span class=w> </span><span class=kt>int</span><span class=p>)</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>if</span><span class=w> </span><span class=nx>head</span><span class=p>.</span><span class=nx>Next</span><span class=w> </span><span class=o>==</span><span class=w> </span><span class=kc>nil</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=c1>// mark last node&#39;s index as 0</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=k>return</span><span class=w> </span><span class=nx>head</span><span class=p>,</span><span class=w> </span><span class=mi>0</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nx>p</span><span class=p>,</span><span class=w> </span><span class=nx>index</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=nf>search</span><span class=p>(</span><span class=nx>head</span><span class=p>.</span><span class=nx>Next</span><span class=p>,</span><span class=w> </span><span class=nx>n</span><span class=p>)</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>if</span><span class=w> </span><span class=nx>index</span><span class=w> </span><span class=o>==</span><span class=w> </span><span class=nx>n</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=c1>// so index n is the (n+1)th node from the end</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=c1>// it&#39;s the parent of the node which we want to remove</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=k>return</span><span class=w> </span><span class=nx>p</span><span class=p>,</span><span class=w> </span><span class=nx>index</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>return</span><span class=w> </span><span class=nx>head</span><span class=p>,</span><span class=w> </span><span class=nx>index</span><span class=w> </span><span class=o>+</span><span class=w> </span><span class=mi>1</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=p>}</span></span></span></code></pre></td></tr></table></div></div></section><footer class=article-footer><section class=article-tags><a href=/tags/leetcode/>LeetCode</a>
 <a href=/tags/linked-list/>Linked List</a>
 <a href=/tags/two-pointers/>Two Pointers</a></section><div class=pre-next><a class="pre-next-btn bg" href=https://www.orztu.com/leetcode/018-4sum/ data-tooltip="LeetCode 18. 4Sum"><i class="fa fa-angle-left"></i>
 <span>上一篇</span>

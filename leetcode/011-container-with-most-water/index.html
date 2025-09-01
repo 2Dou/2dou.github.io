@@ -43,38 +43,38 @@
 </span><span class=lnt>30
 </span><span class=lnt>31
 </span><span class=lnt>32
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-golang data-lang=golang><span class=line><span class=cl><span class=kd>func</span> <span class=nf>maxArea</span><span class=p>(</span><span class=nx>height</span> <span class=p>[]</span><span class=kt>int</span><span class=p>)</span> <span class=kt>int</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>    <span class=nx>area</span> <span class=o>:=</span> <span class=mi>0</span>
-</span></span><span class=line><span class=cl>    <span class=nx>left</span><span class=p>,</span> <span class=nx>right</span> <span class=o>:=</span> <span class=mi>0</span><span class=p>,</span> <span class=nb>len</span><span class=p>(</span><span class=nx>height</span><span class=p>)</span><span class=o>-</span><span class=mi>1</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=nx>left</span> <span class=p>&lt;</span> <span class=nx>right</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=nx>width</span> <span class=o>:=</span> <span class=nx>right</span> <span class=o>-</span> <span class=nx>left</span>
-</span></span><span class=line><span class=cl>        <span class=nx>h</span> <span class=o>:=</span> <span class=mi>0</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=nx>height</span><span class=p>[</span><span class=nx>right</span><span class=p>]</span> <span class=p>&gt;</span> <span class=nx>height</span><span class=p>[</span><span class=nx>left</span><span class=p>]</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>            <span class=nx>h</span> <span class=p>=</span> <span class=nx>height</span><span class=p>[</span><span class=nx>left</span><span class=p>]</span>
-</span></span><span class=line><span class=cl>            <span class=nx>left</span><span class=o>++</span>
-</span></span><span class=line><span class=cl>        <span class=p>}</span> <span class=k>else</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>            <span class=nx>h</span> <span class=p>=</span> <span class=nx>height</span><span class=p>[</span><span class=nx>right</span><span class=p>]</span>
-</span></span><span class=line><span class=cl>            <span class=nx>right</span><span class=o>--</span>
-</span></span><span class=line><span class=cl>        <span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>        <span class=nx>a</span> <span class=o>:=</span> <span class=nx>width</span> <span class=o>*</span> <span class=nx>h</span>
-</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=nx>a</span> <span class=p>&gt;</span> <span class=nx>area</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>            <span class=nx>area</span> <span class=p>=</span> <span class=nx>a</span>
-</span></span><span class=line><span class=cl>        <span class=p>}</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=nx>area</span>
-</span></span><span class=line><span class=cl><span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl><span class=kd>func</span> <span class=nb>min</span><span class=p>(</span><span class=nx>a</span><span class=p>,</span> <span class=nx>b</span> <span class=kt>int</span><span class=p>)</span> <span class=kt>int</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=nx>a</span> <span class=p>&gt;</span> <span class=nx>b</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=nx>b</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=nx>a</span>
-</span></span><span class=line><span class=cl><span class=p>}</span></span></span></code></pre></td></tr></table></div></div><h2 id=similar-problem>Similar Problem</h2><p><a class=link href=/leetcode/042-trapping-rain-water/>42. Trapping Rain Water</a></p></section><footer class=article-footer><section class=article-tags><a href=/tags/leetcode/>LeetCode</a>
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-golang data-lang=golang><span class=line><span class=cl><span class=kd>func</span><span class=w> </span><span class=nf>maxArea</span><span class=p>(</span><span class=nx>height</span><span class=w> </span><span class=p>[]</span><span class=kt>int</span><span class=p>)</span><span class=w> </span><span class=kt>int</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nx>area</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=mi>0</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nx>left</span><span class=p>,</span><span class=w> </span><span class=nx>right</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=mi>0</span><span class=p>,</span><span class=w> </span><span class=nb>len</span><span class=p>(</span><span class=nx>height</span><span class=p>)</span><span class=o>-</span><span class=mi>1</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>for</span><span class=w> </span><span class=nx>left</span><span class=w> </span><span class=p>&lt;</span><span class=w> </span><span class=nx>right</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nx>width</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=nx>right</span><span class=w> </span><span class=o>-</span><span class=w> </span><span class=nx>left</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nx>h</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=mi>0</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=k>if</span><span class=w> </span><span class=nx>height</span><span class=p>[</span><span class=nx>right</span><span class=p>]</span><span class=w> </span><span class=p>&gt;</span><span class=w> </span><span class=nx>height</span><span class=p>[</span><span class=nx>left</span><span class=p>]</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=nx>h</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nx>height</span><span class=p>[</span><span class=nx>left</span><span class=p>]</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=nx>left</span><span class=o>++</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=p>}</span><span class=w> </span><span class=k>else</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=nx>h</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nx>height</span><span class=p>[</span><span class=nx>right</span><span class=p>]</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=nx>right</span><span class=o>--</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nx>a</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=nx>width</span><span class=w> </span><span class=o>*</span><span class=w> </span><span class=nx>h</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=k>if</span><span class=w> </span><span class=nx>a</span><span class=w> </span><span class=p>&gt;</span><span class=w> </span><span class=nx>area</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=nx>area</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nx>a</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>return</span><span class=w> </span><span class=nx>area</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=kd>func</span><span class=w> </span><span class=nb>min</span><span class=p>(</span><span class=nx>a</span><span class=p>,</span><span class=w> </span><span class=nx>b</span><span class=w> </span><span class=kt>int</span><span class=p>)</span><span class=w> </span><span class=kt>int</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>if</span><span class=w> </span><span class=nx>a</span><span class=w> </span><span class=p>&gt;</span><span class=w> </span><span class=nx>b</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=k>return</span><span class=w> </span><span class=nx>b</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>return</span><span class=w> </span><span class=nx>a</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=p>}</span></span></span></code></pre></td></tr></table></div></div><h2 id=similar-problem>Similar Problem</h2><p><a class=link href=/leetcode/042-trapping-rain-water/>42. Trapping Rain Water</a></p></section><footer class=article-footer><section class=article-tags><a href=/tags/leetcode/>LeetCode</a>
 <a href=/tags/array/>Array</a>
 <a href=/tags/two-pointers/>Two Pointers</a></section><div class=pre-next><a class="pre-next-btn bg" href=https://www.orztu.com/leetcode/051-n-queens/ data-tooltip="LeetCode 51. N-Queens"><i class="fa fa-angle-left"></i>
 <span>上一篇</span>

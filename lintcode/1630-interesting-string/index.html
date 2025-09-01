@@ -110,103 +110,103 @@
 </span><span class=lnt>95
 </span><span class=lnt>96
 </span><span class=lnt>97
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-go data-lang=go><span class=line><span class=cl><span class=p>&lt;!</span><span class=o>--</span> <span class=nx>tab</span> <span class=nx>golang</span> <span class=o>--</span><span class=p>&gt;</span>
-</span></span><span class=line><span class=cl><span class=kd>func</span> <span class=nf>check</span><span class=p>(</span><span class=nx>s</span> <span class=kt>string</span><span class=p>)</span> <span class=kt>string</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>    <span class=nx>sLength</span> <span class=o>:=</span> <span class=nb>len</span><span class=p>(</span><span class=nx>s</span><span class=p>)</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=nx>sLength</span> <span class=o>&lt;=</span> <span class=mi>0</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=s>&#34;no&#34;</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=nx>queue</span> <span class=o>:=</span> <span class=p>[]</span><span class=kt>int</span><span class=p>{</span><span class=mi>0</span><span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=kd>var</span> <span class=nx>idx</span><span class=p>,</span> <span class=nx>n</span><span class=p>,</span> <span class=nx>num</span><span class=p>,</span> <span class=nx>nextIdx</span> <span class=kt>int</span>
-</span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=nb>len</span><span class=p>(</span><span class=nx>queue</span><span class=p>)</span> <span class=p>&gt;</span> <span class=mi>0</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=c1>// pop front</span>
-</span></span><span class=line><span class=cl>        <span class=nx>idx</span> <span class=p>=</span> <span class=nx>queue</span><span class=p>[</span><span class=mi>0</span><span class=p>]</span>
-</span></span><span class=line><span class=cl>        <span class=nx>queue</span> <span class=p>=</span> <span class=nx>queue</span><span class=p>[</span><span class=mi>1</span><span class=p>:]</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>        <span class=nx>n</span> <span class=p>=</span> <span class=mi>0</span>
-</span></span><span class=line><span class=cl>        <span class=k>for</span> <span class=nx>idx</span> <span class=p>&lt;</span> <span class=nx>sLength</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>            <span class=nx>num</span> <span class=p>=</span> <span class=nb>int</span><span class=p>(</span><span class=nx>s</span><span class=p>[</span><span class=nx>idx</span><span class=p>]</span> <span class=o>-</span> <span class=nb>byte</span><span class=p>(</span><span class=sc>&#39;0&#39;</span><span class=p>))</span>
-</span></span><span class=line><span class=cl>            <span class=k>if</span> <span class=nx>num</span> <span class=p>&lt;</span> <span class=mi>0</span> <span class=o>||</span> <span class=nx>num</span> <span class=p>&gt;</span> <span class=mi>9</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>                <span class=k>break</span>
-</span></span><span class=line><span class=cl>            <span class=p>}</span>
-</span></span><span class=line><span class=cl>            <span class=nx>n</span> <span class=p>=</span> <span class=nx>n</span><span class=o>*</span><span class=mi>10</span> <span class=o>+</span> <span class=nx>num</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>            <span class=c1>// 从当前位置向后跳过 n 个字符</span>
-</span></span><span class=line><span class=cl>            <span class=c1>// 并且检查下一个字符是否为数字或者恰好结束</span>
-</span></span><span class=line><span class=cl>            <span class=nx>nextIdx</span> <span class=p>=</span> <span class=nx>idx</span> <span class=o>+</span> <span class=nx>n</span> <span class=o>+</span> <span class=mi>1</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>            <span class=k>if</span> <span class=nx>nextIdx</span> <span class=p>&gt;</span> <span class=nx>sLength</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>                <span class=k>break</span>
-</span></span><span class=line><span class=cl>            <span class=p>}</span> <span class=k>else</span> <span class=k>if</span> <span class=nx>nextIdx</span> <span class=o>==</span> <span class=nx>sLength</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>                <span class=c1>// 当前位置恰好结束</span>
-</span></span><span class=line><span class=cl>                <span class=k>return</span> <span class=s>&#34;yes&#34;</span>
-</span></span><span class=line><span class=cl>            <span class=p>}</span> <span class=k>else</span> <span class=k>if</span> <span class=nx>nextIdx</span> <span class=o>!=</span> <span class=nx>idx</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>                <span class=c1>// push back</span>
-</span></span><span class=line><span class=cl>                <span class=nx>queue</span> <span class=p>=</span> <span class=nb>append</span><span class=p>(</span><span class=nx>queue</span><span class=p>,</span> <span class=nx>nextIdx</span><span class=p>)</span>
-</span></span><span class=line><span class=cl>            <span class=p>}</span>
-</span></span><span class=line><span class=cl>            <span class=nx>idx</span><span class=o>++</span>
-</span></span><span class=line><span class=cl>        <span class=p>}</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=s>&#34;no&#34;</span>
-</span></span><span class=line><span class=cl><span class=p>}</span>
-</span></span><span class=line><span class=cl><span class=p>&lt;!</span><span class=o>--</span> <span class=nx>endtab</span> <span class=o>--</span><span class=p>&gt;</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl><span class=p>&lt;!</span><span class=o>--</span> <span class=nx>tab</span> <span class=nx>cpp</span> <span class=o>--</span><span class=p>&gt;</span>
-</span></span><span class=line><span class=cl><span class=nx>class</span> <span class=nx>Solution</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl><span class=nx>public</span><span class=p>:</span>
-</span></span><span class=line><span class=cl>    <span class=cm>/**
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-go data-lang=go><span class=line><span class=cl><span class=p>&lt;!</span><span class=o>--</span><span class=w> </span><span class=nx>tab</span><span class=w> </span><span class=nx>golang</span><span class=w> </span><span class=o>--</span><span class=p>&gt;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=kd>func</span><span class=w> </span><span class=nf>check</span><span class=p>(</span><span class=nx>s</span><span class=w> </span><span class=kt>string</span><span class=p>)</span><span class=w> </span><span class=kt>string</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nx>sLength</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=nb>len</span><span class=p>(</span><span class=nx>s</span><span class=p>)</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>if</span><span class=w> </span><span class=nx>sLength</span><span class=w> </span><span class=o>&lt;=</span><span class=w> </span><span class=mi>0</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=k>return</span><span class=w> </span><span class=s>&#34;no&#34;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nx>queue</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=p>[]</span><span class=kt>int</span><span class=p>{</span><span class=mi>0</span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=kd>var</span><span class=w> </span><span class=nx>idx</span><span class=p>,</span><span class=w> </span><span class=nx>n</span><span class=p>,</span><span class=w> </span><span class=nx>num</span><span class=p>,</span><span class=w> </span><span class=nx>nextIdx</span><span class=w> </span><span class=kt>int</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>for</span><span class=w> </span><span class=nb>len</span><span class=p>(</span><span class=nx>queue</span><span class=p>)</span><span class=w> </span><span class=p>&gt;</span><span class=w> </span><span class=mi>0</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=c1>// pop front</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nx>idx</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nx>queue</span><span class=p>[</span><span class=mi>0</span><span class=p>]</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nx>queue</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nx>queue</span><span class=p>[</span><span class=mi>1</span><span class=p>:]</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nx>n</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=mi>0</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=k>for</span><span class=w> </span><span class=nx>idx</span><span class=w> </span><span class=p>&lt;</span><span class=w> </span><span class=nx>sLength</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=nx>num</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nb>int</span><span class=p>(</span><span class=nx>s</span><span class=p>[</span><span class=nx>idx</span><span class=p>]</span><span class=w> </span><span class=o>-</span><span class=w> </span><span class=nb>byte</span><span class=p>(</span><span class=sc>&#39;0&#39;</span><span class=p>))</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=k>if</span><span class=w> </span><span class=nx>num</span><span class=w> </span><span class=p>&lt;</span><span class=w> </span><span class=mi>0</span><span class=w> </span><span class=o>||</span><span class=w> </span><span class=nx>num</span><span class=w> </span><span class=p>&gt;</span><span class=w> </span><span class=mi>9</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>                </span><span class=k>break</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=nx>n</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nx>n</span><span class=o>*</span><span class=mi>10</span><span class=w> </span><span class=o>+</span><span class=w> </span><span class=nx>num</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=c1>// 从当前位置向后跳过 n 个字符</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=c1>// 并且检查下一个字符是否为数字或者恰好结束</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=nx>nextIdx</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nx>idx</span><span class=w> </span><span class=o>+</span><span class=w> </span><span class=nx>n</span><span class=w> </span><span class=o>+</span><span class=w> </span><span class=mi>1</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=k>if</span><span class=w> </span><span class=nx>nextIdx</span><span class=w> </span><span class=p>&gt;</span><span class=w> </span><span class=nx>sLength</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>                </span><span class=k>break</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=p>}</span><span class=w> </span><span class=k>else</span><span class=w> </span><span class=k>if</span><span class=w> </span><span class=nx>nextIdx</span><span class=w> </span><span class=o>==</span><span class=w> </span><span class=nx>sLength</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>                </span><span class=c1>// 当前位置恰好结束</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>                </span><span class=k>return</span><span class=w> </span><span class=s>&#34;yes&#34;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=p>}</span><span class=w> </span><span class=k>else</span><span class=w> </span><span class=k>if</span><span class=w> </span><span class=nx>nextIdx</span><span class=w> </span><span class=o>!=</span><span class=w> </span><span class=nx>idx</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>                </span><span class=c1>// push back</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>                </span><span class=nx>queue</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nb>append</span><span class=p>(</span><span class=nx>queue</span><span class=p>,</span><span class=w> </span><span class=nx>nextIdx</span><span class=p>)</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=nx>idx</span><span class=o>++</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>return</span><span class=w> </span><span class=s>&#34;no&#34;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=p>&lt;!</span><span class=o>--</span><span class=w> </span><span class=nx>endtab</span><span class=w> </span><span class=o>--</span><span class=p>&gt;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=p>&lt;!</span><span class=o>--</span><span class=w> </span><span class=nx>tab</span><span class=w> </span><span class=nx>cpp</span><span class=w> </span><span class=o>--</span><span class=p>&gt;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=nx>class</span><span class=w> </span><span class=nx>Solution</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=nx>public</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=cm>/**
 </span></span></span><span class=line><span class=cl><span class=cm>     * @param s: the string s
 </span></span></span><span class=line><span class=cl><span class=cm>     * @return: check if the string is interesting
-</span></span></span><span class=line><span class=cl><span class=cm>     */</span>
-</span></span><span class=line><span class=cl>    <span class=kt>string</span> <span class=nf>check</span><span class=p>(</span><span class=kt>string</span> <span class=o>&amp;</span><span class=nx>s</span><span class=p>)</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=c1>// Write your code here</span>
-</span></span><span class=line><span class=cl>        <span class=kt>int</span> <span class=nx>sLength</span> <span class=p>=</span> <span class=nx>s</span><span class=p>.</span><span class=nf>length</span><span class=p>();</span>
-</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=p>(</span><span class=nx>sLength</span> <span class=o>==</span> <span class=mi>0</span><span class=p>)</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>            <span class=k>return</span> <span class=s>&#34;no&#34;</span><span class=p>;</span>
-</span></span><span class=line><span class=cl>        <span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>        <span class=nx>queue</span><span class=p>&lt;</span><span class=kt>int</span><span class=p>&gt;</span> <span class=nx>q</span><span class=p>;</span>
-</span></span><span class=line><span class=cl>        <span class=nx>q</span><span class=p>.</span><span class=nf>push</span><span class=p>(</span><span class=mi>0</span><span class=p>);</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>        <span class=kt>int</span> <span class=nx>idx</span><span class=p>,</span> <span class=nx>n</span><span class=p>,</span> <span class=nx>num</span><span class=p>,</span> <span class=nx>nextIdx</span><span class=p>;</span>
-</span></span><span class=line><span class=cl>        <span class=nf>while</span> <span class=p>(</span><span class=nx>q</span><span class=p>.</span><span class=nf>size</span><span class=p>()</span> <span class=p>&gt;</span> <span class=mi>0</span><span class=p>)</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>            <span class=c1>// pop front</span>
-</span></span><span class=line><span class=cl>            <span class=kt>int</span> <span class=nx>idx</span> <span class=p>=</span> <span class=nx>q</span><span class=p>.</span><span class=nf>front</span><span class=p>();</span>
-</span></span><span class=line><span class=cl>            <span class=nx>q</span><span class=p>.</span><span class=nf>pop</span><span class=p>();</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>            <span class=nx>n</span> <span class=p>=</span> <span class=mi>0</span><span class=p>;</span>
-</span></span><span class=line><span class=cl>            <span class=k>for</span> <span class=p>(;</span> <span class=nx>idx</span> <span class=p>&lt;</span> <span class=nx>sLength</span><span class=p>;</span> <span class=nx>idx</span><span class=o>++</span><span class=p>)</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>                <span class=nx>num</span> <span class=p>=</span> <span class=nx>s</span><span class=p>[</span><span class=nx>idx</span><span class=p>]</span> <span class=o>-</span> <span class=p>(</span><span class=kt>int</span><span class=p>)</span><span class=sc>&#39;0&#39;</span><span class=p>;</span>
-</span></span><span class=line><span class=cl>                <span class=k>if</span> <span class=p>(</span><span class=nx>num</span> <span class=p>&lt;</span> <span class=mi>0</span> <span class=o>||</span> <span class=nx>num</span> <span class=p>&gt;</span> <span class=mi>9</span><span class=p>)</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>                    <span class=k>break</span><span class=p>;</span>
-</span></span><span class=line><span class=cl>                <span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>                <span class=nx>n</span> <span class=p>=</span> <span class=nx>n</span><span class=o>*</span><span class=mi>10</span> <span class=o>+</span> <span class=nx>num</span><span class=p>;</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>                <span class=c1>// 从当前位置向后跳过 n 个字符</span>
-</span></span><span class=line><span class=cl>                <span class=c1>// 并且检查下一个字符是否为数字或者恰好结束</span>
-</span></span><span class=line><span class=cl>                <span class=nx>nextIdx</span> <span class=p>=</span> <span class=nx>idx</span> <span class=o>+</span> <span class=nx>n</span> <span class=o>+</span> <span class=mi>1</span><span class=p>;</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>                <span class=k>if</span> <span class=p>(</span><span class=nx>nextIdx</span> <span class=p>&gt;</span> <span class=nx>sLength</span><span class=p>)</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>                    <span class=k>break</span><span class=p>;</span>
-</span></span><span class=line><span class=cl>                <span class=p>}</span> <span class=k>else</span> <span class=k>if</span> <span class=p>(</span><span class=nx>nextIdx</span> <span class=o>==</span> <span class=nx>sLength</span><span class=p>)</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>                    <span class=c1>// 当前位置恰好结束</span>
-</span></span><span class=line><span class=cl>                    <span class=k>return</span> <span class=s>&#34;yes&#34;</span><span class=p>;</span>
-</span></span><span class=line><span class=cl>                <span class=p>}</span> <span class=k>else</span> <span class=k>if</span> <span class=p>(</span><span class=nx>nextIdx</span> <span class=o>!=</span> <span class=nx>idx</span><span class=p>)</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>                    <span class=c1>// push back</span>
-</span></span><span class=line><span class=cl>                    <span class=nx>q</span><span class=p>.</span><span class=nf>push</span><span class=p>(</span><span class=nx>nextIdx</span><span class=p>);</span>
-</span></span><span class=line><span class=cl>                <span class=p>}</span>
-</span></span><span class=line><span class=cl>            <span class=p>}</span>
-</span></span><span class=line><span class=cl>        <span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=s>&#34;no&#34;</span><span class=p>;</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span>
-</span></span><span class=line><span class=cl><span class=p>};</span>
-</span></span><span class=line><span class=cl><span class=p>&lt;!</span><span class=o>--</span> <span class=nx>endtab</span> <span class=o>--</span><span class=p>&gt;</span></span></span></code></pre></td></tr></table></div></div></section><footer class=article-footer><section class=article-tags><a href=/tags/lintcode/>LintCode</a></section></footer></article><aside class=related-content--wrapper><h2 class=section-title>相关文章</h2><div class=related-content><div class="flex article-list--tile"><article><a href=/leetcode/098-validate-binary-search-tree/><div class=article-details><h2 class=article-title>LeetCode 98. Validate Binary Search Tree</h2></div></a></article><article><a href=/leetcode/097-interleaving-string/><div class=article-details><h2 class=article-title>LeetCode 97. Interleaving String</h2></div></a></article><article><a href=/leetcode/096-unique-binary-search-trees/><div class=article-details><h2 class=article-title>LeetCode 96. Unique Binary Search Trees</h2></div></a></article><article><a href=/leetcode/094-binary-tree-inorder-traversal/><div class=article-details><h2 class=article-title>LeetCode 94. Binary Tree Inorder Traversal</h2></div></a></article><article><a href=/leetcode/093-restore-ip-addresses/><div class=article-details><h2 class=article-title>LeetCode 93. Restore IP Addresses</h2></div></a></article></div></div></aside><footer class=site-footer><section class=copyright>&copy;
+</span></span></span><span class=line><span class=cl><span class=cm>     */</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=kt>string</span><span class=w> </span><span class=nf>check</span><span class=p>(</span><span class=kt>string</span><span class=w> </span><span class=o>&amp;</span><span class=nx>s</span><span class=p>)</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=c1>// Write your code here</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=kt>int</span><span class=w> </span><span class=nx>sLength</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nx>s</span><span class=p>.</span><span class=nf>length</span><span class=p>();</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=k>if</span><span class=w> </span><span class=p>(</span><span class=nx>sLength</span><span class=w> </span><span class=o>==</span><span class=w> </span><span class=mi>0</span><span class=p>)</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=k>return</span><span class=w> </span><span class=s>&#34;no&#34;</span><span class=p>;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nx>queue</span><span class=p>&lt;</span><span class=kt>int</span><span class=p>&gt;</span><span class=w> </span><span class=nx>q</span><span class=p>;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nx>q</span><span class=p>.</span><span class=nf>push</span><span class=p>(</span><span class=mi>0</span><span class=p>);</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=kt>int</span><span class=w> </span><span class=nx>idx</span><span class=p>,</span><span class=w> </span><span class=nx>n</span><span class=p>,</span><span class=w> </span><span class=nx>num</span><span class=p>,</span><span class=w> </span><span class=nx>nextIdx</span><span class=p>;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nf>while</span><span class=w> </span><span class=p>(</span><span class=nx>q</span><span class=p>.</span><span class=nf>size</span><span class=p>()</span><span class=w> </span><span class=p>&gt;</span><span class=w> </span><span class=mi>0</span><span class=p>)</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=c1>// pop front</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=kt>int</span><span class=w> </span><span class=nx>idx</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nx>q</span><span class=p>.</span><span class=nf>front</span><span class=p>();</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=nx>q</span><span class=p>.</span><span class=nf>pop</span><span class=p>();</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=nx>n</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=mi>0</span><span class=p>;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=k>for</span><span class=w> </span><span class=p>(;</span><span class=w> </span><span class=nx>idx</span><span class=w> </span><span class=p>&lt;</span><span class=w> </span><span class=nx>sLength</span><span class=p>;</span><span class=w> </span><span class=nx>idx</span><span class=o>++</span><span class=p>)</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>                </span><span class=nx>num</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nx>s</span><span class=p>[</span><span class=nx>idx</span><span class=p>]</span><span class=w> </span><span class=o>-</span><span class=w> </span><span class=p>(</span><span class=kt>int</span><span class=p>)</span><span class=sc>&#39;0&#39;</span><span class=p>;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>                </span><span class=k>if</span><span class=w> </span><span class=p>(</span><span class=nx>num</span><span class=w> </span><span class=p>&lt;</span><span class=w> </span><span class=mi>0</span><span class=w> </span><span class=o>||</span><span class=w> </span><span class=nx>num</span><span class=w> </span><span class=p>&gt;</span><span class=w> </span><span class=mi>9</span><span class=p>)</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>                    </span><span class=k>break</span><span class=p>;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>                </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>                </span><span class=nx>n</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nx>n</span><span class=o>*</span><span class=mi>10</span><span class=w> </span><span class=o>+</span><span class=w> </span><span class=nx>num</span><span class=p>;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>                </span><span class=c1>// 从当前位置向后跳过 n 个字符</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>                </span><span class=c1>// 并且检查下一个字符是否为数字或者恰好结束</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>                </span><span class=nx>nextIdx</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nx>idx</span><span class=w> </span><span class=o>+</span><span class=w> </span><span class=nx>n</span><span class=w> </span><span class=o>+</span><span class=w> </span><span class=mi>1</span><span class=p>;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>                </span><span class=k>if</span><span class=w> </span><span class=p>(</span><span class=nx>nextIdx</span><span class=w> </span><span class=p>&gt;</span><span class=w> </span><span class=nx>sLength</span><span class=p>)</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>                    </span><span class=k>break</span><span class=p>;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>                </span><span class=p>}</span><span class=w> </span><span class=k>else</span><span class=w> </span><span class=k>if</span><span class=w> </span><span class=p>(</span><span class=nx>nextIdx</span><span class=w> </span><span class=o>==</span><span class=w> </span><span class=nx>sLength</span><span class=p>)</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>                    </span><span class=c1>// 当前位置恰好结束</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>                    </span><span class=k>return</span><span class=w> </span><span class=s>&#34;yes&#34;</span><span class=p>;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>                </span><span class=p>}</span><span class=w> </span><span class=k>else</span><span class=w> </span><span class=k>if</span><span class=w> </span><span class=p>(</span><span class=nx>nextIdx</span><span class=w> </span><span class=o>!=</span><span class=w> </span><span class=nx>idx</span><span class=p>)</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>                    </span><span class=c1>// push back</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>                    </span><span class=nx>q</span><span class=p>.</span><span class=nf>push</span><span class=p>(</span><span class=nx>nextIdx</span><span class=p>);</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>                </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=k>return</span><span class=w> </span><span class=s>&#34;no&#34;</span><span class=p>;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=p>};</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=p>&lt;!</span><span class=o>--</span><span class=w> </span><span class=nx>endtab</span><span class=w> </span><span class=o>--</span><span class=p>&gt;</span></span></span></code></pre></td></tr></table></div></div></section><footer class=article-footer><section class=article-tags><a href=/tags/lintcode/>LintCode</a></section></footer></article><aside class=related-content--wrapper><h2 class=section-title>相关文章</h2><div class=related-content><div class="flex article-list--tile"><article><a href=/leetcode/098-validate-binary-search-tree/><div class=article-details><h2 class=article-title>LeetCode 98. Validate Binary Search Tree</h2></div></a></article><article><a href=/leetcode/097-interleaving-string/><div class=article-details><h2 class=article-title>LeetCode 97. Interleaving String</h2></div></a></article><article><a href=/leetcode/096-unique-binary-search-trees/><div class=article-details><h2 class=article-title>LeetCode 96. Unique Binary Search Trees</h2></div></a></article><article><a href=/leetcode/094-binary-tree-inorder-traversal/><div class=article-details><h2 class=article-title>LeetCode 94. Binary Tree Inorder Traversal</h2></div></a></article><article><a href=/leetcode/093-restore-ip-addresses/><div class=article-details><h2 class=article-title>LeetCode 93. Restore IP Addresses</h2></div></a></article></div></div></aside><footer class=site-footer><section class=copyright>&copy;
 2017 -
 2025 Orztu The Way</section><section class=powerby>使用 <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> 构建<br>主题 <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.30.0>Stack</a></b> 由 <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a> 设计</section></footer><div class=pswp tabindex=-1 role=dialog aria-hidden=true><div class=pswp__bg></div><div class=pswp__scroll-wrap><div class=pswp__container><div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden"><div class=pswp__top-bar><div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
 <button class="pswp__button pswp__button--share" title=Share></button>

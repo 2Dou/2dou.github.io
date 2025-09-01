@@ -50,41 +50,41 @@
 </span><span class=lnt>33
 </span><span class=lnt>34
 </span><span class=lnt>35
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-golang data-lang=golang><span class=line><span class=cl><span class=kd>func</span> <span class=nf>partition</span><span class=p>(</span><span class=nx>head</span> <span class=o>*</span><span class=nx>ListNode</span><span class=p>,</span> <span class=nx>x</span> <span class=kt>int</span><span class=p>)</span> <span class=o>*</span><span class=nx>ListNode</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>    <span class=c1>// use a new linked list to save &#39;bigger nodes&#39;</span>
-</span></span><span class=line><span class=cl>    <span class=nx>bigger</span> <span class=o>:=</span> <span class=o>&amp;</span><span class=nx>ListNode</span><span class=p>{}</span>
-</span></span><span class=line><span class=cl>    <span class=nx>biggerTail</span> <span class=o>:=</span> <span class=nx>bigger</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=c1>// this linked list to save &#39;smaller nodes&#39;</span>
-</span></span><span class=line><span class=cl>    <span class=nx>slow</span> <span class=o>:=</span> <span class=o>&amp;</span><span class=nx>ListNode</span><span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=nx>Next</span><span class=p>:</span> <span class=nx>head</span><span class=p>,</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span>
-</span></span><span class=line><span class=cl>    <span class=nx>head</span> <span class=p>=</span> <span class=nx>slow</span>
-</span></span><span class=line><span class=cl>    <span class=nx>fast</span> <span class=o>:=</span> <span class=nx>slow</span><span class=p>.</span><span class=nx>Next</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=nx>fast</span> <span class=o>!=</span> <span class=kc>nil</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=nx>fast</span><span class=p>.</span><span class=nx>Val</span> <span class=p>&lt;</span> <span class=nx>x</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>            <span class=c1>// slow go to fast(go to slow.next)</span>
-</span></span><span class=line><span class=cl>            <span class=nx>slow</span> <span class=p>=</span> <span class=nx>fast</span>
-</span></span><span class=line><span class=cl>        <span class=p>}</span> <span class=k>else</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>            <span class=c1>// skip fast, go fast.Next(got slow.next.next)</span>
-</span></span><span class=line><span class=cl>            <span class=nx>slow</span><span class=p>.</span><span class=nx>Next</span> <span class=p>=</span> <span class=nx>fast</span><span class=p>.</span><span class=nx>Next</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>            <span class=c1>// break after fast</span>
-</span></span><span class=line><span class=cl>            <span class=nx>fast</span><span class=p>.</span><span class=nx>Next</span> <span class=p>=</span> <span class=kc>nil</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>            <span class=c1>// append fast to bigger linked list</span>
-</span></span><span class=line><span class=cl>            <span class=nx>biggerTail</span><span class=p>.</span><span class=nx>Next</span> <span class=p>=</span> <span class=nx>fast</span>
-</span></span><span class=line><span class=cl>            <span class=nx>biggerTail</span> <span class=p>=</span> <span class=nx>biggerTail</span><span class=p>.</span><span class=nx>Next</span>
-</span></span><span class=line><span class=cl>        <span class=p>}</span>
-</span></span><span class=line><span class=cl>        <span class=nx>fast</span> <span class=p>=</span> <span class=nx>slow</span><span class=p>.</span><span class=nx>Next</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=c1>// concat the two linked lists</span>
-</span></span><span class=line><span class=cl>    <span class=nx>slow</span><span class=p>.</span><span class=nx>Next</span> <span class=p>=</span> <span class=nx>bigger</span><span class=p>.</span><span class=nx>Next</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=nx>head</span><span class=p>.</span><span class=nx>Next</span>
-</span></span><span class=line><span class=cl><span class=p>}</span></span></span></code></pre></td></tr></table></div></div></section><footer class=article-footer><section class=article-tags><a href=/tags/leetcode/>LeetCode</a>
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-golang data-lang=golang><span class=line><span class=cl><span class=kd>func</span><span class=w> </span><span class=nf>partition</span><span class=p>(</span><span class=nx>head</span><span class=w> </span><span class=o>*</span><span class=nx>ListNode</span><span class=p>,</span><span class=w> </span><span class=nx>x</span><span class=w> </span><span class=kt>int</span><span class=p>)</span><span class=w> </span><span class=o>*</span><span class=nx>ListNode</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=c1>// use a new linked list to save &#39;bigger nodes&#39;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nx>bigger</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=o>&amp;</span><span class=nx>ListNode</span><span class=p>{}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nx>biggerTail</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=nx>bigger</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=c1>// this linked list to save &#39;smaller nodes&#39;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nx>slow</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=o>&amp;</span><span class=nx>ListNode</span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nx>Next</span><span class=p>:</span><span class=w> </span><span class=nx>head</span><span class=p>,</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nx>head</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nx>slow</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nx>fast</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=nx>slow</span><span class=p>.</span><span class=nx>Next</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>for</span><span class=w> </span><span class=nx>fast</span><span class=w> </span><span class=o>!=</span><span class=w> </span><span class=kc>nil</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=k>if</span><span class=w> </span><span class=nx>fast</span><span class=p>.</span><span class=nx>Val</span><span class=w> </span><span class=p>&lt;</span><span class=w> </span><span class=nx>x</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=c1>// slow go to fast(go to slow.next)</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=nx>slow</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nx>fast</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=p>}</span><span class=w> </span><span class=k>else</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=c1>// skip fast, go fast.Next(got slow.next.next)</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=nx>slow</span><span class=p>.</span><span class=nx>Next</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nx>fast</span><span class=p>.</span><span class=nx>Next</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=c1>// break after fast</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=nx>fast</span><span class=p>.</span><span class=nx>Next</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=kc>nil</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=c1>// append fast to bigger linked list</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=nx>biggerTail</span><span class=p>.</span><span class=nx>Next</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nx>fast</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=nx>biggerTail</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nx>biggerTail</span><span class=p>.</span><span class=nx>Next</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nx>fast</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nx>slow</span><span class=p>.</span><span class=nx>Next</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=c1>// concat the two linked lists</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nx>slow</span><span class=p>.</span><span class=nx>Next</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nx>bigger</span><span class=p>.</span><span class=nx>Next</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>return</span><span class=w> </span><span class=nx>head</span><span class=p>.</span><span class=nx>Next</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=p>}</span></span></span></code></pre></td></tr></table></div></div></section><footer class=article-footer><section class=article-tags><a href=/tags/leetcode/>LeetCode</a>
 <a href=/tags/linked-list/>Linked List</a>
 <a href=/tags/two-pointers/>Two Pointers</a></section><div class=pre-next><a class="pre-next-btn bg" href=https://www.orztu.com/leetcode/085-maximal-rectangle/ data-tooltip="LeetCode 85. Maximal Rectangle"><i class="fa fa-angle-left"></i>
 <span>上一篇</span>

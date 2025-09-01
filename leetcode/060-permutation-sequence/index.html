@@ -50,37 +50,37 @@
 </span><span class=lnt>29
 </span><span class=lnt>30
 </span><span class=lnt>31
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-golang data-lang=golang><span class=line><span class=cl><span class=kd>func</span> <span class=nf>getPermutation</span><span class=p>(</span><span class=nx>n</span> <span class=kt>int</span><span class=p>,</span> <span class=nx>k</span> <span class=kt>int</span><span class=p>)</span> <span class=kt>string</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>    <span class=nx>s</span> <span class=o>:=</span> <span class=p>[]</span><span class=kt>rune</span><span class=p>{}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=nx>total</span> <span class=o>:=</span> <span class=mi>1</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=nx>i</span> <span class=o>:=</span> <span class=mi>1</span><span class=p>;</span> <span class=nx>i</span> <span class=o>&lt;=</span> <span class=nx>n</span><span class=p>;</span> <span class=nx>i</span><span class=o>++</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=nx>total</span> <span class=o>*=</span> <span class=nx>i</span>
-</span></span><span class=line><span class=cl>        <span class=nx>s</span> <span class=p>=</span> <span class=nb>append</span><span class=p>(</span><span class=nx>s</span><span class=p>,</span> <span class=nb>rune</span><span class=p>(</span><span class=nx>i</span><span class=p>)</span><span class=o>+</span><span class=nb>rune</span><span class=p>(</span><span class=sc>&#39;0&#39;</span><span class=p>))</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=nx>ret</span> <span class=o>:=</span> <span class=nb>make</span><span class=p>([]</span><span class=kt>rune</span><span class=p>,</span> <span class=nx>n</span><span class=p>)</span>
-</span></span><span class=line><span class=cl>    <span class=nx>idx</span> <span class=o>:=</span> <span class=mi>0</span>
-</span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=nx>n</span> <span class=p>&gt;</span> <span class=mi>0</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=c1>// (n-1)!</span>
-</span></span><span class=line><span class=cl>        <span class=nx>total</span> <span class=o>/=</span> <span class=nx>n</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>        <span class=c1>// 当前层索引</span>
-</span></span><span class=line><span class=cl>        <span class=nx>i</span> <span class=o>:=</span> <span class=p>(</span><span class=nx>k</span> <span class=o>-</span> <span class=mi>1</span><span class=p>)</span> <span class=o>/</span> <span class=nx>total</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>        <span class=c1>// 移除 s[i]</span>
-</span></span><span class=line><span class=cl>        <span class=nx>ret</span><span class=p>[</span><span class=nx>idx</span><span class=p>]</span> <span class=p>=</span> <span class=nx>s</span><span class=p>[</span><span class=nx>i</span><span class=p>]</span>
-</span></span><span class=line><span class=cl>        <span class=nx>s</span> <span class=p>=</span> <span class=nb>append</span><span class=p>(</span><span class=nx>s</span><span class=p>[:</span><span class=nx>i</span><span class=p>],</span> <span class=nx>s</span><span class=p>[</span><span class=nx>i</span><span class=o>+</span><span class=mi>1</span><span class=p>:]</span><span class=o>...</span><span class=p>)</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>        <span class=c1>// 减去前面组的数量，得到下一层的索引</span>
-</span></span><span class=line><span class=cl>        <span class=nx>k</span> <span class=o>-=</span> <span class=nx>total</span> <span class=o>*</span> <span class=nx>i</span>
-</span></span><span class=line><span class=cl>        <span class=nx>idx</span><span class=o>++</span>
-</span></span><span class=line><span class=cl>        <span class=nx>n</span><span class=o>--</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=nb>string</span><span class=p>(</span><span class=nx>ret</span><span class=p>)</span>
-</span></span><span class=line><span class=cl><span class=p>}</span></span></span></code></pre></td></tr></table></div></div><h2 id=similar-problem>Similar Problem</h2><ul><li><a class=link href=/leetcode/031-next-permutation/>31. Next Permutation</a></li></ul></section><footer class=article-footer><section class=article-tags><a href=/tags/leetcode/>LeetCode</a>
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-golang data-lang=golang><span class=line><span class=cl><span class=kd>func</span><span class=w> </span><span class=nf>getPermutation</span><span class=p>(</span><span class=nx>n</span><span class=w> </span><span class=kt>int</span><span class=p>,</span><span class=w> </span><span class=nx>k</span><span class=w> </span><span class=kt>int</span><span class=p>)</span><span class=w> </span><span class=kt>string</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nx>s</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=p>[]</span><span class=kt>rune</span><span class=p>{}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nx>total</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=mi>1</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>for</span><span class=w> </span><span class=nx>i</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=mi>1</span><span class=p>;</span><span class=w> </span><span class=nx>i</span><span class=w> </span><span class=o>&lt;=</span><span class=w> </span><span class=nx>n</span><span class=p>;</span><span class=w> </span><span class=nx>i</span><span class=o>++</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nx>total</span><span class=w> </span><span class=o>*=</span><span class=w> </span><span class=nx>i</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nx>s</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nb>append</span><span class=p>(</span><span class=nx>s</span><span class=p>,</span><span class=w> </span><span class=nb>rune</span><span class=p>(</span><span class=nx>i</span><span class=p>)</span><span class=o>+</span><span class=nb>rune</span><span class=p>(</span><span class=sc>&#39;0&#39;</span><span class=p>))</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nx>ret</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=nb>make</span><span class=p>([]</span><span class=kt>rune</span><span class=p>,</span><span class=w> </span><span class=nx>n</span><span class=p>)</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nx>idx</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=mi>0</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>for</span><span class=w> </span><span class=nx>n</span><span class=w> </span><span class=p>&gt;</span><span class=w> </span><span class=mi>0</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=c1>// (n-1)!</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nx>total</span><span class=w> </span><span class=o>/=</span><span class=w> </span><span class=nx>n</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=c1>// 当前层索引</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nx>i</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=p>(</span><span class=nx>k</span><span class=w> </span><span class=o>-</span><span class=w> </span><span class=mi>1</span><span class=p>)</span><span class=w> </span><span class=o>/</span><span class=w> </span><span class=nx>total</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=c1>// 移除 s[i]</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nx>ret</span><span class=p>[</span><span class=nx>idx</span><span class=p>]</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nx>s</span><span class=p>[</span><span class=nx>i</span><span class=p>]</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nx>s</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nb>append</span><span class=p>(</span><span class=nx>s</span><span class=p>[:</span><span class=nx>i</span><span class=p>],</span><span class=w> </span><span class=nx>s</span><span class=p>[</span><span class=nx>i</span><span class=o>+</span><span class=mi>1</span><span class=p>:]</span><span class=o>...</span><span class=p>)</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=c1>// 减去前面组的数量，得到下一层的索引</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nx>k</span><span class=w> </span><span class=o>-=</span><span class=w> </span><span class=nx>total</span><span class=w> </span><span class=o>*</span><span class=w> </span><span class=nx>i</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nx>idx</span><span class=o>++</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nx>n</span><span class=o>--</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>return</span><span class=w> </span><span class=nb>string</span><span class=p>(</span><span class=nx>ret</span><span class=p>)</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=p>}</span></span></span></code></pre></td></tr></table></div></div><h2 id=similar-problem>Similar Problem</h2><ul><li><a class=link href=/leetcode/031-next-permutation/>31. Next Permutation</a></li></ul></section><footer class=article-footer><section class=article-tags><a href=/tags/leetcode/>LeetCode</a>
 <a href=/tags/math/>Math</a>
 <a href=/tags/backtracking/>Backtracking</a></section><div class=pre-next><a class="pre-next-btn bg" href=https://www.orztu.com/leetcode/059-spiral-matrix-ii/ data-tooltip="LeetCode 59. Spiral Matrix II"><i class="fa fa-angle-left"></i>
 <span>上一篇</span>

@@ -74,65 +74,65 @@
 </span><span class=lnt>57
 </span><span class=lnt>58
 </span><span class=lnt>59
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-golang data-lang=golang><span class=line><span class=cl><span class=kd>func</span> <span class=nf>minWindow</span><span class=p>(</span><span class=nx>s</span> <span class=kt>string</span><span class=p>,</span> <span class=nx>t</span> <span class=kt>string</span><span class=p>)</span> <span class=kt>string</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>    <span class=nx>m</span> <span class=o>:=</span> <span class=nb>make</span><span class=p>([]</span><span class=kt>int</span><span class=p>,</span> <span class=mi>128</span><span class=p>)</span>
-</span></span><span class=line><span class=cl>    <span class=c1>// 记录有多少个不同的字符</span>
-</span></span><span class=line><span class=cl>    <span class=nx>espect</span> <span class=o>:=</span> <span class=mi>0</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=c1>// 每次遇到一个字符就减一</span>
-</span></span><span class=line><span class=cl>    <span class=c1>// 在后面遍历的时候加一，遇到等于0表示当前字符恰好满足数量</span>
-</span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=nx>_</span><span class=p>,</span> <span class=nx>v</span> <span class=o>:=</span> <span class=k>range</span> <span class=p>[]</span><span class=nb>byte</span><span class=p>(</span><span class=nx>t</span><span class=p>)</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=nx>m</span><span class=p>[</span><span class=nx>v</span><span class=p>]</span> <span class=o>==</span> <span class=mi>0</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>            <span class=nx>espect</span><span class=o>++</span>
-</span></span><span class=line><span class=cl>        <span class=p>}</span>
-</span></span><span class=line><span class=cl>        <span class=nx>m</span><span class=p>[</span><span class=nx>v</span><span class=p>]</span><span class=o>--</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=nx>arrayS</span> <span class=o>:=</span> <span class=p>[]</span><span class=nb>byte</span><span class=p>(</span><span class=nx>s</span><span class=p>)</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=nx>minStart</span><span class=p>,</span> <span class=nx>minLength</span> <span class=o>:=</span> <span class=mi>0</span><span class=p>,</span> <span class=nx>math</span><span class=p>.</span><span class=nx>MaxInt32</span>
-</span></span><span class=line><span class=cl>    <span class=nx>okCnt</span> <span class=o>:=</span> <span class=mi>0</span>
-</span></span><span class=line><span class=cl>    <span class=nx>l</span><span class=p>,</span> <span class=nx>r</span> <span class=o>:=</span> <span class=mi>0</span><span class=p>,</span> <span class=mi>0</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=nx>tightenLeft</span> <span class=o>:=</span> <span class=kd>func</span><span class=p>()</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=c1>// 收紧左边</span>
-</span></span><span class=line><span class=cl>        <span class=k>for</span> <span class=nx>okCnt</span> <span class=o>==</span> <span class=nx>espect</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>            <span class=nx>v</span> <span class=o>:=</span> <span class=nx>arrayS</span><span class=p>[</span><span class=nx>l</span><span class=p>]</span>
-</span></span><span class=line><span class=cl>            <span class=nx>l</span><span class=o>++</span>
-</span></span><span class=line><span class=cl>            <span class=nx>m</span><span class=p>[</span><span class=nx>v</span><span class=p>]</span><span class=o>--</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>            <span class=c1>// 小于0表示当前字符是需求的字符，且数量已经不满足</span>
-</span></span><span class=line><span class=cl>            <span class=k>if</span> <span class=nx>m</span><span class=p>[</span><span class=nx>v</span><span class=p>]</span> <span class=p>&lt;</span> <span class=mi>0</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>                <span class=nx>okCnt</span><span class=o>--</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>                <span class=nx>length</span> <span class=o>:=</span> <span class=nx>r</span> <span class=o>-</span> <span class=nx>l</span> <span class=o>+</span> <span class=mi>2</span>
-</span></span><span class=line><span class=cl>                <span class=k>if</span> <span class=nx>length</span> <span class=p>&lt;</span> <span class=nx>minLength</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>                    <span class=nx>minLength</span><span class=p>,</span> <span class=nx>minStart</span> <span class=p>=</span> <span class=nx>length</span><span class=p>,</span> <span class=nx>l</span><span class=o>-</span><span class=mi>1</span>
-</span></span><span class=line><span class=cl>                <span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>                <span class=k>break</span>
-</span></span><span class=line><span class=cl>            <span class=p>}</span>
-</span></span><span class=line><span class=cl>        <span class=p>}</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=c1>// 向右扩展</span>
-</span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=nx>r</span> <span class=p>&lt;</span> <span class=nb>len</span><span class=p>(</span><span class=nx>arrayS</span><span class=p>)</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=nx>v</span> <span class=o>:=</span> <span class=nx>arrayS</span><span class=p>[</span><span class=nx>r</span><span class=p>]</span>
-</span></span><span class=line><span class=cl>        <span class=nx>m</span><span class=p>[</span><span class=nx>v</span><span class=p>]</span><span class=o>++</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>        <span class=c1>// 等于0表示当前字符是需求的字符，且数量恰好满足</span>
-</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=mi>0</span> <span class=o>==</span> <span class=nx>m</span><span class=p>[</span><span class=nx>v</span><span class=p>]</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>            <span class=nx>okCnt</span><span class=o>++</span>
-</span></span><span class=line><span class=cl>            <span class=nf>tightenLeft</span><span class=p>()</span>
-</span></span><span class=line><span class=cl>        <span class=p>}</span>
-</span></span><span class=line><span class=cl>        <span class=nx>r</span><span class=o>++</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=nx>minLength</span> <span class=o>!=</span> <span class=nx>math</span><span class=p>.</span><span class=nx>MaxInt32</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=nb>string</span><span class=p>(</span><span class=nx>arrayS</span><span class=p>[</span><span class=nx>minStart</span> <span class=p>:</span> <span class=nx>minStart</span><span class=o>+</span><span class=nx>minLength</span><span class=p>])</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span>
-</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=s>&#34;&#34;</span>
-</span></span><span class=line><span class=cl><span class=p>}</span></span></span></code></pre></td></tr></table></div></div></section><footer class=article-footer><section class=article-tags><a href=/tags/leetcode/>LeetCode</a>
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-golang data-lang=golang><span class=line><span class=cl><span class=kd>func</span><span class=w> </span><span class=nf>minWindow</span><span class=p>(</span><span class=nx>s</span><span class=w> </span><span class=kt>string</span><span class=p>,</span><span class=w> </span><span class=nx>t</span><span class=w> </span><span class=kt>string</span><span class=p>)</span><span class=w> </span><span class=kt>string</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nx>m</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=nb>make</span><span class=p>([]</span><span class=kt>int</span><span class=p>,</span><span class=w> </span><span class=mi>128</span><span class=p>)</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=c1>// 记录有多少个不同的字符</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nx>espect</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=mi>0</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=c1>// 每次遇到一个字符就减一</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=c1>// 在后面遍历的时候加一，遇到等于0表示当前字符恰好满足数量</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>for</span><span class=w> </span><span class=nx>_</span><span class=p>,</span><span class=w> </span><span class=nx>v</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=k>range</span><span class=w> </span><span class=p>[]</span><span class=nb>byte</span><span class=p>(</span><span class=nx>t</span><span class=p>)</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=k>if</span><span class=w> </span><span class=nx>m</span><span class=p>[</span><span class=nx>v</span><span class=p>]</span><span class=w> </span><span class=o>==</span><span class=w> </span><span class=mi>0</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=nx>espect</span><span class=o>++</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nx>m</span><span class=p>[</span><span class=nx>v</span><span class=p>]</span><span class=o>--</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nx>arrayS</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=p>[]</span><span class=nb>byte</span><span class=p>(</span><span class=nx>s</span><span class=p>)</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nx>minStart</span><span class=p>,</span><span class=w> </span><span class=nx>minLength</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=mi>0</span><span class=p>,</span><span class=w> </span><span class=nx>math</span><span class=p>.</span><span class=nx>MaxInt32</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nx>okCnt</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=mi>0</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nx>l</span><span class=p>,</span><span class=w> </span><span class=nx>r</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=mi>0</span><span class=p>,</span><span class=w> </span><span class=mi>0</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nx>tightenLeft</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=kd>func</span><span class=p>()</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=c1>// 收紧左边</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=k>for</span><span class=w> </span><span class=nx>okCnt</span><span class=w> </span><span class=o>==</span><span class=w> </span><span class=nx>espect</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=nx>v</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=nx>arrayS</span><span class=p>[</span><span class=nx>l</span><span class=p>]</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=nx>l</span><span class=o>++</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=nx>m</span><span class=p>[</span><span class=nx>v</span><span class=p>]</span><span class=o>--</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=c1>// 小于0表示当前字符是需求的字符，且数量已经不满足</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=k>if</span><span class=w> </span><span class=nx>m</span><span class=p>[</span><span class=nx>v</span><span class=p>]</span><span class=w> </span><span class=p>&lt;</span><span class=w> </span><span class=mi>0</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>                </span><span class=nx>okCnt</span><span class=o>--</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>                </span><span class=nx>length</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=nx>r</span><span class=w> </span><span class=o>-</span><span class=w> </span><span class=nx>l</span><span class=w> </span><span class=o>+</span><span class=w> </span><span class=mi>2</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>                </span><span class=k>if</span><span class=w> </span><span class=nx>length</span><span class=w> </span><span class=p>&lt;</span><span class=w> </span><span class=nx>minLength</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>                    </span><span class=nx>minLength</span><span class=p>,</span><span class=w> </span><span class=nx>minStart</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nx>length</span><span class=p>,</span><span class=w> </span><span class=nx>l</span><span class=o>-</span><span class=mi>1</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>                </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>                </span><span class=k>break</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=c1>// 向右扩展</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>for</span><span class=w> </span><span class=nx>r</span><span class=w> </span><span class=p>&lt;</span><span class=w> </span><span class=nb>len</span><span class=p>(</span><span class=nx>arrayS</span><span class=p>)</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nx>v</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=nx>arrayS</span><span class=p>[</span><span class=nx>r</span><span class=p>]</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nx>m</span><span class=p>[</span><span class=nx>v</span><span class=p>]</span><span class=o>++</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=c1>// 等于0表示当前字符是需求的字符，且数量恰好满足</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=k>if</span><span class=w> </span><span class=mi>0</span><span class=w> </span><span class=o>==</span><span class=w> </span><span class=nx>m</span><span class=p>[</span><span class=nx>v</span><span class=p>]</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=nx>okCnt</span><span class=o>++</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=nf>tightenLeft</span><span class=p>()</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nx>r</span><span class=o>++</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>if</span><span class=w> </span><span class=nx>minLength</span><span class=w> </span><span class=o>!=</span><span class=w> </span><span class=nx>math</span><span class=p>.</span><span class=nx>MaxInt32</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=k>return</span><span class=w> </span><span class=nb>string</span><span class=p>(</span><span class=nx>arrayS</span><span class=p>[</span><span class=nx>minStart</span><span class=w> </span><span class=p>:</span><span class=w> </span><span class=nx>minStart</span><span class=o>+</span><span class=nx>minLength</span><span class=p>])</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>return</span><span class=w> </span><span class=s>&#34;&#34;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=p>}</span></span></span></code></pre></td></tr></table></div></div></section><footer class=article-footer><section class=article-tags><a href=/tags/leetcode/>LeetCode</a>
 <a href=/tags/hash-table/>Hash Table</a>
 <a href=/tags/string/>String</a></section><div class=pre-next><a class="pre-next-btn bg" href=https://www.orztu.com/leetcode/075-sort-colors/ data-tooltip="LeetCode 75. Sort Colors"><i class="fa fa-angle-left"></i>
 <span>上一篇</span>

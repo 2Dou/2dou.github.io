@@ -24,19 +24,19 @@
 </span><span class=lnt>11
 </span><span class=lnt>12
 </span><span class=lnt>13
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-golang data-lang=golang><span class=line><span class=cl><span class=kd>func</span> <span class=nf>mergeKLists</span><span class=p>(</span><span class=nx>lists</span> <span class=p>[]</span><span class=o>*</span><span class=nx>ListNode</span><span class=p>)</span> <span class=o>*</span><span class=nx>ListNode</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=nb>len</span><span class=p>(</span><span class=nx>lists</span><span class=p>)</span> <span class=o>==</span> <span class=mi>0</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=kc>nil</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=nx>res</span> <span class=o>:=</span> <span class=nx>lists</span><span class=p>[</span><span class=mi>0</span><span class=p>]</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=nx>i</span> <span class=o>:=</span> <span class=mi>1</span><span class=p>;</span> <span class=nx>i</span> <span class=p>&lt;</span> <span class=nb>len</span><span class=p>(</span><span class=nx>lists</span><span class=p>);</span> <span class=nx>i</span><span class=o>++</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=nx>res</span> <span class=p>=</span> <span class=nf>mergeTwoLists</span><span class=p>(</span><span class=nx>res</span><span class=p>,</span> <span class=nx>lists</span><span class=p>[</span><span class=nx>i</span><span class=p>])</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=nx>res</span>
-</span></span><span class=line><span class=cl><span class=p>}</span></span></span></code></pre></td></tr></table></div></div><h2 id=similar-problem>Similar Problem</h2><ul><li><a class=link href=/leetcode/021-merge-two-sorted-lists/>21. Merge Two Sorted Lists</a></li></ul></section><footer class=article-footer><section class=article-tags><a href=/tags/leetcode/>LeetCode</a>
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-golang data-lang=golang><span class=line><span class=cl><span class=kd>func</span><span class=w> </span><span class=nf>mergeKLists</span><span class=p>(</span><span class=nx>lists</span><span class=w> </span><span class=p>[]</span><span class=o>*</span><span class=nx>ListNode</span><span class=p>)</span><span class=w> </span><span class=o>*</span><span class=nx>ListNode</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>if</span><span class=w> </span><span class=nb>len</span><span class=p>(</span><span class=nx>lists</span><span class=p>)</span><span class=w> </span><span class=o>==</span><span class=w> </span><span class=mi>0</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=k>return</span><span class=w> </span><span class=kc>nil</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nx>res</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=nx>lists</span><span class=p>[</span><span class=mi>0</span><span class=p>]</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>for</span><span class=w> </span><span class=nx>i</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=mi>1</span><span class=p>;</span><span class=w> </span><span class=nx>i</span><span class=w> </span><span class=p>&lt;</span><span class=w> </span><span class=nb>len</span><span class=p>(</span><span class=nx>lists</span><span class=p>);</span><span class=w> </span><span class=nx>i</span><span class=o>++</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nx>res</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nf>mergeTwoLists</span><span class=p>(</span><span class=nx>res</span><span class=p>,</span><span class=w> </span><span class=nx>lists</span><span class=p>[</span><span class=nx>i</span><span class=p>])</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>return</span><span class=w> </span><span class=nx>res</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=p>}</span></span></span></code></pre></td></tr></table></div></div><h2 id=similar-problem>Similar Problem</h2><ul><li><a class=link href=/leetcode/021-merge-two-sorted-lists/>21. Merge Two Sorted Lists</a></li></ul></section><footer class=article-footer><section class=article-tags><a href=/tags/leetcode/>LeetCode</a>
 <a href=/tags/linked-list/>Linked List</a>
 <a href=/tags/divide-and-conquer/>Divide and Conquer</a>
 <a href=/tags/heap/>Heap</a></section><div class=pre-next><a class="pre-next-btn bg" href=https://www.orztu.com/leetcode/022-generate-parentheses/ data-tooltip="LeetCode 22. Generate Parentheses"><i class="fa fa-angle-left"></i>

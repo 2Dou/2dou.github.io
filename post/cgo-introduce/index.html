@@ -68,9 +68,9 @@
 </span><span class=lnt>28
 </span><span class=lnt>29
 </span><span class=lnt>30
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-Golang data-lang=Golang><span class=line><span class=cl><span class=kn>package</span> <span class=nx>add</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl><span class=cm>/*
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-Golang data-lang=Golang><span class=line><span class=cl><span class=kn>package</span><span class=w> </span><span class=nx>add</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=cm>/*
 </span></span></span><span class=line><span class=cl><span class=cm>#include &#34;add.h&#34;
 </span></span></span><span class=line><span class=cl><span class=cm>#include &lt;stdio.h&gt;
 </span></span></span><span class=line><span class=cl><span class=cm>#include &lt;stdlib.h&gt;
@@ -78,26 +78,26 @@
 </span></span></span><span class=line><span class=cl><span class=cm>int mul(int a, int b) {
 </span></span></span><span class=line><span class=cl><span class=cm>    return a * b;
 </span></span></span><span class=line><span class=cl><span class=cm>}
-</span></span></span><span class=line><span class=cl><span class=cm>*/</span>
-</span></span><span class=line><span class=cl><span class=kn>import</span> <span class=s>&#34;C&#34;</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl><span class=kn>import</span> <span class=p>(</span>
-</span></span><span class=line><span class=cl>    <span class=s>&#34;unsafe&#34;</span>
-</span></span><span class=line><span class=cl><span class=p>)</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl><span class=kd>func</span> <span class=nf>HelloWorld</span><span class=p>()</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>    <span class=nx>s</span> <span class=o>:=</span> <span class=nx>C</span><span class=p>.</span><span class=nf>CString</span><span class=p>(</span><span class=s>&#34;Hello World!&#34;</span><span class=p>)</span>
-</span></span><span class=line><span class=cl>    <span class=nx>C</span><span class=p>.</span><span class=nf>puts</span><span class=p>(</span><span class=nx>s</span><span class=p>)</span>
-</span></span><span class=line><span class=cl>    <span class=nx>C</span><span class=p>.</span><span class=nf>free</span><span class=p>(</span><span class=nx>unsafe</span><span class=p>.</span><span class=nf>Pointer</span><span class=p>(</span><span class=nx>s</span><span class=p>))</span>
-</span></span><span class=line><span class=cl><span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl><span class=kd>func</span> <span class=nf>Add</span><span class=p>(</span><span class=nx>a</span><span class=p>,</span> <span class=nx>b</span> <span class=kt>int</span><span class=p>)</span> <span class=kt>int</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=nb>int</span><span class=p>(</span><span class=nx>C</span><span class=p>.</span><span class=nf>add</span><span class=p>(</span><span class=nx>C</span><span class=p>.</span><span class=nb>int</span><span class=p>(</span><span class=nx>a</span><span class=p>),</span> <span class=nx>C</span><span class=p>.</span><span class=nb>int</span><span class=p>(</span><span class=nx>b</span><span class=p>)))</span>
-</span></span><span class=line><span class=cl><span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl><span class=kd>func</span> <span class=nf>Mul</span><span class=p>(</span><span class=nx>a</span><span class=p>,</span> <span class=nx>b</span> <span class=kt>int</span><span class=p>)</span> <span class=kt>int</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=nb>int</span><span class=p>(</span><span class=nx>C</span><span class=p>.</span><span class=nf>mul</span><span class=p>(</span><span class=nx>C</span><span class=p>.</span><span class=nb>int</span><span class=p>(</span><span class=nx>a</span><span class=p>),</span> <span class=nx>C</span><span class=p>.</span><span class=nb>int</span><span class=p>(</span><span class=nx>b</span><span class=p>)))</span>
-</span></span><span class=line><span class=cl><span class=p>}</span></span></span></code></pre></td></tr></table></div></div><p>其中的 <code>import "C"</code> 表示使用了 CGO 。在这条语句前面的注释是一段 C 语言代码。<br>这里就定义了哪些 C 语言函数被引用。也可以在这里直接编写函数并实现。<br><del>因为这个特殊的语法，import &ldquo;C&rdquo; 必须单独一行，不可与其他包一起引用。</del><br>可以看到在代码中引用了头文件 <code>add.h</code> 以及 C 标准库的头文件，另外还实现了另一个两数相乘的函数 <code>mul</code>。</p><p>在 Golang 中通过使用 <code>C.xxx</code> 的方式调用 C 函数。<code>HelloWorld</code> 展示了对库函数的调用。<code>Add</code> 和 <code>Mul</code> 展示了对自定义函数的调用。</p><p>因为Golang 和 C 有各自的变量类型。所以<strong>传参时候需要进行类型转换</strong>。</p><p><code>HelloWorld</code> 在传参时使用 <code>C.CString</code> 将 Golang 字符串类型转换为 C 语言类型。<br>因为 <code>C.CString</code> 是在堆上分配空间存放字符串，需要调用者自己释放，所以最后调用 <code>C.free</code> 释放该字符串。</p><p><a class=link href=https://chai2010.gitbooks.io/advanced-go-programming-book/content/ch2-cgo/ch2-03-cgo-types.html target=_blank rel=noopener>点击这里</a>获取更多类型转换的知识。</p><p>最后在 <code>main.go</code> 中引用 <code>add</code> 包：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span></span></span><span class=line><span class=cl><span class=cm>*/</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=kn>import</span><span class=w> </span><span class=s>&#34;C&#34;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=kn>import</span><span class=w> </span><span class=p>(</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=s>&#34;unsafe&#34;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=p>)</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=kd>func</span><span class=w> </span><span class=nf>HelloWorld</span><span class=p>()</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nx>s</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=nx>C</span><span class=p>.</span><span class=nf>CString</span><span class=p>(</span><span class=s>&#34;Hello World!&#34;</span><span class=p>)</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nx>C</span><span class=p>.</span><span class=nf>puts</span><span class=p>(</span><span class=nx>s</span><span class=p>)</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nx>C</span><span class=p>.</span><span class=nf>free</span><span class=p>(</span><span class=nx>unsafe</span><span class=p>.</span><span class=nf>Pointer</span><span class=p>(</span><span class=nx>s</span><span class=p>))</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=kd>func</span><span class=w> </span><span class=nf>Add</span><span class=p>(</span><span class=nx>a</span><span class=p>,</span><span class=w> </span><span class=nx>b</span><span class=w> </span><span class=kt>int</span><span class=p>)</span><span class=w> </span><span class=kt>int</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>return</span><span class=w> </span><span class=nb>int</span><span class=p>(</span><span class=nx>C</span><span class=p>.</span><span class=nf>add</span><span class=p>(</span><span class=nx>C</span><span class=p>.</span><span class=nb>int</span><span class=p>(</span><span class=nx>a</span><span class=p>),</span><span class=w> </span><span class=nx>C</span><span class=p>.</span><span class=nb>int</span><span class=p>(</span><span class=nx>b</span><span class=p>)))</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=kd>func</span><span class=w> </span><span class=nf>Mul</span><span class=p>(</span><span class=nx>a</span><span class=p>,</span><span class=w> </span><span class=nx>b</span><span class=w> </span><span class=kt>int</span><span class=p>)</span><span class=w> </span><span class=kt>int</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>return</span><span class=w> </span><span class=nb>int</span><span class=p>(</span><span class=nx>C</span><span class=p>.</span><span class=nf>mul</span><span class=p>(</span><span class=nx>C</span><span class=p>.</span><span class=nb>int</span><span class=p>(</span><span class=nx>a</span><span class=p>),</span><span class=w> </span><span class=nx>C</span><span class=p>.</span><span class=nb>int</span><span class=p>(</span><span class=nx>b</span><span class=p>)))</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=p>}</span></span></span></code></pre></td></tr></table></div></div><p>其中的 <code>import "C"</code> 表示使用了 CGO 。在这条语句前面的注释是一段 C 语言代码。<br>这里就定义了哪些 C 语言函数被引用。也可以在这里直接编写函数并实现。<br><del>因为这个特殊的语法，import &ldquo;C&rdquo; 必须单独一行，不可与其他包一起引用。</del><br>可以看到在代码中引用了头文件 <code>add.h</code> 以及 C 标准库的头文件，另外还实现了另一个两数相乘的函数 <code>mul</code>。</p><p>在 Golang 中通过使用 <code>C.xxx</code> 的方式调用 C 函数。<code>HelloWorld</code> 展示了对库函数的调用。<code>Add</code> 和 <code>Mul</code> 展示了对自定义函数的调用。</p><p>因为Golang 和 C 有各自的变量类型。所以<strong>传参时候需要进行类型转换</strong>。</p><p><code>HelloWorld</code> 在传参时使用 <code>C.CString</code> 将 Golang 字符串类型转换为 C 语言类型。<br>因为 <code>C.CString</code> 是在堆上分配空间存放字符串，需要调用者自己释放，所以最后调用 <code>C.free</code> 释放该字符串。</p><p><a class=link href=https://chai2010.gitbooks.io/advanced-go-programming-book/content/ch2-cgo/ch2-03-cgo-types.html target=_blank rel=noopener>点击这里</a>获取更多类型转换的知识。</p><p>最后在 <code>main.go</code> 中引用 <code>add</code> 包：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
 </span><span class=lnt> 2
 </span><span class=lnt> 3
 </span><span class=lnt> 4
@@ -111,20 +111,20 @@
 </span><span class=lnt>12
 </span><span class=lnt>13
 </span><span class=lnt>14
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-Golang data-lang=Golang><span class=line><span class=cl><span class=kn>package</span> <span class=nx>main</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl><span class=kn>import</span> <span class=p>(</span>
-</span></span><span class=line><span class=cl>    <span class=s>&#34;fmt&#34;</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=c1>// import package add</span>
-</span></span><span class=line><span class=cl>    <span class=s>&#34;./add&#34;</span>
-</span></span><span class=line><span class=cl><span class=p>)</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl><span class=kd>func</span> <span class=nf>main</span><span class=p>()</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>    <span class=nx>add</span><span class=p>.</span><span class=nf>HelloWorld</span><span class=p>()</span>
-</span></span><span class=line><span class=cl>    <span class=nx>fmt</span><span class=p>.</span><span class=nf>Println</span><span class=p>(</span><span class=nx>add</span><span class=p>.</span><span class=nf>Add</span><span class=p>(</span><span class=mi>10</span><span class=p>,</span> <span class=mi>5</span><span class=p>))</span>
-</span></span><span class=line><span class=cl>    <span class=nx>fmt</span><span class=p>.</span><span class=nf>Println</span><span class=p>(</span><span class=nx>add</span><span class=p>.</span><span class=nf>Mul</span><span class=p>(</span><span class=mi>10</span><span class=p>,</span> <span class=mi>5</span><span class=p>))</span>
-</span></span><span class=line><span class=cl><span class=p>}</span></span></span></code></pre></td></tr></table></div></div><p>编译运行后可以看到输出：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-Golang data-lang=Golang><span class=line><span class=cl><span class=kn>package</span><span class=w> </span><span class=nx>main</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=kn>import</span><span class=w> </span><span class=p>(</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=s>&#34;fmt&#34;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=c1>// import package add</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=s>&#34;./add&#34;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=p>)</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=kd>func</span><span class=w> </span><span class=nf>main</span><span class=p>()</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nx>add</span><span class=p>.</span><span class=nf>HelloWorld</span><span class=p>()</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nx>fmt</span><span class=p>.</span><span class=nf>Println</span><span class=p>(</span><span class=nx>add</span><span class=p>.</span><span class=nf>Add</span><span class=p>(</span><span class=mi>10</span><span class=p>,</span><span class=w> </span><span class=mi>5</span><span class=p>))</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nx>fmt</span><span class=p>.</span><span class=nf>Println</span><span class=p>(</span><span class=nx>add</span><span class=p>.</span><span class=nf>Mul</span><span class=p>(</span><span class=mi>10</span><span class=p>,</span><span class=w> </span><span class=mi>5</span><span class=p>))</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=p>}</span></span></span></code></pre></td></tr></table></div></div><p>编译运行后可以看到输出：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
 </span><span class=lnt>2
 </span><span class=lnt>3
 </span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>Hello World!

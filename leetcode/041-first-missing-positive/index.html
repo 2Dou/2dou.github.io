@@ -55,38 +55,38 @@
 </span><span class=lnt>30
 </span><span class=lnt>31
 </span><span class=lnt>32
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-golang data-lang=golang><span class=line><span class=cl><span class=kd>func</span> <span class=nf>firstMissingPositive</span><span class=p>(</span><span class=nx>nums</span> <span class=p>[]</span><span class=kt>int</span><span class=p>)</span> <span class=kt>int</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>    <span class=nx>l</span> <span class=o>:=</span> <span class=nb>len</span><span class=p>(</span><span class=nx>nums</span><span class=p>)</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=c1>// 进行排序</span>
-</span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=nx>i</span> <span class=o>:=</span> <span class=mi>0</span><span class=p>;</span> <span class=nx>i</span> <span class=p>&lt;</span> <span class=nx>l</span><span class=p>;</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=nx>n</span> <span class=o>:=</span> <span class=nx>nums</span><span class=p>[</span><span class=nx>i</span><span class=p>]</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=nx>n</span> <span class=o>&lt;=</span> <span class=mi>0</span> <span class=o>||</span> <span class=nx>n</span> <span class=p>&gt;</span> <span class=nx>l</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>            <span class=c1>// 溢出的不用管</span>
-</span></span><span class=line><span class=cl>            <span class=nx>i</span><span class=o>++</span>
-</span></span><span class=line><span class=cl>        <span class=p>}</span> <span class=k>else</span> <span class=k>if</span> <span class=nx>i</span><span class=o>+</span><span class=mi>1</span> <span class=o>!=</span> <span class=nx>n</span> <span class=o>&amp;&amp;</span> <span class=nx>nums</span><span class=p>[</span><span class=nx>n</span><span class=o>-</span><span class=mi>1</span><span class=p>]</span> <span class=o>!=</span> <span class=nx>n</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>            <span class=c1>// 判断当前数字是否在它应该的位置上</span>
-</span></span><span class=line><span class=cl>            <span class=c1>// 数字 n 应该在[n - 1]上</span>
-</span></span><span class=line><span class=cl>            <span class=c1>// 需要处理目标位置与当前位置数字相同，否则死循环</span>
-</span></span><span class=line><span class=cl>            <span class=nx>nums</span><span class=p>[</span><span class=nx>i</span><span class=p>]</span> <span class=p>=</span> <span class=nx>nums</span><span class=p>[</span><span class=nx>n</span><span class=o>-</span><span class=mi>1</span><span class=p>]</span>
-</span></span><span class=line><span class=cl>            <span class=nx>nums</span><span class=p>[</span><span class=nx>n</span><span class=o>-</span><span class=mi>1</span><span class=p>]</span> <span class=p>=</span> <span class=nx>n</span>
-</span></span><span class=line><span class=cl>            <span class=c1>// 交换位置后，继续处理当前位置上的数字，不需要i++</span>
-</span></span><span class=line><span class=cl>        <span class=p>}</span> <span class=k>else</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>            <span class=c1>// 处理下一个位置</span>
-</span></span><span class=line><span class=cl>            <span class=nx>i</span><span class=o>++</span>
-</span></span><span class=line><span class=cl>        <span class=p>}</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=c1>// 查找第一个不符合的数字</span>
-</span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=nx>i</span> <span class=o>:=</span> <span class=mi>0</span><span class=p>;</span> <span class=nx>i</span> <span class=p>&lt;</span> <span class=nx>l</span><span class=p>;</span> <span class=nx>i</span><span class=o>++</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=nx>nums</span><span class=p>[</span><span class=nx>i</span><span class=p>]</span> <span class=o>!=</span> <span class=nx>i</span><span class=o>+</span><span class=mi>1</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>            <span class=k>return</span> <span class=nx>i</span> <span class=o>+</span> <span class=mi>1</span>
-</span></span><span class=line><span class=cl>        <span class=p>}</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=nx>l</span> <span class=o>+</span> <span class=mi>1</span>
-</span></span><span class=line><span class=cl><span class=p>}</span></span></span></code></pre></td></tr></table></div></div></section><footer class=article-footer><section class=article-tags><a href=/tags/leetcode/>LeetCode</a>
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-golang data-lang=golang><span class=line><span class=cl><span class=kd>func</span><span class=w> </span><span class=nf>firstMissingPositive</span><span class=p>(</span><span class=nx>nums</span><span class=w> </span><span class=p>[]</span><span class=kt>int</span><span class=p>)</span><span class=w> </span><span class=kt>int</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nx>l</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=nb>len</span><span class=p>(</span><span class=nx>nums</span><span class=p>)</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=c1>// 进行排序</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>for</span><span class=w> </span><span class=nx>i</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=mi>0</span><span class=p>;</span><span class=w> </span><span class=nx>i</span><span class=w> </span><span class=p>&lt;</span><span class=w> </span><span class=nx>l</span><span class=p>;</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nx>n</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=nx>nums</span><span class=p>[</span><span class=nx>i</span><span class=p>]</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=k>if</span><span class=w> </span><span class=nx>n</span><span class=w> </span><span class=o>&lt;=</span><span class=w> </span><span class=mi>0</span><span class=w> </span><span class=o>||</span><span class=w> </span><span class=nx>n</span><span class=w> </span><span class=p>&gt;</span><span class=w> </span><span class=nx>l</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=c1>// 溢出的不用管</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=nx>i</span><span class=o>++</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=p>}</span><span class=w> </span><span class=k>else</span><span class=w> </span><span class=k>if</span><span class=w> </span><span class=nx>i</span><span class=o>+</span><span class=mi>1</span><span class=w> </span><span class=o>!=</span><span class=w> </span><span class=nx>n</span><span class=w> </span><span class=o>&amp;&amp;</span><span class=w> </span><span class=nx>nums</span><span class=p>[</span><span class=nx>n</span><span class=o>-</span><span class=mi>1</span><span class=p>]</span><span class=w> </span><span class=o>!=</span><span class=w> </span><span class=nx>n</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=c1>// 判断当前数字是否在它应该的位置上</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=c1>// 数字 n 应该在[n - 1]上</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=c1>// 需要处理目标位置与当前位置数字相同，否则死循环</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=nx>nums</span><span class=p>[</span><span class=nx>i</span><span class=p>]</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nx>nums</span><span class=p>[</span><span class=nx>n</span><span class=o>-</span><span class=mi>1</span><span class=p>]</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=nx>nums</span><span class=p>[</span><span class=nx>n</span><span class=o>-</span><span class=mi>1</span><span class=p>]</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nx>n</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=c1>// 交换位置后，继续处理当前位置上的数字，不需要i++</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=p>}</span><span class=w> </span><span class=k>else</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=c1>// 处理下一个位置</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=nx>i</span><span class=o>++</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=c1>// 查找第一个不符合的数字</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>for</span><span class=w> </span><span class=nx>i</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=mi>0</span><span class=p>;</span><span class=w> </span><span class=nx>i</span><span class=w> </span><span class=p>&lt;</span><span class=w> </span><span class=nx>l</span><span class=p>;</span><span class=w> </span><span class=nx>i</span><span class=o>++</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=k>if</span><span class=w> </span><span class=nx>nums</span><span class=p>[</span><span class=nx>i</span><span class=p>]</span><span class=w> </span><span class=o>!=</span><span class=w> </span><span class=nx>i</span><span class=o>+</span><span class=mi>1</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=k>return</span><span class=w> </span><span class=nx>i</span><span class=w> </span><span class=o>+</span><span class=w> </span><span class=mi>1</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>return</span><span class=w> </span><span class=nx>l</span><span class=w> </span><span class=o>+</span><span class=w> </span><span class=mi>1</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=p>}</span></span></span></code></pre></td></tr></table></div></div></section><footer class=article-footer><section class=article-tags><a href=/tags/leetcode/>LeetCode</a>
 <a href=/tags/array/>Array</a></section><div class=pre-next><a class="pre-next-btn bg" href=https://www.orztu.com/leetcode/043-multiply-strings/ data-tooltip="LeetCode 43. Multiply Strings"><i class="fa fa-angle-left"></i>
 <span>上一篇</span>
 </a><a class="pre-next-btn bg" href=https://www.orztu.com/leetcode/062-unique-paths/ data-tooltip="LeetCode 62. Unique Paths"><i class="fa fa-angle-left"></i>

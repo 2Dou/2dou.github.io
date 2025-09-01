@@ -45,40 +45,40 @@
 </span><span class=lnt>32
 </span><span class=lnt>33
 </span><span class=lnt>34
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-golang data-lang=golang><span class=line><span class=cl><span class=kd>func</span> <span class=nf>myAtoi</span><span class=p>(</span><span class=nx>str</span> <span class=kt>string</span><span class=p>)</span> <span class=kt>int</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>    <span class=nx>str</span> <span class=p>=</span> <span class=nx>strings</span><span class=p>.</span><span class=nf>TrimLeft</span><span class=p>(</span><span class=nx>str</span><span class=p>,</span> <span class=s>&#34; &#34;</span><span class=p>)</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=nb>len</span><span class=p>(</span><span class=nx>str</span><span class=p>)</span> <span class=o>==</span> <span class=mi>0</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=mi>0</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=nx>r</span> <span class=o>:=</span> <span class=mi>0</span>
-</span></span><span class=line><span class=cl>    <span class=nx>sign</span> <span class=o>:=</span> <span class=mi>1</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=nx>str</span><span class=p>[</span><span class=mi>0</span><span class=p>]</span> <span class=o>==</span> <span class=sc>&#39;-&#39;</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=nx>sign</span> <span class=p>=</span> <span class=o>-</span><span class=mi>1</span>
-</span></span><span class=line><span class=cl>        <span class=nx>str</span> <span class=p>=</span> <span class=nx>str</span><span class=p>[</span><span class=mi>1</span><span class=p>:]</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span> <span class=k>else</span> <span class=k>if</span> <span class=nx>str</span><span class=p>[</span><span class=mi>0</span><span class=p>]</span> <span class=o>==</span> <span class=sc>&#39;+&#39;</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=nx>str</span> <span class=p>=</span> <span class=nx>str</span><span class=p>[</span><span class=mi>1</span><span class=p>:]</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=nx>i</span> <span class=o>:=</span> <span class=mi>0</span><span class=p>;</span> <span class=nx>i</span> <span class=p>&lt;</span> <span class=nb>len</span><span class=p>(</span><span class=nx>str</span><span class=p>);</span> <span class=nx>i</span><span class=o>++</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=nx>c</span> <span class=o>:=</span> <span class=nx>str</span><span class=p>[</span><span class=nx>i</span><span class=p>]</span>
-</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=nx>c</span> <span class=o>&gt;=</span> <span class=sc>&#39;0&#39;</span> <span class=o>&amp;&amp;</span> <span class=nx>c</span> <span class=o>&lt;=</span> <span class=sc>&#39;9&#39;</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>            <span class=nx>r</span> <span class=p>=</span> <span class=nx>r</span> <span class=o>*</span> <span class=mi>10</span> <span class=o>+</span> <span class=p>(</span><span class=nb>int</span><span class=p>(</span><span class=nx>c</span> <span class=o>-</span> <span class=sc>&#39;0&#39;</span><span class=p>)</span> <span class=o>*</span> <span class=nx>sign</span><span class=p>)</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>            <span class=k>if</span> <span class=nx>r</span> <span class=o>&lt;=</span> <span class=nx>math</span><span class=p>.</span><span class=nx>MinInt32</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>                <span class=k>return</span> <span class=nx>math</span><span class=p>.</span><span class=nx>MinInt32</span>
-</span></span><span class=line><span class=cl>            <span class=p>}</span> <span class=k>else</span> <span class=k>if</span> <span class=nx>r</span> <span class=o>&gt;=</span> <span class=nx>math</span><span class=p>.</span><span class=nx>MaxInt32</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>                <span class=k>return</span> <span class=nx>math</span><span class=p>.</span><span class=nx>MaxInt32</span>
-</span></span><span class=line><span class=cl>            <span class=p>}</span>
-</span></span><span class=line><span class=cl>        <span class=p>}</span> <span class=k>else</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>            <span class=k>break</span>
-</span></span><span class=line><span class=cl>        <span class=p>}</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=nx>r</span>
-</span></span><span class=line><span class=cl><span class=p>}</span></span></span></code></pre></td></tr></table></div></div></section><footer class=article-footer><section class=article-tags><a href=/tags/leetcode/>LeetCode</a>
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-golang data-lang=golang><span class=line><span class=cl><span class=kd>func</span><span class=w> </span><span class=nf>myAtoi</span><span class=p>(</span><span class=nx>str</span><span class=w> </span><span class=kt>string</span><span class=p>)</span><span class=w> </span><span class=kt>int</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nx>str</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nx>strings</span><span class=p>.</span><span class=nf>TrimLeft</span><span class=p>(</span><span class=nx>str</span><span class=p>,</span><span class=w> </span><span class=s>&#34; &#34;</span><span class=p>)</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>if</span><span class=w> </span><span class=nb>len</span><span class=p>(</span><span class=nx>str</span><span class=p>)</span><span class=w> </span><span class=o>==</span><span class=w> </span><span class=mi>0</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=k>return</span><span class=w> </span><span class=mi>0</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nx>r</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=mi>0</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nx>sign</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=mi>1</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>if</span><span class=w> </span><span class=nx>str</span><span class=p>[</span><span class=mi>0</span><span class=p>]</span><span class=w> </span><span class=o>==</span><span class=w> </span><span class=sc>&#39;-&#39;</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nx>sign</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=o>-</span><span class=mi>1</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nx>str</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nx>str</span><span class=p>[</span><span class=mi>1</span><span class=p>:]</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=p>}</span><span class=w> </span><span class=k>else</span><span class=w> </span><span class=k>if</span><span class=w> </span><span class=nx>str</span><span class=p>[</span><span class=mi>0</span><span class=p>]</span><span class=w> </span><span class=o>==</span><span class=w> </span><span class=sc>&#39;+&#39;</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nx>str</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nx>str</span><span class=p>[</span><span class=mi>1</span><span class=p>:]</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>for</span><span class=w> </span><span class=nx>i</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=mi>0</span><span class=p>;</span><span class=w> </span><span class=nx>i</span><span class=w> </span><span class=p>&lt;</span><span class=w> </span><span class=nb>len</span><span class=p>(</span><span class=nx>str</span><span class=p>);</span><span class=w> </span><span class=nx>i</span><span class=o>++</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nx>c</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=nx>str</span><span class=p>[</span><span class=nx>i</span><span class=p>]</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=k>if</span><span class=w> </span><span class=nx>c</span><span class=w> </span><span class=o>&gt;=</span><span class=w> </span><span class=sc>&#39;0&#39;</span><span class=w> </span><span class=o>&amp;&amp;</span><span class=w> </span><span class=nx>c</span><span class=w> </span><span class=o>&lt;=</span><span class=w> </span><span class=sc>&#39;9&#39;</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=nx>r</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nx>r</span><span class=w> </span><span class=o>*</span><span class=w> </span><span class=mi>10</span><span class=w> </span><span class=o>+</span><span class=w> </span><span class=p>(</span><span class=nb>int</span><span class=p>(</span><span class=nx>c</span><span class=w> </span><span class=o>-</span><span class=w> </span><span class=sc>&#39;0&#39;</span><span class=p>)</span><span class=w> </span><span class=o>*</span><span class=w> </span><span class=nx>sign</span><span class=p>)</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=k>if</span><span class=w> </span><span class=nx>r</span><span class=w> </span><span class=o>&lt;=</span><span class=w> </span><span class=nx>math</span><span class=p>.</span><span class=nx>MinInt32</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>                </span><span class=k>return</span><span class=w> </span><span class=nx>math</span><span class=p>.</span><span class=nx>MinInt32</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=p>}</span><span class=w> </span><span class=k>else</span><span class=w> </span><span class=k>if</span><span class=w> </span><span class=nx>r</span><span class=w> </span><span class=o>&gt;=</span><span class=w> </span><span class=nx>math</span><span class=p>.</span><span class=nx>MaxInt32</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>                </span><span class=k>return</span><span class=w> </span><span class=nx>math</span><span class=p>.</span><span class=nx>MaxInt32</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=p>}</span><span class=w> </span><span class=k>else</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=k>break</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>return</span><span class=w> </span><span class=nx>r</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=p>}</span></span></span></code></pre></td></tr></table></div></div></section><footer class=article-footer><section class=article-tags><a href=/tags/leetcode/>LeetCode</a>
 <a href=/tags/math/>Math</a>
 <a href=/tags/string/>String</a></section><div class=pre-next><a class="pre-next-btn bg" href=https://www.orztu.com/leetcode/007-reverse-integer/ data-tooltip="LeetCode 7. Reverse Integer"><i class="fa fa-angle-left"></i>
 <span>上一篇</span>

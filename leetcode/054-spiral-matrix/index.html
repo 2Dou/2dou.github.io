@@ -96,63 +96,63 @@
 </span><span class=lnt>55
 </span><span class=lnt>56
 </span><span class=lnt>57
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-golang data-lang=golang><span class=line><span class=cl><span class=kd>func</span> <span class=nf>spiralOrder</span><span class=p>(</span><span class=nx>matrix</span> <span class=p>[][]</span><span class=kt>int</span><span class=p>)</span> <span class=p>[]</span><span class=kt>int</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>    <span class=c1>// 矩阵有效性判断</span>
-</span></span><span class=line><span class=cl>    <span class=nx>row</span> <span class=o>:=</span> <span class=nb>len</span><span class=p>(</span><span class=nx>matrix</span><span class=p>)</span>
-</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=nx>row</span> <span class=o>==</span> <span class=mi>0</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=kc>nil</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span>
-</span></span><span class=line><span class=cl>    <span class=nx>col</span> <span class=o>:=</span> <span class=nb>len</span><span class=p>(</span><span class=nx>matrix</span><span class=p>[</span><span class=mi>0</span><span class=p>])</span>
-</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=nx>col</span> <span class=o>==</span> <span class=mi>0</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=kc>nil</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=nx>res</span> <span class=o>:=</span> <span class=nb>make</span><span class=p>([]</span><span class=kt>int</span><span class=p>,</span> <span class=nx>row</span><span class=o>*</span><span class=nx>col</span><span class=p>)</span>
-</span></span><span class=line><span class=cl>    <span class=nx>idx</span> <span class=o>:=</span> <span class=mi>0</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=nx>append_ans</span> <span class=o>:=</span> <span class=kd>func</span><span class=p>(</span><span class=nx>x</span><span class=p>,</span> <span class=nx>y</span> <span class=kt>int</span><span class=p>)</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=nx>res</span><span class=p>[</span><span class=nx>idx</span><span class=p>]</span> <span class=p>=</span> <span class=nx>matrix</span><span class=p>[</span><span class=nx>x</span><span class=p>][</span><span class=nx>y</span><span class=p>]</span>
-</span></span><span class=line><span class=cl>        <span class=nx>idx</span><span class=o>++</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=c1>// 边界：left, right, top, bottom</span>
-</span></span><span class=line><span class=cl>    <span class=nx>l</span><span class=p>,</span> <span class=nx>r</span> <span class=o>:=</span> <span class=mi>0</span><span class=p>,</span> <span class=nx>col</span><span class=o>-</span><span class=mi>1</span>
-</span></span><span class=line><span class=cl>    <span class=nx>t</span><span class=p>,</span> <span class=nx>b</span> <span class=o>:=</span> <span class=mi>0</span><span class=p>,</span> <span class=nx>row</span><span class=o>-</span><span class=mi>1</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=nx>l</span> <span class=o>&lt;=</span> <span class=nx>r</span> <span class=o>&amp;&amp;</span> <span class=nx>t</span> <span class=o>&lt;=</span> <span class=nx>b</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=c1>// 从左往右遍历top行</span>
-</span></span><span class=line><span class=cl>        <span class=k>for</span> <span class=nx>i</span> <span class=o>:=</span> <span class=nx>l</span><span class=p>;</span> <span class=nx>i</span> <span class=o>&lt;=</span> <span class=nx>r</span><span class=p>;</span> <span class=nx>i</span><span class=o>++</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>            <span class=nf>append_ans</span><span class=p>(</span><span class=nx>t</span><span class=p>,</span> <span class=nx>i</span><span class=p>)</span>
-</span></span><span class=line><span class=cl>        <span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>        <span class=c1>// 从上往下遍历right列</span>
-</span></span><span class=line><span class=cl>        <span class=k>for</span> <span class=nx>i</span> <span class=o>:=</span> <span class=nx>t</span> <span class=o>+</span> <span class=mi>1</span><span class=p>;</span> <span class=nx>i</span> <span class=p>&lt;</span> <span class=nx>b</span><span class=p>;</span> <span class=nx>i</span><span class=o>++</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>            <span class=nf>append_ans</span><span class=p>(</span><span class=nx>i</span><span class=p>,</span> <span class=nx>r</span><span class=p>)</span>
-</span></span><span class=line><span class=cl>        <span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=nx>t</span> <span class=p>&lt;</span> <span class=nx>b</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>            <span class=c1>// 从右往左遍历bottom行</span>
-</span></span><span class=line><span class=cl>            <span class=k>for</span> <span class=nx>i</span> <span class=o>:=</span> <span class=nx>r</span><span class=p>;</span> <span class=nx>i</span> <span class=o>&gt;=</span> <span class=nx>l</span><span class=p>;</span> <span class=nx>i</span><span class=o>--</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>                <span class=nf>append_ans</span><span class=p>(</span><span class=nx>b</span><span class=p>,</span> <span class=nx>i</span><span class=p>)</span>
-</span></span><span class=line><span class=cl>            <span class=p>}</span>
-</span></span><span class=line><span class=cl>        <span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=nx>l</span> <span class=p>&lt;</span> <span class=nx>r</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>            <span class=c1>// 从下往上遍历left列</span>
-</span></span><span class=line><span class=cl>            <span class=k>for</span> <span class=nx>i</span> <span class=o>:=</span> <span class=nx>b</span> <span class=o>-</span> <span class=mi>1</span><span class=p>;</span> <span class=nx>i</span> <span class=p>&gt;</span> <span class=nx>t</span><span class=p>;</span> <span class=nx>i</span><span class=o>--</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>                <span class=nf>append_ans</span><span class=p>(</span><span class=nx>i</span><span class=p>,</span> <span class=nx>l</span><span class=p>)</span>
-</span></span><span class=line><span class=cl>            <span class=p>}</span>
-</span></span><span class=line><span class=cl>        <span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>        <span class=c1>// 收紧边界</span>
-</span></span><span class=line><span class=cl>        <span class=nx>l</span><span class=o>++</span>
-</span></span><span class=line><span class=cl>        <span class=nx>r</span><span class=o>--</span>
-</span></span><span class=line><span class=cl>        <span class=nx>t</span><span class=o>++</span>
-</span></span><span class=line><span class=cl>        <span class=nx>b</span><span class=o>--</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=nx>res</span>
-</span></span><span class=line><span class=cl><span class=p>}</span></span></span></code></pre></td></tr></table></div></div><h2 id=similar-problem>Similar Problem</h2><ul><li><a class=link href=/leetcode/059-spiral-matrix-ii/>59. Spiral Matrix II</a></li></ul></section><footer class=article-footer><section class=article-tags><a href=/tags/leetcode/>LeetCode</a>
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-golang data-lang=golang><span class=line><span class=cl><span class=kd>func</span><span class=w> </span><span class=nf>spiralOrder</span><span class=p>(</span><span class=nx>matrix</span><span class=w> </span><span class=p>[][]</span><span class=kt>int</span><span class=p>)</span><span class=w> </span><span class=p>[]</span><span class=kt>int</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=c1>// 矩阵有效性判断</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nx>row</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=nb>len</span><span class=p>(</span><span class=nx>matrix</span><span class=p>)</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>if</span><span class=w> </span><span class=nx>row</span><span class=w> </span><span class=o>==</span><span class=w> </span><span class=mi>0</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=k>return</span><span class=w> </span><span class=kc>nil</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nx>col</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=nb>len</span><span class=p>(</span><span class=nx>matrix</span><span class=p>[</span><span class=mi>0</span><span class=p>])</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>if</span><span class=w> </span><span class=nx>col</span><span class=w> </span><span class=o>==</span><span class=w> </span><span class=mi>0</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=k>return</span><span class=w> </span><span class=kc>nil</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nx>res</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=nb>make</span><span class=p>([]</span><span class=kt>int</span><span class=p>,</span><span class=w> </span><span class=nx>row</span><span class=o>*</span><span class=nx>col</span><span class=p>)</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nx>idx</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=mi>0</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nx>append_ans</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=kd>func</span><span class=p>(</span><span class=nx>x</span><span class=p>,</span><span class=w> </span><span class=nx>y</span><span class=w> </span><span class=kt>int</span><span class=p>)</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nx>res</span><span class=p>[</span><span class=nx>idx</span><span class=p>]</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nx>matrix</span><span class=p>[</span><span class=nx>x</span><span class=p>][</span><span class=nx>y</span><span class=p>]</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nx>idx</span><span class=o>++</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=c1>// 边界：left, right, top, bottom</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nx>l</span><span class=p>,</span><span class=w> </span><span class=nx>r</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=mi>0</span><span class=p>,</span><span class=w> </span><span class=nx>col</span><span class=o>-</span><span class=mi>1</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nx>t</span><span class=p>,</span><span class=w> </span><span class=nx>b</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=mi>0</span><span class=p>,</span><span class=w> </span><span class=nx>row</span><span class=o>-</span><span class=mi>1</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>for</span><span class=w> </span><span class=nx>l</span><span class=w> </span><span class=o>&lt;=</span><span class=w> </span><span class=nx>r</span><span class=w> </span><span class=o>&amp;&amp;</span><span class=w> </span><span class=nx>t</span><span class=w> </span><span class=o>&lt;=</span><span class=w> </span><span class=nx>b</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=c1>// 从左往右遍历top行</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=k>for</span><span class=w> </span><span class=nx>i</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=nx>l</span><span class=p>;</span><span class=w> </span><span class=nx>i</span><span class=w> </span><span class=o>&lt;=</span><span class=w> </span><span class=nx>r</span><span class=p>;</span><span class=w> </span><span class=nx>i</span><span class=o>++</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=nf>append_ans</span><span class=p>(</span><span class=nx>t</span><span class=p>,</span><span class=w> </span><span class=nx>i</span><span class=p>)</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=c1>// 从上往下遍历right列</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=k>for</span><span class=w> </span><span class=nx>i</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=nx>t</span><span class=w> </span><span class=o>+</span><span class=w> </span><span class=mi>1</span><span class=p>;</span><span class=w> </span><span class=nx>i</span><span class=w> </span><span class=p>&lt;</span><span class=w> </span><span class=nx>b</span><span class=p>;</span><span class=w> </span><span class=nx>i</span><span class=o>++</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=nf>append_ans</span><span class=p>(</span><span class=nx>i</span><span class=p>,</span><span class=w> </span><span class=nx>r</span><span class=p>)</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=k>if</span><span class=w> </span><span class=nx>t</span><span class=w> </span><span class=p>&lt;</span><span class=w> </span><span class=nx>b</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=c1>// 从右往左遍历bottom行</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=k>for</span><span class=w> </span><span class=nx>i</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=nx>r</span><span class=p>;</span><span class=w> </span><span class=nx>i</span><span class=w> </span><span class=o>&gt;=</span><span class=w> </span><span class=nx>l</span><span class=p>;</span><span class=w> </span><span class=nx>i</span><span class=o>--</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>                </span><span class=nf>append_ans</span><span class=p>(</span><span class=nx>b</span><span class=p>,</span><span class=w> </span><span class=nx>i</span><span class=p>)</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=k>if</span><span class=w> </span><span class=nx>l</span><span class=w> </span><span class=p>&lt;</span><span class=w> </span><span class=nx>r</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=c1>// 从下往上遍历left列</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=k>for</span><span class=w> </span><span class=nx>i</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=nx>b</span><span class=w> </span><span class=o>-</span><span class=w> </span><span class=mi>1</span><span class=p>;</span><span class=w> </span><span class=nx>i</span><span class=w> </span><span class=p>&gt;</span><span class=w> </span><span class=nx>t</span><span class=p>;</span><span class=w> </span><span class=nx>i</span><span class=o>--</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>                </span><span class=nf>append_ans</span><span class=p>(</span><span class=nx>i</span><span class=p>,</span><span class=w> </span><span class=nx>l</span><span class=p>)</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=c1>// 收紧边界</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nx>l</span><span class=o>++</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nx>r</span><span class=o>--</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nx>t</span><span class=o>++</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nx>b</span><span class=o>--</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>return</span><span class=w> </span><span class=nx>res</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=p>}</span></span></span></code></pre></td></tr></table></div></div><h2 id=similar-problem>Similar Problem</h2><ul><li><a class=link href=/leetcode/059-spiral-matrix-ii/>59. Spiral Matrix II</a></li></ul></section><footer class=article-footer><section class=article-tags><a href=/tags/leetcode/>LeetCode</a>
 <a href=/tags/array/>Array</a></section><div class=pre-next><a class="pre-next-btn bg" href=https://www.orztu.com/leetcode/062-unique-paths/ data-tooltip="LeetCode 62. Unique Paths"><i class="fa fa-angle-left"></i>
 <span>上一篇</span>
 </a><a class="pre-next-btn bg" href=https://www.orztu.com/leetcode/055-jump-game/ data-tooltip="LeetCode 55. Jump Game"><i class="fa fa-angle-left"></i>

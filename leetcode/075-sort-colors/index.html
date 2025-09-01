@@ -49,38 +49,38 @@
 </span><span class=lnt>30
 </span><span class=lnt>31
 </span><span class=lnt>32
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-golang data-lang=golang><span class=line><span class=cl><span class=kd>func</span> <span class=nf>sortColors</span><span class=p>(</span><span class=nx>nums</span> <span class=p>[]</span><span class=kt>int</span><span class=p>)</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>    <span class=nx>length</span> <span class=o>:=</span> <span class=nb>len</span><span class=p>(</span><span class=nx>nums</span><span class=p>)</span>
-</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=nx>length</span> <span class=o>&lt;=</span> <span class=mi>1</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=k>return</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=nx>l</span><span class=p>,</span> <span class=nx>r</span> <span class=o>:=</span> <span class=mi>0</span><span class=p>,</span> <span class=nx>length</span><span class=o>-</span><span class=mi>1</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=c1>// 记录 0（红色）的数量</span>
-</span></span><span class=line><span class=cl>    <span class=nx>red</span> <span class=o>:=</span> <span class=mi>0</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=nx>l</span> <span class=o>&lt;=</span> <span class=nx>r</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=nx>fmt</span><span class=p>.</span><span class=nf>Println</span><span class=p>(</span><span class=nx>nums</span><span class=p>[</span><span class=nx>l</span><span class=p>])</span>
-</span></span><span class=line><span class=cl>        <span class=k>switch</span> <span class=nx>nums</span><span class=p>[</span><span class=nx>l</span><span class=p>]</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=k>case</span> <span class=mi>0</span><span class=p>:</span>
-</span></span><span class=line><span class=cl>            <span class=k>if</span> <span class=nx>l</span> <span class=o>!=</span> <span class=nx>red</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>                <span class=c1>// 将第 red 个和第 l 个交换</span>
-</span></span><span class=line><span class=cl>                <span class=c1>// 因为 red 表示 0 的数量，所以第 red 个应该是被跳过的 1</span>
-</span></span><span class=line><span class=cl>                <span class=nx>nums</span><span class=p>[</span><span class=nx>l</span><span class=p>],</span> <span class=nx>nums</span><span class=p>[</span><span class=nx>red</span><span class=p>]</span> <span class=p>=</span> <span class=nx>nums</span><span class=p>[</span><span class=nx>red</span><span class=p>],</span> <span class=nx>nums</span><span class=p>[</span><span class=nx>l</span><span class=p>]</span>
-</span></span><span class=line><span class=cl>            <span class=p>}</span>
-</span></span><span class=line><span class=cl>            <span class=nx>red</span><span class=o>++</span>
-</span></span><span class=line><span class=cl>            <span class=k>fallthrough</span>
-</span></span><span class=line><span class=cl>        <span class=k>case</span> <span class=mi>1</span><span class=p>:</span>
-</span></span><span class=line><span class=cl>            <span class=c1>// 遇到 1 （白色）则跳过</span>
-</span></span><span class=line><span class=cl>            <span class=nx>l</span><span class=o>++</span>
-</span></span><span class=line><span class=cl>        <span class=k>case</span> <span class=mi>2</span><span class=p>:</span>
-</span></span><span class=line><span class=cl>            <span class=c1>// 遇到 2 （蓝色）则交换到末尾，并且 r--，l 不动</span>
-</span></span><span class=line><span class=cl>            <span class=nx>nums</span><span class=p>[</span><span class=nx>r</span><span class=p>],</span> <span class=nx>nums</span><span class=p>[</span><span class=nx>l</span><span class=p>]</span> <span class=p>=</span> <span class=nx>nums</span><span class=p>[</span><span class=nx>l</span><span class=p>],</span> <span class=nx>nums</span><span class=p>[</span><span class=nx>r</span><span class=p>]</span>
-</span></span><span class=line><span class=cl>            <span class=nx>r</span><span class=o>--</span>
-</span></span><span class=line><span class=cl>        <span class=p>}</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span>
-</span></span><span class=line><span class=cl><span class=p>}</span></span></span></code></pre></td></tr></table></div></div></section><footer class=article-footer><section class=article-tags><a href=/tags/leetcode/>LeetCode</a>
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-golang data-lang=golang><span class=line><span class=cl><span class=kd>func</span><span class=w> </span><span class=nf>sortColors</span><span class=p>(</span><span class=nx>nums</span><span class=w> </span><span class=p>[]</span><span class=kt>int</span><span class=p>)</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nx>length</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=nb>len</span><span class=p>(</span><span class=nx>nums</span><span class=p>)</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>if</span><span class=w> </span><span class=nx>length</span><span class=w> </span><span class=o>&lt;=</span><span class=w> </span><span class=mi>1</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=k>return</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nx>l</span><span class=p>,</span><span class=w> </span><span class=nx>r</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=mi>0</span><span class=p>,</span><span class=w> </span><span class=nx>length</span><span class=o>-</span><span class=mi>1</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=c1>// 记录 0（红色）的数量</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nx>red</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=mi>0</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>for</span><span class=w> </span><span class=nx>l</span><span class=w> </span><span class=o>&lt;=</span><span class=w> </span><span class=nx>r</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nx>fmt</span><span class=p>.</span><span class=nf>Println</span><span class=p>(</span><span class=nx>nums</span><span class=p>[</span><span class=nx>l</span><span class=p>])</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=k>switch</span><span class=w> </span><span class=nx>nums</span><span class=p>[</span><span class=nx>l</span><span class=p>]</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=k>case</span><span class=w> </span><span class=mi>0</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=k>if</span><span class=w> </span><span class=nx>l</span><span class=w> </span><span class=o>!=</span><span class=w> </span><span class=nx>red</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>                </span><span class=c1>// 将第 red 个和第 l 个交换</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>                </span><span class=c1>// 因为 red 表示 0 的数量，所以第 red 个应该是被跳过的 1</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>                </span><span class=nx>nums</span><span class=p>[</span><span class=nx>l</span><span class=p>],</span><span class=w> </span><span class=nx>nums</span><span class=p>[</span><span class=nx>red</span><span class=p>]</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nx>nums</span><span class=p>[</span><span class=nx>red</span><span class=p>],</span><span class=w> </span><span class=nx>nums</span><span class=p>[</span><span class=nx>l</span><span class=p>]</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=nx>red</span><span class=o>++</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=k>fallthrough</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=k>case</span><span class=w> </span><span class=mi>1</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=c1>// 遇到 1 （白色）则跳过</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=nx>l</span><span class=o>++</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=k>case</span><span class=w> </span><span class=mi>2</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=c1>// 遇到 2 （蓝色）则交换到末尾，并且 r--，l 不动</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=nx>nums</span><span class=p>[</span><span class=nx>r</span><span class=p>],</span><span class=w> </span><span class=nx>nums</span><span class=p>[</span><span class=nx>l</span><span class=p>]</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nx>nums</span><span class=p>[</span><span class=nx>l</span><span class=p>],</span><span class=w> </span><span class=nx>nums</span><span class=p>[</span><span class=nx>r</span><span class=p>]</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=nx>r</span><span class=o>--</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=p>}</span></span></span></code></pre></td></tr></table></div></div></section><footer class=article-footer><section class=article-tags><a href=/tags/leetcode/>LeetCode</a>
 <a href=/tags/array/>Array</a>
 <a href=/tags/two-pointers/>Two Pointers</a>
 <a href=/tags/sort/>Sort</a></section><div class=pre-next><a class="pre-next-btn bg" href=https://www.orztu.com/leetcode/074-search-a-2d-matrix/ data-tooltip="LeetCode 74. Search a 2D Matrix"><i class="fa fa-angle-left"></i>

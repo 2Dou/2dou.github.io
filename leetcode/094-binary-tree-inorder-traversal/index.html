@@ -66,31 +66,31 @@
 </span><span class=lnt>37
 </span><span class=lnt>38
 </span><span class=lnt>39
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-golang data-lang=golang><span class=line><span class=cl><span class=nx>class</span> <span class=nx>Solution</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl><span class=nx>public</span><span class=p>:</span>
-</span></span><span class=line><span class=cl>    <span class=nx>vector</span><span class=p>&lt;</span><span class=kt>int</span><span class=p>&gt;</span> <span class=nf>inorderTraversal</span><span class=p>(</span><span class=nx>TreeNode</span><span class=o>*</span> <span class=nx>root</span><span class=p>)</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=nx>vector</span><span class=p>&lt;</span><span class=kt>int</span><span class=p>&gt;</span> <span class=nx>r</span><span class=p>;</span>
-</span></span><span class=line><span class=cl>        <span class=nf>inorderVisit</span><span class=p>(</span><span class=nx>r</span><span class=p>,</span> <span class=nx>root</span><span class=p>);</span>
-</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=nx>r</span><span class=p>;</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl><span class=nx>private</span><span class=p>:</span>
-</span></span><span class=line><span class=cl>    <span class=nx>void</span> <span class=nf>inorderVisit</span><span class=p>(</span><span class=nx>vector</span><span class=p>&lt;</span><span class=kt>int</span><span class=p>&gt;</span> <span class=o>&amp;</span><span class=nx>r</span><span class=p>,</span> <span class=nx>TreeNode</span> <span class=o>*</span><span class=nx>node</span><span class=p>)</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=nx>std</span><span class=p>::</span><span class=nx>stack</span><span class=p>&lt;</span><span class=nx>TreeNode</span> <span class=o>*</span><span class=p>&gt;</span> <span class=nx>s</span><span class=p>;</span>
-</span></span><span class=line><span class=cl>        <span class=nx>auto</span> <span class=o>*</span><span class=nx>cur</span> <span class=p>=</span> <span class=nx>node</span><span class=p>;</span>
-</span></span><span class=line><span class=cl>        <span class=nf>while</span><span class=p>(</span><span class=nx>cur</span> <span class=o>||</span> <span class=p>!</span><span class=nx>s</span><span class=p>.</span><span class=nf>empty</span><span class=p>())</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>            <span class=nf>while</span><span class=p>(</span><span class=nx>cur</span><span class=p>)</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>                <span class=nx>s</span><span class=p>.</span><span class=nf>push</span><span class=p>(</span><span class=nx>cur</span><span class=p>);</span>
-</span></span><span class=line><span class=cl>                <span class=nx>cur</span> <span class=p>=</span> <span class=nx>cur</span><span class=o>-</span><span class=p>&gt;</span><span class=nx>left</span><span class=p>;</span>
-</span></span><span class=line><span class=cl>            <span class=p>}</span>
-</span></span><span class=line><span class=cl>            <span class=nx>cur</span> <span class=p>=</span> <span class=nx>s</span><span class=p>.</span><span class=nf>top</span><span class=p>();</span>
-</span></span><span class=line><span class=cl>            <span class=nx>s</span><span class=p>.</span><span class=nf>pop</span><span class=p>();</span>
-</span></span><span class=line><span class=cl>            <span class=nx>r</span><span class=p>.</span><span class=nf>push_back</span><span class=p>(</span><span class=nx>cur</span><span class=o>-</span><span class=p>&gt;</span><span class=nx>val</span><span class=p>);</span>
-</span></span><span class=line><span class=cl>            <span class=nx>cur</span> <span class=p>=</span> <span class=nx>cur</span><span class=o>-</span><span class=p>&gt;</span><span class=nx>right</span><span class=p>;</span>
-</span></span><span class=line><span class=cl>        <span class=p>}</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=cm>/* 递归
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-golang data-lang=golang><span class=line><span class=cl><span class=nx>class</span><span class=w> </span><span class=nx>Solution</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=nx>public</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nx>vector</span><span class=p>&lt;</span><span class=kt>int</span><span class=p>&gt;</span><span class=w> </span><span class=nf>inorderTraversal</span><span class=p>(</span><span class=nx>TreeNode</span><span class=o>*</span><span class=w> </span><span class=nx>root</span><span class=p>)</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nx>vector</span><span class=p>&lt;</span><span class=kt>int</span><span class=p>&gt;</span><span class=w> </span><span class=nx>r</span><span class=p>;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nf>inorderVisit</span><span class=p>(</span><span class=nx>r</span><span class=p>,</span><span class=w> </span><span class=nx>root</span><span class=p>);</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=k>return</span><span class=w> </span><span class=nx>r</span><span class=p>;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=nx>private</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nx>void</span><span class=w> </span><span class=nf>inorderVisit</span><span class=p>(</span><span class=nx>vector</span><span class=p>&lt;</span><span class=kt>int</span><span class=p>&gt;</span><span class=w> </span><span class=o>&amp;</span><span class=nx>r</span><span class=p>,</span><span class=w> </span><span class=nx>TreeNode</span><span class=w> </span><span class=o>*</span><span class=nx>node</span><span class=p>)</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nx>std</span><span class=p>::</span><span class=nx>stack</span><span class=p>&lt;</span><span class=nx>TreeNode</span><span class=w> </span><span class=o>*</span><span class=p>&gt;</span><span class=w> </span><span class=nx>s</span><span class=p>;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nx>auto</span><span class=w> </span><span class=o>*</span><span class=nx>cur</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nx>node</span><span class=p>;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nf>while</span><span class=p>(</span><span class=nx>cur</span><span class=w> </span><span class=o>||</span><span class=w> </span><span class=p>!</span><span class=nx>s</span><span class=p>.</span><span class=nf>empty</span><span class=p>())</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=nf>while</span><span class=p>(</span><span class=nx>cur</span><span class=p>)</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>                </span><span class=nx>s</span><span class=p>.</span><span class=nf>push</span><span class=p>(</span><span class=nx>cur</span><span class=p>);</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>                </span><span class=nx>cur</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nx>cur</span><span class=o>-</span><span class=p>&gt;</span><span class=nx>left</span><span class=p>;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=nx>cur</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nx>s</span><span class=p>.</span><span class=nf>top</span><span class=p>();</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=nx>s</span><span class=p>.</span><span class=nf>pop</span><span class=p>();</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=nx>r</span><span class=p>.</span><span class=nf>push_back</span><span class=p>(</span><span class=nx>cur</span><span class=o>-</span><span class=p>&gt;</span><span class=nx>val</span><span class=p>);</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=nx>cur</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nx>cur</span><span class=o>-</span><span class=p>&gt;</span><span class=nx>right</span><span class=p>;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=cm>/* 递归
 </span></span></span><span class=line><span class=cl><span class=cm>    void inorderVisit(vector&lt;int&gt; &amp;r, TreeNode *node) {
 </span></span></span><span class=line><span class=cl><span class=cm>        if (!node) {
 </span></span></span><span class=line><span class=cl><span class=cm>            return;
@@ -103,8 +103,8 @@
 </span></span></span><span class=line><span class=cl><span class=cm>            inorderVisit(r, node-&gt;right);
 </span></span></span><span class=line><span class=cl><span class=cm>        }
 </span></span></span><span class=line><span class=cl><span class=cm>    }
-</span></span></span><span class=line><span class=cl><span class=cm>    */</span>
-</span></span><span class=line><span class=cl><span class=p>};</span></span></span></code></pre></td></tr></table></div></div></section><footer class=article-footer><section class=article-tags><a href=/tags/leetcode/>LeetCode</a>
+</span></span></span><span class=line><span class=cl><span class=cm>    */</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=p>};</span></span></span></code></pre></td></tr></table></div></div></section><footer class=article-footer><section class=article-tags><a href=/tags/leetcode/>LeetCode</a>
 <a href=/tags/stack/>Stack</a>
 <a href=/tags/tree/>Tree</a></section><div class=pre-next><a class="pre-next-btn bg" href=https://www.orztu.com/leetcode/093-restore-ip-addresses/ data-tooltip="LeetCode 93. Restore IP Addresses"><i class="fa fa-angle-left"></i>
 <span>上一篇</span>

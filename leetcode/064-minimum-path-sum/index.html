@@ -71,50 +71,50 @@
 </span><span class=lnt>42
 </span><span class=lnt>43
 </span><span class=lnt>44
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-golang data-lang=golang><span class=line><span class=cl><span class=kd>func</span> <span class=nf>minPathSum</span><span class=p>(</span><span class=nx>grid</span> <span class=p>[][]</span><span class=kt>int</span><span class=p>)</span> <span class=kt>int</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>    <span class=nx>row</span> <span class=o>:=</span> <span class=nb>len</span><span class=p>(</span><span class=nx>grid</span><span class=p>)</span>
-</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=nx>row</span> <span class=o>==</span> <span class=mi>0</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=mi>0</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=nx>col</span> <span class=o>:=</span> <span class=nb>len</span><span class=p>(</span><span class=nx>grid</span><span class=p>[</span><span class=mi>0</span><span class=p>])</span>
-</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=nx>col</span> <span class=o>==</span> <span class=mi>0</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=mi>0</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=kd>var</span> <span class=nx>left</span><span class=p>,</span> <span class=nx>up</span><span class=p>,</span> <span class=nx>minCost</span><span class=p>,</span> <span class=nx>upCost</span> <span class=kt>int</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=c1>// 从第二个格子开始</span>
-</span></span><span class=line><span class=cl>    <span class=nx>j</span> <span class=o>:=</span> <span class=mi>1</span>
-</span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=nx>i</span> <span class=o>:=</span> <span class=mi>0</span><span class=p>;</span> <span class=nx>i</span> <span class=p>&lt;</span> <span class=nx>row</span><span class=p>;</span> <span class=nx>i</span><span class=o>++</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=k>for</span> <span class=p>;</span> <span class=nx>j</span> <span class=p>&lt;</span> <span class=nx>col</span><span class=p>;</span> <span class=nx>j</span><span class=o>++</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>            <span class=nx>minCost</span> <span class=p>=</span> <span class=o>-</span><span class=mi>1</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>            <span class=nx>left</span> <span class=p>=</span> <span class=nx>j</span> <span class=o>-</span> <span class=mi>1</span>
-</span></span><span class=line><span class=cl>            <span class=k>if</span> <span class=nx>left</span> <span class=o>&gt;=</span> <span class=mi>0</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>                <span class=c1>// 左边消耗</span>
-</span></span><span class=line><span class=cl>                <span class=nx>minCost</span> <span class=p>=</span> <span class=nx>grid</span><span class=p>[</span><span class=nx>i</span><span class=p>][</span><span class=nx>left</span><span class=p>]</span>
-</span></span><span class=line><span class=cl>            <span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>            <span class=nx>up</span> <span class=p>=</span> <span class=nx>i</span> <span class=o>-</span> <span class=mi>1</span>
-</span></span><span class=line><span class=cl>            <span class=k>if</span> <span class=nx>up</span> <span class=o>&gt;=</span> <span class=mi>0</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>                <span class=c1>// 上边消耗</span>
-</span></span><span class=line><span class=cl>                <span class=nx>upCost</span> <span class=p>=</span> <span class=nx>grid</span><span class=p>[</span><span class=nx>up</span><span class=p>][</span><span class=nx>j</span><span class=p>]</span>
-</span></span><span class=line><span class=cl>                <span class=k>if</span> <span class=nx>upCost</span> <span class=p>&lt;</span> <span class=nx>minCost</span> <span class=o>||</span> <span class=nx>minCost</span> <span class=o>==</span> <span class=o>-</span><span class=mi>1</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>                    <span class=nx>minCost</span> <span class=p>=</span> <span class=nx>upCost</span>
-</span></span><span class=line><span class=cl>                <span class=p>}</span>
-</span></span><span class=line><span class=cl>            <span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>            <span class=c1>// 选择较少消耗的路径并加上自身消耗</span>
-</span></span><span class=line><span class=cl>            <span class=c1>// 保存当前格子消耗</span>
-</span></span><span class=line><span class=cl>            <span class=nx>grid</span><span class=p>[</span><span class=nx>i</span><span class=p>][</span><span class=nx>j</span><span class=p>]</span> <span class=o>+=</span> <span class=nx>minCost</span>
-</span></span><span class=line><span class=cl>        <span class=p>}</span>
-</span></span><span class=line><span class=cl>        <span class=nx>j</span> <span class=p>=</span> <span class=mi>0</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=c1>// 返回最后一个格子消耗</span>
-</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=nx>grid</span><span class=p>[</span><span class=nx>row</span><span class=o>-</span><span class=mi>1</span><span class=p>][</span><span class=nx>col</span><span class=o>-</span><span class=mi>1</span><span class=p>]</span>
-</span></span><span class=line><span class=cl><span class=p>}</span></span></span></code></pre></td></tr></table></div></div><h2 id=similar-problem>Similar Problem</h2><ul><li><a class=link href=/leetcode/063-unique-paths-ii/>63. Unique Paths II</a></li></ul></section><footer class=article-footer><section class=article-tags><a href=/tags/leetcode/>LeetCode</a>
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-golang data-lang=golang><span class=line><span class=cl><span class=kd>func</span><span class=w> </span><span class=nf>minPathSum</span><span class=p>(</span><span class=nx>grid</span><span class=w> </span><span class=p>[][]</span><span class=kt>int</span><span class=p>)</span><span class=w> </span><span class=kt>int</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nx>row</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=nb>len</span><span class=p>(</span><span class=nx>grid</span><span class=p>)</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>if</span><span class=w> </span><span class=nx>row</span><span class=w> </span><span class=o>==</span><span class=w> </span><span class=mi>0</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=k>return</span><span class=w> </span><span class=mi>0</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nx>col</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=nb>len</span><span class=p>(</span><span class=nx>grid</span><span class=p>[</span><span class=mi>0</span><span class=p>])</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>if</span><span class=w> </span><span class=nx>col</span><span class=w> </span><span class=o>==</span><span class=w> </span><span class=mi>0</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=k>return</span><span class=w> </span><span class=mi>0</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=kd>var</span><span class=w> </span><span class=nx>left</span><span class=p>,</span><span class=w> </span><span class=nx>up</span><span class=p>,</span><span class=w> </span><span class=nx>minCost</span><span class=p>,</span><span class=w> </span><span class=nx>upCost</span><span class=w> </span><span class=kt>int</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=c1>// 从第二个格子开始</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nx>j</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=mi>1</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>for</span><span class=w> </span><span class=nx>i</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=mi>0</span><span class=p>;</span><span class=w> </span><span class=nx>i</span><span class=w> </span><span class=p>&lt;</span><span class=w> </span><span class=nx>row</span><span class=p>;</span><span class=w> </span><span class=nx>i</span><span class=o>++</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=k>for</span><span class=w> </span><span class=p>;</span><span class=w> </span><span class=nx>j</span><span class=w> </span><span class=p>&lt;</span><span class=w> </span><span class=nx>col</span><span class=p>;</span><span class=w> </span><span class=nx>j</span><span class=o>++</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=nx>minCost</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=o>-</span><span class=mi>1</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=nx>left</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nx>j</span><span class=w> </span><span class=o>-</span><span class=w> </span><span class=mi>1</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=k>if</span><span class=w> </span><span class=nx>left</span><span class=w> </span><span class=o>&gt;=</span><span class=w> </span><span class=mi>0</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>                </span><span class=c1>// 左边消耗</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>                </span><span class=nx>minCost</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nx>grid</span><span class=p>[</span><span class=nx>i</span><span class=p>][</span><span class=nx>left</span><span class=p>]</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=nx>up</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nx>i</span><span class=w> </span><span class=o>-</span><span class=w> </span><span class=mi>1</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=k>if</span><span class=w> </span><span class=nx>up</span><span class=w> </span><span class=o>&gt;=</span><span class=w> </span><span class=mi>0</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>                </span><span class=c1>// 上边消耗</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>                </span><span class=nx>upCost</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nx>grid</span><span class=p>[</span><span class=nx>up</span><span class=p>][</span><span class=nx>j</span><span class=p>]</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>                </span><span class=k>if</span><span class=w> </span><span class=nx>upCost</span><span class=w> </span><span class=p>&lt;</span><span class=w> </span><span class=nx>minCost</span><span class=w> </span><span class=o>||</span><span class=w> </span><span class=nx>minCost</span><span class=w> </span><span class=o>==</span><span class=w> </span><span class=o>-</span><span class=mi>1</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>                    </span><span class=nx>minCost</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nx>upCost</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>                </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=c1>// 选择较少消耗的路径并加上自身消耗</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=c1>// 保存当前格子消耗</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=nx>grid</span><span class=p>[</span><span class=nx>i</span><span class=p>][</span><span class=nx>j</span><span class=p>]</span><span class=w> </span><span class=o>+=</span><span class=w> </span><span class=nx>minCost</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nx>j</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=mi>0</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=c1>// 返回最后一个格子消耗</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>return</span><span class=w> </span><span class=nx>grid</span><span class=p>[</span><span class=nx>row</span><span class=o>-</span><span class=mi>1</span><span class=p>][</span><span class=nx>col</span><span class=o>-</span><span class=mi>1</span><span class=p>]</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=p>}</span></span></span></code></pre></td></tr></table></div></div><h2 id=similar-problem>Similar Problem</h2><ul><li><a class=link href=/leetcode/063-unique-paths-ii/>63. Unique Paths II</a></li></ul></section><footer class=article-footer><section class=article-tags><a href=/tags/leetcode/>LeetCode</a>
 <a href=/tags/array/>Array</a>
 <a href=/tags/dynamic-programming/>Dynamic Programming</a></section><div class=pre-next><a class="pre-next-btn bg" href=https://www.orztu.com/leetcode/063-unique-paths-ii/ data-tooltip="LeetCode 63. Unique Paths II"><i class="fa fa-angle-left"></i>
 <span>上一篇</span>

@@ -78,53 +78,53 @@
 </span><span class=lnt>45
 </span><span class=lnt>46
 </span><span class=lnt>47
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-golang data-lang=golang><span class=line><span class=cl><span class=kd>func</span> <span class=nf>combine</span><span class=p>(</span><span class=nx>n</span> <span class=kt>int</span><span class=p>,</span> <span class=nx>k</span> <span class=kt>int</span><span class=p>)</span> <span class=p>[][]</span><span class=kt>int</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>    <span class=nx>result</span> <span class=o>:=</span> <span class=p>[][]</span><span class=kt>int</span><span class=p>{}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=c1>// C(n, k)</span>
-</span></span><span class=line><span class=cl>    <span class=nx>minK</span> <span class=o>:=</span> <span class=nx>k</span>
-</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=nx>n</span><span class=o>-</span><span class=nx>k</span> <span class=p>&lt;</span> <span class=nx>minK</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=nx>minK</span> <span class=p>=</span> <span class=nx>n</span> <span class=o>-</span> <span class=nx>k</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span>
-</span></span><span class=line><span class=cl>    <span class=nx>p</span><span class=p>,</span> <span class=nx>c</span> <span class=o>:=</span> <span class=mi>1</span><span class=p>,</span> <span class=mi>1</span>
-</span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=nx>i</span> <span class=o>:=</span> <span class=mi>0</span><span class=p>;</span> <span class=nx>i</span> <span class=p>&lt;</span> <span class=nx>minK</span><span class=p>;</span> <span class=nx>i</span><span class=o>++</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=nx>c</span> <span class=o>*=</span> <span class=nx>minK</span> <span class=o>-</span> <span class=nx>i</span>
-</span></span><span class=line><span class=cl>        <span class=nx>p</span> <span class=o>*=</span> <span class=nx>n</span> <span class=o>-</span> <span class=nx>i</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span>
-</span></span><span class=line><span class=cl>    <span class=nx>c</span> <span class=p>=</span> <span class=nx>p</span> <span class=o>/</span> <span class=nx>c</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=c1>// 一次性申请内存，+k额外用于递归时存放</span>
-</span></span><span class=line><span class=cl>    <span class=nx>memo</span> <span class=o>:=</span> <span class=nb>make</span><span class=p>([]</span><span class=kt>int</span><span class=p>,</span> <span class=nx>c</span><span class=o>*</span><span class=nx>k</span><span class=o>+</span><span class=nx>k</span><span class=p>)</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=c1>// 前面k个用于递归时使用，结果从第k+1个开始</span>
-</span></span><span class=line><span class=cl>    <span class=nx>start</span> <span class=o>:=</span> <span class=nx>k</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=kd>var</span> <span class=nx>solve</span> <span class=kd>func</span><span class=p>(</span><span class=nx>n</span><span class=p>,</span> <span class=nx>kk</span> <span class=kt>int</span><span class=p>)</span>
-</span></span><span class=line><span class=cl>    <span class=nx>solve</span> <span class=p>=</span> <span class=kd>func</span><span class=p>(</span><span class=nx>it</span><span class=p>,</span> <span class=nx>kk</span> <span class=kt>int</span><span class=p>)</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=nx>kk</span> <span class=o>==</span> <span class=nx>k</span><span class=o>-</span><span class=mi>1</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>            <span class=k>for</span> <span class=nx>it</span> <span class=p>&lt;</span> <span class=nx>n</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>                <span class=nx>it</span><span class=o>++</span>
-</span></span><span class=line><span class=cl>                <span class=nx>memo</span><span class=p>[</span><span class=nx>kk</span><span class=p>]</span> <span class=p>=</span> <span class=nx>it</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>                <span class=nx>r</span> <span class=o>:=</span> <span class=nx>memo</span><span class=p>[</span><span class=nx>start</span> <span class=p>:</span> <span class=nx>start</span><span class=o>+</span><span class=nx>k</span><span class=p>]</span>
-</span></span><span class=line><span class=cl>                <span class=nb>copy</span><span class=p>(</span><span class=nx>r</span><span class=p>,</span> <span class=nx>memo</span><span class=p>)</span>
-</span></span><span class=line><span class=cl>                <span class=nx>result</span> <span class=p>=</span> <span class=nb>append</span><span class=p>(</span><span class=nx>result</span><span class=p>,</span> <span class=nx>r</span><span class=p>)</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>                <span class=nx>start</span> <span class=o>+=</span> <span class=nx>k</span>
-</span></span><span class=line><span class=cl>            <span class=p>}</span>
-</span></span><span class=line><span class=cl>        <span class=p>}</span> <span class=k>else</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>            <span class=k>for</span> <span class=nx>it</span> <span class=p>&lt;</span> <span class=nx>n</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>                <span class=nx>it</span><span class=o>++</span>
-</span></span><span class=line><span class=cl>                <span class=nx>memo</span><span class=p>[</span><span class=nx>kk</span><span class=p>]</span> <span class=p>=</span> <span class=nx>it</span>
-</span></span><span class=line><span class=cl>                <span class=nf>solve</span><span class=p>(</span><span class=nx>it</span><span class=p>,</span> <span class=nx>kk</span><span class=o>+</span><span class=mi>1</span><span class=p>)</span>
-</span></span><span class=line><span class=cl>            <span class=p>}</span>
-</span></span><span class=line><span class=cl>        <span class=p>}</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=nf>solve</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=mi>0</span><span class=p>)</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=nx>result</span>
-</span></span><span class=line><span class=cl><span class=p>}</span></span></span></code></pre></td></tr></table></div></div></section><footer class=article-footer><section class=article-tags><a href=/tags/leetcode/>LeetCode</a>
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-golang data-lang=golang><span class=line><span class=cl><span class=kd>func</span><span class=w> </span><span class=nf>combine</span><span class=p>(</span><span class=nx>n</span><span class=w> </span><span class=kt>int</span><span class=p>,</span><span class=w> </span><span class=nx>k</span><span class=w> </span><span class=kt>int</span><span class=p>)</span><span class=w> </span><span class=p>[][]</span><span class=kt>int</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nx>result</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=p>[][]</span><span class=kt>int</span><span class=p>{}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=c1>// C(n, k)</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nx>minK</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=nx>k</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>if</span><span class=w> </span><span class=nx>n</span><span class=o>-</span><span class=nx>k</span><span class=w> </span><span class=p>&lt;</span><span class=w> </span><span class=nx>minK</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nx>minK</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nx>n</span><span class=w> </span><span class=o>-</span><span class=w> </span><span class=nx>k</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nx>p</span><span class=p>,</span><span class=w> </span><span class=nx>c</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=mi>1</span><span class=p>,</span><span class=w> </span><span class=mi>1</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>for</span><span class=w> </span><span class=nx>i</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=mi>0</span><span class=p>;</span><span class=w> </span><span class=nx>i</span><span class=w> </span><span class=p>&lt;</span><span class=w> </span><span class=nx>minK</span><span class=p>;</span><span class=w> </span><span class=nx>i</span><span class=o>++</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nx>c</span><span class=w> </span><span class=o>*=</span><span class=w> </span><span class=nx>minK</span><span class=w> </span><span class=o>-</span><span class=w> </span><span class=nx>i</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nx>p</span><span class=w> </span><span class=o>*=</span><span class=w> </span><span class=nx>n</span><span class=w> </span><span class=o>-</span><span class=w> </span><span class=nx>i</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nx>c</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nx>p</span><span class=w> </span><span class=o>/</span><span class=w> </span><span class=nx>c</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=c1>// 一次性申请内存，+k额外用于递归时存放</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nx>memo</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=nb>make</span><span class=p>([]</span><span class=kt>int</span><span class=p>,</span><span class=w> </span><span class=nx>c</span><span class=o>*</span><span class=nx>k</span><span class=o>+</span><span class=nx>k</span><span class=p>)</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=c1>// 前面k个用于递归时使用，结果从第k+1个开始</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nx>start</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=nx>k</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=kd>var</span><span class=w> </span><span class=nx>solve</span><span class=w> </span><span class=kd>func</span><span class=p>(</span><span class=nx>n</span><span class=p>,</span><span class=w> </span><span class=nx>kk</span><span class=w> </span><span class=kt>int</span><span class=p>)</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nx>solve</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=kd>func</span><span class=p>(</span><span class=nx>it</span><span class=p>,</span><span class=w> </span><span class=nx>kk</span><span class=w> </span><span class=kt>int</span><span class=p>)</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=k>if</span><span class=w> </span><span class=nx>kk</span><span class=w> </span><span class=o>==</span><span class=w> </span><span class=nx>k</span><span class=o>-</span><span class=mi>1</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=k>for</span><span class=w> </span><span class=nx>it</span><span class=w> </span><span class=p>&lt;</span><span class=w> </span><span class=nx>n</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>                </span><span class=nx>it</span><span class=o>++</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>                </span><span class=nx>memo</span><span class=p>[</span><span class=nx>kk</span><span class=p>]</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nx>it</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>                </span><span class=nx>r</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=nx>memo</span><span class=p>[</span><span class=nx>start</span><span class=w> </span><span class=p>:</span><span class=w> </span><span class=nx>start</span><span class=o>+</span><span class=nx>k</span><span class=p>]</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>                </span><span class=nb>copy</span><span class=p>(</span><span class=nx>r</span><span class=p>,</span><span class=w> </span><span class=nx>memo</span><span class=p>)</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>                </span><span class=nx>result</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nb>append</span><span class=p>(</span><span class=nx>result</span><span class=p>,</span><span class=w> </span><span class=nx>r</span><span class=p>)</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>                </span><span class=nx>start</span><span class=w> </span><span class=o>+=</span><span class=w> </span><span class=nx>k</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=p>}</span><span class=w> </span><span class=k>else</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=k>for</span><span class=w> </span><span class=nx>it</span><span class=w> </span><span class=p>&lt;</span><span class=w> </span><span class=nx>n</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>                </span><span class=nx>it</span><span class=o>++</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>                </span><span class=nx>memo</span><span class=p>[</span><span class=nx>kk</span><span class=p>]</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nx>it</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>                </span><span class=nf>solve</span><span class=p>(</span><span class=nx>it</span><span class=p>,</span><span class=w> </span><span class=nx>kk</span><span class=o>+</span><span class=mi>1</span><span class=p>)</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nf>solve</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span><span class=w> </span><span class=mi>0</span><span class=p>)</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>return</span><span class=w> </span><span class=nx>result</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=p>}</span></span></span></code></pre></td></tr></table></div></div></section><footer class=article-footer><section class=article-tags><a href=/tags/leetcode/>LeetCode</a>
 <a href=/tags/backtracking/>Backtracking</a></section><div class=pre-next><a class="pre-next-btn bg" href=https://www.orztu.com/leetcode/076-minimum-window-substring/ data-tooltip="LeetCode 76. Minimum Window Substring"><i class="fa fa-angle-left"></i>
 <span>上一篇</span>
 </a><a class="pre-next-btn bg" href=https://www.orztu.com/leetcode/078-subsets/ data-tooltip="LeetCode 78. Subsets"><i class="fa fa-angle-left"></i>

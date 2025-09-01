@@ -56,35 +56,35 @@
 </span><span class=lnt>27
 </span><span class=lnt>28
 </span><span class=lnt>29
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-golang data-lang=golang><span class=line><span class=cl><span class=nx>class</span> <span class=nx>Solution</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl><span class=nx>public</span><span class=p>:</span>
-</span></span><span class=line><span class=cl>    <span class=kt>bool</span> <span class=nf>isValidBST</span><span class=p>(</span><span class=nx>TreeNode</span><span class=o>*</span> <span class=nx>root</span><span class=p>)</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=p>(!</span><span class=nx>root</span><span class=p>)</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>            <span class=k>return</span> <span class=kc>true</span><span class=p>;</span>
-</span></span><span class=line><span class=cl>        <span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>        <span class=nx>long</span> <span class=nx>first</span> <span class=p>=</span> <span class=nx>LONG_MIN</span><span class=p>;</span>
-</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=nf>visit</span><span class=p>(</span><span class=nx>root</span><span class=p>,</span> <span class=nx>first</span><span class=p>);</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl><span class=nx>private</span><span class=p>:</span>
-</span></span><span class=line><span class=cl>    <span class=kt>bool</span> <span class=nf>visit</span><span class=p>(</span><span class=nx>TreeNode</span><span class=o>*</span> <span class=nx>root</span><span class=p>,</span> <span class=nx>long</span> <span class=o>&amp;</span><span class=nx>last</span><span class=p>)</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=p>(</span><span class=nx>root</span><span class=o>-</span><span class=p>&gt;</span><span class=nx>left</span> <span class=o>&amp;&amp;</span> <span class=p>!</span><span class=nf>visit</span><span class=p>(</span><span class=nx>root</span><span class=o>-</span><span class=p>&gt;</span><span class=nx>left</span><span class=p>,</span> <span class=nx>last</span><span class=p>))</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>            <span class=k>return</span> <span class=kc>false</span><span class=p>;</span>
-</span></span><span class=line><span class=cl>        <span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=p>(</span><span class=nx>root</span><span class=o>-</span><span class=p>&gt;</span><span class=nx>val</span> <span class=o>&lt;=</span> <span class=nx>last</span><span class=p>)</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>            <span class=k>return</span> <span class=kc>false</span><span class=p>;</span>
-</span></span><span class=line><span class=cl>        <span class=p>}</span>
-</span></span><span class=line><span class=cl>        <span class=nx>last</span> <span class=p>=</span> <span class=nx>root</span><span class=o>-</span><span class=p>&gt;</span><span class=nx>val</span><span class=p>;</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=p>(</span><span class=nx>root</span><span class=o>-</span><span class=p>&gt;</span><span class=nx>right</span> <span class=o>&amp;&amp;</span> <span class=p>!</span><span class=nf>visit</span><span class=p>(</span><span class=nx>root</span><span class=o>-</span><span class=p>&gt;</span><span class=nx>right</span><span class=p>,</span> <span class=nx>last</span><span class=p>))</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>            <span class=k>return</span> <span class=kc>false</span><span class=p>;</span>
-</span></span><span class=line><span class=cl>        <span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=kc>true</span><span class=p>;</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span>
-</span></span><span class=line><span class=cl><span class=p>};</span></span></span></code></pre></td></tr></table></div></div></section><footer class=article-footer><section class=article-tags><a href=/tags/leetcode/>LeetCode</a>
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-golang data-lang=golang><span class=line><span class=cl><span class=nx>class</span><span class=w> </span><span class=nx>Solution</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=nx>public</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=kt>bool</span><span class=w> </span><span class=nf>isValidBST</span><span class=p>(</span><span class=nx>TreeNode</span><span class=o>*</span><span class=w> </span><span class=nx>root</span><span class=p>)</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=k>if</span><span class=w> </span><span class=p>(!</span><span class=nx>root</span><span class=p>)</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=k>return</span><span class=w> </span><span class=kc>true</span><span class=p>;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nx>long</span><span class=w> </span><span class=nx>first</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nx>LONG_MIN</span><span class=p>;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=k>return</span><span class=w> </span><span class=nf>visit</span><span class=p>(</span><span class=nx>root</span><span class=p>,</span><span class=w> </span><span class=nx>first</span><span class=p>);</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=nx>private</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=kt>bool</span><span class=w> </span><span class=nf>visit</span><span class=p>(</span><span class=nx>TreeNode</span><span class=o>*</span><span class=w> </span><span class=nx>root</span><span class=p>,</span><span class=w> </span><span class=nx>long</span><span class=w> </span><span class=o>&amp;</span><span class=nx>last</span><span class=p>)</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=k>if</span><span class=w> </span><span class=p>(</span><span class=nx>root</span><span class=o>-</span><span class=p>&gt;</span><span class=nx>left</span><span class=w> </span><span class=o>&amp;&amp;</span><span class=w> </span><span class=p>!</span><span class=nf>visit</span><span class=p>(</span><span class=nx>root</span><span class=o>-</span><span class=p>&gt;</span><span class=nx>left</span><span class=p>,</span><span class=w> </span><span class=nx>last</span><span class=p>))</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=k>return</span><span class=w> </span><span class=kc>false</span><span class=p>;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=k>if</span><span class=w> </span><span class=p>(</span><span class=nx>root</span><span class=o>-</span><span class=p>&gt;</span><span class=nx>val</span><span class=w> </span><span class=o>&lt;=</span><span class=w> </span><span class=nx>last</span><span class=p>)</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=k>return</span><span class=w> </span><span class=kc>false</span><span class=p>;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nx>last</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nx>root</span><span class=o>-</span><span class=p>&gt;</span><span class=nx>val</span><span class=p>;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=k>if</span><span class=w> </span><span class=p>(</span><span class=nx>root</span><span class=o>-</span><span class=p>&gt;</span><span class=nx>right</span><span class=w> </span><span class=o>&amp;&amp;</span><span class=w> </span><span class=p>!</span><span class=nf>visit</span><span class=p>(</span><span class=nx>root</span><span class=o>-</span><span class=p>&gt;</span><span class=nx>right</span><span class=p>,</span><span class=w> </span><span class=nx>last</span><span class=p>))</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=k>return</span><span class=w> </span><span class=kc>false</span><span class=p>;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=k>return</span><span class=w> </span><span class=kc>true</span><span class=p>;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=p>};</span></span></span></code></pre></td></tr></table></div></div></section><footer class=article-footer><section class=article-tags><a href=/tags/leetcode/>LeetCode</a>
 <a href=/tags/tree/>Tree</a>
 <a href=/tags/bst/>BST</a></section><div class=pre-next><a class="pre-next-btn bg" href=https://www.orztu.com/leetcode/097-interleaving-string/ data-tooltip="LeetCode 97. Interleaving String"><i class="fa fa-angle-left"></i>
 <span>上一篇</span>

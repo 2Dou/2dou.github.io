@@ -57,52 +57,52 @@
 </span><span class=lnt>44
 </span><span class=lnt>45
 </span><span class=lnt>46
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-golang data-lang=golang><span class=line><span class=cl><span class=kd>func</span> <span class=nf>reverseKGroup</span><span class=p>(</span><span class=nx>head</span> <span class=o>*</span><span class=nx>ListNode</span><span class=p>,</span> <span class=nx>k</span> <span class=kt>int</span><span class=p>)</span> <span class=o>*</span><span class=nx>ListNode</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=nx>head</span> <span class=o>==</span> <span class=kc>nil</span> <span class=o>||</span> <span class=nx>k</span> <span class=o>&lt;=</span> <span class=mi>1</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=nx>head</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=kd>var</span> <span class=nx>newHead</span><span class=p>,</span> <span class=nx>lastGroupTail</span> <span class=o>*</span><span class=nx>ListNode</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=nx>nextGroupHead</span> <span class=o>:=</span> <span class=nx>head</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=nx>nextGroupHead</span> <span class=o>!=</span> <span class=kc>nil</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=nx>right</span> <span class=o>:=</span> <span class=nx>nextGroupHead</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>        <span class=c1>// search the first node of reversed-group</span>
-</span></span><span class=line><span class=cl>        <span class=k>for</span> <span class=nx>n</span> <span class=o>:=</span> <span class=mi>0</span><span class=p>;</span> <span class=nx>n</span> <span class=p>&lt;</span> <span class=nx>k</span><span class=o>-</span><span class=mi>1</span> <span class=o>&amp;&amp;</span> <span class=nx>right</span> <span class=o>!=</span> <span class=kc>nil</span><span class=p>;</span> <span class=nx>n</span><span class=o>++</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>            <span class=nx>right</span> <span class=p>=</span> <span class=nx>right</span><span class=p>.</span><span class=nx>Next</span>
-</span></span><span class=line><span class=cl>        <span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=nx>right</span> <span class=o>==</span> <span class=kc>nil</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>            <span class=c1>// no more group, so break</span>
-</span></span><span class=line><span class=cl>            <span class=k>break</span>
-</span></span><span class=line><span class=cl>        <span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=nx>newHead</span> <span class=o>==</span> <span class=kc>nil</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>            <span class=c1>// first group, set newHead</span>
-</span></span><span class=line><span class=cl>            <span class=nx>newHead</span> <span class=p>=</span> <span class=nx>right</span>
-</span></span><span class=line><span class=cl>        <span class=p>}</span> <span class=k>else</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>            <span class=c1>// else, link last group and this group</span>
-</span></span><span class=line><span class=cl>            <span class=nx>lastGroupTail</span><span class=p>.</span><span class=nx>Next</span> <span class=p>=</span> <span class=nx>right</span>
-</span></span><span class=line><span class=cl>        <span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>        <span class=c1>// saving infomation to search next group</span>
-</span></span><span class=line><span class=cl>        <span class=nx>lastGroupTail</span><span class=p>,</span> <span class=nx>nextGroupHead</span> <span class=p>=</span> <span class=nx>nextGroupHead</span><span class=p>,</span> <span class=nx>right</span><span class=p>.</span><span class=nx>Next</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>        <span class=c1>// reversing this group</span>
-</span></span><span class=line><span class=cl>        <span class=nx>left</span><span class=p>,</span> <span class=nx>right</span> <span class=o>:=</span> <span class=nx>lastGroupTail</span><span class=p>,</span> <span class=nx>nextGroupHead</span>
-</span></span><span class=line><span class=cl>        <span class=k>for</span> <span class=nx>left</span> <span class=o>!=</span> <span class=nx>nextGroupHead</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>            <span class=nx>left</span><span class=p>,</span> <span class=nx>left</span><span class=p>.</span><span class=nx>Next</span><span class=p>,</span> <span class=nx>right</span> <span class=p>=</span> <span class=nx>left</span><span class=p>.</span><span class=nx>Next</span><span class=p>,</span> <span class=nx>right</span><span class=p>,</span> <span class=nx>left</span>
-</span></span><span class=line><span class=cl>        <span class=p>}</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=nx>newHead</span> <span class=o>==</span> <span class=kc>nil</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=nx>head</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=nx>newHead</span>
-</span></span><span class=line><span class=cl><span class=p>}</span></span></span></code></pre></td></tr></table></div></div></section><footer class=article-footer><section class=article-tags><a href=/tags/leetcode/>LeetCode</a>
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-golang data-lang=golang><span class=line><span class=cl><span class=kd>func</span><span class=w> </span><span class=nf>reverseKGroup</span><span class=p>(</span><span class=nx>head</span><span class=w> </span><span class=o>*</span><span class=nx>ListNode</span><span class=p>,</span><span class=w> </span><span class=nx>k</span><span class=w> </span><span class=kt>int</span><span class=p>)</span><span class=w> </span><span class=o>*</span><span class=nx>ListNode</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>if</span><span class=w> </span><span class=nx>head</span><span class=w> </span><span class=o>==</span><span class=w> </span><span class=kc>nil</span><span class=w> </span><span class=o>||</span><span class=w> </span><span class=nx>k</span><span class=w> </span><span class=o>&lt;=</span><span class=w> </span><span class=mi>1</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=k>return</span><span class=w> </span><span class=nx>head</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=kd>var</span><span class=w> </span><span class=nx>newHead</span><span class=p>,</span><span class=w> </span><span class=nx>lastGroupTail</span><span class=w> </span><span class=o>*</span><span class=nx>ListNode</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nx>nextGroupHead</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=nx>head</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>for</span><span class=w> </span><span class=nx>nextGroupHead</span><span class=w> </span><span class=o>!=</span><span class=w> </span><span class=kc>nil</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nx>right</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=nx>nextGroupHead</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=c1>// search the first node of reversed-group</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=k>for</span><span class=w> </span><span class=nx>n</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=mi>0</span><span class=p>;</span><span class=w> </span><span class=nx>n</span><span class=w> </span><span class=p>&lt;</span><span class=w> </span><span class=nx>k</span><span class=o>-</span><span class=mi>1</span><span class=w> </span><span class=o>&amp;&amp;</span><span class=w> </span><span class=nx>right</span><span class=w> </span><span class=o>!=</span><span class=w> </span><span class=kc>nil</span><span class=p>;</span><span class=w> </span><span class=nx>n</span><span class=o>++</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=nx>right</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nx>right</span><span class=p>.</span><span class=nx>Next</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=k>if</span><span class=w> </span><span class=nx>right</span><span class=w> </span><span class=o>==</span><span class=w> </span><span class=kc>nil</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=c1>// no more group, so break</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=k>break</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=k>if</span><span class=w> </span><span class=nx>newHead</span><span class=w> </span><span class=o>==</span><span class=w> </span><span class=kc>nil</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=c1>// first group, set newHead</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=nx>newHead</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nx>right</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=p>}</span><span class=w> </span><span class=k>else</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=c1>// else, link last group and this group</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=nx>lastGroupTail</span><span class=p>.</span><span class=nx>Next</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nx>right</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=c1>// saving infomation to search next group</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nx>lastGroupTail</span><span class=p>,</span><span class=w> </span><span class=nx>nextGroupHead</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nx>nextGroupHead</span><span class=p>,</span><span class=w> </span><span class=nx>right</span><span class=p>.</span><span class=nx>Next</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=c1>// reversing this group</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nx>left</span><span class=p>,</span><span class=w> </span><span class=nx>right</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=nx>lastGroupTail</span><span class=p>,</span><span class=w> </span><span class=nx>nextGroupHead</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=k>for</span><span class=w> </span><span class=nx>left</span><span class=w> </span><span class=o>!=</span><span class=w> </span><span class=nx>nextGroupHead</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=nx>left</span><span class=p>,</span><span class=w> </span><span class=nx>left</span><span class=p>.</span><span class=nx>Next</span><span class=p>,</span><span class=w> </span><span class=nx>right</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nx>left</span><span class=p>.</span><span class=nx>Next</span><span class=p>,</span><span class=w> </span><span class=nx>right</span><span class=p>,</span><span class=w> </span><span class=nx>left</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>if</span><span class=w> </span><span class=nx>newHead</span><span class=w> </span><span class=o>==</span><span class=w> </span><span class=kc>nil</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=k>return</span><span class=w> </span><span class=nx>head</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>return</span><span class=w> </span><span class=nx>newHead</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=p>}</span></span></span></code></pre></td></tr></table></div></div></section><footer class=article-footer><section class=article-tags><a href=/tags/leetcode/>LeetCode</a>
 <a href=/tags/linked-list/>Linked List</a></section><div class=pre-next><a class="pre-next-btn bg" href=https://www.orztu.com/leetcode/023-merge-k-sorted-lists/ data-tooltip="LeetCode 23. Merge K Sorted Lists"><i class="fa fa-angle-left"></i>
 <span>上一篇</span>
 </a><a class="pre-next-btn bg" href=https://www.orztu.com/leetcode/029-divide-two-integers/ data-tooltip="LeetCode 29. Divide Two Integers"><i class="fa fa-angle-left"></i>

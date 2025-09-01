@@ -26,21 +26,21 @@
 </span><span class=lnt>13
 </span><span class=lnt>14
 </span><span class=lnt>15
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-golang data-lang=golang><span class=line><span class=cl><span class=kd>func</span> <span class=nf>reverse</span><span class=p>(</span><span class=nx>x</span> <span class=kt>int</span><span class=p>)</span> <span class=kt>int</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>    <span class=nx>r</span> <span class=o>:=</span> <span class=mi>0</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=nx>x</span> <span class=o>!=</span> <span class=mi>0</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=nx>r</span> <span class=o>*=</span> <span class=mi>10</span>
-</span></span><span class=line><span class=cl>        <span class=nx>r</span> <span class=o>+=</span> <span class=nx>x</span> <span class=o>%</span> <span class=mi>10</span>
-</span></span><span class=line><span class=cl>        <span class=nx>x</span> <span class=o>/=</span> <span class=mi>10</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=o>-</span><span class=nx>math</span><span class=p>.</span><span class=nx>MaxInt32</span> <span class=p>&lt;</span> <span class=nx>r</span> <span class=o>&amp;&amp;</span> <span class=nx>r</span> <span class=p>&lt;</span> <span class=nx>math</span><span class=p>.</span><span class=nx>MaxInt32</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=nx>r</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=mi>0</span>
-</span></span><span class=line><span class=cl><span class=p>}</span></span></span></code></pre></td></tr></table></div></div></section><footer class=article-footer><section class=article-tags><a href=/tags/leetcode/>LeetCode</a>
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-golang data-lang=golang><span class=line><span class=cl><span class=kd>func</span><span class=w> </span><span class=nf>reverse</span><span class=p>(</span><span class=nx>x</span><span class=w> </span><span class=kt>int</span><span class=p>)</span><span class=w> </span><span class=kt>int</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nx>r</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=mi>0</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>for</span><span class=w> </span><span class=nx>x</span><span class=w> </span><span class=o>!=</span><span class=w> </span><span class=mi>0</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nx>r</span><span class=w> </span><span class=o>*=</span><span class=w> </span><span class=mi>10</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nx>r</span><span class=w> </span><span class=o>+=</span><span class=w> </span><span class=nx>x</span><span class=w> </span><span class=o>%</span><span class=w> </span><span class=mi>10</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nx>x</span><span class=w> </span><span class=o>/=</span><span class=w> </span><span class=mi>10</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>if</span><span class=w> </span><span class=o>-</span><span class=nx>math</span><span class=p>.</span><span class=nx>MaxInt32</span><span class=w> </span><span class=p>&lt;</span><span class=w> </span><span class=nx>r</span><span class=w> </span><span class=o>&amp;&amp;</span><span class=w> </span><span class=nx>r</span><span class=w> </span><span class=p>&lt;</span><span class=w> </span><span class=nx>math</span><span class=p>.</span><span class=nx>MaxInt32</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=k>return</span><span class=w> </span><span class=nx>r</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>return</span><span class=w> </span><span class=mi>0</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=p>}</span></span></span></code></pre></td></tr></table></div></div></section><footer class=article-footer><section class=article-tags><a href=/tags/leetcode/>LeetCode</a>
 <a href=/tags/math/>Math</a></section><div class=pre-next><a class="pre-next-btn bg" href=https://www.orztu.com/leetcode/006-zigzag-conversion/ data-tooltip="LeetCode 6. ZigZag Conversion"><i class="fa fa-angle-left"></i>
 <span>上一篇</span>
 </a><a class="pre-next-btn bg" href=https://www.orztu.com/leetcode/008-string-to-integer-atoi/ data-tooltip="LeetCode 8. String to Integer (atoi)"><i class="fa fa-angle-left"></i>

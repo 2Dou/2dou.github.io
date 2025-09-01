@@ -65,60 +65,60 @@
 </span><span class=lnt>52
 </span><span class=lnt>53
 </span><span class=lnt>54
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-golang data-lang=golang><span class=line><span class=cl><span class=kd>func</span> <span class=nf>abs</span><span class=p>(</span><span class=nx>n</span> <span class=kt>int</span><span class=p>)</span> <span class=kt>int</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=nx>n</span> <span class=p>&lt;</span> <span class=mi>0</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=o>-</span><span class=nx>n</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span>
-</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=nx>n</span>
-</span></span><span class=line><span class=cl><span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl><span class=kd>func</span> <span class=nf>divide</span><span class=p>(</span><span class=nx>dividend</span> <span class=kt>int</span><span class=p>,</span> <span class=nx>divisor</span> <span class=kt>int</span><span class=p>)</span> <span class=kt>int</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=nx>divisor</span> <span class=o>==</span> <span class=mi>0</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=c1>// 被除数为0!?</span>
-</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=mi>0</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span> <span class=k>else</span> <span class=k>if</span> <span class=nx>divisor</span> <span class=o>==</span> <span class=mi>1</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=nx>dividend</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span> <span class=k>else</span> <span class=k>if</span> <span class=nx>divisor</span> <span class=o>==</span> <span class=o>-</span><span class=mi>1</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=c1>// 边界检查</span>
-</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=nx>dividend</span> <span class=o>==</span> <span class=nx>math</span><span class=p>.</span><span class=nx>MinInt32</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>            <span class=k>return</span> <span class=nx>math</span><span class=p>.</span><span class=nx>MaxInt32</span>
-</span></span><span class=line><span class=cl>        <span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=o>-</span><span class=nx>dividend</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=nx>r</span><span class=p>,</span> <span class=nx>n</span> <span class=o>:=</span> <span class=mi>0</span><span class=p>,</span> <span class=mi>1</span>
-</span></span><span class=line><span class=cl>    <span class=nx>a</span><span class=p>,</span> <span class=nx>b</span> <span class=o>:=</span> <span class=nf>abs</span><span class=p>(</span><span class=nx>dividend</span><span class=p>),</span> <span class=nf>abs</span><span class=p>(</span><span class=nx>divisor</span><span class=p>)</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=nx>a</span> <span class=p>&lt;</span> <span class=nx>b</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=mi>0</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=c1>// 指数逼近</span>
-</span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=nx>a</span> <span class=o>&gt;=</span> <span class=nx>b</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=nx>a</span> <span class=p>=</span> <span class=nx>a</span> <span class=o>-</span> <span class=nx>b</span> <span class=c1>// 减去n个b</span>
-</span></span><span class=line><span class=cl>        <span class=nx>r</span> <span class=o>+=</span> <span class=nx>n</span>    <span class=c1>// 结果加上n</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>        <span class=nx>b</span> <span class=p>=</span> <span class=nx>b</span> <span class=o>&lt;&lt;</span> <span class=mi>1</span> <span class=c1>// 移位替代乘法</span>
-</span></span><span class=line><span class=cl>        <span class=nx>n</span> <span class=p>=</span> <span class=nx>n</span> <span class=o>&lt;&lt;</span> <span class=mi>1</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=c1>// 判断结果是否为负数</span>
-</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=p>(</span><span class=nx>dividend</span> <span class=p>&gt;</span> <span class=mi>0</span> <span class=o>&amp;&amp;</span> <span class=nx>divisor</span> <span class=p>&lt;</span> <span class=mi>0</span><span class=p>)</span> <span class=o>||</span> <span class=p>(</span><span class=nx>dividend</span> <span class=p>&lt;</span> <span class=mi>0</span> <span class=o>&amp;&amp;</span> <span class=nx>divisor</span> <span class=p>&gt;</span> <span class=mi>0</span><span class=p>)</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=nx>r</span> <span class=p>=</span> <span class=o>-</span><span class=nx>r</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=c1>// 余数大于被除数，继续相除</span>
-</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=nx>a</span> <span class=o>&gt;=</span> <span class=nf>abs</span><span class=p>(</span><span class=nx>divisor</span><span class=p>)</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=nx>r</span> <span class=p>&lt;</span> <span class=mi>0</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>            <span class=k>return</span> <span class=nx>r</span> <span class=o>+</span> <span class=nf>divide</span><span class=p>(</span><span class=nx>a</span><span class=p>,</span> <span class=o>-</span><span class=nf>abs</span><span class=p>(</span><span class=nx>divisor</span><span class=p>))</span>
-</span></span><span class=line><span class=cl>        <span class=p>}</span> <span class=k>else</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>            <span class=k>return</span> <span class=nx>r</span> <span class=o>+</span> <span class=nf>divide</span><span class=p>(</span><span class=nx>a</span><span class=p>,</span> <span class=nf>abs</span><span class=p>(</span><span class=nx>divisor</span><span class=p>))</span>
-</span></span><span class=line><span class=cl>        <span class=p>}</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=nx>r</span>
-</span></span><span class=line><span class=cl><span class=p>}</span></span></span></code></pre></td></tr></table></div></div></section><footer class=article-footer><section class=article-tags><a href=/tags/leetcode/>LeetCode</a>
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-golang data-lang=golang><span class=line><span class=cl><span class=kd>func</span><span class=w> </span><span class=nf>abs</span><span class=p>(</span><span class=nx>n</span><span class=w> </span><span class=kt>int</span><span class=p>)</span><span class=w> </span><span class=kt>int</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>if</span><span class=w> </span><span class=nx>n</span><span class=w> </span><span class=p>&lt;</span><span class=w> </span><span class=mi>0</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=k>return</span><span class=w> </span><span class=o>-</span><span class=nx>n</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>return</span><span class=w> </span><span class=nx>n</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=kd>func</span><span class=w> </span><span class=nf>divide</span><span class=p>(</span><span class=nx>dividend</span><span class=w> </span><span class=kt>int</span><span class=p>,</span><span class=w> </span><span class=nx>divisor</span><span class=w> </span><span class=kt>int</span><span class=p>)</span><span class=w> </span><span class=kt>int</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>if</span><span class=w> </span><span class=nx>divisor</span><span class=w> </span><span class=o>==</span><span class=w> </span><span class=mi>0</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=c1>// 被除数为0!?</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=k>return</span><span class=w> </span><span class=mi>0</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=p>}</span><span class=w> </span><span class=k>else</span><span class=w> </span><span class=k>if</span><span class=w> </span><span class=nx>divisor</span><span class=w> </span><span class=o>==</span><span class=w> </span><span class=mi>1</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=k>return</span><span class=w> </span><span class=nx>dividend</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=p>}</span><span class=w> </span><span class=k>else</span><span class=w> </span><span class=k>if</span><span class=w> </span><span class=nx>divisor</span><span class=w> </span><span class=o>==</span><span class=w> </span><span class=o>-</span><span class=mi>1</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=c1>// 边界检查</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=k>if</span><span class=w> </span><span class=nx>dividend</span><span class=w> </span><span class=o>==</span><span class=w> </span><span class=nx>math</span><span class=p>.</span><span class=nx>MinInt32</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=k>return</span><span class=w> </span><span class=nx>math</span><span class=p>.</span><span class=nx>MaxInt32</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=k>return</span><span class=w> </span><span class=o>-</span><span class=nx>dividend</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nx>r</span><span class=p>,</span><span class=w> </span><span class=nx>n</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=mi>0</span><span class=p>,</span><span class=w> </span><span class=mi>1</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nx>a</span><span class=p>,</span><span class=w> </span><span class=nx>b</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=nf>abs</span><span class=p>(</span><span class=nx>dividend</span><span class=p>),</span><span class=w> </span><span class=nf>abs</span><span class=p>(</span><span class=nx>divisor</span><span class=p>)</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>if</span><span class=w> </span><span class=nx>a</span><span class=w> </span><span class=p>&lt;</span><span class=w> </span><span class=nx>b</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=k>return</span><span class=w> </span><span class=mi>0</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=c1>// 指数逼近</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>for</span><span class=w> </span><span class=nx>a</span><span class=w> </span><span class=o>&gt;=</span><span class=w> </span><span class=nx>b</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nx>a</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nx>a</span><span class=w> </span><span class=o>-</span><span class=w> </span><span class=nx>b</span><span class=w> </span><span class=c1>// 减去n个b</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nx>r</span><span class=w> </span><span class=o>+=</span><span class=w> </span><span class=nx>n</span><span class=w>    </span><span class=c1>// 结果加上n</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nx>b</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nx>b</span><span class=w> </span><span class=o>&lt;&lt;</span><span class=w> </span><span class=mi>1</span><span class=w> </span><span class=c1>// 移位替代乘法</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nx>n</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nx>n</span><span class=w> </span><span class=o>&lt;&lt;</span><span class=w> </span><span class=mi>1</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=c1>// 判断结果是否为负数</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>if</span><span class=w> </span><span class=p>(</span><span class=nx>dividend</span><span class=w> </span><span class=p>&gt;</span><span class=w> </span><span class=mi>0</span><span class=w> </span><span class=o>&amp;&amp;</span><span class=w> </span><span class=nx>divisor</span><span class=w> </span><span class=p>&lt;</span><span class=w> </span><span class=mi>0</span><span class=p>)</span><span class=w> </span><span class=o>||</span><span class=w> </span><span class=p>(</span><span class=nx>dividend</span><span class=w> </span><span class=p>&lt;</span><span class=w> </span><span class=mi>0</span><span class=w> </span><span class=o>&amp;&amp;</span><span class=w> </span><span class=nx>divisor</span><span class=w> </span><span class=p>&gt;</span><span class=w> </span><span class=mi>0</span><span class=p>)</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nx>r</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=o>-</span><span class=nx>r</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=c1>// 余数大于被除数，继续相除</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>if</span><span class=w> </span><span class=nx>a</span><span class=w> </span><span class=o>&gt;=</span><span class=w> </span><span class=nf>abs</span><span class=p>(</span><span class=nx>divisor</span><span class=p>)</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=k>if</span><span class=w> </span><span class=nx>r</span><span class=w> </span><span class=p>&lt;</span><span class=w> </span><span class=mi>0</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=k>return</span><span class=w> </span><span class=nx>r</span><span class=w> </span><span class=o>+</span><span class=w> </span><span class=nf>divide</span><span class=p>(</span><span class=nx>a</span><span class=p>,</span><span class=w> </span><span class=o>-</span><span class=nf>abs</span><span class=p>(</span><span class=nx>divisor</span><span class=p>))</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=p>}</span><span class=w> </span><span class=k>else</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=k>return</span><span class=w> </span><span class=nx>r</span><span class=w> </span><span class=o>+</span><span class=w> </span><span class=nf>divide</span><span class=p>(</span><span class=nx>a</span><span class=p>,</span><span class=w> </span><span class=nf>abs</span><span class=p>(</span><span class=nx>divisor</span><span class=p>))</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>return</span><span class=w> </span><span class=nx>r</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=p>}</span></span></span></code></pre></td></tr></table></div></div></section><footer class=article-footer><section class=article-tags><a href=/tags/leetcode/>LeetCode</a>
 <a href=/tags/math/>Math</a>
 <a href=/tags/binary-search/>Binary Search</a></section><div class=pre-next><a class="pre-next-btn bg" href=https://www.orztu.com/leetcode/025-reverse-nodes-in-k-group/ data-tooltip="LeetCode 25. Reverse Nodes in k-Group"><i class="fa fa-angle-left"></i>
 <span>上一篇</span>

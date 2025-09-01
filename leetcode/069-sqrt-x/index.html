@@ -40,23 +40,23 @@
 </span><span class=lnt>15
 </span><span class=lnt>16
 </span><span class=lnt>17
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-golang data-lang=golang><span class=line><span class=cl><span class=kd>func</span> <span class=nf>mySqrt</span><span class=p>(</span><span class=nx>x</span> <span class=kt>int</span><span class=p>)</span> <span class=kt>int</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=nx>x</span> <span class=o>==</span> <span class=mi>0</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=mi>0</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span>
-</span></span><span class=line><span class=cl>    <span class=nx>left</span><span class=p>,</span> <span class=nx>right</span> <span class=o>:=</span> <span class=mi>1</span><span class=p>,</span> <span class=nx>x</span><span class=o>/</span><span class=mi>2</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=nx>left</span> <span class=p>&lt;</span> <span class=nx>right</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=nx>m</span> <span class=o>:=</span> <span class=nx>right</span> <span class=o>-</span> <span class=p>(</span><span class=nx>right</span><span class=o>-</span><span class=nx>left</span><span class=p>)</span><span class=o>/</span><span class=mi>2</span>
-</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=nx>m</span><span class=o>*</span><span class=nx>m</span> <span class=p>&gt;</span> <span class=nx>x</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>            <span class=nx>right</span> <span class=p>=</span> <span class=nx>m</span> <span class=o>-</span> <span class=mi>1</span>
-</span></span><span class=line><span class=cl>        <span class=p>}</span> <span class=k>else</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>            <span class=nx>left</span> <span class=p>=</span> <span class=nx>m</span>
-</span></span><span class=line><span class=cl>        <span class=p>}</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=nx>left</span>
-</span></span><span class=line><span class=cl><span class=p>}</span></span></span></code></pre></td></tr></table></div></div><h2 id=similar-problem>Similar Problem</h2><ul><li><a class=link href=/leetcode/050-pow/>50. Pow(x, n)</a></li></ul></section><footer class=article-footer><section class=article-tags><a href=/tags/leetcode/>LeetCode</a>
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-golang data-lang=golang><span class=line><span class=cl><span class=kd>func</span><span class=w> </span><span class=nf>mySqrt</span><span class=p>(</span><span class=nx>x</span><span class=w> </span><span class=kt>int</span><span class=p>)</span><span class=w> </span><span class=kt>int</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>if</span><span class=w> </span><span class=nx>x</span><span class=w> </span><span class=o>==</span><span class=w> </span><span class=mi>0</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=k>return</span><span class=w> </span><span class=mi>0</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nx>left</span><span class=p>,</span><span class=w> </span><span class=nx>right</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=mi>1</span><span class=p>,</span><span class=w> </span><span class=nx>x</span><span class=o>/</span><span class=mi>2</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>for</span><span class=w> </span><span class=nx>left</span><span class=w> </span><span class=p>&lt;</span><span class=w> </span><span class=nx>right</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nx>m</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=nx>right</span><span class=w> </span><span class=o>-</span><span class=w> </span><span class=p>(</span><span class=nx>right</span><span class=o>-</span><span class=nx>left</span><span class=p>)</span><span class=o>/</span><span class=mi>2</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=k>if</span><span class=w> </span><span class=nx>m</span><span class=o>*</span><span class=nx>m</span><span class=w> </span><span class=p>&gt;</span><span class=w> </span><span class=nx>x</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=nx>right</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nx>m</span><span class=w> </span><span class=o>-</span><span class=w> </span><span class=mi>1</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=p>}</span><span class=w> </span><span class=k>else</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=nx>left</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nx>m</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>return</span><span class=w> </span><span class=nx>left</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=p>}</span></span></span></code></pre></td></tr></table></div></div><h2 id=similar-problem>Similar Problem</h2><ul><li><a class=link href=/leetcode/050-pow/>50. Pow(x, n)</a></li></ul></section><footer class=article-footer><section class=article-tags><a href=/tags/leetcode/>LeetCode</a>
 <a href=/tags/math/>Math</a>
 <a href=/tags/binary-search/>Binary Search</a></section><div class=pre-next><a class="pre-next-btn bg" href=https://www.orztu.com/leetcode/068-text-justification/ data-tooltip="LeetCode 68. Text Justification"><i class="fa fa-angle-left"></i>
 <span>上一篇</span>

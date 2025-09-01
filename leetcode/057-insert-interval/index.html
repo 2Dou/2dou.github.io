@@ -59,44 +59,44 @@
 </span><span class=lnt>36
 </span><span class=lnt>37
 </span><span class=lnt>38
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-golang data-lang=golang><span class=line><span class=cl><span class=kd>func</span> <span class=nf>insert</span><span class=p>(</span><span class=nx>intervals</span> <span class=p>[]</span><span class=nx>Interval</span><span class=p>,</span> <span class=nx>newInterval</span> <span class=nx>Interval</span><span class=p>)</span> <span class=p>[]</span><span class=nx>Interval</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>    <span class=nx>length</span> <span class=o>:=</span> <span class=nb>len</span><span class=p>(</span><span class=nx>intervals</span><span class=p>)</span>
-</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=nx>length</span> <span class=o>==</span> <span class=mi>0</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=p>[]</span><span class=nx>Interval</span><span class=p>{</span><span class=nx>newInterval</span><span class=p>}</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=c1>// 分割比 newInterval 小的区间</span>
-</span></span><span class=line><span class=cl>    <span class=nx>lEnd</span> <span class=o>:=</span> <span class=mi>0</span>
-</span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=nx>lEnd</span> <span class=p>&lt;</span> <span class=nx>length</span> <span class=o>&amp;&amp;</span> <span class=nx>newInterval</span><span class=p>.</span><span class=nx>Start</span> <span class=p>&gt;</span> <span class=nx>intervals</span><span class=p>[</span><span class=nx>lEnd</span><span class=p>].</span><span class=nx>End</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=nx>lEnd</span><span class=o>++</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=c1>// 边界判断</span>
-</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=nx>lEnd</span> <span class=o>==</span> <span class=nx>length</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=nb>append</span><span class=p>(</span><span class=nx>intervals</span><span class=p>,</span> <span class=nx>newInterval</span><span class=p>)</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=nx>intervals</span><span class=p>[</span><span class=nx>lEnd</span><span class=p>].</span><span class=nx>Start</span> <span class=p>&lt;</span> <span class=nx>newInterval</span><span class=p>.</span><span class=nx>Start</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=c1>// 将当前区间与 newInterval 合并</span>
-</span></span><span class=line><span class=cl>        <span class=nx>newInterval</span><span class=p>.</span><span class=nx>Start</span> <span class=p>=</span> <span class=nx>intervals</span><span class=p>[</span><span class=nx>lEnd</span><span class=p>].</span><span class=nx>Start</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=c1>// 分割比 newInterval 大的区间</span>
-</span></span><span class=line><span class=cl>    <span class=nx>rStart</span> <span class=o>:=</span> <span class=nx>lEnd</span>
-</span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=nx>rStart</span> <span class=p>&lt;</span> <span class=nx>length</span> <span class=o>&amp;&amp;</span> <span class=nx>newInterval</span><span class=p>.</span><span class=nx>End</span> <span class=o>&gt;=</span> <span class=nx>intervals</span><span class=p>[</span><span class=nx>rStart</span><span class=p>].</span><span class=nx>Start</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=nx>intervals</span><span class=p>[</span><span class=nx>rStart</span><span class=p>].</span><span class=nx>End</span> <span class=p>&gt;</span> <span class=nx>newInterval</span><span class=p>.</span><span class=nx>End</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>            <span class=c1>// 将当前区间与 newInterval 合并</span>
-</span></span><span class=line><span class=cl>            <span class=nx>newInterval</span><span class=p>.</span><span class=nx>End</span> <span class=p>=</span> <span class=nx>intervals</span><span class=p>[</span><span class=nx>rStart</span><span class=p>].</span><span class=nx>End</span>
-</span></span><span class=line><span class=cl>        <span class=p>}</span>
-</span></span><span class=line><span class=cl>        <span class=nx>rStart</span><span class=o>++</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=c1>// append 时用 newInterval 建立新的 Slice 与 intervals[rStart:] 合并</span>
-</span></span><span class=line><span class=cl>    <span class=c1>// 再与 intervals[:lEnd] 合并</span>
-</span></span><span class=line><span class=cl>    <span class=c1>// 之前直接将 newInterval append 到 intervals[:lEnd] 后面，再与 intervals[rStart:] 合并</span>
-</span></span><span class=line><span class=cl>    <span class=c1>// 会导致 intervals[rStart:] 的内存区域被覆盖</span>
-</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=nb>append</span><span class=p>(</span><span class=nx>intervals</span><span class=p>[:</span><span class=nx>lEnd</span><span class=p>],</span> <span class=nb>append</span><span class=p>([]</span><span class=nx>Interval</span><span class=p>{</span><span class=nx>newInterval</span><span class=p>},</span> <span class=nx>intervals</span><span class=p>[</span><span class=nx>rStart</span><span class=p>:]</span><span class=o>...</span><span class=p>)</span><span class=o>...</span><span class=p>)</span>
-</span></span><span class=line><span class=cl><span class=p>}</span></span></span></code></pre></td></tr></table></div></div><h2 id=similar-problem>Similar Problem</h2><ul><li><a class=link href=/leetcode/056-merge-intervals/>56. Merge Intervals</a></li></ul></section><footer class=article-footer><section class=article-tags><a href=/tags/leetcode/>LeetCode</a>
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-golang data-lang=golang><span class=line><span class=cl><span class=kd>func</span><span class=w> </span><span class=nf>insert</span><span class=p>(</span><span class=nx>intervals</span><span class=w> </span><span class=p>[]</span><span class=nx>Interval</span><span class=p>,</span><span class=w> </span><span class=nx>newInterval</span><span class=w> </span><span class=nx>Interval</span><span class=p>)</span><span class=w> </span><span class=p>[]</span><span class=nx>Interval</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nx>length</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=nb>len</span><span class=p>(</span><span class=nx>intervals</span><span class=p>)</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>if</span><span class=w> </span><span class=nx>length</span><span class=w> </span><span class=o>==</span><span class=w> </span><span class=mi>0</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=k>return</span><span class=w> </span><span class=p>[]</span><span class=nx>Interval</span><span class=p>{</span><span class=nx>newInterval</span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=c1>// 分割比 newInterval 小的区间</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nx>lEnd</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=mi>0</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>for</span><span class=w> </span><span class=nx>lEnd</span><span class=w> </span><span class=p>&lt;</span><span class=w> </span><span class=nx>length</span><span class=w> </span><span class=o>&amp;&amp;</span><span class=w> </span><span class=nx>newInterval</span><span class=p>.</span><span class=nx>Start</span><span class=w> </span><span class=p>&gt;</span><span class=w> </span><span class=nx>intervals</span><span class=p>[</span><span class=nx>lEnd</span><span class=p>].</span><span class=nx>End</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nx>lEnd</span><span class=o>++</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=c1>// 边界判断</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>if</span><span class=w> </span><span class=nx>lEnd</span><span class=w> </span><span class=o>==</span><span class=w> </span><span class=nx>length</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=k>return</span><span class=w> </span><span class=nb>append</span><span class=p>(</span><span class=nx>intervals</span><span class=p>,</span><span class=w> </span><span class=nx>newInterval</span><span class=p>)</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>if</span><span class=w> </span><span class=nx>intervals</span><span class=p>[</span><span class=nx>lEnd</span><span class=p>].</span><span class=nx>Start</span><span class=w> </span><span class=p>&lt;</span><span class=w> </span><span class=nx>newInterval</span><span class=p>.</span><span class=nx>Start</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=c1>// 将当前区间与 newInterval 合并</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nx>newInterval</span><span class=p>.</span><span class=nx>Start</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nx>intervals</span><span class=p>[</span><span class=nx>lEnd</span><span class=p>].</span><span class=nx>Start</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=c1>// 分割比 newInterval 大的区间</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nx>rStart</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=nx>lEnd</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>for</span><span class=w> </span><span class=nx>rStart</span><span class=w> </span><span class=p>&lt;</span><span class=w> </span><span class=nx>length</span><span class=w> </span><span class=o>&amp;&amp;</span><span class=w> </span><span class=nx>newInterval</span><span class=p>.</span><span class=nx>End</span><span class=w> </span><span class=o>&gt;=</span><span class=w> </span><span class=nx>intervals</span><span class=p>[</span><span class=nx>rStart</span><span class=p>].</span><span class=nx>Start</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=k>if</span><span class=w> </span><span class=nx>intervals</span><span class=p>[</span><span class=nx>rStart</span><span class=p>].</span><span class=nx>End</span><span class=w> </span><span class=p>&gt;</span><span class=w> </span><span class=nx>newInterval</span><span class=p>.</span><span class=nx>End</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=c1>// 将当前区间与 newInterval 合并</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=nx>newInterval</span><span class=p>.</span><span class=nx>End</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nx>intervals</span><span class=p>[</span><span class=nx>rStart</span><span class=p>].</span><span class=nx>End</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nx>rStart</span><span class=o>++</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=c1>// append 时用 newInterval 建立新的 Slice 与 intervals[rStart:] 合并</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=c1>// 再与 intervals[:lEnd] 合并</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=c1>// 之前直接将 newInterval append 到 intervals[:lEnd] 后面，再与 intervals[rStart:] 合并</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=c1>// 会导致 intervals[rStart:] 的内存区域被覆盖</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>return</span><span class=w> </span><span class=nb>append</span><span class=p>(</span><span class=nx>intervals</span><span class=p>[:</span><span class=nx>lEnd</span><span class=p>],</span><span class=w> </span><span class=nb>append</span><span class=p>([]</span><span class=nx>Interval</span><span class=p>{</span><span class=nx>newInterval</span><span class=p>},</span><span class=w> </span><span class=nx>intervals</span><span class=p>[</span><span class=nx>rStart</span><span class=p>:]</span><span class=o>...</span><span class=p>)</span><span class=o>...</span><span class=p>)</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=p>}</span></span></span></code></pre></td></tr></table></div></div><h2 id=similar-problem>Similar Problem</h2><ul><li><a class=link href=/leetcode/056-merge-intervals/>56. Merge Intervals</a></li></ul></section><footer class=article-footer><section class=article-tags><a href=/tags/leetcode/>LeetCode</a>
 <a href=/tags/array/>Array</a>
 <a href=/tags/sort/>Sort</a></section><div class=pre-next><a class="pre-next-btn bg" href=https://www.orztu.com/leetcode/056-merge-intervals/ data-tooltip="LeetCode 56. Merge Intervals"><i class="fa fa-angle-left"></i>
 <span>上一篇</span>

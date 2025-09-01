@@ -64,47 +64,47 @@
 </span></span></span><span class=line><span class=cl><span class=cm> *     Val int
 </span></span></span><span class=line><span class=cl><span class=cm> *     Next *ListNode
 </span></span></span><span class=line><span class=cl><span class=cm> * }
-</span></span></span><span class=line><span class=cl><span class=cm> */</span>
-</span></span><span class=line><span class=cl><span class=kd>func</span> <span class=nf>mergeTwoLists</span><span class=p>(</span><span class=nx>l1</span> <span class=o>*</span><span class=nx>ListNode</span><span class=p>,</span> <span class=nx>l2</span> <span class=o>*</span><span class=nx>ListNode</span><span class=p>)</span> <span class=o>*</span><span class=nx>ListNode</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=nx>l1</span> <span class=o>==</span> <span class=kc>nil</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=nx>l2</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span> <span class=k>else</span> <span class=k>if</span> <span class=nx>l2</span> <span class=o>==</span> <span class=kc>nil</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=nx>l1</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=kd>var</span> <span class=nx>head</span><span class=p>,</span> <span class=nx>tail</span> <span class=o>*</span><span class=nx>ListNode</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=c1>// 将首次判断放在循环外，可以减少判断次数，提高效率</span>
-</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=nx>l1</span><span class=p>.</span><span class=nx>Val</span> <span class=p>&lt;</span> <span class=nx>l2</span><span class=p>.</span><span class=nx>Val</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=nx>head</span> <span class=p>=</span> <span class=nx>l1</span>
-</span></span><span class=line><span class=cl>        <span class=nx>l1</span> <span class=p>=</span> <span class=nx>l1</span><span class=p>.</span><span class=nx>Next</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span> <span class=k>else</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=nx>head</span> <span class=p>=</span> <span class=nx>l2</span>
-</span></span><span class=line><span class=cl>        <span class=nx>l2</span> <span class=p>=</span> <span class=nx>l2</span><span class=p>.</span><span class=nx>Next</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=nx>tail</span> <span class=p>=</span> <span class=nx>head</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=nx>l1</span> <span class=o>==</span> <span class=kc>nil</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>            <span class=nx>tail</span><span class=p>.</span><span class=nx>Next</span> <span class=p>=</span> <span class=nx>l2</span>
-</span></span><span class=line><span class=cl>            <span class=k>break</span>
-</span></span><span class=line><span class=cl>        <span class=p>}</span> <span class=k>else</span> <span class=k>if</span> <span class=nx>l2</span> <span class=o>==</span> <span class=kc>nil</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>            <span class=nx>tail</span><span class=p>.</span><span class=nx>Next</span> <span class=p>=</span> <span class=nx>l1</span>
-</span></span><span class=line><span class=cl>            <span class=k>break</span>
-</span></span><span class=line><span class=cl>        <span class=p>}</span> <span class=k>else</span> <span class=k>if</span> <span class=nx>l1</span><span class=p>.</span><span class=nx>Val</span> <span class=p>&lt;</span> <span class=nx>l2</span><span class=p>.</span><span class=nx>Val</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>            <span class=nx>tail</span><span class=p>.</span><span class=nx>Next</span> <span class=p>=</span> <span class=nx>l1</span>
-</span></span><span class=line><span class=cl>            <span class=nx>tail</span> <span class=p>=</span> <span class=nx>l1</span>
-</span></span><span class=line><span class=cl>            <span class=nx>l1</span> <span class=p>=</span> <span class=nx>l1</span><span class=p>.</span><span class=nx>Next</span>
-</span></span><span class=line><span class=cl>        <span class=p>}</span> <span class=k>else</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>            <span class=nx>tail</span><span class=p>.</span><span class=nx>Next</span> <span class=p>=</span> <span class=nx>l2</span>
-</span></span><span class=line><span class=cl>            <span class=nx>tail</span> <span class=p>=</span> <span class=nx>l2</span>
-</span></span><span class=line><span class=cl>            <span class=nx>l2</span> <span class=p>=</span> <span class=nx>l2</span><span class=p>.</span><span class=nx>Next</span>
-</span></span><span class=line><span class=cl>        <span class=p>}</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=nx>head</span>
-</span></span><span class=line><span class=cl><span class=p>}</span></span></span></code></pre></td></tr></table></div></div><h2 id=similar-problem>Similar Problem</h2><ul><li><a class=link href=/leetcode/088-merge-sorted-array/>88. Merge Sorted Array</a></li></ul></section><footer class=article-footer><section class=article-tags><a href=/tags/leetcode/>LeetCode</a>
+</span></span></span><span class=line><span class=cl><span class=cm> */</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=kd>func</span><span class=w> </span><span class=nf>mergeTwoLists</span><span class=p>(</span><span class=nx>l1</span><span class=w> </span><span class=o>*</span><span class=nx>ListNode</span><span class=p>,</span><span class=w> </span><span class=nx>l2</span><span class=w> </span><span class=o>*</span><span class=nx>ListNode</span><span class=p>)</span><span class=w> </span><span class=o>*</span><span class=nx>ListNode</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>if</span><span class=w> </span><span class=nx>l1</span><span class=w> </span><span class=o>==</span><span class=w> </span><span class=kc>nil</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=k>return</span><span class=w> </span><span class=nx>l2</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=p>}</span><span class=w> </span><span class=k>else</span><span class=w> </span><span class=k>if</span><span class=w> </span><span class=nx>l2</span><span class=w> </span><span class=o>==</span><span class=w> </span><span class=kc>nil</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=k>return</span><span class=w> </span><span class=nx>l1</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=kd>var</span><span class=w> </span><span class=nx>head</span><span class=p>,</span><span class=w> </span><span class=nx>tail</span><span class=w> </span><span class=o>*</span><span class=nx>ListNode</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=c1>// 将首次判断放在循环外，可以减少判断次数，提高效率</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>if</span><span class=w> </span><span class=nx>l1</span><span class=p>.</span><span class=nx>Val</span><span class=w> </span><span class=p>&lt;</span><span class=w> </span><span class=nx>l2</span><span class=p>.</span><span class=nx>Val</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nx>head</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nx>l1</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nx>l1</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nx>l1</span><span class=p>.</span><span class=nx>Next</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=p>}</span><span class=w> </span><span class=k>else</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nx>head</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nx>l2</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nx>l2</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nx>l2</span><span class=p>.</span><span class=nx>Next</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nx>tail</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nx>head</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>for</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=k>if</span><span class=w> </span><span class=nx>l1</span><span class=w> </span><span class=o>==</span><span class=w> </span><span class=kc>nil</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=nx>tail</span><span class=p>.</span><span class=nx>Next</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nx>l2</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=k>break</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=p>}</span><span class=w> </span><span class=k>else</span><span class=w> </span><span class=k>if</span><span class=w> </span><span class=nx>l2</span><span class=w> </span><span class=o>==</span><span class=w> </span><span class=kc>nil</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=nx>tail</span><span class=p>.</span><span class=nx>Next</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nx>l1</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=k>break</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=p>}</span><span class=w> </span><span class=k>else</span><span class=w> </span><span class=k>if</span><span class=w> </span><span class=nx>l1</span><span class=p>.</span><span class=nx>Val</span><span class=w> </span><span class=p>&lt;</span><span class=w> </span><span class=nx>l2</span><span class=p>.</span><span class=nx>Val</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=nx>tail</span><span class=p>.</span><span class=nx>Next</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nx>l1</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=nx>tail</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nx>l1</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=nx>l1</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nx>l1</span><span class=p>.</span><span class=nx>Next</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=p>}</span><span class=w> </span><span class=k>else</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=nx>tail</span><span class=p>.</span><span class=nx>Next</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nx>l2</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=nx>tail</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nx>l2</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=nx>l2</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nx>l2</span><span class=p>.</span><span class=nx>Next</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>return</span><span class=w> </span><span class=nx>head</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=p>}</span></span></span></code></pre></td></tr></table></div></div><h2 id=similar-problem>Similar Problem</h2><ul><li><a class=link href=/leetcode/088-merge-sorted-array/>88. Merge Sorted Array</a></li></ul></section><footer class=article-footer><section class=article-tags><a href=/tags/leetcode/>LeetCode</a>
 <a href=/tags/linked-list/>Linked List</a></section><div class=pre-next><a class="pre-next-btn bg" href=https://www.orztu.com/leetcode/020-valid-parentheses/ data-tooltip="LeetCode 20. Valid Parentheses"><i class="fa fa-angle-left"></i>
 <span>上一篇</span>
 </a><a class="pre-next-btn bg" href=https://www.orztu.com/leetcode/022-generate-parentheses/ data-tooltip="LeetCode 22. Generate Parentheses"><i class="fa fa-angle-left"></i>

@@ -36,31 +36,31 @@
 </span><span class=lnt>23
 </span><span class=lnt>24
 </span><span class=lnt>25
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-golang data-lang=golang><span class=line><span class=cl><span class=kd>func</span> <span class=nf>lengthOfLongestSubstring</span><span class=p>(</span><span class=nx>s</span> <span class=kt>string</span><span class=p>)</span> <span class=kt>int</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>    <span class=nx>l</span> <span class=o>:=</span> <span class=nb>len</span><span class=p>(</span><span class=nx>s</span><span class=p>)</span>
-</span></span><span class=line><span class=cl>    <span class=nx>maxLen</span> <span class=o>:=</span> <span class=mi>0</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=nx>p1</span> <span class=o>:=</span> <span class=mi>0</span><span class=p>;</span> <span class=nx>p1</span> <span class=p>&lt;</span> <span class=nx>l</span><span class=p>;</span> <span class=nx>p1</span><span class=o>++</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=nx>m</span> <span class=o>:=</span> <span class=kd>map</span><span class=p>[</span><span class=kt>uint8</span><span class=p>]</span><span class=kt>bool</span><span class=p>{}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>        <span class=k>for</span> <span class=nx>p2</span> <span class=o>:=</span> <span class=nx>p1</span><span class=p>;</span> <span class=nx>p2</span> <span class=p>&lt;</span> <span class=nx>l</span><span class=p>;</span> <span class=nx>p2</span><span class=o>++</span><span class=p>{</span>
-</span></span><span class=line><span class=cl>            <span class=nx>c</span> <span class=o>:=</span> <span class=nx>s</span><span class=p>[</span><span class=nx>p2</span><span class=p>]</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>            <span class=nx>_</span><span class=p>,</span> <span class=nx>ok</span> <span class=o>:=</span> <span class=nx>m</span><span class=p>[</span><span class=nx>c</span><span class=p>]</span>
-</span></span><span class=line><span class=cl>            <span class=k>if</span> <span class=nx>ok</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>                <span class=k>break</span>
-</span></span><span class=line><span class=cl>            <span class=p>}</span> <span class=k>else</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>                <span class=nx>m</span><span class=p>[</span><span class=nx>c</span><span class=p>]</span> <span class=p>=</span> <span class=kc>true</span>
-</span></span><span class=line><span class=cl>            <span class=p>}</span>
-</span></span><span class=line><span class=cl>        <span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=nb>len</span><span class=p>(</span><span class=nx>m</span><span class=p>)</span> <span class=p>&gt;</span> <span class=nx>maxLen</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>            <span class=nx>maxLen</span> <span class=p>=</span> <span class=nb>len</span><span class=p>(</span><span class=nx>m</span><span class=p>)</span>
-</span></span><span class=line><span class=cl>        <span class=p>}</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=nx>maxLen</span>
-</span></span><span class=line><span class=cl><span class=p>}</span></span></span></code></pre></td></tr></table></div></div><h2 id=similar-problem>Similar Problem</h2><p><a class=link href=/leetcode/005-longest-palindromic-substring/>5. Longest Palindromic Substring</a></p></section><footer class=article-footer><section class=article-tags><a href=/tags/leetcode/>LeetCode</a>
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-golang data-lang=golang><span class=line><span class=cl><span class=kd>func</span><span class=w> </span><span class=nf>lengthOfLongestSubstring</span><span class=p>(</span><span class=nx>s</span><span class=w> </span><span class=kt>string</span><span class=p>)</span><span class=w> </span><span class=kt>int</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nx>l</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=nb>len</span><span class=p>(</span><span class=nx>s</span><span class=p>)</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nx>maxLen</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=mi>0</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>for</span><span class=w> </span><span class=nx>p1</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=mi>0</span><span class=p>;</span><span class=w> </span><span class=nx>p1</span><span class=w> </span><span class=p>&lt;</span><span class=w> </span><span class=nx>l</span><span class=p>;</span><span class=w> </span><span class=nx>p1</span><span class=o>++</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nx>m</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=kd>map</span><span class=p>[</span><span class=kt>uint8</span><span class=p>]</span><span class=kt>bool</span><span class=p>{}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=k>for</span><span class=w> </span><span class=nx>p2</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=nx>p1</span><span class=p>;</span><span class=w> </span><span class=nx>p2</span><span class=w> </span><span class=p>&lt;</span><span class=w> </span><span class=nx>l</span><span class=p>;</span><span class=w> </span><span class=nx>p2</span><span class=o>++</span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=nx>c</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=nx>s</span><span class=p>[</span><span class=nx>p2</span><span class=p>]</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=nx>_</span><span class=p>,</span><span class=w> </span><span class=nx>ok</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=nx>m</span><span class=p>[</span><span class=nx>c</span><span class=p>]</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=k>if</span><span class=w> </span><span class=nx>ok</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>                </span><span class=k>break</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=p>}</span><span class=w> </span><span class=k>else</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>                </span><span class=nx>m</span><span class=p>[</span><span class=nx>c</span><span class=p>]</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=kc>true</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=k>if</span><span class=w> </span><span class=nb>len</span><span class=p>(</span><span class=nx>m</span><span class=p>)</span><span class=w> </span><span class=p>&gt;</span><span class=w> </span><span class=nx>maxLen</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=nx>maxLen</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nb>len</span><span class=p>(</span><span class=nx>m</span><span class=p>)</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>return</span><span class=w> </span><span class=nx>maxLen</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=p>}</span></span></span></code></pre></td></tr></table></div></div><h2 id=similar-problem>Similar Problem</h2><p><a class=link href=/leetcode/005-longest-palindromic-substring/>5. Longest Palindromic Substring</a></p></section><footer class=article-footer><section class=article-tags><a href=/tags/leetcode/>LeetCode</a>
 <a href=/tags/hash-table/>Hash Table</a>
 <a href=/tags/two-pointers/>Two Pointers</a>
 <a href=/tags/string/>String</a></section><div class=pre-next><a class="pre-next-btn bg" href=https://www.orztu.com/leetcode/002-add-two-numbers/ data-tooltip="LeetCode 2. Add Two Numbers"><i class="fa fa-angle-left"></i>

@@ -41,36 +41,36 @@
 </span><span class=lnt>28
 </span><span class=lnt>29
 </span><span class=lnt>30
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-golang data-lang=golang><span class=line><span class=cl><span class=kd>func</span> <span class=nf>romanToInt</span><span class=p>(</span><span class=nx>s</span> <span class=kt>string</span><span class=p>)</span> <span class=kt>int</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>    <span class=nx>num</span> <span class=o>:=</span> <span class=kd>map</span><span class=p>[</span><span class=kt>uint8</span><span class=p>]</span><span class=kt>int</span><span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=sc>&#39;M&#39;</span><span class=p>:</span> <span class=mi>1000</span><span class=p>,</span>
-</span></span><span class=line><span class=cl>        <span class=sc>&#39;D&#39;</span><span class=p>:</span> <span class=mi>500</span><span class=p>,</span>
-</span></span><span class=line><span class=cl>        <span class=sc>&#39;C&#39;</span><span class=p>:</span> <span class=mi>100</span><span class=p>,</span>
-</span></span><span class=line><span class=cl>        <span class=sc>&#39;L&#39;</span><span class=p>:</span> <span class=mi>50</span><span class=p>,</span>
-</span></span><span class=line><span class=cl>        <span class=sc>&#39;X&#39;</span><span class=p>:</span> <span class=mi>10</span><span class=p>,</span>
-</span></span><span class=line><span class=cl>        <span class=sc>&#39;V&#39;</span><span class=p>:</span> <span class=mi>5</span><span class=p>,</span>
-</span></span><span class=line><span class=cl>        <span class=sc>&#39;I&#39;</span><span class=p>:</span> <span class=mi>1</span><span class=p>,</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=nx>length</span> <span class=o>:=</span> <span class=nb>len</span><span class=p>(</span><span class=nx>s</span><span class=p>)</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=nx>length</span> <span class=o>==</span> <span class=mi>0</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=mi>0</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=nx>res</span> <span class=o>:=</span> <span class=nx>num</span><span class=p>[</span><span class=nx>s</span><span class=p>[</span><span class=nx>length</span><span class=o>-</span><span class=mi>1</span><span class=p>]]</span>
-</span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=nx>i</span> <span class=o>:=</span> <span class=nx>length</span> <span class=o>-</span> <span class=mi>2</span><span class=p>;</span> <span class=nx>i</span> <span class=o>&gt;=</span> <span class=mi>0</span><span class=p>;</span> <span class=nx>i</span><span class=o>--</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=nx>n</span> <span class=o>:=</span> <span class=nx>num</span><span class=p>[</span><span class=nx>s</span><span class=p>[</span><span class=nx>i</span><span class=p>]]</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=nx>n</span> <span class=p>&lt;</span> <span class=nx>num</span><span class=p>[</span><span class=nx>s</span><span class=p>[</span><span class=nx>i</span><span class=o>+</span><span class=mi>1</span><span class=p>]]</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>            <span class=nx>res</span> <span class=o>-=</span> <span class=nx>n</span>
-</span></span><span class=line><span class=cl>        <span class=p>}</span> <span class=k>else</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>            <span class=nx>res</span> <span class=o>+=</span> <span class=nx>n</span>
-</span></span><span class=line><span class=cl>        <span class=p>}</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=nx>res</span>
-</span></span><span class=line><span class=cl><span class=p>}</span></span></span></code></pre></td></tr></table></div></div><h2 id=similar-problem>Similar Problem</h2><p><a class=link href=/leetcode/012-integer-to-roman/>12. Integer to Roman</a></p></section><footer class=article-footer><section class=article-tags><a href=/tags/leetcode/>LeetCode</a>
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-golang data-lang=golang><span class=line><span class=cl><span class=kd>func</span><span class=w> </span><span class=nf>romanToInt</span><span class=p>(</span><span class=nx>s</span><span class=w> </span><span class=kt>string</span><span class=p>)</span><span class=w> </span><span class=kt>int</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nx>num</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=kd>map</span><span class=p>[</span><span class=kt>uint8</span><span class=p>]</span><span class=kt>int</span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=sc>&#39;M&#39;</span><span class=p>:</span><span class=w> </span><span class=mi>1000</span><span class=p>,</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=sc>&#39;D&#39;</span><span class=p>:</span><span class=w> </span><span class=mi>500</span><span class=p>,</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=sc>&#39;C&#39;</span><span class=p>:</span><span class=w> </span><span class=mi>100</span><span class=p>,</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=sc>&#39;L&#39;</span><span class=p>:</span><span class=w> </span><span class=mi>50</span><span class=p>,</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=sc>&#39;X&#39;</span><span class=p>:</span><span class=w> </span><span class=mi>10</span><span class=p>,</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=sc>&#39;V&#39;</span><span class=p>:</span><span class=w> </span><span class=mi>5</span><span class=p>,</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=sc>&#39;I&#39;</span><span class=p>:</span><span class=w> </span><span class=mi>1</span><span class=p>,</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nx>length</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=nb>len</span><span class=p>(</span><span class=nx>s</span><span class=p>)</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>if</span><span class=w> </span><span class=nx>length</span><span class=w> </span><span class=o>==</span><span class=w> </span><span class=mi>0</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=k>return</span><span class=w> </span><span class=mi>0</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nx>res</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=nx>num</span><span class=p>[</span><span class=nx>s</span><span class=p>[</span><span class=nx>length</span><span class=o>-</span><span class=mi>1</span><span class=p>]]</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>for</span><span class=w> </span><span class=nx>i</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=nx>length</span><span class=w> </span><span class=o>-</span><span class=w> </span><span class=mi>2</span><span class=p>;</span><span class=w> </span><span class=nx>i</span><span class=w> </span><span class=o>&gt;=</span><span class=w> </span><span class=mi>0</span><span class=p>;</span><span class=w> </span><span class=nx>i</span><span class=o>--</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nx>n</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=nx>num</span><span class=p>[</span><span class=nx>s</span><span class=p>[</span><span class=nx>i</span><span class=p>]]</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=k>if</span><span class=w> </span><span class=nx>n</span><span class=w> </span><span class=p>&lt;</span><span class=w> </span><span class=nx>num</span><span class=p>[</span><span class=nx>s</span><span class=p>[</span><span class=nx>i</span><span class=o>+</span><span class=mi>1</span><span class=p>]]</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=nx>res</span><span class=w> </span><span class=o>-=</span><span class=w> </span><span class=nx>n</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=p>}</span><span class=w> </span><span class=k>else</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=nx>res</span><span class=w> </span><span class=o>+=</span><span class=w> </span><span class=nx>n</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>return</span><span class=w> </span><span class=nx>res</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=p>}</span></span></span></code></pre></td></tr></table></div></div><h2 id=similar-problem>Similar Problem</h2><p><a class=link href=/leetcode/012-integer-to-roman/>12. Integer to Roman</a></p></section><footer class=article-footer><section class=article-tags><a href=/tags/leetcode/>LeetCode</a>
 <a href=/tags/math/>Math</a>
 <a href=/tags/string/>String</a></section><div class=pre-next><a class="pre-next-btn bg" href=https://www.orztu.com/leetcode/012-integer-to-roman/ data-tooltip="LeetCode 12. Integer to Roman"><i class="fa fa-angle-left"></i>
 <span>上一篇</span>

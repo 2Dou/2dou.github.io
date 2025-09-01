@@ -72,43 +72,43 @@
 </span><span class=lnt>35
 </span><span class=lnt>36
 </span><span class=lnt>37
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-golang data-lang=golang><span class=line><span class=cl><span class=kd>func</span> <span class=nf>rotateRight</span><span class=p>(</span><span class=nx>head</span> <span class=o>*</span><span class=nx>ListNode</span><span class=p>,</span> <span class=nx>k</span> <span class=kt>int</span><span class=p>)</span> <span class=o>*</span><span class=nx>ListNode</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=nx>head</span> <span class=o>==</span> <span class=kc>nil</span> <span class=o>||</span> <span class=nx>k</span> <span class=o>==</span> <span class=mi>0</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=nx>head</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=nx>fast</span> <span class=o>:=</span> <span class=o>&amp;</span><span class=nx>ListNode</span><span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=nx>Next</span><span class=p>:</span> <span class=nx>head</span><span class=p>,</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span>
-</span></span><span class=line><span class=cl>    <span class=nx>slow</span> <span class=o>:=</span> <span class=nx>fast</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=c1>// fast 先前进</span>
-</span></span><span class=line><span class=cl>    <span class=nx>steps</span> <span class=o>:=</span> <span class=mi>0</span>
-</span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=nx>steps</span> <span class=p>&lt;</span> <span class=nx>k</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=nx>fast</span> <span class=p>=</span> <span class=nx>fast</span><span class=p>.</span><span class=nx>Next</span>
-</span></span><span class=line><span class=cl>        <span class=nx>steps</span><span class=o>++</span>
-</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=nx>fast</span><span class=p>.</span><span class=nx>Next</span> <span class=o>==</span> <span class=kc>nil</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>            <span class=nx>k</span> <span class=p>=</span> <span class=nx>k</span> <span class=o>%</span> <span class=nx>steps</span>
-</span></span><span class=line><span class=cl>            <span class=k>if</span> <span class=nx>k</span> <span class=o>==</span> <span class=mi>0</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>                <span class=k>return</span> <span class=nx>head</span>
-</span></span><span class=line><span class=cl>            <span class=p>}</span>
-</span></span><span class=line><span class=cl>            <span class=nx>steps</span> <span class=p>=</span> <span class=mi>0</span>
-</span></span><span class=line><span class=cl>            <span class=nx>fast</span> <span class=p>=</span> <span class=nx>slow</span>
-</span></span><span class=line><span class=cl>        <span class=p>}</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=c1>// 再同时前进</span>
-</span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=nx>fast</span><span class=p>.</span><span class=nx>Next</span> <span class=o>!=</span> <span class=kc>nil</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=nx>fast</span> <span class=p>=</span> <span class=nx>fast</span><span class=p>.</span><span class=nx>Next</span>
-</span></span><span class=line><span class=cl>        <span class=nx>slow</span> <span class=p>=</span> <span class=nx>slow</span><span class=p>.</span><span class=nx>Next</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=nx>fast</span><span class=p>.</span><span class=nx>Next</span> <span class=p>=</span> <span class=nx>head</span>
-</span></span><span class=line><span class=cl>    <span class=nx>head</span> <span class=p>=</span> <span class=nx>slow</span><span class=p>.</span><span class=nx>Next</span>
-</span></span><span class=line><span class=cl>    <span class=nx>slow</span><span class=p>.</span><span class=nx>Next</span> <span class=p>=</span> <span class=kc>nil</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=nx>head</span>
-</span></span><span class=line><span class=cl><span class=p>}</span></span></span></code></pre></td></tr></table></div></div></section><footer class=article-footer><section class=article-tags><a href=/tags/leetcode/>LeetCode</a>
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-golang data-lang=golang><span class=line><span class=cl><span class=kd>func</span><span class=w> </span><span class=nf>rotateRight</span><span class=p>(</span><span class=nx>head</span><span class=w> </span><span class=o>*</span><span class=nx>ListNode</span><span class=p>,</span><span class=w> </span><span class=nx>k</span><span class=w> </span><span class=kt>int</span><span class=p>)</span><span class=w> </span><span class=o>*</span><span class=nx>ListNode</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>if</span><span class=w> </span><span class=nx>head</span><span class=w> </span><span class=o>==</span><span class=w> </span><span class=kc>nil</span><span class=w> </span><span class=o>||</span><span class=w> </span><span class=nx>k</span><span class=w> </span><span class=o>==</span><span class=w> </span><span class=mi>0</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=k>return</span><span class=w> </span><span class=nx>head</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nx>fast</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=o>&amp;</span><span class=nx>ListNode</span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nx>Next</span><span class=p>:</span><span class=w> </span><span class=nx>head</span><span class=p>,</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nx>slow</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=nx>fast</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=c1>// fast 先前进</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nx>steps</span><span class=w> </span><span class=o>:=</span><span class=w> </span><span class=mi>0</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>for</span><span class=w> </span><span class=nx>steps</span><span class=w> </span><span class=p>&lt;</span><span class=w> </span><span class=nx>k</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nx>fast</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nx>fast</span><span class=p>.</span><span class=nx>Next</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nx>steps</span><span class=o>++</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=k>if</span><span class=w> </span><span class=nx>fast</span><span class=p>.</span><span class=nx>Next</span><span class=w> </span><span class=o>==</span><span class=w> </span><span class=kc>nil</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=nx>k</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nx>k</span><span class=w> </span><span class=o>%</span><span class=w> </span><span class=nx>steps</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=k>if</span><span class=w> </span><span class=nx>k</span><span class=w> </span><span class=o>==</span><span class=w> </span><span class=mi>0</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>                </span><span class=k>return</span><span class=w> </span><span class=nx>head</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=nx>steps</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=mi>0</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>            </span><span class=nx>fast</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nx>slow</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=c1>// 再同时前进</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>for</span><span class=w> </span><span class=nx>fast</span><span class=p>.</span><span class=nx>Next</span><span class=w> </span><span class=o>!=</span><span class=w> </span><span class=kc>nil</span><span class=w> </span><span class=p>{</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nx>fast</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nx>fast</span><span class=p>.</span><span class=nx>Next</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nx>slow</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nx>slow</span><span class=p>.</span><span class=nx>Next</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=p>}</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nx>fast</span><span class=p>.</span><span class=nx>Next</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nx>head</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nx>head</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=nx>slow</span><span class=p>.</span><span class=nx>Next</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nx>slow</span><span class=p>.</span><span class=nx>Next</span><span class=w> </span><span class=p>=</span><span class=w> </span><span class=kc>nil</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=k>return</span><span class=w> </span><span class=nx>head</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=p>}</span></span></span></code></pre></td></tr></table></div></div></section><footer class=article-footer><section class=article-tags><a href=/tags/leetcode/>LeetCode</a>
 <a href=/tags/linked-list/>Linked List</a>
 <a href=/tags/two-pointers/>Two Pointers</a></section><div class=pre-next><a class="pre-next-btn bg" href=https://www.orztu.com/leetcode/060-permutation-sequence/ data-tooltip="LeetCode 60. Permutation Sequence"><i class="fa fa-angle-left"></i>
 <span>上一篇</span>
