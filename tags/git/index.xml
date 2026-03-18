@@ -4,7 +4,8 @@
 &lt;p&gt;经过一番搜索，原因大概是 Windows 的路径索引到 WSL 之间有一个转换导致的？具体没有细看。&lt;/p&gt;
 &lt;p&gt;但找到一个解决方案：&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;先在 Windows 中安装 Git，然后在 WSL 里面用 git.exe 替代 Linux 版本的 git。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;先在 Windows 中安装 Git，然后在 WSL 里面用 git.exe 替代 Linux 版本的 git。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;因为我使用的&lt;code&gt;oh-my-zsh&lt;/code&gt;，所以通过在&lt;code&gt;.zshrc&lt;/code&gt;中定义&lt;code&gt;git&lt;/code&gt;函数针对 WSL 路径和 Windows 路径区别处理（这个代码是抄的）：&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
