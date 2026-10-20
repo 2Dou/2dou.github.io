@@ -1,40 +1,76 @@
 name: Update Running
 
-# Controls when the workflow will run
 on:
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
-    push:
-      branches: [master]
-      paths:
-        - running.svg
   repository_dispatch:
     types: [update-svg]
 
-env:
-  SAVE_DATA_IN_GITHUB_CACHE: true
+permissions:
+  contents: write
+
+concurrency:
+  group: update-running-svg
+  cancel-in-progress: false
 
 jobs:
   update-running:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 1
-          persist-credentials: true
 
-      - name: Get new runs
-        run: curl https://raw.githubusercontent.com/2Dou/garmin-running-page/master/assets/running.svg -o ./running.svg
+      - name: Validate and install SVG
+        env:
+          SVG_GZIP_BASE64: ${{ github.event.client_payload.svg_gzip_base64 }}
+        run: |
+          python3 - <<'PY'
+          import base64
+          import gzip
+          import io
+          import os
+          import xml.etree.ElementTree as ElementTree
+          from pathlib import Path
 
-      - name: Push new runs
-        # if: env.SAVE_DATA_IN_GITHUB_CACHE != 'true'
+          maximum_payload_characters = 63_000
+          maximum_svg_bytes = 2 * 1024 * 1024
+          encoded_payload = os.environ.get("SVG_GZIP_BASE64", "")
+          if not encoded_payload or len(encoded_payload) > maximum_payload_characters:
+              raise SystemExit("Missing or oversized SVG dispatch payload")
+
+          try:
+              compressed_svg = base64.b64decode(encoded_payload, validate=True)
+              with gzip.GzipFile(fileobj=io.BytesIO(compressed_svg)) as stream:
+                  svg_content = stream.read(maximum_svg_bytes + 1)
+          except (OSError, ValueError) as error:
+              raise SystemExit("Invalid compressed SVG dispatch payload") from error
+
+          if len(svg_content) > maximum_svg_bytes:
+              raise SystemExit("Expanded SVG exceeds the 2 MiB limit")
+
+          try:
+              root = ElementTree.fromstring(svg_content)
+          except ElementTree.ParseError as error:
+              raise SystemExit("Dispatched SVG is not well-formed XML") from error
+
+          expected_root = "{http://www.w3.org/2000/svg}svg"
+          if root.tag != expected_root:
+              raise SystemExit("Dispatched XML root is not an SVG element")
+
+          temporary_path = Path("running.svg.tmp")
+          temporary_path.write_bytes(svg_content)
+          temporary_path.replace("running.svg")
+          print(f"Validated SVG: {len(svg_content)} bytes")
+          PY
+
+      - name: Commit updated SVG
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git pull
-          git add ./running.svg
-          git commit -m 'update new runs' || echo "nothing to commit"
-          git push || echo "nothing to push"
-
+          git add -- running.svg
+          if git diff --cached --quiet; then
+            echo "SVG is unchanged"
+            exit 0
+          fi
+          git commit -m "update running SVG"
+          git push origin HEAD:master
