@@ -26,7 +26,7 @@ jobs:
           persist-credentials: true
 
       - name: Get new runs
-        run: curl https://raw.githubusercontent.com/2Dou/running_page/master/assets/running.svg -o ./running.svg
+        run: curl https://raw.githubusercontent.com/2Dou/garmin-running-page/master/assets/running.svg -o ./running.svg
 
       - name: Push new runs
         # if: env.SAVE_DATA_IN_GITHUB_CACHE != 'true'
