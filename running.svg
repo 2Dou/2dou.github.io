@@ -11,10 +11,10 @@
 </defs>
 <rect width="100%" height="100%" fill="#FFFFFF"/>
 <text x="8" y="14" fill="#203958" font-family="Arial" font-size="11" font-weight="bold">Orz The Way</text>
-<text x="293" y="14" text-anchor="end" fill="#203958" font-family="Arial" font-size="8">Runner · 5,437.9 km</text>
+<text x="293" y="14" text-anchor="end" fill="#203958" font-family="Arial" font-size="8">Runner · 5,442.9 km</text>
 <g data-year="2026" transform="translate(0,24)" fill="#EBEDF0">
 <text x="8" y="8" fill="#203958" font-family="Arial" font-size="8">2026</text>
-<text data-role="year-distance" x="293" y="8" text-anchor="end" fill="#203958" font-family="Arial" font-size="7">1,509.4 km</text>
+<text data-role="year-distance" x="293" y="8" text-anchor="end" fill="#203958" font-family="Arial" font-size="7">1,514.4 km</text>
 <text x="28" y="17" fill="#203958" font-family="Arial" font-size="5">Jan</text>
 <text x="53" y="17" fill="#203958" font-family="Arial" font-size="5">Feb</text>
 <text x="73" y="17" fill="#203958" font-family="Arial" font-size="5">Mar</text>
@@ -320,7 +320,7 @@
 <rect x="238" y="21" width="4" height="4" rx="0.8" fill="#D9BA43"><title>2026-10-18 16.0 km</title></rect>
 <rect x="238" y="26" width="4" height="4" rx="0.8"><title>2026-10-19</title></rect>
 <rect x="238" y="31" width="4" height="4" rx="0.8" fill="#A5D35A"><title>2026-10-20 10.1 km</title></rect>
-<rect x="238" y="36" width="4" height="4" rx="0.8"><title>2026-10-21</title></rect>
+<rect x="238" y="36" width="4" height="4" rx="0.8" fill="#40C25C"><title>2026-10-21 5.0 km</title></rect>
 <rect x="238" y="41" width="4" height="4" rx="0.8"><title>2026-10-22</title></rect>
 <rect x="238" y="46" width="4" height="4" rx="0.8"><title>2026-10-23</title></rect>
 <rect x="238" y="51" width="4" height="4" rx="0.8"><title>2026-10-24</title></rect>
