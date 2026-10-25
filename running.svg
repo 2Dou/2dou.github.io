@@ -11,10 +11,10 @@
 </defs>
 <rect width="100%" height="100%" fill="#FFFFFF"/>
 <text x="8" y="14" fill="#203958" font-family="Arial" font-size="11" font-weight="bold">Orz The Way</text>
-<text x="293" y="14" text-anchor="end" fill="#203958" font-family="Arial" font-size="8">Runner · 5,442.9 km</text>
+<text x="293" y="14" text-anchor="end" fill="#203958" font-family="Arial" font-size="8">Runner · 5,485.6 km</text>
 <g data-year="2026" transform="translate(0,24)" fill="#EBEDF0">
 <text x="8" y="8" fill="#203958" font-family="Arial" font-size="8">2026</text>
-<text data-role="year-distance" x="293" y="8" text-anchor="end" fill="#203958" font-family="Arial" font-size="7">1,514.4 km</text>
+<text data-role="year-distance" x="293" y="8" text-anchor="end" fill="#203958" font-family="Arial" font-size="7">1,557.1 km</text>
 <text x="28" y="17" fill="#203958" font-family="Arial" font-size="5">Jan</text>
 <text x="53" y="17" fill="#203958" font-family="Arial" font-size="5">Feb</text>
 <text x="73" y="17" fill="#203958" font-family="Arial" font-size="5">Mar</text>
@@ -324,7 +324,7 @@
 <rect x="238" y="41" width="4" height="4" rx="0.8"><title>2026-10-22</title></rect>
 <rect x="238" y="46" width="4" height="4" rx="0.8"><title>2026-10-23</title></rect>
 <rect x="238" y="51" width="4" height="4" rx="0.8"><title>2026-10-24</title></rect>
-<rect x="243" y="21" width="4" height="4" rx="0.8"><title>2026-10-25</title></rect>
+<rect x="243" y="21" width="4" height="4" rx="0.8" fill="#E02C2C"><title>2026-10-25 42.7 km</title></rect>
 <rect x="243" y="26" width="4" height="4" rx="0.8"><title>2026-10-26</title></rect>
 <rect x="243" y="31" width="4" height="4" rx="0.8"><title>2026-10-27</title></rect>
 <rect x="243" y="36" width="4" height="4" rx="0.8"><title>2026-10-28</title></rect>
@@ -1159,7 +1159,7 @@
 <text data-role="distance-percentiles" x="8" y="215" fill="#203958" font-family="Arial" font-size="6">Distance: P05 5.0 km · P50 10.2 km · P95 21.1 km</text>
 <g data-role="distance-milestones">
 <title>Single-activity distance milestones: half marathon 21.0975–42.195 km (upper bound excluded); marathon ≥42.195 km. Categories are mutually exclusive.</title>
-<text x="8" y="227" fill="#203958" font-family="Arial" font-size="6.5">Half marathon: 27 · Marathon: 1</text>
+<text x="8" y="227" fill="#203958" font-family="Arial" font-size="6.5">Half marathon: 27 · Marathon: 2</text>
 </g>
 <text x="8" y="239" fill="#576574" font-family="Arial" font-size="5.5">Daily distance (km)</text>
 <g data-role="distance-legend">
