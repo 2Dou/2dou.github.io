@@ -11,10 +11,10 @@
 </defs>
 <rect width="100%" height="100%" fill="#FFFFFF"/>
 <text x="8" y="14" fill="#203958" font-family="Arial" font-size="11" font-weight="bold">Orz The Way</text>
-<text x="293" y="14" text-anchor="end" fill="#203958" font-family="Arial" font-size="8">Runner · 5,583.6 km</text>
+<text x="293" y="14" text-anchor="end" fill="#203958" font-family="Arial" font-size="8">Runner · 5,643.3 km</text>
 <g data-year="2026" transform="translate(0,24)" fill="#EBEDF0">
 <text x="8" y="8" fill="#203958" font-family="Arial" font-size="8">2026</text>
-<text data-role="year-distance" x="293" y="8" text-anchor="end" fill="#203958" font-family="Arial" font-size="7">1,655.1 km</text>
+<text data-role="year-distance" x="293" y="8" text-anchor="end" fill="#203958" font-family="Arial" font-size="7">1,670.2 km</text>
 <text x="28" y="17" fill="#203958" font-family="Arial" font-size="5">Jan</text>
 <text x="53" y="17" fill="#203958" font-family="Arial" font-size="5">Feb</text>
 <text x="73" y="17" fill="#203958" font-family="Arial" font-size="5">Mar</text>
@@ -261,7 +261,7 @@
 <rect x="193" y="41" width="4" height="4" rx="0.8"><title>2026-08-20</title></rect>
 <rect x="193" y="46" width="4" height="4" rx="0.8"><title>2026-08-21</title></rect>
 <rect x="193" y="51" width="4" height="4" rx="0.8"><title>2026-08-22</title></rect>
-<rect x="198" y="21" width="4" height="4" rx="0.8"><title>2026-08-23</title></rect>
+<rect x="198" y="21" width="4" height="4" rx="0.8" fill="#43C35C"><title>2026-08-23 5.2 km</title></rect>
 <rect x="198" y="26" width="4" height="4" rx="0.8"><title>2026-08-24</title></rect>
 <rect x="198" y="31" width="4" height="4" rx="0.8"><title>2026-08-25</title></rect>
 <rect x="198" y="36" width="4" height="4" rx="0.8" fill="#40C25C"><title>2026-08-26 5.0 km</title></rect>
@@ -340,7 +340,7 @@
 <rect x="248" y="51" width="4" height="4" rx="0.8"><title>2026-11-07</title></rect>
 <rect x="253" y="21" width="4" height="4" rx="0.8" fill="#D4C74B"><title>2026-11-08 15.1 km</title></rect>
 <rect x="253" y="26" width="4" height="4" rx="0.8" fill="#A4D35A"><title>2026-11-09 10.0 km</title></rect>
-<rect x="253" y="31" width="4" height="4" rx="0.8"><title>2026-11-10</title></rect>
+<rect x="253" y="31" width="4" height="4" rx="0.8" fill="#A4D35A"><title>2026-11-10 10.0 km</title></rect>
 <rect x="253" y="36" width="4" height="4" rx="0.8"><title>2026-11-11</title></rect>
 <rect x="253" y="41" width="4" height="4" rx="0.8"><title>2026-11-12</title></rect>
 <rect x="253" y="46" width="4" height="4" rx="0.8"><title>2026-11-13</title></rect>
@@ -395,7 +395,7 @@
 </g>
 <g data-year="2025" transform="translate(0,83)" fill="#EBEDF0">
 <text x="8" y="8" fill="#203958" font-family="Arial" font-size="8">2025</text>
-<text data-role="year-distance" x="293" y="8" text-anchor="end" fill="#203958" font-family="Arial" font-size="7">2,112.3 km</text>
+<text data-role="year-distance" x="293" y="8" text-anchor="end" fill="#203958" font-family="Arial" font-size="7">2,111.3 km</text>
 <text x="28" y="17" fill="#203958" font-family="Arial" font-size="5">Jan</text>
 <text x="48" y="17" fill="#203958" font-family="Arial" font-size="5">Feb</text>
 <text x="68" y="17" fill="#203958" font-family="Arial" font-size="5">Mar</text>
@@ -427,7 +427,7 @@
 <rect x="38" y="46" width="4" height="4" rx="0.8"><title>2025-01-17</title></rect>
 <rect x="38" y="51" width="4" height="4" rx="0.8"><title>2025-01-18</title></rect>
 <rect x="43" y="21" width="4" height="4" rx="0.8" fill="#B8CE54"><title>2025-01-19 12.1 km</title></rect>
-<rect x="43" y="26" width="4" height="4" rx="0.8" fill="#5FC75B"><title>2025-01-20 6.6 km</title></rect>
+<rect x="43" y="26" width="4" height="4" rx="0.8" fill="#4BC45C"><title>2025-01-20 5.6 km</title></rect>
 <rect x="43" y="31" width="4" height="4" rx="0.8"><title>2025-01-21</title></rect>
 <rect x="43" y="36" width="4" height="4" rx="0.8"><title>2025-01-22</title></rect>
 <rect x="43" y="41" width="4" height="4" rx="0.8"><title>2025-01-23</title></rect>
@@ -776,7 +776,7 @@
 </g>
 <g data-year="2024" transform="translate(0,142)" fill="#EBEDF0">
 <text x="8" y="8" fill="#203958" font-family="Arial" font-size="8">2024</text>
-<text data-role="year-distance" x="293" y="8" text-anchor="end" fill="#203958" font-family="Arial" font-size="7">1,816.3 km</text>
+<text data-role="year-distance" x="293" y="8" text-anchor="end" fill="#203958" font-family="Arial" font-size="7">1,861.8 km</text>
 <text x="28" y="17" fill="#203958" font-family="Arial" font-size="5">Jan</text>
 <text x="48" y="17" fill="#203958" font-family="Arial" font-size="5">Feb</text>
 <text x="68" y="17" fill="#203958" font-family="Arial" font-size="5">Mar</text>
@@ -853,20 +853,20 @@
 <rect x="68" y="51" width="4" height="4" rx="0.8"><title>2024-03-02</title></rect>
 <rect x="73" y="21" width="4" height="4" rx="0.8"><title>2024-03-03</title></rect>
 <rect x="73" y="26" width="4" height="4" rx="0.8"><title>2024-03-04</title></rect>
-<rect x="73" y="31" width="4" height="4" rx="0.8"><title>2024-03-05</title></rect>
+<rect x="73" y="31" width="4" height="4" rx="0.8" fill="#37B956"><title>2024-03-05 3.5 km</title></rect>
 <rect x="73" y="36" width="4" height="4" rx="0.8"><title>2024-03-06</title></rect>
 <rect x="73" y="41" width="4" height="4" rx="0.8"><title>2024-03-07</title></rect>
-<rect x="73" y="46" width="4" height="4" rx="0.8"><title>2024-03-08</title></rect>
+<rect x="73" y="46" width="4" height="4" rx="0.8" fill="#39BB57"><title>2024-03-08 3.9 km</title></rect>
 <rect x="73" y="51" width="4" height="4" rx="0.8"><title>2024-03-09</title></rect>
 <rect x="78" y="21" width="4" height="4" rx="0.8"><title>2024-03-10</title></rect>
-<rect x="78" y="26" width="4" height="4" rx="0.8"><title>2024-03-11</title></rect>
-<rect x="78" y="31" width="4" height="4" rx="0.8"><title>2024-03-12</title></rect>
-<rect x="78" y="36" width="4" height="4" rx="0.8"><title>2024-03-13</title></rect>
-<rect x="78" y="41" width="4" height="4" rx="0.8"><title>2024-03-14</title></rect>
-<rect x="78" y="46" width="4" height="4" rx="0.8"><title>2024-03-15</title></rect>
+<rect x="78" y="26" width="4" height="4" rx="0.8" fill="#41C25C"><title>2024-03-11 5.0 km</title></rect>
+<rect x="78" y="31" width="4" height="4" rx="0.8" fill="#54C55C"><title>2024-03-12 6.0 km</title></rect>
+<rect x="78" y="36" width="4" height="4" rx="0.8" fill="#69C95B"><title>2024-03-13 7.1 km</title></rect>
+<rect x="78" y="41" width="4" height="4" rx="0.8" fill="#41C25C"><title>2024-03-14 5.1 km</title></rect>
+<rect x="78" y="46" width="4" height="4" rx="0.8" fill="#59C65B"><title>2024-03-15 6.3 km</title></rect>
 <rect x="78" y="51" width="4" height="4" rx="0.8"><title>2024-03-16</title></rect>
 <rect x="83" y="21" width="4" height="4" rx="0.8"><title>2024-03-17</title></rect>
-<rect x="83" y="26" width="4" height="4" rx="0.8"><title>2024-03-18</title></rect>
+<rect x="83" y="26" width="4" height="4" rx="0.8" fill="#89CE5B"><title>2024-03-18 8.6 km</title></rect>
 <rect x="83" y="31" width="4" height="4" rx="0.8" fill="#A4D35A"><title>2024-03-19 10.0 km</title></rect>
 <rect x="83" y="36" width="4" height="4" rx="0.8" fill="#37B956"><title>2024-03-20 3.5 km</title></rect>
 <rect x="83" y="41" width="4" height="4" rx="0.8" fill="#D4C74B"><title>2024-03-21 15.1 km</title></rect>
